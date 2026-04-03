@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
+import InnerHero from '@/components/InnerHero';
 
 interface NeighborhoodCard {
   id: number;
@@ -72,41 +73,12 @@ export default function NeighborhoodsPage() {
       <Nav />
       <ScrollProgress />
       <main style={{ backgroundColor: '#F8F5F0' }}>
-        {/* Hero Section */}
-        <section
-          style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%232F5233' fill-opacity='0.05'%3E%3Cpath d='M0 0h40v40H0z'/%3E%3Ccircle cx='20' cy='20' r='2'/%3E%3C/g%3E%3C/svg%3E")`,
-            backgroundColor: '#2F5233',
-            color: '#F8F5F0',
-            padding: 'clamp(3rem, 8vw, 6rem) 2rem',
-            textAlign: 'center',
-          }}
-        >
-          <h1
-            style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: 'clamp(2.5rem, 8vw, 4rem)',
-              fontWeight: 700,
-              margin: '0 0 1rem 0',
-              letterSpacing: '-0.02em',
-            }}
-          >
-            Neighborhoods
-          </h1>
-          <p
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: 'clamp(1rem, 2vw, 1.25rem)',
-              margin: '0',
-              opacity: 0.95,
-              maxWidth: '600px',
-              marginLeft: 'auto',
-              marginRight: 'auto',
-            }}
-          >
-            Discover the vibrant communities I know and love
-          </p>
-        </section>
+        <InnerHero
+          title="Neighborhoods"
+          subtitle="Discover the vibrant communities I know and love"
+          image="/images/neighborhood-01-everett-marina.jpg"
+          imageAlt="Everett marina and waterfront in Snohomish County"
+        />
 
         {/* Intro Section */}
         <section

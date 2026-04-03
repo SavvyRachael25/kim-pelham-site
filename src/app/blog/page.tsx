@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
+import InnerHero from '@/components/InnerHero';
 
 interface BlogPost {
   id: string;
@@ -68,193 +69,153 @@ export default function BlogPage() {
       <ScrollProgress />
       <Nav />
       <main>
-        {/* Hero Section */}
-        <section
-          style={{
-            background: `linear-gradient(135deg, var(--color-forest) 0%, #1f3823 100%)`,
-            position: 'relative',
-            overflow: 'hidden',
-            padding: '120px 20px',
-            minHeight: '400px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
+        <InnerHero
+          title="Stories & Insights"
+          subtitle="Real estate wisdom from Snohomish County"
+          image="/images/hero-02-warm-kitchen.jpg"
+          imageAlt="Warm kitchen interior in Snohomish County home"
+        />
+
+        {/* Blog Posts Grid */}
+        <section style={{ padding: '80px 24px', backgroundColor: '#FFFFFF' }}>
           <div
             style={{
-              position: 'absolute',
-              inset: 0,
-              backgroundImage:
-                'radial-gradient(circle at 20% 50%, rgba(196, 162, 101, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(196, 162, 101, 0.08) 0%, transparent 50%)',
-              pointerEvents: 'none',
+              maxWidth: '1100px',
+              margin: '0 auto',
+              display: 'grid',
+              gridTemplateColumns: 'repeat(2, 1fr)',
+              gap: '32px',
             }}
-          />
-          <div style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
-            <h1
-              style={{
-                fontFamily: 'var(--font-heading)',
-                fontSize: 'clamp(2.5rem, 6vw, 4rem)',
-                fontWeight: 400,
-                color: 'var(--color-cream)',
-                marginBottom: '16px',
-              }}
-            >
-              Blog
-            </h1>
-            <p
-              style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '1.125rem',
-                color: 'rgba(248, 245, 240, 0.9)',
-                maxWidth: '600px',
-                margin: '0 auto',
-              }}
-            >
-              Real Estate Insights from Snohomish County
-            </p>
-          </div>
-        </section>
-
-        {/* Blog Posts Section */}
-        <section style={{ padding: '80px 20px', backgroundColor: '#fff' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: '40px' }}>
-              {blogPosts.map((post) => (
-                <article
-                  key={post.id}
-                  style={{
-                    padding: '40px',
-                    border: `1px solid var(--color-border)`,
-                    borderRadius: '4px',
-                    backgroundColor: '#fff',
-                    transition: 'all 0.3s',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.boxShadow = '0 12px 24px rgba(47, 82, 51, 0.08)';
-                    e.currentTarget.style.transform = 'translateY(-4px)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.boxShadow = 'none';
-                    e.currentTarget.style.transform = 'translateY(0)';
-                  }}
-                >
-                  <div style={{ marginBottom: '16px' }}>
-                    <span
-                      style={{
-                        display: 'inline-block',
-                        fontFamily: 'var(--font-body)',
-                        fontSize: '0.75rem',
-                        fontWeight: 600,
-                        color: '#fff',
-                        backgroundColor: 'var(--color-clay)',
-                        padding: '6px 12px',
-                        borderRadius: '3px',
-                        textTransform: 'uppercase',
-                        letterSpacing: '0.5px',
-                      }}
-                    >
-                      {post.category}
-                    </span>
-                  </div>
-
-                  <h2
+          >
+            {blogPosts.map((post) => (
+              <article
+                key={post.id}
+                className="blog-card"
+                style={{
+                  padding: '32px',
+                  border: '1px solid #E8E3DA',
+                  borderRadius: '6px',
+                  backgroundColor: '#FFFFFF',
+                  transition: 'all 0.3s ease',
+                  display: 'flex',
+                  flexDirection: 'column',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.boxShadow = '0 12px 24px rgba(47, 82, 51, 0.08)';
+                  e.currentTarget.style.transform = 'translateY(-4px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.boxShadow = 'none';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                <div style={{ marginBottom: '16px', display: 'flex', alignItems: 'center', gap: '12px' }}>
+                  <span
                     style={{
-                      fontFamily: 'var(--font-heading)',
-                      fontSize: '2rem',
-                      fontWeight: 400,
-                      color: 'var(--color-forest)',
-                      marginBottom: '16px',
+                      display: 'inline-block',
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '0.7rem',
+                      fontWeight: 600,
+                      color: '#FFFFFF',
+                      backgroundColor: '#B8845C',
+                      padding: '5px 10px',
+                      borderRadius: '3px',
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.5px',
                     }}
                   >
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      style={{
-                        color: 'inherit',
-                        textDecoration: 'none',
-                        transition: 'color 0.3s',
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.color = 'var(--color-clay)';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.color = 'var(--color-forest)';
-                      }}
-                    >
-                      {post.title}
-                    </Link>
-                  </h2>
-
-                  <p
+                    {post.category}
+                  </span>
+                  <span
                     style={{
                       fontFamily: 'var(--font-body)',
-                      fontSize: '1rem',
-                      color: 'var(--color-text)',
-                      lineHeight: '1.7',
-                      marginBottom: '24px',
+                      fontSize: '0.8rem',
+                      color: '#9B9B9B',
                     }}
                   >
-                    {post.excerpt}
-                  </p>
+                    {formatDate(post.date)}
+                  </span>
+                </div>
 
-                  <div
+                <h2
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: '1.5rem',
+                    fontWeight: 700,
+                    color: '#2F5233',
+                    marginBottom: '12px',
+                    lineHeight: 1.3,
+                  }}
+                >
+                  <Link
+                    href={`/blog/${post.slug}`}
                     style={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                      flexWrap: 'wrap',
-                      gap: '16px',
+                      color: 'inherit',
+                      textDecoration: 'none',
+                      transition: 'color 0.3s',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.color = '#B8845C';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.color = '#2F5233';
                     }}
                   >
-                    <span
-                      style={{
-                        fontFamily: 'var(--font-body)',
-                        fontSize: '0.875rem',
-                        color: '#999',
-                      }}
-                    >
-                      {formatDate(post.date)}
-                    </span>
-                    <Link
-                      href={`/blog/${post.slug}`}
-                      style={{
-                        fontFamily: 'var(--font-body)',
-                        fontSize: '1rem',
-                        fontWeight: 600,
-                        color: 'var(--color-clay)',
-                        textDecoration: 'none',
-                        transition: 'all 0.3s',
-                        display: 'flex',
-                        alignItems: 'center',
-                        gap: '8px',
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.color = 'var(--color-forest)';
-                        e.currentTarget.style.transform = 'translateX(4px)';
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.color = 'var(--color-clay)';
-                        e.currentTarget.style.transform = 'translateX(0)';
-                      }}
-                    >
-                      Read More <span>→</span>
-                    </Link>
-                  </div>
-                </article>
-              ))}
-            </div>
+                    {post.title}
+                  </Link>
+                </h2>
+
+                <p
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.95rem',
+                    color: '#555',
+                    lineHeight: 1.7,
+                    marginBottom: '20px',
+                    flex: 1,
+                  }}
+                >
+                  {post.excerpt}
+                </p>
+
+                <Link
+                  href={`/blog/${post.slug}`}
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.9rem',
+                    fontWeight: 600,
+                    color: '#B8845C',
+                    textDecoration: 'none',
+                    transition: 'all 0.3s',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: '6px',
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.color = '#2F5233';
+                    e.currentTarget.style.transform = 'translateX(4px)';
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.color = '#B8845C';
+                    e.currentTarget.style.transform = 'translateX(0)';
+                  }}
+                >
+                  Read More <span>→</span>
+                </Link>
+              </article>
+            ))}
           </div>
         </section>
 
         {/* CTA Section */}
-        <section style={{ padding: '80px 20px', backgroundColor: 'var(--color-cream)' }}>
+        <section style={{ padding: '80px 24px', backgroundColor: '#F8F5F0' }}>
           <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }}>
             <h2
               style={{
                 fontFamily: 'var(--font-heading)',
                 fontSize: '2.5rem',
-                fontWeight: 400,
-                color: 'var(--color-forest)',
+                fontWeight: 700,
+                color: '#2F5233',
                 marginBottom: '24px',
               }}
             >
@@ -264,8 +225,8 @@ export default function BlogPage() {
               style={{
                 fontFamily: 'var(--font-body)',
                 fontSize: '1.125rem',
-                color: 'var(--color-text)',
-                lineHeight: '1.8',
+                color: '#555',
+                lineHeight: 1.8,
                 marginBottom: '40px',
               }}
             >
@@ -276,8 +237,8 @@ export default function BlogPage() {
               style={{
                 display: 'inline-block',
                 padding: '16px 40px',
-                backgroundColor: 'var(--color-clay)',
-                color: '#fff',
+                backgroundColor: '#B8845C',
+                color: '#FFFFFF',
                 fontFamily: 'var(--font-body)',
                 fontSize: '1rem',
                 fontWeight: 600,
@@ -286,12 +247,12 @@ export default function BlogPage() {
                 transition: 'all 0.3s',
               }}
               onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#a0743d';
+                e.currentTarget.style.backgroundColor = '#A07550';
                 e.currentTarget.style.transform = 'translateY(-2px)';
                 e.currentTarget.style.boxShadow = '0 8px 16px rgba(47, 82, 51, 0.15)';
               }}
               onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = 'var(--color-clay)';
+                e.currentTarget.style.backgroundColor = '#B8845C';
                 e.currentTarget.style.transform = 'translateY(0)';
                 e.currentTarget.style.boxShadow = 'none';
               }}
@@ -302,6 +263,14 @@ export default function BlogPage() {
         </section>
       </main>
       <Footer />
+
+      <style>{`
+        @media (max-width: 768px) {
+          .blog-card {
+            grid-column: 1 / -1 !important;
+          }
+        }
+      `}</style>
     </>
   );
 }

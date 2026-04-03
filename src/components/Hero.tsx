@@ -130,7 +130,7 @@ export default function Hero() {
             >
               <path
                 d="M 0 10 Q 50 2 100 10 T 200 10"
-                stroke="#F0EDE7"
+                stroke="#B8845C"
                 strokeWidth="3"
                 fill="none"
                 strokeLinecap="round"

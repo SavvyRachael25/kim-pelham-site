@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import Image from 'next/image';
 import Link from 'next/link';
+import InnerHero from '@/components/InnerHero';
 import { useEffect, useRef, useState } from 'react';
 
 export default function AboutPage() {
@@ -45,48 +46,12 @@ export default function AboutPage() {
     <main>
       <Nav />
 
-      {/* ========== HERO ========== */}
-      <section
-        className="green-textured"
-        style={{
-          padding: '120px 24px',
-          textAlign: 'center',
-          minHeight: '500px',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <h1
-          style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: 'clamp(36px, 7vw, 64px)',
-            fontWeight: 700,
-            color: '#F8F5F0',
-            margin: '0 0 24px 0',
-            lineHeight: 1.2,
-            opacity: mounted ? 1 : 0,
-            transform: mounted ? 'translateY(0)' : 'translateY(20px)',
-            transition: 'all 0.8s ease-out',
-          }}
-        >
-          About Kim
-        </h1>
-        <p
-          style={{
-            fontFamily: 'var(--font-handwritten)',
-            fontSize: '24px',
-            color: '#B8845C',
-            margin: 0,
-            opacity: mounted ? 1 : 0,
-            transform: mounted ? 'translateY(0)' : 'translateY(20px)',
-            transition: 'all 0.8s ease-out 0.1s',
-          }}
-        >
-          Presence, Perspective & Purpose in Real Estate
-        </p>
-      </section>
+      <InnerHero
+        title="About Kim"
+        subtitle="Presence, Perspective & Purpose in Real Estate"
+        image="/images/about-01-approachable-headshot-env.jpg"
+        imageAlt="Kim Pelham in Snohomish County"
+      />
 
       {/* ========== KIM'S STORY ========== */}
       <section

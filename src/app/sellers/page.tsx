@@ -4,6 +4,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import Link from 'next/link';
+import InnerHero from '@/components/InnerHero';
 import { useEffect, useRef, useState } from 'react';
 
 export default function SellersPage() {
@@ -44,48 +45,12 @@ export default function SellersPage() {
     <main>
       <Nav />
 
-      {/* ========== HERO ========== */}
-      <section
-        className="green-textured"
-        style={{
-          padding: '120px 24px',
-          textAlign: 'center',
-          minHeight: '500px',
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <h1
-          style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: 'clamp(36px, 7vw, 64px)',
-            fontWeight: 700,
-            color: '#F8F5F0',
-            margin: '0 0 24px 0',
-            lineHeight: 1.2,
-            opacity: mounted ? 1 : 0,
-            transform: mounted ? 'translateY(0)' : 'translateY(20px)',
-            transition: 'all 0.8s ease-out',
-          }}
-        >
-          Sell Your Home for More
-        </h1>
-        <p
-          style={{
-            fontFamily: 'var(--font-handwritten)',
-            fontSize: '24px',
-            color: '#B8845C',
-            margin: 0,
-            opacity: mounted ? 1 : 0,
-            transform: mounted ? 'translateY(0)' : 'translateY(20px)',
-            transition: 'all 0.8s ease-out 0.1s',
-          }}
-        >
-          104.4% sale-to-list ratio vs 97.98% market average
-        </p>
-      </section>
+      <InnerHero
+        title="Sell Your Home for More"
+        subtitle="104.4% sale-to-list ratio vs 97.98% market average"
+        image="/images/property-01-everett-home-exterior.jpg"
+        imageAlt="Beautiful home exterior in Everett"
+      />
 
       {/* ========== PROVEN TRACK RECORD ========== */}
       <section

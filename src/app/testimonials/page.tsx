@@ -3,6 +3,7 @@
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
+import InnerHero from '@/components/InnerHero';
 import Link from 'next/link';
 
 interface Testimonial {
@@ -108,49 +109,12 @@ export default function TestimonialsPage() {
       <Nav />
       <ScrollProgress />
 
-      {/* Hero Section */}
-      <section
-        style={{
-          backgroundColor: '#2F5233',
-          backgroundImage:
-            'radial-gradient(circle at 20% 50%, rgba(79, 101, 65, 0.3) 0%, transparent 50%), linear-gradient(135deg, #2F5233 0%, #1a3a1a 100%)',
-          color: '#F8F5F0',
-          padding: '80px 20px',
-          textAlign: 'center',
-          position: 'relative',
-        }}
-      >
-        <div
-          style={{
-            maxWidth: '600px',
-            margin: '0 auto',
-          }}
-        >
-          <h1
-            style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: 'clamp(2.5rem, 6vw, 3.5rem)',
-              fontWeight: 400,
-              margin: '0 0 20px 0',
-              letterSpacing: '0.5px',
-            }}
-          >
-            What My Clients Say
-          </h1>
-          <p
-            style={{
-              fontSize: '1.125rem',
-              fontFamily: 'var(--font-body)',
-              fontWeight: 300,
-              margin: 0,
-              opacity: 0.95,
-              lineHeight: 1.6,
-            }}
-          >
-            Real experiences from real families
-          </p>
-        </div>
-      </section>
+      <InnerHero
+        title="What My Clients Say"
+        subtitle="Real experiences from real families"
+        image="/images/hero-03-porch-connection.jpg"
+        imageAlt="Happy family on home porch"
+      />
 
       {/* Testimonials Grid */}
       <section

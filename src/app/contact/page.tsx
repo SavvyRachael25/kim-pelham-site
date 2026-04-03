@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
+import InnerHero from '@/components/InnerHero';
 
 export default function ContactPage() {
   return (
@@ -12,53 +13,12 @@ export default function ContactPage() {
       <ScrollProgress />
       <Nav />
       <main>
-        {/* Hero Section */}
-        <section
-          style={{
-            background: `linear-gradient(135deg, var(--color-forest) 0%, #1f3823 100%)`,
-            position: 'relative',
-            overflow: 'hidden',
-            padding: '120px 20px',
-            minHeight: '400px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              backgroundImage:
-                'radial-gradient(circle at 20% 50%, rgba(196, 162, 101, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(196, 162, 101, 0.08) 0%, transparent 50%)',
-              pointerEvents: 'none',
-            }}
-          />
-          <div style={{ position: 'relative', zIndex: 1, textAlign: 'center' }}>
-            <h1
-              style={{
-                fontFamily: 'var(--font-heading)',
-                fontSize: 'clamp(2.5rem, 6vw, 4rem)',
-                fontWeight: 400,
-                color: 'var(--color-cream)',
-                marginBottom: '16px',
-              }}
-            >
-              Get in Touch
-            </h1>
-            <p
-              style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '1.125rem',
-                color: 'rgba(248, 245, 240, 0.9)',
-                maxWidth: '600px',
-                margin: '0 auto',
-              }}
-            >
-              Your Real Estate Goals Matter
-            </p>
-          </div>
-        </section>
+        <InnerHero
+          title="Get in Touch"
+          subtitle="Your real estate goals matter"
+          image="/images/lifestyle-01-farmers-market.jpg"
+          imageAlt="Local community in Snohomish County"
+        />
 
         {/* Contact Content Section */}
         <section style={{ padding: '80px 20px', backgroundColor: '#fff' }}>
