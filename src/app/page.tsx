@@ -32,9 +32,7 @@ export default function Home() {
       <Marquee />
       <StatsStrip />
       <SocialProof />
-      <RevealSection>
-        <About />
-      </RevealSection>
+      <About />
       <NoteFromKim />
       <Services />
       <Properties />
