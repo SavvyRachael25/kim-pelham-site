@@ -15,6 +15,7 @@ import Testimonials from '@/components/Testimonials';
 import LifestyleBand from '@/components/LifestyleBand';
 import NeighborhoodsPinboard from '@/components/NeighborhoodsPinboard';
 import LocalPicks from '@/components/LocalPicks';
+import BlogPreview from '@/components/BlogPreview';
 import ContactCTA from '@/components/ContactCTA';
 
 export const metadata = {
@@ -41,6 +42,7 @@ export default function Home() {
       <LifestyleBand />
       <NeighborhoodsPinboard />
       <LocalPicks />
+      <BlogPreview />
       <ContactCTA />
       <Footer />
       <ScrollProgress />

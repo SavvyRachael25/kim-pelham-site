@@ -21,7 +21,12 @@ export default function SocialProof() {
         }}
       >
         {/* Zillow Rating */}
-        <div style={{ textAlign: 'center' }}>
+        <a
+          href="https://www.zillow.com/profile/Kim-Pelham"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: 'none', textAlign: 'center' }}
+        >
           <div
             style={{
               display: 'flex',
@@ -57,10 +62,15 @@ export default function SocialProof() {
           >
             Zillow
           </p>
-        </div>
+        </a>
 
         {/* Google Rating */}
-        <div style={{ textAlign: 'center' }}>
+        <a
+          href="https://www.google.com/maps/place/Kim+Pelham+-+The+Pelham+Group+NW/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ textDecoration: 'none', textAlign: 'center' }}
+        >
           <div
             style={{
               display: 'flex',
@@ -96,7 +106,7 @@ export default function SocialProof() {
           >
             Google
           </p>
-        </div>
+        </a>
 
         {/* Top Producer Badge */}
         <div style={{ textAlign: 'center' }}>

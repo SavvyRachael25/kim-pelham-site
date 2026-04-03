@@ -13,11 +13,12 @@ export default function About() {
       }}
     >
       <div
+        className="about-grid"
         style={{
           maxWidth: '1200px',
           margin: '0 auto',
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
+          gridTemplateColumns: '1fr 1fr',
           gap: '60px',
           alignItems: 'center',
         }}
@@ -26,15 +27,16 @@ export default function About() {
         <div
           style={{
             display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'flex-start',
+            flexDirection: 'column',
+            alignItems: 'center',
+            position: 'relative',
           }}
         >
           <div
             style={{
               position: 'relative',
               width: '100%',
-              maxWidth: '300px',
+              maxWidth: '360px',
               aspectRatio: '3/4',
               backgroundColor: '#F8F5F0',
               padding: '8px',
@@ -47,7 +49,7 @@ export default function About() {
               alt="Kim Pelham at the Everett Farmers Market"
               fill
               quality={85}
-              sizes="(max-width: 768px) 100vw, 300px"
+              sizes="(max-width: 768px) 100vw, 360px"
               style={{
                 objectFit: 'cover',
               }}
@@ -58,8 +60,7 @@ export default function About() {
               fontFamily: 'var(--font-handwritten)',
               fontSize: '14px',
               color: '#9B9B9B',
-              position: 'absolute',
-              marginTop: '320px',
+              marginTop: '16px',
               textAlign: 'center',
               maxWidth: '280px',
             }}
@@ -173,6 +174,13 @@ export default function About() {
           </Link>
         </div>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .about-grid {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }

@@ -111,14 +111,14 @@ export default function ContactCTA() {
           }}
         >
           Or call me directly — <a
-            href="tel:+1234567890"
+            href="tel:+14253439926"
             style={{
               color: '#FFFFFF',
               textDecoration: 'underline',
               fontWeight: 600,
             }}
           >
-            (123) 456-7890
+            (425) 343-9926
           </a>
         </p>
       </div>

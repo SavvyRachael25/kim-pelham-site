@@ -40,7 +40,7 @@ export default function Hero() {
         style={{
           position: 'absolute',
           inset: 0,
-          background: 'linear-gradient(135deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0.35) 100%)',
+          background: 'linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.45) 100%)',
           zIndex: 2,
         }}
       />
@@ -129,7 +129,7 @@ export default function Hero() {
             >
               <path
                 d="M 0 10 Q 50 2 100 10 T 200 10"
-                stroke="#B8845C"
+                stroke="#F0EDE7"
                 strokeWidth="3"
                 fill="none"
                 strokeLinecap="round"
@@ -143,7 +143,7 @@ export default function Hero() {
           style={{
             fontFamily: 'var(--font-body)',
             fontSize: '18px',
-            color: '#FFFFFF',
+            color: '#F0EDE7',
             maxWidth: '700px',
             margin: '0 0 40px 0',
             lineHeight: 1.6,
