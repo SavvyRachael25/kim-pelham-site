@@ -17,7 +17,7 @@ const picks = [
   },
   {
     id: 3,
-    image: '/images/neighborhood-01-everett-marina.jpg',
+    image: '/images/neighborhood-jetty-island.jpg',
     title: 'Jetty Island, Everett',
     description: 'Free ferry in summer. Kids love it. Adults love it more.',
   },

@@ -26,7 +26,7 @@ const neighborhoods = [
   },
   {
     id: 4,
-    image: '/images/property-03-lake-stevens-waterfront.jpg',
+    image: '/images/neighborhood-lake-stevens-aerial.jpg',
     title: 'Lake Stevens — waterfront living',
     rotation: 3,
     colSpan: 4,
@@ -40,7 +40,7 @@ const neighborhoods = [
   },
   {
     id: 6,
-    image: '/images/lifestyle-01-farmers-market.jpg',
+    image: '/images/neighborhood-marysville-aerial.jpg',
     title: 'Marysville — room to grow',
     rotation: 2,
     colSpan: 4,

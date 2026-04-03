@@ -36,8 +36,8 @@ export default function About() {
             style={{
               position: 'relative',
               width: '100%',
-              maxWidth: '360px',
-              aspectRatio: '3/4',
+              maxWidth: '400px',
+              aspectRatio: '4/3',
               backgroundColor: '#F8F5F0',
               padding: '8px',
               boxShadow: '4px 8px 16px rgba(0,0,0,0.12)',
@@ -45,8 +45,8 @@ export default function About() {
             }}
           >
             <Image
-              src="/images/about-01-approachable-headshot-env.jpg"
-              alt="Kim Pelham at the Everett Farmers Market"
+              src="/images/kim-pelham-headshot.jpg"
+              alt="Kim Pelham, Associate Broker"
               fill
               quality={85}
               sizes="(max-width: 768px) 100vw, 360px"
@@ -65,7 +65,7 @@ export default function About() {
               maxWidth: '280px',
             }}
           >
-            Kim at the Everett Farmers Market
+            Kim Pelham, Associate Broker
           </p>
         </div>
 
