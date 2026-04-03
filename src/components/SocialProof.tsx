@@ -22,7 +22,7 @@ export default function SocialProof() {
       >
         {/* Zillow Rating */}
         <a
-          href="https://www.zillow.com/profile/Kim-Pelham"
+          href="https://www.zillow.com/profile/kimpelham"
           target="_blank"
           rel="noopener noreferrer"
           style={{ textDecoration: 'none', textAlign: 'center' }}
@@ -66,7 +66,7 @@ export default function SocialProof() {
 
         {/* Google Rating */}
         <a
-          href="https://www.google.com/maps/place/Kim+Pelham+-+The+Pelham+Group+NW/"
+          href="https://www.google.com/search?q=pelham+group+nw"
           target="_blank"
           rel="noopener noreferrer"
           style={{ textDecoration: 'none', textAlign: 'center' }}

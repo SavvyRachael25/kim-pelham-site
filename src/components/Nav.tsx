@@ -67,6 +67,7 @@ export default function Nav() {
     { label: 'Sell', href: '/sellers' },
     { label: 'Neighborhoods', href: '/neighborhoods' },
     { label: 'About', href: '/about' },
+    { label: 'Blog', href: '/blog' },
     { label: 'Staging', href: '/staging' },
   ];
 

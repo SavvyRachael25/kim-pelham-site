@@ -88,11 +88,12 @@ export default function Hero() {
           style={{
             fontFamily: 'var(--font-handwritten)',
             fontSize: '20px',
-            color: '#B8845C',
+            color: '#F0EDE7',
             margin: '0 0 24px 0',
             opacity: mounted ? 1 : 0,
             transform: mounted ? 'translateY(0)' : 'translateY(-20px)',
             transition: 'all 0.8s ease-out 0s',
+            textShadow: '0 1px 4px rgba(0,0,0,0.5)',
           }}
         >
           your neighbor in real estate

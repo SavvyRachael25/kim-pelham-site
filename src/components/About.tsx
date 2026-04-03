@@ -9,37 +9,32 @@ export default function About() {
       style={{
         width: '100%',
         backgroundColor: '#FFFFFF',
-        padding: '80px 24px',
+        padding: '60px 24px',
       }}
     >
       <div
-        className="about-grid"
+        className="about-layout"
         style={{
-          maxWidth: '1200px',
+          maxWidth: '1100px',
           margin: '0 auto',
-          display: 'grid',
-          gridTemplateColumns: '1fr 1fr',
-          gap: '60px',
+          display: 'flex',
           alignItems: 'center',
+          gap: '48px',
         }}
       >
-        {/* Left: Image */}
+        {/* Left: Image — compact horizontal */}
         <div
           style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            position: 'relative',
+            flexShrink: 0,
           }}
         >
           <div
             style={{
               position: 'relative',
-              width: '100%',
-              maxWidth: '400px',
-              aspectRatio: '4/3',
+              width: '280px',
+              height: '210px',
               backgroundColor: '#F8F5F0',
-              padding: '8px',
+              padding: '6px',
               boxShadow: '4px 8px 16px rgba(0,0,0,0.12)',
               transform: 'rotate(-2.5deg)',
             }}
@@ -49,20 +44,21 @@ export default function About() {
               alt="Kim Pelham, Associate Broker"
               fill
               quality={85}
-              sizes="(max-width: 768px) 100vw, 360px"
+              sizes="280px"
               style={{
                 objectFit: 'cover',
+                objectPosition: 'center top',
               }}
             />
           </div>
           <p
             style={{
               fontFamily: 'var(--font-handwritten)',
-              fontSize: '14px',
+              fontSize: '13px',
               color: '#9B9B9B',
-              marginTop: '16px',
+              marginTop: '12px',
               textAlign: 'center',
-              maxWidth: '280px',
+              width: '280px',
             }}
           >
             Kim Pelham, Associate Broker
@@ -70,14 +66,14 @@ export default function About() {
         </div>
 
         {/* Right: Text */}
-        <div>
+        <div style={{ flex: 1 }}>
           {/* Handwritten label */}
           <p
             style={{
               fontFamily: 'var(--font-handwritten)',
               fontSize: '18px',
               color: '#B8845C',
-              margin: '0 0 16px 0',
+              margin: '0 0 12px 0',
             }}
           >
             meet your agent
@@ -87,10 +83,10 @@ export default function About() {
           <h2
             style={{
               fontFamily: 'var(--font-heading)',
-              fontSize: '40px',
+              fontSize: '36px',
               fontWeight: 700,
               color: '#2C2C2C',
-              margin: '0 0 32px 0',
+              margin: '0 0 20px 0',
               lineHeight: 1.2,
             }}
           >
@@ -100,10 +96,10 @@ export default function About() {
               <svg
                 style={{
                   position: 'absolute',
-                  bottom: '-8px',
+                  bottom: '-6px',
                   left: 0,
                   width: '100%',
-                  height: '12px',
+                  height: '10px',
                 }}
                 viewBox="0 0 200 20"
                 preserveAspectRatio="none"
@@ -119,14 +115,14 @@ export default function About() {
             </span>
           </h2>
 
-          {/* Bio paragraphs */}
+          {/* Bio — single paragraph for compactness */}
           <p
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '16px',
+              fontSize: '15px',
               color: '#2C2C2C',
-              lineHeight: 1.8,
-              margin: '0 0 24px 0',
+              lineHeight: 1.7,
+              margin: '0 0 16px 0',
             }}
           >
             I'm not the agent who shows up in a Mercedes with a designer bag. I'm the one who
@@ -139,10 +135,10 @@ export default function About() {
           <p
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '16px',
+              fontSize: '15px',
               color: '#2C2C2C',
-              lineHeight: 1.8,
-              margin: '0 0 32px 0',
+              lineHeight: 1.7,
+              margin: '0 0 20px 0',
             }}
           >
             When you work with me, you get someone who answers her own phone, stages your home
@@ -155,7 +151,7 @@ export default function About() {
             <span
               style={{
                 fontFamily: 'var(--font-body)',
-                fontSize: '16px',
+                fontSize: '15px',
                 fontWeight: 600,
                 color: '#B8845C',
                 cursor: 'pointer',
@@ -169,15 +165,16 @@ export default function About() {
                 e.currentTarget.style.color = '#B8845C';
               }}
             >
-              Read More About Kim
+              Read More About Kim →
             </span>
           </Link>
         </div>
       </div>
       <style>{`
         @media (max-width: 768px) {
-          .about-grid {
-            grid-template-columns: 1fr !important;
+          .about-layout {
+            flex-direction: column !important;
+            text-align: center;
           }
         }
       `}</style>
