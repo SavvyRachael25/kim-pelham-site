@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pre-sale home repair and renovation coordination in Snohomish County WA. Kim Pelham connects sellers with trusted contractors to maximize home value before listing.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thepelhamgroupnw.com/home-repair">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Home Repair & Building Services | The Pelham Group NW">
+    <meta property="og:description" content="Professional repair and maintenance services - SMART Building Solutions">
+    <meta property="og:image" content="https://i0.wp.com/thepelhamgroupnw.com/wp-content/uploads/2019/10/kim-pelham-real-estate-everett-repair-1.png">
+    <meta property="og:url" content="https://thepelhamgroupnw.com/home-repair">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "SMART Building Solutions",
+        "image": "https://i0.wp.com/thepelhamgroupnw.com/wp-content/uploads/2019/10/kim-pelham-real-estate-everett-repair-1.png",
+        "description": "Professional repair and maintenance services",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2815 Baker Ave Suite 102",
+            "addressLocality": "Everett",
+            "addressRegion": "WA",
+            "postalCode": "98201"
+        },
+        "telephone": "425-250-9422",
+        "email": "hello@thepelhamgroupnw.com",
+        "areaServed": ["King County", "Snohomish County", "Skagit County"]
+    }
+    </script>
+
+    <title>Pre-Sale Home Repair Coordination | Kim Pelham | Snohomish County</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapfamily=Inter:wght@300;400;500;600;700https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapdisplay=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/lucide@latest">
+    <style>
+        :root {
+            --green: #2F5233;
+            --gold: #C4A265;
+            --sage: #8B9E7E;
+            --cream: #F8F5F0;
+            --dark: #2C2C2C;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark);
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--dark);
+        }
+
+        h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: var(--dark);
+        }
+
+        h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        p {
+            color: var(--dark);
+        }
+
+        a {
+            color: var(--green);
+            text-decoration: none;
+            transition: color 0.4s ease;
+        }
+
+        a:hover {
+            color: var(--sage);
+        }
+
+        button {
+            background-color: var(--green);
+            color: var(--white);
+            border: 2px solid var(--green);
+            padding: 14px 32px;
+            font-size: 13px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 0;
+            transition: all 0.4s ease;
+        }
+
+        button:hover {
+            background-color: transparent;
+            color: var(--green);
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--green), var(--gold));
+            width: 0;
+            z-index: 2000;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--green);
+            padding: 1.5rem 2.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        .nav-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--white);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            align-items: center;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-cta {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            color: var(--white) !important;
+            padding: 0.7rem 1.2rem;
+            font-size: 11px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--white);
+            color: var(--green);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background-color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+                        url('images/hero-02-warm-kitchen.jpg') center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 70%, rgba(196, 162, 101, 0.05) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 14px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section Label */
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 1rem;
+        }
+
+        /* Service Section */
+        .service-sections {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 3rem;
+        }
+
+        .service-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            padding: 80px 0;
+            border-bottom: 1px solid rgba(47, 82, 51, 0.1);
+            animation: slideInLeft 0.6s ease;
+        }
+
+        .service-section:last-child {
+            border-bottom: none;
+        }
+
+        .service-section:nth-child(even) {
+            direction: rtl;
+        }
+
+        .service-section:nth-child(even) > * {
+            direction: ltr;
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .service-image {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(47, 82, 51, 0.15);
+        }
+
+        .service-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gold);
+            z-index: 1;
+        }
+
+        .service-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .service-image:hover img {
+            transform: scale(1.05);
+        }
+
+        .service-content h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .service-content h3 {
+            font-size: 16px;
+            color: var(--green);
+            margin: 2rem 0 1rem;
+            letter-spacing: 0.05em;
+        }
+
+        .service-content ul {
+            margin: 1rem 0 1.5rem 2rem;
+            list-style: none;
+        }
+
+        .service-content ul li {
+            padding-left: 20px;
+            margin-bottom: 12px;
+            position: relative;
+            color: var(--dark);
+        }
+
+        .service-content ul li::before {
+            content: '—';
+            position: absolute;
+            left: 0;
+            color: var(--gold);
+            font-weight: bold;
+        }
+
+        .service-content p {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            max-width: 900px;
+            margin: 100px auto;
+            padding: 80px 3rem;
+            background-color: var(--white);
+            border: 2px solid rgba(47, 82, 51, 0.15);
+            border-left: 4px solid var(--gold);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 2rem;
+        }
+
+        .cta-section p {
+            font-size: 16px;
+            color: var(--dark);
+            margin-bottom: 2.5rem;
+        }
+
+        .ghl-embed {
+            background-color: var(--cream);
+            padding: 30px;
+            margin: 2rem 0;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sage);
+            border: 1px dashed rgba(47, 82, 51, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--green);
+            color: var(--white);
+            padding: 80px 3rem 40px;
+            margin-top: 100px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(248, 245, 240, 0.2);
+        }
+
+        .footer-col h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+        }
+
+        .footer-col p {
+            color: rgba(248, 245, 240, 0.85);
+            font-size: 14px;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col a {
+            color: rgba(248, 245, 240, 0.85);
+            transition: color 0.3s ease;
+        }
+
+        .footer-col a:hover {
+            color: var(--gold);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            list-style: none;
+        }
+
+        .footer-links li a {
+            font-size: 14px;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 12px;
+            color: rgba(248, 245, 240, 0.6);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 48px;
+            height: 48px;
+            background-color: var(--gold);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 12px rgba(196, 162, 101, 0.3);
+        }
+
+        .back-to-top:hover {
+            background-color: var(--green);
+            transform: translateY(-4px);
+        }
+
+        .back-to-top svg {
+            color: var(--white);
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            nav {
+                padding: 1rem 2rem;
+            }
+
+            .service-sections {
+                padding: 0 2rem;
+            }
+
+            .service-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .service-section:nth-child(even) {
+                direction: ltr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+                flex-wrap: wrap;
+            }
+
+            .nav-links {
+                display: none;
+                gap: 1.5rem;
+                width: 100%;
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            .hero {
+                height: 50vh;
+            }
+
+            .service-section {
+                gap: 30px;
+            }
+
+            .cta-section {
+                padding: 60px 2rem;
+                margin: 60px auto;
+            }
+
+            footer {
+                padding: 60px 2rem 30px;
+            }
+
+            .back-to-top {
+                width: 42px;
+                height: 42px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-brand {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero {
+                height: 40vh;
+            }
+
+            .service-sections {
+                padding: 0 1.5rem;
+            }
+
+            .service-section {
+                padding: 60px 0;
+            }
+
+            .hero-subtitle {
+                font-size: 12px;
+            }
+
+            .cta-section {
+                padding: 40px 1.5rem;
+                margin: 40px 1rem;
+            }
+
+            footer {
+                padding: 40px 1.5rem 20px;
+            }
+
+            .footer-grid {
+                gap: 30px;
+                margin-bottom: 30px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-brand">KIM PELHAM</div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="sellers.html">Sellers</a></li>
+            <li><a href="buyers.html">Buyers</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="neighborhoods.html">Neighborhoods</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+        </ul>
+        <a href="contact.html" class="nav-cta">Contact Kim</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Home Repair & Building Solutions</h1>
+            <p class="hero-subtitle">Professional SMART Services</p>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <div class="service-sections">
+        <!-- Service 1: Painting -->
+        <section class="service-section">
+            <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&h=500&fit=crop" alt="Professional painting services">
+            </div>
+            <div class="service-content">
+                <p class="section-label">Painting Services</p>
+                <h2>Professional Painting</h2>
+                <p>Our expert painting services transform your property with high-quality finishes that enhance curb appeal and interior aesthetics. From interior walls to siding, we handle every detail with precision.</p>
+                <h3>Services Include</h3>
+                <ul>
+                    <li>Interior and exterior painting</li>
+                    <li>Garage floor epoxy coatings</li>
+                    <li>Deck and fence staining</li>
+                    <li>Eco-friendly paint options</li>
+                    <li>Pressure washing & preparation</li>
+                    <li>Carpentry and trim work</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Service 2: Handyman Services -->
+        <section class="service-section">
+            <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600&h=500&fit=crop" alt="Comprehensive handyman services">
+            </div>
+            <div class="service-content">
+                <p class="section-label">Handyman Services</p>
+                <h2>Expert Handyman Work</h2>
+                <p>From minor repairs to major renovations, our skilled handymen handle it all with craftsmanship and attention to detail. We serve King, Snohomish, and Skagit Counties with reliability and professionalism.</p>
+                <h3>Services Include</h3>
+                <ul>
+                    <li>Gutter repair and cleaning</li>
+                    <li>Caulking and weatherproofing</li>
+                    <li>Deck restoration and repair</li>
+                    <li>Fencing installation and repair</li>
+                    <li>Drywall repair and finishing</li>
+                    <li>Insulation work</li>
+                    <li>Trim and molding installation</li>
+                    <li>Roof, flashing, and window leak repair</li>
+                    <li>Flooring work</li>
+                    <li>Masonry and tile work</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Service 3: Flooring -->
+        <section class="service-section">
+            <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1585399363024-3209135c687f?w=600&h=500&fit=crop" alt="Hardwood and laminate flooring">
+            </div>
+            <div class="service-content">
+                <p class="section-label">Flooring</p>
+                <h2>Flooring Solutions</h2>
+                <p>Beautiful flooring solutions for every home and budget. Choose from a variety of materials and installation methods that suit your style and lifestyle needs perfectly.</p>
+                <h3>Flooring Options</h3>
+                <ul>
+                    <li>Pre-finished hardwood</li>
+                    <li>Laminate flooring</li>
+                    <li>Engineered hardwood</li>
+                    <li>Unfinished wood</li>
+                    <li>Floating floor systems</li>
+                    <li>Glue-down installation</li>
+                    <li>Luxury vinyl planks</li>
+                    <li>Carpet installation & replacement <!-- icon: carpet/rug --></li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Concierge Service & Pay at Closing -->
+        <section class="service-section">
+            <div class="service-image">
+                <!-- PHOTO NEEDED: residential home, not commercial building -->
+                <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&h=500&fit=crop" alt="Concierge home repair services">
+            </div>
+            <div class="service-content">
+                <p class="section-label">Concierge Program</p>
+                <h2>Concierge Service & Pay at Closing</h2>
+                <p>Selling your home shouldn't mean draining your savings on repairs before you even list. Our Concierge program covers the cost of pre-sale improvements — painting, flooring, staging, cleaning, and more — and you pay at closing from your proceeds. No upfront costs, no stress.</p>
+                <h3>How It Works</h3>
+                <ul>
+                    <li>Free home assessment to identify high-ROI improvements</li>
+                    <li>Repairs and upgrades completed before listing</li>
+                    <li>No upfront cost — pay at closing from your sale proceeds</li>
+                    <li>Coordinated with Kim's staging and marketing system</li>
+                    <li>Covers painting, flooring, landscaping, cleaning, and more</li>
+                    <li>Maximizes your sale price with minimal out-of-pocket risk</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Service 5: Cleaning Service -->
+        <section class="service-section">
+            <div class="service-image">
+                <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&h=500&fit=crop" alt="Professional cleaning services">
+            </div>
+            <div class="service-content">
+                <p class="section-label">Cleaning Services</p>
+                <h2>Move-In & Move-Out Cleaning</h2>
+                <p>Thorough move-in and move-out cleaning with our comprehensive 30+ task checklist. Every corner is covered to ensure your property is pristine and ready.</p>
+                <h3>Our Cleaning Includes</h3>
+                <ul>
+                    <li>Deep cleaning of all rooms</li>
+                    <li>Kitchen appliance cleaning</li>
+                    <li>Bathroom sanitization</li>
+                    <li>Carpet and floor cleaning</li>
+                    <li>Window and blind cleaning</li>
+                    <li>Baseboard and trim cleaning</li>
+                    <li>Garage and storage area cleaning</li>
+                    <li>Yard and landscaping tidying</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <p class="section-label">Ready to Get Started?</p>
+        <h2>Get Your Free Estimate</h2>
+        <p>Contact SMART Building Solutions today for professional, affordable home repair and maintenance services in the Pacific Northwest.</p>
+        <div class="ghl-embed">
+            <!-- GHL Form Embed -->
+        </div>
+        <button onclick="document.querySelector('.ghl-embed').scrollIntoView({behavior: 'smooth'})">Request Free Estimate</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>The Pelham Group NW</h3>
+                <p>SMART Building Solutions — Professional home repair and maintenance services for Snohomish, King, and Skagit Counties. Trusted partners in your home's care.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Kim</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="book.html">Book</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact</h3>
+                <ul class="footer-links">
+                    <li><a href="tel:4252509422">425.250.9422</a></li>
+                    <li><a href="mailto:hello@thepelhamgroupnw.com">hello@thepelhamgroupnw.com</a></li>
+                    <li>2815 Baker Ave Suite 102<br>Everett, WA 98201</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Kim Pelham | The Pelham Group NW</p>
+            <p style="margin-top: 6px; font-size: 14px; font-weight: 600;">Brokered by Katrina Eileen Real Estate · Everett, WA</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </button>
+
+    <script>
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.getElementById('scrollProgress').style.width = scrollPercent + '%';
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+
+        // Mobile Menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.service-section').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

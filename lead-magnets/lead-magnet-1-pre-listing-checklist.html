@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Pre-Listing Launch Checklist | The Pelham Group NW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            background: #F0EDE7;
+            color: #222222;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 8.5in;
+            height: 11in;
+            margin: 0 auto;
+            background: #FFFFFF;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        header {
+            background: #2F5233;
+            color: #FFFFFF;
+            padding: 40px 40px 30px;
+            border-bottom: 4px solid #C4A265;
+        }
+
+        .header-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .tagline {
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: #C4A265;
+            margin-bottom: 20px;
+            border-top: 1px solid #C4A265;
+            padding-top: 12px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #F0EDE7;
+            font-weight: 400;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 40px;
+        }
+
+        .intro-text {
+            font-size: 14px;
+            color: #6B6B6B;
+            margin-bottom: 25px;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #2F5233;
+            margin-bottom: 20px;
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: #C4A265;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        .timeline-section {
+            margin-bottom: 22px;
+        }
+
+        .timeline-header {
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: #FFFFFF;
+            background: #C4A265;
+            padding: 8px 12px;
+            margin-bottom: 12px;
+            letter-spacing: 0.5px;
+        }
+
+        .checklist-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 10px;
+            font-size: 13px;
+            color: #222222;
+        }
+
+        .checklist-checkbox {
+            width: 18px;
+            height: 18px;
+            border: 2px solid #2F5233;
+            border-radius: 2px;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 2px;
+        }
+
+        .checklist-checkbox::after {
+            content: '';
+            color: #C4A265;
+            font-weight: bold;
+            font-size: 14px;
+            opacity: 0;
+        }
+
+        .checklist-text {
+            flex: 1;
+        }
+
+        .highlight {
+            color: #2F5233;
+            font-weight: 600;
+        }
+
+        /* Stat Box */
+        .stat-box {
+            background: #F0EDE7;
+            border-left: 4px solid #C4A265;
+            padding: 16px 16px 16px 20px;
+            margin: 20px 0;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .stat-number {
+            font-family: 'Cinzel', serif;
+            font-size: 24px;
+            font-weight: 700;
+            color: #2F5233;
+            margin-bottom: 4px;
+        }
+
+        .stat-label {
+            color: #6B6B6B;
+            font-size: 12px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2F5233;
+            color: #FFFFFF;
+            padding: 30px 40px;
+            border-top: 4px solid #C4A265;
+            margin-top: 20px;
+        }
+
+        .footer-content {
+            margin-bottom: 16px;
+        }
+
+        .footer-label {
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            letter-spacing: 1px;
+            color: #C4A265;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        .footer-text {
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .contact-phone {
+            font-family: 'Cinzel', serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #C4A265;
+            margin: 12px 0;
+        }
+
+        .cta-button {
+            background: #C4A265;
+            color: #222222;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 3px;
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            margin-top: 12px;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            background: #B39050;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                background: white;
+            }
+
+            .container {
+                max-width: 100%;
+                height: auto;
+                box-shadow: none;
+                page-break-after: avoid;
+            }
+
+            header, footer {
+                page-break-inside: avoid;
+            }
+
+            .content {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-logo">THE PELHAM GROUP NW</div>
+            <div class="tagline">Presence. Perspective. Purpose.</div>
+            <h1>Your Pre-Listing Launch Checklist</h1>
+            <p class="subtitle">Master the critical 72 hours that shape your home sale</p>
+        </header>
+
+        <div class="content">
+            <p class="intro-text">The first three days on the market aren't just the beginning—they're frequently the deciding factor in how quickly your home sells and what price it commands. This checklist guides you through everything that happens before your home goes live, so you can launch with confidence and momentum.</p>
+
+            <h2>Two Weeks Before Launch</h2>
+            <div class="timeline-section">
+                <div class="timeline-header">Strategic Repairs & Inspections</div>
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Schedule home inspection to identify critical repairs</div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Address foundation, roof, HVAC, plumbing issues</div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Fix items that "scare buyers" (structural, electrical, water)</div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Skip cosmetic fixes—focus on friction-point removers</div>
+                </div>
+            </div>
+
+            <div class="timeline-section">
+                <div class="timeline-header">Preparation & Staging Planning</div>
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Book professional staging consultant for consultation</div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Begin decluttering—remove personal items and excess furniture</div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Deep clean every room (windows, baseboards, carpets)</div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Ensure neutral paint colors (refresh if needed)</div>
+                </div>
+            </div>
+
+            <h2>One Week Before Launch</h2>
+            <div class="timeline-section">
+                <div class="timeline-header">Professional Staging & Photography Setup</div>
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Complete full staging (furniture arrangement, lighting, flow)</div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Schedule professional photography (natural light hours)</div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Take interior & exterior photos (daylight + dusk photos)</div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Plan drone photography if property warrants</div>
+                </div>
+            </div>
+
+            <div class="timeline-section">
+                <div class="timeline-header">Marketing & Online Presence</div>
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Finalize listing description and key features</div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Prepare social media content calendar</div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Schedule Facebook/Instagram ad campaigns</div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Draft email marketing to past buyers</div>
+                </div>
+            </div>
+
+            <h2>Day Before Launch</h2>
+            <div class="timeline-section">
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Final walkthrough—check every room for perfection</div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Confirm all listing information is accurate</div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Prepare scheduling system for showing requests</div>
+                </div>
+                <div class="checklist-item">
+                    <div class="checklist-checkbox"></div>
+                    <div class="checklist-text">Plan your weekend away (let momentum work without you)</div>
+                </div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-number">104.4%</div>
+                <div class="stat-label">Average sale-to-list ratio for Kim's clients (vs. 97.98% county average)</div>
+                <p style="margin-top: 8px; color: #222222;">That difference represents real money. On a $1 million home: <span class="highlight">$64,000 additional value</span>.</p>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-number">65%</div>
+                <div class="stat-label">Faster time on market for staged homes</div>
+                <p style="margin-top: 8px; color: #222222;">Staged homes also sell 3–6% higher. That's <span class="highlight">$15,000–30,000</span> on a $500K home.</p>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-label">Ready to Launch?</div>
+                <p class="footer-text">Those opening 72 hours are your highest-traffic moment. Let's make sure your home launches with the momentum and presentation it deserves. I'll handle the strategy. You'll handle the decision.</p>
+            </div>
+            <div class="contact-phone">425.250.9422</div>
+            <div class="footer-text">Kim Pelham | The Pelham Group NW</div>
+            <button class="cta-button">Ready to Talk About Your Home?</button>
+        </footer>
+    </div>
+</body>
+</html>

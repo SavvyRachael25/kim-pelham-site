@@ -1,0 +1,172 @@
+KIM PELHAM NURTURE SEQUENCE - 7 EMAIL TOUCHES
+Designed for GoHighLevel (GHL) Email Automation
+
+SEQUENCE TIMELINE & CONTENT OVERVIEW
+====================================
+
+TOUCH 1 (Day 0 - IMMEDIATE)
+File: touch-1-welcome.html
+Subject: Welcome to The Pelham Group NW family
+Length: 85 lines | ~3.2KB
+Key Elements:
+  - Personal greeting with merge field
+  - Kim's origin story (10+ years PNW)
+  - The 3 Pillars: Presence, Perspective, Purpose
+  - 104.4% sale-to-list ratio highlighted
+  - Value promise for email series
+  - CTA: Explore Our Services
+Purpose: Set tone, build initial trust, explain what they'll receive
+
+TOUCH 2 (Day 3)
+File: touch-2-market-intel.html
+Subject: What the Snohomish County numbers are really telling us
+Length: 85 lines | ~3.3KB
+Key Elements:
+  - Current market snapshot (inventory +20.9%, median $730K, 6.37% rates)
+  - What it means for SELLERS (competition, staging matters)
+  - What it means for BUYERS (more choices, rates down)
+  - Everett spotlight (most affordable, 30 min to Seattle)
+  - Data-driven analysis
+  - CTA: Get Free Home Valuation
+Purpose: Establish Kim as data authority, provide real market insight
+
+TOUCH 3 (Day 5)
+File: touch-3-staging-story.html
+Subject: How we turned 2 months of silence into 5 days and multiple offers
+Length: 81 lines | ~3.2KB
+Key Elements:
+  - Case study: home sat 2 months with old broker → 5 days with Kim
+  - Solution: restaging, professional photos, relisting
+  - Sold $10K above asking with multiple offers
+  - 6-step replicable system outlined
+  - NAR data: staged homes sell 8-20% faster
+  - CTA: See Our Staging Gallery
+Purpose: Prove the system works through storytelling, demonstrate ROI
+
+TOUCH 4 (Day 7)
+File: touch-4-senior-services.html
+Subject: When a home sale is more than just a transaction
+Length: 100 lines | ~3.8KB
+Key Elements:
+  - Emotional hook: families in transition
+  - 17-category concierge service outlined
+  - Coordination: estates, care, movers, tax planning, donations
+  - Position as "who we are" not "what we upsell"
+  - Empathetic, high-value positioning
+  - CTA: Learn About Senior Services
+Purpose: Introduce differentiated service, position as trusted advisor
+
+TOUCH 5 (Day 10)
+File: touch-5-buyers-advantage.html
+Subject: The smartest thing buyers in Snohomish County can do right now
+Length: 92 lines | ~3.5KB
+Key Elements:
+  - Buyers' market advantage (36.1% more inventory than last year)
+  - Haven't seen this choice since 2019
+  - Wage growth outpacing prices for first time
+  - Rate math: 6.37% vs 7%+ = $200+/month savings
+  - Counter the "wait for rates to drop" myth
+  - Max 2 buyer clients = full attention approach
+  - CTA: Start Your Home Search
+Purpose: Create urgency without pressure, position current market as opportunity
+
+TOUCH 6 (Day 14)
+File: touch-6-home-repair.html
+Subject: The repair you skip today could cost you $15,000 at closing
+Length: 115 lines | ~4.4KB
+Key Elements:
+  - Problem: brokers don't help with repairs
+  - Solution: SMART Building Solutions partnership
+  - ROI math: $500 fix now vs $5K buyer credit later
+  - Common deal killers: roof, foundation, plumbing, electrical
+  - Proactive pre-listing approach
+  - Detailed formatting with highlight boxes
+  - CTA: Free Repair Consultation
+Purpose: Demonstrate full-service advantage, build confidence in process
+
+TOUCH 7 (Day 21 - THE CLOSE)
+File: touch-7-direct-ask.html
+Subject: Let's talk about your goals, {{contact.first_name}}
+Length: 103 lines | ~4.0KB
+Key Elements:
+  - By now they've seen data, stories, services
+  - Direct ask: whether buying, selling, or exploring
+  - "A conversation costs nothing"
+  - Track record: $3.2M+ sold, 104.4% sale-to-list, 10+ years
+  - Multiple CTAs: book, email, call directly
+  - Zero pressure positioning
+  - Contact number: 425.250.9422
+  - CTA: Schedule Free Consultation
+Purpose: Close the loop with warm, direct call-to-action
+
+TECHNICAL SPECIFICATIONS (ALL EMAILS)
+=====================================
+- DOCTYPE: HTML5
+- Main container: 600px width (optimal for email)
+- Outer background: #F0EDE7 (warm cream)
+- Inner container: #ffffff with 8px border-radius
+- Content padding: 40px on all sides
+- Header bg: #2F5233 (deep forest green)
+- Logo size: 180px (header), 120px (footer)
+- CTA button: #C4A265 (champagne gold)
+- Accent bar: 4px solid #C4A265
+- Font headers: Cinzel, Georgia, serif
+- Font body: Josefin Sans, Helvetica, Arial, sans-serif
+- All CSS: Inline only (no style blocks)
+- Layout: HTML tables only (no divs)
+- All tables: cellpadding="0" cellspacing="0" border="0"
+- No em dashes
+- No emojis
+- GHL merge fields: {{contact.first_name}}, {{unsubscribe_link}}, etc.
+
+BRAND COMPLIANCE CHECKLIST
+==========================
+[✓] No holiday content (respects Kim's background)
+[✓] No seasonal references
+[✓] No religious content
+[✓] Professional, luxury positioning
+[✓] Data-driven + storytelling balance
+[✓] Buyer AND seller focused
+[✓] Value-first approach
+[✓] Trust-building trajectory
+[✓] Clear CTAs in each email
+[✓] Responsive-friendly table layout
+[✓] GHL-compatible merge fields
+[✓] No external stylesheets
+[✓] Logo and imagery URLs included
+[✓] Contact info consistent
+[✓] Brand colors accurate
+[✓] Footer: tagline + address + unsubscribe
+
+GHL WORKFLOW SETUP
+==================
+Recommended workflow in GoHighLevel:
+1. New Lead trigger
+2. Apply tag (e.g., "Pelham Group Nurture")
+3. Email #1 (immediate)
+4. Wait 3 days
+5. Email #2
+6. Wait 2 days (5 total)
+7. Email #3
+8. Wait 2 days (7 total)
+9. Email #4
+10. Wait 3 days (10 total)
+11. Email #5
+12. Wait 4 days (14 total)
+13. Email #6
+14. Wait 7 days (21 total)
+15. Email #7
+16. [Optional: Repeat or move to evergreen content]
+
+MERGE FIELD MAPPING
+===================
+Create these custom fields in GHL:
+- {{contact.first_name}} - First name (standard)
+- {{website_url}} - https://thepelhamgroupnw.com
+- {{valuation_link}} - Link to home valuation form
+- {{staging_url}} - Link to staging gallery/before-afters
+- {{senior_services_url}} - Link to senior services page
+- {{search_url}} - Link to MLS search tool
+- {{repair_consult_link}} - Link to repair consultation form
+- {{booking_link}} - Link to calendar booking (Calendly, etc.)
+- {{unsubscribe_link}} - GHL standard unsubscribe

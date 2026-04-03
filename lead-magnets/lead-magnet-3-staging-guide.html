@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room-by-Room Staging Guide | The Pelham Group NW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            background: #F0EDE7;
+            color: #222222;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 8.5in;
+            height: auto;
+            margin: 0 auto;
+            background: #FFFFFF;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        header {
+            background: #2F5233;
+            color: #FFFFFF;
+            padding: 40px 40px 30px;
+            border-bottom: 4px solid #C4A265;
+        }
+
+        .header-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .tagline {
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: #C4A265;
+            margin-bottom: 20px;
+            border-top: 1px solid #C4A265;
+            padding-top: 12px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #F0EDE7;
+            font-weight: 400;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 40px;
+        }
+
+        .intro-text {
+            font-size: 14px;
+            color: #6B6B6B;
+            margin-bottom: 25px;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #2F5233;
+            margin-bottom: 16px;
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: #C4A265;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        .section-intro {
+            font-size: 12px;
+            color: #6B6B6B;
+            font-style: italic;
+            margin-bottom: 14px;
+            line-height: 1.6;
+        }
+
+        .room-card {
+            background: #F0EDE7;
+            border: 1px solid #C4A265;
+            padding: 16px;
+            margin: 14px 0;
+            border-radius: 3px;
+        }
+
+        .room-title {
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: #2F5233;
+            margin-bottom: 10px;
+        }
+
+        .psychology-label {
+            font-size: 11px;
+            color: #C4A265;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .psychology-text {
+            font-size: 12px;
+            color: #222222;
+            margin-bottom: 10px;
+            line-height: 1.6;
+            font-style: italic;
+        }
+
+        .checklist {
+            font-size: 12px;
+            color: #222222;
+            margin-top: 10px;
+        }
+
+        .checklist-item {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 7px;
+        }
+
+        .checklist-item::before {
+            content: '';
+            color: #C4A265;
+            font-weight: bold;
+            flex-shrink: 0;
+            margin-right: 4px;
+        }
+
+        .highlight-box {
+            background: #FFFFFF;
+            border-left: 4px solid #C4A265;
+            padding: 14px 14px 14px 16px;
+            margin: 18px 0;
+            font-size: 12px;
+            line-height: 1.6;
+            border-radius: 2px;
+        }
+
+        .highlight-title {
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            font-weight: 700;
+            color: #2F5233;
+            margin-bottom: 8px;
+        }
+
+        .stat-box {
+            background: #FFFFFF;
+            border: 2px solid #2F5233;
+            padding: 16px;
+            margin: 18px 0;
+            text-align: center;
+            border-radius: 3px;
+        }
+
+        .stat-number {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #2F5233;
+            margin-bottom: 6px;
+        }
+
+        .stat-label {
+            font-size: 12px;
+            color: #6B6B6B;
+            line-height: 1.5;
+        }
+
+        .case-study {
+            background: #F0EDE7;
+            border-left: 4px solid #C4A265;
+            padding: 14px;
+            margin: 18px 0;
+            border-radius: 2px;
+        }
+
+        .case-study-label {
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            font-weight: 700;
+            color: #C4A265;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .case-study-text {
+            font-size: 12px;
+            color: #222222;
+            line-height: 1.6;
+        }
+
+        /* Footer */
+        footer {
+            background: #2F5233;
+            color: #FFFFFF;
+            padding: 30px 40px;
+            border-top: 4px solid #C4A265;
+            margin-top: 20px;
+        }
+
+        .footer-content {
+            margin-bottom: 16px;
+        }
+
+        .footer-label {
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            letter-spacing: 1px;
+            color: #C4A265;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        .footer-text {
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .contact-phone {
+            font-family: 'Cinzel', serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #C4A265;
+            margin: 12px 0;
+        }
+
+        .cta-button {
+            background: #C4A265;
+            color: #222222;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 3px;
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            margin-top: 12px;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            background: #B39050;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                background: white;
+            }
+
+            .container {
+                max-width: 100%;
+                box-shadow: none;
+                page-break-after: avoid;
+            }
+
+            header, footer {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-logo">THE PELHAM GROUP NW</div>
+            <div class="tagline">Presence. Perspective. Purpose.</div>
+            <h1>Room-by-Room Staging Guide</h1>
+            <p class="subtitle">The psychology of selling: How to help buyers envision their future</p>
+        </header>
+
+        <div class="content">
+            <p class="intro-text">Staging isn't about filling space with furniture—it's about creating emotional experiences that help buyers imagine their lives in your home. This guide walks you through each room with the psychology-driven principles that have proven to work.</p>
+
+            <div class="case-study">
+                <div class="case-study-label">Real Result: The 5-Day Transformation</div>
+                <div class="case-study-text">A home that had sat on the market for <strong>2 months with zero offers</strong> was completely restaged. Within <strong>5 days of relisting</strong>, we had multiple offers competing for the property—with the winning offer at <strong>$10,000 above asking price</strong>. That's the power of psychology-driven staging.</div>
+            </div>
+
+            <h2>What Makes Staging Actually Work</h2>
+            <div class="section-intro">Buyers purchase on emotion before logic. They fall in love with how a space feels and what it promises, then justify the purchase with data.</div>
+
+            <div class="highlight-box">
+                <div class="highlight-title">The 4 Psychological Principles</div>
+                <p><strong>1. Visualization & Projection:</strong> A thoughtfully staged room removes cognitive barriers. Buyers don't struggle to imagine their furniture—they experience calm, rest, and possibility.</p>
+                <p style="margin-top: 8px;"><strong>2. Reduced Mental Load:</strong> A well-staged home removes clutter and personalization, so buyers can feel instead of think.</p>
+                <p style="margin-top: 8px;"><strong>3. Perceived Value:</strong> Staged homes feel more valuable. A property that's been thoughtfully prepared signals: This is quality. This was respected.</p>
+                <p style="margin-top: 8px;"><strong>4. Focal Points & Flow:</strong> Staging creates intentional focal points that guide buyers through the space emotionally.</p>
+            </div>
+
+            <h2>Room-by-Room Staging Strategy</h2>
+
+            <div class="room-card">
+                <div class="room-title">🛏️ Master Bedroom</div>
+                <div class="psychology-label">Psychology: Rest & Sanctuary</div>
+                <div class="psychology-text">Buyers should feel calm, peaceful, and ready for sleep. The bedroom is about escape from the world—a personal sanctuary.</div>
+                <div class="checklist">
+                    <div class="checklist-item">Remove excess furniture. The room should feel spacious and restful</div>
+                    <div class="checklist-item">Use soft, neutral bedding and lighting. Avoid dark colors or heavy drapes</div>
+                    <div class="checklist-item">Clear nightstands. A lamp, maybe one small object. That's it</div>
+                    <div class="checklist-item">Remove personal photos and memorabilia</div>
+                    <div class="checklist-item">Add one soft accent—a neutral throw or pillow—for warmth</div>
+                    <div class="checklist-item">Ensure adequate lighting (lamps + overhead). Bright bedrooms feel larger</div>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-title">🍳 Kitchen</div>
+                <div class="psychology-label">Psychology: Gathering & Lifestyle</div>
+                <div class="psychology-text">The kitchen is where families gather. Buyers should imagine hosting, cooking, and creating memories. It should feel inviting and functional.</div>
+                <div class="checklist">
+                    <div class="checklist-item">Clear counters completely (except one small, beautiful item)</div>
+                    <div class="checklist-item">Open cabinets if they're well-organized. Otherwise, keep closed</div>
+                    <div class="checklist-item">Ensure impeccable cleanliness. Kitchens signal maintenance quality</div>
+                    <div class="checklist-item">Add subtle warmth: a vase, fresh fruit in a bowl, or fresh flowers</div>
+                    <div class="checklist-item">Lighting is critical. Bright, functional kitchens feel modern and efficient</div>
+                    <div class="checklist-item">Show the table or seating area as inviting (not cluttered)</div>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-title">🛋️ Living Room</div>
+                <div class="psychology-label">Psychology: Welcome & Connection</div>
+                <div class="psychology-text">The living room says "You belong here." It should feel warm, inviting, and like a place where real life happens—but refined and uncluttered.</div>
+                <div class="checklist">
+                    <div class="checklist-item">Arrange furniture to show conversation and natural flow</div>
+                    <div class="checklist-item">Remove 30–50% of personal items and decorations</div>
+                    <div class="checklist-item">Create a focal point (fireplace, TV wall, window view)</div>
+                    <div class="checklist-item">Use neutral colors as the foundation; add 2–3 accent colors maximum</div>
+                    <div class="checklist-item">Layer lighting: overhead + lamps. Warm light = welcoming</div>
+                    <div class="checklist-item">Add one or two tasteful accent pieces (not personal to you)</div>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-title">🚿 Bathrooms</div>
+                <div class="psychology-label">Psychology: Clean & Spa-Like</div>
+                <div class="psychology-text">Bathrooms signal cleanliness, care, and maintenance. They should feel spa-like—peaceful and pristine, never cluttered.</div>
+                <div class="checklist">
+                    <div class="checklist-item">Empty all counters except soap and one small decorative item</div>
+                    <div class="checklist-item">Remove all personal products and toiletries from sight</div>
+                    <div class="checklist-item">Ensure mirrors are sparkling clean and well-lit</div>
+                    <div class="checklist-item">Fresh white or light-colored towels on racks</div>
+                    <div class="checklist-item">Add fresh flowers or a single decorative element</div>
+                    <div class="checklist-item">Grout and tile must be pristine. Any damage = red flag for buyers</div>
+                </div>
+            </div>
+
+            <div class="room-card">
+                <div class="room-title">🍽️ Dining Room</div>
+                <div class="psychology-label">Psychology: Gathering & Celebration</div>
+                <div class="psychology-text">The dining room is about possibility—entertaining, family dinners, celebrations. It should feel elegant but accessible.</div>
+                <div class="checklist">
+                    <div class="checklist-item">A properly set table is ideal (not overdone, just inviting)</div>
+                    <div class="checklist-item">Remove one-third of your typical decorations</div>
+                    <div class="checklist-item">Lighting should be warm and flattering (dimmer switches are great)</div>
+                    <div class="checklist-item">Show flow between dining and living/kitchen areas</div>
+                    <div class="checklist-item">Keep sideboard/buffet clear except for a few elegant pieces</div>
+                </div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-number">65%</div>
+                <div class="stat-label">Faster time on market for staged homes<br/>(vs. unstaged)</div>
+            </div>
+
+            <div class="stat-box">
+                <div class="stat-number">3–6%</div>
+                <div class="stat-label">Higher sale price achieved through<br/>professional staging</div>
+            </div>
+
+            <h2>The Universal Staging Principles</h2>
+            <div class="highlight-box">
+                <div class="highlight-title">These apply to every room:</div>
+                <p><strong>Declutter ruthlessly.</strong> Remove 30–50% of what's currently there. Empty rooms feel larger than full ones.</p>
+                <p style="margin-top: 8px;"><strong>Use neutral colors as base.</strong> Let buyers imagine their style, not live within yours.</p>
+                <p style="margin-top: 8px;"><strong>Layer lighting.</strong> Overhead + accent lights. Bright spaces feel modern and well-maintained.</p>
+                <p style="margin-top: 8px;"><strong>Create focal points.</strong> Guide the buyer's eye to the best features.</p>
+                <p style="margin-top: 8px;"><strong>Remove personalization.</strong> Family photos, collections, memorabilia—they block buyer imagination.</p>
+                <p style="margin-top: 8px;"><strong>Clean obsessively.</strong> Dust, spots, clutter scream "neglect" to buyers.</p>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-label">Ready for Professional Staging?</div>
+                <p class="footer-text">Staging typically costs $1,500–$5,000 and pays for itself in the first few days through faster sale and higher offers. I work with expert staging consultants who understand the psychology behind what works.</p>
+            </div>
+            <div class="contact-phone">425.250.9422</div>
+            <div class="footer-text">Kim Pelham | The Pelham Group NW</div>
+            <button class="cta-button">Let's Discuss Staging Your Home</button>
+        </footer>
+    </div>
+</body>
+</html>

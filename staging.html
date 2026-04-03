@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional home staging services in Snohomish County WA. Kim Pelham's staging consultation helps sellers in Everett, Bothell, Mill Creek and beyond sell faster and for more money.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thepelhamgroupnw.com/staging">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Home Staging | Kim Pelham">
+    <meta property="og:description" content="Psychology-driven staging that sells faster and for more">
+    <meta property="og:image" content="images/staging-01-living-room.jpg">
+    <meta property="og:url" content="https://thepelhamgroupnw.com/staging">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Kim Pelham - Home Staging",
+        "image": "images/staging-01-living-room.jpg",
+        "description": "Psychology-driven home staging services",
+        "telephone": "425-250-9422",
+        "email": "hello@thepelhamgroupnw.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2815 Baker Ave Suite 102",
+            "addressLocality": "Everett",
+            "addressRegion": "WA",
+            "postalCode": "98201"
+        }
+    }
+    </script>
+
+    <title>Home Staging Services | Kim Pelham | Snohomish County WA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapfamily=Inter:wght@300;400;500;600;700https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapdisplay=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --green: #2F5233;
+            --gold: #C4A265;
+            --sage: #8B9E7E;
+            --cream: #F8F5F0;
+            --dark: #2C2C2C;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark);
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            letter-spacing: -0.02em;
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            letter-spacing: -0.01em;
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            color: var(--green);
+        }
+
+        /* Scroll Progress Bar */
+        #scrollProgress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--green));
+            width: 0%;
+            z-index: 9999;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: var(--green);
+            padding: 1.5rem 2.5rem;
+            box-shadow: 0 4px 12px rgba(47, 82, 51, 0.1);
+            box-sizing: border-box;
+        }
+
+        nav a, nav button {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: color 0.4s ease;
+        }
+
+        .nav-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            letter-spacing: 0.2em;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .nav-brand-name {
+            font-weight: 700;
+        }
+
+        .nav-brand-tagline {
+            font-size: 10px;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            opacity: 0.9;
+        }
+
+        nav > * {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 3rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .contact-btn {
+            background-color: var(--gold);
+            color: var(--dark) !important;
+            padding: 0.7rem 1.2rem;
+            border: none;
+            border-radius: 0;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--cream);
+            color: var(--green) !important;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--cream);
+            transition: all 0.4s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 60vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(47, 82, 51, 0.85), rgba(139, 158, 126, 0.75)), url('images/staging-01-living-room.jpg') center/cover;
+            color: var(--white);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: 'Staging';
+            position: absolute;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(8rem, 20vw, 16rem);
+            letter-spacing: -0.02em;
+            opacity: 0.08;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            animation: fadeInUp 0.8s ease 0.3s both;
+        }
+
+        .hero h1 {
+            color: var(--cream);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--gold);
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section Label */
+        .section-label {
+            font-size: 12px;
+            letter-spacing: 0.3em;
+            color: var(--sage);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 80px 3rem;
+            text-align: center;
+        }
+
+        .intro-section p {
+            font-size: 18px;
+            line-height: 1.9;
+            color: var(--dark);
+        }
+
+        /* Before/After Gallery */
+        .gallery-section {
+            padding: 80px 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 80px;
+        }
+
+        .gallery-card {
+            position: relative;
+            overflow: hidden;
+            background: var(--white);
+            border: 2px solid #E5E0DA;
+            border-radius: 2px;
+            aspect-ratio: 1;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            animation: slideInFade 0.6s ease forwards;
+        }
+
+        .gallery-card:nth-child(1) { animation-delay: 0.1s; }
+        .gallery-card:nth-child(2) { animation-delay: 0.2s; }
+        .gallery-card:nth-child(3) { animation-delay: 0.3s; }
+        .gallery-card:nth-child(4) { animation-delay: 0.4s; }
+        .gallery-card:nth-child(5) { animation-delay: 0.5s; }
+        .gallery-card:nth-child(6) { animation-delay: 0.6s; }
+
+        @keyframes slideInFade {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .gallery-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 20px 40px rgba(47, 82, 51, 0.15);
+            transform: translateY(-8px);
+        }
+
+        .before-after-container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .before-after-img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .before-img {
+            z-index: 2;
+            width: 50%;
+        }
+
+        .after-img {
+            z-index: 1;
+        }
+
+        .slider-handle {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background-color: var(--gold);
+            cursor: ew-resize;
+            z-index: 3;
+            transform: translateX(-50%);
+            box-shadow: -10px 0 20px rgba(0, 0, 0, 0.2), 10px 0 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .slider-label {
+            position: absolute;
+            top: 15px;
+            z-index: 4;
+            font-size: 11px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 600;
+            color: var(--white);
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+            background-color: rgba(47, 82, 51, 0.7);
+            padding: 6px 12px;
+        }
+
+        .slider-before {
+            left: 15px;
+        }
+
+        .slider-after {
+            right: 15px;
+        }
+
+        /* Categories */
+        .categories-section {
+            padding: 80px 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 20px;
+        }
+
+        .category-card {
+            background-color: var(--white);
+            border: 2px solid #E5E0DA;
+            border-radius: 2px;
+            padding: 30px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .category-card:hover {
+            background-color: var(--gold);
+            color: var(--white);
+            border-color: var(--gold);
+            transform: translateY(-4px);
+        }
+
+        .category-card h3 {
+            font-size: 16px;
+            letter-spacing: 0.05em;
+        }
+
+        .category-card:hover h3 {
+            color: var(--white);
+        }
+
+        /* Case Study Section */
+        .case-study-section {
+            padding: 80px 3rem;
+            background-color: var(--white);
+            border-top: 1px solid #E5E0DA;
+            border-bottom: 1px solid #E5E0DA;
+        }
+
+        .case-study-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .case-study-text h2 {
+            margin-bottom: 30px;
+        }
+
+        .case-study-text p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            line-height: 1.9;
+        }
+
+        .case-study-text p strong {
+            color: var(--green);
+        }
+
+        .case-study-image {
+            width: 100%;
+            height: auto;
+            border-radius: 2px;
+            box-shadow: 0 20px 40px rgba(47, 82, 51, 0.1);
+        }
+
+        /* Key Takeaways */
+        .takeaways-section {
+            padding: 80px 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .takeaways-section h2 {
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .takeaways-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .takeaway-item {
+            padding: 30px;
+            background-color: var(--white);
+            border-left: 4px solid var(--gold);
+            border-radius: 2px;
+        }
+
+        .takeaway-item strong {
+            display: block;
+            color: var(--green);
+            font-size: 18px;
+            margin-bottom: 15px;
+            letter-spacing: 0.05em;
+        }
+
+        .takeaway-item p {
+            font-size: 15px;
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 3rem;
+            background: linear-gradient(135deg, var(--green), rgba(47, 82, 51, 0.9));
+            color: var(--cream);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeIn 0.8s ease 0.2s both;
+        }
+
+        .cta-section h2 {
+            color: var(--cream);
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .cta-btn {
+            background-color: var(--gold);
+            color: var(--dark);
+            border: none;
+            padding: 14px 40px;
+            font-size: 12px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 0;
+            transition: all 0.4s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--cream);
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--green);
+            color: var(--cream);
+            padding: 60px 3rem 20px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: var(--gold);
+            font-size: 14px;
+            margin-bottom: 15px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .footer-section p, .footer-section a {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--cream);
+        }
+
+        .footer-section a {
+            text-decoration: none;
+            transition: color 0.4s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(196, 162, 101, 0.2);
+            text-align: center;
+            font-size: 13px;
+            color: rgba(248, 245, 240, 0.8);
+        }
+
+        /* Back to Top Button */
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--gold);
+            border: none;
+            border-radius: 0;
+            color: var(--dark);
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+            transition: all 0.4s ease;
+            font-weight: 600;
+        }
+
+        #backToTop:hover {
+            background-color: var(--green);
+            color: var(--gold);
+        }
+
+        nav.scrolled {
+            padding: 1rem 2.5rem;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .contact-btn {
+                display: none;
+            }
+
+            .hero {
+                height: 50vh;
+                min-height: 400px;
+            }
+
+            .case-study-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .gallery-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            }
+
+            nav > * {
+                gap: 1rem;
+            }
+
+            .nav-brand-tagline {
+                display: none;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div>
+            <a href="index.html" class="nav-brand">
+                <span class="nav-brand-name">Kim Pelham</span>
+                <span class="nav-brand-tagline">Pacific Northwest Real Estate</span>
+            </a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="about.html">About</a>
+                <a href="sellers.html">Sellers</a>
+                <a href="buyers.html">Buyers</a>
+                <a href="properties.html">Properties</a>
+                <a href="neighborhoods.html">Neighborhoods</a>
+                <a href="media.html">Media</a>
+                <a href="testimonials.html">Testimonials</a>
+            </div>
+            <a href="contact.html" class="contact-btn">Contact Kim</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>We Maximize Your Home's Appeal</h1>
+            <p>Psychology-driven staging that sells faster and for more</p>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <p>The real estate market is more competitive than ever, especially in the Seattle area. That's why many real estate agents and homeowners are turning to home staging, a technique that speaks to a buyer's psychology so effectively that staged homes are selling faster and for more money than ones that are not staged.</p>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section">
+        <div class="section-label">Transformations</div>
+        <h2 class="section-title">Before & After Gallery</h2>
+        <!-- PHOTO NEEDED: Real room photos from Kim's staging projects — replace all Unsplash stock images below with actual before/after shots -->
+
+        <div class="gallery-grid">
+            <div class="gallery-card">
+                <div class="before-after-container">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=600&fit=crop" alt="Staging before transformation" class="before-after-img before-img">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=600&fit=crop&brightness=1.1" alt="Staging after transformation" class="before-after-img after-img">
+                    <div class="slider-handle"></div>
+                    <div class="slider-label slider-before">Before</div>
+                    <div class="slider-label slider-after">After</div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="before-after-container">
+                    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&h=600&fit=crop" alt="Living space transformation" class="before-after-img before-img">
+                    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&h=600&fit=crop&brightness=1.05" alt="Living space after staging" class="before-after-img after-img">
+                    <div class="slider-handle"></div>
+                    <div class="slider-label slider-before">Before</div>
+                    <div class="slider-label slider-after">After</div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="before-after-container">
+                    <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&h=600&fit=crop" alt="Bedroom transformation" class="before-after-img before-img">
+                    <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&h=600&fit=crop&brightness=1.08" alt="Bedroom after staging" class="before-after-img after-img">
+                    <div class="slider-handle"></div>
+                    <div class="slider-label slider-before">Before</div>
+                    <div class="slider-label slider-after">After</div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="before-after-container">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=600&fit=crop" alt="Kitchen staging" class="before-after-img before-img">
+                    <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=600&fit=crop&brightness=1.1" alt="Kitchen after staging" class="before-after-img after-img">
+                    <div class="slider-handle"></div>
+                    <div class="slider-label slider-before">Before</div>
+                    <div class="slider-label slider-after">After</div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="before-after-container">
+                    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&h=600&fit=crop" alt="Master suite transformation" class="before-after-img before-img">
+                    <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?w=600&h=600&fit=crop&brightness=1.05" alt="Master suite after staging" class="before-after-img after-img">
+                    <div class="slider-handle"></div>
+                    <div class="slider-label slider-before">Before</div>
+                    <div class="slider-label slider-after">After</div>
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <div class="before-after-container">
+                    <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&h=600&fit=crop" alt="Bathroom staging" class="before-after-img before-img">
+                    <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&h=600&fit=crop&brightness=1.08" alt="Bathroom after staging" class="before-after-img after-img">
+                    <div class="slider-handle"></div>
+                    <div class="slider-label slider-before">Before</div>
+                    <div class="slider-label slider-after">After</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories-section">
+        <div class="section-label">Expertise</div>
+        <h2 class="section-title">Staging by Room</h2>
+        <p style="text-align: center; max-width: 700px; margin: 0 auto 30px; opacity: 0.85;">Click any room below to see examples of how professional staging transforms each space and learn what buyers look for in every area of the home.</p>
+
+        <div class="category-grid">
+            <div class="category-card">
+                <h3>Living Rooms</h3>
+            </div>
+            <div class="category-card">
+                <h3>Dining Rooms</h3>
+            </div>
+            <div class="category-card">
+                <h3>Kitchens</h3>
+            </div>
+            <div class="category-card">
+                <h3>Master Bedrooms</h3>
+            </div>
+            <div class="category-card">
+                <h3>Bathrooms</h3>
+            </div>
+            <div class="category-card">
+                <h3>Outdoor Spaces</h3>
+            </div>
+            <div class="category-card">
+                <h3>Entryways</h3>
+            </div>
+            <div class="category-card">
+                <h3>Accent Styling</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Case Study Section -->
+    <section class="case-study-section">
+        <div class="case-study-content">
+            <div class="case-study-text">
+                <h2>Tale of Two Brokers</h2>
+                <p>A homeowner in Snohomish County listed their property with a traditional broker — professional photos, a Zillow listing, and a sign in the yard. Months went by. Showings trickled in, but no offers materialized. The price seemed right based on comps, but the home just sat there.</p>
+                <p><strong>The Challenge:</strong> The listing looked like every other house on the market. Buyers walked through and saw the home's flaws instead of its potential. No emotional connection. No urgency. The broker's strategy was "list it and wait."</p>
+                <p>Frustrated, the homeowner came to Kim Pelham for a second opinion. Kim walked the property and saw what the previous broker missed: the home had incredible bones, but the presentation was working against it. Worn carpet distracted from the open floor plan. Cluttered rooms made spaces feel smaller. The curb appeal didn't match the neighborhood.</p>
+                <p>Kim's team went to work — coordinating targeted repairs, professional staging that highlighted the home's best features, and a marketing strategy designed to create urgency. The transformation was dramatic. Within two weeks, the home had multiple competing offers and sold for <strong>$10,000 above the listing price in just 5 days</strong>.</p>
+                <p><strong>The Difference:</strong> It wasn't luck. It was psychology-driven staging paired with a proven marketing system. The first broker listed a house. Kim sold a lifestyle. Buyers walked in and could see themselves living there — and they were willing to pay more for that feeling.</p>
+            </div>
+            <img src="images/staging-01-living-room.jpg" alt="Staged home for sale" class="case-study-image">
+        </div>
+    </section>
+
+    <!-- Key Takeaways -->
+    <section class="takeaways-section">
+        <h2>Key Takeaways for Home Sellers</h2>
+
+        <div class="takeaways-grid">
+            <div class="takeaway-item">
+                <strong>Select Your Broker Carefully</strong>
+                <p>Your broker's strategy and resources directly impact your home's success. Work with someone who invests in staging and marketing.</p>
+            </div>
+            <div class="takeaway-item">
+                <strong>Ask About Selling Strategy</strong>
+                <p>Before listing, understand how your broker will position and promote your home. Professional staging is part of a winning strategy.</p>
+            </div>
+            <div class="takeaway-item">
+                <strong>Staging Results in Higher Offers</strong>
+                <p>In Kim's experience, staging delivers up to a 300% return on investment. The investment in staging pays for itself — and then some.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Stage Your Home?</h2>
+            <p>Let's maximize your home's appeal and get you the best possible offer.</p>
+            <button class="cta-btn" onclick="document.location.href='contact.html'">Schedule Free Consultation</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 style="color: var(--cream); text-transform: none; letter-spacing: 0.05em; margin-bottom: 15px; font-size: 16px;">Kim Pelham</h3>
+                <p>Psychology-driven real estate and home staging services serving the Pacific Northwest with excellence and expertise.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="about.html">About Kim</a></p>
+                <p><a href="sellers.html">For Sellers</a></p>
+                <p><a href="buyers.html">For Buyers</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <p>Phone: <a href="tel:4252509422">425-250-9422</a></p>
+                <p>Email: <a href="mailto:hello@thepelhamgroupnw.com">hello@thepelhamgroupnw.com</a></p>
+                <p>Address: 2815 Baker Ave Suite 102, Everett, WA 98201</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Kim Pelham | The Pelham Group NW</p>
+            <p style="margin-top: 6px; font-size: 14px; font-weight: 600;">Brokered by Katrina Eileen Real Estate · Everett, WA</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <script>
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.getElementById('scrollProgress').style.width = scrollPercent + '%';
+
+            // Back to Top Button
+            document.getElementById('backToTop').style.display = scrollTop > 300 ? 'block' : 'none';
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // IntersectionObserver for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.takeaway-item, .category-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Before/After Slider
+        document.querySelectorAll('.before-after-container').forEach(container => {
+            const handle = container.querySelector('.slider-handle');
+            const beforeImg = container.querySelector('.before-img');
+            let isActive = false;
+
+            const updatePosition = (e) => {
+                if (!isActive) return;
+                const rect = container.getBoundingClientRect();
+                let x = e.clientX - rect.left;
+                if (e.type.includes('touch')) x = e.touches[0].clientX - rect.left;
+                x = Math.max(0, Math.min(x, rect.width));
+                const percentage = (x / rect.width) * 100;
+                beforeImg.style.width = percentage + '%';
+                handle.style.left = percentage + '%';
+            };
+
+            handle.addEventListener('mousedown', () => isActive = true);
+            document.addEventListener('mouseup', () => isActive = false);
+            document.addEventListener('mousemove', updatePosition);
+            handle.addEventListener('touchstart', () => isActive = true);
+            document.addEventListener('touchend', () => isActive = false);
+            document.addEventListener('touchmove', updatePosition);
+            container.addEventListener('click', (e) => {
+                const rect = container.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const percentage = (x / rect.width) * 100;
+                beforeImg.style.width = percentage + '%';
+                handle.style.left = percentage + '%';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore Snohomish County neighborhoods with Kim Pelham — local insights on Everett, Bothell, Snohomish, Mill Creek, Lake Stevens, and Marysville WA. Schools, lifestyle, and market data.">
+    <meta name="theme-color" content="#2F5233">
+    <link rel="canonical" href="https://thepelhamgroupnw.com/neighborhoods">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Neighborhoods - Kim Pelham">
+    <meta property="og:description" content="Discover the neighborhoods I know and love across Snohomish, King, Pierce, and Skagit Counties.">
+    <meta property="og:image" content="images/neighborhood-01-everett-marina.jpg">
+    <meta property="og:type" content="website">
+
+    <title>Snohomish County Neighborhoods | Everett, Bothell, Mill Creek, Snohomish, Lake Stevens WA</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapfamily=Inter:wght@300;400;500;600;700https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapdisplay=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            color: #2C2C2C;
+            line-height: 1.9;
+            background-color: #F8F5F0;
+            overflow-x: hidden;
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background-color: #C4A265;
+            z-index: 2000;
+            width: 0%;
+            transition: width 0.4s ease;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #2F5233;
+            color: #F8F5F0;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 16px rgba(47, 82, 51, 0.2);
+        }
+
+        .back-to-top:hover {
+            background-color: #8B9E7E;
+            transform: translateY(-5px);
+        }
+
+        .back-to-top.show {
+            display: flex;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            color: #2F5233;
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.9;
+            color: #2C2C2C;
+        }
+
+        /* Section Labels */
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #8B9E7E;
+            margin-bottom: 1rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #2F5233;
+            padding: 1.5rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: padding 0.4s ease;
+            box-sizing: border-box;
+        }
+
+        nav.scrolled {
+            padding: 1rem 2.5rem;
+        }
+
+        .nav-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .nav-brand-name {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #F8F5F0;
+        }
+
+        .nav-brand-tagline {
+            font-size: 8px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #8B9E7E;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: #F8F5F0;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.4s ease;
+        }
+
+        .nav-links a:hover {
+            color: #C4A265;
+        }
+
+        .contact-btn {
+            background: transparent;
+            border: 2px solid #F8F5F0;
+            color: #F8F5F0;
+            padding: 0.7rem 1.2rem;
+            border-radius: 0;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .contact-btn:hover {
+            background-color: #F8F5F0;
+            color: #2F5233;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background-color: #F8F5F0;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('images/neighborhood-01-everett-marina.jpg') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #F8F5F0;
+            animation: fadeInHero 1s ease;
+        }
+
+        @keyframes fadeInHero {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero-content h1 {
+            color: #F8F5F0;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+
+        .hero-subtitle {
+            font-size: 13px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #C4A265;
+            margin-bottom: 0;
+        }
+
+        /* Neighborhoods Section */
+        .neighborhoods {
+            background-color: #F8F5F0;
+            padding: 80px 3rem;
+        }
+
+        .neighborhoods-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .neighborhoods-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .neighborhoods-header .section-label {
+            display: inline-block;
+        }
+
+        .neighborhoods-header h2 {
+            margin-bottom: 1rem;
+        }
+
+        .neighborhoods-header p {
+            color: #6B6B6B;
+            font-size: 17px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Bento Grid */
+        .neighborhoods-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 4rem;
+        }
+
+        .neighborhood-card {
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            animation: fadeInUp 0.8s ease;
+            min-height: 350px;
+            display: flex;
+            align-items: flex-end;
+        }
+
+        .neighborhood-card:nth-child(1) {
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+
+        .neighborhood-card:nth-child(4) {
+            grid-column: span 1;
+            grid-row: span 2;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .neighborhood-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+        }
+
+        .neighborhood-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .neighborhood-card:hover .neighborhood-image {
+            transform: scale(1.05);
+        }
+
+        .neighborhood-overlay {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: 30px;
+            background: linear-gradient(to top, rgba(0,0,0,0.7), transparent);
+            color: #F8F5F0;
+        }
+
+        .neighborhood-name {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.75rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .neighborhood-description {
+            font-size: 14px;
+            line-height: 1.6;
+            opacity: 0.9;
+            margin-bottom: 1rem;
+        }
+
+        .neighborhood-link {
+            display: inline-block;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: #C4A265;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .neighborhood-link:hover {
+            color: #F8F5F0;
+        }
+
+        /* CTA Section */
+        .neighborhoods-cta {
+            background: linear-gradient(135deg, #2F5233 0%, #8B9E7E 100%);
+            padding: 80px 3rem;
+            text-align: center;
+            color: #F8F5F0;
+            position: relative;
+            overflow: hidden;
+            margin-top: 4rem;
+        }
+
+        .neighborhoods-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            opacity: 0.03;
+        }
+
+        .neighborhoods-cta-container {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .neighborhoods-cta h2 {
+            color: #F8F5F0;
+            margin-bottom: 1.5rem;
+        }
+
+        .neighborhoods-cta p {
+            color: #F8F5F0;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .neighborhoods-cta-btn {
+            background-color: #F8F5F0;
+            color: #2F5233;
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 0;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .neighborhoods-cta-btn:hover {
+            background-color: #2C2C2C;
+            color: #F8F5F0;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2F5233;
+            color: #F8F5F0;
+            padding: 60px 3rem 30px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(248, 245, 240, 0.2);
+        }
+
+        .footer-col h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.25rem;
+            color: #F8F5F0;
+            margin-bottom: 1rem;
+        }
+
+        .footer-tagline {
+            font-size: 13px;
+            line-height: 1.7;
+            color: rgba(248, 245, 240, 0.8);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(248, 245, 240, 0.8);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #C4A265;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(248, 245, 240, 0.3);
+            border-radius: 50%;
+            color: #F8F5F0;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background-color: #C4A265;
+            border-color: #C4A265;
+            color: #2F5233;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 12px;
+            color: rgba(248, 245, 240, 0.6);
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .neighborhoods-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .neighborhood-card:nth-child(1),
+            .neighborhood-card:nth-child(4) {
+                grid-column: span 1;
+                grid-row: span 1;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .contact-btn {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #2F5233;
+                padding: 20px;
+                gap: 1rem;
+            }
+
+            .nav-links.active a {
+                padding: 8px 0;
+            }
+
+            .neighborhoods-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .neighborhood-card {
+                min-height: 300px;
+            }
+
+            .hero {
+                height: 45vh;
+            }
+
+            .neighborhoods {
+                padding: 60px 1.5rem;
+            }
+
+            .neighborhoods-cta {
+                padding: 60px 1.5rem;
+            }
+
+            footer {
+                padding: 40px 1.5rem 20px;
+            }
+
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-brand-name {
+                font-size: 14px;
+            }
+
+            .nav-brand-tagline {
+                display: none;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero {
+                height: 35vh;
+            }
+
+            .hero-subtitle {
+                font-size: 11px;
+            }
+
+            .neighborhoods {
+                padding: 40px 1rem;
+            }
+
+            .neighborhoods-grid {
+                gap: 20px;
+            }
+
+            .neighborhood-card {
+                min-height: 250px;
+            }
+
+            .neighborhoods-cta {
+                padding: 40px 1rem;
+            }
+
+            footer {
+                padding: 30px 1rem 15px;
+            }
+
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            nav, .contact-btn, .hamburger, .back-to-top {
+                display: none;
+            }
+
+            body {
+                background-color: #FFFFFF;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-brand">
+            <span class="nav-brand-name">Kim Pelham</span>
+            <span class="nav-brand-tagline">Pacific Northwest Real Estate</span>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="sellers.html">Sellers</a>
+            <a href="buyers.html">Buyers</a>
+            <a href="properties.html">Properties</a>
+            <a href="neighborhoods.html">Neighborhoods</a>
+            <a href="media.html">Media</a>
+            <a href="testimonials.html">Testimonials</a>
+        </div>
+
+        <button class="contact-btn" onclick="scrollToContact()">Contact Kim</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="section-label">EXPLORE COMMUNITIES</p>
+            <h1>Neighborhoods</h1>
+            <p class="hero-subtitle">Discover the vibrant communities I know and love</p>
+        </div>
+    </section>
+
+    <!-- Neighborhoods Section -->
+    <section class="neighborhoods">
+        <div class="neighborhoods-container">
+            <!-- Header -->
+            <div class="neighborhoods-header">
+                <p class="section-label">LOCAL EXPERTISE</p>
+                <h2>Six Communities, Infinite Possibilities</h2>
+                <p>Each neighborhood offers unique character, lifestyle, and investment potential. Explore the communities where I've helped families find their perfect home.</p>
+            </div>
+
+            <!-- Bento Grid -->
+            <div class="neighborhoods-grid">
+                <!-- Everett -->
+                <div class="neighborhood-card scroll-animate">
+                    <img src="images/neighborhood-01-everett-marina.jpg" alt="Everett neighborhood" class="neighborhood-image">
+                    <div class="neighborhood-overlay">
+                        <div class="neighborhood-name">Everett</div>
+                        <p class="neighborhood-description">Waterfront community with vibrant downtown, excellent schools, and strong family appeal.</p>
+                        <a href="#" class="neighborhood-link">Explore →</a>
+                    </div>
+                </div>
+
+                <!-- Bothell -->
+                <div class="neighborhood-card scroll-animate">
+                    <img src="images/neighborhood-02-bothell-main-street.jpg" alt="Bothell neighborhood" class="neighborhood-image">
+                    <div class="neighborhood-overlay">
+                        <div class="neighborhood-name">Bothell</div>
+                        <p class="neighborhood-description">Tech hub community with modern amenities, beautiful parks, and innovative spirit.</p>
+                        <a href="#" class="neighborhood-link">Explore →</a>
+                    </div>
+                </div>
+
+                <!-- Snohomish -->
+                <div class="neighborhood-card scroll-animate">
+                    <img src="images/neighborhood-03-snohomish-historic.jpg" alt="Snohomish neighborhood" class="neighborhood-image">
+                    <div class="neighborhood-overlay">
+                        <div class="neighborhood-name">Snohomish</div>
+                        <p class="neighborhood-description">Historic charm meets modern convenience with antique shops, fine dining, and natural beauty.</p>
+                        <a href="#" class="neighborhood-link">Explore →</a>
+                    </div>
+                </div>
+
+                <!-- Mill Creek -->
+                <div class="neighborhood-card scroll-animate">
+                    <img src="images/property-02-mill-creek-home.jpg" alt="Mill Creek neighborhood" class="neighborhood-image">
+                    <div class="neighborhood-overlay">
+                        <div class="neighborhood-name">Mill Creek</div>
+                        <p class="neighborhood-description">Planned community with excellent schools, extensive trails, and beautiful home options.</p>
+                        <a href="#" class="neighborhood-link">Explore →</a>
+                    </div>
+                </div>
+
+                <!-- Lake Stevens -->
+                <div class="neighborhood-card scroll-animate">
+                    <img src="images/property-03-lake-stevens-waterfront.jpg" alt="Lake Stevens neighborhood" class="neighborhood-image">
+                    <div class="neighborhood-overlay">
+                        <div class="neighborhood-name">Lake Stevens</div>
+                        <p class="neighborhood-description">Waterfront living with recreational opportunities, stunning views, and peaceful surroundings.</p>
+                        <a href="#" class="neighborhood-link">Explore →</a>
+                    </div>
+                </div>
+
+                <!-- Marysville -->
+                <div class="neighborhood-card scroll-animate">
+                    <img src="images/hero-01-aerial-neighborhood.jpg" alt="Marysville neighborhood" class="neighborhood-image">
+                    <div class="neighborhood-overlay">
+                        <div class="neighborhood-name">Marysville</div>
+                        <p class="neighborhood-description">Growing community with affordability, access to nature, and strong sense of community.</p>
+                        <a href="#" class="neighborhood-link">Explore →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="neighborhoods-cta" id="contact">
+        <div class="neighborhoods-cta-container">
+            <h2>Ready to Explore?</h2>
+            <p>Whether you're searching for the perfect neighborhood or ready to make your move, I'm here to guide you through every step of the journey. Let's find the community that's right for you.</p>
+            <button class="neighborhoods-cta-btn" onclick="scrollToContact()">Get Started Today</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Kim Pelham</h3>
+                    <p class="footer-tagline">Helping Pacific Northwest families find the perfect home. 14 years of experience, a lifetime of commitment to doing right by every client.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html#about">About</a>
+                        <a href="properties.html">Properties</a>
+                        <a href="neighborhoods.html">Neighborhoods</a>
+                        <a href="index.html#testimonials">Testimonials</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Connect</h3>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <circle cx="17.5" cy="6.5" r="1.5"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="mailto:hello@thepelhamgroupnw.com" title="Email">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Kim Pelham | The Pelham Group NW</p>
+                <p style="margin-top: 6px; font-size: 14px; font-weight: 600;">Brokered by Katrina Eileen Real Estate · Everett, WA</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script>
+        // Scroll Progress Bar
+        const scrollProgress = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            scrollProgress.style.width = scrolled + '%';
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Nav scroll handler
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll to Contact
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Intersection Observer for Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

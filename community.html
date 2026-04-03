@@ -1,0 +1,1060 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kim Pelham is deeply rooted in the Snohomish County community — from local events to neighborhood advocacy. Learn how she gives back to Everett, Bothell, and beyond.">
+    <meta name="theme-color" content="#2F5233">
+    <link rel="canonical" href="https://thepelhamgroupnw.com/community">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Community Hub - Kim Pelham Real Estate">
+    <meta property="og:description" content="Market insights, neighborhood stories, and the pulse of the Pacific Northwest real estate market.">
+    <meta property="og:image" content="images/lifestyle-01-farmers-market.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Community Hub - Kim Pelham Real Estate",
+      "description": "Real estate community insights and neighborhood stories from Kim Pelham",
+      "url": "https://thepelhamgroupnw.com/community.html"
+    }
+    </script>
+
+    <title>Community Involvement | Kim Pelham | Snohomish County Real Estate</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapfamily=Inter:wght@300;400;500;600;700https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapdisplay=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            color: #2C2C2C;
+            line-height: 1.9;
+            background-color: #F8F5F0;
+            overflow-x: hidden;
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background-color: #C4A265;
+            z-index: 2000;
+            width: 0%;
+            transition: width 0.4s ease;
+        }
+
+        /* Texture Overlay */
+        .texture-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            opacity: 0.03;
+        }
+
+        /* Ghost Text */
+        .ghost-text {
+            position: absolute;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(10vw, 15vw, 20vw);
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #2C2C2C;
+            opacity: 0.035;
+            letter-spacing: 0.05em;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            color: #2F5233;
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.9;
+            color: #2C2C2C;
+        }
+
+        /* Section Labels */
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #8B9E7E;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        /* Accent Line */
+        .accent-line {
+            width: 60px;
+            height: 3px;
+            background-color: #C4A265;
+            margin: 1.5rem 0;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #2F5233;
+            padding: 1.5rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: padding 0.4s ease;
+            box-sizing: border-box;
+        }
+
+        nav.scrolled {
+            padding: 1rem 2.5rem;
+        }
+
+        .nav-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .nav-brand-name {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #F8F5F0;
+        }
+
+        .nav-brand-tagline {
+            font-size: 8px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #8B9E7E;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: #F8F5F0;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.4s ease;
+        }
+
+        .nav-links a:hover {
+            color: #C4A265;
+        }
+
+        .contact-btn {
+            background: transparent;
+            border: 2px solid #F8F5F0;
+            color: #F8F5F0;
+            padding: 0.7rem 1.2rem;
+            border-radius: 0;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .contact-btn:hover {
+            background-color: #F8F5F0;
+            color: #2F5233;
+            transform: translateY(-2px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background-color: #F8F5F0;
+            margin: 4px 0;
+            transition: all 0.4s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('images/lifestyle-01-farmers-market.jpg') center/cover;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #F8F5F0;
+            animation: fadeInHero 1s ease;
+        }
+
+        @keyframes fadeInHero {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero-content h1 {
+            color: #F8F5F0;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+        }
+
+        .hero-subtitle {
+            font-size: 13px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #C4A265;
+            margin-bottom: 0;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 80px 3rem;
+            background-color: #F8F5F0;
+        }
+
+        .content-section:nth-child(even) {
+            background-color: #FFFFFF;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            margin-top: 1rem;
+        }
+
+        /* Community Involvement Grid */
+        .community-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: start;
+            margin-bottom: 4rem;
+        }
+
+        .community-content h3 {
+            margin-bottom: 1.5rem;
+            color: #2F5233;
+        }
+
+        .community-content p {
+            margin-bottom: 1.5rem;
+            color: #6B6B6B;
+            line-height: 1.9;
+        }
+
+        .community-image {
+            width: 100%;
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+            object-fit: cover;
+            animation: fadeInUp 0.8s ease 0.2s both;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Events & Partnerships Grid */
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 4rem;
+        }
+
+        .event-card {
+            background-color: #FFFFFF;
+            padding: 40px;
+            border: 1px solid #E0DCD5;
+            border-radius: 8px;
+            transition: all 0.4s ease;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .event-card:nth-child(1) { animation-delay: 0.1s; }
+        .event-card:nth-child(2) { animation-delay: 0.15s; }
+        .event-card:nth-child(3) { animation-delay: 0.2s; }
+
+        .event-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+        }
+
+        .event-card h4 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.5rem;
+            color: #2F5233;
+            margin-bottom: 1rem;
+        }
+
+        .event-card p {
+            color: #6B6B6B;
+            font-size: 17px;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .event-tag {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            background-color: #2F5233;
+            color: #F8F5F0;
+            border-radius: 0;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* Partnerships Section */
+        .partnerships-section {
+            background-color: #2F5233;
+            color: #F8F5F0;
+            padding: 80px 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .partnerships-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .partnerships-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .partnerships-header h2 {
+            color: #F8F5F0;
+        }
+
+        .partnerships-header p {
+            color: rgba(248, 245, 240, 0.9);
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+        .partnerships-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .partnership-card {
+            background-color: rgba(248, 245, 240, 0.05);
+            padding: 40px;
+            border: 1px solid rgba(248, 245, 240, 0.2);
+            border-radius: 8px;
+            transition: all 0.4s ease;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .partnership-card:nth-child(1) { animation-delay: 0.1s; }
+        .partnership-card:nth-child(2) { animation-delay: 0.15s; }
+        .partnership-card:nth-child(3) { animation-delay: 0.2s; }
+        .partnership-card:nth-child(4) { animation-delay: 0.25s; }
+
+        .partnership-card:hover {
+            background-color: rgba(248, 245, 240, 0.08);
+            transform: translateY(-4px);
+            border-color: #C4A265;
+        }
+
+        .partnership-card h4 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.5rem;
+            color: #C4A265;
+            margin-bottom: 1rem;
+        }
+
+        .partnership-card p {
+            color: rgba(248, 245, 240, 0.85);
+            font-size: 17px;
+            line-height: 1.8;
+            margin: 0;
+        }
+
+        /* Local Impact Section */
+        .impact-section {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 4rem;
+        }
+
+        .impact-item {
+            text-align: center;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        .impact-item:nth-child(1) { animation-delay: 0.1s; }
+        .impact-item:nth-child(2) { animation-delay: 0.15s; }
+        .impact-item:nth-child(3) { animation-delay: 0.2s; }
+
+        .impact-number {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 3rem;
+            color: #C4A265;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .impact-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #8B9E7E;
+        }
+
+        .impact-description {
+            font-size: 14px;
+            color: #6B6B6B;
+            margin-top: 0.75rem;
+            line-height: 1.6;
+        }
+
+        /* Scroll Animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #2F5233;
+            color: #F8F5F0;
+            border: none;
+            border-radius: 0;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            z-index: 999;
+            transition: all 0.4s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.visible {
+            display: flex;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: #C4A265;
+            transform: translateY(-4px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2F5233;
+            color: #F8F5F0;
+            padding: 60px 3rem 30px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(248, 245, 240, 0.2);
+        }
+
+        .footer-col h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.25rem;
+            color: #F8F5F0;
+            margin-bottom: 1rem;
+        }
+
+        .footer-tagline {
+            font-size: 13px;
+            line-height: 1.7;
+            color: rgba(248, 245, 240, 0.8);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(248, 245, 240, 0.8);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.4s ease;
+        }
+
+        .footer-links a:hover {
+            color: #C4A265;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(248, 245, 240, 0.3);
+            border-radius: 50%;
+            color: #F8F5F0;
+            transition: all 0.4s ease;
+        }
+
+        .footer-social a:hover {
+            background-color: #C4A265;
+            border-color: #C4A265;
+            color: #2F5233;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 12px;
+            color: rgba(248, 245, 240, 0.6);
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .community-grid,
+            .partnerships-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .events-grid,
+            .impact-section {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .contact-btn {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #2F5233;
+                padding: 20px;
+                gap: 1rem;
+            }
+
+            .nav-links.active a {
+                padding: 8px 0;
+            }
+
+            .events-grid,
+            .partnerships-grid,
+            .impact-section {
+                grid-template-columns: 1fr;
+            }
+
+            .content-section {
+                padding: 60px 1.5rem;
+            }
+
+            .hero {
+                height: 50vh;
+            }
+
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+                width: 45px;
+                height: 45px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-brand-name {
+                font-size: 14px;
+            }
+
+            .nav-brand-tagline {
+                display: none;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .content-section {
+                padding: 40px 1.5rem;
+            }
+
+            footer {
+                padding: 40px 1.5rem 20px;
+            }
+
+            .hero {
+                height: 40vh;
+            }
+
+            .impact-number {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-brand">
+            <span class="nav-brand-name">Kim Pelham</span>
+            <span class="nav-brand-tagline">Pacific Northwest Real Estate</span>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="sellers.html">Sellers</a>
+            <a href="buyers.html">Buyers</a>
+            <a href="properties.html">Properties</a>
+            <a href="neighborhoods.html">Neighborhoods</a>
+            <a href="media.html">Media</a>
+            <a href="testimonials.html">Testimonials</a>
+        </div>
+
+        <button class="contact-btn" onclick="window.location.href='contact.html'">Contact Kim</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Community Hub</h1>
+            <p class="hero-subtitle">Local Insights, Market Intelligence & Neighborhood Stories</p>
+        </div>
+    </section>
+
+    <!-- Community Involvement Section -->
+    <section class="content-section">
+        <div class="content-container">
+            <div class="section-header">
+                <p class="section-label">Rooted in the Community</p>
+                <h2>Kim's Commitment to the Pacific Northwest</h2>
+            </div>
+            <div class="accent-line"></div>
+
+            <div class="community-grid">
+                <div class="scroll-animate">
+                    <h3>More Than a Broker—A Neighbor</h3>
+                    <p>Kim isn't just selling homes in Snohomish, King, Pierce, and Skagit Counties—she's invested in these communities because they're where she's raised her family and built her life. Her deep roots in the Pacific Northwest go beyond business; they're personal.</p>
+                    <p>From volunteering with local nonprofits to supporting neighborhood initiatives, Kim believes in giving back to the communities that have given her so much. She understands that selling or buying a home is deeply tied to the fabric of where you live—the schools, the parks, the coffee shops, and the people who make neighborhoods special.</p>
+                    <p>This philosophy means she doesn't just market properties; she helps families find homes within communities they'll truly belong to.</p>
+                </div>
+                <div class="scroll-animate">
+                    <img src="images/lifestyle-01-farmers-market.jpg" alt="Community gathering in the Pacific Northwest" class="community-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local Impact Metrics -->
+    <section class="content-section">
+        <div class="content-container">
+            <div class="section-header">
+                <p class="section-label">Local Impact</p>
+                <h2>Serving the Region with Impact</h2>
+            </div>
+            <div class="accent-line"></div>
+
+            <div class="impact-section">
+                <div class="impact-item scroll-animate">
+                    <div class="impact-number">14 Years</div>
+                    <p class="impact-label">of Experience</p>
+                    <p class="impact-description">Committed to serving the region</p>
+                </div>
+                <div class="impact-item scroll-animate">
+                    <div class="impact-number">Individualized</div>
+                    <p class="impact-label">Service</p>
+                    <p class="impact-description">Concierge-level care for each client</p>
+                </div>
+                <div class="impact-item scroll-animate">
+                    <div class="impact-number">5</div>
+                    <p class="impact-label">Counties Served</p>
+                    <p class="impact-description">Snohomish, King, Pierce, Skagit, and more</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events & Community Involvement -->
+    <section class="content-section">
+        <div class="content-container">
+            <div class="section-header">
+                <p class="section-label">Getting Involved</p>
+                <h2>Local Events & Partnerships</h2>
+            </div>
+            <div class="accent-line"></div>
+
+            <div class="events-grid">
+                <div class="event-card scroll-animate">
+                    <h4>Snohomish County Fair</h4>
+                    <p>Kim is a proud sponsor of the annual Snohomish County Fair, supporting local agriculture, youth programs, and community celebrations that bring our region together.</p>
+                    <span class="event-tag">Annual</span>
+                </div>
+
+                <div class="event-card scroll-animate">
+                    <h4>First-Time Buyer Workshops</h4>
+                    <p>Free educational sessions held quarterly at local community centers. Learn the ins and outs of buying your first home with expert guidance and no pressure sales tactics.</p>
+                    <span class="event-tag">Quarterly</span>
+                </div>
+
+                <div class="event-card scroll-animate">
+                    <h4>Senior Downsizing Seminars</h4>
+                    <p>Specialized workshops helping seniors navigate the emotional and practical aspects of downsizing. Topics include planning, staging, and moving with intention.</p>
+                    <span class="event-tag">Monthly</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partnerships Section -->
+    <section class="partnerships-section">
+        <div class="partnerships-container">
+            <div class="partnerships-header">
+                <p class="section-label" style="color: #C4A265;">Strategic Partnerships</p>
+                <h2>Collaborating with the Best</h2>
+                <p>Kim partners with vetted professionals and local businesses to ensure every transaction and client interaction exceeds expectations.</p>
+            </div>
+
+            <div class="partnerships-grid">
+                <div class="partnership-card scroll-animate">
+                    <h4>SMART Building Solutions</h4>
+                    <p>Strategic repairs and renovations managed by trusted contractors who understand that quality improvements mean better sale prices and client satisfaction.</p>
+                </div>
+
+                <div class="partnership-card scroll-animate">
+                    <h4>Professional Photography & Videography</h4>
+                    <p>High-end visual content creation that showcases your home's best features and attracts serious buyers from the first click.</p>
+                </div>
+
+                <div class="partnership-card scroll-animate">
+                    <h4>Home Staging Specialists</h4>
+                    <p>Psychology-driven staging services that help buyers emotionally connect with homes and envision their future in your property.</p>
+                </div>
+
+                <div class="partnership-card scroll-animate">
+                    <h4>Market Analysis & Data</h4>
+                    <p>Cutting-edge real estate data tools and market intelligence platforms that inform pricing strategies and buyer identification.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Neighborhood Highlights -->
+    <section class="content-section">
+        <div class="content-container">
+            <div class="section-header">
+                <p class="section-label">Neighborhood Expertise</p>
+                <h2>Featured Communities</h2>
+            </div>
+            <div class="accent-line"></div>
+
+            <div class="events-grid" style="margin-bottom: 0;">
+                <div class="event-card scroll-animate">
+                    <h4>Everett Waterfront</h4>
+                    <p>Vibrant neighborhood with marina views, local restaurants, and waterfront parks. Close to downtown amenities while maintaining a strong community feel.</p>
+                    <span class="event-tag">Waterfront Living</span>
+                </div>
+
+                <div class="event-card scroll-animate">
+                    <h4>Mill Creek</h4>
+                    <p>Award-winning master-planned community known for excellent schools, parks, and family-friendly atmosphere. Perfect for young families and growing households.</p>
+                    <span class="event-tag">Family-Friendly</span>
+                </div>
+
+                <div class="event-card scroll-animate">
+                    <h4>Snohomish Downtown</h4>
+                    <p>Historic charm meets modern convenience. Antique shops, local cafes, and tree-lined streets create a unique character and strong community identity.</p>
+                    <span class="event-tag">Historic</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Kim Pelham</h3>
+                    <p class="footer-tagline">Serving Snohomish, King, Pierce, and Skagit Counties with integrity, expertise, and genuine care for every client and community.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="about.html">About</a>
+                        <a href="index.html">Properties</a>
+                        <a href="sellers.html">For Sellers</a>
+                        <a href="buyers.html">For Buyers</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Connect</h3>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <circle cx="17.5" cy="6.5" r="1.5"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="mailto:hello@thepelhamgroupnw.com" title="Email">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kim Pelham | The Pelham Group NW</p>
+                <p style="margin-top: 6px; font-size: 14px; font-weight: 600;">Brokered by Katrina Eileen Real Estate · Everett, WA</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.scrollY / scrollHeight) * 100;
+            document.querySelector('.scroll-progress').style.width = scrolled + '%';
+
+            // Back to Top Visibility
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+
+            // Nav Scrolled State
+            if (window.scrollY > 50) {
+                document.querySelector('nav').classList.add('scrolled');
+            } else {
+                document.querySelector('nav').classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

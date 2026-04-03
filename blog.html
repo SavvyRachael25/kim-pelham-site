@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Snohomish County real estate market updates, home buying and selling tips, and neighborhood insights from broker Kim Pelham. Everett, Bothell, Mill Creek, and beyond.">
+    <meta name="theme-color" content="#2F5233">
+    <link rel="canonical" href="https://thepelhamgroupnw.com/blog">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Blog | Kim Pelham Real Estate">
+    <meta property="og:description" content="Real estate market updates, tips, and expert advice from Kim Pelham.">
+    <meta property="og:image" content="images/neighborhood-02-bothell-main-street.jpg">
+    <meta property="og:type" content="website">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Kim Pelham Real Estate Blog",
+      "description": "Real estate insights and market updates from Kim Pelham",
+      "publisher": {
+        "@type": "LocalBusiness",
+        "name": "Kim Pelham - The Pelham Group NW"
+      }
+    }
+    </script>
+
+    <title>Snohomish County Real Estate Blog | Market Updates | Kim Pelham</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapfamily=Inter:wght@300;400;500;600;700https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapdisplay=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            color: #2C2C2C;
+            line-height: 1.9;
+            background-color: #F8F5F0;
+            overflow-x: hidden;
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background-color: #C4A265;
+            z-index: 2000;
+            width: 0%;
+            transition: width 0.4s ease;
+        }
+
+        /* Texture Overlay */
+        .texture-overlay::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            opacity: 0.03;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            color: #2F5233;
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.9;
+            color: #2C2C2C;
+        }
+
+        /* Section Labels */
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #8B9E7E;
+            margin-bottom: 1rem;
+            display: inline-block;
+        }
+
+        /* Accent Line */
+        .accent-line {
+            width: 60px;
+            height: 3px;
+            background-color: #C4A265;
+            margin: 1.5rem 0;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #2F5233;
+            padding: 1.5rem 2.5rem;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: padding 0.4s ease;
+        }
+
+        nav.scrolled {
+            padding: 1rem 2.5rem;
+        }
+
+        .nav-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .nav-brand-name {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #F8F5F0;
+        }
+
+        .nav-brand-tagline {
+            font-size: 8px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #8B9E7E;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .nav-links a {
+            color: #F8F5F0;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.4s ease;
+        }
+
+        .nav-links a:hover {
+            color: #C4A265;
+        }
+
+        .contact-btn {
+            background: transparent;
+            border: 2px solid #F8F5F0;
+            color: #F8F5F0;
+            padding: 0.7rem 1.2rem;
+            border-radius: 0;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+            white-space: nowrap;
+            flex-shrink: 0;
+
+        .contact-btn:hover {
+            background-color: #F8F5F0;
+            color: #2F5233;
+            transform: translateY(-2px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background-color: #F8F5F0;
+            margin: 4px 0;
+            transition: all 0.4s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('images/neighborhood-02-bothell-main-street.jpg') center/cover;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #F8F5F0;
+            animation: fadeInHero 1s ease;
+        }
+
+        @keyframes fadeInHero {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero-content h1 {
+            color: #F8F5F0;
+            margin-bottom: 1.5rem;
+            max-width: 900px;
+        }
+
+        .hero-subtitle {
+            font-size: 13px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #C4A265;
+            margin-bottom: 0;
+        }
+
+        /* Content Sections */
+        .content-section {
+            padding: 80px 3rem;
+            background-color: #F8F5F0;
+        }
+
+        .content-section:nth-child(even) {
+            background-color: #FFFFFF;
+        }
+
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-header {
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            margin-top: 1rem;
+        }
+
+        /* Featured Post */
+        .featured-post {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            margin-bottom: 4rem;
+            padding: 40px;
+            background-color: #FFFFFF;
+            border: 1px solid #E0DCD5;
+            border-radius: 8px;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+            animation: fadeInUp 0.8s ease 0.1s both;
+        }
+
+        .featured-post img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .featured-content h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 1rem;
+            color: #2F5233;
+            line-height: 1.2;
+        }
+
+        .post-meta {
+            font-size: 12px;
+            color: #8B9E7E;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-weight: 700;
+        }
+
+        .featured-content p {
+            margin-bottom: 1.5rem;
+            color: #6B6B6B;
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+        /* Blog Grid */
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 4rem;
+        }
+
+        .blog-card {
+            background-color: #FFFFFF;
+            border: 1px solid #E0DCD5;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            animation: fadeInUp 0.6s ease both;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .blog-card:nth-child(1) { animation-delay: 0.1s; }
+        .blog-card:nth-child(2) { animation-delay: 0.15s; }
+        .blog-card:nth-child(3) { animation-delay: 0.2s; }
+        .blog-card:nth-child(4) { animation-delay: 0.25s; }
+        .blog-card:nth-child(5) { animation-delay: 0.3s; }
+        .blog-card:nth-child(6) { animation-delay: 0.35s; }
+
+        .blog-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+        }
+
+        .blog-card-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            overflow: hidden;
+        }
+
+        .blog-card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .blog-card:hover .blog-card-image img {
+            transform: scale(1.05);
+        }
+
+        .blog-card-content {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .blog-card h4 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.35rem;
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 1rem;
+            color: #2F5233;
+            line-height: 1.2;
+        }
+
+        .blog-card p {
+            flex: 1;
+            margin-bottom: 1.5rem;
+            color: #6B6B6B;
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+        .read-more {
+            background-color: #2F5233;
+            color: #F8F5F0;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            display: inline-block;
+            text-transform: uppercase;
+            letter-spacing: 0.15em;
+            font-size: 11px;
+            font-weight: 700;
+            transition: all 0.4s ease;
+            border: 2px solid #2F5233;
+            border-radius: 0;
+            align-self: flex-start;
+        }
+
+        .read-more:hover {
+            background-color: #C4A265;
+            border-color: #C4A265;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .sidebar-card {
+            background-color: #FFFFFF;
+            border: 1px solid #E0DCD5;
+            padding: 30px;
+            border-radius: 8px;
+            animation: fadeInUp 0.6s ease both;
+        }
+
+        .sidebar-card:nth-child(1) { animation-delay: 0.2s; }
+        .sidebar-card:nth-child(2) { animation-delay: 0.25s; }
+        .sidebar-card:nth-child(3) { animation-delay: 0.3s; }
+
+        .sidebar-card h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-bottom: 1rem;
+            color: #2F5233;
+        }
+
+        .sidebar-card select, .sidebar-card input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #E0DCD5;
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            margin-bottom: 0.5rem;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        .sidebar-card button {
+            width: 100%;
+            padding: 0.75rem;
+            background-color: #2F5233;
+            color: #F8F5F0;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-size: 11px;
+            font-weight: 700;
+            transition: background-color 0.4s ease;
+            border-radius: 0;
+        }
+
+        .sidebar-card button:hover {
+            background-color: #C4A265;
+        }
+
+        .book-promotion {
+            position: relative;
+            overflow: hidden;
+            background: linear-gradient(135deg, #2F5233 0%, #8B9E7E 100%);
+            color: #F8F5F0;
+            border: none;
+        }
+
+        .book-promotion h3 {
+            color: #F8F5F0;
+        }
+
+        .book-promotion p {
+            font-size: 15px;
+            margin-bottom: 1rem;
+            line-height: 1.7;
+            color: rgba(248, 245, 240, 0.95);
+        }
+
+        .book-promotion .read-more {
+            background-color: #C4A265;
+            border-color: #C4A265;
+            width: 100%;
+            text-align: center;
+            color: #2F5233;
+        }
+
+        .book-promotion .read-more:hover {
+            background-color: #F8F5F0;
+        }
+
+        /* Pagination */
+        .pagination {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            align-items: center;
+        }
+
+        .pagination a, .pagination span {
+            padding: 0.75rem 1rem;
+            border: 1px solid #E0DCD5;
+            text-decoration: none;
+            color: #2F5233;
+            transition: all 0.4s ease;
+            border-radius: 0;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+        }
+
+        .pagination a:hover {
+            background-color: #C4A265;
+            color: #F8F5F0;
+            border-color: #C4A265;
+        }
+
+        .pagination .current {
+            background-color: #2F5233;
+            color: #F8F5F0;
+            border-color: #2F5233;
+        }
+
+        /* Scroll Animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        /* Back to Top */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #2F5233;
+            color: #F8F5F0;
+            border: none;
+            border-radius: 0;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            z-index: 999;
+            transition: all 0.4s ease;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.visible {
+            display: flex;
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background-color: #C4A265;
+            transform: translateY(-4px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2F5233;
+            color: #F8F5F0;
+            padding: 60px 3rem 30px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(248, 245, 240, 0.2);
+        }
+
+        .footer-col h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.25rem;
+            color: #F8F5F0;
+            margin-bottom: 1rem;
+        }
+
+        .footer-tagline {
+            font-size: 13px;
+            line-height: 1.7;
+            color: rgba(248, 245, 240, 0.8);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(248, 245, 240, 0.8);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.4s ease;
+        }
+
+        .footer-links a:hover {
+            color: #C4A265;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(248, 245, 240, 0.3);
+            border-radius: 50%;
+            color: #F8F5F0;
+            transition: all 0.4s ease;
+        }
+
+        .footer-social a:hover {
+            background-color: #C4A265;
+            border-color: #C4A265;
+            color: #2F5233;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 12px;
+            color: rgba(248, 245, 240, 0.6);
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .featured-post {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .blog-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .contact-btn {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #2F5233;
+                padding: 20px;
+                gap: 1rem;
+            }
+
+            .nav-links.active a {
+                padding: 8px 0;
+            }
+
+            .blog-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content-section {
+                padding: 60px 1.5rem;
+            }
+
+            .hero {
+                height: 50vh;
+            }
+
+            .back-to-top {
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-brand-name {
+                font-size: 14px;
+            }
+
+            .nav-brand-tagline {
+                display: none;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .content-section {
+                padding: 40px 1.5rem;
+            }
+
+            footer {
+                padding: 40px 1.5rem 20px;
+            }
+
+            .hero {
+                height: 40vh;
+            }
+
+            .featured-post {
+                padding: 20px;
+            }
+
+            .blog-card-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-brand">
+            <span class="nav-brand-name">Kim Pelham</span>
+            <span class="nav-brand-tagline">Pacific Northwest Real Estate</span>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="sellers.html">Sellers</a>
+            <a href="buyers.html">Buyers</a>
+            <a href="properties.html">Properties</a>
+            <a href="neighborhoods.html">Neighborhoods</a>
+            <a href="media.html">Media</a>
+            <a href="testimonials.html">Testimonials</a>
+        </div>
+
+        <button class="contact-btn" onclick="window.location.href='contact.html'">Contact Kim</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Market Insights & Tips</h1>
+            <p class="hero-subtitle">Real Estate News, Expert Advice & Community Updates</p>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="content-section">
+        <div class="content-container">
+            <div class="section-header">
+                <p class="section-label">Featured Article</p>
+                <h2>Latest Market Updates</h2>
+            </div>
+            <div class="accent-line"></div>
+
+            <article class="featured-post">
+                <img src="https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?w=600&q=80" alt="Inventory Surges Across Western Washington">
+                <div class="featured-content">
+                    <p class="post-meta">March 20, 2026</p>
+                    <h3>Inventory Surges as Market Shifts: What Buyers and Sellers Need to Know</h3>
+                    <p>As mortgage rates continue to stabilize and spring market activity accelerates, Western Washington's real estate landscape is experiencing significant shifts. This surge in available inventory presents both challenges and opportunities for buyers and sellers navigating today's dynamic market conditions.</p>
+                    <p>Whether you're a buyer preparing to make an offer or a seller timing your listing, understanding these market dynamics is critical to making informed decisions.</p>
+                    <a href="blog-post-1.html" class="read-more">Read Full Article</a>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="content-section">
+        <div class="content-container">
+            <div class="blog-grid">
+                <!-- Card 1 -->
+                <article class="blog-card scroll-animate">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=600&q=80" alt="Are Home Prices Dropping?">
+                    </div>
+                    <div class="blog-card-content">
+                        <p class="post-meta">March 18, 2026</p>
+                        <h4>Are Home Prices Dropping? Here's the Real Story</h4>
+                        <p>Understand the nuances of today's pricing trends and what they mean for your real estate decisions in 2026. Market headlines can be misleading—let's break down the data.</p>
+                        <a href="blog-post-2.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="blog-card scroll-animate">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1554995207-c18210cc9105?w=600&q=80" alt="The Hidden Advantage Repeat Buyers Have">
+                    </div>
+                    <div class="blog-card-content">
+                        <p class="post-meta">March 15, 2026</p>
+                        <h4>The Hidden Advantage Repeat Buyers Have Right Now</h4>
+                        <p>Experienced buyers are leveraging market knowledge in ways that give them an edge. Learn what sets them apart and how to apply these strategies to your next purchase.</p>
+                        <a href="blog-post-3.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="blog-card scroll-animate">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?w=600&q=80" alt="Spring 2026 Market Forecast">
+                    </div>
+                    <div class="blog-card-content">
+                        <p class="post-meta">March 10, 2026</p>
+                        <h4>Spring 2026 Market Forecast: What Snohomish County Sellers Need to Know</h4>
+                        <p>As we enter spring, market conditions are shifting rapidly. Here's what sellers should expect, how to prepare your home, and the optimal timing for listing.</p>
+                        <a href="blog-post-4.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="blog-card scroll-animate">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?w=600&q=80" alt="First-Time Buyer Roadmap">
+                    </div>
+                    <div class="blog-card-content">
+                        <p class="post-meta">March 5, 2026</p>
+                        <h4>First-Time Buyer? Here's Your Complete Roadmap</h4>
+                        <p>Buying your first home can feel overwhelming. We've created a comprehensive guide to help you navigate every step—from pre-approval to closing day.</p>
+                        <a href="blog-post-5.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="blog-card scroll-animate">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1580587771525-78991c7637b7?w=600&q=80" alt="Why Staging Your Home Could Net You More">
+                    </div>
+                    <div class="blog-card-content">
+                        <p class="post-meta">February 28, 2026</p>
+                        <h4>Why Staging Your Home Could Net You $88,000 More</h4>
+                        <p>Professional home staging isn't just about aesthetics. Discover the measurable impact staging has on sale prices and how buyers emotionally connect with spaces.</p>
+                        <a href="blog-post-6.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="blog-card scroll-animate">
+                    <div class="blog-card-image">
+                        <img src="https://images.unsplash.com/photo-1639930481292-ea1217c1a8a6?w=600&q=80" alt="Market Insights">
+                    </div>
+                    <div class="blog-card-content">
+                        <p class="post-meta">February 22, 2026</p>
+                        <h4>Market Insights: Q1 2026 Real Estate Trends</h4>
+                        <p>A deep dive into the market data that's shaping real estate trends in Western Washington this quarter. Key takeaways for buyers, sellers, and investors.</p>
+                        <a href="blog-post-7.html" class="read-more">Read More</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <span class="current">Page 1</span>
+                <span>of</span>
+                <span>3</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sidebar with CTA -->
+    <section class="content-section" style="background-color: #FFFFFF;">
+        <div class="content-container" style="display: grid; grid-template-columns: 1fr 320px; gap: 60px; align-items: start;">
+            <div></div>
+            <aside class="sidebar">
+                <!-- Categories Sidebar -->
+                <div class="sidebar-card scroll-animate">
+                    <h3>Filter by Topic</h3>
+                    <select>
+                        <option>All Topics</option>
+                        <option>Market Updates</option>
+                        <option>Buyer Tips</option>
+                        <option>Seller Tips</option>
+                        <option>Home Staging</option>
+                        <option>Investment</option>
+                        <option>Neighborhoods</option>
+                    </select>
+                </div>
+
+                <!-- Kim's Book Promo -->
+                <div class="sidebar-card book-promotion scroll-animate">
+                    <h3>Kim's Guidebook</h3>
+                    <p><strong>Six-Word Lessons on Selling Your Home in Snohomish County</strong></p>
+                    <p>Get insider wisdom, proven strategies, and actionable insights for navigating the Pacific Northwest real estate market with confidence.</p>
+                    <a href="book.html" class="read-more">Learn More</a>
+                </div>
+
+                <!-- Newsletter Signup -->
+                <div class="sidebar-card scroll-animate">
+                    <h3>Stay Updated</h3>
+                    <p style="font-size: 14px; margin-bottom: 1rem; color: #6B6B6B;">Get monthly market updates and expert tips delivered straight to your inbox.</p>
+                    <form>
+                        <input type="email" placeholder="Your email address" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Kim Pelham</h3>
+                    <p class="footer-tagline">Pacific Northwest real estate expert specializing in luxury homes and investment properties. Serving Snohomish, King, Pierce, and Skagit Counties with expertise and integrity.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        <a href="buyers.html">For Buyers</a>
+                        <a href="sellers.html">For Sellers</a>
+                        <a href="properties.html">Properties</a>
+                        <a href="contact.html">Contact</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Connect</h3>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <circle cx="17.5" cy="6.5" r="1.5"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="mailto:hello@thepelhamgroupnw.com" title="Email">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Kim Pelham | The Pelham Group NW</p>
+                <p style="margin-top: 6px; font-size: 14px; font-weight: 600;">Brokered by Katrina Eileen Real Estate · Everett, WA</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">↑</button>
+
+    <script>
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.scrollY / scrollHeight) * 100;
+            document.querySelector('.scroll-progress').style.width = scrolled + '%';
+
+            // Back to Top Visibility
+            const backToTop = document.getElementById('backToTop');
+            if (window.scrollY > 300) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+
+            // Nav Scrolled State
+            if (window.scrollY > 50) {
+                document.querySelector('nav').classList.add('scrolled');
+            } else {
+                document.querySelector('nav').classList.remove('scrolled');
+            }
+        });
+
+        // Intersection Observer for Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>

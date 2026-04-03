@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Senior real estate services in Snohomish County WA. Kim Pelham offers concierge-level downsizing, estate transitions, and relocation support for seniors in Everett, Bothell, Mill Creek and beyond.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thepelhamgroupnw.com/senior-services">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Senior Services | Kim Pelham">
+    <meta property="og:description" content="Tailored concierge services for seniors and their families in the Pacific Northwest">
+    <meta property="og:image" content="images/senior-services-01-key-handoff.jpg">
+    <meta property="og:url" content="https://thepelhamgroupnw.com/senior-services">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Kim Pelham - Senior Services",
+        "description": "Comprehensive concierge services for seniors and families",
+        "telephone": "425-250-9422",
+        "email": "hello@thepelhamgroupnw.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2815 Baker Ave Suite 102",
+            "addressLocality": "Everett",
+            "addressRegion": "WA",
+            "postalCode": "98201"
+        }
+    }
+    </script>
+
+    <title>Senior Real Estate Services | Downsizing Help | Kim Pelham | Snohomish County</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapfamily=Inter:wght@300;400;500;600;700https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapdisplay=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --green: #2F5233;
+            --gold: #C4A265;
+            --sage: #8B9E7E;
+            --cream: #F8F5F0;
+            --dark: #2C2C2C;
+            --white: #FFFFFF;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark);
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            letter-spacing: -0.02em;
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            letter-spacing: -0.01em;
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            color: var(--green);
+        }
+
+        /* Scroll Progress Bar */
+        #scrollProgress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--green));
+            width: 0%;
+            z-index: 9999;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: var(--green);
+            padding: 1.5rem 2.5rem;
+            box-shadow: 0 4px 12px rgba(47, 82, 51, 0.1);
+            box-sizing: border-box;
+        }
+
+        nav a, nav button {
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: color 0.4s ease;
+        }
+
+        .nav-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            letter-spacing: 0.2em;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+        }
+
+        .nav-brand-name {
+            font-weight: 700;
+        }
+
+        .nav-brand-tagline {
+            font-size: 10px;
+            font-weight: 300;
+            letter-spacing: 0.15em;
+            opacity: 0.9;
+        }
+
+        nav > * {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1400px;
+            margin: 0 auto;
+            gap: 3rem;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .contact-btn {
+            background-color: var(--gold);
+            color: var(--dark) !important;
+            padding: 0.7rem 1.2rem;
+            border: none;
+            border-radius: 0;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--cream);
+            color: var(--green) !important;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background-color: var(--cream);
+            transition: all 0.4s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 60vh;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, rgba(47, 82, 51, 0.85), rgba(139, 158, 126, 0.75)), url('images/senior-services-01-key-handoff.jpg') center/cover;
+            color: var(--white);
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: 'Care';
+            position: absolute;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(8rem, 20vw, 16rem);
+            letter-spacing: -0.02em;
+            opacity: 0.08;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            white-space: nowrap;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 900px;
+            animation: fadeInUp 0.8s ease 0.3s both;
+        }
+
+        .hero h1 {
+            color: var(--cream);
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--gold);
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section Label */
+        .section-label {
+            font-size: 12px;
+            letter-spacing: 0.3em;
+            color: var(--sage);
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        /* Intro Section */
+        .intro-section {
+            max-width: 900px;
+            margin: 80px auto;
+            padding: 80px 3rem;
+            text-align: center;
+        }
+
+        .intro-section p {
+            font-size: 18px;
+            line-height: 1.9;
+            color: var(--dark);
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 80px 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 35px;
+            margin-bottom: 0;
+        }
+
+        .service-card {
+            background-color: var(--white);
+            border: 2px solid #E5E0DA;
+            border-radius: 2px;
+            padding: 45px 35px;
+            text-align: center;
+            transition: all 0.4s ease;
+            animation: slideInFade 0.6s ease forwards;
+        }
+
+        .service-card:nth-child(1) { animation-delay: 0.1s; }
+        .service-card:nth-child(2) { animation-delay: 0.2s; }
+        .service-card:nth-child(3) { animation-delay: 0.3s; }
+        .service-card:nth-child(4) { animation-delay: 0.4s; }
+        .service-card:nth-child(5) { animation-delay: 0.5s; }
+        .service-card:nth-child(6) { animation-delay: 0.6s; }
+        .service-card:nth-child(7) { animation-delay: 0.7s; }
+        .service-card:nth-child(8) { animation-delay: 0.8s; }
+
+        @keyframes slideInFade {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .service-card:hover {
+            border-color: var(--gold);
+            box-shadow: 0 20px 40px rgba(47, 82, 51, 0.15);
+            transform: translateY(-8px);
+        }
+
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--gold);
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 25px;
+            color: var(--dark);
+            font-size: 32px;
+            font-weight: 600;
+        }
+
+        .service-card:hover .service-icon {
+            background-color: var(--green);
+            color: var(--gold);
+        }
+
+        .service-card h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            letter-spacing: 0.05em;
+        }
+
+        .service-card p {
+            font-size: 15px;
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        /* Message Section */
+        .message-section {
+            padding: 80px 3rem;
+            background: linear-gradient(135deg, var(--green), rgba(47, 82, 51, 0.9));
+            color: var(--cream);
+            text-align: center;
+            border-left: 6px solid var(--gold);
+        }
+
+        .message-content {
+            max-width: 900px;
+            margin: 0 auto;
+            animation: fadeIn 0.8s ease 0.2s both;
+        }
+
+        .message-section h2 {
+            color: var(--cream);
+            margin-bottom: 25px;
+        }
+
+        .message-section p {
+            font-size: 18px;
+            line-height: 1.9;
+            font-weight: 300;
+        }
+
+        /* Approach Section */
+        .approach-section {
+            padding: 80px 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .approach-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .approach-item {
+            padding: 40px;
+            background-color: var(--white);
+            border-left: 4px solid var(--gold);
+            border-radius: 2px;
+        }
+
+        .approach-item strong {
+            display: block;
+            color: var(--green);
+            font-size: 18px;
+            margin-bottom: 15px;
+            letter-spacing: 0.05em;
+        }
+
+        .approach-item p {
+            font-size: 15px;
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        /* Process Section */
+        .process-section {
+            padding: 80px 3rem;
+            background-color: var(--white);
+            border-top: 1px solid #E5E0DA;
+        }
+
+        .process-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .process-section h2 {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .process-steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .process-step {
+            padding: 30px;
+            background-color: var(--cream);
+            border-radius: 2px;
+            text-align: center;
+            position: relative;
+        }
+
+        .process-step-number {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background-color: var(--gold);
+            color: var(--dark);
+            border-radius: 0;
+            line-height: 50px;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .process-step h3 {
+            margin-bottom: 15px;
+        }
+
+        .process-step p {
+            font-size: 14px;
+            color: var(--dark);
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 3rem;
+            background: linear-gradient(135deg, var(--green), rgba(47, 82, 51, 0.9));
+            color: var(--cream);
+            text-align: center;
+        }
+
+        .cta-content {
+            max-width: 800px;
+            margin: 0 auto;
+            animation: fadeIn 0.8s ease 0.2s both;
+        }
+
+        .cta-section h2 {
+            color: var(--cream);
+            margin-bottom: 20px;
+        }
+
+        .cta-section p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            font-weight: 300;
+        }
+
+        .cta-btn {
+            background-color: var(--gold);
+            color: var(--dark);
+            border: none;
+            padding: 14px 40px;
+            font-size: 12px;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 0;
+            transition: all 0.4s ease;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .cta-btn:hover {
+            background-color: var(--cream);
+            color: var(--green);
+            transform: scale(1.05);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--green);
+            color: var(--cream);
+            padding: 60px 3rem 20px;
+        }
+
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            color: var(--gold);
+            font-size: 14px;
+            margin-bottom: 15px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        .footer-section p, .footer-section a {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--cream);
+        }
+
+        .footer-section a {
+            text-decoration: none;
+            transition: color 0.4s ease;
+        }
+
+        .footer-section a:hover {
+            color: var(--gold);
+        }
+
+        .footer-bottom {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding-top: 20px;
+            border-top: 1px solid rgba(196, 162, 101, 0.2);
+            text-align: center;
+            font-size: 13px;
+            color: rgba(248, 245, 240, 0.8);
+        }
+
+        /* Back to Top Button */
+        #backToTop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--gold);
+            border: none;
+            border-radius: 0;
+            color: var(--dark);
+            font-size: 24px;
+            cursor: pointer;
+            display: none;
+            z-index: 999;
+            transition: all 0.4s ease;
+            font-weight: 600;
+        }
+
+        #backToTop:hover {
+            background-color: var(--green);
+            color: var(--gold);
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .contact-btn {
+                display: none;
+            }
+
+            .hero {
+                height: 50vh;
+                min-height: 400px;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            nav > * {
+                gap: 1rem;
+            }
+
+            .nav-brand-tagline {
+                display: none;
+            }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div>
+            <a href="index.html" class="nav-brand">
+                <span class="nav-brand-name">Kim Pelham</span>
+                <span class="nav-brand-tagline">Pacific Northwest Real Estate</span>
+            </a>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="about.html">About</a>
+                <a href="sellers.html">Sellers</a>
+                <a href="buyers.html">Buyers</a>
+                <a href="properties.html">Properties</a>
+                <a href="neighborhoods.html">Neighborhoods</a>
+                <a href="media.html">Media</a>
+                <a href="testimonials.html">Testimonials</a>
+            </div>
+            <a href="contact.html" class="contact-btn">Contact Kim</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <!-- PHOTO NEEDED: photo that looks like a senior client -->
+            <h1>Comprehensive Senior Concierge Services</h1>
+            <p>Tailored real estate and life services for seniors and their families</p>
+        </div>
+    </section>
+
+    <!-- Intro Section -->
+    <section class="intro-section">
+        <p>At Kim Pelham Real Estate, we understand that senior transitions come with unique challenges. That's why we offer a broad spectrum of personalized services, starting with a no-cost consultation to identify your specific needs. Whether you're downsizing, navigating healthcare coordination, or planning your future, we're here to guide you every step of the way.</p>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section">
+        <div class="section-label">Expertise</div>
+        <h2 class="section-title">Our Comprehensive Services</h2>
+
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon"></div>
+                <h3>Real Estate Expertise for Seniors</h3>
+                <p>Specialized guidance in buying, selling, or renting properties with senior-specific needs, accessibility features, and lifestyle preferences.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"></div>
+                <h3>Home Care Assistance</h3>
+                <p>Connecting you with trusted home care providers for support with daily living activities and specialized care needs.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"></div>
+                <h3>Daily Assistance and Errands</h3>
+                <p>Help with shopping, medical appointments, errands, and daily tasks to maintain independence and quality of life.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"></div>
+                <h3>Medical Equipment and Supplies</h3>
+                <p>Sourcing and managing medical equipment and adaptive supplies for comfort, safety, and independence.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon"></div>
+                <h3>Financial Guidance for Seniors</h3>
+                <p>Expert advice on budgeting, investments, and financial planning tailored to senior circumstances and goals.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📋</div>
+                <h3>Help with Financial Tasks</h3>
+                <p>Assistance with bills, tax preparation, banking, and financial documentation management for peace of mind.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">⚖️</div>
+                <h3>Legal Support for Seniors</h3>
+                <p>Connecting you with experienced elder law attorneys for trusts, powers of attorney, and estate planning.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">📑</div>
+                <h3>Comprehensive Estate Planning</h3>
+                <p>Support in creating and updating wills, trusts, and comprehensive estate planning documents with expert guidance.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section class="message-section">
+        <div class="message-content">
+            <h2>We're Here for Every Life Stage</h2>
+            <p>Whether you're planning ahead, navigating a major transition, or facing unexpected challenges, Kim Pelham and her team provide compassionate, professional guidance tailored to your unique situation. Our goal is to simplify the complex and help you focus on what matters most—your well-being and peace of mind.</p>
+        </div>
+    </section>
+
+    <!-- Approach Section -->
+    <section class="approach-section">
+        <h2 style="text-align: center; margin-bottom: 60px;">Our Personalized Approach</h2>
+
+        <div class="approach-grid">
+            <div class="approach-item">
+                <strong>No-Cost Consultation</strong>
+                <p>We start with a comprehensive consultation to understand your situation, goals, and concerns without any obligation.</p>
+            </div>
+            <div class="approach-item">
+                <strong>Customized Services</strong>
+                <p>Rather than one-size-fits-all solutions, we develop a personalized service plan based on your unique needs.</p>
+            </div>
+            <div class="approach-item">
+                <strong>Expert Coordination</strong>
+                <p>We manage relationships with healthcare providers, legal professionals, and service providers on your behalf.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="process-section">
+        <div class="process-content">
+            <h2>Getting Started: Three Simple Steps</h2>
+
+            <div class="process-steps">
+                <div class="process-step">
+                    <div class="process-step-number">1</div>
+                    <h3>Schedule a Consultation</h3>
+                    <p>Contact us to arrange a free, no-obligation consultation to discuss your specific needs and concerns.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">2</div>
+                    <h3>Develop Your Plan</h3>
+                    <p>We'll create a customized service plan tailored to your goals and lifestyle, with clear timelines and expectations.</p>
+                </div>
+                <div class="process-step">
+                    <div class="process-step-number">3</div>
+                    <h3>Ongoing Support</h3>
+                    <p>We coordinate all aspects of your services, providing regular updates and adjustments as your needs evolve.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="cta-content">
+            <h2>Ready to Get Started?</h2>
+            <p>Contact us today for a free, confidential consultation. We're ready to listen and help you navigate this important transition.</p>
+            <button class="cta-btn" onclick="document.location.href='contact.html'">Schedule Your Free Consultation</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3 style="color: var(--cream); text-transform: none; letter-spacing: 0.05em; margin-bottom: 15px; font-size: 16px;">Kim Pelham</h3>
+                <p>Comprehensive real estate and senior concierge services serving the Pacific Northwest with compassion and expertise.</p>
+            </div>
+            <div class="footer-section">
+                <h3>Navigation</h3>
+                <p><a href="index.html">Home</a></p>
+                <p><a href="about.html">About Kim</a></p>
+                <p><a href="sellers.html">For Sellers</a></p>
+                <p><a href="buyers.html">For Buyers</a></p>
+                <p><a href="contact.html">Contact</a></p>
+            </div>
+            <div class="footer-section">
+                <h3>Connect</h3>
+                <p>Phone: <a href="tel:4252509422">425-250-9422</a></p>
+                <p>Email: <a href="mailto:hello@thepelhamgroupnw.com">hello@thepelhamgroupnw.com</a></p>
+                <p>Address: 2815 Baker Ave Suite 102, Everett, WA 98201</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Kim Pelham | The Pelham Group NW</p>
+            <p style="margin-top: 6px; font-size: 14px; font-weight: 600;">Brokered by Katrina Eileen Real Estate · Everett, WA</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" onclick="scrollToTop()">↑</button>
+
+    <script>
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            document.getElementById('scrollProgress').style.width = scrollPercent + '%';
+
+            // Back to Top Button
+            document.getElementById('backToTop').style.display = scrollTop > 300 ? 'block' : 'none';
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // IntersectionObserver for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.approach-item, .process-step').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        // Mobile Navigation
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+            });
+        }
+    </script>
+</body>
+</html>

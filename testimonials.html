@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Read what clients say about working with Kim Pelham — Snohomish County real estate broker serving Everett, Bothell, Mill Creek, Snohomish, and Lake Stevens WA.">
+    <meta name="theme-color" content="#2F5233">
+    <link rel="canonical" href="https://thepelhamgroupnw.com/testimonials">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Client Stories - Kim Pelham Real Estate">
+    <meta property="og:description" content="Read real experiences from families and individuals Kim has helped find their perfect homes.">
+    <meta property="og:image" content="images/hero-03-porch-connection.jpg">
+    <meta property="og:type" content="website">
+
+    <title>Client Reviews | Kim Pelham | Snohomish County Real Estate Broker</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapfamily=Inter:wght@300;400;500;600;700https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapdisplay=swap" rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lucide@latest">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            color: #2C2C2C;
+            line-height: 1.9;
+            background-color: #F8F5F0;
+            overflow-x: hidden;
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background-color: #C4A265;
+            z-index: 2000;
+            width: 0%;
+            transition: width 0.4s ease;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #2F5233;
+            color: #F8F5F0;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 16px rgba(47, 82, 51, 0.2);
+        }
+
+        .back-to-top:hover {
+            background-color: #8B9E7E;
+            transform: translateY(-5px);
+        }
+
+        .back-to-top.show {
+            display: flex;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            color: #2F5233;
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.9;
+            color: #2C2C2C;
+        }
+
+        /* Section Labels */
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #8B9E7E;
+            margin-bottom: 1rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background-color: #2F5233;
+            padding: 1.5rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            transition: padding 0.4s ease;
+            box-sizing: border-box;
+        }
+
+        nav.scrolled {
+            padding: 1rem 2.5rem;
+        }
+
+        .nav-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .nav-brand-name {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #F8F5F0;
+        }
+
+        .nav-brand-tagline {
+            font-size: 8px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #8B9E7E;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: #F8F5F0;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.4s ease;
+        }
+
+        .nav-links a:hover {
+            color: #C4A265;
+        }
+
+        .contact-btn {
+            background: transparent;
+            border: 2px solid #F8F5F0;
+            color: #F8F5F0;
+            padding: 0.7rem 1.2rem;
+            border-radius: 0;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .contact-btn:hover {
+            background-color: #F8F5F0;
+            color: #2F5233;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background-color: #F8F5F0;
+            margin: 4px 0;
+            transition: all 0.3s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.5)), url('images/property-03-lake-stevens-waterfront.jpg') center/cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #F8F5F0;
+            animation: fadeInHero 1s ease;
+        }
+
+        @keyframes fadeInHero {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .hero-content h1 {
+            color: #F8F5F0;
+            margin-bottom: 1.5rem;
+            max-width: 800px;
+        }
+
+        .hero-subtitle {
+            font-size: 13px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #C4A265;
+            margin-bottom: 0;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            background-color: #F8F5F0;
+            padding: 80px 3rem;
+        }
+
+        .testimonials-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .testimonials-header .section-label {
+            display: inline-block;
+        }
+
+        .testimonials-header h2 {
+            margin-bottom: 1rem;
+        }
+
+        .testimonials-header p {
+            color: #6B6B6B;
+            font-size: 17px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Testimonial Grid */
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-bottom: 4rem;
+        }
+
+        .testimonial-card {
+            backdrop-filter: blur(20px);
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 8px 32px rgba(47, 82, 51, 0.08);
+            transition: all 0.4s ease;
+            animation: fadeInUp 0.8s ease;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .testimonial-card:hover {
+            transform: translateY(-8px);
+            backdrop-filter: blur(25px);
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 20px 60px rgba(47, 82, 51, 0.15);
+        }
+
+        .testimonial-quote-mark {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 3.5rem;
+            color: #C4A265;
+            opacity: 0.4;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .testimonial-quote {
+            font-size: 15px;
+            line-height: 1.8;
+            color: #2C2C2C;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            font-size: 14px;
+            font-weight: 700;
+            color: #2F5233;
+            margin-bottom: 0.5rem;
+        }
+
+        .testimonial-category {
+            display: inline-block;
+            padding: 0.4rem 0.8rem;
+            background-color: rgba(47, 82, 51, 0.1);
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #2F5233;
+            margin-bottom: 0.5rem;
+            margin-right: 0.5rem;
+        }
+
+        .testimonial-location {
+            font-size: 12px;
+            color: #6B6B6B;
+        }
+
+        /* Video Testimonial Section */
+        .video-testimonial {
+            background-color: #FFFFFF;
+            padding: 80px 3rem;
+            border: 1px solid #E0DCD5;
+            margin-bottom: 4rem;
+        }
+
+        .video-testimonial-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .video-placeholder {
+            position: relative;
+            background: linear-gradient(135deg, rgba(139, 158, 126, 0.1), rgba(47, 82, 51, 0.05));
+            aspect-ratio: 16 / 9;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border: 1px solid #E0DCD5;
+        }
+
+        .play-button {
+            width: 80px;
+            height: 80px;
+            background-color: #2F5233;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            color: #F8F5F0;
+        }
+
+        .video-placeholder:hover .play-button {
+            background-color: #8B9E7E;
+            transform: scale(1.1);
+        }
+
+        .play-button svg {
+            width: 32px;
+            height: 32px;
+            margin-left: 4px;
+        }
+
+        .video-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            color: #2F5233;
+        }
+
+        .video-content .testimonial-quote {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.25rem;
+            font-style: italic;
+            color: #2C2C2C;
+            line-height: 1.8;
+            margin-top: 1.5rem;
+        }
+
+        /* CTA Section */
+        .testimonial-cta {
+            background: linear-gradient(135deg, #2F5233 0%, #8B9E7E 100%);
+            padding: 80px 3rem;
+            text-align: center;
+            color: #F8F5F0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            opacity: 0.03;
+        }
+
+        .testimonial-cta-container {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .testimonial-cta h3 {
+            margin-bottom: 1.5rem;
+            color: #F8F5F0;
+        }
+
+        .testimonial-cta p {
+            color: #F8F5F0;
+            margin-bottom: 2rem;
+            opacity: 0.95;
+        }
+
+        .cta-button {
+            background-color: #F8F5F0;
+            color: #2F5233;
+            padding: 0.9rem 2rem;
+            border: none;
+            border-radius: 0;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            margin-right: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-button:hover {
+            background-color: #2C2C2C;
+            color: #F8F5F0;
+            transform: translateY(-2px);
+        }
+
+        .google-reviews-btn {
+            background-color: transparent;
+            border: 2px solid #F8F5F0;
+            color: #F8F5F0;
+            padding: 0.9rem 2rem;
+            margin-bottom: 1rem;
+            border-radius: 0;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+        }
+
+        .google-reviews-btn:hover {
+            background-color: #F8F5F0;
+            color: #2F5233;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2F5233;
+            color: #F8F5F0;
+            padding: 60px 3rem 30px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(248, 245, 240, 0.2);
+        }
+
+        .footer-col h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.25rem;
+            color: #F8F5F0;
+            margin-bottom: 1rem;
+        }
+
+        .footer-tagline {
+            font-size: 13px;
+            line-height: 1.7;
+            color: rgba(248, 245, 240, 0.8);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(248, 245, 240, 0.8);
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #C4A265;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(248, 245, 240, 0.3);
+            border-radius: 50%;
+            color: #F8F5F0;
+            transition: all 0.3s ease;
+        }
+
+        .footer-social a:hover {
+            background-color: #C4A265;
+            border-color: #C4A265;
+            color: #2F5233;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 12px;
+            color: rgba(248, 245, 240, 0.6);
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 1024px) {
+            .video-testimonial-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .testimonial-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .contact-btn {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .nav-links.active {
+                display: flex;
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background-color: #2F5233;
+                padding: 20px;
+                gap: 1rem;
+            }
+
+            .nav-links.active a {
+                padding: 8px 0;
+            }
+
+            .hero {
+                height: 45vh;
+            }
+
+            .video-testimonial,
+            .testimonials-section,
+            .testimonial-cta {
+                padding: 60px 1.5rem;
+            }
+
+            footer {
+                padding: 40px 1.5rem 20px;
+            }
+
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-brand-name {
+                font-size: 14px;
+            }
+
+            .nav-brand-tagline {
+                display: none;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero {
+                height: 35vh;
+            }
+
+            .hero-subtitle {
+                font-size: 11px;
+            }
+
+            .testimonial-card {
+                padding: 25px;
+            }
+
+            .testimonial-grid {
+                gap: 25px;
+            }
+
+            .video-testimonial,
+            .testimonials-section,
+            .testimonial-cta {
+                padding: 40px 1rem;
+            }
+
+            .cta-button,
+            .google-reviews-btn {
+                display: block;
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 0.75rem;
+            }
+
+            footer {
+                padding: 30px 1rem 15px;
+            }
+
+            .back-to-top {
+                width: 40px;
+                height: 40px;
+                bottom: 15px;
+                right: 15px;
+            }
+        }
+
+        /* Print Styles */
+        @media print {
+            nav, .contact-btn, .hamburger, .back-to-top {
+                display: none;
+            }
+
+            body {
+                background-color: #FFFFFF;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-brand">
+            <span class="nav-brand-name">Kim Pelham</span>
+            <span class="nav-brand-tagline">Pacific Northwest Real Estate</span>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="sellers.html">Sellers</a>
+            <a href="buyers.html">Buyers</a>
+            <a href="properties.html">Properties</a>
+            <a href="neighborhoods.html">Neighborhoods</a>
+            <a href="media.html">Media</a>
+            <a href="testimonials.html">Testimonials</a>
+        </div>
+
+        <button class="contact-btn" onclick="scrollToContact()">Contact Kim</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <p class="section-label">CLIENT STORIES</p>
+            <h1>What My Clients Say</h1>
+            <p class="hero-subtitle">Real experiences from real families</p>
+        </div>
+    </section>
+
+    <!-- Video Testimonial Section -->
+    <section class="video-testimonial">
+        <div class="video-testimonial-container">
+            <div class="video-placeholder">
+                <div class="play-button">
+                    <svg fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="video-content">
+                <h3>Watch Sarah & Michael's Story</h3>
+                <p class="testimonial-quote">"Kim didn't just help us find a house — she helped us find our home."</p>
+                <p style="color: #6B6B6B; font-size: 14px; line-height: 1.8; margin-top: 1rem;">Sarah and Michael spent six months searching for their dream home in Mill Creek. Kim's patience, local expertise, and genuine care made all the difference. Watch how she guided them through the entire journey, from first showings to closing day.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Grid Section -->
+    <section class="testimonials-section">
+        <div class="testimonials-container">
+            <div class="testimonials-header">
+                <p class="section-label">CLIENT EXPERIENCES</p>
+                <h2>Trusted by Families Across the Pacific Northwest</h2>
+                <p>Each client's journey is unique, but their trust in my expertise is consistent. Here are just a few of the families I've had the honor of serving.</p>
+            </div>
+
+            <div class="testimonial-grid">
+                <div class="testimonial-card scroll-animate">
+                    <div class="testimonial-quote-mark">"</div>
+                    <p class="testimonial-quote">Kim didn't just help us find a house — she helped us find our home. Her knowledge of the Eastside communities, her patience with our long search, and her honesty throughout the process made all the difference.</p>
+                    <p class="testimonial-author">Sarah & Michael P.</p>
+                    <span class="testimonial-category">BUYER</span>
+                    <p class="testimonial-location">Mill Creek</p>
+                </div>
+
+                <div class="testimonial-card scroll-animate">
+                    <div class="testimonial-quote-mark">"</div>
+                    <p class="testimonial-quote">Kim's staging and marketing strategy was incredible. We listed our home expecting a long process, but it sold $45,000 over asking in just eight days. Her expertise is truly exceptional.</p>
+                    <p class="testimonial-author">Robert K.</p>
+                    <span class="testimonial-category">SELLER</span>
+                    <p class="testimonial-location">Everett</p>
+                </div>
+
+                <div class="testimonial-card scroll-animate">
+                    <div class="testimonial-quote-mark">"</div>
+                    <p class="testimonial-quote">After 40 years in our home, downsizing felt overwhelming. Kim coordinated everything with such care and professionalism. She treated us like family, not just clients. We couldn't have done this without her.</p>
+                    <p class="testimonial-author">Margaret & Tom L.</p>
+                    <span class="testimonial-category">SENIOR SERVICES</span>
+                    <p class="testimonial-location">Snohomish</p>
+                </div>
+
+                <div class="testimonial-card scroll-animate">
+                    <div class="testimonial-quote-mark">"</div>
+                    <p class="testimonial-quote">As a first-time buyer, I felt nervous about the whole process. Kim walked me through every step, answered all my questions patiently, and negotiated $12,000 off the asking price. She's a true advocate.</p>
+                    <p class="testimonial-author">Jennifer W.</p>
+                    <span class="testimonial-category">BUYER</span>
+                    <p class="testimonial-location">Bothell</p>
+                </div>
+
+                <div class="testimonial-card scroll-animate">
+                    <div class="testimonial-quote-mark">"</div>
+                    <p class="testimonial-quote">Our waterfront home is our most prized possession. Kim's strategic pricing and marketing got us a 104% sale-to-list ratio. She understands the market better than anyone we've worked with.</p>
+                    <p class="testimonial-author">David & Lisa M.</p>
+                    <span class="testimonial-category">SELLER</span>
+                    <p class="testimonial-location">Lake Stevens</p>
+                </div>
+
+                <div class="testimonial-card scroll-animate">
+                    <div class="testimonial-quote-mark">"</div>
+                    <p class="testimonial-quote">When my husband passed, I had no idea how to handle the estate sale. Kim was there for every step—compassionate, thorough, and completely trustworthy. She made an impossible time a little bit easier.</p>
+                    <p class="testimonial-author">Helen R.</p>
+                    <span class="testimonial-category">SENIOR SERVICES</span>
+                    <p class="testimonial-location">Marysville</p>
+                </div>
+
+                <div class="testimonial-card scroll-animate">
+                    <div class="testimonial-quote-mark">"</div>
+                    <p class="testimonial-quote">We relocated from California with three kids and had no idea which neighborhoods would be the best fit. Kim knew every area intimately and helped us find the perfect community with excellent schools nearby.</p>
+                    <p class="testimonial-author">The N. Family</p>
+                    <span class="testimonial-category">BUYER</span>
+                    <p class="testimonial-location">Lynnwood</p>
+                </div>
+
+                <div class="testimonial-card scroll-animate">
+                    <div class="testimonial-quote-mark">"</div>
+                    <p class="testimonial-quote">Our 1970s rambler was dated and tired. Kim's photography and staging completely transformed how buyers saw the home. We expected a long listing period, but it sold in just five days.</p>
+                    <p class="testimonial-author">Brian & Amanda S.</p>
+                    <span class="testimonial-category">SELLER</span>
+                    <p class="testimonial-location">Shoreline</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="testimonial-cta" id="contact">
+        <div class="testimonial-cta-container">
+            <h3>Have a Story to Share?</h3>
+            <p>If you've worked with me and would like to share your experience, I'd love to hear from you. Your story helps other families discover what's possible.</p>
+            <button class="cta-button" onclick="scrollToContact()">Share Your Story</button>
+            <button class="google-reviews-btn">See More on Google Reviews</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Kim Pelham</h3>
+                    <p class="footer-tagline">Helping Pacific Northwest families find the perfect home. A decade of experience, a lifetime of commitment to doing right by every client.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html#about">About</a>
+                        <a href="properties.html">Properties</a>
+                        <a href="neighborhoods.html">Neighborhoods</a>
+                        <a href="testimonials.html">Testimonials</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Connect</h3>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <circle cx="17.5" cy="6.5" r="1.5"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="mailto:hello@thepelhamgroupnw.com" title="Email">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Kim Pelham | The Pelham Group NW · Designed by The Savvy Digital Co.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="18 15 12 9 6 15"></polyline>
+        </svg>
+    </button>
+
+    <script>
+        // Scroll Progress Bar
+        const scrollProgress = document.getElementById('scrollProgress');
+        window.addEventListener('scroll', () => {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            scrollProgress.style.width = scrolled + '%';
+        });
+
+        // Back to Top Button
+        const backToTopBtn = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('show');
+            } else {
+                backToTopBtn.classList.remove('show');
+            }
+        });
+
+        backToTopBtn.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Mobile Menu Toggle
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Nav scroll handler
+        const nav = document.querySelector('nav');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Scroll to Contact
+        function scrollToContact() {
+            document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Intersection Observer for Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const href = this.getAttribute('href');
+                if (href !== '#' && document.querySelector(href)) {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

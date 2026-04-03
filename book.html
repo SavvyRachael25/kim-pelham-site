@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Six-Word Lessons for a Smooth Real Estate Transaction by Kim Pelham. Practical wisdom from a 14-year Snohomish County real estate broker.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thepelhamgroupnw.com/book">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Six-Word Lessons on Selling Your Home | Kim Pelham Book">
+    <meta property="og:description" content="100 Lessons to Maximize the Results of Your Sale">
+    <meta property="og:image" content="images/neighborhood-03-snohomish-historic.jpg">
+    <meta property="og:url" content="https://thepelhamgroupnw.com/book">
+
+    <!-- JSON-LD Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Book",
+        "name": "Six-Word Lessons on Selling Your Home",
+        "author": {
+            "@type": "Person",
+            "name": "Kim Pelham"
+        },
+        "image": "images/neighborhood-03-snohomish-historic.jpg",
+        "description": "100 lessons to maximize the results of your sale",
+        "offers": {
+            "@type": "Offer",
+            "availability": "http://schema.org/InStock",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+
+    <title>Six-Word Lessons Book | Kim Pelham | Real Estate Author</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapfamily=Inter:wght@300;400;500;600;700https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapdisplay=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/lucide@latest">
+    <style>
+        :root {
+            --green: #2F5233;
+            --gold: #C4A265;
+            --sage: #8B9E7E;
+            --cream: #F8F5F0;
+            --dark: #2C2C2C;
+            --white: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark);
+            font-size: 17px;
+            line-height: 1.9;
+        }
+
+        h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            color: var(--dark);
+        }
+
+        h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: var(--dark);
+        }
+
+        h3, h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        p {
+            color: var(--dark);
+        }
+
+        a {
+            color: var(--green);
+            text-decoration: none;
+            transition: color 0.4s ease;
+        }
+
+        a:hover {
+            color: var(--sage);
+        }
+
+        button {
+            background-color: var(--green);
+            color: var(--white);
+            border: 2px solid var(--green);
+            padding: 14px 32px;
+            font-size: 13px;
+            font-weight: 700;
+            font-family: 'Inter', sans-serif;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 0;
+            transition: all 0.4s ease;
+        }
+
+        button:hover {
+            background-color: transparent;
+            color: var(--green);
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--green), var(--gold));
+            width: 0;
+            z-index: 2000;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--green);
+            padding: 1.5rem 2.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        .nav-brand {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            color: var(--white);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            align-items: center;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .nav-cta {
+            background-color: transparent;
+            border: 2px solid var(--white);
+            color: var(--white) !important;
+            padding: 0.7rem 1.2rem;
+            font-size: 11px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .nav-cta:hover {
+            background-color: var(--white);
+            color: var(--green);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background-color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 60vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+                        url('images/hero-03-porch-connection.jpg') center/cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 70%, rgba(196, 162, 101, 0.05) 0%, transparent 50%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            animation: fadeInDown 0.8s ease;
+        }
+
+        .hero h1 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-subtitle {
+            font-size: 14px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--gold);
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Section Label */
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--sage);
+            margin-bottom: 1rem;
+        }
+
+        /* Book Feature */
+        .book-feature {
+            max-width: 1200px;
+            margin: 100px auto;
+            padding: 0 3rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .book-image {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(47, 82, 51, 0.15);
+            animation: slideInLeft 0.6s ease;
+        }
+
+        .book-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: var(--gold);
+            z-index: 1;
+        }
+
+        .book-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.6s ease;
+        }
+
+        .book-image:hover img {
+            transform: scale(1.05);
+        }
+
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .book-description h2 {
+            margin-bottom: 1.5rem;
+        }
+
+        .book-description p {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .book-ctas {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+
+        .cta-secondary {
+            background-color: transparent;
+            color: var(--green);
+            border: 2px solid var(--green);
+        }
+
+        .cta-secondary:hover {
+            background-color: var(--green);
+            color: var(--white);
+        }
+
+        /* About Author */
+        .about-author {
+            background-color: var(--white);
+            padding: 100px 3rem;
+            margin: 80px 0;
+        }
+
+        .about-author-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+        }
+
+        .author-text h2 {
+            margin-bottom: 2rem;
+        }
+
+        .author-text p {
+            color: var(--dark);
+            margin-bottom: 1.5rem;
+        }
+
+        .author-photo {
+            position: relative;
+            overflow: hidden;
+            border: 1px solid rgba(47, 82, 51, 0.15);
+        }
+
+        .author-photo::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            background: var(--gold);
+            z-index: 1;
+        }
+
+        .author-photo img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            max-width: 900px;
+            margin: 100px auto;
+            padding: 80px 3rem;
+            background-color: var(--white);
+            border: 2px solid rgba(47, 82, 51, 0.15);
+            border-left: 4px solid var(--gold);
+            text-align: center;
+        }
+
+        .cta-section h2 {
+            margin-bottom: 2rem;
+        }
+
+        .cta-section p {
+            font-size: 16px;
+            color: var(--dark);
+            margin-bottom: 2.5rem;
+        }
+
+        .ghl-embed {
+            background-color: var(--cream);
+            padding: 30px;
+            margin: 2rem 0;
+            min-height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--sage);
+            border: 1px dashed rgba(47, 82, 51, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--green);
+            color: var(--white);
+            padding: 80px 3rem 40px;
+            margin-top: 100px;
+        }
+
+        .footer-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(248, 245, 240, 0.2);
+        }
+
+        .footer-col h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            color: var(--gold);
+        }
+
+        .footer-col p {
+            color: rgba(248, 245, 240, 0.85);
+            font-size: 14px;
+            margin-bottom: 1.5rem;
+        }
+
+        .footer-col a {
+            color: rgba(248, 245, 240, 0.85);
+            transition: color 0.3s ease;
+        }
+
+        .footer-col a:hover {
+            color: var(--gold);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+            list-style: none;
+        }
+
+        .footer-links li a {
+            font-size: 14px;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+            font-size: 12px;
+            color: rgba(248, 245, 240, 0.6);
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 48px;
+            height: 48px;
+            background-color: var(--gold);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            z-index: 999;
+            transition: all 0.4s ease;
+            box-shadow: 0 4px 12px rgba(196, 162, 101, 0.3);
+        }
+
+        .back-to-top:hover {
+            background-color: var(--green);
+            transform: translateY(-4px);
+        }
+
+        .back-to-top svg {
+            color: var(--white);
+            width: 24px;
+            height: 24px;
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            nav {
+                padding: 1rem 2rem;
+            }
+
+            .book-feature {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 0 2rem;
+            }
+
+            .about-author {
+                padding: 80px 2rem;
+            }
+
+            .about-author-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+                flex-wrap: wrap;
+            }
+
+            .nav-links {
+                display: none;
+                gap: 1.5rem;
+                width: 100%;
+                flex-direction: column;
+                margin-top: 1rem;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            .hero {
+                height: 50vh;
+            }
+
+            .book-feature {
+                gap: 30px;
+                padding: 0 2rem;
+            }
+
+            .book-ctas {
+                flex-direction: column;
+            }
+
+            .about-author {
+                padding: 60px 2rem;
+            }
+
+            .cta-section {
+                padding: 60px 2rem;
+                margin: 60px auto;
+            }
+
+            footer {
+                padding: 60px 2rem 30px;
+            }
+
+            .back-to-top {
+                width: 42px;
+                height: 42px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 1rem;
+            }
+
+            .nav-brand {
+                font-size: 14px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero {
+                height: 40vh;
+            }
+
+            .book-feature {
+                gap: 30px;
+                padding: 0 1.5rem;
+                margin: 60px auto;
+            }
+
+            .about-author {
+                padding: 40px 1.5rem;
+            }
+
+            .cta-section {
+                padding: 40px 1.5rem;
+                margin: 40px 1rem;
+            }
+
+            footer {
+                padding: 40px 1.5rem 20px;
+            }
+
+            .footer-grid {
+                gap: 30px;
+                margin-bottom: 30px;
+            }
+
+            .hero-subtitle {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scrollProgress"></div>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-brand">KIM PELHAM</div>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="sellers.html">Sellers</a></li>
+            <li><a href="buyers.html">Buyers</a></li>
+            <li><a href="properties.html">Properties</a></li>
+            <li><a href="neighborhoods.html">Neighborhoods</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="testimonials.html">Testimonials</a></li>
+        </ul>
+        <a href="contact.html" class="nav-cta">Contact Kim</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Six-Word Lessons on Selling Your Home</h1>
+            <p class="hero-subtitle">100 Strategies to Maximize Your Sale</p>
+        </div>
+    </section>
+
+    <!-- Book Feature -->
+    <section class="book-feature">
+        <img src="https://images.unsplash.com/photo-1507842217343-583f20270319?w=600&h=800&fit=crop" alt="Six-Word Lessons book cover" class="book-image">
+        <div class="book-description">
+            <p class="section-label">About The Book</p>
+            <h2>Unlock the Secrets to Selling Success</h2>
+            <p>A bidding war, the Holy Grail of real estate, is something that every homeowner would like to achieve. Even in the current market, bidding wars can happen.</p>
+            <p>How can you be certain you are not leaving money on the table?</p>
+            <p>In this book, Kim Pelham boils down all her best advice into concise nuggets of wisdom to help you find the potential in your home and maximize your return when you sell.</p>
+            <p>Based on years of real estate expertise and a deep understanding of buyer psychology, these six-word lessons provide actionable insights you can implement immediately.</p>
+            <div class="book-ctas">
+                <button class="cta-primary" onclick="window.open('https://amazon.com', '_blank')">Read on Amazon</button>
+                <button class="cta-secondary" onclick="document.querySelector('.cta-section').scrollIntoView({behavior: 'smooth'})">Get Free Copy</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Author -->
+    <section class="about-author">
+        <div class="about-author-content">
+            <div class="author-text">
+                <p class="section-label">Meet the Author</p>
+                <h2>About Kim Pelham</h2>
+                <p>Kim Pelham is a best-selling author and renowned real estate broker with The Pelham Group NW, operating under Katrina Eileen Brokerage in Everett, Washington.</p>
+                <p>With 14 years of real estate experience — plus three years in commercial property management — Kim has guided families through the selling process with confidence. Her unique approach combines psychology-driven staging, data-backed marketing, and genuine care for her clients' outcomes.</p>
+                <p>Kim's success is reflected in her results: a 104.4% sale-to-list ratio and a commitment to individualized service that large teams simply can't match.</p>
+                <p>When she's not working with clients, Kim enjoys spending time with her family. Her resilience, compassion, and commitment to excellence shine through in everything she does.</p>
+            </div>
+            <div class="author-photo">
+                <img src="images/about-01-approachable-headshot-env.jpg" alt="Kim Pelham, author and real estate broker">
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <p class="section-label">Claim Your Copy</p>
+        <h2>Ready to Maximize Your Home's Value?</h2>
+        <p>Get your free copy of "Six-Word Lessons on Selling Your Home" and discover Kim's proven strategies for selling success in today's market.</p>
+        <div class="ghl-embed">
+            <!-- GHL Form Embed -->
+        </div>
+        <button onclick="document.querySelector('.ghl-embed').scrollIntoView({behavior: 'smooth'})">Claim Your Free Copy</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>The Pelham Group NW</h3>
+                <p>Author of "Six-Word Lessons on Selling Your Home" and real estate broker serving Snohomish and King County, Washington with integrity and care.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Kim</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="home-repair.html">Services</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Connect</h3>
+                <ul class="footer-links">
+                    <li><a href="tel:4252509422">425.250.9422</a></li>
+                    <li><a href="mailto:hello@thepelhamgroupnw.com">hello@thepelhamgroupnw.com</a></li>
+                    <li>2815 Baker Ave Suite 102<br>Everett, WA 98201</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Kim Pelham | The Pelham Group NW</p>
+            <p style="margin-top: 6px; font-size: 14px; font-weight: 600;">Brokered by Katrina Eileen Real Estate · Everett, WA</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </button>
+
+    <script>
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.getElementById('scrollProgress').style.width = scrollPercent + '%';
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.style.display = 'flex';
+            } else {
+                backToTop.style.display = 'none';
+            }
+        });
+
+        // Mobile Menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // Scroll Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.book-feature, .about-author-content').forEach(el => {
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>

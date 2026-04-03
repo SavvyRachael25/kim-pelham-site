@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://thepelhamgroupnw.com/buyers">
+    <title>Buy a Home in Snohomish County | Kim Pelham — Two-Buyer-Max Policy</title>
+    <meta name="description" content="Looking to buy a home in Everett, Bothell, Mill Creek, Snohomish, or Lake Stevens WA? Kim Pelham works with only two buyers at a time so you get her full attention. First-time buyers welcome.">
+    <meta property="og:title" content="Buyers Guide | The Pelham Group NW">
+    <meta property="og:description" content="Maximize your buying power with our expert real estate services in the Seattle area.">
+    <meta property="og:type" content="website">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --green: #2F5233;
+            --gold: #C4A265;
+            --sage: #8B9E7E;
+            --cream: #F8F5F0;
+            --dark: #2C2C2C;
+            --light-gray: #E5E5E5;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cream);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* SCROLL PROGRESS BAR */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--gold);
+            width: 0;
+            z-index: 2000;
+        }
+
+        /* NAVIGATION */
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background-color: var(--green);
+            padding: 1.5rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            box-sizing: border-box;
+        }
+
+        .nav-brand {
+            display: flex;
+            flex-direction: column;
+            text-decoration: none;
+        }
+
+        .nav-brand-name {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            color: var(--cream);
+        }
+
+        .nav-brand-tagline {
+            font-family: 'Inter', sans-serif;
+            font-size: 10px;
+            letter-spacing: 0.15em;
+            color: var(--gold);
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            align-items: center;
+            list-style: none;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            font-family: 'Inter', sans-serif;
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--cream);
+            text-decoration: none;
+            transition: color 0.4s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold);
+        }
+
+        .contact-btn {
+            background-color: transparent;
+            border: 2px solid var(--cream);
+            padding: 0.7rem 1.2rem;
+            color: var(--cream);
+            text-decoration: none;
+            font-size: 12px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            font-weight: 700;
+            transition: all 0.4s ease;
+            border-radius: 0;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .contact-btn:hover {
+            background-color: var(--cream);
+            color: var(--green);
+        }
+
+        nav.scrolled {
+            padding: 1rem 2.5rem;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 25px;
+            height: 2px;
+            background-color: var(--cream);
+            margin: 6px 0;
+            transition: 0.4s;
+        }
+
+        /* HERO SECTION */
+        .hero {
+            height: 60vh;
+            background: linear-gradient(135deg, rgba(47, 82, 51, 0.7), rgba(139, 158, 126, 0.7)), url('images/hero-01-aerial-neighborhood.jpg') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: 'BUYERS';
+            position: absolute;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(8rem, 20vw, 15rem);
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.08);
+            letter-spacing: -0.02em;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            padding: 0 2rem;
+        }
+
+        .section-label {
+            font-size: 12px;
+            letter-spacing: 0.3em;
+            color: var(--gold);
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        .hero h1 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 1rem;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 18px;
+            font-weight: 300;
+            letter-spacing: 0.05em;
+        }
+
+        /* SECTIONS */
+        section {
+            padding: 80px 3rem;
+        }
+
+        section.alternate {
+            background-color: #F1EDE5;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-heading {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 3rem;
+        }
+
+        .section-heading::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: -30px;
+            width: 60px;
+            height: 2px;
+            background-color: var(--gold);
+        }
+
+        .section-heading h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: var(--green);
+        }
+
+        /* INTRO SECTION */
+        .intro-section {
+            background-color: var(--cream);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .intro-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            border-radius: 0;
+        }
+
+        .intro-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.8rem, 5vw, 2.8rem);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: var(--green);
+            margin-bottom: 25px;
+        }
+
+        .intro-content p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--dark);
+            margin-bottom: 18px;
+        }
+
+        /* MAX 2 CALLOUT */
+        .callout-box {
+            background-color: #F1EDE5;
+            border-left: 4px solid var(--gold);
+            padding: 35px;
+            margin: 40px 0;
+            color: var(--dark);
+            border-radius: 0;
+        }
+
+        .callout-box p {
+            font-size: 14px;
+            line-height: 1.8;
+            margin-bottom: 12px;
+        }
+
+        .callout-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .callout-box strong {
+            color: var(--green);
+            font-weight: 700;
+        }
+
+        /* PROCESS SECTION */
+        .process-section {
+            background-color: #F1EDE5;
+        }
+
+        .process-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin-top: 3rem;
+        }
+
+        .process-step {
+            text-align: center;
+            background-color: var(--cream);
+            padding: 40px 30px;
+            border-radius: 0;
+            transition: all 0.4s ease;
+            animation: fadeInUp 0.6s ease forwards;
+            opacity: 0;
+        }
+
+        .process-step:nth-child(1) { animation-delay: 0s; }
+        .process-step:nth-child(2) { animation-delay: 0.1s; }
+        .process-step:nth-child(3) { animation-delay: 0.2s; }
+        .process-step:nth-child(4) { animation-delay: 0.3s; }
+
+        .process-step:hover {
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+            transform: translateY(-4px);
+        }
+
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background-color: var(--gold);
+            color: var(--cream);
+            border-radius: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 24px;
+            font-weight: 700;
+            margin: 0 auto 20px;
+            letter-spacing: 0.05em;
+        }
+
+        .process-step h3 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 17px;
+            font-weight: 700;
+            letter-spacing: 0.02em;
+            color: var(--green);
+            margin-bottom: 15px;
+        }
+
+        .process-step p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: var(--dark);
+        }
+
+        /* CASE STUDY SECTION */
+        .case-study-section {
+            background-color: var(--cream);
+        }
+
+        .case-study-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            background-color: #F1EDE5;
+            padding: 50px;
+            border-radius: 0;
+        }
+
+        .case-study-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            border-radius: 0;
+        }
+
+        .case-study-content h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(1.8rem, 5vw, 2.5rem);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            color: var(--green);
+            margin-bottom: 20px;
+        }
+
+        .case-study-content p {
+            font-size: 15px;
+            line-height: 1.8;
+            color: var(--dark);
+            margin-bottom: 20px;
+        }
+
+        .highlight {
+            background-color: var(--green);
+            color: var(--cream);
+            padding: 25px;
+            margin-bottom: 20px;
+            font-size: 15px;
+            line-height: 1.8;
+            border-radius: 0;
+        }
+
+        .highlight p {
+            margin: 0;
+            color: var(--cream);
+        }
+
+        /* BUTTONS */
+        .button-group {
+            display: flex;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .primary-button {
+            background-color: var(--gold);
+            color: var(--green);
+            padding: 14px 32px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            transition: all 0.4s ease;
+            border: none;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 0;
+        }
+
+        .primary-button:hover {
+            background-color: var(--green);
+            color: var(--gold);
+        }
+
+        .secondary-button {
+            background-color: transparent;
+            color: var(--green);
+            padding: 14px 32px;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            border: 2px solid var(--green);
+            transition: all 0.4s ease;
+            cursor: pointer;
+            display: inline-block;
+            border-radius: 0;
+        }
+
+        .secondary-button:hover {
+            background-color: var(--green);
+            color: var(--cream);
+        }
+
+        /* CTA SECTION */
+        .contact-cta {
+            background: linear-gradient(135deg, var(--green) 0%, var(--sage) 100%);
+            color: var(--cream);
+            text-align: center;
+        }
+
+        .contact-cta-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .contact-cta h2 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            letter-spacing: -0.01em;
+            margin-bottom: 20px;
+        }
+
+        .contact-cta p {
+            font-size: 16px;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            font-weight: 300;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            margin-top: 30px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            padding: 14px;
+            border: none;
+            background-color: rgba(255, 255, 255, 0.95);
+            color: var(--dark);
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            border-radius: 0;
+        }
+
+        .contact-form textarea {
+            min-height: 100px;
+            resize: vertical;
+        }
+
+        .contact-form input::placeholder,
+        .contact-form textarea::placeholder {
+            color: #999;
+        }
+
+        .form-submit {
+            background-color: var(--gold);
+            color: var(--green);
+            padding: 14px 32px;
+            border: none;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            border-radius: 0;
+        }
+
+        .form-submit:hover {
+            background-color: var(--cream);
+            color: var(--gold);
+        }
+
+        /* FOOTER */
+        footer {
+            background-color: var(--green);
+            color: var(--cream);
+            padding: 80px 3rem 40px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 60px;
+            max-width: 1200px;
+            margin: 0 auto 60px;
+        }
+
+        .footer-col h4 {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 16px;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            margin-bottom: 20px;
+        }
+
+        .footer-col p {
+            font-size: 14px;
+            line-height: 1.8;
+            color: var(--cream);
+            opacity: 0.85;
+            margin-bottom: 15px;
+        }
+
+        .footer-col a {
+            font-size: 14px;
+            color: var(--cream);
+            opacity: 0.7;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: all 0.4s ease;
+        }
+
+        .footer-col a:hover {
+            opacity: 1;
+            text-decoration: underline;
+            color: var(--gold);
+        }
+
+        .footer-socials {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .footer-socials a {
+            width: 36px;
+            height: 36px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--cream);
+            opacity: 0.7;
+            transition: all 0.4s ease;
+            border-radius: 0;
+        }
+
+        .footer-socials a:hover {
+            background-color: var(--gold);
+            opacity: 1;
+            border-color: var(--gold);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+            padding-top: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: var(--cream);
+            opacity: 0.7;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* BACK TO TOP */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: var(--gold);
+            color: var(--green);
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transition: all 0.4s ease;
+            z-index: 999;
+        }
+
+        .back-to-top:hover {
+            background-color: var(--green);
+            color: var(--gold);
+            transform: translateY(-3px);
+        }
+
+        .back-to-top.show {
+            display: flex;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .fade-in {
+            animation: fadeInUp 0.6s ease forwards;
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            * {
+                animation: none !important;
+                transition: none !important;
+            }
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            section {
+                padding: 60px 1.5rem;
+            }
+
+            .intro-section,
+            .case-study-container {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 30px;
+            }
+
+            .process-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .button-group {
+                flex-direction: column;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-heading h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="scroll-progress"></div>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <a href="index.html" class="nav-brand">
+            <span class="nav-brand-name">Kim Pelham</span>
+            <span class="nav-brand-tagline">Pacific Northwest Real Estate</span>
+        </a>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="nav-links" id="navLinks">
+            <a href="about.html">About</a>
+            <a href="sellers.html">Sellers</a>
+            <a href="buyers.html">Buyers</a>
+            <a href="properties.html">Properties</a>
+            <a href="neighborhoods.html">Neighborhoods</a>
+            <a href="media.html">Media</a>
+            <a href="testimonials.html">Testimonials</a>
+        </div>
+        <a href="contact.html" class="contact-btn">Contact Kim</a>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="section-label">Buyers Guide</div>
+            <h1>Find Your Dream Home</h1>
+            <p>Expert guidance for maximizing your buying power</p>
+        </div>
+    </section>
+
+    <!-- INTRO SECTION -->
+    <section class="intro-section">
+        <div class="intro-image">
+            <!-- PHOTO NEEDED: PNW scene, not Southern CA -->
+            <img src="images/hero-02-warm-kitchen.jpg" alt="Home buying consultation">
+        </div>
+        <div class="intro-content">
+            <h2>Your Trusted Buying Partner</h2>
+            <p>When you're looking for the perfect home, the details matter. We use our years of experience to advise you on the Seattle market and help you find the right house at the best possible price and terms.</p>
+            <p>As your Broker, we work with you to find a home you love. Not just any home so we can close the deal, but the home that works within your budget and meets your needs for both now and in the future.</p>
+            <p>Our commitment to personalized service means you'll always have expert guidance, honest advice, and someone who truly understands your vision for your next home.</p>
+
+            <div class="callout-box">
+                <p><strong>Our Max 2 Buyers Promise</strong></p>
+                <p>My business model ensures quality over quantity. I only work with a maximum of two buyers at a time. This conscious decision allows me enough time to truly focus on my clients' needs and deliver exceptional results.</p>
+                <p><strong>On average, my clients win on their first or second offer.</strong></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROCESS STEPS -->
+    <section class="process-section">
+        <div class="section-container">
+            <div class="section-heading">
+                <h2>Your Buying Journey</h2>
+            </div>
+            <div class="process-grid">
+                <div class="process-step">
+                    <div class="step-number">1</div>
+                    <h3>Pre-Approval</h3>
+                    <p>Understanding your budget and financing options is the first step. We'll guide you through the pre-approval process to know exactly what you can afford.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">2</div>
+                    <h3>Property Search</h3>
+                    <p>We'll show you properties that match your criteria and help you envision your future in each home. Every showing is an opportunity to find the right fit.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">3</div>
+                    <h3>Submit Offers</h3>
+                    <p>When you find the right home, how the offer is written can make or break the deal. We'll craft a competitive offer strategy designed to help you win without overpaying. Timing and terms matter.</p>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">4</div>
+                    <h3>Close & Move In</h3>
+                    <p>I walk every property with you, pointing out what the listing photos don't show — the good and the not-so-good. From inspection through closing, we'll handle the details so you can focus on the excitement of moving into your new home.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CASE STUDY -->
+    <section class="case-study-section">
+        <div class="section-container">
+            <div class="case-study-container">
+                <div class="case-study-image">
+                    <img src="images/staging-01-living-room.jpg" alt="Taylor's home purchase success">
+                </div>
+                <div class="case-study-content">
+                    <h2>From Dream to Keys in Hand</h2>
+                    <p>Meet Taylor, a first-time homebuyer with an inspiring story.</p>
+                    <div class="highlight">
+                        <p>Taylor purchased her first home with just $2,000 down. Many thought it was impossible, but with our guidance and expert market knowledge, she found the perfect starter home that fit her budget and dreams.</p>
+                    </div>
+                    <p>"I was worried I'd never be able to afford a home in this market," Taylor shares. "But Kim made the entire process clear, supportive, and achievable. She didn't just help me buy a house—she helped me build my future."</p>
+                    <p>Stories like Taylor's remind us why we do what we do. Your buying power is limited not just by money, but by knowledge, strategy, and having the right partner on your side.</p>
+                    <div class="button-group">
+                        <a href="https://kim.katrinaeileen.com" target="_blank" class="primary-button">Search MLS</a>
+                        <a href="contact.html" class="secondary-button">Start Your Journey</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section class="contact-cta">
+        <div class="contact-cta-content">
+            <h2>Ready to Start Your Home Search?</h2>
+            <p>Let's work together to find your perfect home. Contact us today for a free consultation.</p>
+            <form class="contact-form">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <input type="tel" placeholder="Your Phone">
+                <textarea placeholder="What are you looking for in a home?"></textarea>
+                <button type="submit" class="form-submit">Get Started</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Kim Pelham</h4>
+                <p>Pacific Northwest Real Estate</p>
+                <p style="font-size: 13px; margin-top: 15px;">Professional real estate services in Snohomish County with a focus on relationships and results.</p>
+                <div class="footer-socials">
+                    <a href="https://instagram.com" target="_blank" title="Instagram">I</a>
+                    <a href="https://linkedin.com" target="_blank" title="LinkedIn">L</a>
+                    <a href="mailto:hello@thepelhamgroupnw.com" title="Email">E</a>
+                </div>
+            </div>
+            <div class="footer-col">
+                <h4>Quick Links</h4>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="sellers.html">Sellers</a>
+                <a href="buyers.html">Buyers</a>
+                <a href="properties.html">Properties</a>
+                <a href="neighborhoods.html">Neighborhoods</a>
+                <a href="testimonials.html">Testimonials</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="footer-col">
+                <h4>Connect</h4>
+                <a href="tel:4252509422">425.250.9422</a>
+                <a href="mailto:hello@thepelhamgroupnw.com">hello@thepelhamgroupnw.com</a>
+                <p style="font-size: 13px; margin-top: 20px;">2815 Baker Ave Suite 102<br>Everett, WA 98201</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Kim Pelham | The Pelham Group NW</p>
+            <p style="margin-top: 6px; font-size: 14px; font-weight: 600;">Brokered by Katrina Eileen Real Estate · Everett, WA</p>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP -->
+    <button class="back-to-top" id="backToTop">↑</button>
+
+    <script>
+        // Scroll Progress Bar
+        window.addEventListener('scroll', () => {
+            const scrollProgress = document.querySelector('.scroll-progress');
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrollPercent = (scrollTop / docHeight) * 100;
+            scrollProgress.style.width = scrollPercent + '%';
+        });
+
+        // Back to Top Button
+        const backToTop = document.getElementById('backToTop');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        backToTop.addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.process-step').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Mobile Menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+        hamburger.addEventListener('click', () => {
+            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        });
+    </script>
+</body>
+</html>

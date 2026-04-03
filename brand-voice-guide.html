@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Pelham Group NW — Brand Voice Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            color: #222222;
+            background-color: #ffffff;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        /* Header & Navigation */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            border-bottom: 3px solid #C4A265;
+            padding-bottom: 40px;
+        }
+
+        .brand-name {
+            font-family: 'Cinzel', serif;
+            font-size: 42px;
+            font-weight: 700;
+            color: #222222;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-size: 16px;
+            color: #6B6B6B;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        /* Table of Contents */
+        nav {
+            background-color: #F0EDE7;
+            padding: 30px;
+            border-radius: 8px;
+            margin-bottom: 50px;
+        }
+
+        nav h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #222222;
+        }
+
+        nav ul {
+            list-style: none;
+            columns: 2;
+            column-gap: 40px;
+        }
+
+        nav li {
+            margin-bottom: 12px;
+        }
+
+        nav a {
+            color: #C4A265;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #222222;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 60px;
+            scroll-margin-top: 100px;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #222222;
+            margin-bottom: 24px;
+            border-left: 4px solid #C4A265;
+            padding-left: 20px;
+        }
+
+        h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 20px;
+            font-weight: 600;
+            color: #222222;
+            margin-top: 30px;
+            margin-bottom: 16px;
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+
+        /* Brand Identity Card */
+        .info-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 24px;
+        }
+
+        .info-item {
+            background-color: #F0EDE7;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .info-label {
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            color: #C4A265;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .info-value {
+            font-size: 15px;
+            color: #222222;
+            line-height: 1.6;
+        }
+
+        /* Brand Pillars */
+        .pillar {
+            background-color: #F0EDE7;
+            padding: 24px;
+            margin-bottom: 20px;
+            border-left: 4px solid #C4A265;
+            border-radius: 4px;
+        }
+
+        .pillar-title {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #222222;
+            margin-bottom: 8px;
+        }
+
+        .pillar-description {
+            color: #6B6B6B;
+            font-size: 14px;
+        }
+
+        /* Voice Characteristics */
+        .characteristic {
+            display: flex;
+            margin-bottom: 20px;
+            gap: 20px;
+        }
+
+        .char-badge {
+            flex-shrink: 0;
+            width: 40px;
+            height: 40px;
+            background-color: #C4A265;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        .char-content h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 16px;
+            color: #222222;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+
+        .char-content p {
+            color: #6B6B6B;
+            font-size: 14px;
+            margin: 0;
+        }
+
+        /* Do's and Don'ts */
+        .dos-donts {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 24px;
+        }
+
+        .do-box, .dont-box {
+            padding: 24px;
+            border-radius: 8px;
+        }
+
+        .do-box {
+            background-color: #F5F0E6;
+            border-left: 4px solid #C4A265;
+        }
+
+        .dont-box {
+            background-color: #fef5f5;
+            border-left: 4px solid #d9534f;
+        }
+
+        .do-box h4, .dont-box h4 {
+            font-family: 'Cinzel', serif;
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+
+        .do-box h4 {
+            color: #C4A265;
+        }
+
+        .dont-box h4 {
+            color: #d9534f;
+        }
+
+        .do-box ul, .dont-box ul {
+            list-style: none;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .do-box li:before, .dont-box li:before {
+            font-weight: 700;
+            margin-right: 8px;
+        }
+
+        .do-box li:before {
+            content: "";
+            color: #C4A265;
+        }
+
+        .dont-box li:before {
+            content: "✗ ";
+            color: #d9534f;
+        }
+
+        /* Example Blocks */
+        .example {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #F0EDE7;
+            border-radius: 8px;
+            border-left: 4px solid #D4B87A;
+        }
+
+        .example-label {
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            color: #C4A265;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .example-text {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #222222;
+            font-style: italic;
+        }
+
+        /* Differentiators */
+        .stat-card {
+            background-color: #2F5233;
+            color: white;
+            padding: 24px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .stat-number {
+            font-family: 'Cinzel', serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: #C4A265;
+            min-width: 120px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        /* Audience Segments Table */
+        .audience-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 24px;
+        }
+
+        .audience-table th {
+            background-color: #222222;
+            color: white;
+            padding: 16px;
+            text-align: left;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 14px;
+        }
+
+        .audience-table td {
+            padding: 16px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 14px;
+            vertical-align: top;
+        }
+
+        .audience-table tr:nth-child(even) {
+            background-color: #F0EDE7;
+        }
+
+        /* Footer */
+        footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+            text-align: center;
+            color: #6B6B6B;
+            font-size: 13px;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background-color: white;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 40px;
+            }
+
+            nav {
+                page-break-inside: avoid;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+
+            h2 {
+                page-break-after: avoid;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            .brand-name {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 24px;
+            }
+
+            nav ul {
+                columns: 1;
+            }
+
+            .info-grid, .dos-donts {
+                grid-template-columns: 1fr;
+            }
+
+            .stat-card {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1 class="brand-name">The Pelham Group NW</h1>
+            <p class="subtitle">Brand Voice Guide</p>
+        </header>
+
+        <!-- Table of Contents -->
+        <nav>
+            <h3>Quick Navigation</h3>
+            <ul>
+                <li><a href="#brand-identity">Brand Identity</a></li>
+                <li><a href="#brand-pillars">Brand Pillars</a></li>
+                <li><a href="#kim-story">Kim's Story</a></li>
+                <li><a href="#voice-characteristics">Voice Characteristics</a></li>
+                <li><a href="#language-patterns">Language Patterns</a></li>
+                <li><a href="#differentiators">Differentiators</a></li>
+                <li><a href="#audience-segments">Audience Segments</a></li>
+                <li><a href="#content-formats">Content Formats</a></li>
+                <li><a href="#visual-identity">Visual Identity</a></li>
+            </ul>
+        </nav>
+
+        <!-- Brand Identity -->
+        <section id="brand-identity">
+            <h2>1. Brand Identity</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">Principal Broker</div>
+                    <div class="info-value">Kim Pelham</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Brokerage</div>
+                    <div class="info-value">Katrina Eileen Real Estate</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Office Address</div>
+                    <div class="info-value">2815 Baker Ave Suite 102<br>Everett, WA 98201</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Contact</div>
+                    <div class="info-value">425.250.9422<br>hello@thepelhamgroupnw.com</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Primary Service Area</h3>
+            <p>Everett, Bothell, Snohomish, Lynnwood, Marysville, Mill Creek, Martha Lake, Lake Stevens</p>
+
+            <h3>Social & Digital</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">Facebook</div>
+                    <div class="info-value">/PelhamGroupNW</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Instagram</div>
+                    <div class="info-value">@pelhamgroupnw</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">LinkedIn</div>
+                    <div class="info-value">Kim Pelham</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">YouTube</div>
+                    <div class="info-value">The Pelham Group NW</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Brand Pillars -->
+        <section id="brand-pillars">
+            <h2>2. Brand Pillars</h2>
+            <p>These three pillars define everything The Pelham Group NW does and says.</p>
+
+            <div class="pillar">
+                <div class="pillar-title">Presence</div>
+                <div class="pillar-description">Kim shows up fully. She's present with clients, present in her community, present in the details. She's not just available — she's genuinely engaged.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">Perspective</div>
+                <div class="pillar-description">40+ years of life experience, published author, data-driven insights. She sees what others miss — the emotional weight behind decisions, the true value in a property, the opportunity in a market.</div>
+            </div>
+
+            <div class="pillar">
+                <div class="pillar-title">Purpose</div>
+                <div class="pillar-description">Real estate isn't about transactions. It's about walking alongside families through life's biggest transitions. Kim understands that selling a home is often as emotional as buying one.</div>
+            </div>
+        </section>
+
+        <!-- Kim's Story -->
+        <section id="kim-story">
+            <h2>3. Kim's Story</h2>
+            <p>Use these narrative elements in bios, about pages, introductions, and content that needs to establish credibility and connection.</p>
+
+            <h3>Core Story Elements</h3>
+            <ul style="margin-left: 20px; margin-bottom: 16px;">
+                <li style="margin-bottom: 12px;">40+ years married to Brien, her true partner in life and business</li>
+                <li style="margin-bottom: 12px;">Walked alongside Brien through his cancer journey — this shapes her deep empathy for clients facing life changes</li>
+                <li style="margin-bottom: 12px;">Published author of "Six-Word Lessons on Selling Your Home in Snohomish County" — establishing expertise and thought leadership</li>
+                <li style="margin-bottom: 12px;">She doesn't just sell houses — she understands what "home" means on a profound level</li>
+                <li style="margin-bottom: 12px;">Her resilience is her superpower: she's walked hard roads and comes out stronger, more empathetic, more real</li>
+            </ul>
+
+            <div class="example">
+                <div class="example-label">Bio Example (Short)</div>
+                <div class="example-text">"Kim Pelham has walked the hardest roads with her family and her clients. With 40+ years of life experience and published expertise in real estate transitions, she brings deep empathy and real-world wisdom to every conversation. For Kim, real estate is about people, not just properties."</div>
+            </div>
+        </section>
+
+        <!-- Voice Characteristics -->
+        <section id="voice-characteristics">
+            <h2>4. Voice Characteristics</h2>
+            <p>How Kim communicates. Every piece of content should reflect these qualities.</p>
+
+            <div class="characteristic">
+                <div class="char-badge">W</div>
+                <div class="char-content">
+                    <h4>Warm + Authoritative</h4>
+                    <p>Equal parts empathy and data. She feels what her clients feel, AND she backs it up with numbers. Never one without the other.</p>
+                </div>
+            </div>
+
+            <div class="characteristic">
+                <div class="char-badge">C</div>
+                <div class="char-content">
+                    <h4>Conversational but Professional</h4>
+                    <p>Like a trusted advisor over coffee, not a sales pitch. Friendly and accessible, yet always credible and knowledgeable.</p>
+                </div>
+            </div>
+
+            <div class="characteristic">
+                <div class="char-badge">D</div>
+                <div class="char-content">
+                    <h4>Data-Backed</h4>
+                    <p>Always includes specific numbers, stats, and details. Never vague claims. "104.4% sale-to-list ratio" not "great results."</p>
+                </div>
+            </div>
+
+            <div class="characteristic">
+                <div class="char-badge">E</div>
+                <div class="char-content">
+                    <h4>Empathetic</h4>
+                    <p>She understands the emotional weight of selling a family home, buying a first home, downsizing after decades. This isn't clinical — it's human.</p>
+                </div>
+            </div>
+
+            <div class="characteristic">
+                <div class="char-badge">C</div>
+                <div class="char-content">
+                    <h4>Community-Rooted</h4>
+                    <p>She lives here, boats here, walks her dog here. This isn't just her market — it's her home. That authenticity matters.</p>
+                </div>
+            </div>
+
+            <div class="characteristic">
+                <div class="char-badge">N</div>
+                <div class="char-content">
+                    <h4>Never Salesy</h4>
+                    <p>She presents facts and lets clients decide. No pressure. No urgency tactics. No manipulation. Just honest, helpful guidance.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Language Patterns -->
+        <section id="language-patterns">
+            <h2>5. Language Patterns</h2>
+
+            <div class="dos-donts">
+                <div class="do-box">
+                    <h4>DO Use</h4>
+                    <ul>
+                        <li>"We" and "your" — collaborative language</li>
+                        <li>Specific numbers: "104.4% sale-to-list ratio" not "great results"</li>
+                        <li>Neighborhood names and local references</li>
+                        <li>Personal stories that connect to expertise</li>
+                        <li>"Walking alongside" / "Your next chapter" / "What home means"</li>
+                        <li>Questions that invite reflection</li>
+                        <li>Warm, welcoming tone</li>
+                    </ul>
+                </div>
+
+                <div class="dont-box">
+                    <h4>✗ DON'T Use</h4>
+                    <ul>
+                        <li>"Buy now!" or urgency pressure tactics</li>
+                        <li>Generic superlatives: "best agent ever" / "amazing results"</li>
+                        <li>Corporate jargon or marketing speak</li>
+                        <li>Exclamation marks in headlines</li>
+                        <li>Emojis in professional content</li>
+                        <li>Fear-based messaging ("Don't miss out!")</li>
+                        <li>Clichés ("Your dream home awaits")</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Tone in Practice</h3>
+
+            <div class="example">
+                <div class="example-label">❌ Don't Say This</div>
+                <div class="example-text">"Act now! Our incredible homes are selling FAST! Don't miss out on your dream home. Kim Pelham has the best results in the area!"</div>
+            </div>
+
+            <div class="example">
+                <div class="example-label">Say This Instead</div>
+                <div class="example-text">"The Everett market is moving. Homes listed with Kim's strategy sell at 104.4% of list price on average — well above the county average of 98.61%. That's the difference between a prepared strategy and hoping for the best. Let's talk about your next chapter."</div>
+            </div>
+        </section>
+
+        <!-- Differentiators -->
+        <section id="differentiators">
+            <h2>6. Differentiators</h2>
+            <p>These are the facts that set Kim apart. Always reference these in content — they're proof of her promise.</p>
+
+            <div class="stat-card">
+                <div class="stat-number">104.4%</div>
+                <div class="stat-label"><strong>Sale-to-List Ratio</strong> vs 98.61% county average. This means homes sell for MORE than asking price — often significantly more.</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">$88K+</div>
+                <div class="stat-label"><strong>Average Over List Price</strong> per home sold. Her systems and staging expertise put real money back in clients' pockets.</div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-number">$3.2M+</div>
+                <div class="stat-label"><strong>Real Estate Sold</strong> through The Pelham Group NW. Scale, experience, and proven results.</div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Service Differentiators</h3>
+            <ul style="margin-left: 20px;">
+                <li style="margin-bottom: 12px;"><strong>SMART Building Solutions</strong> — Sister company offering in-house repairs and deferred payment until closing (no out-of-pocket costs upfront)</li>
+                <li style="margin-bottom: 12px;"><strong>Psychology-Driven Staging</strong> — Not just decorating. Understanding how buyers actually think and make decisions</li>
+                <li style="margin-bottom: 12px;"><strong>Professional Photography</strong> — Included in every listing. First impressions matter, and professional photos convert browsers to buyers</li>
+                <li style="margin-bottom: 12px;"><strong>6-Step Proven Selling System</strong> — A proven methodology, not a guessing game</li>
+                <li style="margin-bottom: 12px;"><strong>Senior Concierge Services</strong> — Downsizing support, care coordination, emotional guidance for life transitions</li>
+                <li style="margin-bottom: 12px;"><strong>Published Author</strong> — "Six-Word Lessons on Selling Your Home in Snohomish County" establishes authority and thought leadership</li>
+            </ul>
+        </section>
+
+        <!-- Audience Segments -->
+        <section id="audience-segments">
+            <h2>7. Audience Segments & Tone Adjustments</h2>
+            <p>The core voice stays the same, but adapt emphasis and focus based on who you're talking to.</p>
+
+            <table class="audience-table">
+                <thead>
+                    <tr>
+                        <th>Audience</th>
+                        <th>Lead With</th>
+                        <th>Follow With</th>
+                        <th>Call to Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Sellers</strong><br>Emotional, often first-time sellers</td>
+                        <td>Empathy. Selling a home is emotional. You're leaving memories.</td>
+                        <td>Data. Here's what your home is worth and why. Here's our system to maximize that.</td>
+                        <td>Free home valuation or listing consultation</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Buyers</strong><br>Excited but overwhelmed</td>
+                        <td>Excitement and validation. This IS a big step. You're making a good decision.</td>
+                        <td>Practical guidance. Hidden costs, neighborhoods, process, timeline.</td>
+                        <td>Buyer consultation or neighborhood tour</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Brokers/Agents</strong><br>Seeking partnership & referrals</td>
+                        <td>Authority. Kim's track record, published expertise, data-backed approach.</td>
+                        <td>Actionable insights. Not just theory — real strategies that work in this market.</td>
+                        <td>Connect on LinkedIn, read full article, referral partnership</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Seniors Downsizing</strong><br>Often anxious about change</td>
+                        <td>Understanding. You've built a life here. This transition matters.</td>
+                        <td>Comprehensive support. Concierge services, care coordination, emotional guidance.</td>
+                        <td>Free downsizing consultation or senior services guide</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Content Formats -->
+        <section id="content-formats">
+            <h2>8. Content Formats & Guidelines</h2>
+
+            <h3>Blog Articles</h3>
+            <ul style="margin-left: 20px; margin-bottom: 20px;">
+                <li style="margin-bottom: 10px;"><strong>Length:</strong> 1,200–2,000 words</li>
+                <li style="margin-bottom: 10px;"><strong>Opening:</strong> Hook that connects personal to professional. Why this matters.</li>
+                <li style="margin-bottom: 10px;"><strong>Body:</strong> Data-rich with styled stat cards, real examples, actionable advice</li>
+                <li style="margin-bottom: 10px;"><strong>Structure:</strong> FAQ section (5 questions) for SEO/AEO/GEO benefit</li>
+                <li style="margin-bottom: 10px;"><strong>Closing:</strong> Warm CTA. ("Let's talk about your situation," not "Contact us today!")</li>
+                <li style="margin-bottom: 10px;"><strong>Technical:</strong> Include schema markup (Article, FAQPage, LocalBusiness)</li>
+            </ul>
+
+            <h3>Email Newsletters</h3>
+            <ul style="margin-left: 20px; margin-bottom: 20px;">
+                <li style="margin-bottom: 10px;"><strong>Opening:</strong> Personal moment (life, community, season). Then transition to market.</li>
+                <li style="margin-bottom: 10px;"><strong>Body:</strong> Market data snapshot (3 key stats). Featured article teaser.</li>
+                <li style="margin-bottom: 10px;"><strong>Section:</strong> "Kim's Corner" — editorial opinion on the market or a client success</li>
+                <li style="margin-bottom: 10px;"><strong>Closing:</strong> Warm, inviting CTA. Invite questions and conversation.</li>
+            </ul>
+
+            <h3>Social Media</h3>
+            <ul style="margin-left: 20px; margin-bottom: 20px;">
+                <li style="margin-bottom: 10px;"><strong>Facebook:</strong> Longer form, community-focused. Questions that drive engagement. Market insights. Local events.</li>
+                <li style="margin-bottom: 10px;"><strong>Instagram:</strong> Visual-first. Carousel education. Neighborhood tours. Reel concepts (market tips, client stories, seasonal updates). Consistent hashtag strategy.</li>
+                <li style="margin-bottom: 10px;"><strong>LinkedIn:</strong> Thought leadership. Professional authority. Line breaks for algorithm. Industry insights, published articles, speaking engagements.</li>
+                <li style="margin-bottom: 10px;"><strong>YouTube:</strong> Educational content. Market updates. Neighborhood deep-dives. Senior downsizing guides. Client testimonials (with permission).</li>
+            </ul>
+        </section>
+
+        <!-- Visual Identity -->
+        <section id="visual-identity">
+            <h2>9. Visual Identity</h2>
+
+            <h3>Color Palette</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div style="width: 100%; height: 40px; background-color: #2F5233; border-radius: 4px; margin-bottom: 10px;"></div>
+                    <div class="info-label">Primary (Forest Green)</div>
+                    <div class="info-value">#2F5233</div>
+                </div>
+                <div class="info-item">
+                    <div style="width: 100%; height: 40px; background-color: #C4A265; border-radius: 4px; margin-bottom: 10px;"></div>
+                    <div class="info-label">Accent (Gold)</div>
+                    <div class="info-value">#C4A265</div>
+                </div>
+                <div class="info-item">
+                    <div style="width: 100%; height: 40px; background-color: #D4B87A; border-radius: 4px; margin-bottom: 10px;"></div>
+                    <div class="info-label">Accent Light (Lighter Gold)</div>
+                    <div class="info-value">#D4B87A</div>
+                </div>
+                <div class="info-item">
+                    <div style="width: 100%; height: 40px; background-color: #F0EDE7; border: 1px solid #d0d0d0; border-radius: 4px; margin-bottom: 10px;"></div>
+                    <div class="info-label">Warm Cream BG</div>
+                    <div class="info-value">#F0EDE7</div>
+                </div>
+                <div class="info-item">
+                    <div style="width: 100%; height: 40px; background-color: #ffffff; border: 1px solid #d0d0d0; border-radius: 4px; margin-bottom: 10px;"></div>
+                    <div class="info-label">White</div>
+                    <div class="info-value">#FFFFFF</div>
+                </div>
+                <div class="info-item">
+                    <div style="width: 100%; height: 40px; background-color: #6B6B6B; border-radius: 4px; margin-bottom: 10px;"></div>
+                    <div class="info-label">Muted Text</div>
+                    <div class="info-value">#6B6B6B</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Typography</h3>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div style="font-family: 'Cinzel', serif; font-size: 24px; font-weight: 700; margin-bottom: 8px;">Cinzel</div>
+                    <div class="info-label">Headlines & Titles</div>
+                    <div class="info-value">Weights: 400, 600, 700. Use for all headings, section titles, emphasis.</div>
+                </div>
+                <div class="info-item">
+                    <div style="font-family: 'Josefin Sans', sans-serif; font-size: 18px; margin-bottom: 8px;">Josefin Sans</div>
+                    <div class="info-label">Body Text</div>
+                    <div class="info-value">Weights: 400, 500, 600. Use for all body copy, descriptions, CTAs.</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px;">Design Principles</h3>
+            <ul style="margin-left: 20px;">
+                <li style="margin-bottom: 12px;"><strong>Luxury, Sophisticated:</strong> High quality, refined aesthetic</li>
+                <li style="margin-bottom: 12px;"><strong>Clean White Space:</strong> Don't crowd the design. Breathing room is professional.</li>
+                <li style="margin-bottom: 12px;"><strong>Not Flashy, Not Cluttered:</strong> Elegant simplicity. Every design choice has purpose.</li>
+                <li style="margin-bottom: 12px;"><strong>Professional Photography:</strong> Real moments with warm lighting, not stock imagery. Authentic over polished.</li>
+                <li style="margin-bottom: 12px;"><strong>Logo:</strong> thepelhamgroupnw-logo-new.png. Use consistently across all channels.</li>
+            </ul>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>The Pelham Group NW Brand Voice Guide — A reference document for content creators, copywriters, and team members</p>
+            <p style="margin-top: 16px; color: #D4B87A;">Part of The Savvy Digital Co.'s Content Factory System</p>
+        </footer>
+    </div>
+</body>
+</html>

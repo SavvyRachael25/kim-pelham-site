@@ -1,0 +1,1403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kim Pelham in the media — press features, interviews, and publications about Snohomish County real estate and the Pacific Northwest housing market.">
+    <meta name="theme-color" content="#2F5233">
+    <link rel="canonical" href="https://thepelhamgroupnw.com/media">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="In the Media - Kim Pelham">
+    <meta property="og:description" content="Press coverage and speaking engagements featuring Kim Pelham.">
+    <meta property="og:type" content="website">
+
+    <title>Media &amp; Press | Kim Pelham | Pacific Northwest Real Estate</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapfamily=Inter:wght@300;400;500;600;700https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swapdisplay=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            color: #2C2C2C;
+            line-height: 1.7;
+            background-color: #F8F5F0;
+            overflow-x: hidden;
+        }
+
+        /* Scroll Progress Bar */
+        .scroll-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background-color: #C4A265;
+            z-index: 2000;
+            width: 0%;
+            transition: width 0.4s ease;
+        }
+
+        /* Typography */
+        h1, h2, h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            color: #2F5233;
+        }
+
+        h1 {
+            font-size: clamp(2.2rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.02em;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 6vw, 3.5rem);
+            font-weight: 600;
+            line-height: 1.2;
+            letter-spacing: -0.01em;
+        }
+
+        h3 {
+            font-size: clamp(1.25rem, 3vw, 1.75rem);
+            font-weight: 600;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.7;
+            color: #2C2C2C;
+        }
+
+        /* Section Labels */
+        .section-label {
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: #8B9E7E;
+            margin-bottom: 1rem;
+            display: inline-block;
+            opacity: 0;
+            animation: slideInFromLeft 0.8s ease 0.3s forwards;
+        }
+
+        /* Gold Accent Line */
+        .accent-line {
+            width: 0;
+            height: 3px;
+            background-color: #C4A265;
+            margin: 1.5rem 0;
+            transition: width 0.8s ease;
+        }
+
+        .accent-line.visible {
+            width: 60px;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: transparent;
+            padding: 1.5rem 2.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1500;
+            transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            box-sizing: border-box;
+        }
+
+        nav.scrolled {
+            background-color: #2F5233;
+            padding: 1rem 2.5rem;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+        }
+
+        .nav-brand {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .nav-brand-name {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #F8F5F0;
+            transition: color 0.4s ease;
+        }
+
+        nav:not(.scrolled) .nav-brand-name {
+            color: #F8F5F0;
+        }
+
+        .nav-brand-tagline {
+            font-size: 8px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #8B9E7E;
+            margin-top: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.8rem;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-links a {
+            color: #F8F5F0;
+            text-decoration: none;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            transition: color 0.4s ease;
+        }
+
+        .nav-links a:hover,
+        .nav-links a.active {
+            color: #C4A265;
+        }
+
+        .contact-btn {
+            background: transparent;
+            border: 2px solid #F8F5F0;
+            color: #F8F5F0;
+            padding: 0.7rem 1.2rem;
+            border-radius: 0;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+
+        .contact-btn:hover {
+            background-color: #F8F5F0;
+            color: #2F5233;
+            transform: translateY(-2px);
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background-color: #F8F5F0;
+            margin: 4px 0;
+            transition: all 0.4s ease;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.5)), url('images/neighborhood-03-snohomish-historic.jpg') center/cover;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            margin-top: 60px;
+        }
+
+        .hero-ghost {
+            position: absolute;
+            top: 10%;
+            right: -2%;
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 20vw;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #F8F5F0;
+            opacity: 0.08;
+            white-space: nowrap;
+            pointer-events: none;
+            z-index: 2;
+            letter-spacing: 0.05em;
+        }
+
+        .hero-content {
+            text-align: center;
+            color: #F8F5F0;
+            z-index: 10;
+            max-width: 800px;
+        }
+
+        .hero-content h1 {
+            color: #F8F5F0;
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeInDown 0.8s ease 0.3s forwards;
+        }
+
+        .hero-subtitle {
+            font-size: 14px;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #C4A265;
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 0.15s forwards;
+        }
+
+        /* Scroll Indicator */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            animation: fadeInUp 0.8s ease 1.2s forwards;
+            z-index: 15;
+        }
+
+        .chevron {
+            width: 24px;
+            height: 24px;
+            border: 2px solid #C4A265;
+            border-top: none;
+            border-left: none;
+            transform: rotate(-45deg);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: rotate(-45deg) translateY(0); }
+            50% { transform: rotate(-45deg) translateY(10px); }
+        }
+
+        /* Animations */
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInFromLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Scroll Animations */
+        .scroll-animate {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .scroll-animate.visible {
+            opacity: 1;
+            transform: translateY(0);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        /* Featured Press Section */
+        .featured-press {
+            position: relative;
+            background-color: #F8F5F0;
+            padding: 100px 3rem;
+            overflow: hidden;
+        }
+
+        .featured-press::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            opacity: 0.025;
+        }
+
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .press-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .press-card {
+            background: rgba(248, 245, 240, 0.5);
+            border: 1px solid rgba(47, 82, 51, 0.1);
+            padding: 40px;
+            position: relative;
+            backdrop-filter: blur(10px);
+            transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            scroll-animate: true;
+        }
+
+        .press-card:hover {
+            border-color: #C4A265;
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+
+        .press-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 4px;
+            background-color: #C4A265;
+            transition: width 0.5s ease;
+        }
+
+        .press-card:hover::before {
+            width: 100%;
+        }
+
+        .press-publication {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #C4A265;
+            margin-bottom: 1rem;
+        }
+
+        .press-card h3 {
+            margin-bottom: 1rem;
+            color: #2F5233;
+        }
+
+        .press-date {
+            font-size: 12px;
+            color: #8B9E7E;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+
+        /* Awards Grid */
+        .awards {
+            position: relative;
+            background-color: #2F5233;
+            color: #F8F5F0;
+            padding: 100px 3rem;
+            overflow: hidden;
+        }
+
+        .awards::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            opacity: 0.025;
+        }
+
+        .awards h2 {
+            color: #F8F5F0;
+        }
+
+        .awards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .award-badge {
+            background: linear-gradient(135deg, rgba(196, 162, 101, 0.15), rgba(196, 162, 101, 0.05));
+            border: 1px solid #C4A265;
+            padding: 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.5s ease;
+            scroll-animate: true;
+        }
+
+        .award-badge::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, transparent, rgba(196, 162, 101, 0.1), transparent);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+
+        .award-badge:hover {
+            background: linear-gradient(135deg, rgba(196, 162, 101, 0.25), rgba(196, 162, 101, 0.1));
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(196, 162, 101, 0.2);
+        }
+
+        .award-badge:hover::before {
+            opacity: 1;
+        }
+
+        .award-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .award-badge h3 {
+            color: #F8F5F0;
+            margin-bottom: 0.5rem;
+            font-size: 1.25rem;
+        }
+
+        .award-badge p {
+            color: rgba(248, 245, 240, 0.8);
+            font-size: 14px;
+        }
+
+        /* Speaking Section */
+        .speaking {
+            position: relative;
+            background-color: #F8F5F0;
+            padding: 100px 3rem;
+            overflow: hidden;
+        }
+
+        .speaking::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            opacity: 0.025;
+        }
+
+        .speaking-list {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .speaking-item {
+            border-left: 4px solid #C4A265;
+            padding-left: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            position: relative;
+            opacity: 0;
+            scroll-animate: true;
+        }
+
+        .speaking-item.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .speaking-title {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+            color: #2F5233;
+            margin-bottom: 0.5rem;
+        }
+
+        .speaking-role {
+            font-size: 13px;
+            color: #8B9E7E;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Publications Logo Bar */
+        .publications {
+            position: relative;
+            background-color: #2F5233;
+            padding: 80px 3rem;
+            overflow: hidden;
+        }
+
+        .publications h2 {
+            color: #F8F5F0;
+        }
+
+        .logo-bar {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+            align-items: center;
+            justify-items: center;
+        }
+
+        .logo-item {
+            width: 160px;
+            height: 100px;
+            border: 2px solid rgba(248, 245, 240, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            font-size: 13px;
+            color: rgba(248, 245, 240, 0.7);
+            font-weight: 600;
+            transition: all 0.4s ease;
+            background: rgba(248, 245, 240, 0.02);
+            scroll-animate: true;
+        }
+
+        .logo-item:hover {
+            border-color: #C4A265;
+            background: rgba(196, 162, 101, 0.1);
+            color: #C4A265;
+            transform: scale(1.05);
+        }
+
+        /* Press Kit Section */
+        .press-kit {
+            position: relative;
+            background-color: #F8F5F0;
+            padding: 100px 3rem;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .press-kit::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            opacity: 0.025;
+        }
+
+        .press-kit-content {
+            max-width: 700px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .press-kit h2 {
+            margin-bottom: 1rem;
+        }
+
+        .press-kit-description {
+            font-size: 16px;
+            color: #2C2C2C;
+            margin-bottom: 40px;
+            line-height: 1.8;
+        }
+
+        .download-btn {
+            background: #2F5233;
+            border: none;
+            color: #F8F5F0;
+            padding: 16px 40px;
+            border-radius: 0;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            margin-bottom: 40px;
+            display: inline-block;
+        }
+
+        .download-btn:hover {
+            background: #C4A265;
+            color: #2F5233;
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+
+        .media-contact {
+            font-size: 14px;
+            color: #2C2C2C;
+            margin-top: 40px;
+        }
+
+        .media-contact a {
+            color: #C4A265;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.4s ease;
+        }
+
+        .media-contact a:hover {
+            color: #2F5233;
+        }
+
+        /* Footer */
+        footer {
+            position: relative;
+            background-color: #2F5233;
+            color: #F8F5F0;
+            padding: 80px 3rem 40px;
+            overflow: hidden;
+        }
+
+        footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' /%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noiseFilter)' opacity='0.03'/%3E%3C/svg%3E");
+            pointer-events: none;
+            opacity: 0.025;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background-color: #C4A265;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.4s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .back-to-top:hover {
+            background-color: #2F5233;
+            box-shadow: 0 8px 24px rgba(196, 162, 101, 0.3);
+            transform: translateY(-4px);
+        }
+
+        .back-to-top svg {
+            width: 24px;
+            height: 24px;
+            color: #2F5233;
+        }
+
+        .back-to-top:hover svg {
+            color: #C4A265;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 60px;
+            margin-bottom: 40px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid rgba(248, 245, 240, 0.2);
+        }
+
+        .footer-col {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .footer-col.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .footer-col:nth-child(2).visible {
+            transition-delay: 0.15s;
+        }
+
+        .footer-col:nth-child(3).visible {
+            transition-delay: 0.3s;
+        }
+
+        .footer-col h3 {
+            font-family: 'Cormorant Garamond', Georgia, serif;
+            font-size: 1.25rem;
+            color: #F8F5F0;
+            margin-bottom: 1rem;
+        }
+
+        .footer-tagline {
+            font-size: 13px;
+            line-height: 1.7;
+            color: rgba(248, 245, 240, 0.8);
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .footer-links a {
+            color: rgba(248, 245, 240, 0.8);
+            text-decoration: none;
+            font-size: 13px;
+            transition: all 0.4s ease;
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        .footer-links a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #C4A265;
+            transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+
+        .footer-links a:hover {
+            color: #C4A265;
+            transform: translateX(4px);
+        }
+
+        .footer-links a:hover::after {
+            width: 100%;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border: 1px solid rgba(248, 245, 240, 0.3);
+            border-radius: 50%;
+            color: #F8F5F0;
+            transition: all 0.4s ease;
+        }
+
+        .footer-social a:hover {
+            background-color: #C4A265;
+            border-color: #C4A265;
+            color: #2F5233;
+            transform: scale(1.15) translateY(-4px);
+            box-shadow: 0 8px 20px rgba(196, 162, 101, 0.3);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 12px;
+            color: rgba(248, 245, 240, 0.6);
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Reduced Motion */
+        @media (prefers-reduced-motion: reduce) {
+            *,
+            *::before,
+            *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+                scroll-behavior: auto !important;
+            }
+
+            .scroll-animate,
+            .scroll-animate.visible {
+                transition: none !important;
+            }
+        }
+
+        /* Tablet Breakpoint */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 2rem;
+            }
+
+            nav.scrolled {
+                padding: 0.75rem 2rem;
+            }
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                flex-direction: column;
+                gap: 0;
+                background-color: #2F5233;
+                padding: 2rem;
+                box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .nav-links a {
+                padding: 1rem 0;
+                border-bottom: 1px solid rgba(248, 245, 240, 0.1);
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .hero {
+                margin-top: 50px;
+            }
+
+            .featured-press,
+            .awards,
+            .speaking,
+            .publications,
+            .press-kit {
+                padding: 80px 2rem;
+            }
+
+            .press-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .awards-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .logo-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+        }
+
+        /* Mobile Breakpoint */
+        @media (max-width: 480px) {
+            nav {
+                padding: 1rem;
+            }
+
+            nav.scrolled {
+                padding: 0.75rem;
+            }
+
+            .nav-brand-name {
+                font-size: 16px;
+            }
+
+            .contact-btn {
+                padding: 0.6rem 1rem;
+                font-size: 10px;
+            }
+
+            .hero {
+                margin-top: 50px;
+            }
+
+            .featured-press,
+            .awards,
+            .speaking,
+            .publications,
+            .press-kit {
+                padding: 60px 1.5rem;
+            }
+
+            .section-label {
+                font-size: 11px;
+            }
+
+            h1 {
+                font-size: clamp(2rem, 6vw, 3.5rem);
+            }
+
+            h2 {
+                font-size: clamp(1.5rem, 4vw, 2.5rem);
+            }
+
+            .awards-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .logo-bar {
+                grid-template-columns: 1fr;
+            }
+
+            .press-card {
+                padding: 30px;
+            }
+
+            .award-badge {
+                padding: 30px;
+            }
+
+            .footer-grid {
+                gap: 30px;
+            }
+
+            .footer-col h3 {
+                font-size: 1.1rem;
+            }
+
+            .footer-tagline,
+            .footer-links a {
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress"></div>
+
+    <!-- Navigation -->
+    <nav id="navbar">
+        <div class="nav-brand">
+            <span class="nav-brand-name">Kim Pelham</span>
+            <span class="nav-brand-tagline">Pacific Northwest Real Estate</span>
+        </div>
+
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="nav-links" id="navLinks">
+            <a href="index.html#about">About</a>
+            <a href="sellers.html">Sellers</a>
+            <a href="buyers.html">Buyers</a>
+            <a href="properties.html">Properties</a>
+            <a href="neighborhoods.html">Neighborhoods</a>
+            <a href="media.html" class="active">Media</a>
+            <a href="testimonials.html">Testimonials</a>
+        </div>
+
+        <button class="contact-btn" onclick="scrollToContact()">Contact Kim</button>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-ghost">MEDIA</div>
+        <div class="hero-content">
+            <p class="hero-subtitle">Industry Recognition</p>
+            <h1>In the Media</h1>
+        </div>
+        <div class="scroll-indicator">
+            <div class="chevron"></div>
+        </div>
+    </section>
+
+    <!-- Featured Press Section -->
+    <section class="featured-press">
+        <div class="section-container">
+            <div class="section-label">Featured Press</div>
+            <h2>Recent Coverage</h2>
+            <div class="accent-line"></div>
+
+            <div class="press-grid">
+                <article class="press-card scroll-animate">
+                    <p class="press-publication">Snohomish County Business Journal</p>
+                    <h3>Top 10 Brokers to Watch 2026</h3>
+                    <p>Kim Pelham recognized among the Pacific Northwest's most influential real estate professionals for innovation in senior real estate services and market expertise.</p>
+                    <p class="press-date">2026</p>
+                </article>
+
+                <article class="press-card scroll-animate">
+                    <p class="press-publication">Everett Herald</p>
+                    <h3>How One Broker is Changing Senior Real Estate Services</h3>
+                    <p>An in-depth profile on Kim Pelham's unique approach to serving seniors and their families, transforming the home selling experience in Snohomish County.</p>
+                    <p class="press-date">2025</p>
+                </article>
+
+                <article class="press-card scroll-animate">
+                    <p class="press-publication">Everett Herald / HeraldNet</p>
+                    <h3>The Real Estate Pros You Need to Know: Top 3 Realtors in Snohomish County</h3>
+                    <p>Kim Pelham named among the top three realtors in Snohomish County, recognized for her client-first approach, staging expertise, and consistent results.</p>
+                    <p class="press-date">March 2025</p>
+                    <a href="https://www.heraldnet.com/2025/03/14/the-real-estate-pros-you-need-to-know-top-3-realtors-in-snohomish-county/" target="_blank" rel="noopener noreferrer" style="color: var(--gold, #C4A265); font-size: 14px;">Read Article →</a>
+                </article>
+
+                <article class="press-card scroll-animate">
+                    <p class="press-publication">Pacific Northwest Magazine</p>
+                    <h3>The Art of Home Staging: Kim Pelham's 6-Step System</h3>
+                    <p>Exclusive feature on the Pelham Advantage 6-Step System and how strategic staging increases sale prices and accelerates market time in competitive markets.</p>
+                    <p class="press-date">2025</p>
+                </article>
+
+                <article class="press-card scroll-animate">
+                    <p class="press-publication">Real Producers Magazine</p>
+                    <h3>Kim Pelham: Presence, Perspective, Purpose</h3>
+                    <p>A conversation with Kim about her philosophy of real estate, personal brand, and how she creates exceptional outcomes for every client she serves.</p>
+                    <p class="press-date">2025</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards & Recognition Section -->
+    <section class="awards">
+        <div class="section-container">
+            <div class="section-label">Achievements</div>
+            <h2>Awards & Recognition</h2>
+            <div class="accent-line"></div>
+
+            <div class="awards-grid">
+                <div class="award-badge scroll-animate">
+                    <div class="award-icon"></div>
+                    <h3>14 Years of Excellence</h3>
+                    <p>14 years licensed plus 3 years in commercial property management, serving Pacific Northwest families with integrity and expertise.</p>
+                </div>
+
+                <div class="award-badge scroll-animate">
+                    <div class="award-icon"></div>
+                    <h3>104.4% Sale-to-List Ratio</h3>
+                    <p>Consistent track record of selling homes for above asking price.</p>
+                </div>
+
+                <div class="award-badge scroll-animate">
+                    <div class="award-icon"></div>
+                    <!-- TODO: De-emphasize volume numbers per Kim's feedback -->
+                    <h3>Individualized Service</h3>
+                    <p>Maximum two active buyers at a time — because every client deserves full attention, not a hand-off to a junior agent.</p>
+                </div>
+
+                <div class="award-badge scroll-animate">
+                    <div class="award-icon"></div>
+                    <h3>5-Star Google Reviews</h3>
+                    <p>Consistently rated 5 stars by satisfied clients and community members.</p>
+                </div>
+
+                <div class="award-badge scroll-animate">
+                    <div class="award-icon"></div>
+                    <h3>Senior Real Estate Specialist</h3>
+                    <p>Specialized training and expertise in serving senior clients and their families.</p>
+                </div>
+
+                <div class="award-badge scroll-animate">
+                    <div class="award-icon"></div>
+                    <h3>Pelham Advantage 6-Step System Creator</h3>
+                    <p>Proprietary methodology for preparing homes for maximum market appeal and value.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Speaking & Events Section -->
+    <section class="speaking">
+        <div class="section-container">
+            <div class="section-label">Speaking</div>
+            <h2>Events & Engagements</h2>
+            <div class="accent-line"></div>
+
+            <div class="speaking-list">
+                <div class="speaking-item scroll-animate">
+                    <p class="speaking-role">Keynote Speaker</p>
+                    <h3 class="speaking-title">Snohomish County Real Estate Summit 2026</h3>
+                    <p>The Future of Senior Real Estate: Trends, Innovations, and Best Practices in a Changing Market</p>
+                </div>
+
+                <div class="speaking-item scroll-animate">
+                    <p class="speaking-role">Panel Discussion</p>
+                    <h3 class="speaking-title">PNW Women in Real Estate Luncheon</h3>
+                    <p>Building Personal Brands in Real Estate: Stories, Strategies, and Success Lessons</p>
+                </div>
+
+                <div class="speaking-item scroll-animate">
+                    <p class="speaking-role">Featured Speaker</p>
+                    <h3 class="speaking-title">Everett Chamber of Commerce</h3>
+                    <p>Small Business Spotlight: How to Build a Luxury Real Estate Business with Heart</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Publications & Media Logo Bar -->
+    <section class="publications">
+        <div class="section-container">
+            <div class="section-label">Featured In</div>
+            <h2>As Seen In</h2>
+            <div class="accent-line"></div>
+
+            <div class="logo-bar">
+                <div class="logo-item scroll-animate">Snohomish County Business Journal</div>
+                <div class="logo-item scroll-animate">Everett Herald</div>
+                <div class="logo-item scroll-animate">Pacific Northwest Magazine</div>
+                <div class="logo-item scroll-animate">Real Producers</div>
+                <div class="logo-item scroll-animate">LinkedIn Today</div>
+                <div class="logo-item scroll-animate">Seattle Real Estate Weekly</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Press Kit CTA Section -->
+    <section class="press-kit" id="presskit">
+        <div class="press-kit-content">
+            <div class="section-label">Media Kit</div>
+            <h2>Press Kit & Inquiries</h2>
+            <div class="accent-line"></div>
+
+            <p class="press-kit-description">Download Kim's complete media kit including professional photos, bio, speaking topics, and brand information for editorial use, event promotions, and media features.</p>
+
+            <button class="download-btn" onclick="downloadPressKit()">Download Press Kit</button>
+
+            <div class="media-contact">
+                <p>For media inquiries and speaking engagement requests:</p>
+                <p><a href="mailto:hello@thepelhamgroupnw.com">hello@thepelhamgroupnw.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Kim Pelham</h3>
+                    <p class="footer-tagline">Helping Pacific Northwest families find the perfect home. 14 years of experience, a lifetime of commitment to doing right by every client.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="index.html#about">About</a>
+                        <a href="properties.html">Properties</a>
+                        <a href="neighborhoods.html">Neighborhoods</a>
+                        <a href="testimonials.html">Testimonials</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Connect</h3>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                                <circle cx="17.5" cy="6.5" r="1.5"></circle>
+                            </svg>
+                        </a>
+                        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"></path>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="mailto:hello@thepelhamgroupnw.com" title="Email">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 Kim Pelham | The Pelham Group NW</p>
+                <p style="margin-top: 8px; font-size: 1rem; font-weight: 600; letter-spacing: 0.5px;">Brokered by Katrina Eileen Real Estate · Everett, WA</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <div class="back-to-top" id="backToTop" onclick="scrollToTop()">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7"></path>
+        </svg>
+    </div>
+
+    <script>
+        // ============ SCROLL PROGRESS BAR ============
+        const scrollProgress = document.querySelector('.scroll-progress');
+        window.addEventListener('scroll', () => {
+            const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.scrollY / totalHeight) * 100;
+            scrollProgress.style.width = scrolled + '%';
+        });
+
+        // ============ NAVBAR TRANSITION ============
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+
+        // ============ HAMBURGER MENU ============
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.getElementById('navLinks');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close menu when link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // ============ SCROLL ANIMATIONS ============
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.scroll-animate').forEach(el => {
+            observer.observe(el);
+        });
+
+        // ============ ACCENT LINE ANIMATION ============
+        const accentLineObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                const line = entry.target.querySelector('.accent-line');
+                if (entry.isIntersecting && line) {
+                    line.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.3 });
+
+        document.querySelectorAll('.featured-press, .awards, .speaking, .publications, .press-kit').forEach(section => {
+            accentLineObserver.observe(section);
+        });
+
+        // ============ FOOTER ANIMATION ============
+        const footerCols = document.querySelectorAll('.footer-col');
+        const footerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    footerObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.2 });
+
+        footerCols.forEach(el => footerObserver.observe(el));
+
+        // ============ BACK TO TOP BUTTON ============
+        const backToTopBtn = document.getElementById('backToTop');
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                backToTopBtn.classList.add('visible');
+            } else {
+                backToTopBtn.classList.remove('visible');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // ============ CONTACT BUTTON ============
+        function scrollToContact() {
+            const contactSection = document.getElementById('presskit');
+            if (contactSection) {
+                contactSection.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                window.open('mailto:hello@thepelhamgroupnw.com');
+            }
+        }
+
+        // ============ PRESS KIT DOWNLOAD ============
+        function downloadPressKit() {
+            // Create a simple alert since this is a placeholder
+            alert('Press Kit - Coming Soon\n\nFor media inquiries, please contact:\nhello@thepelhamgroupnw.com\n\nPhone: 425-250-9422');
+        }
+    </script>
+</body>
+
+</html>

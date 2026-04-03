@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Complete Senior Downsizing Guide | The Pelham Group NW</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            background: #F0EDE7;
+            color: #222222;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 8.5in;
+            height: auto;
+            margin: 0 auto;
+            background: #FFFFFF;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Header */
+        header {
+            background: #2F5233;
+            color: #FFFFFF;
+            padding: 40px 40px 30px;
+            border-bottom: 4px solid #C4A265;
+        }
+
+        .header-logo {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .tagline {
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: #C4A265;
+            margin-bottom: 20px;
+            border-top: 1px solid #C4A265;
+            padding-top: 12px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 32px;
+            font-weight: 700;
+            color: #FFFFFF;
+            line-height: 1.3;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #F0EDE7;
+            font-weight: 400;
+        }
+
+        /* Main Content */
+        .content {
+            padding: 40px;
+        }
+
+        .intro-text {
+            font-size: 14px;
+            color: #6B6B6B;
+            margin-bottom: 25px;
+            line-height: 1.7;
+            font-style: italic;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 18px;
+            font-weight: 700;
+            color: #2F5233;
+            margin-bottom: 16px;
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: #C4A265;
+            border-radius: 2px;
+            flex-shrink: 0;
+        }
+
+        .section-content {
+            margin-bottom: 18px;
+            font-size: 13px;
+            line-height: 1.7;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 18px 0;
+        }
+
+        .service-item {
+            background: #F0EDE7;
+            padding: 12px;
+            border-left: 3px solid #C4A265;
+            font-size: 12px;
+        }
+
+        .service-title {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            color: #2F5233;
+            margin-bottom: 4px;
+        }
+
+        .service-desc {
+            color: #6B6B6B;
+            font-size: 11px;
+        }
+
+        .highlight-box {
+            background: #F0EDE7;
+            border-left: 4px solid #C4A265;
+            padding: 16px 16px 16px 20px;
+            margin: 18px 0;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .highlight-label {
+            font-family: 'Cinzel', serif;
+            font-size: 12px;
+            font-weight: 700;
+            color: #2F5233;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .emotional-section {
+            background: #FFFFFF;
+            border: 2px solid #2F5233;
+            padding: 16px;
+            margin: 18px 0;
+            border-radius: 3px;
+        }
+
+        .emotional-section h3 {
+            font-family: 'Cinzel', serif;
+            font-size: 14px;
+            font-weight: 700;
+            color: #2F5233;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .emotional-section h3::before {
+            content: '♥';
+            color: #C4A265;
+            font-size: 16px;
+        }
+
+        .timeline {
+            background: #F0EDE7;
+            padding: 16px;
+            margin: 18px 0;
+            border-radius: 3px;
+        }
+
+        .timeline-item {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 12px;
+            font-size: 13px;
+        }
+
+        .timeline-marker {
+            background: #C4A265;
+            color: #2F5233;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .timeline-content {
+            flex: 1;
+        }
+
+        .timeline-phase {
+            font-family: 'Cinzel', serif;
+            font-weight: 700;
+            color: #2F5233;
+            margin-bottom: 2px;
+        }
+
+        .timeline-desc {
+            color: #6B6B6B;
+            font-size: 12px;
+        }
+
+        /* Footer */
+        footer {
+            background: #2F5233;
+            color: #FFFFFF;
+            padding: 30px 40px;
+            border-top: 4px solid #C4A265;
+            margin-top: 20px;
+        }
+
+        .footer-content {
+            margin-bottom: 16px;
+        }
+
+        .footer-label {
+            font-family: 'Cinzel', serif;
+            font-size: 11px;
+            letter-spacing: 1px;
+            color: #C4A265;
+            margin-bottom: 4px;
+            text-transform: uppercase;
+        }
+
+        .footer-text {
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .contact-phone {
+            font-family: 'Cinzel', serif;
+            font-size: 16px;
+            font-weight: 700;
+            color: #C4A265;
+            margin: 12px 0;
+        }
+
+        .cta-button {
+            background: #C4A265;
+            color: #222222;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 3px;
+            font-family: 'Cinzel', serif;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            cursor: pointer;
+            margin-top: 12px;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .cta-button:hover {
+            background: #B39050;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                margin: 0;
+                padding: 0;
+                background: white;
+            }
+
+            .container {
+                max-width: 100%;
+                box-shadow: none;
+                page-break-after: avoid;
+            }
+
+            header, footer {
+                page-break-inside: avoid;
+            }
+
+            .content {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-logo">THE PELHAM GROUP NW</div>
+            <div class="tagline">Presence. Perspective. Purpose.</div>
+            <h1>The Complete Senior Downsizing Guide</h1>
+            <p class="subtitle">From overwhelm to opportunity: A compassionate roadmap for this transition</p>
+        </header>
+
+        <div class="content">
+            <p class="intro-text">Downsizing is never just about real estate. It's about honoring decades of memories, managing complex logistics, maintaining family harmony, and finding genuine opportunity in change. This guide walks you through every dimension of this transition—practical, emotional, and financial.</p>
+
+            <h2>Understanding Your Downsizing Journey</h2>
+            <div class="section-content">
+                <p><strong>Why downsize?</strong> Each family has different reasons—simplifying to reduce maintenance and worry, moving closer to family support for health reasons, transitioning to senior living communities, or creating liquidity for healthcare needs. Whatever your reason, the emotional and logistical weight is substantial.</p>
+                <p style="margin-top: 10px;">A lifetime of possessions, memories, and stories live in your home. Photo albums. Furniture that reminds you of your children growing up. Kitchen items given by loved ones. Those decisions matter.</p>
+            </div>
+
+            <h2>The 17-Category Concierge Support System</h2>
+            <p style="margin-bottom: 12px; font-size: 13px; color: #6B6B6B;">I've built comprehensive support across these key areas so no detail falls through the cracks:</p>
+
+            <div class="service-grid">
+                <div class="service-item">
+                    <div class="service-title">1. Estate Planning</div>
+                    <div class="service-desc">Legal & financial clarity before listing</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-title">2. Care Coordination</div>
+                    <div class="service-desc">Connect healthcare providers to timeline</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-title">3. Family Meetings</div>
+                    <div class="service-desc">Facilitate thoughtful family conversations</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-title">4. Downsizing Services</div>
+                    <div class="service-desc">Professional sorting & organization</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-title">5. Estate Sales</div>
+                    <div class="service-desc">Appraisals & specialized sales coordination</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-title">6. Moving Services</div>
+                    <div class="service-desc">Senior-friendly relocation specialists</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-title">7. Home Modifications</div>
+                    <div class="service-desc">Aging-in-place accessibility updates</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-title">8-17. Additional</div>
+                    <div class="service-desc">Donations, storage, utilities, insurance, more</div>
+                </div>
+            </div>
+
+            <h2>Your Timeline: What to Expect</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker">1</div>
+                    <div class="timeline-content">
+                        <div class="timeline-phase">Months 1–2: Planning & Decisions</div>
+                        <div class="timeline-desc">Estate planning, family meetings, identifying what stays/goes, sorting emotionally significant items</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">2</div>
+                    <div class="timeline-content">
+                        <div class="timeline-phase">Months 2–4: Active Downsizing</div>
+                        <div class="timeline-desc">Estate sales coordination, professional moving prep, home repairs/staging, listing preparation</div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker">3</div>
+                    <div class="timeline-content">
+                        <div class="timeline-phase">Months 4–6: Market & Move</div>
+                        <div class="timeline-desc">Home on market, showings, offers, closing, final move, new community orientation</div>
+                    </div>
+                </div>
+            </div>
+
+            <h2>The Emotional Side Matters</h2>
+            <div class="emotional-section">
+                <h3>Honoring What Was, While Building What's Next</h3>
+                <p style="font-size: 13px; line-height: 1.6; color: #222222;">A home holds 40, 50, or 60 years of memories. Raising families. Building careers. Celebrating important moments. Surviving hardship. That home is a repository of identity.</p>
+                <p style="font-size: 13px; line-height: 1.6; color: #222222; margin-top: 10px;">Walking away—even when it makes sense—often involves grief and loss. My role is to acknowledge that emotional reality honestly while creating a process that honors both past and opportunity.</p>
+            </div>
+
+            <h2>Making the Financial Picture Work</h2>
+            <div class="highlight-box">
+                <div class="highlight-label">Strategic Financial Planning</div>
+                <p>Downsizing often frees significant capital. Understanding the full financial picture matters:</p>
+                <ul style="margin-top: 10px; margin-left: 20px; color: #222222; font-size: 13px;">
+                    <li>What price do you need to achieve your goals?</li>
+                    <li>What timeline works best for everyone?</li>
+                    <li>What services are essential vs. optional?</li>
+                    <li>How does this affect taxes and inheritance?</li>
+                </ul>
+            </div>
+
+            <div class="highlight-box">
+                <div class="highlight-label">Key Questions to Answer First</div>
+                <p>Before listing, clarify these together:</p>
+                <ul style="margin-top: 10px; margin-left: 20px; color: #222222; font-size: 13px;">
+                    <li>Is downsizing your choice, or driven by circumstance?</li>
+                    <li>Where is your new home?</li>
+                    <li>What's your timeline?</li>
+                    <li>How will you handle sentimental items?</li>
+                    <li>What financial goals does this serve?</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-label">You Don't Have to Navigate This Alone</div>
+                <p class="footer-text">This transition—with all its practical and emotional dimensions—is why I built comprehensive senior concierge support. I've guided dozens of families through this exact journey. You deserve someone who understands both the logistics and the heart of downsizing.</p>
+            </div>
+            <div class="contact-phone">425.250.9422</div>
+            <div class="footer-text">Kim Pelham | The Pelham Group NW</div>
+            <button class="cta-button">Let's Talk About Your Transition</button>
+        </footer>
+    </div>
+</body>
+</html>
