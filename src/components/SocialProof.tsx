@@ -37,10 +37,9 @@ export default function SocialProof() {
               marginBottom: '8px',
             }}
           >
+            <span className="sr-only">5 stars</span>
             {[...Array(5)].map((_, i) => (
-              <span key={i} style={{ fontSize: '20px', color: '#FFD700' }}>
-                ★
-              </span>
+              <span key={i} aria-hidden="true" style={{ fontSize: '20px', color: '#FFD700' }}>&#9733;</span>
             ))}
           </div>
           <p
@@ -81,10 +80,9 @@ export default function SocialProof() {
               marginBottom: '8px',
             }}
           >
+            <span className="sr-only">5 stars</span>
             {[...Array(5)].map((_, i) => (
-              <span key={i} style={{ fontSize: '20px', color: '#FFD700' }}>
-                ★
-              </span>
+              <span key={i} aria-hidden="true" style={{ fontSize: '20px', color: '#FFD700' }}>&#9733;</span>
             ))}
           </div>
           <p

@@ -31,7 +31,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              If you've looked at my marketing materials or heard me speak about my business, you've probably seen the number: 104.4%. That's my average sale-to-list ratio—the percentage of your home's asking price that it actually sells for. It's not a coincidence or luck. It's a direct reflection of strategy, preparation, and genuine expertise. In this article, I want to break down what this metric means, why it matters, and how you can achieve similar results when you sell your Snohomish County home.
+              If you've looked at my marketing materials or heard me speak about my business, you've probably seen the number: 104.4%. That's my average sale-to-list ratio - the percentage of your home's asking price that it actually sells for. It's not a coincidence or luck. It's a direct reflection of strategy, preparation, and genuine expertise. In this article, I want to break down what this metric means, why it matters, and how you can achieve similar results when you sell your Snohomish County home.
             </p>
 
             <h2
@@ -68,7 +68,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              This metric is powerful because it reveals two things: first, how well your home was positioned and presented to the market, and second, the strength of buyer demand for your property. A high sale-to-list ratio isn't luck—it's evidence of strategic pricing, excellent marketing, proper staging, and expert negotiation. In a competitive market like ours, every percentage point above 100% represents additional thousands of dollars in your pocket.
+              This metric is powerful because it reveals two things: first, how well your home was positioned and presented to the market, and second, the strength of buyer demand for your property. A high sale-to-list ratio isn't luck - it's evidence of strategic pricing, excellent marketing, proper staging, and expert negotiation. In a competitive market like ours, every percentage point above 100% represents additional thousands of dollars in your pocket.
             </p>
 
             <h2
@@ -105,7 +105,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              The local average sale-to-list ratio hovers around 99-100%, depending on the sub-market and time of year. This means most homes either sell at asking price or slightly below. When a home sells at 104%—consistently—it signals something special. That home is positioned right. The marketing is working. Buyers see it and want it. That's what my clients experience again and again.
+              The local average sale-to-list ratio hovers around 99-100%, depending on the sub-market and time of year. This means most homes either sell at asking price or slightly below. When a home sells at 104% - consistently - it signals something special. That home is positioned right. The marketing is working. Buyers see it and want it. That's what my clients experience again and again.
             </p>
 
             <h2
@@ -155,7 +155,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              Many sellers think pricing high is smart—it gives room to negotiate down. This is actually counterproductive. When you price a home too high, you've already lost the most active and motivated buyers. They stop showing up. Your home sits, creating the impression of weakness. Then, weeks later, you price it lower than you would have if you'd priced right initially.
+              Many sellers think pricing high is smart - it gives room to negotiate down. This is actually counterproductive. When you price a home too high, you've already lost the most active and motivated buyers. They stop showing up. Your home sits, creating the impression of weakness. Then, weeks later, you price it lower than you would have if you'd priced right initially.
             </p>
 
             <p
@@ -192,7 +192,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              Professional photography and video are non-negotiable. Studies consistently show that homes with excellent photos and video tours receive 24% more inquiries and sell faster. But it's more than just pretty pictures. It's about showing your home in the best possible light—literally. We stage during optimal lighting, use drone photography to show the property's setting, and create virtual tours that let buyers walk through your home at their own pace.
+              Professional photography and video are non-negotiable. Studies consistently show that homes with excellent photos and video tours receive 24% more inquiries and sell faster. But it's more than just pretty pictures. It's about showing your home in the best possible light - literally. We stage during optimal lighting, use drone photography to show the property's setting, and create virtual tours that let buyers walk through your home at their own pace.
             </p>
 
             <p
@@ -204,7 +204,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              Then there's the physical staging—the thoughtful arrangement of furniture, the decluttering, the fresh paint, the landscaping. This is where professional staging consultants earn their fee. My clients consistently see homes sell faster and for higher prices when they've invested in professional staging. The return on that investment is often 5-15 times the cost.
+              Then there's the physical staging - the thoughtful arrangement of furniture, the decluttering, the fresh paint, the landscaping. This is where professional staging consultants earn their fee. My clients consistently see homes sell faster and for higher prices when they've invested in professional staging. The return on that investment is often 5-15 times the cost.
             </p>
 
             <h3
@@ -278,7 +278,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              But don't just take the number at face value. Ask what kinds of homes achieve that ratio. Is it primarily luxury homes, which might sell above asking more frequently? Is it homes in competitive neighborhoods? Understanding the context matters. My 104.4% average comes from homes across diverse price points, neighborhoods, and property types throughout Snohomish County—because I apply the same strategic approach to every listing, regardless of price.
+              But don't just take the number at face value. Ask what kinds of homes achieve that ratio. Is it primarily luxury homes, which might sell above asking more frequently? Is it homes in competitive neighborhoods? Understanding the context matters. My 104.4% average comes from homes across diverse price points, neighborhoods, and property types throughout Snohomish County - because I apply the same strategic approach to every listing, regardless of price.
             </p>
 
             <h2

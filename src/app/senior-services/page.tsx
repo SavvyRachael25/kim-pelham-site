@@ -83,7 +83,7 @@ const approachItems: ApproachItem[] = [
   {
     title: 'No-Cost Consultation',
     description:
-      'We start with a conversation—no pressure, no obligation. We listen and understand your unique situation.',
+      'We start with a conversation - no pressure, no obligation. We listen and understand your unique situation.',
   },
   {
     title: 'Customized Services',
@@ -154,7 +154,7 @@ export default function SeniorServicesPage() {
             fontWeight: 300,
           }}
         >
-          Life transitions can feel overwhelming—especially when they involve major decisions about your home, finances, and
+          Life transitions can feel overwhelming - especially when they involve major decisions about your home, finances, and
           future. Whether you're downsizing, relocating, managing a household, or planning your legacy, you don't have to do it
           alone.
         </p>
@@ -321,9 +321,9 @@ export default function SeniorServicesPage() {
                   fontSize: '2rem',
                 }}
               >
-                {idx === 0 && '💬'}
-                {idx === 1 && '⚙️'}
-                {idx === 2 && '🤝'}
+                <span aria-hidden="true" style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 400, color: '#FFFFFF' }}>
+                  {idx === 0 ? '01' : idx === 1 ? '02' : '03'}
+                </span>
               </div>
               <h3
                 style={{
@@ -456,16 +456,16 @@ export default function SeniorServicesPage() {
             answer: "We start with a no-cost consultation to understand your situation. Service costs vary based on what you need and for how long. Many seniors find that the coordination Kim provides saves them significant time, stress, and money compared to managing everything alone.",
           },
           {
-            question: "My parent lives out of state — can Kim help coordinate everything remotely?",
+            question: "My parent lives out of state  -  can Kim help coordinate everything remotely?",
             answer: "Yes. Kim regularly works with adult children who are geographically separated from their parents. She serves as the trusted local point of contact, coordinating services, attending appointments, and keeping families informed every step of the way.",
           },
           {
-            question: "We're not ready to sell yet — can Kim still help with other senior services?",
-            answer: "Absolutely. Real estate is just one part of what Kim offers. She can assist with daily tasks, home care coordination, medical equipment navigation, estate planning support, and more — completely independent of any real estate transaction.",
+            question: "We're not ready to sell yet  -  can Kim still help with other senior services?",
+            answer: "Absolutely. Real estate is just one part of what Kim offers. She can assist with daily tasks, home care coordination, medical equipment navigation, estate planning support, and more  -  completely independent of any real estate transaction.",
           },
           {
             question: "How does the downsizing process typically work?",
-            answer: "Kim starts with a consultation to understand your timeline, priorities, and emotional needs. She helps you evaluate your housing options, coordinates any necessary repairs or staging, and manages the entire process so you can focus on the transition itself — not the logistics.",
+            answer: "Kim starts with a consultation to understand your timeline, priorities, and emotional needs. She helps you evaluate your housing options, coordinates any necessary repairs or staging, and manages the entire process so you can focus on the transition itself  -  not the logistics.",
           },
           {
             question: "What communities or care options does Kim work with?",

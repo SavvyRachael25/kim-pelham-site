@@ -31,7 +31,7 @@ export default function CommunityPage() {
                 marginBottom: '24px',
               }}
             >
-              More Than a Broker—A Neighbor
+              More Than a Broker - A Neighbor
             </h2>
             <p
               style={{
@@ -42,7 +42,7 @@ export default function CommunityPage() {
                 marginBottom: '20px',
               }}
             >
-              I've built my career on understanding the communities I serve. It's not about closing deals—it's about building relationships and being a trusted voice in Snohomish County. Whether you're a first-time buyer, a family looking to upsize, or a senior ready for your next chapter, I'm here as your neighbor, your advocate, and your partner.
+              I've built my career on understanding the communities I serve. It's not about closing deals - it's about building relationships and being a trusted voice in Snohomish County. Whether you're a first-time buyer, a family looking to upsize, or a senior ready for your next chapter, I'm here as your neighbor, your advocate, and your partner.
             </p>
             <p
               style={{

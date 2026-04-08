@@ -300,7 +300,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div style={bottomBarResponsiveStyle} data-footer-bar>
           <p style={copyrightStyle}>
-            © 2026 Kim Pelham — The Pelham Group NW. All rights reserved.
+            © 2026 Kim Pelham  -  The Pelham Group NW. All rights reserved.
           </p>
           <p style={builtWithStyle}>Built with love in Snohomish County</p>
         </div>

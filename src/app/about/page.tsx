@@ -128,7 +128,7 @@ export default function AboutPage() {
               I've spent 14 years helping families navigate one of their biggest
               decisions. Three of those years were in commercial property
               management, which taught me the business side of real estate. But
-              my heart is in residential transactions—the stories, the dreams, the
+              my heart is in residential transactions - the stories, the dreams, the
               fresh starts.
             </p>
             <p
@@ -347,7 +347,7 @@ export default function AboutPage() {
                 }}
               >
                 Being fully engaged. When we're working together, you have my
-                full attention—no juggling multiple clients, no divided focus. I'm
+                full attention - no juggling multiple clients, no divided focus. I'm
                 here, present, and invested in your outcome.
               </p>
             </div>

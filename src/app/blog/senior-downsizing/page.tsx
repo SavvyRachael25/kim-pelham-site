@@ -31,7 +31,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              Downsizing isn't about losing memories or stepping backward—it's about gaining freedom. In my years working with Snohomish County retirees, I've seen how the right move at the right time can transform this chapter of life into something truly exciting. Whether you're selling the family home or exploring new living options, this guide will help you navigate one of life's most meaningful decisions with clarity and confidence.
+              Downsizing isn't about losing memories or stepping backward - it's about gaining freedom. In my years working with Snohomish County retirees, I've seen how the right move at the right time can transform this chapter of life into something truly exciting. Whether you're selling the family home or exploring new living options, this guide will help you navigate one of life's most meaningful decisions with clarity and confidence.
             </p>
 
             <h2
@@ -56,7 +56,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              The reasons are deeply personal and beautifully practical. Many of my clients tell me they're tired of maintaining a four-bedroom house they don't need, with a yard that requires constant attention. There's the financial advantage too—selling a fully-appreciated home can generate significant capital, whether that's for travel, healthcare, or creating a legacy for your children.
+              The reasons are deeply personal and beautifully practical. Many of my clients tell me they're tired of maintaining a four-bedroom house they don't need, with a yard that requires constant attention. There's the financial advantage too - selling a fully-appreciated home can generate significant capital, whether that's for travel, healthcare, or creating a legacy for your children.
             </p>
 
             <p
@@ -68,7 +68,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              But there's something else, something less tangible: freedom. Freedom from the worry of home repairs, from the isolation of living alone in a large house, from the physical demands of maintenance. Downsizing allows you to focus on what matters most in this phase of life—relationships, experiences, and peace of mind.
+              But there's something else, something less tangible: freedom. Freedom from the worry of home repairs, from the isolation of living alone in a large house, from the physical demands of maintenance. Downsizing allows you to focus on what matters most in this phase of life - relationships, experiences, and peace of mind.
             </p>
 
             <h2
@@ -105,7 +105,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              I encourage my clients to take photographs of meaningful spaces and objects before they go. Some create photo albums or even small videos documenting the home's history. This creates closure while honoring the memories. One client took photos of each room and wrote a note about what that space meant to her family—it became a treasure for her grandchildren to read someday.
+              I encourage my clients to take photographs of meaningful spaces and objects before they go. Some create photo albums or even small videos documenting the home's history. This creates closure while honoring the memories. One client took photos of each room and wrote a note about what that space meant to her family - it became a treasure for her grandchildren to read someday.
             </p>
 
             <h2
@@ -167,7 +167,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              Snohomish County offers wonderful options for downsizing. Some clients move to active adult communities designed with their needs in mind—no stairs, community activities, built-in social networks. Others prefer smaller single-level homes or condos in town where they can walk to restaurants and shops. A few even explore the broader Pacific Northwest, using the equity from their home sale to move closer to family or their dream retirement destination.
+              Snohomish County offers wonderful options for downsizing. Some clients move to active adult communities designed with their needs in mind - no stairs, community activities, built-in social networks. Others prefer smaller single-level homes or condos in town where they can walk to restaurants and shops. A few even explore the broader Pacific Northwest, using the equity from their home sale to move closer to family or their dream retirement destination.
             </p>
 
             <p
@@ -179,7 +179,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              The key is thinking beyond square footage. Consider proximity to healthcare, walkability, community offerings, and whether you want to be in town or in a quieter setting. Think about future needs too—will this home work in five or ten years? The best downsize moves aren't just about right now; they're about the next chapter you're building.
+              The key is thinking beyond square footage. Consider proximity to healthcare, walkability, community offerings, and whether you want to be in town or in a quieter setting. Think about future needs too - will this home work in five or ten years? The best downsize moves aren't just about right now; they're about the next chapter you're building.
             </p>
 
             <h2
@@ -216,7 +216,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              What I can tell you is that selling strategically—with proper pricing, staging, and marketing—ensures you capture the full value of your home. In a market where a well-presented home in Snohomish County can exceed its asking price, the difference between a mediocre sale and an excellent one can be substantial. This is where experience matters.
+              What I can tell you is that selling strategically - with proper pricing, staging, and marketing - ensures you capture the full value of your home. In a market where a well-presented home in Snohomish County can exceed its asking price, the difference between a mediocre sale and an excellent one can be substantial. This is where experience matters.
             </p>
 
             <h2

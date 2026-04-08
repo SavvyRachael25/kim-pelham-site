@@ -5,7 +5,7 @@ import Link from 'next/link';
 const testimonials = [
   {
     stars: 5,
-    text: "Kim didn't just help us find a house — she helped us find our home...",
+    text: "Kim didn't just help us find a house  -  she helped us find our home...",
     author: 'Sarah & Michael P.',
     location: 'Bought in Mill Creek',
   },
@@ -41,10 +41,9 @@ function TestimonialCard({ testimonial }: TestimonialCardProps) {
     >
       {/* Stars */}
       <div style={{ display: 'flex', gap: '4px', marginBottom: '16px' }}>
+        <span className="sr-only">{testimonial.stars} stars</span>
         {[...Array(testimonial.stars)].map((_, i) => (
-          <span key={i} style={{ fontSize: '18px', color: '#FFD700' }}>
-            ★
-          </span>
+          <span key={i} aria-hidden="true" style={{ fontSize: '18px', color: '#FFD700' }}>&#9733;</span>
         ))}
       </div>
 

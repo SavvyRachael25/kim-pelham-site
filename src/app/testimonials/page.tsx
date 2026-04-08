@@ -19,7 +19,7 @@ const testimonials: Testimonial[] = [
   {
     id: 1,
     quote:
-      "Kim didn't just help us find a house — she helped us find our home. Her knowledge of the Eastside communities, her patience with our long search, and her honesty throughout the process made all the difference.",
+      "Kim didn't just help us find a house  -  she helped us find our home. Her knowledge of the Eastside communities, her patience with our long search, and her honesty throughout the process made all the difference.",
     name: 'Sarah & Michael P.',
     role: 'BUYER',
     location: 'Mill Creek',
@@ -64,7 +64,7 @@ const testimonials: Testimonial[] = [
   {
     id: 6,
     quote:
-      "When my husband passed, I had no idea how to handle the estate sale. Kim was there for every step—compassionate, thorough, and completely trustworthy.",
+      "When my husband passed, I had no idea how to handle the estate sale. Kim was there for every step - compassionate, thorough, and completely trustworthy.",
     name: 'Helen R.',
     role: 'SENIOR SERVICES',
     location: 'Marysville',

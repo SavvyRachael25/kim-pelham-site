@@ -409,7 +409,7 @@ export default function MediaPage() {
                       color: '#fff',
                     }}
                   >
-                    ★★★★★
+                    <span aria-hidden="true">5</span>
                   </span>
                 </div>
                 <h3

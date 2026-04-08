@@ -86,7 +86,7 @@ export default function BuyersPage() {
           }}
         >
           Buying a home can feel overwhelming. Between mortgage pre-approval,
-          house hunting, making offers, and closing—there are a thousand details
+          house hunting, making offers, and closing - there are a thousand details
           that need to go right. That's where I come in.
         </p>
         <p
@@ -100,7 +100,7 @@ export default function BuyersPage() {
           }}
         >
           I'll guide you through every step, answer your questions without the
-          jargon, and help you make decisions that serve your future—not the
+          jargon, and help you make decisions that serve your future - not the
           commission.
         </p>
       </section>
@@ -211,7 +211,7 @@ export default function BuyersPage() {
               {
                 step: 3,
                 title: 'Submit Offers',
-                desc: 'Strategic offers that win—without leaving money on the table.',
+                desc: 'Strategic offers that win - without leaving money on the table.',
               },
               {
                 step: 4,
@@ -348,7 +348,7 @@ export default function BuyersPage() {
                 Taylor was a first-time buyer with only $2,000 for a down payment.
                 Most agents told her it wasn't possible. We found creative ways to
                 strengthen her offer, negotiated help from the seller, and closed
-                on a beautiful home in Everett—exactly where she wanted to be.
+                on a beautiful home in Everett - exactly where she wanted to be.
               </p>
               <blockquote
                 style={{
@@ -372,7 +372,7 @@ export default function BuyersPage() {
                   margin: 0,
                 }}
               >
-                — Taylor, Everett Homeowner
+                 -  Taylor, Everett Homeowner
               </p>
             </div>
           </div>
@@ -598,7 +598,7 @@ export default function BuyersPage() {
                   margin: 0,
                 }}
               >
-                I recommend homes and strategies that make sense for you—not just
+                I recommend homes and strategies that make sense for you - not just
                 for my commission.
               </p>
             </div>
@@ -654,7 +654,7 @@ export default function BuyersPage() {
           },
           {
             question: "How long does it typically take to find and close on a home in Snohomish County?",
-            answer: "On average, buyers work with Kim for 2–4 months from initial search to closing. The timeline varies based on market conditions, your criteria, and how quickly the right home appears. In competitive markets, acting fast is key — Kim is highly responsive and will keep you one step ahead.",
+            answer: "On average, buyers work with Kim for 2–4 months from initial search to closing. The timeline varies based on market conditions, your criteria, and how quickly the right home appears. In competitive markets, acting fast is key  -  Kim is highly responsive and will keep you one step ahead.",
           },
           {
             question: "What does it cost to work with a buyer's agent?",
@@ -665,8 +665,8 @@ export default function BuyersPage() {
             answer: "Kim specializes in Snohomish County and the greater Eastside, including Everett, Bothell, Mill Creek, Mukilteo, Edmonds, Lynnwood, Marysville, Lake Stevens, and surrounding communities. She has deep knowledge of neighborhoods, schools, and local market trends.",
           },
           {
-            question: "How competitive is the market — will I lose out to cash buyers?",
-            answer: "The Snohomish County market is competitive, but it's very winnable. Kim knows how to structure offers that stand out — from escalation clauses to personal letters to flexible closing timelines. Her negotiation track record speaks for itself.",
+            question: "How competitive is the market  -  will I lose out to cash buyers?",
+            answer: "The Snohomish County market is competitive, but it's very winnable. Kim knows how to structure offers that stand out  -  from escalation clauses to personal letters to flexible closing timelines. Her negotiation track record speaks for itself.",
           },
         ]}
       />

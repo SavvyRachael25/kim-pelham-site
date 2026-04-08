@@ -185,7 +185,7 @@ export default function Hero() {
               e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
             }}
           >
-            Let's Talk — Free Consultation
+            Let's Talk  -  Free Consultation
           </button>
         </Link>
       </div>

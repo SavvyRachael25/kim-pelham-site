@@ -44,7 +44,7 @@ export default function Marquee() {
               minWidth: 'max-content',
             }}
           >
-            ✦ {item}
+            <span aria-hidden="true">&#x2726;</span> {item}
           </span>
         ))}
 
@@ -60,7 +60,7 @@ export default function Marquee() {
               minWidth: 'max-content',
             }}
           >
-            ✦ {item}
+            <span aria-hidden="true">&#x2726;</span> {item}
           </span>
         ))}
       </div>

@@ -31,7 +31,7 @@ export default function FirstSeventyTwoHoursPage() {
                 marginBottom: '24px',
               }}
             >
-              In real estate, first impressions matter—and nowhere is this more critical than in the first 72 hours after your home hits the market. This crucial window often determines whether your property generates excitement or gets overlooked. Let me walk you through why these three days are so important and what you need to do to make them count.
+              In real estate, first impressions matter - and nowhere is this more critical than in the first 72 hours after your home hits the market. This crucial window often determines whether your property generates excitement or gets overlooked. Let me walk you through why these three days are so important and what you need to do to make them count.
             </p>
 
             <h2
@@ -56,7 +56,7 @@ export default function FirstSeventyTwoHoursPage() {
                 marginBottom: '24px',
               }}
             >
-              Buyers actively searching for homes are most engaged during the first three days a property is listed. This is when the most serious buyers will tour your home. These early visitors are typically motivated and informed—they've done their homework, they're pre-approved, and they're ready to make decisions.
+              Buyers actively searching for homes are most engaged during the first three days a property is listed. This is when the most serious buyers will tour your home. These early visitors are typically motivated and informed - they've done their homework, they're pre-approved, and they're ready to make decisions.
             </p>
 
             <p
@@ -106,7 +106,7 @@ export default function FirstSeventyTwoHoursPage() {
                 marginBottom: '24px',
               }}
             >
-              Before a single buyer walks through your door, your home needs to shine—both in person and online. Professional photography is non-negotiable. Studies show that homes with high-quality photos sell 24% faster and for higher prices.
+              Before a single buyer walks through your door, your home needs to shine - both in person and online. Professional photography is non-negotiable. Studies show that homes with high-quality photos sell 24% faster and for higher prices.
             </p>
 
             <p
@@ -155,7 +155,7 @@ export default function FirstSeventyTwoHoursPage() {
                 marginBottom: '24px',
               }}
             >
-              This is where market data and expertise matter. I analyze comparable sales, current market conditions, and buyer demand to position your home exactly right. The goal isn't necessarily to list low—it's to list smart.
+              This is where market data and expertise matter. I analyze comparable sales, current market conditions, and buyer demand to position your home exactly right. The goal isn't necessarily to list low - it's to list smart.
             </p>
 
             <h3
@@ -192,7 +192,7 @@ export default function FirstSeventyTwoHoursPage() {
                 marginBottom: '24px',
               }}
             >
-              Make sure your home smells fresh, is well-lit, and feels welcoming. Buyers are experiencing your home emotionally—every detail counts. This is the time to schedule open houses and coordinate the maximum number of viewings.
+              Make sure your home smells fresh, is well-lit, and feels welcoming. Buyers are experiencing your home emotionally - every detail counts. This is the time to schedule open houses and coordinate the maximum number of viewings.
             </p>
 
             <h3
@@ -267,7 +267,7 @@ export default function FirstSeventyTwoHoursPage() {
                 marginBottom: '24px',
               }}
             >
-              That's why I coordinate every detail in advance—from professional photography and staging to strategic pricing and an aggressive marketing push. I want your home to be the talk of the market in those critical first 72 hours.
+              That's why I coordinate every detail in advance - from professional photography and staging to strategic pricing and an aggressive marketing push. I want your home to be the talk of the market in those critical first 72 hours.
             </p>
 
             <p
@@ -279,7 +279,7 @@ export default function FirstSeventyTwoHoursPage() {
                 marginBottom: '24px',
               }}
             >
-              My 104.4% average sale-to-list ratio isn't luck—it's the result of mastering this window. Every listing gets the full treatment because I know that these three days set the tone for everything that follows.
+              My 104.4% average sale-to-list ratio isn't luck - it's the result of mastering this window. Every listing gets the full treatment because I know that these three days set the tone for everything that follows.
             </p>
 
             <h2
@@ -304,7 +304,7 @@ export default function FirstSeventyTwoHoursPage() {
                 marginBottom: '24px',
               }}
             >
-              Your first 72 hours as a listed property are worth thousands (sometimes tens of thousands) of dollars. This is not the time to cut corners or wing it. Every element—from photos to pricing to staging to marketing—needs to work together to create maximum impact.
+              Your first 72 hours as a listed property are worth thousands (sometimes tens of thousands) of dollars. This is not the time to cut corners or wing it. Every element - from photos to pricing to staging to marketing - needs to work together to create maximum impact.
             </p>
 
             <p

@@ -43,7 +43,7 @@ export default function HomeRepairPage() {
                 marginBottom: '20px',
               }}
             >
-              Strategic repairs and improvements can be the difference between a home that sits on the market and one that sells quickly at top dollar. But home improvement projects can be stressful, costly, and time-consuming—especially when you're trying to prepare for a sale.
+              Strategic repairs and improvements can be the difference between a home that sits on the market and one that sells quickly at top dollar. But home improvement projects can be stressful, costly, and time-consuming - especially when you're trying to prepare for a sale.
             </p>
             <p
               style={{
@@ -141,7 +141,7 @@ export default function HomeRepairPage() {
                     marginBottom: '16px',
                   }}
                 >
-                  We assess your home's condition and identify which repairs and updates will have the greatest impact on buyer appeal and home value. Not every fix is necessary—we prioritize strategically.
+                  We assess your home's condition and identify which repairs and updates will have the greatest impact on buyer appeal and home value. Not every fix is necessary - we prioritize strategically.
                 </p>
                 <ul
                   style={{
@@ -223,7 +223,7 @@ export default function HomeRepairPage() {
                     marginBottom: '16px',
                   }}
                 >
-                  No upfront costs. You don't pay for repairs until closing. That's right—the full cost is deducted from your proceeds at closing, after the sale closes. This makes it easier to invest in your home's success.
+                  No upfront costs. You don't pay for repairs until closing. That's right - the full cost is deducted from your proceeds at closing, after the sale closes. This makes it easier to invest in your home's success.
                 </p>
                 <ul
                   style={{
@@ -432,8 +432,9 @@ export default function HomeRepairPage() {
                     fontWeight: 600,
                     flexShrink: 0,
                   }}
+                  aria-hidden="true"
                 >
-                  ✓
+                  &#10003;
                 </div>
                 <div>
                   <h3
@@ -476,8 +477,9 @@ export default function HomeRepairPage() {
                     fontWeight: 600,
                     flexShrink: 0,
                   }}
+                  aria-hidden="true"
                 >
-                  ✓
+                  &#10003;
                 </div>
                 <div>
                   <h3
@@ -520,8 +522,9 @@ export default function HomeRepairPage() {
                     fontWeight: 600,
                     flexShrink: 0,
                   }}
+                  aria-hidden="true"
                 >
-                  ✓
+                  &#10003;
                 </div>
                 <div>
                   <h3
@@ -564,8 +567,9 @@ export default function HomeRepairPage() {
                     fontWeight: 600,
                     flexShrink: 0,
                   }}
+                  aria-hidden="true"
                 >
-                  ✓
+                  &#10003;
                 </div>
                 <div>
                   <h3
@@ -599,11 +603,11 @@ export default function HomeRepairPage() {
           faqs={[
             {
               question: "Do I have to pay for repairs out of pocket?",
-              answer: "No. Kim's repair program allows you to complete pre-sale improvements with no upfront cost. The work is paid from your sale proceeds at closing — so you invest in your home's value without touching your savings.",
+              answer: "No. Kim's repair program allows you to complete pre-sale improvements with no upfront cost. The work is paid from your sale proceeds at closing  -  so you invest in your home's value without touching your savings.",
             },
             {
               question: "How do I know which repairs are worth doing?",
-              answer: "Kim evaluates your home strategically and only recommends repairs that will meaningfully impact your sale price or speed. She won't suggest expensive renovations with a low return on investment — every recommendation is based on what Snohomish County buyers are actually looking for.",
+              answer: "Kim evaluates your home strategically and only recommends repairs that will meaningfully impact your sale price or speed. She won't suggest expensive renovations with a low return on investment  -  every recommendation is based on what Snohomish County buyers are actually looking for.",
             },
             {
               question: "Who does the actual repair work?",

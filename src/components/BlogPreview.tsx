@@ -18,7 +18,7 @@ const posts = [
     image: '/images/staging-01-living-room.jpg',
     title: 'Why Staging Still Matters (Even in a Hot Market)',
     excerpt:
-      'I stage every listing myself — here\'s why it\'s still the best investment you\'ll make before listing.',
+      'I stage every listing myself  -  here\'s why it\'s still the best investment you\'ll make before listing.',
     date: 'February 2026',
     category: 'Selling',
   },
@@ -27,7 +27,7 @@ const posts = [
     image: '/images/neighborhood-03-snohomish-historic.jpg',
     title: 'Snohomish County Market Update: What Sellers Need to Know',
     excerpt:
-      'Inventory is shifting. Here\'s what the numbers look like neighborhood by neighborhood — and what it means for your home.',
+      'Inventory is shifting. Here\'s what the numbers look like neighborhood by neighborhood  -  and what it means for your home.',
     date: 'January 2026',
     category: 'Market Update',
   },

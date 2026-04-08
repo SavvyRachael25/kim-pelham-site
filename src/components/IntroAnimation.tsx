@@ -120,7 +120,7 @@ export default function IntroAnimation({ children }: IntroAnimationProps) {
         <div className="intro-content">
           <h1 className="intro-name">Kim Pelham</h1>
           <p className="intro-tagline">your neighbor in real estate</p>
-          <p className="intro-subtitle">(425) 343-9926 — Snohomish County</p>
+          <p className="intro-subtitle">(425) 343-9926  -  Snohomish County</p>
         </div>
       </div>
 

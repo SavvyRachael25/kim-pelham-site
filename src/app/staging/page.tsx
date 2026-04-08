@@ -31,7 +31,7 @@ export default function StagingPage() {
 
       <InnerHero
         title="Psychology-Driven Staging"
-        subtitle="We maximize your home's appeal — staging that sells faster and for more"
+        subtitle="We maximize your home's appeal  -  staging that sells faster and for more"
         image="/images/kim-with-client-on-couch.jpg"
         imageAlt="Beautiful staged living room"
       />
@@ -55,7 +55,7 @@ export default function StagingPage() {
             fontWeight: 300,
           }}
         >
-          Staging isn't about decoration—it's about psychology. Every piece of furniture, every color choice, every lighting
+          Staging isn't about decoration - it's about psychology. Every piece of furniture, every color choice, every lighting
           adjustment is designed to help buyers envision themselves in your home. Professional staging removes distractions,
           highlights your home's best features, and creates an emotional connection that translates directly to higher offers
           and faster sales.
@@ -118,7 +118,7 @@ export default function StagingPage() {
                 }}
               >
                 A homeowner listed with a traditional broker. The listing was decent, but uninspired. The home sat on the market
-                for months. Few showings. Fewer offers. The homeowner grew anxious—was something wrong with the house? Or the
+                for months. Few showings. Fewer offers. The homeowner grew anxious - was something wrong with the house? Or the
                 strategy?
               </p>
             </div>
@@ -146,7 +146,7 @@ export default function StagingPage() {
                   margin: 0,
                 }}
               >
-                They came to Kim. She transformed the home in 2 weeks—removing clutter, reimagining layouts, and creating
+                They came to Kim. She transformed the home in 2 weeks - removing clutter, reimagining layouts, and creating
                 spaces buyers could emotionally connect with. Within 5 days of the restaged listing, they had multiple offers.
                 The home sold $10,000 above listing price.
               </p>
@@ -211,7 +211,7 @@ export default function StagingPage() {
             },
             {
               title: 'Staging Results in Higher Offers',
-              description: "On average, staged homes sell 300% faster and for more money. This is not a luxury—it's a smart investment.",
+              description: "On average, staged homes sell 300% faster and for more money. This is not a luxury - it's a smart investment.",
             },
           ].map((item, idx) => (
             <div
@@ -325,11 +325,11 @@ export default function StagingPage() {
         faqs={[
           {
             question: "Does staging really make a difference in sale price?",
-            answer: "Absolutely. Staged homes sell up to 300% faster and consistently for more money. Buyers make emotional decisions first and logical decisions second. When a home is staged well, buyers can picture themselves living there — and that emotional connection translates directly to stronger offers.",
+            answer: "Absolutely. Staged homes sell up to 300% faster and consistently for more money. Buyers make emotional decisions first and logical decisions second. When a home is staged well, buyers can picture themselves living there  -  and that emotional connection translates directly to stronger offers.",
           },
           {
             question: "How much does professional staging cost?",
-            answer: "The cost varies based on your home's size and what's needed. For Kim's clients, staging is built into her selling strategy — she'll walk you through exactly what's involved and what the expected return on investment is at your consultation.",
+            answer: "The cost varies based on your home's size and what's needed. For Kim's clients, staging is built into her selling strategy  -  she'll walk you through exactly what's involved and what the expected return on investment is at your consultation.",
           },
           {
             question: "Will Kim be staging my home herself?",
@@ -337,11 +337,11 @@ export default function StagingPage() {
           },
           {
             question: "Do I need to move my furniture out for staging?",
-            answer: "Not necessarily. Kim evaluates your existing furniture and decor, and stages around what you have — removing what doesn't serve the space and repositioning or supplementing what does. Partial or full staging recommendations depend on your specific home.",
+            answer: "Not necessarily. Kim evaluates your existing furniture and decor, and stages around what you have  -  removing what doesn't serve the space and repositioning or supplementing what does. Partial or full staging recommendations depend on your specific home.",
           },
           {
             question: "What rooms are most important to stage?",
-            answer: "Living rooms, kitchens, and master bedrooms have the highest impact on buyers. Entryways and outdoor spaces also matter significantly for first impressions. Kim stages all key areas — not just the ones that photograph well.",
+            answer: "Living rooms, kitchens, and master bedrooms have the highest impact on buyers. Entryways and outdoor spaces also matter significantly for first impressions. Kim stages all key areas  -  not just the ones that photograph well.",
           },
         ]}
       />

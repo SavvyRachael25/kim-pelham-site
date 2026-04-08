@@ -31,7 +31,7 @@ export default function StagingPsychologyPage() {
                 marginBottom: '24px',
               }}
             >
-              Home staging isn't about deception or creating a fairy tale. It's about removing the barriers between a buyer's imagination and their vision of home. When I work with clients to stage their homes, I'm not just arranging furniture—I'm shaping emotions. And when it comes to real estate, emotions drive decisions that change lives.
+              Home staging isn't about deception or creating a fairy tale. It's about removing the barriers between a buyer's imagination and their vision of home. When I work with clients to stage their homes, I'm not just arranging furniture - I'm shaping emotions. And when it comes to real estate, emotions drive decisions that change lives.
             </p>
 
             <h2
@@ -68,7 +68,7 @@ export default function StagingPsychologyPage() {
                 marginBottom: '24px',
               }}
             >
-              When a buyer enters a home, their brain is processing multiple sensory inputs simultaneously: light, smell, color, scale, and arrangement. If those inputs feel cohesive and welcoming, the buyer's amygdala—the emotional center of the brain—responds positively. They relax. They smile. They imagine themselves in the space. This is when love begins. It's not a logical exercise; it's a visceral one.
+              When a buyer enters a home, their brain is processing multiple sensory inputs simultaneously: light, smell, color, scale, and arrangement. If those inputs feel cohesive and welcoming, the buyer's amygdala - the emotional center of the brain - responds positively. They relax. They smile. They imagine themselves in the space. This is when love begins. It's not a logical exercise; it's a visceral one.
             </p>
 
             <h2
@@ -105,7 +105,7 @@ export default function StagingPsychologyPage() {
                 marginBottom: '24px',
               }}
             >
-              When we stage a home, we remove 30-50% of personal items and furniture. Yes, this makes rooms look larger—but more importantly, it gives the buyer's brain space to breathe. Suddenly, they can see themselves in the space. They can envision their own furniture, their own family moments. The home becomes a canvas for their dreams, not a museum of yours.
+              When we stage a home, we remove 30-50% of personal items and furniture. Yes, this makes rooms look larger - but more importantly, it gives the buyer's brain space to breathe. Suddenly, they can see themselves in the space. They can envision their own furniture, their own family moments. The home becomes a canvas for their dreams, not a museum of yours.
             </p>
 
             <h2
@@ -130,7 +130,7 @@ export default function StagingPsychologyPage() {
                 marginBottom: '24px',
               }}
             >
-              Color and lighting communicate before anything else. Bright, natural light is universally perceived as welcoming and healthy. Dark, dim interiors trigger subtle anxiety. This is evolutionary—our brains associate light with safety and darkness with threat.
+              Color and lighting communicate before anything else. Bright, natural light is universally perceived as welcoming and healthy. Dark, dim interiors trigger subtle anxiety. This is evolutionary - our brains associate light with safety and darkness with threat.
             </p>
 
             <p
@@ -142,7 +142,7 @@ export default function StagingPsychologyPage() {
                 marginBottom: '24px',
               }}
             >
-              When staging Snohomish County homes, I always focus on maximizing natural light. Open curtains, trim tree branches that block windows, and add strategic mirrors to reflect light throughout the space. For color, neutral tones—soft whites, warm grays, gentle beiges—create a sense of calm and allow buyers to project their own style onto the space. Bold, personal colors, while beautiful, can feel limiting. Staged homes should feel like a blank canvas, not someone else's statement.
+              When staging Snohomish County homes, I always focus on maximizing natural light. Open curtains, trim tree branches that block windows, and add strategic mirrors to reflect light throughout the space. For color, neutral tones - soft whites, warm grays, gentle beiges - create a sense of calm and allow buyers to project their own style onto the space. Bold, personal colors, while beautiful, can feel limiting. Staged homes should feel like a blank canvas, not someone else's statement.
             </p>
 
             <h2
@@ -167,7 +167,7 @@ export default function StagingPsychologyPage() {
                 marginBottom: '24px',
               }}
             >
-              Every room needs a story. A bedroom becomes a sanctuary—serene, with clean lines and a cozy but uncluttered aesthetic. A living room becomes a gathering place—comfortable seating arranged for conversation, warm lighting that says "spend time here." A kitchen becomes the heart of the home—clean, organized, with a little touch of life (fresh flowers, fresh fruit in a bowl).
+              Every room needs a story. A bedroom becomes a sanctuary - serene, with clean lines and a cozy but uncluttered aesthetic. A living room becomes a gathering place - comfortable seating arranged for conversation, warm lighting that says "spend time here." A kitchen becomes the heart of the home - clean, organized, with a little touch of life (fresh flowers, fresh fruit in a bowl).
             </p>
 
             <p
@@ -179,7 +179,7 @@ export default function StagingPsychologyPage() {
                 marginBottom: '24px',
               }}
             >
-              When buyers can see themselves gathering with family in the living room, or starting their morning in that bright kitchen, or relaxing in that peaceful bedroom, the home transforms from a property into a lifestyle. That emotional connection is what tips the scale from "interested" to "in love." And when buyers fall in love, they don't just make an offer—they make a strong one.
+              When buyers can see themselves gathering with family in the living room, or starting their morning in that bright kitchen, or relaxing in that peaceful bedroom, the home transforms from a property into a lifestyle. That emotional connection is what tips the scale from "interested" to "in love." And when buyers fall in love, they don't just make an offer - they make a strong one.
             </p>
 
             <h2
@@ -204,7 +204,7 @@ export default function StagingPsychologyPage() {
                 marginBottom: '24px',
               }}
             >
-              Don't underestimate the power of smell. The olfactory sense is directly connected to memory and emotion. When a home smells fresh and clean—not over-perfumed, but genuinely fresh—it signals care and cleanliness. Fresh coffee brewing, fresh-cut flowers, or the subtle scent of lavender can create positive associations.
+              Don't underestimate the power of smell. The olfactory sense is directly connected to memory and emotion. When a home smells fresh and clean - not over-perfumed, but genuinely fresh - it signals care and cleanliness. Fresh coffee brewing, fresh-cut flowers, or the subtle scent of lavender can create positive associations.
             </p>
 
             <p
@@ -216,7 +216,7 @@ export default function StagingPsychologyPage() {
                 marginBottom: '40px',
               }}
             >
-              I always tell my clients: clean the home thoroughly, bake fresh bread or cookies before a showing, and crack a window. The combination of cleanliness, the aroma of baked goods, and fresh air creates a warm, welcoming emotional experience that registers deeply in a buyer's brain. These aren't tricks—they're honest ways to show your home at its absolute best.
+              I always tell my clients: clean the home thoroughly, bake fresh bread or cookies before a showing, and crack a window. The combination of cleanliness, the aroma of baked goods, and fresh air creates a warm, welcoming emotional experience that registers deeply in a buyer's brain. These aren't tricks - they're honest ways to show your home at its absolute best.
             </p>
 
             {/* Related Posts Section */}

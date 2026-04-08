@@ -67,7 +67,7 @@ export default function ContactCTA() {
             margin: '32px 0 40px 0',
           }}
         >
-          I'd love to chat — no pressure, just real talk.
+          I'd love to chat  -  no pressure, just real talk.
         </p>
 
         {/* CTA Button */}
@@ -110,7 +110,7 @@ export default function ContactCTA() {
             margin: 0,
           }}
         >
-          Or call me directly — <a
+          Or call me directly  -  <a
             href="tel:+14253439926"
             style={{
               color: '#FFFFFF',

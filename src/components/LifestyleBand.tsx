@@ -99,7 +99,7 @@ export default function LifestyleBand() {
           }}
         >
           I know which streets flood in November, which coffee shops are worth the wait, and
-          which neighborhoods still have that small-town feel. This isn't just my job—it's my
+          which neighborhoods still have that small-town feel. This isn't just my job - it's my
           home.
         </p>
 
@@ -113,7 +113,7 @@ export default function LifestyleBand() {
             margin: '32px 0 0 0',
           }}
         >
-          — yes, I actually walk these streets
+           -  yes, I actually walk these streets
         </p>
       </div>
     </section>

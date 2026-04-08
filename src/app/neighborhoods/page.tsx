@@ -183,7 +183,7 @@ export default function NeighborhoodsPage() {
                       position: 'absolute',
                       inset: 0,
                       background:
-                        'linear-gradient(135deg, rgba(47, 82, 51, 0.6) 0%, rgba(184, 132, 92, 0.4) 100%)',
+                        'linear-gradient(to top, rgba(0, 0, 0, 0.82) 0%, rgba(0, 0, 0, 0.35) 55%, transparent 100%)',
                       transition: 'all 0.3s ease',
                     }}
                   />

@@ -399,7 +399,7 @@ export default function SellersPage() {
                   fontWeight: 600,
                 }}
               >
-                — Martinez F., Seattle
+                 -  Martinez F., Seattle
               </p>
             </div>
 
@@ -440,7 +440,7 @@ export default function SellersPage() {
                   fontWeight: 600,
                 }}
               >
-                — David & Susan C., Everett
+                 -  David & Susan C., Everett
               </p>
             </div>
 
@@ -481,7 +481,7 @@ export default function SellersPage() {
                   fontWeight: 600,
                 }}
               >
-                — Jennifer B., Mill Creek
+                 -  Jennifer B., Mill Creek
               </p>
             </div>
           </div>
@@ -849,7 +849,7 @@ export default function SellersPage() {
             margin: '24px 0 0 0',
           }}
         >
-          Or call me directly —{' '}
+          Or call me directly  - {' '}
           <a
             href="tel:+14253439926"
             style={{
@@ -867,11 +867,11 @@ export default function SellersPage() {
         faqs={[
           {
             question: "How does Kim determine the right listing price for my home?",
-            answer: "Kim conducts a comprehensive Comparative Market Analysis (CMA) using recent sales, active listings, and current market trends specific to your neighborhood. She combines data with her firsthand knowledge of what buyers are actually paying — not just what homes are listed for.",
+            answer: "Kim conducts a comprehensive Comparative Market Analysis (CMA) using recent sales, active listings, and current market trends specific to your neighborhood. She combines data with her firsthand knowledge of what buyers are actually paying  -  not just what homes are listed for.",
           },
           {
             question: "Do I need to stage my home before listing?",
-            answer: "Kim's staging approach is a core part of her selling strategy, not an optional add-on. Staged homes sell significantly faster and for more money. Kim handles the staging process for you — from decluttering and furniture arrangement to styling — so your home makes a powerful first impression.",
+            answer: "Kim's staging approach is a core part of her selling strategy, not an optional add-on. Staged homes sell significantly faster and for more money. Kim handles the staging process for you  -  from decluttering and furniture arrangement to styling  -  so your home makes a powerful first impression.",
           },
           {
             question: "How long will it take to sell my home?",
@@ -879,11 +879,11 @@ export default function SellersPage() {
           },
           {
             question: "What if my home needs repairs before I can list?",
-            answer: "Kim coordinates pre-sale repairs through her trusted contractor network at no upfront cost — you pay from your proceeds at closing. She'll identify which repairs will actually move the needle on your sale price and skip the ones that won't.",
+            answer: "Kim coordinates pre-sale repairs through her trusted contractor network at no upfront cost  -  you pay from your proceeds at closing. She'll identify which repairs will actually move the needle on your sale price and skip the ones that won't.",
           },
           {
             question: "What are your commission fees?",
-            answer: "Kim will walk you through all costs and fees in your first consultation so there are no surprises. Her goal is to maximize your net proceeds — not just your sale price.",
+            answer: "Kim will walk you through all costs and fees in your first consultation so there are no surprises. Her goal is to maximize your net proceeds  -  not just your sale price.",
           },
         ]}
       />

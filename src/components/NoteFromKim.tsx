@@ -82,7 +82,7 @@ export default function NoteFromKim() {
             fontWeight: 600,
           }}
         >
-          — Kim
+           -  Kim
         </p>
       </div>
     </section>
