@@ -7,13 +7,13 @@ const picks = [
     id: 1,
     image: '/images/hero-02-warm-kitchen.jpg',
     title: 'Narrative Coffee, Everett',
-    description: 'My Tuesday morning ritual. The oat milk latte is unreal.',
+    description: 'My Tuesday morning ritual. In a building older than your grandma — and makes better coffee than anywhere in town.',
   },
   {
     id: 2,
     image: '/images/lifestyle-01-farmers-market.jpg',
-    title: 'The Loft, Mill Creek',
-    description: 'Best brunch spot for new homeowners to celebrate closing.',
+    title: 'Totem Family Dining, Everett',
+    description: "Been feeding Everett since 1953 and the portions haven't gotten smaller. Come hungry, leave embarrassingly full.",
   },
   {
     id: 3,
