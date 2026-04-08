@@ -297,7 +297,7 @@ export default function Nav() {
             <h1 style={brandStyle}>Kim Pelham</h1>
           </Link>
           <p id="phone-display" style={phoneStyle}>
-            (425) 343-9926
+            (425) 250-9422
           </p>
         </div>
 
@@ -394,7 +394,7 @@ export default function Nav() {
             target.style.transform = 'translateY(0)';
           }}
           onClick={() => {
-            const phoneNumber = '(425) 343-9926';
+            const phoneNumber = '(425) 250-9422';
             window.location.href = `tel:${phoneNumber.replace(/\D/g, '')}`;
           }}
           aria-label="Call Kim Pelham"
@@ -511,7 +511,7 @@ export default function Nav() {
               e.currentTarget.style.transform = 'translateY(0)';
             }}
             onClick={() => {
-              window.location.href = `tel:4253439926`;
+              window.location.href = `tel:14252509422`;
               setMobileMenuOpen(false);
             }}
             aria-label="Call Kim Pelham"

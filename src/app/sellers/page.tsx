@@ -851,14 +851,14 @@ export default function SellersPage() {
         >
           Or call me directly  - {' '}
           <a
-            href="tel:+14253439926"
+            href="tel:+14252509422"
             style={{
               color: '#F8F5F0',
               textDecoration: 'underline',
               fontWeight: 600,
             }}
           >
-            (425) 343-9926
+            (425) 250-9422
           </a>
         </p>
       </section>

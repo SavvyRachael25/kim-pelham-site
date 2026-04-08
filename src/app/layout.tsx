@@ -50,7 +50,7 @@ export default function RootLayout({
                   "name": "Kim Pelham",
                   "description": "Snohomish County real estate broker with 14 years of experience. Specializing in residential buying, selling, staging, and senior transitions across Everett, Bothell, Mill Creek, and the greater Snohomish County area.",
                   "url": "https://kim-pelham-site.vercel.app",
-                  "telephone": "+14253439926",
+                  "telephone": "+14252509422",
                   "image": "https://kim-pelham-site.vercel.app/images/kim-headshot-msh.jpg",
                   "jobTitle": "Real Estate Broker",
                   "knowsAbout": ["residential real estate", "home buying", "home selling", "home staging", "senior real estate transitions", "Snohomish County real estate market"],
@@ -76,7 +76,7 @@ export default function RootLayout({
                   "name": "Kim Pelham - The Pelham Group NW",
                   "description": "Full-service real estate brokerage serving Snohomish County, WA",
                   "url": "https://kim-pelham-site.vercel.app",
-                  "telephone": "+14253439926",
+                  "telephone": "+14252509422",
                   "address": {
                     "@type": "PostalAddress",
                     "addressLocality": "Everett",

@@ -106,7 +106,7 @@ export default function Footer() {
             {/* Call + Text */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
               <a
-                href="tel:+14253439926"
+                href="tel:+14252509422"
                 style={{ display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'var(--font-body)', fontSize: '0.95rem', color: '#B8845C', textDecoration: 'none', transition: 'color 0.2s' }}
                 onMouseEnter={(e) => { e.currentTarget.style.color = '#d4a574'; }}
                 onMouseLeave={(e) => { e.currentTarget.style.color = '#B8845C'; }}
@@ -114,10 +114,10 @@ export default function Footer() {
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                   <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 1.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.76a16 16 0 0 0 6 6l.86-.86a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7a2 2 0 0 1 1.72 2.01z"/>
                 </svg>
-                Call (425) 343-9926
+                Call (425) 250-9422
               </a>
               <a
-                href="sms:+14253439926"
+                href="sms:+14252509422"
                 style={{ display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'var(--font-body)', fontSize: '0.95rem', color: '#999', textDecoration: 'none', transition: 'color 0.2s' }}
                 onMouseEnter={(e) => { e.currentTarget.style.color = '#B8845C'; }}
                 onMouseLeave={(e) => { e.currentTarget.style.color = '#999'; }}
