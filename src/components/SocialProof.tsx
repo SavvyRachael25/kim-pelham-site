@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function SocialProof() {
   return (
     <section
@@ -108,72 +110,26 @@ export default function SocialProof() {
           </p>
         </a>
 
-        {/* Top Producer Badge */}
+        {/* Best of SnoCo Badge */}
         <div style={{ textAlign: 'center' }}>
-          <div
-            style={{
-              backgroundColor: '#2F5233',
-              color: '#FFFFFF',
-              padding: '8px 16px',
-              borderRadius: '4px',
-              marginBottom: '8px',
-            }}
-          >
-            <p
-              style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '13px',
-                fontWeight: 700,
-                margin: 0,
-              }}
-            >
-              Top Producer
-            </p>
-          </div>
-          <p
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: '13px',
-              color: '#9B9B9B',
-              margin: 0,
-            }}
-          >
-            2024
-          </p>
+          <Image
+            src="/images/best-of-snoco-2024-no-background.png"
+            alt="Best of Snohomish County 2024"
+            width={100}
+            height={100}
+            style={{ objectFit: 'contain' }}
+          />
         </div>
 
-        {/* Specialist Badge */}
+        {/* Best of Zillow Badge */}
         <div style={{ textAlign: 'center' }}>
-          <div
-            style={{
-              backgroundColor: '#B8845C',
-              color: '#FFFFFF',
-              padding: '8px 16px',
-              borderRadius: '4px',
-              marginBottom: '8px',
-            }}
-          >
-            <p
-              style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '13px',
-                fontWeight: 700,
-                margin: 0,
-              }}
-            >
-              Specialist
-            </p>
-          </div>
-          <p
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: '13px',
-              color: '#9B9B9B',
-              margin: 0,
-            }}
-          >
-            Snohomish County
-          </p>
+          <Image
+            src="/images/best-of-zillow-portrait.jpg"
+            alt="Best of Zillow"
+            width={80}
+            height={100}
+            style={{ objectFit: 'contain', borderRadius: '4px' }}
+          />
         </div>
       </div>
     </section>

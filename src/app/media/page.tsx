@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
@@ -327,30 +328,15 @@ export default function MediaPage() {
                 gap: '32px',
               }}
             >
-              {/* Award 1 */}
+              {/* Award 1 - Best of SnoCo */}
               <div style={{ textAlign: 'center' }}>
-                <div
-                  style={{
-                    width: '80px',
-                    height: '80px',
-                    margin: '0 auto 16px',
-                    borderRadius: '50%',
-                    backgroundColor: 'var(--color-clay)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
-                  <span
-                    style={{
-                      fontFamily: 'var(--font-heading)',
-                      fontSize: '2rem',
-                      fontWeight: 400,
-                      color: '#fff',
-                    }}
-                  >
-                    ★
-                  </span>
+                <div style={{ margin: '0 auto 16px', width: '100px', height: '100px', position: 'relative' }}>
+                  <Image
+                    src="/images/best-of-snoco-2024-no-background.png"
+                    alt="Best of Snohomish County 2024"
+                    fill
+                    style={{ objectFit: 'contain' }}
+                  />
                 </div>
                 <h3
                   style={{
@@ -360,7 +346,7 @@ export default function MediaPage() {
                     color: 'var(--color-forest)',
                   }}
                 >
-                  14 Years of Excellence
+                  Best of Snohomish County 2024
                 </h3>
               </div>
 
@@ -438,32 +424,15 @@ export default function MediaPage() {
                 </h3>
               </div>
 
-              {/* Award 4 */}
+              {/* Award 4 - Best of Zillow */}
               <div style={{ textAlign: 'center' }}>
-                <div
-                  style={{
-                    width: '80px',
-                    height: '80px',
-                    margin: '0 auto 16px',
-                    borderRadius: '50%',
-                    backgroundColor: 'var(--color-clay)',
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                  }}
-                >
-                  <span
-                    style={{
-                      fontFamily: 'var(--font-body)',
-                      fontSize: '0.65rem',
-                      fontWeight: 600,
-                      color: '#fff',
-                      textAlign: 'center',
-                      padding: '8px',
-                    }}
-                  >
-                    SRES
-                  </span>
+                <div style={{ margin: '0 auto 16px', width: '80px', height: '100px', position: 'relative' }}>
+                  <Image
+                    src="/images/best-of-zillow-portrait.jpg"
+                    alt="Best of Zillow"
+                    fill
+                    style={{ objectFit: 'contain', borderRadius: '4px' }}
+                  />
                 </div>
                 <h3
                   style={{
@@ -473,7 +442,7 @@ export default function MediaPage() {
                     color: 'var(--color-forest)',
                   }}
                 >
-                  Senior Real Estate Specialist
+                  Best of Zillow
                 </h3>
               </div>
 
