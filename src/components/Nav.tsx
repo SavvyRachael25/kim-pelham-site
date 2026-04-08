@@ -14,6 +14,16 @@ export default function Nav() {
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const menuRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
+
+  const openMenu = (label: string) => {
+    if (closeTimer.current) clearTimeout(closeTimer.current);
+    setOpenDropdown(label);
+  };
+
+  const scheduleClose = () => {
+    closeTimer.current = setTimeout(() => setOpenDropdown(null), 150);
+  };
 
   useEffect(() => {
     const handleScroll = () => setHasScroll(window.scrollY > 0);
@@ -262,8 +272,8 @@ export default function Nav() {
                 <div
                   key={item.label}
                   style={{ position: 'relative' }}
-                  onMouseEnter={() => setOpenDropdown(item.label)}
-                  onMouseLeave={() => setOpenDropdown(null)}
+                  onMouseEnter={() => openMenu(item.label)}
+                  onMouseLeave={scheduleClose}
                 >
                   <button
                     style={{
@@ -282,12 +292,15 @@ export default function Nav() {
                     <span style={navLinkUnderlineStyle(isOpen)} />
                   </button>
                   {isOpen && (
-                    <div style={{
+                    <div
+                      onMouseEnter={() => openMenu(item.label)}
+                      onMouseLeave={scheduleClose}
+                      style={{
                       position: 'absolute',
                       top: '100%',
                       left: '50%',
                       transform: 'translateX(-50%)',
-                      marginTop: '12px',
+                      paddingTop: '12px',
                       backgroundColor: '#FFFFFF',
                       border: '1px solid #E8E3DA',
                       borderRadius: '6px',
