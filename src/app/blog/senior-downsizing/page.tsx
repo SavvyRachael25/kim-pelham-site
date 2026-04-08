@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
+import InnerHero from '@/components/InnerHero';
 
 export default function SeniorDownsizingPage() {
   return (
@@ -11,57 +12,12 @@ export default function SeniorDownsizingPage() {
       <ScrollProgress />
       <Nav />
       <main>
-        {/* Hero Section */}
-        <section
-          style={{
-            background: `linear-gradient(135deg, var(--color-forest) 0%, #1f3823 100%)`,
-            position: 'relative',
-            overflow: 'hidden',
-            padding: '80px 20px',
-            minHeight: '300px',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <div
-            style={{
-              position: 'absolute',
-              inset: 0,
-              backgroundImage:
-                'radial-gradient(circle at 20% 50%, rgba(196, 162, 101, 0.1) 0%, transparent 50%), radial-gradient(circle at 80% 80%, rgba(196, 162, 101, 0.08) 0%, transparent 50%)',
-              pointerEvents: 'none',
-            }}
-          />
-          <div style={{ position: 'relative', zIndex: 1, maxWidth: '800px', textAlign: 'center' }}>
-            <h1
-              style={{
-                fontFamily: 'var(--font-heading)',
-                fontSize: 'clamp(2rem, 5vw, 3.5rem)',
-                fontWeight: 400,
-                color: 'var(--color-cream)',
-                marginBottom: '24px',
-              }}
-            >
-              Senior Downsizing: A Compassionate Guide to Your Next Chapter
-            </h1>
-            <div
-              style={{
-                display: 'flex',
-                justifyContent: 'center',
-                gap: '24px',
-                flexWrap: 'wrap',
-                fontFamily: 'var(--font-body)',
-                fontSize: '0.875rem',
-                color: 'rgba(248, 245, 240, 0.8)',
-              }}
-            >
-              <span>By Kim Pelham</span>
-              <span>February 28, 2026</span>
-              <span>7 min read</span>
-            </div>
-          </div>
-        </section>
+      <InnerHero
+        title="Senior Downsizing: A Compassionate Guide to Your Next Chapter"
+        subtitle="By Kim Pelham - February 28, 2026 - 7 min read"
+        image="/images/kim-with-door-cropped.jpg"
+        imageAlt="Senior downsizing guide"
+      />
 
         {/* Article Content */}
         <article style={{ padding: '80px 20px', backgroundColor: '#fff' }}>

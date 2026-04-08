@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
+import InnerHero from '@/components/InnerHero';
 import Link from 'next/link';
 
 interface Room {
@@ -27,70 +28,12 @@ export default function StagingPage() {
       <Nav />
       <ScrollProgress />
 
-      {/* Hero Section with Background Image */}
-      <section
-        style={{
-          position: 'relative',
-          height: '600px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'center',
-          overflow: 'hidden',
-          color: '#F8F5F0',
-        }}
-      >
-        <Image
-          src="/images/kim-with-client-on-couch.jpg"
-          alt="Beautiful staged living room"
-          fill
-          style={{
-            objectFit: 'cover',
-            objectPosition: 'center',
-          }}
-          priority
-          quality={90}
-        />
-        <div
-          style={{
-            position: 'absolute',
-            inset: 0,
-            backgroundColor: 'rgba(0, 0, 0, 0.5)',
-          }}
-        />
-        <div
-          style={{
-            position: 'relative',
-            zIndex: 1,
-            maxWidth: '700px',
-            padding: '40px 20px',
-            textAlign: 'center',
-          }}
-        >
-          <h1
-            style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: 'clamp(2.5rem, 6vw, 3.5rem)',
-              fontWeight: 400,
-              margin: '0 0 20px 0',
-              letterSpacing: '0.5px',
-            }}
-          >
-            Psychology-Driven Staging
-          </h1>
-          <p
-            style={{
-              fontSize: '1.25rem',
-              fontFamily: 'var(--font-body)',
-              fontWeight: 300,
-              margin: 0,
-              opacity: 0.95,
-              lineHeight: 1.6,
-            }}
-          >
-            We maximize your home's appeal — staging that sells faster and for more
-          </p>
-        </div>
-      </section>
+      <InnerHero
+        title="Psychology-Driven Staging"
+        subtitle="We maximize your home's appeal — staging that sells faster and for more"
+        image="/images/kim-with-client-on-couch.jpg"
+        imageAlt="Beautiful staged living room"
+      />
 
       {/* Intro Paragraph */}
       <section
