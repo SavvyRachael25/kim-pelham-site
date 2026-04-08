@@ -1,80 +1,75 @@
 'use client';
 
-import { useState, useEffect, useRef, useCallback } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+
+type NavItem =
+  | { label: string; href: string; children?: never }
+  | { label: string; href?: never; children: { label: string; href: string }[] };
 
 export default function Nav() {
   const [hasScroll, setHasScroll] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const menuRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
 
-  // Scroll shadow effect
   useEffect(() => {
-    const handleScroll = () => {
-      setHasScroll(window.scrollY > 0);
-    };
+    const handleScroll = () => setHasScroll(window.scrollY > 0);
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close menu on escape
   useEffect(() => {
     const handleEscape = (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && mobileMenuOpen) {
-        setMobileMenuOpen(false);
-        triggerRef.current?.focus();
+      if (e.key === 'Escape') {
+        if (openDropdown) { setOpenDropdown(null); return; }
+        if (mobileMenuOpen) { setMobileMenuOpen(false); triggerRef.current?.focus(); }
       }
     };
     window.addEventListener('keydown', handleEscape);
     return () => window.removeEventListener('keydown', handleEscape);
-  }, [mobileMenuOpen]);
+  }, [mobileMenuOpen, openDropdown]);
 
-  // Trap focus in mobile menu
   useEffect(() => {
     if (!mobileMenuOpen || !menuRef.current) return;
-
-    const focusableElements = menuRef.current.querySelectorAll(
-      'a, button, [tabindex]:not([tabindex="-1"])'
-    );
-    const firstElement = focusableElements[0] as HTMLElement;
-    const lastElement = focusableElements[focusableElements.length - 1] as HTMLElement;
-
+    const focusable = menuRef.current.querySelectorAll<HTMLElement>('a, button, [tabindex]:not([tabindex="-1"])');
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key !== 'Tab') return;
-
-      if (e.shiftKey) {
-        if (document.activeElement === firstElement) {
-          lastElement.focus();
-          e.preventDefault();
-        }
-      } else {
-        if (document.activeElement === lastElement) {
-          firstElement.focus();
-          e.preventDefault();
-        }
-      }
+      if (e.shiftKey) { if (document.activeElement === first) { last.focus(); e.preventDefault(); } }
+      else { if (document.activeElement === last) { first.focus(); e.preventDefault(); } }
     };
-
     menuRef.current.addEventListener('keydown', handleKeyDown);
-    firstElement?.focus();
-
+    first?.focus();
     return () => menuRef.current?.removeEventListener('keydown', handleKeyDown);
   }, [mobileMenuOpen]);
 
-  const navLinks = [
+  const navLinks: NavItem[] = [
     { label: 'Buy', href: '/buyers' },
     { label: 'Sell', href: '/sellers' },
     { label: 'Properties', href: '/properties' },
     { label: 'Neighborhoods', href: '/neighborhoods' },
-    { label: 'Staging', href: '/staging' },
-    { label: 'Home Repair', href: '/home-repair' },
-    { label: 'Senior Services', href: '/senior-services' },
-    { label: 'Community', href: '/community' },
-    { label: 'About', href: '/about' },
-    { label: 'Media', href: '/media' },
-    { label: 'Testimonials', href: '/testimonials' },
-    { label: 'Blog', href: '/blog' },
+    {
+      label: 'Services',
+      children: [
+        { label: 'Staging', href: '/staging' },
+        { label: 'Home Repair', href: '/home-repair' },
+        { label: 'Senior Services', href: '/senior-services' },
+        { label: 'Community', href: '/community' },
+      ],
+    },
+    {
+      label: 'About',
+      children: [
+        { label: 'About Kim', href: '/about' },
+        { label: 'Media & Press', href: '/media' },
+        { label: 'Testimonials', href: '/testimonials' },
+        { label: 'Blog', href: '/blog' },
+      ],
+    },
     { label: 'Contact', href: '/contact' },
   ];
 
@@ -123,14 +118,13 @@ export default function Nav() {
 
   const desktopNavStyle: React.CSSProperties = {
     display: 'flex',
-    gap: '1.25rem',
+    gap: '2rem',
     alignItems: 'center',
-    flexWrap: 'wrap',
   };
 
   const navLinkStyle = (isHovered: boolean): React.CSSProperties => ({
     fontFamily: 'var(--font-body)',
-    fontSize: '0.72rem',
+    fontSize: '0.78rem',
     fontWeight: 500,
     color: '#555',
     textTransform: 'uppercase',
@@ -261,17 +255,85 @@ export default function Nav() {
 
         {/* Desktop Navigation */}
         <div id="desktop-nav" style={desktopNavStyle}>
-          {navLinks.map((link) => {
+          {navLinks.map((item) => {
+            if ('children' in item && item.children) {
+              const isOpen = openDropdown === item.label;
+              return (
+                <div
+                  key={item.label}
+                  style={{ position: 'relative' }}
+                  onMouseEnter={() => setOpenDropdown(item.label)}
+                  onMouseLeave={() => setOpenDropdown(null)}
+                >
+                  <button
+                    style={{
+                      ...navLinkStyle(isOpen),
+                      background: 'none',
+                      border: 'none',
+                      cursor: 'pointer',
+                      padding: 0,
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '4px',
+                    }}
+                  >
+                    {item.label}
+                    <span style={{ fontSize: '0.6rem', marginTop: '1px' }}>{isOpen ? '▲' : '▼'}</span>
+                    <span style={navLinkUnderlineStyle(isOpen)} />
+                  </button>
+                  {isOpen && (
+                    <div style={{
+                      position: 'absolute',
+                      top: '100%',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      marginTop: '12px',
+                      backgroundColor: '#FFFFFF',
+                      border: '1px solid #E8E3DA',
+                      borderRadius: '6px',
+                      boxShadow: '0 8px 24px rgba(0,0,0,0.10)',
+                      minWidth: '180px',
+                      zIndex: 100,
+                      overflow: 'hidden',
+                    }}>
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          style={{
+                            display: 'block',
+                            padding: '0.75rem 1.25rem',
+                            fontFamily: 'var(--font-body)',
+                            fontSize: '0.85rem',
+                            color: '#2C2C2C',
+                            textDecoration: 'none',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.04em',
+                            borderBottom: '1px solid #F0EDE7',
+                            transition: 'background 0.2s',
+                          }}
+                          onMouseEnter={e => (e.currentTarget.style.background = '#F8F5F0')}
+                          onMouseLeave={e => (e.currentTarget.style.background = 'transparent')}
+                          onClick={() => setOpenDropdown(null)}
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            }
             const [isHovered, setIsHovered] = useState(false);
             return (
-              <div key={link.href} style={{ position: 'relative' }}>
+              <div key={item.href} style={{ position: 'relative' }}>
                 <Link
-                  href={link.href}
+                  href={item.href}
                   style={navLinkStyle(isHovered)}
                   onMouseEnter={() => setIsHovered(true)}
                   onMouseLeave={() => setIsHovered(false)}
                 >
-                  {link.label}
+                  {item.label}
                   <span style={navLinkUnderlineStyle(isHovered)} />
                 </Link>
               </div>
@@ -325,16 +387,55 @@ export default function Nav() {
           role="dialog"
           aria-label="Mobile navigation menu"
         >
-          {navLinks.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              style={mobileNavLinkStyle}
-              onClick={() => setMobileMenuOpen(false)}
-            >
-              {link.label}
-            </Link>
-          ))}
+          {navLinks.map((item) => {
+            if ('children' in item && item.children) {
+              const isExpanded = mobileExpanded === item.label;
+              return (
+                <div key={item.label}>
+                  <button
+                    onClick={() => setMobileExpanded(isExpanded ? null : item.label)}
+                    style={{
+                      ...mobileNavLinkStyle,
+                      background: 'none',
+                      border: 'none',
+                      cursor: 'pointer',
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: '8px',
+                      width: '100%',
+                      padding: 0,
+                    }}
+                  >
+                    {item.label} <span style={{ fontSize: '0.7rem' }}>{isExpanded ? '▲' : '▼'}</span>
+                  </button>
+                  {isExpanded && (
+                    <div style={{ paddingLeft: '1rem', marginTop: '0.75rem', display: 'flex', flexDirection: 'column', gap: '1rem' }}>
+                      {item.children.map((child) => (
+                        <Link
+                          key={child.href}
+                          href={child.href}
+                          style={{ ...mobileNavLinkStyle, fontSize: '0.95rem', color: '#888' }}
+                          onClick={() => { setMobileMenuOpen(false); setMobileExpanded(null); }}
+                        >
+                          {child.label}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              );
+            }
+            return (
+              <Link
+                key={item.href}
+                href={item.href}
+                style={mobileNavLinkStyle}
+                onClick={() => setMobileMenuOpen(false)}
+              >
+                {item.label}
+              </Link>
+            );
+          })}
           <button
             style={mobileButtonStyle}
             onMouseEnter={(e) => {
