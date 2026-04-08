@@ -5,6 +5,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
+import FAQSection from '@/components/FAQSection';
 import Link from 'next/link';
 
 interface Service {
@@ -197,7 +198,7 @@ export default function SeniorServicesPage() {
           <div
             style={{
               display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(500px, 1fr))',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
               gap: '40px',
             }}
           >
@@ -447,6 +448,32 @@ export default function SeniorServicesPage() {
         </div>
       </section>
 
+      <FAQSection
+        backgroundColor="#FFFFFF"
+        faqs={[
+          {
+            question: "Does Kim's senior concierge service cost extra?",
+            answer: "We start with a no-cost consultation to understand your situation. Service costs vary based on what you need and for how long. Many seniors find that the coordination Kim provides saves them significant time, stress, and money compared to managing everything alone.",
+          },
+          {
+            question: "My parent lives out of state — can Kim help coordinate everything remotely?",
+            answer: "Yes. Kim regularly works with adult children who are geographically separated from their parents. She serves as the trusted local point of contact, coordinating services, attending appointments, and keeping families informed every step of the way.",
+          },
+          {
+            question: "We're not ready to sell yet — can Kim still help with other senior services?",
+            answer: "Absolutely. Real estate is just one part of what Kim offers. She can assist with daily tasks, home care coordination, medical equipment navigation, estate planning support, and more — completely independent of any real estate transaction.",
+          },
+          {
+            question: "How does the downsizing process typically work?",
+            answer: "Kim starts with a consultation to understand your timeline, priorities, and emotional needs. She helps you evaluate your housing options, coordinates any necessary repairs or staging, and manages the entire process so you can focus on the transition itself — not the logistics.",
+          },
+          {
+            question: "What communities or care options does Kim work with?",
+            answer: "Kim has built relationships with trusted senior living communities, home care agencies, and service providers across Snohomish County. She connects you with options that fit your budget, health needs, and lifestyle preferences.",
+          },
+        ]}
+      />
+
       {/* CTA Section */}
       <section
         style={{
@@ -484,7 +511,7 @@ export default function SeniorServicesPage() {
             through this important chapter of your life.
           </p>
           <Link
-            href="#contact"
+            href="/contact"
             style={{
               display: 'inline-block',
               backgroundColor: '#B8845C',

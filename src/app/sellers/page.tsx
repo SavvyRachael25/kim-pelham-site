@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import Link from 'next/link';
 import InnerHero from '@/components/InnerHero';
+import FAQSection from '@/components/FAQSection';
 import { useEffect, useRef, useState } from 'react';
 
 export default function SellersPage() {
@@ -850,17 +851,42 @@ export default function SellersPage() {
         >
           Or call me directly —{' '}
           <a
-            href="tel:+1234567890"
+            href="tel:+14253439926"
             style={{
               color: '#F8F5F0',
               textDecoration: 'underline',
               fontWeight: 600,
             }}
           >
-            (123) 456-7890
+            (425) 343-9926
           </a>
         </p>
       </section>
+
+      <FAQSection
+        faqs={[
+          {
+            question: "How does Kim determine the right listing price for my home?",
+            answer: "Kim conducts a comprehensive Comparative Market Analysis (CMA) using recent sales, active listings, and current market trends specific to your neighborhood. She combines data with her firsthand knowledge of what buyers are actually paying — not just what homes are listed for.",
+          },
+          {
+            question: "Do I need to stage my home before listing?",
+            answer: "Kim's staging approach is a core part of her selling strategy, not an optional add-on. Staged homes sell significantly faster and for more money. Kim handles the staging process for you — from decluttering and furniture arrangement to styling — so your home makes a powerful first impression.",
+          },
+          {
+            question: "How long will it take to sell my home?",
+            answer: "With Kim's full marketing system, well-priced homes in Snohomish County typically go under contract within 1–2 weeks. Her average sale-to-list ratio is 104.4%, meaning her clients consistently sell above asking price.",
+          },
+          {
+            question: "What if my home needs repairs before I can list?",
+            answer: "Kim coordinates pre-sale repairs through her trusted contractor network at no upfront cost — you pay from your proceeds at closing. She'll identify which repairs will actually move the needle on your sale price and skip the ones that won't.",
+          },
+          {
+            question: "What are your commission fees?",
+            answer: "Kim will walk you through all costs and fees in your first consultation so there are no surprises. Her goal is to maximize your net proceeds — not just your sale price.",
+          },
+        ]}
+      />
 
       <Footer />
       <ScrollProgress />

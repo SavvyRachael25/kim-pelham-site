@@ -3,6 +3,44 @@
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 
+function NavLinkItem({ href, label }: { href: string; label: string }) {
+  const [isHovered, setIsHovered] = useState(false);
+  return (
+    <div style={{ position: 'relative' }}>
+      <Link
+        href={href}
+        style={{
+          fontFamily: 'var(--font-body)',
+          fontSize: '0.78rem',
+          fontWeight: 500,
+          color: '#555',
+          textTransform: 'uppercase' as const,
+          letterSpacing: '0.06em',
+          textDecoration: 'none',
+          position: 'relative',
+          transition: 'color 0.3s ease',
+          paddingBottom: '4px',
+        }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        {label}
+        <span
+          style={{
+            position: 'absolute',
+            bottom: 0,
+            left: 0,
+            height: '2px',
+            background: '#B8845C',
+            width: isHovered ? '100%' : '0%',
+            transition: 'width 0.3s ease',
+          }}
+        />
+      </Link>
+    </div>
+  );
+}
+
 type NavItem =
   | { label: string; href: string; children?: never }
   | { label: string; href?: never; children: { label: string; href: string }[] };
@@ -276,6 +314,8 @@ export default function Nav() {
                   onMouseLeave={scheduleClose}
                 >
                   <button
+                    aria-haspopup="true"
+                    aria-expanded={isOpen}
                     style={{
                       ...navLinkStyle(isOpen),
                       background: 'none',
@@ -337,20 +377,7 @@ export default function Nav() {
                 </div>
               );
             }
-            const [isHovered, setIsHovered] = useState(false);
-            return (
-              <div key={item.href} style={{ position: 'relative' }}>
-                <Link
-                  href={item.href}
-                  style={navLinkStyle(isHovered)}
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                >
-                  {item.label}
-                  <span style={navLinkUnderlineStyle(isHovered)} />
-                </Link>
-              </div>
-            );
+            return <NavLinkItem key={item.href} href={item.href} label={item.label} />;
           })}
         </div>
 

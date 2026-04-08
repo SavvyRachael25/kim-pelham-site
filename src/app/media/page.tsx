@@ -727,8 +727,10 @@ export default function MediaPage() {
               Interested in featuring Kim Pelham or The Pelham Group NW? Download our press kit with photos, biography, and key statistics.
             </p>
             <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-              <button
+              <a
+                href="mailto:hello@thepelhamgroupnw.com?subject=Press%20Kit%20Request"
                 style={{
+                  display: 'inline-block',
                   padding: '16px 40px',
                   backgroundColor: 'var(--color-clay)',
                   color: '#fff',
@@ -739,6 +741,7 @@ export default function MediaPage() {
                   border: 'none',
                   cursor: 'pointer',
                   transition: 'all 0.3s',
+                  textDecoration: 'none',
                 }}
                 onMouseEnter={(e) => {
                   e.currentTarget.style.backgroundColor = '#a0743d';
@@ -751,8 +754,8 @@ export default function MediaPage() {
                   e.currentTarget.style.boxShadow = 'none';
                 }}
               >
-                Download Press Kit
-              </button>
+                Request Press Kit
+              </a>
             </div>
 
             <div style={{ marginTop: '60px', padding: '32px', backgroundColor: 'var(--color-cream)', borderRadius: '4px' }}>

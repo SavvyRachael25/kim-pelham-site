@@ -5,6 +5,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
+import FAQSection from '@/components/FAQSection';
 import Link from 'next/link';
 
 interface Room {
@@ -319,6 +320,32 @@ export default function StagingPage() {
         </div>
       </section>
 
+      <FAQSection
+        backgroundColor="#FFFFFF"
+        faqs={[
+          {
+            question: "Does staging really make a difference in sale price?",
+            answer: "Absolutely. Staged homes sell up to 300% faster and consistently for more money. Buyers make emotional decisions first and logical decisions second. When a home is staged well, buyers can picture themselves living there — and that emotional connection translates directly to stronger offers.",
+          },
+          {
+            question: "How much does professional staging cost?",
+            answer: "The cost varies based on your home's size and what's needed. For Kim's clients, staging is built into her selling strategy — she'll walk you through exactly what's involved and what the expected return on investment is at your consultation.",
+          },
+          {
+            question: "Will Kim be staging my home herself?",
+            answer: "Yes. Kim personally oversees and executes the staging process. She's not farming it out to a third party. Her eye for space, buyer psychology, and design comes from years of experience selling in this market.",
+          },
+          {
+            question: "Do I need to move my furniture out for staging?",
+            answer: "Not necessarily. Kim evaluates your existing furniture and decor, and stages around what you have — removing what doesn't serve the space and repositioning or supplementing what does. Partial or full staging recommendations depend on your specific home.",
+          },
+          {
+            question: "What rooms are most important to stage?",
+            answer: "Living rooms, kitchens, and master bedrooms have the highest impact on buyers. Entryways and outdoor spaces also matter significantly for first impressions. Kim stages all key areas — not just the ones that photograph well.",
+          },
+        ]}
+      />
+
       {/* CTA Section */}
       <section
         style={{
@@ -356,7 +383,7 @@ export default function StagingPage() {
             sell faster and for more.
           </p>
           <Link
-            href="#contact"
+            href="/contact"
             style={{
               display: 'inline-block',
               backgroundColor: '#B8845C',

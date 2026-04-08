@@ -129,7 +129,7 @@ export default function TestimonialsPage() {
         <div
           style={{
             display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(500px, 1fr))',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
             gap: '40px',
             alignItems: 'start',
           }}
@@ -264,7 +264,7 @@ export default function TestimonialsPage() {
             We'd love to hear about your experience. Share your story on Google Reviews and help other families discover the support they need.
           </p>
           <Link
-            href="https://g.co/kgs"
+            href="https://www.google.com/search?q=pelham+group+nw+reviews"
             target="_blank"
             rel="noopener noreferrer"
             style={{

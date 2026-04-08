@@ -5,6 +5,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
+import FAQSection from '@/components/FAQSection';
 
 export default function HomeRepairPage() {
   return (
@@ -593,6 +594,31 @@ export default function HomeRepairPage() {
             </div>
           </div>
         </section>
+
+        <FAQSection
+          faqs={[
+            {
+              question: "Do I have to pay for repairs out of pocket?",
+              answer: "No. Kim's repair program allows you to complete pre-sale improvements with no upfront cost. The work is paid from your sale proceeds at closing — so you invest in your home's value without touching your savings.",
+            },
+            {
+              question: "How do I know which repairs are worth doing?",
+              answer: "Kim evaluates your home strategically and only recommends repairs that will meaningfully impact your sale price or speed. She won't suggest expensive renovations with a low return on investment — every recommendation is based on what Snohomish County buyers are actually looking for.",
+            },
+            {
+              question: "Who does the actual repair work?",
+              answer: "Kim works with SMART Building Solutions, a trusted network of licensed, insured contractors who specialize in pre-sale home preparation. All work is completed to high quality standards, on time, and on budget.",
+            },
+            {
+              question: "How long does the repair process take before I can list?",
+              answer: "Most pre-sale repair projects are completed within 2–4 weeks depending on scope. Kim manages the entire timeline to ensure your home is market-ready as efficiently as possible.",
+            },
+            {
+              question: "Can I use my own contractors?",
+              answer: "You're welcome to. Kim's primary goal is that your home looks its best before it hits the market. If you have trusted contractors you prefer to use, she'll coordinate with them as part of the overall preparation plan.",
+            },
+          ]}
+        />
 
         {/* CTA Section */}
         <section style={{ padding: '80px 20px', backgroundColor: 'var(--color-cream)' }}>

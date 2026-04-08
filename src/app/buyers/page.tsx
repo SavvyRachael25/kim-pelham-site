@@ -6,6 +6,7 @@ import ScrollProgress from '@/components/ScrollProgress';
 import Image from 'next/image';
 import Link from 'next/link';
 import InnerHero from '@/components/InnerHero';
+import FAQSection from '@/components/FAQSection';
 import { useEffect, useRef, useState } from 'react';
 
 export default function BuyersPage() {
@@ -643,6 +644,32 @@ export default function BuyersPage() {
           </div>
         </div>
       </section>
+
+      <FAQSection
+        backgroundColor="#F8F5F0"
+        faqs={[
+          {
+            question: "Do I need to be pre-approved before working with a buyer's agent?",
+            answer: "It's not required, but getting pre-approved early is strongly recommended. It tells you exactly what you can afford, makes your offers more competitive, and shows sellers you're a serious buyer. Kim works with trusted local lenders who can get you pre-approved quickly.",
+          },
+          {
+            question: "How long does it typically take to find and close on a home in Snohomish County?",
+            answer: "On average, buyers work with Kim for 2–4 months from initial search to closing. The timeline varies based on market conditions, your criteria, and how quickly the right home appears. In competitive markets, acting fast is key — Kim is highly responsive and will keep you one step ahead.",
+          },
+          {
+            question: "What does it cost to work with a buyer's agent?",
+            answer: "In most transactions, the seller's side covers the buyer's agent commission, so working with Kim typically costs you nothing out of pocket. She'll explain exactly how compensation works for your specific transaction at your first consultation.",
+          },
+          {
+            question: "What areas does Kim specialize in?",
+            answer: "Kim specializes in Snohomish County and the greater Eastside, including Everett, Bothell, Mill Creek, Mukilteo, Edmonds, Lynnwood, Marysville, Lake Stevens, and surrounding communities. She has deep knowledge of neighborhoods, schools, and local market trends.",
+          },
+          {
+            question: "How competitive is the market — will I lose out to cash buyers?",
+            answer: "The Snohomish County market is competitive, but it's very winnable. Kim knows how to structure offers that stand out — from escalation clauses to personal letters to flexible closing timelines. Her negotiation track record speaks for itself.",
+          },
+        ]}
+      />
 
       {/* ========== CTA SECTION ========== */}
       <section
