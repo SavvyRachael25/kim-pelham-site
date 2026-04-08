@@ -65,10 +65,17 @@ export default function Nav() {
   const navLinks = [
     { label: 'Buy', href: '/buyers' },
     { label: 'Sell', href: '/sellers' },
+    { label: 'Properties', href: '/properties' },
     { label: 'Neighborhoods', href: '/neighborhoods' },
-    { label: 'About', href: '/about' },
-    { label: 'Blog', href: '/blog' },
     { label: 'Staging', href: '/staging' },
+    { label: 'Home Repair', href: '/home-repair' },
+    { label: 'Senior Services', href: '/senior-services' },
+    { label: 'Community', href: '/community' },
+    { label: 'About', href: '/about' },
+    { label: 'Media', href: '/media' },
+    { label: 'Testimonials', href: '/testimonials' },
+    { label: 'Blog', href: '/blog' },
+    { label: 'Contact', href: '/contact' },
   ];
 
   const navStyle: React.CSSProperties = {
@@ -116,13 +123,14 @@ export default function Nav() {
 
   const desktopNavStyle: React.CSSProperties = {
     display: 'flex',
-    gap: '2.5rem',
+    gap: '1.25rem',
     alignItems: 'center',
+    flexWrap: 'wrap',
   };
 
   const navLinkStyle = (isHovered: boolean): React.CSSProperties => ({
     fontFamily: 'var(--font-body)',
-    fontSize: '0.78rem',
+    fontSize: '0.72rem',
     fontWeight: 500,
     color: '#555',
     textTransform: 'uppercase',
