@@ -160,7 +160,7 @@ export default function Nav() {
   const phoneStyle: React.CSSProperties = {
     fontFamily: 'var(--font-handwritten)',
     fontSize: '0.9rem',
-    color: '#888',
+    color: '#555',
     margin: 0,
   };
 
@@ -230,20 +230,20 @@ export default function Nav() {
   const mobileMenuStyle: React.CSSProperties = {
     position: 'fixed',
     inset: 0,
-    background: 'rgba(248, 245, 240, 0.98)',
-    zIndex: 80,
+    background: '#2F5233',
+    zIndex: 100,
     display: 'flex',
     flexDirection: 'column',
     padding: '6rem 2rem 2rem',
     gap: '2rem',
-    backdropFilter: 'blur(8px)',
+    overflowY: 'auto',
   };
 
   const mobileNavLinkStyle: React.CSSProperties = {
     fontFamily: 'var(--font-body)',
     fontSize: '1.1rem',
     fontWeight: 500,
-    color: '#555',
+    color: '#F8F5F0',
     textTransform: 'uppercase',
     letterSpacing: '0.06em',
     textDecoration: 'none',
@@ -252,8 +252,8 @@ export default function Nav() {
 
   const mobileButtonStyle: React.CSSProperties = {
     fontFamily: 'var(--font-handwritten)',
-    background: '#2F5233',
-    color: '#F8F5F0',
+    background: '#B8845C',
+    color: '#FFFFFF',
     border: 'none',
     borderRadius: '2px',
     padding: '1rem 1.5rem',
@@ -427,6 +427,30 @@ export default function Nav() {
           role="dialog"
           aria-label="Mobile navigation menu"
         >
+          {/* Close button */}
+          <button
+            onClick={() => setMobileMenuOpen(false)}
+            aria-label="Close navigation menu"
+            style={{
+              position: 'absolute',
+              top: '1.5rem',
+              right: '1.5rem',
+              background: 'none',
+              border: 'none',
+              cursor: 'pointer',
+              color: '#F8F5F0',
+              fontSize: '1.75rem',
+              lineHeight: 1,
+              padding: '0.25rem',
+              minWidth: '44px',
+              minHeight: '44px',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+            }}
+          >
+            ✕
+          </button>
           {navLinks.map((item) => {
             if ('children' in item && item.children) {
               const isExpanded = mobileExpanded === item.label;
@@ -454,7 +478,7 @@ export default function Nav() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          style={{ ...mobileNavLinkStyle, fontSize: '0.95rem', color: '#888' }}
+                          style={{ ...mobileNavLinkStyle, fontSize: '0.95rem', color: 'rgba(248,245,240,0.75)' }}
                           onClick={() => { setMobileMenuOpen(false); setMobileExpanded(null); }}
                         >
                           {child.label}
@@ -479,16 +503,18 @@ export default function Nav() {
           <button
             style={mobileButtonStyle}
             onMouseEnter={(e) => {
-              Object.assign(e.currentTarget.style, buttonHoverStyle);
+              e.currentTarget.style.background = '#A07550';
+              e.currentTarget.style.transform = 'translateY(-1px)';
             }}
             onMouseLeave={(e) => {
-              e.currentTarget.style.background = '#2F5233';
+              e.currentTarget.style.background = '#B8845C';
               e.currentTarget.style.transform = 'translateY(0)';
             }}
             onClick={() => {
               window.location.href = `tel:4253439926`;
               setMobileMenuOpen(false);
             }}
+            aria-label="Call Kim Pelham"
           >
             Talk to Kim
           </button>

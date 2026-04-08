@@ -38,7 +38,7 @@ export default function Footer() {
   const taglineStyle: React.CSSProperties = {
     fontFamily: 'var(--font-handwritten)',
     fontSize: '1rem',
-    color: '#666',
+    color: '#999',
     margin: 0,
   };
 
@@ -118,20 +118,20 @@ export default function Footer() {
   const copyrightStyle: React.CSSProperties = {
     fontFamily: 'var(--font-body)',
     fontSize: '0.85rem',
-    color: '#666',
+    color: '#aaa',
     margin: 0,
   };
 
   const builtWithStyle: React.CSSProperties = {
     fontFamily: 'var(--font-handwritten)',
     fontSize: '0.9rem',
-    color: '#666',
+    color: '#aaa',
   };
 
   const brokerageStyle: React.CSSProperties = {
     fontFamily: 'var(--font-body)',
     fontSize: '0.8rem',
-    color: '#555',
+    color: '#aaa',
     textAlign: 'center',
     paddingTop: '1rem',
     marginTop: '1rem',

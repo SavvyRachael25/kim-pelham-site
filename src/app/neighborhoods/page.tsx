@@ -205,6 +205,7 @@ export default function NeighborhoodsPage() {
                         fontFamily: 'var(--font-heading)',
                         fontSize: index === 0 ? 'clamp(2rem, 5vw, 2.5rem)' : 'clamp(1.5rem, 4vw, 2rem)',
                         fontWeight: 700,
+                        color: '#FFFFFF',
                         margin: '0 0 1rem 0',
                         lineHeight: 1.1,
                       }}

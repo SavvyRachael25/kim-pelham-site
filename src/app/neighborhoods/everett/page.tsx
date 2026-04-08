@@ -65,7 +65,7 @@ export default function EverettPage() {
                 <div key={s.label} style={{ backgroundColor: '#FFFFFF', padding: '28px 24px', borderRadius: '6px', textAlign: 'center', border: '1px solid #E8E3DA' }}>
                   <div style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', fontWeight: 400, color: '#2F5233', marginBottom: '8px' }}>{s.value}</div>
                   <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.9rem', fontWeight: 600, color: '#2C2C2C', marginBottom: '4px' }}>{s.label}</div>
-                  <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.8rem', color: '#888888' }}>{s.sub}</div>
+                  <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.8rem', color: '#555555' }}>{s.sub}</div>
                 </div>
               ))}
             </div>

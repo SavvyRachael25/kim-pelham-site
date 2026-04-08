@@ -174,7 +174,7 @@ export default function BlogPreview() {
                   style={{
                     fontFamily: 'var(--font-body)',
                     fontSize: '13px',
-                    color: '#9B9B9B',
+                    color: '#767676',
                     margin: '0 0 8px 0',
                   }}
                 >

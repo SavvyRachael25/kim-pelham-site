@@ -97,7 +97,7 @@ const getRoleBadgeColor = (role: string): string => {
     case 'SELLER':
       return '#2F5233'; // forest
     case 'SENIOR SERVICES':
-      return '#9B9B9B'; // muted
+      return '#767676'; // muted
     default:
       return '#2C2C2C';
   }

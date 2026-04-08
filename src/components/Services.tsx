@@ -7,25 +7,25 @@ const services = [
     icon: 'S',
     title: 'Staging',
     description: 'with my own two hands',
-    href: '/services/staging',
+    href: '/staging',
   },
   {
     icon: 'B',
     title: 'Buying',
     description: "you're not a number",
-    href: '/services/buying',
+    href: '/buyers',
   },
   {
     icon: 'R',
     title: 'Repairs',
     description: "I've got contractor friends",
-    href: '/services/repairs',
+    href: '/home-repair',
   },
   {
     icon: 'D',
     title: 'Downsizing',
     description: 'your pace, not mine',
-    href: '/services/downsizing',
+    href: '/senior-services',
   },
 ];
 

@@ -130,7 +130,7 @@ export default function BlogPage() {
                     style={{
                       fontFamily: 'var(--font-body)',
                       fontSize: '0.8rem',
-                      color: '#9B9B9B',
+                      color: '#767676',
                     }}
                   >
                     {formatDate(post.date)}

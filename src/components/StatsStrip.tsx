@@ -111,7 +111,7 @@ function StatCounter({ stat, isVisible }: StatCounterProps) {
         style={{
           fontFamily: 'var(--font-handwritten)',
           fontSize: '14px',
-          color: '#9B9B9B',
+          color: '#767676',
           margin: 0,
         }}
       >

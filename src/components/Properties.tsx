@@ -118,7 +118,7 @@ function PropertyCard({ property }: PropertyCardProps) {
           style={{
             fontFamily: 'var(--font-body)',
             fontSize: '14px',
-            color: '#9B9B9B',
+            color: '#767676',
             margin: '0 0 16px 0',
             lineHeight: 1.6,
           }}

@@ -84,7 +84,7 @@ export default function NeighborhoodsPinboard() {
             style={{
               fontFamily: 'var(--font-body)',
               fontSize: '16px',
-              color: '#9B9B9B',
+              color: '#767676',
               margin: 0,
               maxWidth: '700px',
             }}
@@ -154,11 +154,12 @@ export default function NeighborhoodsPinboard() {
                   fontFamily: 'var(--font-handwritten)',
                   fontSize: '14px',
                   color: '#FFFFFF',
-                  backgroundColor: 'rgba(0,0,0,0.3)',
+                  backgroundColor: 'rgba(0,0,0,0.58)',
                   padding: '8px 12px',
                   borderRadius: '2px',
                   margin: 0,
                   textAlign: 'center',
+                  textShadow: '0 1px 2px rgba(0,0,0,0.4)',
                 }}
               >
                 {neighborhood.title}
