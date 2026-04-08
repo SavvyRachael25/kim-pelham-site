@@ -49,7 +49,7 @@ export default function BuyersPage() {
       <InnerHero
         title="Find Your Dream Home"
         subtitle="Expert guidance for maximizing your buying power"
-        image="/images/kim-with-door.jpg"
+        image="/images/hero-03-porch-connection.jpg"
         imageAlt="Welcoming home porch in Snohomish County"
       />
 

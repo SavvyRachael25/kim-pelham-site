@@ -21,7 +21,7 @@ const neighborhoods: NeighborhoodCard[] = [
     id: 1,
     name: 'Everett',
     description: 'Waterfront community with vibrant downtown, excellent schools, and strong family appeal',
-    image: '/images/kim-by-water.jpg',
+    image: '/images/neighborhood-01-everett-marina.jpg',
     size: 'featured',
     rotation: -2,
   },
@@ -29,7 +29,7 @@ const neighborhoods: NeighborhoodCard[] = [
     id: 2,
     name: 'Bothell',
     description: 'Tech hub community with modern amenities, beautiful parks, and innovative spirit',
-    image: '/images/kim-on-street-cropped.jpg',
+    image: '/images/property-03-lake-stevens-waterfront.jpg',
     size: 'regular',
     rotation: 1.5,
   },
@@ -37,7 +37,7 @@ const neighborhoods: NeighborhoodCard[] = [
     id: 3,
     name: 'Snohomish',
     description: 'Historic charm meets modern convenience with antique shops, fine dining, and natural beauty',
-    image: '/images/kim-with-door.jpg',
+    image: '/images/neighborhood-03-snohomish-historic.jpg',
     size: 'regular',
     rotation: -1,
   },
@@ -45,7 +45,7 @@ const neighborhoods: NeighborhoodCard[] = [
     id: 4,
     name: 'Mill Creek',
     description: 'Planned community with excellent schools, extensive trails, and beautiful home options',
-    image: '/images/mcm00183.jpg',
+    image: '/images/property-02-mill-creek-home.jpg',
     size: 'regular',
     rotation: 2,
   },
@@ -53,7 +53,7 @@ const neighborhoods: NeighborhoodCard[] = [
     id: 5,
     name: 'Lake Stevens',
     description: 'Waterfront living with recreational opportunities, stunning views, and peaceful surroundings',
-    image: '/images/kim-on-street-cropped.jpg',
+    image: '/images/property-03-lake-stevens-waterfront.jpg',
     size: 'regular',
     rotation: -1.5,
   },
@@ -61,7 +61,7 @@ const neighborhoods: NeighborhoodCard[] = [
     id: 6,
     name: 'Marysville',
     description: 'Growing community with affordability, access to nature, and strong sense of community',
-    image: '/images/kim-with-door.jpg',
+    image: '/images/neighborhood-03-snohomish-historic.jpg',
     size: 'regular',
     rotation: 1,
   },
@@ -76,7 +76,7 @@ export default function NeighborhoodsPage() {
         <InnerHero
           title="Neighborhoods"
           subtitle="Discover the vibrant communities I know and love"
-          image="/images/kim-by-water.jpg"
+          image="/images/neighborhood-01-everett-marina.jpg"
           imageAlt="Everett marina and waterfront in Snohomish County"
         />
 

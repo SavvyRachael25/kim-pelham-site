@@ -7,7 +7,7 @@ import { useState } from 'react';
 const properties = [
   {
     id: 1,
-    image: '/images/mcm00180.jpg',
+    image: '/images/property-01-everett-home-exterior.jpg',
     tag: 'Just Listed!',
     title: 'Updated Craftsman in Everett',
     details: '4 bed / 2.5 bath — Original millwork meets modern kitchen.',
@@ -15,7 +15,7 @@ const properties = [
   },
   {
     id: 2,
-    image: '/images/mcm00183.jpg',
+    image: '/images/property-02-mill-creek-home.jpg',
     tag: 'Open House Sat!',
     title: 'Forest-Backed in Mill Creek',
     details: '3 bed / 2 bath — Private wooded lot, updated bathrooms.',
@@ -23,7 +23,7 @@ const properties = [
   },
   {
     id: 3,
-    image: '/images/kim-on-street-cropped.jpg',
+    image: '/images/property-03-lake-stevens-waterfront.jpg',
     tag: 'Under Contract',
     tagBg: '#2F5233',
     title: 'Lake Stevens Waterfront',

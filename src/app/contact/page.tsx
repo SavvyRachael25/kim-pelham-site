@@ -16,7 +16,7 @@ export default function ContactPage() {
         <InnerHero
           title="Get in Touch"
           subtitle="Your real estate goals matter"
-          image="/images/kim-on-street-cropped.jpg"
+          image="/images/lifestyle-01-farmers-market.jpg"
           imageAlt="Local community in Snohomish County"
         />
 

@@ -6,7 +6,7 @@ import Link from 'next/link';
 const posts = [
   {
     id: 1,
-    image: '/images/kim-with-laptop.jpg',
+    image: '/images/hero-02-warm-kitchen.jpg',
     title: 'First-Time Buyers: 5 Things I Wish Someone Had Told Me',
     excerpt:
       'After 14 years of walking first-time buyers through Snohomish County, these are the things that make the biggest difference.',
@@ -15,7 +15,7 @@ const posts = [
   },
   {
     id: 2,
-    image: '/images/kim-with-client-on-couch.jpg',
+    image: '/images/staging-01-living-room.jpg',
     title: 'Why Staging Still Matters (Even in a Hot Market)',
     excerpt:
       'I stage every listing myself — here\'s why it\'s still the best investment you\'ll make before listing.',
@@ -24,7 +24,7 @@ const posts = [
   },
   {
     id: 3,
-    image: '/images/kim-with-door.jpg',
+    image: '/images/neighborhood-03-snohomish-historic.jpg',
     title: 'Snohomish County Market Update: What Sellers Need to Know',
     excerpt:
       'Inventory is shifting. Here\'s what the numbers look like neighborhood by neighborhood — and what it means for your home.',

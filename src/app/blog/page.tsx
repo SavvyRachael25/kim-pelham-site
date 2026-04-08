@@ -72,7 +72,7 @@ export default function BlogPage() {
         <InnerHero
           title="Stories & Insights"
           subtitle="Real estate wisdom from Snohomish County"
-          image="/images/kim-with-laptop.jpg"
+          image="/images/hero-02-warm-kitchen.jpg"
           imageAlt="Warm kitchen interior in Snohomish County home"
         />
 

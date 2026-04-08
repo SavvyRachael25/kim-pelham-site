@@ -15,7 +15,7 @@ export default function CommunityPage() {
         <InnerHero
           title="Community Hub"
           subtitle="Local insights, market intelligence & neighborhood stories"
-          image="/images/kim-on-street-cropped.jpg"
+          image="/images/lifestyle-01-farmers-market.jpg"
           imageAlt="Local community event in Snohomish County"
         />
 

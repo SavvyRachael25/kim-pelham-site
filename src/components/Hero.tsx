@@ -23,7 +23,7 @@ export default function Hero() {
     >
       {/* Background image */}
       <Image
-        src="/images/kim-by-water.jpg"
+        src="/images/hero-01-aerial-neighborhood.jpg"
         alt="Aerial view of Snohomish County neighborhood"
         fill
         priority
