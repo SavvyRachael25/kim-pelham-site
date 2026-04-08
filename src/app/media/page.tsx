@@ -24,19 +24,19 @@ const pressItems = [
     year: '2025',
     publication: 'Everett Herald',
     headline: 'How One Broker is Changing Senior Real Estate Services',
-    pullQuote: '"Pelham's SRES certification isn't just a credential — it's a philosophy that shows up in every senior transition she handles."',
+    pullQuote: '"Pelham\u2019s SRES certification isn\u2019t just a credential \u2014 it\u2019s a philosophy that shows up in every senior transition she handles."',
   },
   {
     year: '2025',
     publication: 'Pacific Northwest Magazine',
-    headline: 'The Art of Home Staging: Kim Pelham's 6-Step System',
+    headline: "The Art of Home Staging: Kim Pelham\u2019s 6-Step System",
     pullQuote: '"The results are undeniable: homes staged using the Pelham method consistently sell above asking price."',
   },
   {
     year: '2025',
     publication: 'Real Producers Magazine',
     headline: 'Kim Pelham: Presence, Perspective, Purpose',
-    pullQuote: '"She doesn't just sell homes — she helps people navigate one of the biggest moments of their lives with grace."',
+    pullQuote: '"She doesn\u2019t just sell homes \u2014 she helps people navigate one of the biggest moments of their lives with grace."',
   },
 ];
 
