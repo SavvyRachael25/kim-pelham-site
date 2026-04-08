@@ -5,13 +5,13 @@ import Image from 'next/image';
 const picks = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1495521821757-a1efb6729352?w=500&h=400&fit=crop',
+    image: '/images/hero-02-warm-kitchen.jpg',
     title: 'Narrative Coffee, Everett',
     description: 'My Tuesday morning ritual. The oat milk latte is unreal.',
   },
   {
     id: 2,
-    image: 'https://images.unsplash.com/photo-1552321554-5fefe8c9ef14?w=500&h=400&fit=crop',
+    image: '/images/lifestyle-01-farmers-market.jpg',
     title: 'The Loft, Mill Creek',
     description: 'Best brunch spot for new homeowners to celebrate closing.',
   },
