@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kim-pelham-site.vercel.app/sitemap.xml
