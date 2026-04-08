@@ -177,10 +177,10 @@ export default function NewsletterPopup() {
                   You&apos;re in the neighborhood!
                 </h2>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.95rem', color: '#555', lineHeight: 1.7, marginBottom: '16px' }}>
-                  Welcome to the list. I&apos;ll be in your inbox soon with real talk about the Snohomish County market — no fluff, I promise.
+                  Welcome to the list. I&apos;ll be in your inbox soon with real talk about the Snohomish County market. No fluff, I promise.
                 </p>
                 <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.6rem', color: '#B8845C' }}>
-                  — Kim
+                  Kim
                 </p>
               </div>
             </div>
@@ -241,7 +241,7 @@ export default function NewsletterPopup() {
                     margin: 0,
                   }}
                 >
-                  A couple times a month I send real market updates, honest home-selling tips, and local Snohomish County picks — the kind of thing I&apos;d tell a friend over coffee, not a client in a sales pitch.
+                  A couple times a month I send real market updates, honest home-selling tips, and local Snohomish County picks. The kind of thing I&apos;d tell a friend over coffee, not a client in a sales pitch.
                 </p>
               </div>
 
@@ -356,7 +356,7 @@ export default function NewsletterPopup() {
 
                 {status === 'error' && (
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.82rem', color: '#c0392b', marginTop: '10px', textAlign: 'center' }}>
-                    Something hiccuped — email me directly at{' '}
+                    Something hiccuped. Email me directly at{' '}
                     <a href="mailto:hello@thepelhamgroupnw.com" style={{ color: '#c0392b' }}>hello@thepelhamgroupnw.com</a>
                   </p>
                 )}
