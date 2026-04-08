@@ -18,7 +18,6 @@ export default function NewsletterPopup() {
       if (Date.now() - ts < DISMISS_DAYS * 24 * 60 * 60 * 1000) return;
     }
 
-    // Show after 9 seconds OR 45% scroll, whichever comes first
     let shown = false;
     const show = () => {
       if (shown) return;
@@ -27,13 +26,11 @@ export default function NewsletterPopup() {
     };
 
     const timer = setTimeout(show, 9000);
-
     const onScroll = () => {
       const scrolled = window.scrollY / (document.body.scrollHeight - window.innerHeight);
       if (scrolled > 0.45) show();
     };
     window.addEventListener('scroll', onScroll, { passive: true });
-
     return () => {
       clearTimeout(timer);
       window.removeEventListener('scroll', onScroll);
@@ -50,9 +47,7 @@ export default function NewsletterPopup() {
     if (!email) return;
     setStatus('loading');
 
-    // Replace this URL with your GHL webhook or form endpoint
     const WEBHOOK_URL = process.env.NEXT_PUBLIC_NEWSLETTER_WEBHOOK || '';
-
     try {
       if (WEBHOOK_URL) {
         await fetch(WEBHOOK_URL, {
@@ -62,7 +57,7 @@ export default function NewsletterPopup() {
         });
       }
       setStatus('success');
-      setTimeout(dismiss, 3000);
+      setTimeout(dismiss, 3500);
     } catch {
       setStatus('error');
     }
@@ -78,7 +73,7 @@ export default function NewsletterPopup() {
         style={{
           position: 'fixed',
           inset: 0,
-          background: 'rgba(0,0,0,0.45)',
+          background: 'rgba(0,0,0,0.5)',
           zIndex: 200,
           animation: 'fadeIn 0.3s ease',
         }}
@@ -97,16 +92,16 @@ export default function NewsletterPopup() {
           transform: 'translate(-50%, -50%)',
           zIndex: 201,
           width: '90%',
-          maxWidth: '480px',
+          maxWidth: '500px',
           backgroundColor: '#F8F5F0',
           borderRadius: '4px',
-          boxShadow: '0 20px 60px rgba(0,0,0,0.25)',
+          boxShadow: '0 24px 72px rgba(0,0,0,0.3)',
           overflow: 'hidden',
-          animation: 'slideUp 0.35s cubic-bezier(0.16, 1, 0.3, 1)',
+          animation: 'slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
         }}
       >
-        {/* Forest green top bar */}
-        <div style={{ height: '6px', background: 'linear-gradient(90deg, #2F5233, #B8845C)' }} />
+        {/* Top gradient bar */}
+        <div style={{ height: '5px', background: 'linear-gradient(90deg, #2F5233 0%, #B8845C 100%)' }} />
 
         {/* Close button */}
         <button
@@ -114,106 +109,157 @@ export default function NewsletterPopup() {
           aria-label="Close newsletter signup"
           style={{
             position: 'absolute',
-            top: '16px',
-            right: '16px',
+            top: '14px',
+            right: '14px',
             background: 'none',
             border: 'none',
             cursor: 'pointer',
-            color: '#777',
-            fontSize: '1.25rem',
+            color: '#aaa',
+            fontSize: '1.1rem',
             lineHeight: 1,
             padding: '4px',
-            minWidth: '44px',
-            minHeight: '44px',
+            minWidth: '36px',
+            minHeight: '36px',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
-            borderRadius: '2px',
-            transition: 'color 0.2s',
+            borderRadius: '50%',
+            transition: 'color 0.2s, background 0.2s',
+            zIndex: 1,
           }}
-          onMouseEnter={(e) => { e.currentTarget.style.color = '#2F5233'; }}
-          onMouseLeave={(e) => { e.currentTarget.style.color = '#777'; }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.color = '#2F5233';
+            e.currentTarget.style.background = 'rgba(47,82,51,0.08)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.color = '#aaa';
+            e.currentTarget.style.background = 'none';
+          }}
         >
           ✕
         </button>
 
-        <div style={{ padding: '36px 36px 32px' }}>
+        <div style={{ padding: '32px 36px 30px' }}>
           {status === 'success' ? (
-            <div style={{ textAlign: 'center', padding: '12px 0' }}>
-              <p style={{ fontSize: '2rem', marginBottom: '12px' }}>🏡</p>
-              <h2
+            /* ── SUCCESS STATE ── */
+            <div style={{ textAlign: 'center', padding: '16px 0' }}>
+              {/* Decorative frame */}
+              <div
                 style={{
-                  fontFamily: 'var(--font-heading)',
-                  fontSize: '1.75rem',
-                  fontWeight: 600,
-                  color: '#2F5233',
-                  marginBottom: '12px',
+                  border: '1.5px solid #B8845C',
+                  borderRadius: '3px',
+                  padding: '28px 24px',
+                  position: 'relative',
                 }}
               >
-                You&apos;re in!
-              </h2>
-              <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.15rem', color: '#555' }}>
-                Can&apos;t wait to be your neighbor in your inbox too. Talk soon.
-              </p>
-              <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.5rem', color: '#B8845C', marginTop: '12px' }}>
-                — Kim
-              </p>
+                <div
+                  style={{
+                    position: 'absolute',
+                    top: '-12px',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    background: '#F8F5F0',
+                    padding: '0 10px',
+                  }}
+                >
+                  <span style={{ fontSize: '1.4rem' }}>🏡</span>
+                </div>
+                <h2
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: '1.9rem',
+                    fontWeight: 600,
+                    color: '#2F5233',
+                    marginBottom: '10px',
+                    marginTop: '4px',
+                  }}
+                >
+                  You&apos;re in the neighborhood!
+                </h2>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.95rem', color: '#555', lineHeight: 1.7, marginBottom: '16px' }}>
+                  Welcome to the list. I&apos;ll be in your inbox soon with real talk about the Snohomish County market — no fluff, I promise.
+                </p>
+                <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.6rem', color: '#B8845C' }}>
+                  — Kim
+                </p>
+              </div>
             </div>
           ) : (
+            /* ── DEFAULT STATE ── */
             <>
-              {/* Handwritten eyebrow */}
-              <p
+              {/* Decorative inner frame */}
+              <div
                 style={{
-                  fontFamily: 'var(--font-handwritten)',
-                  fontSize: '1rem',
-                  color: '#B8845C',
-                  margin: '0 0 8px 0',
-                  letterSpacing: '0.02em',
+                  border: '1.5px solid rgba(184,132,92,0.4)',
+                  borderRadius: '3px',
+                  padding: '24px 24px 20px',
+                  marginBottom: '20px',
+                  position: 'relative',
+                  background: 'rgba(255,255,255,0.55)',
                 }}
               >
-                from one neighbor to another
-              </p>
+                {/* Corner accents */}
+                <div style={{ position: 'absolute', top: -1, left: -1, width: 14, height: 14, borderTop: '3px solid #B8845C', borderLeft: '3px solid #B8845C', borderRadius: '3px 0 0 0' }} />
+                <div style={{ position: 'absolute', top: -1, right: -1, width: 14, height: 14, borderTop: '3px solid #B8845C', borderRight: '3px solid #B8845C', borderRadius: '0 3px 0 0' }} />
+                <div style={{ position: 'absolute', bottom: -1, left: -1, width: 14, height: 14, borderBottom: '3px solid #B8845C', borderLeft: '3px solid #B8845C', borderRadius: '0 0 0 3px' }} />
+                <div style={{ position: 'absolute', bottom: -1, right: -1, width: 14, height: 14, borderBottom: '3px solid #B8845C', borderRight: '3px solid #B8845C', borderRadius: '0 0 3px 0' }} />
 
-              <h2
-                id="popup-heading"
-                style={{
-                  fontFamily: 'var(--font-heading)',
-                  fontSize: '1.75rem',
-                  fontWeight: 600,
-                  color: '#2F5233',
-                  margin: '0 0 14px 0',
-                  lineHeight: 1.2,
-                }}
-              >
-                The Real Scoop on Snohomish County Real Estate
-              </h2>
+                {/* Eyebrow */}
+                <p
+                  style={{
+                    fontFamily: 'var(--font-handwritten)',
+                    fontSize: '1.05rem',
+                    color: '#B8845C',
+                    margin: '0 0 6px 0',
+                    letterSpacing: '0.01em',
+                  }}
+                >
+                  a note from Kim
+                </p>
 
-              <p
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '0.95rem',
-                  color: '#555',
-                  lineHeight: 1.7,
-                  margin: '0 0 24px 0',
-                }}
-              >
-                No marketing fluff. Just honest market updates, local picks, and the kind of advice I give my actual neighbors — straight to your inbox a couple times a month.
-              </p>
+                <h2
+                  id="popup-heading"
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: '1.65rem',
+                    fontWeight: 600,
+                    color: '#2C2C2C',
+                    margin: '0 0 12px 0',
+                    lineHeight: 1.25,
+                  }}
+                >
+                  I&apos;ve lived and worked this market for 14 years.{' '}
+                  <span style={{ color: '#2F5233' }}>Let me share what I actually know.</span>
+                </h2>
 
+                <p
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.92rem',
+                    color: '#555',
+                    lineHeight: 1.75,
+                    margin: 0,
+                  }}
+                >
+                  A couple times a month I send real market updates, honest home-selling tips, and local Snohomish County picks — the kind of thing I&apos;d tell a friend over coffee, not a client in a sales pitch.
+                </p>
+              </div>
+
+              {/* Form */}
               <form onSubmit={handleSubmit} noValidate>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '12px', marginBottom: '16px' }}>
-                  <div>
+                <div style={{ display: 'flex', gap: '10px', marginBottom: '10px' }}>
+                  <div style={{ flex: 1 }}>
                     <label
                       htmlFor="popup-firstname"
                       style={{
                         display: 'block',
                         fontFamily: 'var(--font-body)',
-                        fontSize: '0.8rem',
+                        fontSize: '0.72rem',
                         fontWeight: 600,
-                        color: '#444',
-                        marginBottom: '6px',
+                        color: '#666',
+                        marginBottom: '5px',
                         textTransform: 'uppercase',
-                        letterSpacing: '0.05em',
+                        letterSpacing: '0.07em',
                       }}
                     >
                       First Name
@@ -223,15 +269,15 @@ export default function NewsletterPopup() {
                       type="text"
                       value={firstName}
                       onChange={(e) => setFirstName(e.target.value)}
-                      placeholder="What should I call you?"
+                      placeholder="Sarah"
                       autoComplete="given-name"
                       style={{
                         width: '100%',
-                        padding: '10px 14px',
-                        border: '1.5px solid #E8E3DA',
+                        padding: '10px 12px',
+                        border: '1.5px solid #DDD8CF',
                         borderRadius: '3px',
                         fontFamily: 'var(--font-body)',
-                        fontSize: '0.95rem',
+                        fontSize: '0.92rem',
                         color: '#2C2C2C',
                         background: '#FFFFFF',
                         outline: 'none',
@@ -239,25 +285,25 @@ export default function NewsletterPopup() {
                         transition: 'border-color 0.2s',
                       }}
                       onFocus={(e) => { e.currentTarget.style.borderColor = '#2F5233'; }}
-                      onBlur={(e) => { e.currentTarget.style.borderColor = '#E8E3DA'; }}
+                      onBlur={(e) => { e.currentTarget.style.borderColor = '#DDD8CF'; }}
                     />
                   </div>
 
-                  <div>
+                  <div style={{ flex: 1.4 }}>
                     <label
                       htmlFor="popup-email"
                       style={{
                         display: 'block',
                         fontFamily: 'var(--font-body)',
-                        fontSize: '0.8rem',
+                        fontSize: '0.72rem',
                         fontWeight: 600,
-                        color: '#444',
-                        marginBottom: '6px',
+                        color: '#666',
+                        marginBottom: '5px',
                         textTransform: 'uppercase',
-                        letterSpacing: '0.05em',
+                        letterSpacing: '0.07em',
                       }}
                     >
-                      Email Address <span style={{ color: '#B8845C' }}>*</span>
+                      Email <span style={{ color: '#B8845C' }}>*</span>
                     </label>
                     <input
                       id="popup-email"
@@ -269,11 +315,11 @@ export default function NewsletterPopup() {
                       autoComplete="email"
                       style={{
                         width: '100%',
-                        padding: '10px 14px',
-                        border: '1.5px solid #E8E3DA',
+                        padding: '10px 12px',
+                        border: '1.5px solid #DDD8CF',
                         borderRadius: '3px',
                         fontFamily: 'var(--font-body)',
-                        fontSize: '0.95rem',
+                        fontSize: '0.92rem',
                         color: '#2C2C2C',
                         background: '#FFFFFF',
                         outline: 'none',
@@ -281,7 +327,7 @@ export default function NewsletterPopup() {
                         transition: 'border-color 0.2s',
                       }}
                       onFocus={(e) => { e.currentTarget.style.borderColor = '#2F5233'; }}
-                      onBlur={(e) => { e.currentTarget.style.borderColor = '#E8E3DA'; }}
+                      onBlur={(e) => { e.currentTarget.style.borderColor = '#DDD8CF'; }}
                     />
                   </div>
                 </div>
@@ -292,25 +338,26 @@ export default function NewsletterPopup() {
                   style={{
                     width: '100%',
                     padding: '13px 24px',
-                    background: status === 'loading' ? '#3d6b42' : '#2F5233',
+                    background: !email ? '#9aad9c' : status === 'loading' ? '#3d6b42' : '#2F5233',
                     color: '#F8F5F0',
                     border: 'none',
                     borderRadius: '3px',
                     fontFamily: 'var(--font-handwritten)',
-                    fontSize: '1.1rem',
-                    cursor: status === 'loading' ? 'wait' : 'pointer',
-                    transition: 'background 0.2s, transform 0.2s',
-                    opacity: !email ? 0.7 : 1,
+                    fontSize: '1.15rem',
+                    cursor: status === 'loading' || !email ? 'default' : 'pointer',
+                    transition: 'background 0.2s, transform 0.15s',
+                    letterSpacing: '0.01em',
                   }}
-                  onMouseEnter={(e) => { if (email) e.currentTarget.style.background = '#3d6b42'; }}
-                  onMouseLeave={(e) => { e.currentTarget.style.background = '#2F5233'; }}
+                  onMouseEnter={(e) => { if (email && status !== 'loading') e.currentTarget.style.background = '#3d6b42'; }}
+                  onMouseLeave={(e) => { if (email) e.currentTarget.style.background = '#2F5233'; }}
                 >
-                  {status === 'loading' ? 'Adding you...' : 'Yes, I want the real scoop'}
+                  {status === 'loading' ? 'Adding you to the list...' : 'Yes, send me the real scoop \u2192'}
                 </button>
 
                 {status === 'error' && (
-                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: '#c0392b', marginTop: '10px', textAlign: 'center' }}>
-                    Something went wrong — try emailing me directly at hello@thepelhamgroupnw.com
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.82rem', color: '#c0392b', marginTop: '10px', textAlign: 'center' }}>
+                    Something hiccuped — email me directly at{' '}
+                    <a href="mailto:hello@thepelhamgroupnw.com" style={{ color: '#c0392b' }}>hello@thepelhamgroupnw.com</a>
                   </p>
                 )}
               </form>
@@ -318,19 +365,19 @@ export default function NewsletterPopup() {
               <p
                 style={{
                   fontFamily: 'var(--font-body)',
-                  fontSize: '0.78rem',
-                  color: '#999',
+                  fontSize: '0.75rem',
+                  color: '#aaa',
                   textAlign: 'center',
-                  marginTop: '14px',
+                  marginTop: '12px',
                   lineHeight: 1.5,
                 }}
               >
                 No spam, ever. Unsubscribe any time.{' '}
                 <button
                   onClick={dismiss}
-                  style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#999', textDecoration: 'underline', font: 'inherit', padding: 0 }}
+                  style={{ background: 'none', border: 'none', cursor: 'pointer', color: '#aaa', textDecoration: 'underline', font: 'inherit', padding: 0 }}
                 >
-                  Not now
+                  Not right now
                 </button>
               </p>
             </>
@@ -340,7 +387,10 @@ export default function NewsletterPopup() {
 
       <style>{`
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes slideUp { from { opacity: 0; transform: translate(-50%, calc(-50% + 20px)); } to { opacity: 1; transform: translate(-50%, -50%); } }
+        @keyframes slideUp {
+          from { opacity: 0; transform: translate(-50%, calc(-50% + 24px)); }
+          to   { opacity: 1; transform: translate(-50%, -50%); }
+        }
       `}</style>
     </>
   );
