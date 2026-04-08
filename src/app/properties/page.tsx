@@ -115,6 +115,37 @@ export default function PropertiesPage() {
           imageAlt="Beautiful home in Mill Creek"
         />
 
+        {/* MLS Banner */}
+        <section
+          style={{
+            backgroundColor: '#2F5233',
+            padding: '1.25rem 2rem',
+            textAlign: 'center',
+          }}
+        >
+          <p style={{ fontFamily: 'var(--font-body)', color: '#F8F5F0', margin: '0 0 0.75rem 0', fontSize: '1rem' }}>
+            Looking for the full MLS search? Browse all available listings on Kim's profile.
+          </p>
+          <a
+            href="https://community.katrinaeileen.com/team/kim-pelham"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: '0.95rem',
+              fontWeight: 600,
+              color: '#2F5233',
+              backgroundColor: '#C4A265',
+              padding: '0.65rem 1.5rem',
+              borderRadius: '4px',
+              textDecoration: 'none',
+              display: 'inline-block',
+            }}
+          >
+            Search All Listings →
+          </a>
+        </section>
+
         {/* Filter Bar */}
         <section
           style={{
@@ -385,8 +416,10 @@ export default function PropertiesPage() {
                   </div>
 
                   {/* View Details Link */}
-                  <Link
-                    href={`/properties/${property.id}`}
+                  <a
+                    href="https://community.katrinaeileen.com/team/kim-pelham"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     style={{
                       fontFamily: 'var(--font-body)',
                       fontSize: '0.95rem',
@@ -400,8 +433,8 @@ export default function PropertiesPage() {
                       transition: 'opacity 0.3s ease',
                     }}
                   >
-                    View Details →
-                  </Link>
+                    View Full Listing →
+                  </a>
                 </div>
               </article>
             ))}
