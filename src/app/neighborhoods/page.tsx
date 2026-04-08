@@ -225,7 +225,7 @@ export default function NeighborhoodsPage() {
                     </p>
 
                     <Link
-                      href={`/neighborhoods/${neighborhood.id}`}
+                      href={`/neighborhoods/${neighborhood.name.toLowerCase().replace(/\s+/g, '-')}`}
                       style={{
                         fontFamily: 'var(--font-body)',
                         fontSize: '0.95rem',
