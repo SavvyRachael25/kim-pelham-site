@@ -15,7 +15,7 @@ export default function MediaPage() {
         <InnerHero
           title="In the Media"
           subtitle="Industry recognition"
-          image="/images/neighborhood-03-snohomish-historic.jpg"
+          image="/images/kim-with-door.jpg"
           imageAlt="Historic Snohomish neighborhood"
         />
 

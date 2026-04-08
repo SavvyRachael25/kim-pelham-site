@@ -12,7 +12,7 @@ export default function LifestyleBand() {
     >
       {/* Background image */}
       <Image
-        src="/images/lifestyle-01-farmers-market.jpg"
+        src="/images/kim-on-street-cropped.jpg"
         alt="Kim at the Snohomish County Farmers Market"
         fill
         quality={85}

@@ -139,7 +139,7 @@ export default function SeniorServicesPage() {
         }}
       >
         <Image
-          src="/images/senior-services-01-key-handoff.jpg"
+          src="/images/kim-with-door-cropped.jpg"
           alt="Senior receiving keys to new home"
           fill
           style={{

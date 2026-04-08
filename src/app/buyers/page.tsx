@@ -49,7 +49,7 @@ export default function BuyersPage() {
       <InnerHero
         title="Find Your Dream Home"
         subtitle="Expert guidance for maximizing your buying power"
-        image="/images/hero-03-porch-connection.jpg"
+        image="/images/kim-with-door.jpg"
         imageAlt="Welcoming home porch in Snohomish County"
       />
 
@@ -310,7 +310,7 @@ export default function BuyersPage() {
           >
             <div>
               <Image
-                src="/images/buyers-01-success-story.jpg"
+                src="/images/kim-with-client-on-couch.jpg"
                 alt="Taylor's success story - first-time home buyer"
                 width={350}
                 height={400}

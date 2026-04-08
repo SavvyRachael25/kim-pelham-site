@@ -15,7 +15,7 @@ export default function HomeRepairPage() {
         <InnerHero
           title="Home Repair Services"
           subtitle="Pre-sale repair coordination so your home shows its absolute best"
-          image="/images/property-01-everett-home-exterior.jpg"
+          image="/images/mcm00180.jpg"
           imageAlt="Home exterior in Everett"
         />
 

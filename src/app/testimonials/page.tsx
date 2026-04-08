@@ -112,7 +112,7 @@ export default function TestimonialsPage() {
       <InnerHero
         title="What My Clients Say"
         subtitle="Real experiences from real families"
-        image="/images/hero-03-porch-connection.jpg"
+        image="/images/kim-with-door.jpg"
         imageAlt="Happy family on home porch"
       />
 

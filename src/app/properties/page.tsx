@@ -27,7 +27,7 @@ const properties: PropertyCard[] = [
     beds: 4,
     baths: 3,
     sqft: 2850,
-    image: '/images/property-01-everett-home-exterior.jpg',
+    image: '/images/mcm00180.jpg',
   },
   {
     id: 2,
@@ -37,7 +37,7 @@ const properties: PropertyCard[] = [
     beds: 3,
     baths: 2,
     sqft: 1920,
-    image: '/images/hero-02-warm-kitchen.jpg',
+    image: '/images/kim-with-laptop.jpg',
   },
   {
     id: 3,
@@ -47,7 +47,7 @@ const properties: PropertyCard[] = [
     beds: 5,
     baths: 4,
     sqft: 3400,
-    image: '/images/hero-02-warm-kitchen.jpg',
+    image: '/images/kim-with-laptop.jpg',
   },
   {
     id: 4,
@@ -57,7 +57,7 @@ const properties: PropertyCard[] = [
     beds: 3,
     baths: 2,
     sqft: 1650,
-    image: '/images/hero-02-warm-kitchen.jpg',
+    image: '/images/kim-with-laptop.jpg',
   },
   {
     id: 5,
@@ -67,7 +67,7 @@ const properties: PropertyCard[] = [
     beds: 5,
     baths: 4,
     sqft: 4200,
-    image: '/images/hero-02-warm-kitchen.jpg',
+    image: '/images/kim-with-laptop.jpg',
   },
   {
     id: 6,
@@ -77,7 +77,7 @@ const properties: PropertyCard[] = [
     beds: 4,
     baths: 3,
     sqft: 2400,
-    image: '/images/property-03-lake-stevens-waterfront.jpg',
+    image: '/images/kim-on-street-cropped.jpg',
   },
 ];
 
@@ -111,7 +111,7 @@ export default function PropertiesPage() {
         <InnerHero
           title="Featured Properties"
           subtitle="Discover your next home in Snohomish County"
-          image="/images/property-02-mill-creek-home.jpg"
+          image="/images/mcm00183.jpg"
           imageAlt="Beautiful home in Mill Creek"
         />
 

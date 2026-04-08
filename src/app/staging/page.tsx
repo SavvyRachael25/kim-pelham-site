@@ -40,7 +40,7 @@ export default function StagingPage() {
         }}
       >
         <Image
-          src="/images/staging-01-living-room.jpg"
+          src="/images/kim-with-client-on-couch.jpg"
           alt="Beautiful staged living room"
           fill
           style={{

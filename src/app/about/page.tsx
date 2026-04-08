@@ -49,7 +49,7 @@ export default function AboutPage() {
       <InnerHero
         title="About Kim"
         subtitle="Presence, Perspective & Purpose in Real Estate"
-        image="/images/about-01-approachable-headshot-env.jpg"
+        image="/images/kim-headshot-msh.jpg"
         imageAlt="Kim Pelham in Snohomish County"
       />
 
@@ -83,7 +83,7 @@ export default function AboutPage() {
           >
             <div className="polaroid" style={{ transform: 'rotate(-3deg)' }}>
               <Image
-                src="/images/about-01-approachable-headshot-env.jpg"
+                src="/images/kim-headshot-msh.jpg"
                 alt="Kim Pelham - Real estate broker and Snohomish County native"
                 width={300}
                 height={350}

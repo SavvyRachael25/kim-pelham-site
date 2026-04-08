@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     title: "Kim Pelham | Snohomish County Real Estate Broker",
     description:
       "Snohomish County real estate broker helping buyers and sellers in Everett, Bothell, Mill Creek, Snohomish, Lake Stevens and Marysville WA.",
-    images: ["/images/hero-01-aerial-neighborhood.jpg"],
+    images: ["/images/kim-by-water.jpg"],
     type: "website",
   },
 };
