@@ -47,19 +47,21 @@ function PickCard({ pick }: PickCardProps) {
       }}
     >
       {/* Image */}
-      <div style={{ width: '100%', aspectRatio: '4/3', overflow: 'hidden' }}>
+      <div
+        style={{
+          position: 'relative',
+          width: '100%',
+          aspectRatio: '4/3',
+          overflow: 'hidden',
+        }}
+      >
         <Image
           src={pick.image}
           alt={pick.title}
-          width={500}
-          height={375}
+          fill
           quality={80}
-          style={{
-            width: '100%',
-            height: '100%',
-            objectFit: 'cover',
-            display: 'block',
-          }}
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+          style={{ objectFit: 'cover' }}
         />
       </div>
 
