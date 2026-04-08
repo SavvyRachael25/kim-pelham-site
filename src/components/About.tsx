@@ -28,7 +28,7 @@ export default function About() {
 
           <div style={{ width: '240px', height: '240px', borderRadius: '50%', overflow: 'hidden', border: '4px solid #F0EDE7', boxShadow: '0 4px 16px rgba(0,0,0,0.08)' }}>
             <Image
-              src="/images/kim-headshot-msh.jpg"
+              src="/images/kim-on-street-cropped.jpg"
               alt="Kim Pelham"
               width={240}
               height={240}

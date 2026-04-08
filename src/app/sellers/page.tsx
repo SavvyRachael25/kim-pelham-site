@@ -48,8 +48,8 @@ export default function SellersPage() {
       <InnerHero
         title="Sell Your Home for More"
         subtitle="104.4% sale-to-list ratio vs 97.98% market average"
-        image="/images/property-01-everett-home-exterior.jpg"
-        imageAlt="Beautiful home exterior in Everett"
+        image="/images/kim-with-door.jpg"
+        imageAlt="Kim Pelham helping sellers"
       />
 
       {/* ========== PROVEN TRACK RECORD ========== */}

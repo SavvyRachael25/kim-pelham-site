@@ -49,8 +49,8 @@ export default function BuyersPage() {
       <InnerHero
         title="Find Your Dream Home"
         subtitle="Expert guidance for maximizing your buying power"
-        image="/images/hero-03-porch-connection.jpg"
-        imageAlt="Welcoming home porch in Snohomish County"
+        image="/images/kim-with-client-on-couch.jpg"
+        imageAlt="Kim Pelham with buyers"
       />
 
       {/* ========== INTRO ========== */}

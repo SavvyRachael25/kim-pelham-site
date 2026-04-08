@@ -49,7 +49,7 @@ export default function AboutPage() {
       <InnerHero
         title="About Kim"
         subtitle="Presence, Perspective & Purpose in Real Estate"
-        image="/images/kim-headshot-msh.jpg"
+        image="/images/kim-by-water.jpg"
         imageAlt="Kim Pelham in Snohomish County"
       />
 
