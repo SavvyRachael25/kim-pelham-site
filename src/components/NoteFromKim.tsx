@@ -66,7 +66,7 @@ export default function NoteFromKim() {
           }}
         >
           If you're reading this, you're probably thinking about buying or selling a home. Maybe
-          you're nervous. Maybe you've had a bad experience with an agent before. I get it.
+          you're nervous. Maybe you've had a bad experience with a broker before. I get it.
           Here's what I want you to know: I'm not going to pressure you, I'm not going to
           disappear after closing, and I'm definitely not going to show up in a blazer pretending
           I don't know what a septic system is. Let's just talk. No pitch, no pressure.

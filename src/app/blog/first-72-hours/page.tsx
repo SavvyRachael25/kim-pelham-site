@@ -378,7 +378,7 @@ export default function FirstSeventyTwoHoursPage() {
                   What should I do the week before my home lists?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  The week before listing, focus on deep cleaning, decluttering, and professional photography. Have your agent review pricing one final time against recent comps. Pre-schedule open houses for the first weekend. The goal is to be 100% ready on day one — not scrambling.
+                  The week before listing, focus on deep cleaning, decluttering, and professional photography. Have your broker review pricing one final time against recent comps. Pre-schedule open houses for the first weekend. The goal is to be 100% ready on day one — not scrambling.
                 </p>
               </div>
 

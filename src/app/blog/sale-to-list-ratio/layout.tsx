@@ -45,7 +45,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               {
                 "@type": "Question",
                 "name": "Why does sale-to-list ratio matter more than commission rate?",
-                "acceptedAnswer": { "@type": "Answer", "text": "A lower commission rate saves you money on paper, but a lower sale-to-list ratio costs you far more at closing. An agent charging 1% less commission who consistently sells at 98% of list costs a seller on a $700,000 home $14,000 in foregone proceeds — versus saving $7,000 on commission. An agent with a 104% ratio nets you $28,000 more than list. The ratio is a better predictor of net proceeds than commission rate." }
+                "acceptedAnswer": { "@type": "Answer", "text": "A lower commission rate saves you money on paper, but a lower sale-to-list ratio costs you far more at closing. A broker charging 1% less commission who consistently sells at 98% of list costs a seller on a $700,000 home $14,000 in foregone proceeds — versus saving $7,000 on commission. A broker with a 104% ratio nets you $28,000 more than list. The ratio is a better predictor of net proceeds than commission rate." }
               }
             ]
           })

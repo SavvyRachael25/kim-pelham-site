@@ -346,7 +346,7 @@ export default function BuyersPage() {
                 }}
               >
                 Taylor was a first-time buyer with only $2,000 for a down payment.
-                Most agents told her it wasn't possible. We found creative ways to
+                Most brokers told her it wasn't possible. We found creative ways to
                 strengthen her offer, negotiated help from the seller, and closed
                 on a beautiful home in Everett - exactly where she wanted to be.
               </p>

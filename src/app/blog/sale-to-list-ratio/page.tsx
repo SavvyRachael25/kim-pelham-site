@@ -34,7 +34,7 @@ export default function SaleToListRatioPage() {
                 fontWeight: 700,
               }}
             >
-              Your sale-to-list ratio is the single most useful number for evaluating a real estate agent's performance — and most sellers never ask about it. It measures what percentage of the asking price a home actually sells for. A 104.4% ratio means sellers are walking away with significantly more than they asked for. That's not luck. That's strategy.
+              Your sale-to-list ratio is the single most useful number for evaluating a real estate broker's performance — and most sellers never ask about it. It measures what percentage of the asking price a home actually sells for. A 104.4% ratio means sellers are walking away with significantly more than they asked for. That's not luck. That's strategy.
             </p>
 
             {/* Stat Callout Box */}
@@ -213,7 +213,7 @@ export default function SaleToListRatioPage() {
               borderRadius: '0 4px 4px 0',
             }}>
               <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 400, fontStyle: 'italic', color: 'var(--color-forest)', margin: 0, lineHeight: 1.6 }}>
-                "That 4.4% above asking isn't just a number. On a $550K home it's $24,200 in your pocket. On an $800K home it's $35,200. This is why your choice of agent is one of the most important financial decisions you'll make."
+                "That 4.4% above asking isn't just a number. On a $550K home it's $24,200 in your pocket. On an $800K home it's $35,200. This is why your choice of broker is one of the most important financial decisions you'll make."
               </p>
               <cite style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: 'var(--color-clay)', marginTop: '10px', display: 'block' }}>
                 Kim Pelham, Snohomish County Real Estate Broker
@@ -316,7 +316,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              When you're interviewing agents, ask about their sale-to-list ratio. If an agent says they consistently achieve 104%, that's a meaningful differentiator. It suggests they know how to price homes right, market them effectively, and negotiate on behalf of their clients. But don't just take the number at face value — ask what kinds of homes achieve that ratio. Context matters.
+              When you're interviewing brokers, ask about their sale-to-list ratio. If a broker says they consistently achieve 104%, that's a meaningful differentiator. It suggests they know how to price homes right, market them effectively, and negotiate on behalf of their clients. But don't just take the number at face value — ask what kinds of homes achieve that ratio. Context matters.
             </p>
 
             <p
@@ -386,7 +386,7 @@ export default function SaleToListRatioPage() {
                   How does an agent's sale-to-list ratio affect me as a seller?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  Directly and significantly. An agent with a 97% ratio costs you real money compared to one with a 104% ratio. On a $550,000 home, that's a $38,500 difference. When interviewing agents, always ask for their verified sale-to-list ratio and ask what types of homes and price points it reflects.
+                  Directly and significantly. A broker with a 97% ratio costs you real money compared to one with a 104% ratio. On a $550,000 home, that's a $38,500 difference. When interviewing brokers, always ask for their verified sale-to-list ratio and ask what types of homes and price points it reflects.
                 </p>
               </div>
 

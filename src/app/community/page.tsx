@@ -108,7 +108,7 @@ export default function CommunityPage() {
       <main>
         <InnerHero
           title="Community"
-          subtitle="Your neighbor in real estate — not just your agent"
+          subtitle="Your neighbor in real estate. Not just your broker."
           image="/images/lifestyle-01-farmers-market.jpg"
           imageAlt="Local community event in Snohomish County"
         />

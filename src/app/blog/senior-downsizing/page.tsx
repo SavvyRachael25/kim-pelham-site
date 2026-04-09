@@ -34,7 +34,7 @@ export default function SeniorDownsizingPage() {
                 fontWeight: 700,
               }}
             >
-              Senior downsizing in Snohomish County is one of the most meaningful — and most financially significant — transitions a homeowner can make. Done well, it frees up hundreds of thousands of dollars in equity, reduces your living costs, and opens the door to a lifestyle that fits who you are right now. Done poorly, it's stressful and leaves money on the table. The difference is having the right guidance, the right pace, and an agent who actually knows what they're doing with senior transitions.
+              Senior downsizing in Snohomish County is one of the most meaningful — and most financially significant — transitions a homeowner can make. Done well, it frees up hundreds of thousands of dollars in equity, reduces your living costs, and opens the door to a lifestyle that fits who you are right now. Done poorly, it's stressful and leaves money on the table. The difference is having the right guidance, the right pace, and a broker who actually knows what they're doing with senior transitions.
             </p>
 
             {/* Stat Callout Box */}
@@ -229,7 +229,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              The key is thinking beyond square footage. Consider proximity to healthcare, walkability, community offerings, and whether you want to be in town or in a quieter setting. Think about future needs too — will this home work in five or ten years? The best downsize moves aren't just about right now; they're about the next chapter you're building. As your SRES-certified agent, I know these submarkets in detail and can help you match your lifestyle priorities to the right neighborhood.
+              The key is thinking beyond square footage. Consider proximity to healthcare, walkability, community offerings, and whether you want to be in town or in a quieter setting. Think about future needs too — will this home work in five or ten years? The best downsize moves aren't just about right now; they're about the next chapter you're building. As your SRES-certified broker, I know these submarkets in detail and can help you match your lifestyle priorities to the right neighborhood.
             </p>
 
             <h2

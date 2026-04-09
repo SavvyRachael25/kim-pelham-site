@@ -295,6 +295,7 @@ export default function Nav() {
         <div style={leftSideStyle}>
           <Link href="/" style={{ textDecoration: 'none' }}>
             <h1 style={brandStyle}>Kim Pelham</h1>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.65rem', color: '#888', letterSpacing: '0.1em', textTransform: 'uppercase', margin: '2px 0 0 0', lineHeight: 1 }}>The Pelham Group NW</p>
           </Link>
           <p id="phone-display" style={phoneStyle}>
             (425) 250-9422
