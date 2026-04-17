@@ -41,31 +41,32 @@ interface StatCounterProps {
 
 function StatCounter({ stat, isVisible }: StatCounterProps) {
   const [count, setCount] = useState(0);
-  const countRef = useRef(0);
+  const rafRef = useRef<number>(0);
+  const startedRef = useRef(false);
 
   useEffect(() => {
-    if (!isVisible) return;
+    if (!isVisible || startedRef.current) return;
+    startedRef.current = true;
 
-    const targetNumber = stat.number;
+    const target = stat.number;
     const duration = 1500;
-    const startTime = Date.now();
+    const startTime = performance.now();
 
-    const animate = () => {
-      const elapsed = Date.now() - startTime;
+    const animate = (now: number) => {
+      const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
-
-      // Easing function (ease-out)
-      const easeProgress = 1 - Math.pow(1 - progress, 3);
-
-      const currentCount = Math.floor(targetNumber * easeProgress * 100) / 100;
-      setCount(currentCount);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.floor(target * eased * 100) / 100);
 
       if (progress < 1) {
-        requestAnimationFrame(animate);
+        rafRef.current = requestAnimationFrame(animate);
+      } else {
+        setCount(target); // guarantee exact final value
       }
     };
 
-    animate();
+    rafRef.current = requestAnimationFrame(animate);
+    return () => cancelAnimationFrame(rafRef.current);
   }, [isVisible, stat.number]);
 
   const displayNumber =
@@ -85,12 +86,7 @@ function StatCounter({ stat, isVisible }: StatCounterProps) {
         }}
       >
         {displayNumber}
-        <span
-          style={{
-            fontSize: '32px',
-            fontWeight: 600,
-          }}
-        >
+        <span style={{ fontSize: '32px', fontWeight: 600 }}>
           {stat.suffix ?? ''}
         </span>
       </p>
@@ -126,6 +122,9 @@ export default function StatsStrip() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -133,18 +132,11 @@ export default function StatsStrip() {
           observer.unobserve(entry.target);
         }
       },
-      { threshold: 0.3 }
+      { threshold: 0.1 } // fire when 10% visible (was 0.3)
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
+    observer.observe(el);
+    return () => observer.unobserve(el);
   }, []);
 
   return (

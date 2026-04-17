@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import { useEffect, useState } from 'react';
 
 interface InnerHeroProps {
   title: string;
@@ -11,12 +10,6 @@ interface InnerHeroProps {
 }
 
 export default function InnerHero({ title, subtitle, image, imageAlt }: InnerHeroProps) {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
-
   return (
     <section
       style={{
@@ -79,9 +72,7 @@ export default function InnerHero({ title, subtitle, image, imageAlt }: InnerHer
           margin: '0 0 24px 0',
           lineHeight: 1.2,
           maxWidth: '800px',
-          opacity: mounted ? 1 : 0,
-          transform: mounted ? 'translateY(0)' : 'translateY(20px)',
-          transition: 'all 0.8s ease-out',
+          animation: 'fadeSlideUp 0.8s ease-out both',
         }}
       >
         {title}
@@ -94,9 +85,7 @@ export default function InnerHero({ title, subtitle, image, imageAlt }: InnerHer
           fontSize: '24px',
           color: '#B8845C',
           margin: 0,
-          opacity: mounted ? 1 : 0,
-          transform: mounted ? 'translateY(0)' : 'translateY(20px)',
-          transition: 'all 0.8s ease-out 0.1s',
+          animation: 'fadeSlideUp 0.8s ease-out 0.1s both',
         }}
       >
         {subtitle}

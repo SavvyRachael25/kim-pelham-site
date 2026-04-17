@@ -2,14 +2,8 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
 
 export default function Hero() {
-  const [mounted, setMounted] = useState(false);
-
-  useEffect(() => {
-    setMounted(true);
-  }, []);
 
   return (
     <section
@@ -52,8 +46,7 @@ export default function Hero() {
           top: '24px',
           right: '24px',
           zIndex: 10,
-          opacity: mounted ? 0.7 : 0,
-          transition: 'opacity 0.8s ease-out 0.2s',
+          animation: 'fadeSlideUp 0.8s ease-out 0.2s both',
         }}
       >
         <p
@@ -90,9 +83,7 @@ export default function Hero() {
             fontSize: '20px',
             color: '#F0EDE7',
             margin: '0 0 24px 0',
-            opacity: mounted ? 1 : 0,
-            transform: mounted ? 'translateY(0)' : 'translateY(-20px)',
-            transition: 'all 0.8s ease-out 0s',
+            animation: 'fadeSlideUp 0.8s ease-out 0s both',
             textShadow: '0 1px 4px rgba(0,0,0,0.5)',
           }}
         >
@@ -109,9 +100,7 @@ export default function Hero() {
             margin: '0 0 24px 0',
             maxWidth: '900px',
             lineHeight: 1.2,
-            opacity: mounted ? 1 : 0,
-            transform: mounted ? 'translateY(0)' : 'translateY(20px)',
-            transition: 'all 0.8s ease-out 0.1s',
+            animation: 'fadeSlideUp 0.8s ease-out 0.1s both',
           }}
         >
           I Don't Just Sell Homes Here.{' '}
@@ -148,9 +137,7 @@ export default function Hero() {
             maxWidth: '700px',
             margin: '0 0 40px 0',
             lineHeight: 1.6,
-            opacity: mounted ? 1 : 0,
-            transform: mounted ? 'translateY(0)' : 'translateY(20px)',
-            transition: 'all 0.8s ease-out 0.2s',
+            animation: 'fadeSlideUp 0.8s ease-out 0.2s both',
           }}
         >
           17+ years helping families buy and sell in Snohomish County. Two-buyer-max policy
@@ -170,10 +157,8 @@ export default function Hero() {
               border: 'none',
               borderRadius: '4px',
               cursor: 'pointer',
-              transition: 'all 0.3s ease',
-              opacity: mounted ? 1 : 0,
-              transform: mounted ? 'translateY(0)' : 'translateY(20px)',
-              transitionDelay: '0.3s',
+              transition: 'background-color 0.3s ease, box-shadow 0.3s ease',
+              animation: 'fadeSlideUp 0.8s ease-out 0.3s both',
               boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
             }}
             onMouseEnter={(e) => {
