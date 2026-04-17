@@ -37,7 +37,7 @@ export default function TestimonialsPage() {
             Loading verified Google reviews
           </p>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: '#555', lineHeight: 1.7, marginBottom: '24px' }}>
-            Kim has 70+ verified reviews on Google. Check back shortly, or read them directly.
+            Kim has 40+ verified reviews on Google. Check back shortly, or read them directly.
           </p>
           <a
             href="https://www.google.com/search?q=pelham+group+nw"

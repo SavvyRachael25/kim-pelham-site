@@ -40,7 +40,7 @@ const awards = [
   {
     stat: '5★',
     title: 'Zillow & Google Reviews',
-    sub: '47+ verified reviews',
+    sub: '40+ verified reviews',
     hasImage: false,
   },
 ];

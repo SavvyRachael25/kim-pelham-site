@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import IntroAnimation from "@/components/IntroAnimation";
-import NewsletterPopup from "@/components/NewsletterPopup";
 
 export const metadata: Metadata = {
   title: "Kim Pelham | Snohomish County Real Estate Broker | Everett, Bothell, Mill Creek WA",
@@ -92,7 +91,7 @@ export default function RootLayout({
                   "aggregateRating": {
                     "@type": "AggregateRating",
                     "ratingValue": "5.0",
-                    "reviewCount": "47",
+                    "reviewCount": "40",
                     "bestRating": "5"
                   },
                   "sameAs": [
@@ -110,7 +109,6 @@ export default function RootLayout({
         <IntroAnimation>
           <div id="main-content">{children}</div>
         </IntroAnimation>
-        <NewsletterPopup />
         {/* GHL Chat Widget — Kim Pelham branded widget */}
         <Script
           src="https://widgets.leadconnectorhq.com/loader.js"
