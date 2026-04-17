@@ -56,9 +56,9 @@ const awards = [
     hasImage: true,
   },
   {
-    stat: '104.4%',
+    stat: '102.03%',
     title: 'Sale-to-List Ratio',
-    sub: 'Snohomish County avg.',
+    sub: 'vs 100.2% NWMLS avg.',
     hasImage: false,
   },
   {

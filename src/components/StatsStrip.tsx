@@ -5,21 +5,22 @@ import { useEffect, useRef, useState } from 'react';
 interface Stat {
   number: number;
   decimal?: number;
+  suffix?: string;
   label: string;
   quip: string;
 }
 
 const stats: Stat[] = [
   {
-    number: 14,
-    label: 'Years in Snohomish County',
+    number: 17,
+    label: 'Years in Real Estate',
     quip: '(and counting)',
   },
   {
-    number: 104,
-    decimal: 4,
+    number: 102,
+    suffix: '%',
     label: 'Sale-to-List Ratio',
-    quip: '(yep, above asking)',
+    quip: '(102.03% vs 100.2% market avg)',
   },
   {
     number: 2,
@@ -27,10 +28,9 @@ const stats: Stat[] = [
     quip: '(you deserve my full attention)',
   },
   {
-    number: 3,
-    decimal: 2,
-    label: 'Avg Weeks to Sell',
-    quip: '(I don\'t mess around)',
+    number: 176,
+    label: 'Homes Sold',
+    quip: '(and counting)',
   },
 ];
 
@@ -91,7 +91,7 @@ function StatCounter({ stat, isVisible }: StatCounterProps) {
             fontWeight: 600,
           }}
         >
-          {stat.label.includes('%') && !displayNumber.includes('.') ? '%' : ''}
+          {stat.suffix ?? ''}
         </span>
       </p>
       <p

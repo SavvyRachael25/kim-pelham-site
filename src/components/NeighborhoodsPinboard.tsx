@@ -5,14 +5,14 @@ import Image from 'next/image';
 const neighborhoods = [
   {
     id: 1,
-    image: '/images/neighborhood-01-everett-marina.jpg',
+    image: '/images/neighborhood-01-everett-marina.jpg', // TODO: photo from Kim — her own Everett photos
     title: 'Everett  -  the heart of it all',
     rotation: -4,
     colSpan: 4,
   },
   {
     id: 2,
-    image: '/images/neighborhood-02-bothell-main-street.jpg',
+    image: '/images/neighborhood-02-bothell-main-street.jpg', // TODO: Bothell Old Town area photo
     title: 'Bothell  -  Main Street vibes',
     rotation: 2,
     colSpan: 4,
@@ -26,7 +26,7 @@ const neighborhoods = [
   },
   {
     id: 4,
-    image: '/images/neighborhood-01-everett-marina.jpg',
+    image: '/images/neighborhood-01-everett-marina.jpg', // TODO: new Lake Stevens photo — current one is wrong
     title: 'Lake Stevens  -  waterfront living',
     rotation: 3,
     colSpan: 4,
@@ -40,7 +40,7 @@ const neighborhoods = [
   },
   {
     id: 6,
-    image: '/images/neighborhood-02-bothell-main-street.jpg',
+    image: '/images/neighborhood-02-bothell-main-street.jpg', // TODO: new Marysville photo — current one is wrong
     title: 'Marysville  -  room to grow',
     rotation: 2,
     colSpan: 4,

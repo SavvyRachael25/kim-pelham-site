@@ -266,7 +266,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              What I can tell you is that selling strategically — with proper pricing, staging, and marketing — ensures you capture the full value of your home. In a market where a well-presented home in Snohomish County can exceed its asking price, the difference between a mediocre sale and an excellent one can be substantial. My sellers average 104.4% of asking price. On a $600,000 home, that's $24,000+ more in your retirement account.
+              What I can tell you is that selling strategically — with proper pricing, staging, and marketing — ensures you capture the full value of your home. In a market where a well-presented home in Snohomish County can exceed its asking price, the difference between a mediocre sale and an excellent one can be substantial. My sellers average 102.03% of asking price. On a $600,000 home, that's $24,000+ more in your retirement account.
             </p>
 
             <h2

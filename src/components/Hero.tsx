@@ -153,7 +153,7 @@ export default function Hero() {
             transition: 'all 0.8s ease-out 0.2s',
           }}
         >
-          14 years helping families buy and sell in Snohomish County. Two-buyer-max policy
+          17+ years helping families buy and sell in Snohomish County. Two-buyer-max policy
           because you deserve my full attention.
         </p>
 

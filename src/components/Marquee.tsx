@@ -1,12 +1,11 @@
 'use client';
 
 const items = [
-  "Everett born & raised",
   "I stage it myself",
   "Two buyers max",
   "Boots not heels",
   "Your neighbor, not your salesperson",
-  "14 years in Snohomish County",
+  "17+ years in real estate",
   "I answer my own phone",
   "Let's find your home",
 ];
@@ -27,7 +26,7 @@ export default function Marquee() {
       <div
         style={{
           display: 'flex',
-          animation: 'scroll 40s linear infinite',
+          animation: 'scroll 32s linear infinite',
           whiteSpace: 'nowrap',
           gap: '60px',
         }}

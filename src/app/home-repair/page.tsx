@@ -58,7 +58,7 @@ export default function HomeRepairPage() {
           </div>
         </section>
 
-        {/* SMART Partnership Section */}
+        {/* Home Transition Team Section */}
         <section style={{ padding: '80px 20px', backgroundColor: 'var(--color-cream)' }}>
           <div style={{ maxWidth: '900px', margin: '0 auto' }}>
             <h2
@@ -70,7 +70,7 @@ export default function HomeRepairPage() {
                 marginBottom: '24px',
               }}
             >
-              Partnership with SMART Building Solutions
+              Pelham Group NW Home Transition Team
             </h2>
             <p
               style={{
@@ -81,7 +81,7 @@ export default function HomeRepairPage() {
                 marginBottom: '20px',
               }}
             >
-              I've built a strong relationship with SMART Building Solutions, a team of licensed contractors who specialize in targeted pre-sale improvements. Whether your home needs roof repairs, electrical updates, plumbing fixes, or interior cosmetic work, SMART has the expertise and reliability to get it done right.
+              The Pelham Group NW Home Transition Team works with a trusted network of licensed, insured contractors across the region. Whether your home needs roof repairs, electrical updates, plumbing fixes, or interior work, we have the expertise and reliability to get it done right.
             </p>
             <p
               style={{
@@ -91,7 +91,7 @@ export default function HomeRepairPage() {
                 lineHeight: '1.8',
               }}
             >
-              What makes this partnership valuable is that SMART understands the real estate market. They know which repairs have the highest ROI, and they prioritize work that will make your home more attractive and valuable to buyers.
+              Our team understands the real estate market. They know which repairs have the highest ROI, and they prioritize work that will make your home more attractive and valuable to buyers.
             </p>
           </div>
         </section>
@@ -152,11 +152,13 @@ export default function HomeRepairPage() {
                     paddingLeft: '20px',
                   }}
                 >
-                  <li>Roof repairs and replacement</li>
+                  <li>Interior and exterior painting</li>
+                  <li>Flooring updates</li>
+                  <li>Deck repairs</li>
+                  <li>Roof repair or replacement</li>
+                  <li>Kitchen and bathroom updates</li>
                   <li>Electrical and plumbing updates</li>
-                  <li>Interior cosmetic work</li>
                   <li>Structural repairs</li>
-                  <li>HVAC servicing</li>
                 </ul>
               </div>
 
@@ -223,7 +225,7 @@ export default function HomeRepairPage() {
                     marginBottom: '16px',
                   }}
                 >
-                  No upfront costs. You don't pay for repairs until closing. That's right - the full cost is deducted from your proceeds at closing, after the sale closes. This makes it easier to invest in your home's success.
+                  Most repairs are paid upfront as work is completed, using Kim's trusted trade partner network. This means no contractor stress for you — just results.
                 </p>
                 <ul
                   style={{
@@ -234,8 +236,7 @@ export default function HomeRepairPage() {
                     paddingLeft: '20px',
                   }}
                 >
-                  <li>Zero upfront investment</li>
-                  <li>Pay at closing</li>
+                  <li>Trusted trade partner network</li>
                   <li>Transparent pricing</li>
                   <li>Licensed professionals</li>
                   <li>Guaranteed quality</li>
@@ -393,7 +394,7 @@ export default function HomeRepairPage() {
                     lineHeight: '1.6',
                   }}
                 >
-                  All work is completed before listing. Your home is market-ready, and costs are deducted from your proceeds at closing.
+                  All work is completed before listing. Your home is market-ready and priced to perform.
                 </p>
               </div>
             </div>
@@ -446,7 +447,7 @@ export default function HomeRepairPage() {
                       marginBottom: '8px',
                     }}
                   >
-                    No Upfront Cost
+                    Trusted Trade Partners
                   </h3>
                   <p
                     style={{
@@ -456,7 +457,7 @@ export default function HomeRepairPage() {
                       lineHeight: '1.6',
                     }}
                   >
-                    You invest in your home's success without any out-of-pocket expenses. Everything is paid for from your sale proceeds.
+                    Work is completed through Kim's established trade partner network — contractors who deliver quality results on time.
                   </p>
                 </div>
               </div>
@@ -546,7 +547,7 @@ export default function HomeRepairPage() {
                       lineHeight: '1.6',
                     }}
                   >
-                    SMART Building Solutions brings licensed, insured contractors who do quality work on time and on budget.
+                    The Pelham Group NW Home Transition Team brings licensed, insured contractors who do quality work on time and on budget.
                   </p>
                 </div>
               </div>
@@ -602,27 +603,40 @@ export default function HomeRepairPage() {
         <FAQSection
           faqs={[
             {
-              question: "Do I have to pay for repairs out of pocket?",
-              answer: "No. Kim's repair program allows you to complete pre-sale improvements with no upfront cost. The work is paid from your sale proceeds at closing  -  so you invest in your home's value without touching your savings.",
+              question: "Who does the actual work?",
+              answer: "Pelham Group NW Home Transition Team works with a trusted network of licensed, insured contractors across the region.",
             },
             {
               question: "How do I know which repairs are worth doing?",
               answer: "Kim evaluates your home strategically and only recommends repairs that will meaningfully impact your sale price or speed. She won't suggest expensive renovations with a low return on investment  -  every recommendation is based on what Snohomish County buyers are actually looking for.",
             },
             {
-              question: "Who does the actual repair work?",
-              answer: "Kim works with SMART Building Solutions, a trusted network of licensed, insured contractors who specialize in pre-sale home preparation. All work is completed to high quality standards, on time, and on budget.",
-            },
-            {
               question: "How long does the repair process take before I can list?",
               answer: "Most pre-sale repair projects are completed within 2–4 weeks depending on scope. Kim manages the entire timeline to ensure your home is market-ready as efficiently as possible.",
             },
             {
-              question: "Can I use my own contractors?",
-              answer: "You're welcome to. Kim's primary goal is that your home looks its best before it hits the market. If you have trusted contractors you prefer to use, she'll coordinate with them as part of the overall preparation plan.",
+              question: "Do I have to pay for repairs out of pocket?",
+              answer: "Most repairs are paid upfront as work is completed. For qualifying listings, pay-at-closing arrangements are available on a case-by-case basis — ask Kim.",
             },
           ]}
         />
+
+        {/* Deferred Payment Note */}
+        <section style={{ padding: '40px 20px', backgroundColor: 'var(--color-cream)', borderTop: '1px solid #E8E3DA' }}>
+          <div style={{ maxWidth: '700px', margin: '0 auto', textAlign: 'center' }}>
+            <p
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '1rem',
+                color: 'var(--color-text)',
+                lineHeight: '1.8',
+                fontStyle: 'italic',
+              }}
+            >
+              Deferred payment options available when needed — ask Kim about pay-at-closing arrangements for qualifying listings.
+            </p>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section style={{ padding: '80px 20px', backgroundColor: 'var(--color-cream)' }}>

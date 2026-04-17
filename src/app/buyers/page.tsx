@@ -100,8 +100,7 @@ export default function BuyersPage() {
           }}
         >
           I'll guide you through every step, answer your questions without the
-          jargon, and help you make decisions that serve your future - not the
-          commission.
+          jargon, and help you make decisions that serve your future.
         </p>
       </section>
 
@@ -157,13 +156,25 @@ export default function BuyersPage() {
               fontSize: '18px',
               color: '#2C2C2C',
               lineHeight: 1.8,
-              margin: 0,
+              margin: '0 0 16px 0',
             }}
           >
             This means you get my full attention. I'm not distracted by other
             transactions, I'm not juggling multiple closings, and I'm not
             checking my phone while we're viewing homes. You're my focus, and
             you deserve that.
+          </p>
+          <p
+            style={{
+              fontFamily: 'var(--font-handwritten)',
+              fontSize: '18px',
+              color: '#2F5233',
+              fontStyle: 'italic',
+              lineHeight: 1.7,
+              margin: 0,
+            }}
+          >
+            "There are only two days in the weekend, and most buyers have jobs if they're looking for a home. So it's hard to work with more than two buyers at a time."
           </p>
         </div>
       </section>
@@ -310,6 +321,7 @@ export default function BuyersPage() {
             }}
           >
             <div>
+              {/* TODO: Taylor photo — on hold, see LIVING-NOTES.md item 3 */}
               <Image
                 src="/images/kim-with-client-on-couch.jpg"
                 alt="Taylor's success story - first-time home buyer"
@@ -346,9 +358,9 @@ export default function BuyersPage() {
                 }}
               >
                 Taylor was a first-time buyer with only $2,000 for a down payment.
-                Most brokers told her it wasn't possible. We found creative ways to
-                strengthen her offer, negotiated help from the seller, and closed
-                on a beautiful home in Everett - exactly where she wanted to be.
+                Most brokers told him it wasn't possible. We found creative ways to
+                strengthen his offer, negotiated help from the seller, and closed
+                on a beautiful home in Federal Way - exactly where he wanted to be.
               </p>
               <blockquote
                 style={{
@@ -363,6 +375,7 @@ export default function BuyersPage() {
               >
                 Kim didn't just help me buy a house. She believed I could do it
                 when I didn't believe in myself.
+
               </blockquote>
               <p
                 style={{
@@ -372,7 +385,7 @@ export default function BuyersPage() {
                   margin: 0,
                 }}
               >
-                 -  Taylor, Everett Homeowner
+                 -  Taylor, Federal Way Homeowner
               </p>
             </div>
           </div>

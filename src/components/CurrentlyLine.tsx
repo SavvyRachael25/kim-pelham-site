@@ -1,5 +1,7 @@
 'use client';
 
+// OPEN: MLS pre-advertising compliance review needed before live (Kim 4/16/26). Rachael to confirm with Katrina Eileen brokerage.
+
 import { useEffect, useState } from 'react';
 
 export default function CurrentlyLine() {

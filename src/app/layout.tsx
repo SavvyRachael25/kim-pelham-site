@@ -6,7 +6,7 @@ import NewsletterPopup from "@/components/NewsletterPopup";
 export const metadata: Metadata = {
   title: "Kim Pelham | Snohomish County Real Estate Broker | Everett, Bothell, Mill Creek WA",
   description:
-    "Kim Pelham is a Snohomish County real estate broker serving Everett, Bothell, Snohomish, Mill Creek, Lake Stevens & Marysville WA. 14 years of experience, 104.4% sale-to-list ratio, and a two-buyer-max policy.",
+    "Kim Pelham is a Snohomish County real estate broker serving Everett, Bothell, Snohomish, Mill Creek, Lake Stevens & Marysville WA. 17+ years of experience, 102.03% sale-to-list ratio, and a two-buyer-max policy.",
   openGraph: {
     title: "Kim Pelham | Snohomish County Real Estate Broker",
     description:
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Kim Pelham | Snohomish County Real Estate Broker",
-    description: "Your trusted Pacific Northwest real estate broker. 14 years experience. 104.4% sale-to-list ratio.",
+    description: "Your trusted Pacific Northwest real estate broker. 17+ years experience. 102.03% sale-to-list ratio.",
     images: ["/images/kim-headshot-msh.jpg"],
   },
 };
@@ -48,7 +48,7 @@ export default function RootLayout({
                   "@type": "RealEstateAgent",
                   "@id": "https://kim-pelham-site.vercel.app/#agent",
                   "name": "Kim Pelham",
-                  "description": "Snohomish County real estate broker with 14 years of experience. Specializing in residential buying, selling, staging, and senior transitions across Everett, Bothell, Mill Creek, and the greater Snohomish County area.",
+                  "description": "Snohomish County real estate broker with 17+ years of experience. Specializing in residential buying, selling, staging, and senior transitions across Everett, Bothell, Mill Creek, and the greater Snohomish County area.",
                   "url": "https://kim-pelham-site.vercel.app",
                   "telephone": "+14252509422",
                   "image": "https://kim-pelham-site.vercel.app/images/kim-headshot-msh.jpg",

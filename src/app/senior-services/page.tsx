@@ -465,7 +465,7 @@ export default function SeniorServicesPage() {
           },
           {
             question: "How does the downsizing process typically work?",
-            answer: "Kim starts with a consultation to understand your timeline, priorities, and emotional needs. She helps you evaluate your housing options, coordinates any necessary repairs or staging, and manages the entire process so you can focus on the transition itself  -  not the logistics.",
+            answer: "Kim starts with a consultation to understand your timeline, priorities, and emotional needs. Kim and her team bring gentle, caring staff to help you with downsizing decisions — sorting, packing, and the whole process. She helps you evaluate your housing options, coordinates any necessary repairs or staging, and manages the entire process so you can focus on the transition itself  -  not the logistics.",
           },
           {
             question: "What communities or care options does Kim work with?",

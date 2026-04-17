@@ -48,7 +48,7 @@ export default function SellersPage() {
 
       <InnerHero
         title="Sell Your Home for More"
-        subtitle="104.4% sale-to-list ratio vs 97.98% market average"
+        subtitle="102.03% sale-to-list ratio vs. 100.2% NWMLS market average"
         image="/images/kim-with-door.jpg"
         imageAlt="Kim Pelham helping sellers"
       />
@@ -99,8 +99,8 @@ export default function SellersPage() {
               margin: '0 0 20px 0',
             }}
           >
-            On average, homes in Snohomish County sell for 97.98% of the listing
-            price.
+            On average, homes sell for 100.2% of the listing price in the NWMLS
+            market.
           </p>
           <p
             style={{
@@ -111,7 +111,7 @@ export default function SellersPage() {
               margin: '0 0 20px 0',
             }}
           >
-            My clients see 104.4%
+            My clients see 102.03%
           </p>
           <p
             style={{
@@ -160,23 +160,23 @@ export default function SellersPage() {
             {[
               {
                 step: 1,
-                title: 'Identify Repairs',
-                desc: 'Strategic inspection to pinpoint repairs that add the most value.',
+                title: 'Strategy Session',
+                desc: 'Identify the repairs and upgrades that will add the most value and help your home sell quickly.',
               },
               {
                 step: 2,
-                title: 'Staging Assessment',
-                desc: 'Professional staging consultation to highlight your home\'s strengths.',
+                title: 'Concierge Service',
+                desc: 'We help you make the repairs. The Pelham Group NW Home Transition Team coordinates everything.',
               },
               {
                 step: 3,
-                title: 'Staging Execution',
-                desc: 'We execute the staging plan to create emotional buyer connection.',
+                title: 'Staging',
+                desc: 'Professional staging — psychology-driven, magazine quality.',
               },
               {
                 step: 4,
-                title: 'Professional Photography',
-                desc: 'Studio-quality photos that make buyers want to see your home in person.',
+                title: 'Professional Photography + Matterport 3D Tours',
+                desc: 'Studio-quality photos and immersive Matterport 3D tours that make buyers want to see your home in person.',
               },
               {
                 step: 5,
@@ -185,8 +185,8 @@ export default function SellersPage() {
               },
               {
                 step: 6,
-                title: 'Quality Marketing Materials',
-                desc: 'Premium brochures, virtual tours, and print pieces that sell.',
+                title: 'Marketing Materials',
+                desc: 'Flyers, feature cards throughout the home, laminated feature cards in the yard, and walking tours on larger properties.',
               },
             ].map((item, idx) => (
               <div
@@ -239,6 +239,49 @@ export default function SellersPage() {
                 </p>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ========== OVERCOMING THE BUMPS ========== */}
+      <section
+        style={{
+          padding: '80px 24px',
+          backgroundColor: '#FFFFFF',
+        }}
+      >
+        <div style={{ maxWidth: '900px', margin: '0 auto' }}>
+          <h2
+            style={{
+              fontFamily: 'var(--font-heading)',
+              fontSize: 'clamp(32px, 6vw, 48px)',
+              fontWeight: 700,
+              color: '#2F5233',
+              textAlign: 'center',
+              margin: '0 0 40px 0',
+            }}
+          >
+            Overcoming the Bumps
+          </h2>
+          <div
+            style={{
+              padding: '40px',
+              backgroundColor: '#F8F5F0',
+              border: '2px solid #2F5233',
+              borderRadius: '4px',
+            }}
+          >
+            <p
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '18px',
+                color: '#2C2C2C',
+                lineHeight: 1.8,
+                margin: 0,
+              }}
+            >
+              Most transactions have a bump — sometimes small, sometimes large. My job is to get you over the bump with the least stress possible. A big bump can tank a sale, but over 17+ years I've learned that step by step, never giving up, almost always gets us through.
+            </p>
           </div>
         </div>
       </section>
@@ -334,6 +377,7 @@ export default function SellersPage() {
       </section>
 
       {/* ========== SELLER TESTIMONIALS ========== */}
+      {/* TODO: Rachael to replace with real Google review content */}
       <section
         style={{
           padding: '80px 24px',
@@ -875,11 +919,11 @@ export default function SellersPage() {
           },
           {
             question: "How long will it take to sell my home?",
-            answer: "With Kim's full marketing system, well-priced homes in Snohomish County typically go under contract within 1–2 weeks. Her average sale-to-list ratio is 104.4%, meaning her clients consistently sell above asking price.",
+            answer: "With Kim's full marketing system, well-priced homes in Snohomish County typically go under contract within 1–2 weeks. Her average sale-to-list ratio is 102.03%, meaning her clients consistently sell above asking price.",
           },
           {
             question: "What if my home needs repairs before I can list?",
-            answer: "Kim coordinates pre-sale repairs through her trusted contractor network at no upfront cost  -  you pay from your proceeds at closing. She'll identify which repairs will actually move the needle on your sale price and skip the ones that won't.",
+            answer: "Kim coordinates pre-sale repairs through the Pelham Group NW Home Transition Team. She'll identify which repairs will actually move the needle on your sale price and skip the ones that won't. Deferred payment options are available for qualifying listings — ask Kim about pay-at-closing arrangements.",
           },
           {
             question: "What are your commission fees?",

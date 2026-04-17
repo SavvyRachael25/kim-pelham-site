@@ -58,7 +58,7 @@ export default function StagingPage() {
           Staging isn't about decoration - it's about psychology. Every piece of furniture, every color choice, every lighting
           adjustment is designed to help buyers envision themselves in your home. Professional staging removes distractions,
           highlights your home's best features, and creates an emotional connection that translates directly to higher offers
-          and faster sales.
+          and faster sales. Staging also distracts from any flaws the home has — which can actually save sellers money, because the home doesn't have to be 100% perfect when it's staged.
         </p>
       </section>
 
@@ -168,6 +168,43 @@ export default function StagingPage() {
         </div>
       </section>
 
+      {/* Featured Story */}
+      <section
+        style={{
+          padding: '80px 20px',
+          maxWidth: '900px',
+          margin: '0 auto',
+          width: '100%',
+        }}
+      >
+        {/* TODO: story photo — Kim to provide if available */}
+        <blockquote
+          style={{
+            fontFamily: 'var(--font-handwritten)',
+            fontSize: '1.25rem',
+            color: '#2F5233',
+            fontStyle: 'italic',
+            lineHeight: 1.7,
+            margin: '0 0 24px 0',
+            paddingLeft: '24px',
+            borderLeft: '3px solid #B8845C',
+          }}
+        >
+          "I took a house that had been listed for 69 days and the listing was canceled. I staged it, and it sold in 3 days for $5,000 more than the canceled price."
+        </blockquote>
+        <p
+          style={{
+            fontFamily: 'var(--font-body)',
+            fontSize: '1rem',
+            color: '#555',
+            lineHeight: 1.7,
+            margin: 0,
+          }}
+        >
+          Understanding the psychological impact of staging is what helps a house sell faster and for more money.
+        </p>
+      </section>
+
       {/* Key Takeaways */}
       <section
         style={{
@@ -202,16 +239,16 @@ export default function StagingPage() {
             {
               title: 'Select Your Broker Carefully',
               description:
-                'Not all brokers understand staging. Choose someone who views it as a core part of your selling strategy.',
+                'Not all brokers understand the psychological aspect of staging.',
             },
             {
               title: 'Ask About Selling Strategy',
               description:
-                'Before listing, discuss how your broker plans to present your home. Will they stage? How will they market?',
+                'Before listing, ask your broker: "Will they stage? Will they take magazine-quality photos?" How a broker presents your home matters as much as the price.',
             },
             {
               title: 'Staging Results in Higher Offers',
-              description: "On average, staged homes sell 300% faster and for more money. This is not a luxury - it's a smart investment.",
+              description: "Staged homes sell 30–50% faster and typically 3–8% higher than non-staged homes. In my experience, staging is one of the highest-ROI investments a seller can make — you'll typically make 2–5× what you invest.",
             },
           ].map((item, idx) => (
             <div
@@ -325,7 +362,7 @@ export default function StagingPage() {
         faqs={[
           {
             question: "Does staging really make a difference in sale price?",
-            answer: "Absolutely. Staged homes sell up to 300% faster and consistently for more money. Buyers make emotional decisions first and logical decisions second. When a home is staged well, buyers can picture themselves living there  -  and that emotional connection translates directly to stronger offers.",
+            answer: "Absolutely. Staged homes sell 30–50% faster and consistently for more money. Buyers make emotional decisions first and logical decisions second. When a home is staged well, buyers can picture themselves living there  -  and that emotional connection translates directly to stronger offers.",
           },
           {
             question: "How much does professional staging cost?",
@@ -333,7 +370,7 @@ export default function StagingPage() {
           },
           {
             question: "Will Kim be staging my home herself?",
-            answer: "Yes. Kim personally oversees and executes the staging process. She's not farming it out to a third party. Her eye for space, buyer psychology, and design comes from years of experience selling in this market.",
+            answer: "Most of the time, yes — Kim personally stages with inventory from her own collection. For vacant homes where more furniture is needed than Kim's inventory can cover, Kim partners with a trusted staging company to round out the look. Either way, you get Kim's eye and her psychology-driven approach.",
           },
           {
             question: "Do I need to move my furniture out for staging?",

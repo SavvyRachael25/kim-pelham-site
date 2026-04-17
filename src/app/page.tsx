@@ -20,7 +20,7 @@ import ContactCTA from '@/components/ContactCTA';
 
 export const metadata = {
   title: 'Kim Pelham - Real Estate Broker | Snohomish County',
-  description: 'Your neighbor in real estate. 14 years helping families buy and sell in Snohomish County with a two-buyer-max policy.',
+  description: 'Your neighbor in real estate. 17+ years helping families buy and sell in Snohomish County with a two-buyer-max policy.',
 };
 
 export default function Home() {

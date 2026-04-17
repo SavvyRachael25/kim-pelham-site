@@ -13,7 +13,7 @@ export default function SaleToListRatioPage() {
       <Nav />
       <main>
       <InnerHero
-        title="Understanding Your Sale-to-List Ratio (And Why Kim's Is 104.4%)"
+        title="Understanding Your Sale-to-List Ratio (And Why Kim's Is 102.03%)"
         subtitle="By Kim Pelham - January 25, 2026 - 6 min read"
         image="/images/property-01-everett-home-exterior.jpg"
         imageAlt="Sale to list ratio explained"
@@ -34,7 +34,7 @@ export default function SaleToListRatioPage() {
                 fontWeight: 700,
               }}
             >
-              Your sale-to-list ratio is the single most useful number for evaluating a real estate broker's performance — and most sellers never ask about it. It measures what percentage of the asking price a home actually sells for. A 104.4% ratio means sellers are walking away with significantly more than they asked for. That's not luck. That's strategy.
+              Your sale-to-list ratio is the single most useful number for evaluating a real estate broker's performance — and most sellers never ask about it. It measures what percentage of the asking price a home actually sells for. A 102.03% ratio means sellers are walking away with significantly more than they asked for. That's not luck. That's strategy.
             </p>
 
             {/* Stat Callout Box */}
@@ -46,7 +46,7 @@ export default function SaleToListRatioPage() {
               margin: '0 0 40px 0',
             }}>
               <p style={{ fontFamily: 'var(--font-heading)', fontSize: '2.5rem', fontWeight: 700, color: 'var(--color-forest)', margin: '0 0 6px 0', lineHeight: 1 }}>
-                104.4%
+                102.03%
               </p>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', margin: '0 0 8px 0', lineHeight: 1.6 }}>
                 Kim Pelham's average sale-to-list ratio — meaning her sellers receive an average of $24,000+ above asking price on a $600K home. Snohomish County market average: ~99–100%.
@@ -65,7 +65,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              If you've looked at my marketing materials or heard me speak about my business, you've probably seen the number: 104.4%. That's my average sale-to-list ratio — the percentage of your home's asking price that it actually sells for. It's not a coincidence or luck. It's a direct reflection of strategy, preparation, and genuine expertise built over 14 years of selling homes across Snohomish County. In this article, I want to break down what this metric means, why it matters, and how you can achieve similar results.
+              If you've looked at my marketing materials or heard me speak about my business, you've probably seen the number: 102.03%. That's my average sale-to-list ratio — the percentage of your home's asking price that it actually sells for. It's not a coincidence or luck. It's a direct reflection of strategy, preparation, and genuine expertise built over 17+ years of selling homes across Snohomish County. In this article, I want to break down what this metric means, why it matters, and how you can achieve similar results.
             </p>
 
             <h2
@@ -201,7 +201,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              Strategic pricing means listing your home where it will generate maximum interest from qualified buyers without leaving money on the table. I analyze comparable sales, current market days, buyer demand patterns, and your home's unique strengths to find that sweet spot. Price too low, and you're giving away equity. Price strategically, and you attract multiple offers that drive the final sale price up. This is where 14 years of local expertise matters most.
+              Strategic pricing means listing your home where it will generate maximum interest from qualified buyers without leaving money on the table. I analyze comparable sales, current market days, buyer demand patterns, and your home's unique strengths to find that sweet spot. Price too low, and you're giving away equity. Price strategically, and you attract multiple offers that drive the final sale price up. This is where 17+ years of local expertise matters most.
             </p>
 
             {/* Pull Quote */}
@@ -328,7 +328,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              My 104.4% average comes from homes across diverse price points, neighborhoods, and property types throughout Snohomish County — because I apply the same strategic approach to every listing, regardless of price point. A $350,000 townhouse in Lynnwood gets the same level of preparation and marketing as a $900,000 home on the water in Mukilteo. Every seller deserves that.
+              My 102.03% average comes from homes across diverse price points, neighborhoods, and property types throughout Snohomish County — because I apply the same strategic approach to every listing, regardless of price point. A $350,000 townhouse in Lynnwood gets the same level of preparation and marketing as a $900,000 home on the water in Mukilteo. Every seller deserves that.
             </p>
 
             <h2
@@ -353,7 +353,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '40px',
               }}
             >
-              If you're getting ready to sell, remember: your sale-to-list ratio starts the moment you list your home. It's determined by how it's priced, presented, and marketed. There's no magic here — just strategy and expertise applied consistently. I'd love to discuss how we can work together to achieve your best possible outcome. That 104.4% represents real dollars, real returns, and real success for my clients. Let's make it happen for you.
+              If you're getting ready to sell, remember: your sale-to-list ratio starts the moment you list your home. It's determined by how it's priced, presented, and marketed. There's no magic here — just strategy and expertise applied consistently. I'd love to discuss how we can work together to achieve your best possible outcome. That 102.03% represents real dollars, real returns, and real success for my clients. Let's make it happen for you.
             </p>
 
             {/* FAQ Section */}
@@ -368,7 +368,7 @@ export default function SaleToListRatioPage() {
                   What is a good sale-to-list ratio for Snohomish County?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  In Snohomish County, a ratio of 99–101% is considered average. Anything above 102% signals strong demand and strategic pricing. Kim Pelham's consistent 104.4% average places her well above the market norm and reflects a disciplined approach to pricing, presentation, and offer management.
+                  In Snohomish County, a ratio of 99–101% is considered average. Anything above 102% signals strong demand and strategic pricing. Kim Pelham's consistent 102.03% average places her well above the market norm and reflects a disciplined approach to pricing, presentation, and offer management.
                 </p>
               </div>
 

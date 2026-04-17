@@ -228,7 +228,7 @@ export default function NewsletterPopup() {
                     lineHeight: 1.25,
                   }}
                 >
-                  I&apos;ve lived and worked this market for 14 years.{' '}
+                  I&apos;ve lived and worked this market for 17+ years.{' '}
                   <span style={{ color: '#2F5233' }}>Let me share what I actually know.</span>
                 </h2>
 

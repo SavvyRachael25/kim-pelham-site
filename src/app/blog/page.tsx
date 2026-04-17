@@ -45,10 +45,10 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: '4',
-    title: 'Understanding Your Sale-to-List Ratio (And Why Kim\'s Is 104.4%)',
+    title: 'Understanding Your Sale-to-List Ratio (And Why Kim\'s Is 102.03%)',
     slug: 'sale-to-list-ratio',
     excerpt:
-      'What does a 104.4% sale-to-list ratio mean, and why does it matter for sellers? Explore the metrics that predict your real estate success.',
+      'What does a 102.03% sale-to-list ratio mean, and why does it matter for sellers? Explore the metrics that predict your real estate success.',
     date: '2026-01-25',
     category: 'Market Insights',
   },

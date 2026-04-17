@@ -21,7 +21,7 @@ const neighborhoods: NeighborhoodCard[] = [
     id: 1,
     name: 'Everett',
     description: 'Waterfront community with vibrant downtown, excellent schools, and strong family appeal',
-    image: '/images/neighborhood-01-everett-marina.jpg',
+    image: '/images/neighborhood-01-everett-marina.jpg', // TODO: photo from Kim — her own Everett photos
     size: 'featured',
     rotation: -2,
   },
@@ -29,7 +29,7 @@ const neighborhoods: NeighborhoodCard[] = [
     id: 2,
     name: 'Bothell',
     description: 'Tech hub community with modern amenities, beautiful parks, and innovative spirit',
-    image: '/images/property-03-lake-stevens-waterfront.jpg',
+    image: '/images/property-03-lake-stevens-waterfront.jpg', // TODO: Bothell Old Town area photo
     size: 'regular',
     rotation: 1.5,
   },
@@ -53,7 +53,7 @@ const neighborhoods: NeighborhoodCard[] = [
     id: 5,
     name: 'Lake Stevens',
     description: 'Waterfront living with recreational opportunities, stunning views, and peaceful surroundings',
-    image: '/images/property-03-lake-stevens-waterfront.jpg',
+    image: '/images/property-03-lake-stevens-waterfront.jpg', // TODO: new Lake Stevens photo — current one is wrong
     size: 'regular',
     rotation: -1.5,
   },
@@ -61,9 +61,33 @@ const neighborhoods: NeighborhoodCard[] = [
     id: 6,
     name: 'Marysville',
     description: 'Growing community with affordability, access to nature, and strong sense of community',
-    image: '/images/neighborhood-03-snohomish-historic.jpg',
+    image: '/images/neighborhood-03-snohomish-historic.jpg', // TODO: new Marysville photo — current one is wrong
     size: 'regular',
     rotation: 1,
+  },
+];
+
+const comingSoonNeighborhoods = [
+  {
+    id: 7,
+    name: 'Monroe',
+    description: 'Gateway to the Skykomish Valley — farms, river views, and room to breathe',
+    image: '/images/neighborhood-03-snohomish-historic.jpg',
+    rotation: -1,
+  },
+  {
+    id: 8,
+    name: 'Edmonds',
+    description: 'Waterfront charm, arts district, and ferry views — one of the most livable small cities in Washington',
+    image: '/images/neighborhood-01-everett-marina.jpg',
+    rotation: 1.5,
+  },
+  {
+    id: 9,
+    name: 'Arlington',
+    description: 'Small-town feel with big outdoor access — foothills, rivers, and a tight-knit community',
+    image: '/images/neighborhood-03-snohomish-historic.jpg',
+    rotation: -0.5,
   },
 ];
 
@@ -105,9 +129,9 @@ export default function NeighborhoodsPage() {
                 lineHeight: 1.2,
               }}
             >
-              Six Communities,
+              The Communities I Serve,
               <br />
-              <span style={{ color: '#2F5233' }}>Infinite Possibilities</span>
+              <span style={{ color: '#2F5233' }}>Inside & Out</span>
             </h2>
           </div>
         </section>
@@ -245,6 +269,113 @@ export default function NeighborhoodsPage() {
                   </div>
                 </article>
               ))}
+            </div>
+
+            {/* Coming Soon Tiles */}
+            <div style={{ marginTop: '2rem' }}>
+              <p
+                style={{
+                  fontFamily: 'var(--font-handwritten)',
+                  fontSize: '1rem',
+                  color: '#B8845C',
+                  margin: '0 0 16px 0',
+                }}
+              >
+                coming soon
+              </p>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                  gap: '2rem',
+                  gridAutoRows: '220px',
+                }}
+              >
+                {comingSoonNeighborhoods.map((neighborhood) => (
+                  <article
+                    key={neighborhood.id}
+                    style={{
+                      position: 'relative',
+                      borderRadius: '8px',
+                      overflow: 'hidden',
+                      transform: `rotate(${neighborhood.rotation}deg)`,
+                      boxShadow: '0 4px 12px rgba(44, 44, 44, 0.12)',
+                      backgroundColor: '#FFFFFF',
+                      opacity: 0.75,
+                      minHeight: '220px',
+                    }}
+                  >
+                    <Image
+                      src={neighborhood.image}
+                      alt={neighborhood.name}
+                      fill
+                      style={{ objectFit: 'cover', filter: 'grayscale(40%)' }}
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                    <div
+                      style={{
+                        position: 'absolute',
+                        inset: 0,
+                        background: 'linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.35) 55%, transparent 100%)',
+                      }}
+                    />
+                    {/* Coming Soon badge */}
+                    <div
+                      style={{
+                        position: 'absolute',
+                        top: '16px',
+                        right: '16px',
+                        backgroundColor: '#B8845C',
+                        color: '#FFFFFF',
+                        fontFamily: 'var(--font-body)',
+                        fontSize: '0.7rem',
+                        fontWeight: 700,
+                        letterSpacing: '0.08em',
+                        textTransform: 'uppercase',
+                        padding: '4px 10px',
+                        borderRadius: '2px',
+                      }}
+                    >
+                      Coming Soon
+                    </div>
+                    <div
+                      style={{
+                        position: 'absolute',
+                        inset: 0,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'flex-end',
+                        padding: '2rem',
+                        color: '#F8F5F0',
+                      }}
+                    >
+                      <h3
+                        style={{
+                          fontFamily: 'var(--font-heading)',
+                          fontSize: 'clamp(1.5rem, 4vw, 2rem)',
+                          fontWeight: 700,
+                          color: '#FFFFFF',
+                          margin: '0 0 0.5rem 0',
+                          lineHeight: 1.1,
+                        }}
+                      >
+                        {neighborhood.name}
+                      </h3>
+                      <p
+                        style={{
+                          fontFamily: 'var(--font-body)',
+                          fontSize: '0.9rem',
+                          margin: 0,
+                          lineHeight: 1.5,
+                          opacity: 0.85,
+                        }}
+                      >
+                        {neighborhood.description}
+                      </p>
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
           </div>
         </section>

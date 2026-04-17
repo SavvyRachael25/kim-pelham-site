@@ -8,25 +8,25 @@ import InnerHero from '@/components/InnerHero';
 import ScrollProgress from '@/components/ScrollProgress';
 
 const stats = [
-  { number: '14', label: 'Years serving Snohomish County', note: 'deep roots, not just a zip code' },
+  { number: '17+', label: 'Years serving Snohomish County', note: 'deep roots, not just a zip code' },
   { number: '6', label: 'Neighborhoods Kim calls home turf', note: 'Everett, Bothell, Mill Creek + more' },
   { number: '2', label: 'Buyers max — ever', note: "you're not a number here" },
-  { number: '47+', label: 'Five-star reviews', note: 'Zillow & Google combined' },
+  { number: '70+', label: 'Five-star reviews', note: '40 Google · 28 Zillow' },
 ];
 
 const events = [
   {
-    cadence: 'Quarterly',
+    cadence: 'Periodically',
     title: 'First-Time Buyer Workshops',
     description:
-      'The real talk nobody gives you. Pre-approval, offer strategy, inspection red flags, and what happens at closing — demystified in 90 minutes.',
+      'Workshops on first-time buying happen periodically — call to find out when the next one is scheduled.',
     cta: { label: 'Learn more', href: '/buyers' },
   },
   {
-    cadence: 'Monthly',
+    cadence: 'Periodically',
     title: 'Senior Downsizing Seminars',
     description:
-      'Moving from a family home to the next chapter is a big deal. These free seminars cover timelines, lifestyle options, estate planning basics, and how to make it feel less overwhelming.',
+      'Workshops on senior downsizing happen periodically — call to find out when the next one is scheduled.',
     cta: { label: 'Senior services', href: '/senior-services' },
   },
   {
@@ -41,7 +41,7 @@ const events = [
 const partnerships = [
   {
     icon: '🔨',
-    title: 'SMART Building Solutions',
+    title: 'Pelham Group NW Home Transition Team',
     description: 'Pre-sale repairs and coordinated improvements — so you sell for more without the contractor stress.',
   },
   {
@@ -63,10 +63,10 @@ const partnerships = [
 
 const neighborhoods = [
   {
-    name: 'Everett',
-    tagline: 'The heart of it all',
-    image: '/images/neighborhood-01-everett-marina.jpg',
-    href: '/neighborhoods/everett',
+    name: 'Arlington',
+    tagline: 'Small-town charm',
+    image: '/images/neighborhood-03-snohomish-historic.jpg',
+    href: '/neighborhoods/arlington',
   },
   {
     name: 'Bothell',
@@ -75,16 +75,22 @@ const neighborhoods = [
     href: '/neighborhoods/bothell',
   },
   {
-    name: 'Mill Creek',
-    tagline: 'Tucked in the trees',
-    image: '/images/property-02-mill-creek-home.jpg',
-    href: '/neighborhoods/mill-creek',
+    name: 'Edmonds',
+    tagline: 'Waterfront community',
+    image: '/images/neighborhood-01-everett-marina.jpg',
+    href: '/neighborhoods/edmonds',
   },
   {
-    name: 'Snohomish',
-    tagline: 'Small-town charm',
+    name: 'Everett',
+    tagline: 'The heart of it all',
+    image: '/images/neighborhood-01-everett-marina.jpg',
+    href: '/neighborhoods/everett',
+  },
+  {
+    name: 'Granite Falls',
+    tagline: 'Natural beauty',
     image: '/images/neighborhood-03-snohomish-historic.jpg',
-    href: '/neighborhoods/snohomish',
+    href: '/neighborhoods/granite-falls',
   },
   {
     name: 'Lake Stevens',
@@ -93,10 +99,46 @@ const neighborhoods = [
     href: '/neighborhoods/lake-stevens',
   },
   {
+    name: 'Lynnwood',
+    tagline: 'Connected & convenient',
+    image: '/images/neighborhood-02-bothell-main-street.jpg',
+    href: '/neighborhoods/lynnwood',
+  },
+  {
     name: 'Marysville',
     tagline: 'Room to grow',
     image: '/images/neighborhood-03-snohomish-historic.jpg',
     href: '/neighborhoods/marysville',
+  },
+  {
+    name: 'Mill Creek',
+    tagline: 'Tucked in the trees',
+    image: '/images/property-02-mill-creek-home.jpg',
+    href: '/neighborhoods/mill-creek',
+  },
+  {
+    name: 'Monroe',
+    tagline: 'Gateway to the valley',
+    image: '/images/neighborhood-03-snohomish-historic.jpg',
+    href: '/neighborhoods/monroe',
+  },
+  {
+    name: 'Mountlake Terrace',
+    tagline: 'Central & connected',
+    image: '/images/neighborhood-02-bothell-main-street.jpg',
+    href: '/neighborhoods/mountlake-terrace',
+  },
+  {
+    name: 'Mukilteo',
+    tagline: 'Ferry town views',
+    image: '/images/neighborhood-01-everett-marina.jpg',
+    href: '/neighborhoods/mukilteo',
+  },
+  {
+    name: 'Snohomish',
+    tagline: 'Small-town charm',
+    image: '/images/neighborhood-03-snohomish-historic.jpg',
+    href: '/neighborhoods/snohomish',
   },
 ];
 

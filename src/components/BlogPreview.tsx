@@ -9,7 +9,7 @@ const posts = [
     image: '/images/hero-02-warm-kitchen.jpg',
     title: 'First-Time Buyers: 5 Things I Wish Someone Had Told Me',
     excerpt:
-      'After 14 years of walking first-time buyers through Snohomish County, these are the things that make the biggest difference.',
+      'After 17+ years of walking first-time buyers through Snohomish County, these are the things that make the biggest difference.',
     date: 'March 2026',
     category: 'Buying',
   },

@@ -89,7 +89,6 @@ export default function AboutPage() {
                 height={350}
                 style={{ objectFit: 'cover' }}
               />
-              <p className="polaroid-caption">a day in my neighborhood</p>
             </div>
           </div>
 
@@ -114,7 +113,7 @@ export default function AboutPage() {
                 lineHeight: 1.2,
               }}
             >
-              14 Years of Intentional Service
+              17+ Years of Intentional Service
             </h2>
             <p
               style={{
@@ -125,7 +124,7 @@ export default function AboutPage() {
                 margin: '0 0 20px 0',
               }}
             >
-              I've spent 14 years helping families navigate one of their biggest
+              I've spent 17+ years helping families navigate one of their biggest
               decisions. Three of those years were in commercial property
               management, which taught me the business side of real estate. But
               my heart is in residential transactions - the stories, the dreams, the
@@ -142,7 +141,7 @@ export default function AboutPage() {
             >
               I'm a PNW native: childhood through second grade in the Seattle area,
               Bothell from 1996–2002, and Everett since 2015. This isn't just where
-              I work. It's where I raise my family, where my kids go to school, and
+              I work. It's where I raise my family, where my kids went to school, and
               where I actually know my neighbors.
             </p>
             <p
@@ -198,7 +197,7 @@ export default function AboutPage() {
                 margin: 0,
               }}
             >
-              104.4%
+              102.03%
             </p>
             <p
               style={{
@@ -209,7 +208,7 @@ export default function AboutPage() {
                 opacity: 0.9,
               }}
             >
-              Average sale-to-list ratio
+              Average sale-to-list ratio (vs 100.2% NWMLS avg)
             </p>
           </div>
 
@@ -232,7 +231,7 @@ export default function AboutPage() {
                 margin: 0,
               }}
             >
-              $3.2M+
+              $78.4M
             </p>
             <p
               style={{
@@ -243,7 +242,7 @@ export default function AboutPage() {
                 opacity: 0.9,
               }}
             >
-              Homes sold
+              Total volume (176 homes sold)
             </p>
           </div>
 
@@ -266,7 +265,7 @@ export default function AboutPage() {
                 margin: 0,
               }}
             >
-              14+
+              17+
             </p>
             <p
               style={{
@@ -680,7 +679,7 @@ export default function AboutPage() {
                   margin: '0 0 16px 0',
                 }}
               >
-                SMART Building Partnership
+                Pelham Group NW Home Transition Team
               </h3>
               <p
                 style={{

@@ -178,8 +178,8 @@ export default function Footer() {
                 'Best of Snohomish County 2024',
                 'Best of Zillow',
                 'SRES Certified',
-                '14 Years Experience',
-                '104.4% Sale-to-List Ratio',
+                '17+ Years Experience',
+                '102.03% Sale-to-List Ratio',
               ].map((badge) => (
                 <div
                   key={badge}
