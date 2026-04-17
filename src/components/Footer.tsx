@@ -153,6 +153,8 @@ export default function Footer() {
                 { href: '/senior-services', label: 'Senior Services' },
                 { href: '/blog', label: 'Blog' },
                 { href: '/contact', label: 'Contact Kim' },
+                { href: '/privacy', label: 'Privacy Policy' },
+                { href: '/terms', label: 'Terms & Conditions' },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
