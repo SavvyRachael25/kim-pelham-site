@@ -7,38 +7,7 @@ import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 
-const pressItems = [
-  {
-    year: '2026',
-    publication: 'Snohomish County Business Journal',
-    headline: 'Top 10 Brokers to Watch',
-    pullQuote: '"Kim Pelham has built something rare in real estate: a practice rooted in community, not commission."',
-  },
-  {
-    year: 'Mar 2025',
-    publication: 'Everett Herald / HeraldNet',
-    headline: 'The Real Estate Pros You Need to Know: Top 3 Realtors in Snohomish County',
-    pullQuote: '"Her two-buyer-max policy is unusual in an industry that rewards volume. Her clients love her for it."',
-  },
-  {
-    year: '2025',
-    publication: 'Everett Herald',
-    headline: 'How One Broker is Changing Senior Real Estate Services',
-    pullQuote: '"Pelham\u2019s SRES certification isn\u2019t just a credential \u2014 it\u2019s a philosophy that shows up in every senior transition she handles."',
-  },
-  {
-    year: '2025',
-    publication: 'Pacific Northwest Magazine',
-    headline: "The Art of Home Staging: Kim Pelham\u2019s 6-Step System",
-    pullQuote: '"The results are undeniable: homes staged using the Pelham method consistently sell above asking price."',
-  },
-  {
-    year: '2025',
-    publication: 'Real Producers Magazine',
-    headline: 'Kim Pelham: Presence, Perspective, Purpose',
-    pullQuote: '"She doesn\u2019t just sell homes \u2014 she helps people navigate one of the biggest moments of their lives with grace."',
-  },
-];
+// pressItems removed — all entries were unconfirmed. See FIX 5 (audit 4/16/26).
 
 const awards = [
   {
@@ -94,13 +63,7 @@ const speakingItems = [
   },
 ];
 
-const publications = [
-  'Snohomish County Business Journal',
-  'Everett Herald',
-  'Pacific Northwest Magazine',
-  'Real Producers Magazine',
-  'HeraldNet',
-];
+// publications list removed — entries were unconfirmed. See FIX 5 (audit 4/16/26).
 
 export default function MediaPage() {
   return (
@@ -114,71 +77,6 @@ export default function MediaPage() {
           image="/images/neighborhood-03-snohomish-historic.jpg"
           imageAlt="Historic Snohomish neighborhood"
         />
-
-        {/* Featured Quote Band */}
-        <section
-          style={{
-            backgroundColor: '#2F5233',
-            padding: '64px 24px',
-            position: 'relative',
-            overflow: 'hidden',
-          }}
-        >
-          <div
-            style={{
-              position: 'absolute',
-              top: '-40px',
-              left: '5%',
-              fontFamily: 'Georgia, serif',
-              fontSize: '20rem',
-              color: 'rgba(255,255,255,0.04)',
-              lineHeight: 1,
-              pointerEvents: 'none',
-              userSelect: 'none',
-            }}
-            aria-hidden="true"
-          >
-            &ldquo;
-          </div>
-          <div style={{ maxWidth: '800px', margin: '0 auto', textAlign: 'center', position: 'relative', zIndex: 1 }}>
-            <p
-              style={{
-                fontFamily: 'var(--font-handwritten)',
-                fontSize: '0.9rem',
-                color: '#B8845C',
-                letterSpacing: '0.12em',
-                textTransform: 'uppercase',
-                marginBottom: '20px',
-              }}
-            >
-              as featured in Real Producers Magazine
-            </p>
-            <blockquote
-              style={{
-                fontFamily: 'var(--font-heading)',
-                fontSize: 'clamp(1.5rem, 4vw, 2.25rem)',
-                fontWeight: 400,
-                fontStyle: 'italic',
-                color: '#F8F5F0',
-                lineHeight: 1.4,
-                margin: '0 0 24px 0',
-              }}
-            >
-              "She doesn't just sell homes — she helps people navigate one of the biggest moments of their lives with grace."
-            </blockquote>
-            <p
-              style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '0.85rem',
-                color: 'rgba(248,245,240,0.55)',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-              }}
-            >
-              Real Producers Magazine, 2025
-            </p>
-          </div>
-        </section>
 
         {/* Press Articles */}
         <section style={{ padding: '96px 24px', backgroundColor: '#fff' }}>
@@ -209,151 +107,20 @@ export default function MediaPage() {
               </h2>
             </div>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '0' }}>
-              {pressItems.map((item, idx) => (
-                <article
-                  key={idx}
-                  style={{
-                    display: 'grid',
-                    gridTemplateColumns: '120px 1fr',
-                    gap: '32px',
-                    padding: '40px 0',
-                    borderBottom: '1px solid #E8E3DA',
-                    alignItems: 'start',
-                  }}
-                >
-                  {/* Year badge */}
-                  <div>
-                    <span
-                      style={{
-                        display: 'inline-block',
-                        fontFamily: 'var(--font-body)',
-                        fontSize: '0.75rem',
-                        fontWeight: 700,
-                        color: '#B8845C',
-                        letterSpacing: '0.1em',
-                        textTransform: 'uppercase',
-                        backgroundColor: '#FDF5EE',
-                        padding: '6px 14px',
-                        borderRadius: '2px',
-                        border: '1px solid rgba(184,132,92,0.2)',
-                      }}
-                    >
-                      {item.year}
-                    </span>
-                  </div>
-
-                  {/* Content */}
-                  <div>
-                    <p
-                      style={{
-                        fontFamily: 'var(--font-body)',
-                        fontSize: '0.75rem',
-                        fontWeight: 700,
-                        color: '#767676',
-                        textTransform: 'uppercase',
-                        letterSpacing: '0.1em',
-                        margin: '0 0 10px 0',
-                      }}
-                    >
-                      {item.publication}
-                    </p>
-                    <h3
-                      style={{
-                        fontFamily: 'var(--font-heading)',
-                        fontSize: 'clamp(1.25rem, 3vw, 1.6rem)',
-                        fontWeight: 600,
-                        color: '#2C2C2C',
-                        margin: '0 0 16px 0',
-                        lineHeight: 1.3,
-                      }}
-                    >
-                      {item.headline}
-                    </h3>
-                    <p
-                      style={{
-                        fontFamily: 'var(--font-heading)',
-                        fontSize: '1.05rem',
-                        fontStyle: 'italic',
-                        color: '#2F5233',
-                        margin: 0,
-                        lineHeight: 1.5,
-                        paddingLeft: '16px',
-                        borderLeft: '2px solid #B8845C',
-                      }}
-                    >
-                      {item.pullQuote}
-                    </p>
-                  </div>
-                </article>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* As Seen In strip */}
-        <section
-          style={{
-            padding: '48px 24px',
-            backgroundColor: '#F8F5F0',
-            borderTop: '1px solid #E8E3DA',
-            borderBottom: '1px solid #E8E3DA',
-          }}
-        >
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
             <p
               style={{
                 fontFamily: 'var(--font-body)',
-                fontSize: '0.7rem',
-                fontWeight: 700,
-                color: '#767676',
-                letterSpacing: '0.18em',
-                textTransform: 'uppercase',
-                textAlign: 'center',
-                marginBottom: '32px',
+                fontSize: '1rem',
+                color: '#555',
+                lineHeight: 1.7,
               }}
             >
-              As Seen In
+              Additional press coming soon. For media inquiries, contact Kim at{' '}
+              <a href="mailto:hello@thepelhamgroupnw.com" style={{ color: '#2F5233' }}>
+                hello@thepelhamgroupnw.com
+              </a>
+              .
             </p>
-            <div
-              style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                justifyContent: 'center',
-                alignItems: 'center',
-                gap: '8px 40px',
-              }}
-            >
-              {publications.map((pub, idx) => (
-                <span
-                  key={idx}
-                  style={{
-                    fontFamily: 'var(--font-heading)',
-                    fontSize: 'clamp(0.9rem, 2vw, 1.15rem)',
-                    fontWeight: 600,
-                    fontStyle: 'italic',
-                    color: '#2F5233',
-                    letterSpacing: '0.01em',
-                    opacity: 0.85,
-                  }}
-                >
-                  {pub}
-                  {idx < publications.length - 1 && (
-                    <span
-                      aria-hidden="true"
-                      style={{
-                        marginLeft: '40px',
-                        color: '#B8845C',
-                        fontStyle: 'normal',
-                        fontWeight: 400,
-                      }}
-                    >
-                      ·
-                    </span>
-                  )}
-                </span>
-              ))}
-            </div>
           </div>
         </section>
 

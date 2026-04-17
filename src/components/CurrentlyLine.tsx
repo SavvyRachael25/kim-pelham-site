@@ -1,6 +1,7 @@
 'use client';
 
-// OPEN: MLS pre-advertising compliance review needed before live (Kim 4/16/26). Rachael to confirm with Katrina Eileen brokerage.
+// COMPLIANCE NOTE (Kim 4/16/26): MLS pre-advertising rules + new WA state law may restrict
+// specific-listing callouts. Copy is generic until Rachael confirms with Katrina Eileen brokerage.
 
 import { useEffect, useState } from 'react';
 
@@ -46,16 +47,12 @@ export default function CurrentlyLine() {
         <p
           style={{
             fontFamily: 'var(--font-handwritten)',
-            fontSize: '18px',
+            fontSize: '22px',
             color: '#2C2C2C',
             margin: 0,
           }}
         >
-          Currently:{' '}
-          <strong style={{ color: '#2F5233', fontWeight: 600 }}>
-            Prepping a Lake Stevens listing
-          </strong>{' '}
-          for weekend open house
+          Currently: Serving a Snohomish County seller getting market-ready.
         </p>
 
         <style>{`

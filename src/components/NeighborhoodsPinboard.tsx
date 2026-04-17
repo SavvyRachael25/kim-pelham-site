@@ -45,6 +45,30 @@ const neighborhoods = [
     rotation: 2,
     colSpan: 4,
   },
+  {
+    id: 7,
+    image: '/images/neighborhoods/monroe.jpg', // TODO: photo from Kim
+    title: 'Monroe  -  small-town roots',
+    rotation: -3,
+    colSpan: 4,
+    // link: '/neighborhoods' — no dedicated sub-page yet
+  },
+  {
+    id: 8,
+    image: '/images/neighborhoods/edmonds.jpg', // TODO: photo from Kim
+    title: 'Edmonds  -  waterfront charm',
+    rotation: 2,
+    colSpan: 4,
+    // link: '/neighborhoods' — no dedicated sub-page yet
+  },
+  {
+    id: 9,
+    image: '/images/neighborhoods/arlington.jpg', // TODO: photo from Kim
+    title: 'Arlington  -  wide open spaces',
+    rotation: -2,
+    colSpan: 4,
+    // link: '/neighborhoods' — no dedicated sub-page yet
+  },
 ];
 
 export default function NeighborhoodsPinboard() {

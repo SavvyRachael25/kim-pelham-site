@@ -159,7 +159,7 @@ export default function Nav() {
 
   const phoneStyle: React.CSSProperties = {
     fontFamily: 'var(--font-handwritten)',
-    fontSize: '0.9rem',
+    fontSize: '1.125rem', // 18px minimum for handwritten font readability
     color: '#555',
     margin: 0,
   };

@@ -6,102 +6,8 @@ import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 import Link from 'next/link';
 
-interface Testimonial {
-  id: number;
-  quote: string;
-  name: string;
-  role: 'BUYER' | 'SELLER' | 'SENIOR SERVICES';
-  location: string;
-  bgColor: string;
-}
-
-const testimonials: Testimonial[] = [
-  {
-    id: 1,
-    quote:
-      "Kim didn't just help us find a house  -  she helped us find our home. Her knowledge of the Eastside communities, her patience with our long search, and her honesty throughout the process made all the difference.",
-    name: 'Sarah & Michael P.',
-    role: 'BUYER',
-    location: 'Mill Creek',
-    bgColor: '#FFFFFF',
-  },
-  {
-    id: 2,
-    quote:
-      "Kim's staging and marketing strategy was incredible. We listed our home expecting a long process, but it sold $45,000 over asking in just eight days. Her expertise is truly exceptional.",
-    name: 'Robert K.',
-    role: 'SELLER',
-    location: 'Everett',
-    bgColor: '#F8F5F0',
-  },
-  {
-    id: 3,
-    quote:
-      'After 40 years in our home, downsizing felt overwhelming. Kim coordinated everything with such care and professionalism. She treated us like family, not just clients.',
-    name: 'Margaret & Tom L.',
-    role: 'SENIOR SERVICES',
-    location: 'Snohomish',
-    bgColor: '#FFFFFF',
-  },
-  {
-    id: 4,
-    quote:
-      "As a first-time buyer, I felt nervous about the whole process. Kim walked me through every step, answered all my questions patiently, and negotiated $12,000 off the asking price.",
-    name: 'Jennifer W.',
-    role: 'BUYER',
-    location: 'Bothell',
-    bgColor: '#F8F5F0',
-  },
-  {
-    id: 5,
-    quote:
-      "Our waterfront home is our most prized possession. Kim's strategic pricing and marketing got us a 104% sale-to-list ratio.",
-    name: 'David & Lisa M.',
-    role: 'SELLER',
-    location: 'Lake Stevens',
-    bgColor: '#FFFFFF',
-  },
-  {
-    id: 6,
-    quote:
-      "When my husband passed, I had no idea how to handle the estate sale. Kim was there for every step - compassionate, thorough, and completely trustworthy.",
-    name: 'Helen R.',
-    role: 'SENIOR SERVICES',
-    location: 'Marysville',
-    bgColor: '#F8F5F0',
-  },
-  {
-    id: 7,
-    quote:
-      'We relocated from California with three kids and had no idea which neighborhoods would be the best fit. Kim knew every area intimately.',
-    name: 'The N. Family',
-    role: 'BUYER',
-    location: 'Lynnwood',
-    bgColor: '#FFFFFF',
-  },
-  {
-    id: 8,
-    quote:
-      "Our 1970s rambler was dated and tired. Kim's photography and staging completely transformed how buyers saw the home. It sold in just five days.",
-    name: 'Brian & Amanda S.',
-    role: 'SELLER',
-    location: 'Shoreline',
-    bgColor: '#F8F5F0',
-  },
-];
-
-const getRoleBadgeColor = (role: string): string => {
-  switch (role) {
-    case 'BUYER':
-      return '#B8845C'; // clay
-    case 'SELLER':
-      return '#2F5233'; // forest
-    case 'SENIOR SERVICES':
-      return '#767676'; // muted
-    default:
-      return '#2C2C2C';
-  }
-};
+// Testimonials data removed — all entries were placeholder/fabricated. See FIX 6 (audit 4/16/26).
+// Replace with real verified Google reviews when available.
 
 export default function TestimonialsPage() {
   return (
@@ -116,8 +22,7 @@ export default function TestimonialsPage() {
         imageAlt="Happy family on home porch"
       />
 
-      {/* Testimonials Grid */}
-      {/* TODO: Rachael to replace with real Google review snapshots */}
+      {/* Testimonials — empty state pending verified Google reviews */}
       <section
         style={{
           flex: 1,
@@ -127,107 +32,31 @@ export default function TestimonialsPage() {
           width: '100%',
         }}
       >
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-            gap: '40px',
-            alignItems: 'start',
-          }}
-        >
-          {testimonials.map((testimonial) => (
-            <article
-              key={testimonial.id}
-              style={{
-                backgroundColor: testimonial.bgColor,
-                padding: '40px',
-                borderRadius: '8px',
-                border: '1px solid #E8E3DA',
-                display: 'flex',
-                flexDirection: 'column',
-                gap: '20px',
-                transition: 'box-shadow 0.3s ease',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.boxShadow = '0 8px 24px rgba(0, 0, 0, 0.08)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.boxShadow = 'none';
-              }}
-            >
-              <div
-                style={{
-                  fontSize: '4rem',
-                  color: '#B8845C',
-                  lineHeight: 1,
-                  opacity: 0.3,
-                }}
-              >
-                "
-              </div>
-
-              <blockquote
-                style={{
-                  margin: 0,
-                  padding: 0,
-                  fontSize: '1rem',
-                  lineHeight: 1.7,
-                  color: '#2C2C2C',
-                  fontFamily: 'var(--font-body)',
-                  fontWeight: 400,
-                }}
-              >
-                {testimonial.quote}
-              </blockquote>
-
-              <div style={{ borderTop: '1px solid #E8E3DA', paddingTop: '20px' }}>
-                <div
-                  style={{
-                    fontFamily: 'var(--font-heading)',
-                    fontSize: '1.1rem',
-                    fontWeight: 600,
-                    color: '#2C2C2C',
-                    margin: '0 0 8px 0',
-                  }}
-                >
-                  {testimonial.name}
-                </div>
-                <div
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    gap: '12px',
-                    flexWrap: 'wrap',
-                  }}
-                >
-                  <span
-                    style={{
-                      display: 'inline-block',
-                      backgroundColor: getRoleBadgeColor(testimonial.role),
-                      color: '#FFFFFF',
-                      fontSize: '0.75rem',
-                      fontWeight: 700,
-                      letterSpacing: '0.5px',
-                      padding: '6px 12px',
-                      borderRadius: '4px',
-                      fontFamily: 'var(--font-body)',
-                    }}
-                  >
-                    {testimonial.role}
-                  </span>
-                  <span
-                    style={{
-                      fontSize: '0.95rem',
-                      color: '#666666',
-                      fontFamily: 'var(--font-body)',
-                    }}
-                  >
-                    {testimonial.location}
-                  </span>
-                </div>
-              </div>
-            </article>
-          ))}
+        <div style={{ textAlign: 'center', padding: '60px 24px', maxWidth: '600px', margin: '0 auto' }}>
+          <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.4rem', color: '#B8845C', marginBottom: '16px' }}>
+            Loading verified Google reviews
+          </p>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: '#555', lineHeight: 1.7, marginBottom: '24px' }}>
+            Kim has 70+ verified reviews on Google. Check back shortly, or read them directly.
+          </p>
+          <a
+            href="https://www.google.com/search?q=pelham+group+nw"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{
+              display: 'inline-block',
+              padding: '14px 28px',
+              backgroundColor: '#2F5233',
+              color: '#F8F5F0',
+              fontFamily: 'var(--font-body)',
+              fontSize: '1rem',
+              fontWeight: 600,
+              borderRadius: '4px',
+              textDecoration: 'none',
+            }}
+          >
+            Read Google Reviews
+          </a>
         </div>
       </section>
 

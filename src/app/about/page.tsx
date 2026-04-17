@@ -121,39 +121,10 @@ export default function AboutPage() {
                 fontSize: '18px',
                 color: '#2C2C2C',
                 lineHeight: 1.8,
-                margin: '0 0 20px 0',
+                margin: 0,
               }}
             >
-              I've spent 17+ years helping families navigate one of their biggest
-              decisions. Three of those years were in commercial property
-              management, which taught me the business side of real estate. But
-              my heart is in residential transactions - the stories, the dreams, the
-              fresh starts.
-            </p>
-            <p
-              style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '18px',
-                color: '#2C2C2C',
-                lineHeight: 1.8,
-                margin: '0 0 20px 0',
-              }}
-            >
-              I'm a PNW native: childhood through second grade in the Seattle area,
-              Bothell from 1996–2002, and Everett since 2015. This isn't just where
-              I work. It's where I raise my family, where my kids went to school, and
-              where I actually know my neighbors.
-            </p>
-            <p
-              style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '18px',
-                color: '#2C2C2C',
-                lineHeight: 1.8,
-              }}
-            >
-              That matters. Because when I'm helping you buy or sell, I'm not just
-              moving numbers around. I'm part of this community too.
+              I'm a lifelong Pacific Northwesterner. I lived in Ballard until I was about eight, and spent enough of my teenage years there to meet my husband Brien — he went to Ballard High. Today, home base is Snohomish County, where I've built 17+ years in real estate (including three years in commercial property management). This isn't just where I work. It's where I raise my family, where my kids went to school, and where I actually know my neighbors.
             </p>
           </div>
         </div>
@@ -466,33 +437,33 @@ export default function AboutPage() {
             {[
               {
                 step: 1,
-                title: 'Strategic Repairs',
-                desc: 'We identify and prioritize repairs that add real value, not surface cosmetics.',
+                title: 'Strategy Session',
+                desc: 'Identify the repairs and upgrades that will add the most value and help your home sell quickly.',
               },
               {
                 step: 2,
-                title: 'Psychology-Driven Staging',
-                desc: 'Professional staging that helps buyers envision their future in your home.',
+                title: 'Concierge Service',
+                desc: 'We help you make the repairs. The Pelham Group NW Home Transition Team coordinates everything.',
               },
               {
                 step: 3,
-                title: 'Professional Photography',
-                desc: "High-quality photos that showcase your home's best features.",
+                title: 'Staging',
+                desc: 'Professional staging — psychology-driven, magazine quality.',
               },
               {
                 step: 4,
-                title: 'Targeted Digital Marketing',
-                desc: 'Strategic online placement to reach qualified buyers in your market.',
+                title: 'Professional Photography + Matterport 3D Tours',
+                desc: 'Studio-quality photos and immersive Matterport 3D tours that make buyers want to see your home in person.',
               },
               {
                 step: 5,
-                title: 'Premium Print Materials',
-                desc: 'Thoughtfully designed brochures and materials that elevate your listing.',
+                title: 'Online Marketing',
+                desc: 'Strategic digital placement on the right platforms for your market.',
               },
               {
                 step: 6,
-                title: 'Strategic Pricing & Negotiation',
-                desc: 'Data-driven pricing and expert negotiation to maximize your return.',
+                title: 'Marketing Materials',
+                desc: 'Flyers, feature cards throughout the home, laminated feature cards in the yard, and walking tours on larger properties.',
               },
             ].map((item, idx) => (
               <div

@@ -52,7 +52,7 @@ export default function Hero() {
         <p
           style={{
             fontFamily: 'var(--font-handwritten)',
-            fontSize: '16px',
+            fontSize: '20px',
             color: '#FFFFFF',
             margin: 0,
             textAlign: 'right',

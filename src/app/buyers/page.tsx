@@ -675,7 +675,7 @@ export default function BuyersPage() {
           },
           {
             question: "What areas does Kim specialize in?",
-            answer: "Kim specializes in Snohomish County and the greater Eastside, including Everett, Bothell, Mill Creek, Mukilteo, Edmonds, Lynnwood, Marysville, Lake Stevens, and surrounding communities. She has deep knowledge of neighborhoods, schools, and local market trends.",
+            answer: "Kim's primary market is Snohomish County — Everett, Bothell, Edmonds, Lynnwood, Lake Stevens, Marysville, Mill Creek, Mountlake Terrace, Mukilteo, Snohomish, Arlington, Stanwood, Granite Falls, and Monroe. She also serves North King County (including North Seattle), Skagit County (especially Sedro-Woolley and Concrete, where the Pelham family has property), and works by referral into Pierce, Kitsap, and Mason Counties — including an upcoming horse farm listing in Shelton.",
           },
           {
             question: "How competitive is the market  -  will I lose out to cash buyers?",
