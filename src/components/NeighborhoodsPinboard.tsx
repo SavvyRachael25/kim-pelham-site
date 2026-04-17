@@ -47,7 +47,7 @@ const neighborhoods = [
   },
   {
     id: 7,
-    image: '/images/neighborhoods/monroe.jpg', // TODO: photo from Kim
+    image: '/images/neighborhood-monroe.jpg',
     title: 'Monroe  -  small-town roots',
     rotation: -3,
     colSpan: 4,
@@ -55,7 +55,7 @@ const neighborhoods = [
   },
   {
     id: 8,
-    image: '/images/neighborhoods/edmonds.jpg', // TODO: photo from Kim
+    image: '/images/neighborhood-edmonds.jpg',
     title: 'Edmonds  -  waterfront charm',
     rotation: 2,
     colSpan: 4,
@@ -63,7 +63,7 @@ const neighborhoods = [
   },
   {
     id: 9,
-    image: '/images/neighborhoods/arlington.jpg', // TODO: photo from Kim
+    image: '/images/neighborhood-arlington.jpg',
     title: 'Arlington  -  wide open spaces',
     rotation: -2,
     colSpan: 4,
