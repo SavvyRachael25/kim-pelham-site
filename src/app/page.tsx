@@ -6,6 +6,7 @@ import Hero from '@/components/Hero';
 import Marquee from '@/components/Marquee';
 import StatsStrip from '@/components/StatsStrip';
 import SocialProof from '@/components/SocialProof';
+import GoogleReviews from '@/components/GoogleReviews';
 import RevealSection from '@/components/RevealSection';
 import About from '@/components/About';
 import NoteFromKim from '@/components/NoteFromKim';
@@ -32,6 +33,7 @@ export default function Home() {
       <Marquee />
       <StatsStrip />
       <SocialProof />
+      <GoogleReviews />
       <About />
       <NoteFromKim />
       <Services />

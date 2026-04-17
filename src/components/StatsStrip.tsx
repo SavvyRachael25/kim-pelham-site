@@ -93,9 +93,9 @@ function StatCounter({ stat, isVisible }: StatCounterProps) {
       <p
         style={{
           fontFamily: 'var(--font-body)',
-          fontSize: '14px',
+          fontSize: '15px',
           fontWeight: 700,
-          color: '#2C2C2C',
+          color: '#F8F5F0',
           textTransform: 'uppercase',
           margin: '0 0 8px 0',
           letterSpacing: '0.5px',
@@ -107,7 +107,7 @@ function StatCounter({ stat, isVisible }: StatCounterProps) {
         style={{
           fontFamily: 'var(--font-handwritten)',
           fontSize: '18px',
-          color: '#767676',
+          color: 'rgba(248, 245, 240, 0.70)',
           margin: 0,
         }}
       >
