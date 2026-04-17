@@ -1,6 +1,8 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import A2PConsent from '@/components/A2PConsent';
+import type { A2PConsentState } from '@/components/A2PConsent';
 
 const STORAGE_KEY = 'kim_popup_dismissed';
 const DISMISS_DAYS = 7;
@@ -9,6 +11,7 @@ export default function NewsletterPopup() {
   const [visible, setVisible] = useState(false);
   const [email, setEmail] = useState('');
   const [firstName, setFirstName] = useState('');
+  const [consent, setConsent] = useState<A2PConsentState>({ marketing: false, transactional: false });
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
 
   useEffect(() => {
@@ -53,7 +56,12 @@ export default function NewsletterPopup() {
         await fetch(WEBHOOK_URL, {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ firstName, email, source: 'website_popup' }),
+          body: JSON.stringify({
+            firstName,
+            email,
+            source: 'website_popup',
+            smsMarketingConsent: consent.marketing,
+          }),
         });
       }
       setStatus('success');
@@ -330,6 +338,15 @@ export default function NewsletterPopup() {
                       onBlur={(e) => { e.currentTarget.style.borderColor = '#DDD8CF'; }}
                     />
                   </div>
+                </div>
+
+                {/* A2P marketing consent — email-only form, single checkbox */}
+                <div style={{ marginBottom: '10px' }}>
+                  <A2PConsent
+                    variant="email-only"
+                    value={consent}
+                    onChange={setConsent}
+                  />
                 </div>
 
                 <button
