@@ -26,8 +26,8 @@ interface A2PConsentProps {
 }
 
 const LEGAL_NAME = process.env.NEXT_PUBLIC_LEGAL_BUSINESS_NAME ?? 'The Pelham Group NW';
-const PRIVACY_URL = process.env.NEXT_PUBLIC_PRIVACY_POLICY_URL ?? 'https://go.thepelhamgroupnw.com/privacy-policy-6936';
-const TERMS_URL = process.env.NEXT_PUBLIC_TERMS_URL ?? 'https://go.thepelhamgroupnw.com/terms-and-conditions-9538';
+const PRIVACY_URL = process.env.NEXT_PUBLIC_PRIVACY_POLICY_URL ?? '/privacy';
+const TERMS_URL = process.env.NEXT_PUBLIC_TERMS_URL ?? '/terms';
 
 /** Verbatim from TCR carrier requirements — do not alter copy */
 const MARKETING_TEXT = `I consent to receive marketing text messages from ${LEGAL_NAME} at the phone number provided. Frequency may vary. Message & data rates may apply. Text HELP for assistance, reply STOP to opt out.`;

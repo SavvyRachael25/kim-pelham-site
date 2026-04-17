@@ -208,9 +208,25 @@ export default function Footer() {
           <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: '#aaa', margin: 0 }}>
             &copy; 2026 Kim Pelham &middot; The Pelham Group NW. All rights reserved.
           </p>
-          <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.25rem', color: '#aaa' }}>
-            Built with love in Snohomish County
-          </p>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            <Link
+              href="/privacy"
+              style={{ fontFamily: 'var(--font-body)', fontSize: '0.82rem', color: '#777', textDecoration: 'none' }}
+              onMouseEnter={(e) => { e.currentTarget.style.color = '#B8845C'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.color = '#777'; }}
+            >
+              Privacy Policy
+            </Link>
+            <span style={{ color: '#555', fontSize: '0.7rem' }}>|</span>
+            <Link
+              href="/terms"
+              style={{ fontFamily: 'var(--font-body)', fontSize: '0.82rem', color: '#777', textDecoration: 'none' }}
+              onMouseEnter={(e) => { e.currentTarget.style.color = '#B8845C'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.color = '#777'; }}
+            >
+              Terms &amp; Conditions
+            </Link>
+          </div>
         </div>
 
         {/* Brokerage attribution */}
