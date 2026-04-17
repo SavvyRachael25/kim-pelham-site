@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Script from "next/script";
 import "./globals.css";
 import IntroAnimation from "@/components/IntroAnimation";
 import NewsletterPopup from "@/components/NewsletterPopup";
@@ -110,6 +111,13 @@ export default function RootLayout({
           <div id="main-content">{children}</div>
         </IntroAnimation>
         <NewsletterPopup />
+        {/* GHL Chat Widget — Kim Pelham branded widget */}
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="69e29c13141137f36a3cd275"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
