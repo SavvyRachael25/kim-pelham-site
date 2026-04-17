@@ -62,7 +62,7 @@ export default function Footer() {
               <h3 style={{ fontFamily: 'var(--font-handwritten)', fontSize: '2rem', color: '#B8845C', margin: '0 0 4px 0', lineHeight: 1 }}>
                 Kim Pelham
               </h3>
-              <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1rem', color: '#999', margin: 0 }}>
+              <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.25rem', color: '#999', margin: 0 }}>
                 your neighbor in real estate
               </p>
             </div>
@@ -170,7 +170,7 @@ export default function Footer() {
 
           {/* Right — Trust badges */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-            <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1rem', color: '#999', margin: 0 }}>
+            <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.25rem', color: '#999', margin: 0 }}>
               recognized &amp; trusted
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -208,7 +208,7 @@ export default function Footer() {
           <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: '#aaa', margin: 0 }}>
             &copy; 2026 Kim Pelham &middot; The Pelham Group NW. All rights reserved.
           </p>
-          <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '0.9rem', color: '#aaa' }}>
+          <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.25rem', color: '#aaa' }}>
             Built with love in Snohomish County
           </p>
         </div>

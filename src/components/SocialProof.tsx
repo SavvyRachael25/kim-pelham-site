@@ -124,7 +124,7 @@ export default function SocialProof() {
           <Image
             src="/images/best-of-zillow-portrait.jpg"
             alt="Best of Zillow"
-            width={80}
+            width={100}
             height={100}
             style={{ objectFit: 'contain', borderRadius: '4px' }}
           />

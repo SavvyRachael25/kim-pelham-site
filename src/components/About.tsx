@@ -50,7 +50,7 @@ export default function About() {
               </span>
             </h2>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '16px', color: '#444', lineHeight: 1.8, margin: '0 0 16px 0' }}>
-              I&apos;m not the broker who shows up in a Mercedes with a designer bag. I&apos;m the one who shows up in boots because I just walked your crawl space. I&apos;ve lived in Snohomish County at three different chapters of my life  -  I know which streets flood in November, which coffee shops are worth the wait, and which neighborhoods still have that small-town feel.
+              I&apos;m not the broker who shows up in a Mercedes with a designer bag. I&apos;m the one who shows up in boots because I just walked your job site — I&apos;d never go in a crawl space. I&apos;ve lived in Snohomish County at three different chapters of my life  -  I know which streets flood in November, which coffee shops are worth the wait, and which neighborhoods still have that small-town feel.
             </p>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '16px', color: '#444', lineHeight: 1.8, margin: '0 0 24px 0' }}>
               When you work with me, you get someone who answers her own phone, stages your home with her own hands, and fights for every dollar because she remembers what it felt like to stretch for that first mortgage.

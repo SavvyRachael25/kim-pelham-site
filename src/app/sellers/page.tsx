@@ -398,136 +398,18 @@ export default function SellersPage() {
             Seller Stories
           </h2>
 
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns:
-                'repeat(auto-fit, minmax(300px, 1fr))',
-              gap: '40px',
-            }}
-          >
-            <div
-              ref={(el) => setItemRef('test1', el)}
-              style={{
-                opacity: visibleItems['test1'] ? 1 : 0,
-                transform: visibleItems['test1']
-                  ? 'translateY(0)'
-                  : 'translateY(30px)',
-                transition: 'all 0.8s ease-out',
-                padding: '40px',
-                backgroundColor: '#FFFFFF',
-                border: '1px solid #E8E3DA',
-                borderRadius: '4px',
-              }}
+          <div style={{ textAlign: 'center', padding: '40px 24px', background: '#F8F5F0', borderRadius: '4px' }}>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: '#555', lineHeight: 1.7, margin: '0 0 16px 0' }}>
+              Seller stories coming soon — Kim has 40+ Google reviews.
+            </p>
+            <a
+              href="https://www.google.com/search?q=pelham+group+nw"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: '#2F5233', fontFamily: 'var(--font-body)', fontWeight: 600, textDecoration: 'underline' }}
             >
-              <p
-                style={{
-                  fontFamily: 'var(--font-handwritten)',
-                  fontSize: '18px',
-                  color: '#2F5233',
-                  fontStyle: 'italic',
-                  margin: '0 0 20px 0',
-                  lineHeight: 1.7,
-                }}
-              >
-                Kim's staging and marketing strategy sold our Seattle home in just
-                5 days for over 104% asking. She understood our timeline and made
-                it happen.
-              </p>
-              <p
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '14px',
-                  color: '#555',
-                  margin: 0,
-                  fontWeight: 600,
-                }}
-              >
-                 -  Martinez F., Seattle
-              </p>
-            </div>
-
-            <div
-              ref={(el) => setItemRef('test2', el)}
-              style={{
-                opacity: visibleItems['test2'] ? 1 : 0,
-                transform: visibleItems['test2']
-                  ? 'translateY(0)'
-                  : 'translateY(30px)',
-                transition: 'all 0.8s ease-out 0.1s',
-                padding: '40px',
-                backgroundColor: '#FFFFFF',
-                border: '1px solid #E8E3DA',
-                borderRadius: '4px',
-              }}
-            >
-              <p
-                style={{
-                  fontFamily: 'var(--font-handwritten)',
-                  fontSize: '18px',
-                  color: '#2F5233',
-                  fontStyle: 'italic',
-                  margin: '0 0 20px 0',
-                  lineHeight: 1.7,
-                }}
-              >
-                We were nervous selling our home, but Kim walked us through
-                everything. She even negotiated repairs after inspection that
-                saved us thousands.
-              </p>
-              <p
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '14px',
-                  color: '#555',
-                  margin: 0,
-                  fontWeight: 600,
-                }}
-              >
-                 -  David & Susan C., Everett
-              </p>
-            </div>
-
-            <div
-              ref={(el) => setItemRef('test3', el)}
-              style={{
-                opacity: visibleItems['test3'] ? 1 : 0,
-                transform: visibleItems['test3']
-                  ? 'translateY(0)'
-                  : 'translateY(30px)',
-                transition: 'all 0.8s ease-out 0.2s',
-                padding: '40px',
-                backgroundColor: '#FFFFFF',
-                border: '1px solid #E8E3DA',
-                borderRadius: '4px',
-              }}
-            >
-              <p
-                style={{
-                  fontFamily: 'var(--font-handwritten)',
-                  fontSize: '18px',
-                  color: '#2F5233',
-                  fontStyle: 'italic',
-                  margin: '0 0 20px 0',
-                  lineHeight: 1.7,
-                }}
-              >
-                Kim's network of contractors and inspectors made our whole
-                experience smooth. The photos and staging got so many comments
-                from buyers.
-              </p>
-              <p
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '14px',
-                  color: '#555',
-                  margin: 0,
-                  fontWeight: 600,
-                }}
-              >
-                 -  Jennifer B., Mill Creek
-              </p>
-            </div>
+              See them all on Google
+            </a>
           </div>
         </div>
       </section>
