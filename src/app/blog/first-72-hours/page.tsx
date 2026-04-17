@@ -51,7 +51,7 @@ export default function FirstSeventyTwoHoursPage() {
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', margin: '0 0 8px 0', lineHeight: 1.6 }}>
                 Homes that go under contract in the first week sell for an average of 2.4% more than their list price, while homes that sit 3+ weeks often sell below asking.
               </p>
-              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.78rem', color: '#888', margin: 0 }}>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: '#595959', margin: 0 }}>
                 Source: Zillow Research
               </p>
             </div>
@@ -228,7 +228,7 @@ export default function FirstSeventyTwoHoursPage() {
               <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 400, fontStyle: 'italic', color: 'var(--color-forest)', margin: 0, lineHeight: 1.6 }}>
                 "I've seen homes in Everett and Mill Creek sell for $40,000 over asking in the first 48 hours. I've also seen similar homes sit for 60 days. The difference almost always comes down to how the first 72 hours were managed."
               </p>
-              <cite style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: 'var(--color-clay)', marginTop: '10px', display: 'block' }}>
+              <cite style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: 'var(--color-clay)', marginTop: '10px', display: 'block' }}>
                 Kim Pelham, Snohomish County Real Estate Broker
               </cite>
             </blockquote>

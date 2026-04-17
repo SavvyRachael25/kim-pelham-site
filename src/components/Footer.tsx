@@ -129,7 +129,7 @@ export default function Footer() {
               </a>
               <a
                 href="mailto:hello@thepelhamgroupnw.com"
-                style={{ display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'var(--font-body)', fontSize: '0.88rem', color: '#777', textDecoration: 'none', transition: 'color 0.2s' }}
+                style={{ display: 'flex', alignItems: 'center', gap: '8px', fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: '#777', textDecoration: 'none', transition: 'color 0.2s' }}
                 onMouseEnter={(e) => { e.currentTarget.style.color = '#B8845C'; }}
                 onMouseLeave={(e) => { e.currentTarget.style.color = '#777'; }}
               >
@@ -190,7 +190,7 @@ export default function Footer() {
                     alignItems: 'center',
                     gap: '8px',
                     fontFamily: 'var(--font-body)',
-                    fontSize: '0.85rem',
+                    fontSize: '0.875rem',
                     color: '#888',
                   }}
                 >
@@ -207,13 +207,13 @@ export default function Footer() {
           style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderTop: '1px solid #333', paddingTop: '2rem', gap: '1rem' }}
           data-footer-bar
         >
-          <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: '#aaa', margin: 0 }}>
+          <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: '#aaa', margin: 0 }}>
             &copy; 2026 Kim Pelham &middot; The Pelham Group NW. All rights reserved.
           </p>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
             <Link
               href="/privacy"
-              style={{ fontFamily: 'var(--font-body)', fontSize: '0.82rem', color: '#777', textDecoration: 'none' }}
+              style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: '#777', textDecoration: 'none' }}
               onMouseEnter={(e) => { e.currentTarget.style.color = '#B8845C'; }}
               onMouseLeave={(e) => { e.currentTarget.style.color = '#777'; }}
             >
@@ -222,7 +222,7 @@ export default function Footer() {
             <span style={{ color: '#555', fontSize: '0.7rem' }}>|</span>
             <Link
               href="/terms"
-              style={{ fontFamily: 'var(--font-body)', fontSize: '0.82rem', color: '#777', textDecoration: 'none' }}
+              style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: '#777', textDecoration: 'none' }}
               onMouseEnter={(e) => { e.currentTarget.style.color = '#B8845C'; }}
               onMouseLeave={(e) => { e.currentTarget.style.color = '#777'; }}
             >
@@ -232,7 +232,7 @@ export default function Footer() {
         </div>
 
         {/* Brokerage attribution */}
-        <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.8rem', color: '#aaa', textAlign: 'center', paddingTop: '1rem', marginTop: '1rem', borderTop: '1px solid #333' }}>
+        <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.813rem', color: '#aaa', textAlign: 'center', paddingTop: '1rem', marginTop: '1rem', borderTop: '1px solid #333' }}>
           Brokered by Katrina Eileen Real Estate &middot; Everett, WA
         </div>
       </div>

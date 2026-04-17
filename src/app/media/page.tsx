@@ -204,7 +204,7 @@ export default function MediaPage() {
                     <p
                       style={{
                         fontFamily: 'var(--font-body)',
-                        fontSize: '0.85rem',
+                        fontSize: '0.875rem',
                         fontWeight: 700,
                         color: '#2C2C2C',
                         margin: '0 0 4px 0',
@@ -216,8 +216,8 @@ export default function MediaPage() {
                     <p
                       style={{
                         fontFamily: 'var(--font-body)',
-                        fontSize: '0.75rem',
-                        color: '#767676',
+                        fontSize: '0.875rem',
+                        color: '#595959',
                         margin: 0,
                       }}
                     >
@@ -279,7 +279,7 @@ export default function MediaPage() {
                   <p
                     style={{
                       fontFamily: 'var(--font-body)',
-                      fontSize: '0.7rem',
+                      fontSize: '0.875rem',
                       fontWeight: 700,
                       color: '#B8845C',
                       letterSpacing: '0.12em',

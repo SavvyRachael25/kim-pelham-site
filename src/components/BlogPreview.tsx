@@ -156,7 +156,7 @@ export default function BlogPreview() {
                     backgroundColor: '#2F5233',
                     color: '#FFFFFF',
                     fontFamily: 'var(--font-body)',
-                    fontSize: '12px',
+                    fontSize: '14px',
                     fontWeight: 600,
                     padding: '4px 12px',
                     borderRadius: '2px',
@@ -173,8 +173,8 @@ export default function BlogPreview() {
                 <p
                   style={{
                     fontFamily: 'var(--font-body)',
-                    fontSize: '13px',
-                    color: '#767676',
+                    fontSize: '14px',
+                    color: '#595959',
                     margin: '0 0 8px 0',
                   }}
                 >

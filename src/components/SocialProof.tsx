@@ -56,8 +56,8 @@ export default function SocialProof() {
           <p
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '13px',
-              color: '#767676',
+              fontSize: '14px',
+              color: '#595959',
               margin: 0,
             }}
           >
@@ -99,8 +99,8 @@ export default function SocialProof() {
           <p
             style={{
               fontFamily: 'var(--font-body)',
-              fontSize: '13px',
-              color: '#767676',
+              fontSize: '14px',
+              color: '#595959',
               margin: 0,
             }}
           >

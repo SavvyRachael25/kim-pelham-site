@@ -108,7 +108,7 @@ export default function NeighborhoodsPinboard() {
             style={{
               fontFamily: 'var(--font-body)',
               fontSize: '16px',
-              color: '#767676',
+              color: '#595959',
               margin: 0,
               maxWidth: '700px',
             }}

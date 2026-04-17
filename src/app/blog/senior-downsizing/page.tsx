@@ -51,7 +51,7 @@ export default function SeniorDownsizingPage() {
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', margin: '0 0 8px 0', lineHeight: 1.6 }}>
                 Average home equity held by senior homeowners in Snohomish County — often their largest financial asset. Adults 65+ are the fastest-growing segment of home sellers in the Pacific Northwest.
               </p>
-              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.78rem', color: '#888', margin: 0 }}>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: '#595959', margin: 0 }}>
                 Source: 2024 AARP Housing Report
               </p>
             </div>
@@ -153,7 +153,7 @@ export default function SeniorDownsizingPage() {
               <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 400, fontStyle: 'italic', color: 'var(--color-forest)', margin: 0, lineHeight: 1.6 }}>
                 "Downsizing isn't about losing what you've built. It's about freeing yourself to enjoy it. Every client I've helped through this process has told me the same thing afterward: 'I wish I'd done it sooner.'"
               </p>
-              <cite style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: 'var(--color-clay)', marginTop: '10px', display: 'block' }}>
+              <cite style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: 'var(--color-clay)', marginTop: '10px', display: 'block' }}>
                 Kim Pelham, Snohomish County Real Estate Broker
               </cite>
             </blockquote>

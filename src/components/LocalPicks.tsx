@@ -82,7 +82,7 @@ function PickCard({ pick }: PickCardProps) {
           style={{
             fontFamily: 'var(--font-handwritten)',
             fontSize: '18px',
-            color: '#767676',
+            color: '#595959',
             margin: 0,
             lineHeight: 1.6,
           }}

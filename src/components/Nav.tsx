@@ -11,7 +11,7 @@ function NavLinkItem({ href, label }: { href: string; label: string }) {
         href={href}
         style={{
           fontFamily: 'var(--font-body)',
-          fontSize: '0.78rem',
+          fontSize: '0.875rem',
           fontWeight: 500,
           color: '#555',
           textTransform: 'uppercase' as const,
@@ -172,7 +172,7 @@ export default function Nav() {
 
   const navLinkStyle = (isHovered: boolean): React.CSSProperties => ({
     fontFamily: 'var(--font-body)',
-    fontSize: '0.78rem',
+    fontSize: '0.875rem',
     fontWeight: 500,
     color: '#555',
     textTransform: 'uppercase',
@@ -295,7 +295,7 @@ export default function Nav() {
         <div style={leftSideStyle}>
           <Link href="/" style={{ textDecoration: 'none' }}>
             <h1 style={brandStyle}>Kim Pelham</h1>
-            <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.65rem', color: '#888', letterSpacing: '0.1em', textTransform: 'uppercase', margin: '2px 0 0 0', lineHeight: 1 }}>The Pelham Group NW</p>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: '#595959', letterSpacing: '0.1em', textTransform: 'uppercase', margin: '2px 0 0 0', lineHeight: 1 }}>The Pelham Group NW</p>
           </Link>
           <p id="phone-display" style={phoneStyle}>
             (425) 250-9422
@@ -358,7 +358,7 @@ export default function Nav() {
                             display: 'block',
                             padding: '0.75rem 1.25rem',
                             fontFamily: 'var(--font-body)',
-                            fontSize: '0.85rem',
+                            fontSize: '0.875rem',
                             color: '#2C2C2C',
                             textDecoration: 'none',
                             textTransform: 'uppercase',

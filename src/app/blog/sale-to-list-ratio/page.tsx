@@ -51,7 +51,7 @@ export default function SaleToListRatioPage() {
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', margin: '0 0 8px 0', lineHeight: 1.6 }}>
                 Kim Pelham's average sale-to-list ratio — meaning her sellers receive an average of $24,000+ above asking price on a $600K home. Snohomish County market average: ~99–100%.
               </p>
-              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.78rem', color: '#888', margin: 0 }}>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: '#595959', margin: 0 }}>
                 Source: Kim Pelham verified transaction data, Snohomish County MLS
               </p>
             </div>
@@ -215,7 +215,7 @@ export default function SaleToListRatioPage() {
               <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 400, fontStyle: 'italic', color: 'var(--color-forest)', margin: 0, lineHeight: 1.6 }}>
                 "That 4.4% above asking isn't just a number. On a $550K home it's $24,200 in your pocket. On an $800K home it's $35,200. This is why your choice of broker is one of the most important financial decisions you'll make."
               </p>
-              <cite style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: 'var(--color-clay)', marginTop: '10px', display: 'block' }}>
+              <cite style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: 'var(--color-clay)', marginTop: '10px', display: 'block' }}>
                 Kim Pelham, Snohomish County Real Estate Broker
               </cite>
             </blockquote>

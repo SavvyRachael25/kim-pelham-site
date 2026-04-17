@@ -51,7 +51,7 @@ export default function StagingPsychologyPage() {
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', margin: '0 0 8px 0', lineHeight: 1.6 }}>
                 Staged homes sell 73% faster and for up to 17% more than unstaged homes.
               </p>
-              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.78rem', color: '#888', margin: 0 }}>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: '#595959', margin: 0 }}>
                 Source: National Association of Realtors, 2024 Profile of Home Staging
               </p>
             </div>
@@ -190,7 +190,7 @@ export default function StagingPsychologyPage() {
               <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 400, fontStyle: 'italic', color: 'var(--color-forest)', margin: 0, lineHeight: 1.6 }}>
                 "Buyers decide emotionally in the first 90 seconds — before they've checked the square footage or thought about the commute. Staging is how you win those 90 seconds."
               </p>
-              <cite style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', color: 'var(--color-clay)', marginTop: '10px', display: 'block' }}>
+              <cite style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: 'var(--color-clay)', marginTop: '10px', display: 'block' }}>
                 Kim Pelham, Snohomish County Real Estate Broker
               </cite>
             </blockquote>

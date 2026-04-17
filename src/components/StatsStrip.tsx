@@ -93,7 +93,7 @@ function StatCounter({ stat, isVisible }: StatCounterProps) {
       <p
         style={{
           fontFamily: 'var(--font-body)',
-          fontSize: '12px',
+          fontSize: '14px',
           fontWeight: 700,
           color: '#2C2C2C',
           textTransform: 'uppercase',
