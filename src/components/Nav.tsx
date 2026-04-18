@@ -162,16 +162,9 @@ export default function Nav() {
     lineHeight: 1,
   };
 
-  const phoneStyle: React.CSSProperties = {
-    fontFamily: 'var(--font-handwritten)',
-    fontSize: '1.375rem', // bumped for Caveat readability
-    color: '#555',
-    margin: 0,
-  };
-
   const desktopNavStyle: React.CSSProperties = {
     display: 'flex',
-    gap: '2rem',
+    gap: '1.5rem',
     alignItems: 'center',
   };
 
@@ -273,15 +266,12 @@ export default function Nav() {
   return (
     <nav style={navStyle} role="navigation" aria-label="Main navigation">
       <div style={containerStyle}>
-        {/* Left side: Brand + Phone */}
+        {/* Left side: Brand */}
         <div style={leftSideStyle}>
           <Link href="/" style={{ textDecoration: 'none' }}>
             <span style={brandStyle}>Kim Pelham</span>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: '#595959', letterSpacing: '0.1em', textTransform: 'uppercase', margin: '2px 0 0 0', lineHeight: 1 }}>The Pelham Group NW</p>
           </Link>
-          <p id="phone-display" style={phoneStyle}>
-            (425) 250-9422
-          </p>
         </div>
 
         {/* Desktop Navigation */}
@@ -515,13 +505,11 @@ export default function Nav() {
         #desktop-nav  { display: flex; }
         #desktop-cta  { display: inline-block; }
         #mobile-hamburger { display: none; }
-        #phone-display { display: block; }
 
         @media (max-width: 768px) {
           #desktop-nav      { display: none !important; }
           #desktop-cta      { display: none !important; }
           #mobile-hamburger { display: flex !important; }
-          #phone-display    { display: none !important; }
         }
       `}</style>
     </nav>

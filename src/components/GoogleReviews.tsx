@@ -170,8 +170,8 @@ export default function GoogleReviews() {
 
       {/* Dual scrolling rows */}
       <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
-        <MarqueeRow reviews={row1} direction="left" speed={95} />
-        <MarqueeRow reviews={row2} direction="right" speed={85} />
+        <MarqueeRow reviews={row1} direction="left" speed={140} />
+        <MarqueeRow reviews={row2} direction="right" speed={120} />
       </div>
 
       <style>{`
