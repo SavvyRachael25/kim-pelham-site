@@ -5,7 +5,7 @@ import IntroAnimation from "@/components/IntroAnimation";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? "https://kim-pelham-site.vercel.app"
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://thepelhamgroupnw.com"
   ),
   title: "Kim Pelham | Snohomish County Real Estate Broker | Everett, Bothell, Mill Creek WA",
   description:
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
       "Snohomish County real estate broker helping buyers and sellers in Everett, Bothell, Mill Creek, Snohomish, Lake Stevens and Marysville WA.",
     images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Kim Pelham | Snohomish County Real Estate Broker" }],
     type: "website",
-    url: "https://kim-pelham-site.vercel.app",
+    url: "https://thepelhamgroupnw.com",
   },
   twitter: {
     card: "summary_large_image",
@@ -50,12 +50,12 @@ export default function RootLayout({
               "@graph": [
                 {
                   "@type": "RealEstateAgent",
-                  "@id": "https://kim-pelham-site.vercel.app/#agent",
+                  "@id": "https://thepelhamgroupnw.com/#agent",
                   "name": "Kim Pelham",
                   "description": "Snohomish County real estate broker with 17+ years of experience. Specializing in residential buying, selling, staging, and senior transitions across Everett, Bothell, Mill Creek, and the greater Snohomish County area.",
-                  "url": "https://kim-pelham-site.vercel.app",
+                  "url": "https://thepelhamgroupnw.com",
                   "telephone": "+14252509422",
-                  "image": "https://kim-pelham-site.vercel.app/images/kim-headshot-msh.jpg",
+                  "image": "https://thepelhamgroupnw.com/images/kim-headshot-msh.jpg",
                   "jobTitle": "Real Estate Broker",
                   "knowsAbout": ["residential real estate", "home buying", "home selling", "home staging", "senior real estate transitions", "Snohomish County real estate market"],
                   "award": ["Best of Snohomish County 2024", "Best of Zillow"],
@@ -76,10 +76,10 @@ export default function RootLayout({
                 },
                 {
                   "@type": "LocalBusiness",
-                  "@id": "https://kim-pelham-site.vercel.app/#business",
+                  "@id": "https://thepelhamgroupnw.com/#business",
                   "name": "Kim Pelham - The Pelham Group NW",
                   "description": "Full-service real estate brokerage serving Snohomish County, WA",
-                  "url": "https://kim-pelham-site.vercel.app",
+                  "url": "https://thepelhamgroupnw.com",
                   "telephone": "+14252509422",
                   "address": {
                     "@type": "PostalAddress",
