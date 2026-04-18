@@ -754,7 +754,7 @@ export default function AboutPage() {
         <p
           style={{
             fontFamily: 'var(--font-handwritten)',
-            fontSize: '20px',
+            fontSize: '24px',
             color: '#B8845C',
             margin: '32px 0 40px 0',
           }}

@@ -27,7 +27,7 @@ export default function TermsPage() {
         <p
           style={{
             fontFamily: 'var(--font-handwritten)',
-            fontSize: '1.1rem',
+            fontSize: '1.375rem',
             color: '#B8845C',
             marginBottom: '10px',
           }}

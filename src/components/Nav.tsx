@@ -159,7 +159,7 @@ export default function Nav() {
 
   const phoneStyle: React.CSSProperties = {
     fontFamily: 'var(--font-handwritten)',
-    fontSize: '1.125rem', // 18px minimum for handwritten font readability
+    fontSize: '1.375rem', // bumped for Caveat readability
     color: '#555',
     margin: 0,
   };
@@ -201,7 +201,7 @@ export default function Nav() {
     borderRadius: '2px',
     padding: '0.75rem 1.5rem',
     cursor: 'pointer',
-    fontSize: '1rem',
+    fontSize: '20px',
     transition: 'all 0.3s ease',
   };
 
@@ -258,7 +258,7 @@ export default function Nav() {
     borderRadius: '2px',
     padding: '1rem 1.5rem',
     cursor: 'pointer',
-    fontSize: '1.1rem',
+    fontSize: '1.375rem',
     width: '100%',
     transition: 'all 0.3s ease',
   };

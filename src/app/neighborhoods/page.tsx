@@ -276,7 +276,7 @@ export default function NeighborhoodsPage() {
               <p
                 style={{
                   fontFamily: 'var(--font-handwritten)',
-                  fontSize: '1rem',
+                  fontSize: '20px',
                   color: '#B8845C',
                   margin: '0 0 16px 0',
                 }}

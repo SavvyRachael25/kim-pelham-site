@@ -58,7 +58,7 @@ export default function BlogPreview() {
             <p
               style={{
                 fontFamily: 'var(--font-handwritten)',
-                fontSize: '18px',
+                fontSize: '22px',
                 color: '#B8845C',
                 margin: '0 0 8px 0',
               }}

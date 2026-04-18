@@ -181,7 +181,7 @@ export default function StagingPage() {
         <blockquote
           style={{
             fontFamily: 'var(--font-handwritten)',
-            fontSize: '1.25rem',
+            fontSize: '1.375rem',
             color: '#2F5233',
             fontStyle: 'italic',
             lineHeight: 1.7,

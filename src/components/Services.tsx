@@ -109,7 +109,7 @@ export default function Services() {
               <p
                 style={{
                   fontFamily: 'var(--font-handwritten)',
-                  fontSize: '16px',
+                  fontSize: '20px',
                   color: '#B8845C',
                   margin: 0,
                 }}

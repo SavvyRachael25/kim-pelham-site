@@ -728,7 +728,7 @@ export default function SellersPage() {
         <p
           style={{
             fontFamily: 'var(--font-handwritten)',
-            fontSize: '20px',
+            fontSize: '24px',
             color: '#B8845C',
             margin: '32px 0 40px 0',
           }}
@@ -769,7 +769,7 @@ export default function SellersPage() {
         <p
           style={{
             fontFamily: 'var(--font-handwritten)',
-            fontSize: '16px',
+            fontSize: '20px',
             color: '#F8F5F0',
             opacity: 0.9,
             margin: '24px 0 0 0',

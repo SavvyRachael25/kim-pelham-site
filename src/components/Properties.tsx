@@ -129,7 +129,7 @@ function PropertyCard({ property }: PropertyCardProps) {
         <p
           style={{
             fontFamily: 'var(--font-handwritten)',
-            fontSize: '14px',
+            fontSize: '18px',
             color: '#B8845C',
             margin: 0,
           }}
@@ -166,7 +166,7 @@ export default function Properties() {
             <p
               style={{
                 fontFamily: 'var(--font-handwritten)',
-                fontSize: '18px',
+                fontSize: '22px',
                 color: '#B8845C',
                 margin: '0 0 8px 0',
               }}

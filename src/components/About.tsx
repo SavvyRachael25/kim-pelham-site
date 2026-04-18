@@ -37,7 +37,7 @@ export default function About() {
           </div>
 
           <div>
-            <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '18px', color: '#B8845C', margin: '0 0 8px 0' }}>
+            <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '22px', color: '#B8845C', margin: '0 0 8px 0' }}>
               meet your broker · The Pelham Group NW
             </p>
             <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '36px', fontWeight: 700, color: '#2C2C2C', margin: '0 0 24px 0', lineHeight: 1.2 }}>

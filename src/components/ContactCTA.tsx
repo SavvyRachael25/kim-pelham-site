@@ -62,7 +62,7 @@ export default function ContactCTA() {
         <p
           style={{
             fontFamily: 'var(--font-handwritten)',
-            fontSize: '20px',
+            fontSize: '24px',
             color: '#B8845C',
             margin: '32px 0 40px 0',
           }}
@@ -104,7 +104,7 @@ export default function ContactCTA() {
         <p
           style={{
             fontFamily: 'var(--font-handwritten)',
-            fontSize: '16px',
+            fontSize: '20px',
             color: '#FFFFFF',
             opacity: 0.8,
             margin: 0,

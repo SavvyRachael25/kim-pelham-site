@@ -171,7 +171,7 @@ export default function CommunityPage() {
               <p
                 style={{
                   fontFamily: 'var(--font-handwritten)',
-                  fontSize: '1.1rem',
+                  fontSize: '1.375rem',
                   color: '#B8845C',
                   margin: '0 0 12px 0',
                 }}
@@ -228,7 +228,7 @@ export default function CommunityPage() {
               <p
                 style={{
                   fontFamily: 'var(--font-handwritten)',
-                  fontSize: '1rem',
+                  fontSize: '20px',
                   color: '#B8845C',
                   margin: '0 0 16px 0',
                 }}
@@ -327,7 +327,7 @@ export default function CommunityPage() {
                 <p
                   style={{
                     fontFamily: 'var(--font-handwritten)',
-                    fontSize: '0.9rem',
+                    fontSize: '18px',
                     color: 'rgba(248,245,240,0.6)',
                     margin: 0,
                   }}
@@ -346,7 +346,7 @@ export default function CommunityPage() {
               <p
                 style={{
                   fontFamily: 'var(--font-handwritten)',
-                  fontSize: '1.1rem',
+                  fontSize: '1.375rem',
                   color: '#B8845C',
                   margin: '0 0 8px 0',
                 }}
@@ -437,7 +437,7 @@ export default function CommunityPage() {
                       <p
                         style={{
                           fontFamily: 'var(--font-handwritten)',
-                          fontSize: '1rem',
+                          fontSize: '20px',
                           color: 'rgba(248,245,240,0.85)',
                           margin: 0,
                         }}
@@ -476,7 +476,7 @@ export default function CommunityPage() {
               <p
                 style={{
                   fontFamily: 'var(--font-handwritten)',
-                  fontSize: '1.1rem',
+                  fontSize: '1.375rem',
                   color: '#B8845C',
                   margin: '0 0 8px 0',
                 }}
@@ -588,7 +588,7 @@ export default function CommunityPage() {
               <p
                 style={{
                   fontFamily: 'var(--font-handwritten)',
-                  fontSize: '1.1rem',
+                  fontSize: '1.375rem',
                   color: '#B8845C',
                   margin: '0 0 8px 0',
                 }}
@@ -677,7 +677,7 @@ export default function CommunityPage() {
             <p
               style={{
                 fontFamily: 'var(--font-handwritten)',
-                fontSize: '1.1rem',
+                fontSize: '1.375rem',
                 color: '#B8845C',
                 marginBottom: '12px',
               }}

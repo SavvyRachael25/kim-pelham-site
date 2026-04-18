@@ -107,7 +107,7 @@ export default function LifestyleBand() {
         <p
           style={{
             fontFamily: 'var(--font-handwritten)',
-            fontSize: '16px',
+            fontSize: '20px',
             color: '#FFFFFF',
             opacity: 0.7,
             margin: '32px 0 0 0',

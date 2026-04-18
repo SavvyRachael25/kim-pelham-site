@@ -86,7 +86,7 @@ export default function MediaPage() {
               <p
                 style={{
                   fontFamily: 'var(--font-handwritten)',
-                  fontSize: '1.1rem',
+                  fontSize: '1.375rem',
                   color: '#B8845C',
                   margin: '0 0 8px 0',
                 }}
@@ -131,7 +131,7 @@ export default function MediaPage() {
               <p
                 style={{
                   fontFamily: 'var(--font-handwritten)',
-                  fontSize: '1.1rem',
+                  fontSize: '1.375rem',
                   color: '#B8845C',
                   margin: '0 0 8px 0',
                 }}
@@ -237,7 +237,7 @@ export default function MediaPage() {
               <p
                 style={{
                   fontFamily: 'var(--font-handwritten)',
-                  fontSize: '1.1rem',
+                  fontSize: '1.375rem',
                   color: '#B8845C',
                   margin: '0 0 8px 0',
                 }}
@@ -324,7 +324,7 @@ export default function MediaPage() {
             <p
               style={{
                 fontFamily: 'var(--font-handwritten)',
-                fontSize: '1.1rem',
+                fontSize: '1.375rem',
                 color: '#B8845C',
                 marginBottom: '8px',
               }}

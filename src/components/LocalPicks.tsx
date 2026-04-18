@@ -81,7 +81,7 @@ function PickCard({ pick }: PickCardProps) {
         <p
           style={{
             fontFamily: 'var(--font-handwritten)',
-            fontSize: '18px',
+            fontSize: '22px',
             color: '#595959',
             margin: 0,
             lineHeight: 1.6,
@@ -109,7 +109,7 @@ export default function LocalPicks() {
           <p
             style={{
               fontFamily: 'var(--font-handwritten)',
-              fontSize: '18px',
+              fontSize: '22px',
               color: '#B8845C',
               margin: '0 0 8px 0',
             }}

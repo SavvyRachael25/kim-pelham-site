@@ -358,7 +358,7 @@ export default function SaleToListRatioPage() {
 
             {/* FAQ Section */}
             <section style={{ marginTop: '80px', paddingTop: '40px', borderTop: '1px solid var(--color-border)' }}>
-              <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.1rem', color: 'var(--color-clay)', margin: '0 0 6px 0' }}>common questions</p>
+              <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.375rem', color: 'var(--color-clay)', margin: '0 0 6px 0' }}>common questions</p>
               <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', fontWeight: 400, color: 'var(--color-forest)', margin: '0 0 32px 0' }}>
                 Frequently Asked Questions
               </h2>

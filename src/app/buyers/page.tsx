@@ -167,7 +167,7 @@ export default function BuyersPage() {
           <p
             style={{
               fontFamily: 'var(--font-handwritten)',
-              fontSize: '18px',
+              fontSize: '22px',
               color: '#2F5233',
               fontStyle: 'italic',
               lineHeight: 1.7,
@@ -365,7 +365,7 @@ export default function BuyersPage() {
               <blockquote
                 style={{
                   fontFamily: 'var(--font-handwritten)',
-                  fontSize: '18px',
+                  fontSize: '22px',
                   color: '#2F5233',
                   fontStyle: 'italic',
                   margin: '24px 0',
@@ -732,7 +732,7 @@ export default function BuyersPage() {
         <p
           style={{
             fontFamily: 'var(--font-handwritten)',
-            fontSize: '20px',
+            fontSize: '24px',
             color: '#B8845C',
             margin: '32px 0 40px 0',
           }}

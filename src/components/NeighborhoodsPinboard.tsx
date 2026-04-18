@@ -86,7 +86,7 @@ export default function NeighborhoodsPinboard() {
           <p
             style={{
               fontFamily: 'var(--font-handwritten)',
-              fontSize: '18px',
+              fontSize: '22px',
               color: '#B8845C',
               margin: '0 0 8px 0',
             }}
@@ -176,7 +176,7 @@ export default function NeighborhoodsPinboard() {
                   left: '12px',
                   right: '12px',
                   fontFamily: 'var(--font-handwritten)',
-                  fontSize: '14px',
+                  fontSize: '18px',
                   color: '#FFFFFF',
                   backgroundColor: 'rgba(0,0,0,0.58)',
                   padding: '8px 12px',
