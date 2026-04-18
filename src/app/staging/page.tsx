@@ -361,24 +361,24 @@ export default function StagingPage() {
         backgroundColor="#FFFFFF"
         faqs={[
           {
-            question: "Does staging really make a difference in sale price?",
-            answer: "Absolutely. Staged homes sell 30–50% faster and consistently for more money. Buyers make emotional decisions first and logical decisions second. When a home is staged well, buyers can picture themselves living there  -  and that emotional connection translates directly to stronger offers.",
+            question: "What happens during a home staging consultation with Kim?",
+            answer: "Kim walks through the home room by room, takes before photos, and creates a staging plan covering what to remove, what to reposition, and what to add. Consultation cost: $200-400. Optional hands-on implementation runs $500-2,000. Most clients earn back 10-15x their staging investment in their final sale price.",
           },
           {
-            question: "How much does professional staging cost?",
-            answer: "The cost varies based on your home's size and what's needed. For Kim's clients, staging is built into her selling strategy  -  she'll walk you through exactly what's involved and what the expected return on investment is at your consultation.",
+            question: "How is staging different from hiring a decorator?",
+            answer: "A decorator designs for the person living there. A stager designs for the buyer who has never seen the home before. Kim stages for buyer psychology, not aesthetics. She removes personality, neutralizes taste, and creates spaces where buyers mentally move themselves in. Kim has staged 200+ Snohomish County homes and does it herself.",
           },
           {
-            question: "Will Kim be staging my home herself?",
-            answer: "Most of the time, yes — Kim personally stages with inventory from her own collection. For vacant homes where more furniture is needed than Kim's inventory can cover, Kim partners with a trusted staging company to round out the look. Either way, you get Kim's eye and her psychology-driven approach.",
+            question: "Can you stage a home while I am still living in it?",
+            answer: "Yes. Occupied staging is the most common scenario Kim handles. She works around your schedule and your life, decluttering and repositioning what you have, removing what does not serve the space, and adding key pieces from her inventory where needed. You do not need to move out.",
           },
           {
-            question: "Do I need to move my furniture out for staging?",
-            answer: "Not necessarily. Kim evaluates your existing furniture and decor, and stages around what you have  -  removing what doesn't serve the space and repositioning or supplementing what does. Partial or full staging recommendations depend on your specific home.",
+            question: "What if I cannot afford professional staging?",
+            answer: "A $200 consultation gets you a detailed room-by-room plan you can execute yourself. Most clients complete 80% of the work on their own with the right guidance. Kim also offers flexible arrangements for sellers who need to defer staging costs until closing. A $300 consultation that earns you $8,000 more is always worth it.",
           },
           {
-            question: "What rooms are most important to stage?",
-            answer: "Living rooms, kitchens, and master bedrooms have the highest impact on buyers. Entryways and outdoor spaces also matter significantly for first impressions. Kim stages all key areas  -  not just the ones that photograph well.",
+            question: "Do I need to re-stage if my home does not sell quickly?",
+            answer: "Usually not. If a well-staged home is not getting offers after 3 weeks, the problem is almost always price or marketing, not staging. Kim will diagnose the issue honestly. In rare cases, a refresh helps if buyers have given specific feedback during showings.",
           },
         ]}
       />

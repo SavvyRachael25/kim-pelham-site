@@ -792,24 +792,24 @@ export default function SellersPage() {
       <FAQSection
         faqs={[
           {
-            question: "How does Kim determine the right listing price for my home?",
-            answer: "Kim conducts a comprehensive Comparative Market Analysis (CMA) using recent sales, active listings, and current market trends specific to your neighborhood. She combines data with her firsthand knowledge of what buyers are actually paying  -  not just what homes are listed for.",
+            question: "How much should I invest in repairs before selling?",
+            answer: "Less than you think. Most pre-sale renovations return less than their cost. A $10,000 kitchen remodel often nets back only $3,000-5,000. Instead, invest in decluttering, staging, and professional photography. Kim will tell you exactly which repairs move the needle on your sale price and which ones to skip.",
           },
           {
-            question: "Do I need to stage my home before listing?",
-            answer: "Kim's staging approach is a core part of her selling strategy, not an optional add-on. Staged homes sell significantly faster and for more money. Kim handles the staging process for you  -  from decluttering and furniture arrangement to styling  -  so your home makes a powerful first impression.",
+            question: "How long will my home actually take to sell?",
+            answer: "The Snohomish County average is 21-28 days to a pending offer. Kim&apos;s clients average 14 days. The difference is staging and strategic pricing. Homes that are well-staged and correctly priced consistently go under contract in the first two weeks, often with multiple offers.",
           },
           {
-            question: "How long will it take to sell my home?",
-            answer: "With Kim's full marketing system, well-priced homes in Snohomish County typically go under contract within 1–2 weeks. Her average sale-to-list ratio is 102.03%, meaning her clients consistently sell above asking price.",
+            question: "Should I stage my home if I am still living in it?",
+            answer: "Yes. Occupied staging is Kim&apos;s specialty. She works around your life, not against it. Cost for occupied staging in Snohomish County typically runs $500-2,000 and delivers 10-15x return on investment. You do not need to move out or store your furniture.",
           },
           {
-            question: "What if my home needs repairs before I can list?",
-            answer: "Kim coordinates pre-sale repairs through the Pelham Group NW Home Transition Team. She'll identify which repairs will actually move the needle on your sale price and skip the ones that won't. Deferred payment options are available for qualifying listings — ask Kim about pay-at-closing arrangements.",
+            question: "What will I net after commissions and closing costs?",
+            answer: "Total seller costs in Washington typically include 5-6% broker commission plus about 2% in closing costs (title, escrow, transfer tax). If you have owned the home longer than 2 years, you may exclude up to $250,000 in capital gains (single) or $500,000 (married). Kim provides a detailed net sheet before you list so there are no surprises.",
           },
           {
-            question: "What are your commission fees?",
-            answer: "Kim will walk you through all costs and fees in your first consultation so there are no surprises. Her goal is to maximize your net proceeds  -  not just your sale price.",
+            question: "Is my home in a flood-risk zone?",
+            answer: "Kim knows which Snohomish County streets and neighborhoods have flood history and which FEMA flood zones affect local properties. She will show you the flood maps, explain any disclosure requirements, and price your home accordingly. This protects you from liability and helps buyers make informed decisions.",
           },
         ]}
       />

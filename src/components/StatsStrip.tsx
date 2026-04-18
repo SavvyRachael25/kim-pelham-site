@@ -48,6 +48,12 @@ function StatCounter({ stat, isVisible }: StatCounterProps) {
     if (!isVisible || startedRef.current) return;
     startedRef.current = true;
 
+    // Respect prefers-reduced-motion — skip animation, show final value immediately
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      setCount(stat.number);
+      return;
+    }
+
     const target = stat.number;
     const duration = 1500;
     const startTime = performance.now();

@@ -452,24 +452,28 @@ export default function SeniorServicesPage() {
         backgroundColor="#FFFFFF"
         faqs={[
           {
-            question: "Does Kim's senior concierge service cost extra?",
-            answer: "We start with a no-cost consultation to understand your situation. Service costs vary based on what you need and for how long. Many seniors find that the coordination Kim provides saves them significant time, stress, and money compared to managing everything alone.",
+            question: "What does SRES mean and why does it matter for downsizing?",
+            answer: "SRES stands for Seniors Real Estate Specialist. It is a designation requiring 12+ hours of specialized training in senior housing options, reverse mortgages, estate planning coordination, and the emotional dynamics of downsizing. Selling a family home you have lived in for 30+ years is a life transition. An SRES broker understands what is happening alongside the real estate transaction.",
           },
           {
-            question: "My parent lives out of state  -  can Kim help coordinate everything remotely?",
-            answer: "Yes. Kim regularly works with adult children who are geographically separated from their parents. She serves as the trusted local point of contact, coordinating services, attending appointments, and keeping families informed every step of the way.",
+            question: "How long does the downsizing process actually take?",
+            answer: "Realistically, 3-6 months from start to move-in. Plan on 1 month for major decisions about belongings, 1-2 months to list and sell the current home, and 1-2 months to find and close on the new home. Seniors who rush this timeline often feel overwhelmed. Kim plans the sequence so each step happens in the right order.",
           },
           {
-            question: "We're not ready to sell yet  -  can Kim still help with other senior services?",
-            answer: "Absolutely. Real estate is just one part of what Kim offers. She can assist with daily tasks, home care coordination, medical equipment navigation, estate planning support, and more  -  completely independent of any real estate transaction.",
+            question: "What happens to all the furniture and belongings?",
+            answer: "Kim coordinates the full process. Items are sorted into keep, sell, donate, and discard. She connects families with estate sale companies, consignment shops, donation services, and junk removal. You make the decisions. Kim and her team handle the logistics with patience and respect.",
           },
           {
-            question: "How does the downsizing process typically work?",
-            answer: "Kim starts with a consultation to understand your timeline, priorities, and emotional needs. Kim and her team bring gentle, caring staff to help you with downsizing decisions — sorting, packing, and the whole process. She helps you evaluate your housing options, coordinates any necessary repairs or staging, and manages the entire process so you can focus on the transition itself  -  not the logistics.",
+            question: "Which Snohomish County neighborhoods work best for active adults 55 and older?",
+            answer: "Lake Stevens: newer construction, quiet streets, lower maintenance. Mill Creek: walkable town center, HOA-managed communities, excellent medical facilities nearby. Snohomish: historic downtown, strong community culture, slower pace. Kim matches each client to the neighborhood that fits their lifestyle, not just the one that is easiest to sell.",
           },
           {
-            question: "What communities or care options does Kim work with?",
-            answer: "Kim has built relationships with trusted senior living communities, home care agencies, and service providers across Snohomish County. She connects you with options that fit your budget, health needs, and lifestyle preferences.",
+            question: "Will downsizing hurt my sale price?",
+            answer: "No. Right-sized and well-staged homes in the $500,000-$700,000 range sell in 14-21 days in Snohomish County with strong demand. Moving quickly is often a good thing. It puts equity in your hands faster and reduces the carrying costs of a home you are no longer living in.",
+          },
+          {
+            question: "My parent lives out of state. Can Kim coordinate everything remotely?",
+            answer: "Yes. Kim regularly works with adult children who are geographically separated from their parents. She serves as the trusted local point of contact, coordinates services, attends appointments when needed, and keeps families informed every step of the way. One call to Kim replaces a dozen calls to different vendors.",
           },
         ]}
       />

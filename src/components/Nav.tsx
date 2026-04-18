@@ -271,7 +271,7 @@ export default function Nav() {
         {/* Left side: Brand + Phone */}
         <div style={leftSideStyle}>
           <Link href="/" style={{ textDecoration: 'none' }}>
-            <h1 style={brandStyle}>Kim Pelham</h1>
+            <span style={brandStyle}>Kim Pelham</span>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: '#595959', letterSpacing: '0.1em', textTransform: 'uppercase', margin: '2px 0 0 0', lineHeight: 1 }}>The Pelham Group NW</p>
           </Link>
           <p id="phone-display" style={phoneStyle}>

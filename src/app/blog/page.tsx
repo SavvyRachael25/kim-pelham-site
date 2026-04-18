@@ -17,11 +17,47 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: '8',
+    title: 'The Everett Neighborhoods That Flood in November (And 3 That Don\'t)',
+    slug: 'everett-neighborhoods-buyers-guide',
+    excerpt:
+      '17 years and 50+ Everett homes sold. Here is what I actually know about the neighborhoods — which most people won\'t tell you until you ask.',
+    date: '2026-04-17',
+    category: 'Buyer Guide',
+  },
+  {
+    id: '7',
+    title: 'SRES Realtor: What It Means and Why Seniors Choose One',
+    slug: 'sres-realtor-snohomish-county',
+    excerpt:
+      'SRES stands for Seniors Real Estate Specialist. Here is what the credential actually covers, why it matters for downsizing, and what to ask before you hire.',
+    date: '2026-04-17',
+    category: 'Senior Services',
+  },
+  {
+    id: '6',
+    title: 'Why Staging Beats Price Cuts: A Data-Driven Case',
+    slug: 'staging-beats-price-cuts',
+    excerpt:
+      'A 3% price reduction on a $600K home costs $18,000. Professional staging costs $500-2,000. The math strongly favors staging. Here is why.',
+    date: '2026-04-17',
+    category: 'Home Staging',
+  },
+  {
+    id: '5',
+    title: 'How to Sell 5% Above Market Value in Snohomish County',
+    slug: 'sell-above-market-value',
+    excerpt:
+      'My 102.03% sale-to-list ratio is not luck. It is the result of a specific staging and pricing framework applied to every listing. Here is how it works.',
+    date: '2026-04-17',
+    category: 'Selling Tips',
+  },
+  {
     id: '1',
     title: 'The First 72 Hours: Why They Make or Break Your Home Sale',
     slug: 'first-72-hours',
     excerpt:
-      'Discover why the first three days after listing are crucial to your home\'s success. Learn about preparation, staging, photography, pricing strategy, and more.',
+      'The first three days after listing are the highest-value hours of your entire sale. Here is how to make sure yours count.',
     date: '2026-03-15',
     category: 'Selling Tips',
   },
@@ -30,16 +66,16 @@ const blogPosts: BlogPost[] = [
     title: 'Senior Downsizing: A Compassionate Guide to Your Next Chapter',
     slug: 'senior-downsizing',
     excerpt:
-      'Navigate the emotional and practical aspects of downsizing. We share insights on timing, community options, and creating your ideal lifestyle.',
+      'Navigate the emotional and practical aspects of downsizing with a broker who has been through it 30+ times with Snohomish County families.',
     date: '2026-02-28',
-    category: 'Lifestyle',
+    category: 'Senior Services',
   },
   {
     id: '3',
     title: 'The Psychology of Home Staging: Why Buyers Fall in Love',
     slug: 'staging-psychology',
     excerpt:
-      'Understanding buyer psychology is key to successful staging. Learn the science behind creating emotional connections in your home.',
+      'Buyers decide in 90 seconds. Staging is how you win those 90 seconds. Here is the neuroscience behind what actually works.',
     date: '2026-02-10',
     category: 'Home Staging',
   },
@@ -48,7 +84,7 @@ const blogPosts: BlogPost[] = [
     title: 'Understanding Your Sale-to-List Ratio (And Why Kim\'s Is 102.03%)',
     slug: 'sale-to-list-ratio',
     excerpt:
-      'What does a 102.03% sale-to-list ratio mean, and why does it matter for sellers? Explore the metrics that predict your real estate success.',
+      'The most useful number for evaluating a real estate broker, and most sellers never ask about it. Here is what it means and how to use it.',
     date: '2026-01-25',
     category: 'Market Insights',
   },

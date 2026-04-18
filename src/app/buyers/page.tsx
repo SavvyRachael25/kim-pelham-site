@@ -662,24 +662,24 @@ export default function BuyersPage() {
         backgroundColor="#F8F5F0"
         faqs={[
           {
-            question: "Do I need to be pre-approved before working with a buyer's agent?",
-            answer: "It's not required, but getting pre-approved early is strongly recommended. It tells you exactly what you can afford, makes your offers more competitive, and shows sellers you're a serious buyer. Kim works with trusted local lenders who can get you pre-approved quickly.",
+            question: "How much down payment do I really need in Snohomish County?",
+            answer: "It depends on your loan type. FHA loans require 3.5% down, VA loans require 0% for qualifying veterans, and Snohomish County has down payment assistance programs offering up to $50,000 for qualifying buyers. Conventional loans typically require 5-20% down. Kim works with trusted local lenders who will find the right program for your situation.",
           },
           {
-            question: "How long does it typically take to find and close on a home in Snohomish County?",
-            answer: "On average, buyers work with Kim for 2–4 months from initial search to closing. The timeline varies based on market conditions, your criteria, and how quickly the right home appears. In competitive markets, acting fast is key  -  Kim is highly responsive and will keep you one step ahead.",
+            question: "What is the difference between pre-approved and pre-qualified?",
+            answer: "Pre-qualification is a rough estimate based on self-reported information. Pre-approval is a verified review of your credit, income, and assets by a lender. In Snohomish County&apos;s competitive market, sellers expect pre-approval letters with offers. Pre-approval takes 3-5 days and costs nothing. Do not make offers without it.",
           },
           {
-            question: "What does it cost to work with a buyer's agent?",
-            answer: "In most transactions, the seller's side covers the buyer's agent commission, so working with Kim typically costs you nothing out of pocket. She'll explain exactly how compensation works for your specific transaction at your first consultation.",
+            question: "I am moving from out of state. Which neighborhoods should I avoid?",
+            answer: "Areas to research carefully: far north Everett near the waterfront (flood history and industrial noise), neighborhoods under Boeing flight paths in Mukilteo and south Everett, and older developments near the Snohomish River floodplain. Great entry points for out-of-state buyers: Silver Lake, Boulevard Bluffs, and Lake Stevens. Kim has 17 years of local knowledge and will tell you the truth about any neighborhood.",
           },
           {
-            question: "What areas does Kim specialize in?",
-            answer: "Kim's primary market is Snohomish County — Everett, Bothell, Edmonds, Lynnwood, Lake Stevens, Marysville, Mill Creek, Mountlake Terrace, Mukilteo, Snohomish, Arlington, Stanwood, Granite Falls, and Monroe. She also serves North King County (including North Seattle), Skagit County (especially Sedro-Woolley and Concrete, where the Pelham family has property), and works by referral into Pierce, Kitsap, and Mason Counties — including an upcoming horse farm listing in Shelton.",
+            question: "What happens after I make an offer on a home?",
+            answer: "After your offer is accepted, the typical timeline is 30-45 days to closing. Days 1-7: inspection period (you can negotiate repairs or walk away). Days 7-21: appraisal and underwriting. Days 21-30: loan approval and title work. Final week: final walkthrough and closing. Kim manages every step and keeps you informed throughout. No surprises.",
           },
           {
-            question: "How competitive is the market  -  will I lose out to cash buyers?",
-            answer: "The Snohomish County market is competitive, but it's very winnable. Kim knows how to structure offers that stand out  -  from escalation clauses to personal letters to flexible closing timelines. Her negotiation track record speaks for itself.",
+            question: "Is now a good time to buy in Snohomish County?",
+            answer: "Snohomish County has a median home price around $720,000 with roughly 2-3 months of inventory, making it a balanced market. It is a good time to buy if you are pre-approved, planning to stay 5+ years, and buying the right home at the right price. Timing the market is less important than buying strategically. Kim will give you an honest read on any home you are considering.",
           },
         ]}
       />
