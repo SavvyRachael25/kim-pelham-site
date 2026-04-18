@@ -4,6 +4,9 @@ import "./globals.css";
 import IntroAnimation from "@/components/IntroAnimation";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? "https://kim-pelham-site.vercel.app"
+  ),
   title: "Kim Pelham | Snohomish County Real Estate Broker | Everett, Bothell, Mill Creek WA",
   description:
     "Kim Pelham is a Snohomish County real estate broker serving Everett, Bothell, Snohomish, Mill Creek, Lake Stevens & Marysville WA. 17+ years of experience, 102.03% sale-to-list ratio, and a two-buyer-max policy.",
@@ -11,14 +14,15 @@ export const metadata: Metadata = {
     title: "Kim Pelham | Snohomish County Real Estate Broker",
     description:
       "Snohomish County real estate broker helping buyers and sellers in Everett, Bothell, Mill Creek, Snohomish, Lake Stevens and Marysville WA.",
-    images: ["/images/hero-01-aerial-neighborhood.jpg"],
+    images: [{ url: "/opengraph-image", width: 1200, height: 630, alt: "Kim Pelham | Snohomish County Real Estate Broker" }],
     type: "website",
+    url: "https://kim-pelham-site.vercel.app",
   },
   twitter: {
     card: "summary_large_image",
     title: "Kim Pelham | Snohomish County Real Estate Broker",
     description: "Your trusted Pacific Northwest real estate broker. 17+ years experience. 102.03% sale-to-list ratio.",
-    images: ["/images/kim-headshot-msh.jpg"],
+    images: ["/opengraph-image"],
   },
 };
 
