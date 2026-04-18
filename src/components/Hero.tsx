@@ -17,8 +17,8 @@ export default function Hero() {
     >
       {/* Background image */}
       <Image
-        src="/images/hero-01-aerial-neighborhood.jpg"
-        alt="Aerial view of Snohomish County neighborhood"
+        src="/images/potlatch-01-aerial.jpg"
+        alt="1406 Potlatch Beach Road — waterfront home on Puget Sound in Tulalip, WA"
         fill
         priority
         quality={85}
