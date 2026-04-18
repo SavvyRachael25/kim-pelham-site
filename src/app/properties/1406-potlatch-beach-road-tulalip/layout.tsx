@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '1406 Potlatch Beach Road, Tulalip WA | Waterfront Home | Kim Pelham',
+  title: '1406 Potlatch Beach Road, Marysville WA | Waterfront Home | Kim Pelham',
   description:
-    'Waterfront home on Potlatch Beach Road in Tulalip, WA. Sweeping Sound vistas, 3 bed/2 bath, 1,662 sqft on 0.36 acres. Listed by Kim Pelham, The Pelham Group NW. Call (425) 250-9422.',
+    'High-bank waterfront on Puget Sound. 3 bed + 2 bonus rooms / 2 bath / 1,662 sqft / 0.36 acres. Hot tub, gazebo, orcas, Olympic views. $950K. Listed by Kim Pelham, The Pelham Group NW.',
   openGraph: {
-    title: '1406 Potlatch Beach Road, Tulalip WA — Waterfront | Kim Pelham',
+    title: '1406 Potlatch Beach Road, Marysville WA — Waterfront | Kim Pelham',
     description:
-      'High-bank waterfront on Puget Sound. 3 bed / 2 bath / 1,662 sqft / 0.36 acres. Built 1925. Sweeping sunset vistas. Listed by Kim Pelham, The Pelham Group NW.',
+      'High-bank waterfront on Puget Sound. 3 bed + 2 bonus rooms / 2 bath / 1,662 sqft. Hot tub, gazebo, orcas, Olympic Mountains. $950K. Listed by Kim Pelham.',
     images: [{ url: '/images/potlatch-01-aerial.jpg', width: 1536, height: 1152 }],
     type: 'website',
     url: 'https://thepelhamgroupnw.com/properties/1406-potlatch-beach-road-tulalip',
@@ -23,12 +23,12 @@ export default function PotlatchLayout({ children }: { children: React.ReactNode
     '@type': 'SingleFamilyResidence',
     name: '1406 Potlatch Beach Road',
     description:
-      'High-bank waterfront home on Puget Sound in Tulalip, WA. 3 bedrooms, 2 bathrooms, 1,662 square feet on a 0.36-acre lot. Built in 1925 with wood/lap siding, detached garage, and sweeping Sound sunset views.',
+      'High-bank waterfront home on Puget Sound in Marysville, WA. 3 bedrooms plus 2 bonus rooms, 2 bathrooms, 1,662 square feet on a 0.36-acre lot. Hot tub, gazebo, 50 feet of waterfront, Olympic Mountain and Mt. Rainier views. Built in 1925, meticulously maintained.',
     url: 'https://thepelhamgroupnw.com/properties/1406-potlatch-beach-road-tulalip',
     address: {
       '@type': 'PostalAddress',
       streetAddress: '1406 Potlatch Beach Road',
-      addressLocality: 'Tulalip',
+      addressLocality: 'Marysville',
       addressRegion: 'WA',
       postalCode: '98271',
       addressCountry: 'US',

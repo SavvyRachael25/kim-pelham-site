@@ -7,18 +7,22 @@ import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 
 const details = [
-  { label: 'Bedrooms', value: '3' },
-  { label: 'Bathrooms', value: '2' },
+  { label: 'Bedrooms', value: '3 + 2 Bonus Rooms' },
+  { label: 'Bathrooms', value: '2 (3/4 baths)' },
   { label: 'Sq Footage', value: '1,662 sqft' },
-  { label: 'Lot Size', value: '0.36 acres' },
+  { label: 'Lot Size', value: '0.36 acres (50\u2032 \u00d7 221\u2032)' },
+  { label: 'Waterfront', value: '50\u2032 High-Bank, Puget Sound' },
+  { label: 'Views', value: 'Sound, Bay, Olympics, Mt. Rainier' },
+  { label: 'Style', value: 'Tri-Level + Loft' },
   { label: 'Year Built', value: '1925' },
-  { label: 'Style', value: '1.5 Story' },
-  { label: 'Exterior', value: 'Wood / Lap Siding' },
-  { label: 'Garage', value: 'Detached' },
-  { label: 'Waterfront', value: 'High-Bank, Puget Sound' },
-  { label: 'Views', value: 'Sweeping Sound Vistas' },
-  { label: 'ZIP Code', value: '98271' },
-  { label: 'County', value: 'Snohomish' },
+  { label: 'Heating / Cooling', value: 'Ductless Mini-Split + Baseboard' },
+  { label: 'Fireplace', value: 'Yes (main level)' },
+  { label: 'Hot Tub', value: 'Yes (indoor spa)' },
+  { label: 'Garage', value: 'Detached + 2 off-street' },
+  { label: 'Exterior', value: 'Wood Siding' },
+  { label: 'Roof', value: '30-yr Architectural (newer)' },
+  { label: 'Annual Taxes', value: '$7,152' },
+  { label: 'MLS', value: '#2504310' },
 ];
 
 export default function PotlatchPage() {
@@ -92,7 +96,7 @@ export default function PotlatchPage() {
                 margin: 0,
               }}
             >
-              Tulalip, WA 98271 &nbsp;|&nbsp; Snohomish County
+              Marysville, WA 98271 &nbsp;|&nbsp; Snohomish County
             </p>
           </div>
           <p
@@ -257,7 +261,7 @@ export default function PotlatchPage() {
                   fontWeight: 300,
                 }}
               >
-                Some homes have views. This one has a front-row seat to Puget Sound sunsets that photograph like postcards and feel even better in person. Positioned on a high bank above the water with sweeping vistas in every direction, 1406 Potlatch Beach Road is the kind of property that makes people stop mid-sentence and just look.
+                Wake each morning to sweeping Sound vistas and end your days with unforgettable sunsets from this meticulously maintained high-bank waterfront retreat. A full wall of sliding glass doors opens to fresh ocean breezes and ever-changing coastal scenery. The flexible layout offers three bedrooms plus two bonus rooms — perfect for creative space, remote work, or hosting guests. Architectural charm runs through multiple levels with a loft perched above the living room. Two ensuite bedrooms each have their own 3/4 bath, and the bright kitchen features upgraded stainless appliances and a high-end induction range — all positioned to take in the view.
               </p>
 
               <p
@@ -270,7 +274,7 @@ export default function PotlatchPage() {
                   fontWeight: 300,
                 }}
               >
-                Built in 1925 and meticulously maintained, this 1.5-story home sits on 0.36 acres in the quiet Potlatch Beach community of Tulalip. The classic wood/lap siding exterior and detached garage give the property a timeless Pacific Northwest character that new construction simply cannot replicate. At 1,662 square feet with 3 bedrooms and 1 bath, this is a home that has been lived in and loved for generations.
+                Outside, the fully fenced and beautifully landscaped yard is a private retreat. On summer evenings, watch orcas feed on ghost shrimp below while bald eagles soar overhead. Gather in the gazebo for sunset cocktails, then slip into the indoor hot tub for a little stargazing. On clear days, Mt. Rainier anchors the southern horizon and the Olympic Mountains rise to the west across the water. Recent updates include a 30-year architectural roof, Andersen windows and doors, and exterior paint in 2023. Ductless mini-split heating and A/C keeps every season comfortable.
               </p>
 
               <p
@@ -283,7 +287,7 @@ export default function PotlatchPage() {
                   fontWeight: 300,
                 }}
               >
-                Tulalip sits between Marysville and Everett, just off I-5. Naval Station Everett and Boeing Paine Field are both within 20 minutes. Seattle is approximately 40 minutes south without traffic. For buyers who have been searching for waterfront access at a price that doesn't require selling everything else, this property deserves a serious look.
+                Naval Station Everett and Boeing Paine Field are both within 20 minutes. Seattle is approximately 40 minutes south without traffic. For buyers who have been looking for waterfront access at a price that doesn't require selling everything else, this one is worth a serious look. Property is on deeded land.
               </p>
 
               {/* Kim's note */}
