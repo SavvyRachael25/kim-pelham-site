@@ -131,8 +131,9 @@ export async function POST(req: NextRequest) {
   if (!ghlRes.ok) {
     const errBody = await ghlRes.text().catch(() => '(no body)');
     console.error(`[contact-api] GHL returned ${ghlRes.status}:`, errBody.slice(0, 200));
+    // DEBUG: return real GHL error so we can see it (remove after fix)
     return NextResponse.json(
-      { error: "We couldn't submit your request. Please try again or text/call Kim at 425-250-9422." },
+      { error: "GHL error", debug: { status: ghlRes.status, body: errBody.slice(0, 500) } },
       { status: 502 }
     );
   }
