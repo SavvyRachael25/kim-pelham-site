@@ -77,15 +77,15 @@ export default function PotlatchBlogPost() {
             <h1
               style={{
                 fontFamily: 'var(--font-heading)',
-                fontSize: 'clamp(1.5rem, 4vw, 2.5rem)',
+                fontSize: 'clamp(1.5rem, 4vw, 2.75rem)',
                 fontWeight: 700,
                 color: '#FFFFFF',
                 margin: 0,
-                lineHeight: 1.2,
+                lineHeight: 1.15,
                 textShadow: '0 2px 8px rgba(0,0,0,0.35)',
               }}
             >
-              Waterfront Living on Potlatch Beach Road
+              A $3 Million View for Under a Million
             </h1>
             <p
               style={{
@@ -95,7 +95,7 @@ export default function PotlatchBlogPost() {
                 margin: '10px 0 0 0',
               }}
             >
-              Why this Tulalip home is one of the best-kept secrets on the Sound
+              Potlatch Beach Road, Tulalip WA — same Sound, same sunsets, different price tag
             </p>
           </div>
         </div>
@@ -153,7 +153,7 @@ export default function PotlatchBlogPost() {
                 fontWeight: 300,
               }}
             >
-              There is a stretch of Potlatch Beach Road in Tulalip where the Sound opens up and the sunsets hit different. I have shown a lot of waterfront properties in 17 years of selling real estate in Snohomish County. Most of them have views. This one has a perspective. You stand on that high bank and Puget Sound just opens up in front of you, orange and purple and the kind of quiet that costs $3 million in Edmonds or Shoreline.
+              If you want Puget Sound waterfront in Seattle, Edmonds, or Mukilteo, start your budget at $2 million. For actual high-bank Sound views with sunsets over the Olympics, plan on $3 million plus. That is just the market. The water is beautiful and the price reflects it.
             </p>
 
             <p
@@ -166,7 +166,20 @@ export default function PotlatchBlogPost() {
                 fontWeight: 300,
               }}
             >
-              This is not one of those listings. This one is $950,000.
+              1406 Potlatch Beach Road in Tulalip is listed at $950,000. It is high-bank waterfront on Puget Sound. The views are sweeping. The sunsets are the kind that stop you mid-sentence. It is 35 miles north of Seattle on the same water.
+            </p>
+
+            <p
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '1.125rem',
+                lineHeight: 1.8,
+                color: '#2C2C2C',
+                marginBottom: '28px',
+                fontWeight: 300,
+              }}
+            >
+              The price difference is not a quality difference. It is a zip code difference. And for buyers who have been priced out of Sound waterfront their entire lives, that distinction matters a lot.
             </p>
 
             <h2

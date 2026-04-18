@@ -188,6 +188,20 @@ export default function Properties() {
 
                 <p
                   style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: '1.1rem',
+                    fontStyle: 'italic',
+                    fontWeight: 400,
+                    color: '#2F5233',
+                    margin: '0 0 16px 0',
+                    lineHeight: 1.4,
+                  }}
+                >
+                  A $3 million view for under a million.
+                </p>
+
+                <p
+                  style={{
                     fontFamily: 'var(--font-body)',
                     fontSize: '0.95rem',
                     color: '#555',
@@ -195,7 +209,7 @@ export default function Properties() {
                     margin: '0 0 20px 0',
                   }}
                 >
-                  High-bank waterfront on Puget Sound with sweeping sunset vistas. This meticulously maintained 1925 home sits on 0.36 acres with a detached garage and the kind of views that stop you mid-sentence.
+                  High-bank waterfront on Puget Sound. Sweeping Sound vistas, sunsets over the Olympics, 0.36 acres. Seattle waterfront starts at $3M. This one is $950K. Same water, 35 miles north.
                 </p>
 
                 <p
@@ -207,7 +221,7 @@ export default function Properties() {
                     lineHeight: 1.4,
                   }}
                 >
-                  The sunsets here are genuinely something else
+                  The sunsets here stop you cold every time
                 </p>
               </div>
 

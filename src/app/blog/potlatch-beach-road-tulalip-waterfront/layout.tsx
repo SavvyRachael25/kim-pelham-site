@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Waterfront Home on Potlatch Beach Road, Tulalip WA | Kim Pelham Blog',
+  title: 'A $3 Million View for Under a Million — Potlatch Beach Road, Tulalip | Kim Pelham',
   description:
-    'Explore this stunning waterfront home at 1406 Potlatch Beach Road in Tulalip, WA. Sweeping Sound views, 3 bed/1 bath, listed by Kim Pelham of The Pelham Group NW.',
+    'Seattle waterfront costs $3M+. This Puget Sound waterfront in Tulalip is under $1M. Same Sound, same sunsets, different price tag. 1406 Potlatch Beach Road — listed by Kim Pelham, The Pelham Group NW.',
   openGraph: {
-    title: 'Waterfront Living on Potlatch Beach Road — One of the Best-Kept Secrets on the Sound',
+    title: 'A $3 Million View for Under a Million — Potlatch Beach Road, Tulalip',
     description:
-      'High-bank waterfront, sweeping Puget Sound sunsets, 1925 character home. Here is why this Tulalip property is worth a serious look.',
+      'Seattle waterfront costs $3M+. This Puget Sound waterfront in Tulalip is under $1M. Same Sound, same sunsets, different price tag.',
     images: [{ url: '/images/property-03-lake-stevens-waterfront.jpg', width: 1200, height: 630 }],
     type: 'article',
     url: 'https://thepelhamgroupnw.com/blog/potlatch-beach-road-tulalip-waterfront',
@@ -21,9 +21,9 @@ export default function PotlatchBlogLayout({ children }: { children: React.React
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
-    headline: 'Waterfront Living on Potlatch Beach Road — Why This Tulalip Home Is One of the Best-Kept Secrets on the Sound',
+    headline: 'A $3 Million View for Under a Million — Potlatch Beach Road, Tulalip',
     description:
-      'High-bank waterfront on Puget Sound, sweeping sunset vistas, and a meticulously maintained 1925 character home. Here is why 1406 Potlatch Beach Road in Tulalip deserves your full attention.',
+      'Seattle waterfront costs $3M+. This Puget Sound high-bank waterfront in Tulalip is under $1M. Same Sound, same sunsets, radically different price tag. Here is the full story on 1406 Potlatch Beach Road.',
     image: 'https://thepelhamgroupnw.com/images/property-03-lake-stevens-waterfront.jpg',
     datePublished: '2026-04-17',
     dateModified: '2026-04-17',

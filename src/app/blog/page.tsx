@@ -18,10 +18,10 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: '9',
-    title: 'Waterfront Living on Potlatch Beach Road — One of the Best-Kept Secrets on the Sound',
+    title: 'A $3 Million View for Under a Million — Potlatch Beach Road, Tulalip',
     slug: 'potlatch-beach-road-tulalip-waterfront',
     excerpt:
-      'High-bank waterfront on Puget Sound, sweeping sunset vistas, 1925 character home. Comparable Sound views in Edmonds or Mukilteo start at $2M. This one is $950K.',
+      'Seattle waterfront costs $3M+. This Puget Sound high-bank waterfront in Tulalip is under $1M. Same Sound, same sunsets, radically different price tag. Here is why.',
     date: '2026-04-17',
     category: 'Featured Listing',
   },
