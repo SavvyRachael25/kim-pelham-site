@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     'High-bank waterfront on Puget Sound. 3 bed + 2 bonus rooms / 2 bath / 1,662 sqft / 0.36 acres. Hot tub, gazebo, orcas, Olympic views. $950K. Listed by Kim Pelham, The Pelham Group NW.',
   openGraph: {
-    title: '1406 Potlatch Beach Road, Marysville WA — Waterfront | Kim Pelham',
+    title: 'A $3M View for Under $1M | 1406 Potlatch Beach Road — Waterfront Tulalip',
     description:
       'High-bank waterfront on Puget Sound. 3 bed + 2 bonus rooms / 2 bath / 1,662 sqft. Hot tub, gazebo, orcas, Olympic Mountains. $950K. Listed by Kim Pelham.',
     images: [{ url: '/images/potlatch-01-aerial.jpg', width: 1536, height: 1152 }],
