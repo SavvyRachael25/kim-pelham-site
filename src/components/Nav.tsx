@@ -263,30 +263,7 @@ export default function Nav() {
     transition: 'all 0.3s ease',
   };
 
-  // Media query styles for mobile
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 768px)');
-
-    const updateStyles = () => {
-      const desktopNav = document.getElementById('desktop-nav');
-      const mobileHamburger = document.getElementById('mobile-hamburger');
-      const phoneDisplay = document.getElementById('phone-display');
-
-      if (mediaQuery.matches) {
-        if (desktopNav) desktopNav.style.display = 'none';
-        if (mobileHamburger) mobileHamburger.style.display = 'flex';
-        if (phoneDisplay) phoneDisplay.style.display = 'none';
-      } else {
-        if (desktopNav) desktopNav.style.display = 'flex';
-        if (mobileHamburger) mobileHamburger.style.display = 'none';
-        if (phoneDisplay) phoneDisplay.style.display = 'block';
-      }
-    };
-
-    updateStyles();
-    mediaQuery.addEventListener('change', updateStyles);
-    return () => mediaQuery.removeEventListener('change', updateStyles);
-  }, []);
+  // Responsive layout handled via CSS media queries below (no JS needed)
 
   return (
     <nav style={navStyle} role="navigation" aria-label="Main navigation">
@@ -382,8 +359,9 @@ export default function Nav() {
           })}
         </div>
 
-        {/* Right side: Button */}
+        {/* Right side: Button — hidden on mobile via CSS below */}
         <button
+          id="desktop-cta"
           style={buttonStyle}
           onMouseEnter={(e) => {
             const target = e.currentTarget;
@@ -521,6 +499,22 @@ export default function Nav() {
           </button>
         </div>
       )}
+
+      {/* CSS media queries — controls desktop vs mobile element visibility.
+          Using !important to override inline styles without JS matchMedia flicker. */}
+      <style>{`
+        #desktop-nav  { display: flex; }
+        #desktop-cta  { display: inline-block; }
+        #mobile-hamburger { display: none; }
+        #phone-display { display: block; }
+
+        @media (max-width: 768px) {
+          #desktop-nav      { display: none !important; }
+          #desktop-cta      { display: none !important; }
+          #mobile-hamburger { display: flex !important; }
+          #phone-display    { display: none !important; }
+        }
+      `}</style>
     </nav>
   );
 }
