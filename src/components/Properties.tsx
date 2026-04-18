@@ -4,144 +4,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-const properties = [
-  {
-    id: 1,
-    image: '/images/property-01-everett-home-exterior.jpg',
-    tag: 'Just Listed!',
-    title: 'Updated Craftsman in Everett',
-    details: '4 bed / 2.5 bath  -  Original millwork meets modern kitchen.',
-    annotation: 'I love the porch on this one  -  perfect for coffee mornings',
-  },
-  {
-    id: 2,
-    image: '/images/property-02-mill-creek-home.jpg',
-    tag: 'Open House Sat!',
-    title: 'Forest-Backed in Mill Creek',
-    details: '3 bed / 2 bath  -  Private wooded lot, updated bathrooms.',
-    annotation: "The backyard backs up to trails  -  you'll never get bored",
-  },
-  {
-    id: 3,
-    image: '/images/property-03-lake-stevens-waterfront.jpg',
-    tag: 'Under Contract',
-    tagBg: '#2F5233',
-    title: 'Lake Stevens Waterfront',
-    details: '5 bed / 3 bath  -  80ft of lakefront, dock, boat lift.',
-    annotation: 'Went under contract in 9 days. That dock, though.',
-  },
-];
-
-interface PropertyCardProps {
-  property: (typeof properties)[0];
-}
-
-function PropertyCard({ property }: PropertyCardProps) {
-  const [isHovered, setIsHovered] = useState(false);
-
-  return (
-    <div
-      style={{
-        position: 'relative',
-        borderRadius: '4px',
-        overflow: 'hidden',
-        boxShadow: '0 4px 12px rgba(0,0,0,0.1)',
-        transition: 'all 0.3s ease',
-        transform: isHovered ? 'translateY(-8px)' : 'translateY(0)',
-      }}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      {/* Image */}
-      <div
-        style={{
-          position: 'relative',
-          width: '100%',
-          aspectRatio: '4/3',
-          overflow: 'hidden',
-        }}
-      >
-        <Image
-          src={property.image}
-          alt={property.title}
-          fill
-          quality={85}
-          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-          style={{
-            objectFit: 'cover',
-            transform: isHovered ? 'scale(1.05)' : 'scale(1)',
-            transition: 'transform 0.3s ease',
-          }}
-        />
-
-        {/* Tag */}
-        <div
-          style={{
-            position: 'absolute',
-            top: '16px',
-            right: '16px',
-            backgroundColor: property.tagBg || '#B8845C',
-            color: '#FFFFFF',
-            padding: '8px 12px',
-            borderRadius: '3px',
-            zIndex: 10,
-          }}
-        >
-          <p
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: '14px',
-              fontWeight: 700,
-              margin: 0,
-            }}
-          >
-            {property.tag}
-          </p>
-        </div>
-      </div>
-
-      {/* Content */}
-      <div style={{ padding: '24px', backgroundColor: '#FFFFFF' }}>
-        <h3
-          style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: '20px',
-            fontWeight: 700,
-            color: '#2C2C2C',
-            margin: '0 0 8px 0',
-          }}
-        >
-          {property.title}
-        </h3>
-
-        <p
-          style={{
-            fontFamily: 'var(--font-body)',
-            fontSize: '14px',
-            color: '#595959',
-            margin: '0 0 16px 0',
-            lineHeight: 1.6,
-          }}
-        >
-          {property.details}
-        </p>
-
-        <p
-          style={{
-            fontFamily: 'var(--font-handwritten)',
-            fontSize: '18px',
-            color: '#B8845C',
-            margin: 0,
-          }}
-        >
-          {property.annotation}
-        </p>
-      </div>
-    </div>
-  );
-}
-
 export default function Properties() {
+  const [hovered, setHovered] = useState(false);
+
   return (
     <section
       style={{
@@ -171,7 +36,7 @@ export default function Properties() {
                 margin: '0 0 8px 0',
               }}
             >
-              recently listed
+              featured listing
             </p>
             <h2
               style={{
@@ -201,19 +66,180 @@ export default function Properties() {
           </Link>
         </div>
 
-        {/* Grid */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-            gap: '32px',
-          }}
+        {/* Featured Potlatch Road Card */}
+        <Link
+          href="/properties/1406-potlatch-beach-road-tulalip"
+          style={{ textDecoration: 'none', display: 'block', maxWidth: '900px', margin: '0 auto' }}
         >
-          {properties.map((property) => (
-            <PropertyCard key={property.id} property={property} />
-          ))}
-        </div>
+          <div
+            style={{
+              borderRadius: '6px',
+              overflow: 'hidden',
+              boxShadow: hovered ? '0 16px 40px rgba(47,82,51,0.14)' : '0 4px 16px rgba(0,0,0,0.10)',
+              transition: 'all 0.3s ease',
+              transform: hovered ? 'translateY(-6px)' : 'translateY(0)',
+              backgroundColor: '#FFFFFF',
+              border: '1px solid #E8E3DA',
+              display: 'grid',
+              gridTemplateColumns: '1fr 1fr',
+            }}
+            className="potlatch-card"
+            onMouseEnter={() => setHovered(true)}
+            onMouseLeave={() => setHovered(false)}
+          >
+            {/* Image side */}
+            <div style={{ position: 'relative', minHeight: '340px' }}>
+              <Image
+                src="/images/property-03-lake-stevens-waterfront.jpg"
+                alt="1406 Potlatch Beach Road waterfront home in Tulalip, WA"
+                fill
+                quality={90}
+                sizes="(max-width: 768px) 100vw, 50vw"
+                style={{ objectFit: 'cover' }}
+                priority
+              />
+              {/* Featured badge */}
+              <div
+                style={{
+                  position: 'absolute',
+                  top: '16px',
+                  left: '16px',
+                  backgroundColor: '#2F5233',
+                  color: '#F8F5F0',
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '0.7rem',
+                  fontWeight: 700,
+                  letterSpacing: '1.5px',
+                  textTransform: 'uppercase',
+                  padding: '6px 12px',
+                  borderRadius: '3px',
+                  zIndex: 10,
+                }}
+              >
+                New Listing
+              </div>
+            </div>
+
+            {/* Content side */}
+            <div style={{ padding: '40px 40px 36px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+              <div>
+                <p
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.8rem',
+                    fontWeight: 700,
+                    color: '#B8845C',
+                    letterSpacing: '1.5px',
+                    textTransform: 'uppercase',
+                    margin: '0 0 10px 0',
+                  }}
+                >
+                  Tulalip, WA 98271
+                </p>
+                <h3
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: 'clamp(1.4rem, 2.5vw, 2rem)',
+                    fontWeight: 700,
+                    color: '#2C2C2C',
+                    margin: '0 0 6px 0',
+                    lineHeight: 1.2,
+                  }}
+                >
+                  1406 Potlatch Beach Road
+                </h3>
+                <p
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: 'clamp(1.5rem, 2.5vw, 2rem)',
+                    fontWeight: 700,
+                    color: '#2F5233',
+                    margin: '0 0 24px 0',
+                  }}
+                >
+                  $950,000
+                </p>
+
+                {/* Stats */}
+                <div
+                  style={{
+                    display: 'flex',
+                    gap: '24px',
+                    marginBottom: '20px',
+                    flexWrap: 'wrap',
+                  }}
+                >
+                  {[
+                    { label: 'Bed', value: '3' },
+                    { label: 'Bath', value: '1' },
+                    { label: 'Sqft', value: '1,662' },
+                    { label: 'Acres', value: '0.36' },
+                  ].map((stat) => (
+                    <div key={stat.label} style={{ textAlign: 'center' }}>
+                      <div style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: '#2C2C2C', lineHeight: 1 }}>
+                        {stat.value}
+                      </div>
+                      <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.7rem', color: '#888', textTransform: 'uppercase', letterSpacing: '1px', marginTop: '2px' }}>
+                        {stat.label}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <p
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.95rem',
+                    color: '#555',
+                    lineHeight: 1.65,
+                    margin: '0 0 20px 0',
+                  }}
+                >
+                  High-bank waterfront on Puget Sound with sweeping sunset vistas. This meticulously maintained 1925 home sits on 0.36 acres with a detached garage and the kind of views that stop you mid-sentence.
+                </p>
+
+                <p
+                  style={{
+                    fontFamily: 'var(--font-handwritten)',
+                    fontSize: '19px',
+                    color: '#B8845C',
+                    margin: 0,
+                    lineHeight: 1.4,
+                  }}
+                >
+                  The sunsets here are genuinely something else
+                </p>
+              </div>
+
+              <div style={{ marginTop: '28px' }}>
+                <span
+                  style={{
+                    display: 'inline-block',
+                    padding: '12px 28px',
+                    backgroundColor: '#B8845C',
+                    color: '#FFFFFF',
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.9rem',
+                    fontWeight: 600,
+                    borderRadius: '4px',
+                    transition: 'background 0.2s',
+                  }}
+                >
+                  View Listing Details
+                </span>
+              </div>
+            </div>
+          </div>
+        </Link>
       </div>
+
+      <style>{`
+        @media (max-width: 768px) {
+          .potlatch-card {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </section>
   );
 }
