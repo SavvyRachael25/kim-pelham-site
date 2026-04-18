@@ -17,8 +17,8 @@ export default function PotlatchBlogPost() {
         {/* Hero */}
         <div style={{ position: 'relative', width: '100%', height: 'clamp(280px, 50vw, 540px)' }}>
           <Image
-            src="/images/property-03-lake-stevens-waterfront.jpg"
-            alt="Waterfront home with Puget Sound views on Potlatch Beach Road, Tulalip WA"
+            src="/images/potlatch-03-sound-view.jpg"
+            alt="Puget Sound view from 1406 Potlatch Beach Road, Tulalip WA — sweeping water vista"
             fill
             priority
             quality={90}

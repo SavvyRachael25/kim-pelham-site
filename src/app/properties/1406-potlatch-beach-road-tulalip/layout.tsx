@@ -3,12 +3,12 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: '1406 Potlatch Beach Road, Tulalip WA | Waterfront Home | Kim Pelham',
   description:
-    'Waterfront home on Potlatch Beach Road in Tulalip, WA. Sweeping Sound vistas, 3 bed/1 bath, 1,662 sqft on 0.36 acres. Listed by Kim Pelham, The Pelham Group NW. Call (425) 250-9422.',
+    'Waterfront home on Potlatch Beach Road in Tulalip, WA. Sweeping Sound vistas, 3 bed/2 bath, 1,662 sqft on 0.36 acres. Listed by Kim Pelham, The Pelham Group NW. Call (425) 250-9422.',
   openGraph: {
     title: '1406 Potlatch Beach Road, Tulalip WA — Waterfront | Kim Pelham',
     description:
-      'High-bank waterfront on Puget Sound. 3 bed / 1 bath / 1,662 sqft / 0.36 acres. Built 1925. Sweeping sunset vistas. Listed by Kim Pelham, The Pelham Group NW.',
-    images: [{ url: '/images/property-03-lake-stevens-waterfront.jpg', width: 1200, height: 630 }],
+      'High-bank waterfront on Puget Sound. 3 bed / 2 bath / 1,662 sqft / 0.36 acres. Built 1925. Sweeping sunset vistas. Listed by Kim Pelham, The Pelham Group NW.',
+    images: [{ url: '/images/potlatch-01-aerial.jpg', width: 1536, height: 1152 }],
     type: 'website',
     url: 'https://thepelhamgroupnw.com/properties/1406-potlatch-beach-road-tulalip',
   },
@@ -23,7 +23,7 @@ export default function PotlatchLayout({ children }: { children: React.ReactNode
     '@type': 'SingleFamilyResidence',
     name: '1406 Potlatch Beach Road',
     description:
-      'High-bank waterfront home on Puget Sound in Tulalip, WA. 3 bedrooms, 1 bathroom, 1,662 square feet on a 0.36-acre lot. Built in 1925 with wood/lap siding, detached garage, and sweeping Sound sunset views.',
+      'High-bank waterfront home on Puget Sound in Tulalip, WA. 3 bedrooms, 2 bathrooms, 1,662 square feet on a 0.36-acre lot. Built in 1925 with wood/lap siding, detached garage, and sweeping Sound sunset views.',
     url: 'https://thepelhamgroupnw.com/properties/1406-potlatch-beach-road-tulalip',
     address: {
       '@type': 'PostalAddress',
@@ -39,7 +39,7 @@ export default function PotlatchLayout({ children }: { children: React.ReactNode
       longitude: -122.2907,
     },
     numberOfRooms: 3,
-    numberOfBathroomsTotal: 1,
+    numberOfBathroomsTotal: 2,
     floorSize: {
       '@type': 'QuantitativeValue',
       value: 1662,

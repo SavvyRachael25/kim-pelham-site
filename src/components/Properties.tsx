@@ -90,8 +90,8 @@ export default function Properties() {
             {/* Image side */}
             <div style={{ position: 'relative', minHeight: '340px' }}>
               <Image
-                src="/images/property-03-lake-stevens-waterfront.jpg"
-                alt="1406 Potlatch Beach Road waterfront home in Tulalip, WA"
+                src="/images/potlatch-02-exterior.jpg"
+                alt="1406 Potlatch Beach Road exterior — waterfront home in Tulalip, WA"
                 fill
                 quality={90}
                 sizes="(max-width: 768px) 100vw, 50vw"

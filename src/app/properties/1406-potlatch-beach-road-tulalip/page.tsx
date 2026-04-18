@@ -8,7 +8,7 @@ import ScrollProgress from '@/components/ScrollProgress';
 
 const details = [
   { label: 'Bedrooms', value: '3' },
-  { label: 'Bathrooms', value: '1' },
+  { label: 'Bathrooms', value: '2' },
   { label: 'Sq Footage', value: '1,662 sqft' },
   { label: 'Lot Size', value: '0.36 acres' },
   { label: 'Year Built', value: '1925' },
@@ -31,8 +31,8 @@ export default function PotlatchPage() {
         {/* Hero image */}
         <div style={{ position: 'relative', width: '100%', height: 'clamp(300px, 55vw, 600px)' }}>
           <Image
-            src="/images/property-03-lake-stevens-waterfront.jpg"
-            alt="1406 Potlatch Beach Road waterfront home — Puget Sound views, Tulalip WA"
+            src="/images/potlatch-01-aerial.jpg"
+            alt="1406 Potlatch Beach Road aerial view — high-bank waterfront, Tulalip WA"
             fill
             priority
             quality={90}
@@ -95,7 +95,6 @@ export default function PotlatchPage() {
               Tulalip, WA 98271 &nbsp;|&nbsp; Snohomish County
             </p>
           </div>
-          {/* Photo credit placeholder */}
           <p
             style={{
               position: 'absolute',
@@ -107,7 +106,7 @@ export default function PotlatchPage() {
               margin: 0,
             }}
           >
-            Photos pending — contact Kim for full gallery
+            MLS #2504310
           </p>
         </div>
 
@@ -155,7 +154,7 @@ export default function PotlatchPage() {
             <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap' }}>
               {[
                 { label: 'Bed', value: '3' },
-                { label: 'Bath', value: '1' },
+                { label: 'Bath', value: '2' },
                 { label: 'Sqft', value: '1,662' },
                 { label: 'Acres', value: '0.36' },
                 { label: 'Built', value: '1925' },
@@ -188,6 +187,25 @@ export default function PotlatchPage() {
             >
               Contact Kim
             </Link>
+          </div>
+        </section>
+
+        {/* Photo gallery */}
+        <section style={{ padding: '40px 24px', backgroundColor: '#FFFFFF' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridTemplateRows: '260px 260px', gap: '8px' }}>
+              {[
+                { src: '/images/potlatch-02-exterior.jpg', alt: 'Exterior front — white home with wraparound porch and mature garden', col: '1 / 2', row: '1 / 3' },
+                { src: '/images/potlatch-03-sound-view.jpg', alt: 'Puget Sound view from the property — sweeping water vista', col: '2 / 3', row: '1 / 2' },
+                { src: '/images/potlatch-05-windows-view.jpg', alt: 'Floor-to-ceiling windows with Sound views from living room', col: '3 / 4', row: '1 / 2' },
+                { src: '/images/potlatch-04-living-room.jpg', alt: 'Living room with water views and modern finishes', col: '2 / 3', row: '2 / 3' },
+                { src: '/images/potlatch-06-interior.jpg', alt: 'Interior detail — natural light throughout', col: '3 / 4', row: '2 / 3' },
+              ].map((photo) => (
+                <div key={photo.src} style={{ position: 'relative', gridColumn: photo.col, gridRow: photo.row, borderRadius: '4px', overflow: 'hidden' }}>
+                  <Image src={photo.src} alt={photo.alt} fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 33vw" />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 

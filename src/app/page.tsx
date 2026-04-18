@@ -12,7 +12,6 @@ import About from '@/components/About';
 import NoteFromKim from '@/components/NoteFromKim';
 import Services from '@/components/Services';
 import Properties from '@/components/Properties';
-import Testimonials from '@/components/Testimonials';
 import LifestyleBand from '@/components/LifestyleBand';
 import NeighborhoodsPinboard from '@/components/NeighborhoodsPinboard';
 import LocalPicks from '@/components/LocalPicks';
@@ -38,7 +37,6 @@ export default function Home() {
       <NoteFromKim />
       <Services />
       <Properties />
-      <Testimonials />
       <LifestyleBand />
       <NeighborhoodsPinboard />
       <LocalPicks />

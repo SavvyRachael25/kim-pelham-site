@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'A $3 Million View for Under a Million — Potlatch Beach Road, Tulalip',
     description:
       'Seattle waterfront costs $3M+. This Puget Sound waterfront in Tulalip is under $1M. Same Sound, same sunsets, different price tag.',
-    images: [{ url: '/images/property-03-lake-stevens-waterfront.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/images/potlatch-01-aerial.jpg', width: 1536, height: 1152 }],
     type: 'article',
     url: 'https://thepelhamgroupnw.com/blog/potlatch-beach-road-tulalip-waterfront',
   },
