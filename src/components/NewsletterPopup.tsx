@@ -50,20 +50,25 @@ export default function NewsletterPopup() {
     if (!email) return;
     setStatus('loading');
 
-    const WEBHOOK_URL = process.env.NEXT_PUBLIC_NEWSLETTER_WEBHOOK || '';
     try {
-      if (WEBHOOK_URL) {
-        await fetch(WEBHOOK_URL, {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            firstName,
-            email,
-            source: 'website_popup',
-            smsMarketingConsent: consent.marketing,
-          }),
-        });
-      }
+      await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          firstName,
+          lastName: '',
+          email,
+          phone: '',
+          smsMarketingConsent: consent.marketing,
+          smsTransactionalConsent: false,
+          marketingCheckboxText: consent.marketing
+            ? 'I agree to receive marketing communications from Kim Pelham / The Pelham Group NW.'
+            : '',
+          transactionalCheckboxText: '',
+          tags: ['newsletter-signup', 'website-lead'],
+          source: 'newsletter_popup',
+        }),
+      });
       setStatus('success');
       setTimeout(dismiss, 3500);
     } catch {

@@ -48,13 +48,10 @@ interface ContactPayload {
   smsTransactionalConsent: boolean;
   marketingCheckboxText: string;
   transactionalCheckboxText: string;
+  tags?: string[];
+  source?: string;
 }
 
-function getClientIp(req: NextRequest): string {
-  const forwarded = req.headers.get('x-forwarded-for');
-  if (forwarded) return forwarded.split(',')[0].trim();
-  return req.headers.get('x-real-ip') ?? 'unknown';
-}
 
 export async function POST(req: NextRequest) {
   const GHL_API_TOKEN = process.env.GHL_API_TOKEN;
@@ -84,42 +81,32 @@ export async function POST(req: NextRequest) {
     message,
     smsMarketingConsent,
     smsTransactionalConsent,
-    marketingCheckboxText,
-    transactionalCheckboxText,
+    tags: customTags,
+    source: customSource,
   } = body;
 
   if (!firstName || !email) {
     return NextResponse.json({ error: 'First name and email are required.' }, { status: 400 });
   }
 
-  const ip = getClientIp(req);
-  const timestamp = new Date().toISOString();
-  const sourceUrl = req.headers.get('referer') ?? 'https://thepelhamgroupnw.com/contact';
-
   // Build GHL contact payload
-  const ghlPayload = {
+  // GHL API v2 (2021-07-28) accepts: firstName, lastName, email, phone, locationId,
+  // source, tags, customFields (array of {id, value}), notes (separate endpoint).
+  // Custom field IDs must be created in GHL Settings first — using tags to carry
+  // consent + context until those field IDs are confirmed.
+  const consentTags: string[] = [];
+  if (smsMarketingConsent) consentTags.push('consent-marketing');
+  if (smsTransactionalConsent) consentTags.push('consent-transactional');
+  if (interested) consentTags.push(`interested-${interested.toLowerCase().replace(/\s+/g, '-')}`);
+
+  const ghlPayload: Record<string, unknown> = {
     firstName,
     lastName: lastName ?? '',
     email,
     phone: phone ?? '',
     locationId: GHL_LOCATION_ID,
-    source: 'website_contact_form',
-    tags: ['website-lead'],
-    ...(interested && { customField: { interested_in: interested } }),
-    customField: {
-      // A2P consent fields — must match keys configured in GHL custom fields
-      // TODO (Phase 1): Verify these keys match the GHL custom field keys exactly
-      sms_marketing_consent: smsMarketingConsent,
-      sms_marketing_consent_timestamp: smsMarketingConsent ? timestamp : '',
-      sms_transactional_consent: smsTransactionalConsent,
-      sms_transactional_consent_timestamp: smsTransactionalConsent ? timestamp : '',
-      consent_ip_address: ip,
-      consent_source_url: sourceUrl,
-      consent_checkbox_text_marketing: marketingCheckboxText,
-      consent_checkbox_text_transactional: transactionalCheckboxText,
-      ...(interested && { interested_in: interested }),
-    },
-    ...(message && { description: message }),
+    source: customSource ?? 'website_contact_form',
+    tags: [...(customTags ?? ['website-lead']), ...consentTags],
   };
 
   let ghlRes: Response;
@@ -148,6 +135,27 @@ export async function POST(req: NextRequest) {
       { error: "We couldn't submit your request. Please try again or text/call Kim at 425-250-9422." },
       { status: 502 }
     );
+  }
+
+  // If a message was submitted, attach it as a note on the newly created contact
+  if (message) {
+    try {
+      const { contact } = await ghlRes.clone().json() as { contact: { id: string } };
+      if (contact?.id) {
+        await fetch(`${GHL_API_BASE}/contacts/${contact.id}/notes`, {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${GHL_API_TOKEN}`,
+            'Content-Type': 'application/json',
+            Version: GHL_API_VERSION,
+          },
+          body: JSON.stringify({ body: message }),
+        });
+      }
+    } catch {
+      // Note creation is best-effort — don't fail the whole request over it
+      console.error('[contact-api] Failed to create note on contact');
+    }
   }
 
   return NextResponse.json({ success: true }, { status: 200 });
