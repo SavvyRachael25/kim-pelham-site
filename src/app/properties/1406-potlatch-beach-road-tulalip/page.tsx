@@ -35,12 +35,12 @@ export default function PotlatchPage() {
         {/* Hero image */}
         <div style={{ position: 'relative', width: '100%', height: 'clamp(300px, 55vw, 600px)' }}>
           <Image
-            src="/images/potlatch-01-aerial.jpg"
-            alt="1406 Potlatch Beach Road aerial view — high-bank waterfront, Tulalip WA"
+            src="/images/potlatch-03-sound-view.jpg"
+            alt="Puget Sound view from 1406 Potlatch Beach Road — sweeping water vista, Tulalip WA"
             fill
             priority
             quality={90}
-            style={{ objectFit: 'cover', objectPosition: 'center 60%' }}
+            style={{ objectFit: 'cover', objectPosition: 'center 40%' }}
             sizes="100vw"
           />
           <div
