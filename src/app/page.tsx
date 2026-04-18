@@ -19,8 +19,24 @@ import BlogPreview from '@/components/BlogPreview';
 import ContactCTA from '@/components/ContactCTA';
 
 export const metadata = {
-  title: 'Kim Pelham - Real Estate Broker | Snohomish County',
-  description: 'Your neighbor in real estate. 17+ years helping families buy and sell in Snohomish County with a two-buyer-max policy.',
+  title: 'Kim Pelham — The Realtor Next Door | Snohomish County',
+  description: 'Your neighbor in real estate. 17+ years helping families buy and sell in Snohomish County. I answer my own phone, stage with my own hands, and fight for every dollar.',
+  openGraph: {
+    title: 'Kim Pelham — The Realtor Next Door',
+    description: '17+ years in Snohomish County. I answer my own phone, stage with my own hands, and fight for every dollar. The Pelham Group NW.',
+    images: [{ url: '/images/about-01-approachable-headshot-env.jpg', width: 1920, height: 1072 }],
+    type: 'website',
+    url: 'https://thepelhamgroupnw.com',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Kim Pelham — The Realtor Next Door',
+    description: '17+ years in Snohomish County. I answer my own phone, stage with my own hands, and fight for every dollar.',
+    images: ['/images/about-01-approachable-headshot-env.jpg'],
+  },
+  alternates: {
+    canonical: 'https://thepelhamgroupnw.com',
+  },
 };
 
 export default function Home() {
