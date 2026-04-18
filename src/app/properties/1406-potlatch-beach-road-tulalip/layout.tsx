@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'A $3M View for Under $1M | 1406 Potlatch Beach Road — Waterfront Tulalip',
     description:
       'High-bank waterfront on Puget Sound. 3 bed + 2 bonus rooms / 2 bath / 1,662 sqft. Hot tub, gazebo, orcas, Olympic Mountains. $950K. Listed by Kim Pelham.',
-    images: [{ url: '/images/potlatch-01-aerial.jpg', width: 1536, height: 1152 }],
+    images: [{ url: '/images/potlatch-03-sound-view.jpg', width: 1536, height: 673 }],
     type: 'website',
     url: 'https://thepelhamgroupnw.com/properties/1406-potlatch-beach-road-tulalip',
   },
