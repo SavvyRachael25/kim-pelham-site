@@ -28,8 +28,8 @@ export default function TestimonialsPage() {
       <InnerHero
         title="What My Clients Say"
         subtitle="Real experiences from real families"
-        image="/images/hero-03-porch-connection.jpg"
-        imageAlt="Happy family on home porch"
+        image="/images/kim-with-client-on-couch.jpg"
+        imageAlt="Kim Pelham meeting with a client"
       />
 
       {/* Aggregate rating bar */}

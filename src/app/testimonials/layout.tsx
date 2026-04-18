@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     title: 'Client Reviews | Kim Pelham, The Pelham Group NW',
     description:
       'Read 20 verified five-star Google reviews from Kim Pelham\u2019s clients across Snohomish County.',
-    images: ['/images/hero-03-porch-connection.jpg'],
+    images: [{ url: '/images/kim-with-client-on-couch.jpg', width: 1024, height: 683 }],
     type: 'website',
   },
   alternates: {
