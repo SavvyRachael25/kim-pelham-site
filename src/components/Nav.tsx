@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
+import { createPortal } from 'react-dom';
 import Link from 'next/link';
 
 function NavLinkItem({ href, label }: { href: string; label: string }) {
@@ -50,6 +51,7 @@ export default function Nav() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
@@ -62,6 +64,9 @@ export default function Nav() {
   const scheduleClose = () => {
     closeTimer.current = setTimeout(() => setOpenDropdown(null), 150);
   };
+
+  // Mount flag — needed so createPortal only runs client-side (document.body doesn't exist on server)
+  useEffect(() => { setMounted(true); }, []);
 
   useEffect(() => {
     const handleScroll = () => setHasScroll(window.scrollY > 0);
@@ -397,8 +402,11 @@ export default function Nav() {
         </button>
       </div>
 
-      {/* Mobile Menu */}
-      {mobileMenuOpen && (
+      {/* Mobile Menu — portaled to document.body so position:fixed escapes the
+          backdrop-filter containing block on <nav>. Without this portal, CSS
+          backdrop-filter makes fixed children position relative to the nav (~80px)
+          instead of the full viewport, so the menu never covers the screen. */}
+      {mounted && mobileMenuOpen && createPortal(
         <div
           ref={menuRef}
           id="mobile-menu"
@@ -497,7 +505,8 @@ export default function Nav() {
           >
             Talk to Kim
           </button>
-        </div>
+        </div>,
+        document.body
       )}
 
       {/* CSS media queries — controls desktop vs mobile element visibility.
