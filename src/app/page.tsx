@@ -24,7 +24,7 @@ export const metadata = {
   openGraph: {
     title: 'Kim Pelham — The Realtor Next Door',
     description: '17+ years in Snohomish County. I answer my own phone, stage with my own hands, and fight for every dollar. The Pelham Group NW.',
-    images: [{ url: '/images/about-01-approachable-headshot-env.jpg', width: 1920, height: 1072 }],
+    images: [{ url: '/images/kim-by-water.jpg', width: 1024, height: 683 }],
     type: 'website',
     url: 'https://thepelhamgroupnw.com',
   },
@@ -32,7 +32,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Kim Pelham — The Realtor Next Door',
     description: '17+ years in Snohomish County. I answer my own phone, stage with my own hands, and fight for every dollar.',
-    images: ['/images/about-01-approachable-headshot-env.jpg'],
+    images: ['/images/kim-by-water.jpg'],
   },
   alternates: {
     canonical: 'https://thepelhamgroupnw.com',
