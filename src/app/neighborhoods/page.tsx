@@ -150,6 +150,7 @@ export default function NeighborhoodsPage() {
             }}
           >
             <div
+              className="neigh-grid"
               style={{
                 display: 'grid',
                 gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
@@ -160,6 +161,7 @@ export default function NeighborhoodsPage() {
               {neighborhoods.map((neighborhood, index) => (
                 <article
                   key={neighborhood.id}
+                  className="neigh-card"
                   style={{
                     position: 'relative',
                     borderRadius: '8px',
@@ -284,6 +286,7 @@ export default function NeighborhoodsPage() {
                 coming soon
               </p>
               <div
+                className="neigh-cs-grid"
                 style={{
                   display: 'grid',
                   gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
@@ -294,6 +297,7 @@ export default function NeighborhoodsPage() {
                 {comingSoonNeighborhoods.map((neighborhood) => (
                   <article
                     key={neighborhood.id}
+                    className="neigh-cs-card"
                     style={{
                       position: 'relative',
                       borderRadius: '8px',
@@ -365,13 +369,30 @@ export default function NeighborhoodsPage() {
                         style={{
                           fontFamily: 'var(--font-body)',
                           fontSize: '0.9rem',
-                          margin: 0,
+                          margin: '0 0 0.75rem 0',
                           lineHeight: 1.5,
                           opacity: 0.85,
                         }}
                       >
                         {neighborhood.description}
                       </p>
+                      <Link
+                        href={`/neighborhoods/${neighborhood.name.toLowerCase().replace(/\s+/g, '-')}`}
+                        style={{
+                          fontFamily: 'var(--font-body)',
+                          fontSize: '0.85rem',
+                          fontWeight: 600,
+                          color: 'rgba(248,245,240,0.8)',
+                          textDecoration: 'none',
+                          paddingBottom: '0.3rem',
+                          borderBottom: '1px solid rgba(248,245,240,0.45)',
+                          display: 'inline-block',
+                          transition: 'all 0.3s ease',
+                          width: 'fit-content',
+                        }}
+                      >
+                        Learn More →
+                      </Link>
                     </div>
                   </article>
                 ))}
@@ -464,6 +485,32 @@ export default function NeighborhoodsPage() {
         </section>
       </main>
       <Footer />
+
+      <style>{`
+        /* Mobile: uniform card heights, disable rotation */
+        @media (max-width: 768px) {
+          .neigh-grid {
+            grid-template-columns: 1fr !important;
+            grid-auto-rows: 260px !important;
+          }
+          .neigh-card {
+            grid-column: 1 !important;
+            grid-row: span 1 !important;
+            min-height: 260px !important;
+            max-height: 260px !important;
+            transform: rotate(0deg) !important;
+          }
+          .neigh-cs-grid {
+            grid-template-columns: 1fr !important;
+            grid-auto-rows: 260px !important;
+          }
+          .neigh-cs-card {
+            min-height: 260px !important;
+            max-height: 260px !important;
+            transform: rotate(0deg) !important;
+          }
+        }
+      `}</style>
     </>
   );
 }
