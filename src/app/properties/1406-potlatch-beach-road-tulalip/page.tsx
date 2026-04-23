@@ -213,6 +213,59 @@ export default function PotlatchPage() {
           </div>
         </section>
 
+        {/* Property Tour */}
+        <section style={{ padding: '64px 24px', backgroundColor: '#F8F5F0' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <p
+              style={{
+                fontFamily: 'var(--font-handwritten)',
+                fontSize: '22px',
+                color: '#B8845C',
+                margin: '0 0 10px 0',
+              }}
+            >
+              catch the view
+            </p>
+            <h2
+              style={{
+                fontFamily: 'var(--font-heading)',
+                fontSize: '2rem',
+                fontWeight: 700,
+                color: '#2C2C2C',
+                margin: '0 0 32px 0',
+              }}
+            >
+              The View
+            </h2>
+            <div
+              style={{
+                position: 'relative',
+                width: '100%',
+                paddingBottom: '56.25%',
+                height: 0,
+                borderRadius: '6px',
+                overflow: 'hidden',
+                boxShadow: '0 4px 24px rgba(0,0,0,0.12)',
+              }}
+            >
+              <iframe
+                src="https://www.youtube.com/embed/BekwRDZCUK0"
+                title="Waterfront Views — 1406 Potlatch Beach Road, Tulalip WA"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  border: 'none',
+                }}
+              />
+            </div>
+          </div>
+        </section>
+
         {/* Description + Details */}
         <section style={{ padding: '80px 24px', backgroundColor: '#FFFFFF' }}>
           <div
