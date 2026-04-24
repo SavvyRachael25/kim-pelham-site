@@ -438,22 +438,41 @@ export default function PotlatchPage() {
                 </footer>
               </blockquote>
 
-              <Link
-                href="/contact"
-                style={{
-                  display: 'inline-block',
-                  padding: '16px 40px',
-                  backgroundColor: '#B8845C',
-                  color: '#FFFFFF',
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '1rem',
-                  fontWeight: 600,
-                  borderRadius: '4px',
-                  textDecoration: 'none',
-                }}
-              >
-                Schedule a Showing
-              </Link>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
+                <a
+                  href="sms:+14252509422?&body=Hi%20Kim%2C%20I%27m%20interested%20in%201406%20Potlatch%20Beach%20Road."
+                  style={{
+                    display: 'inline-block',
+                    padding: '16px 40px',
+                    backgroundColor: '#B8845C',
+                    color: '#FFFFFF',
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '1rem',
+                    fontWeight: 600,
+                    borderRadius: '4px',
+                    textDecoration: 'none',
+                  }}
+                >
+                  Text Kim
+                </a>
+                <a
+                  href="tel:+14252509422"
+                  style={{
+                    display: 'inline-block',
+                    padding: '14px 38px',
+                    backgroundColor: 'transparent',
+                    color: '#2F5233',
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '1rem',
+                    fontWeight: 600,
+                    borderRadius: '4px',
+                    textDecoration: 'none',
+                    border: '2px solid #2F5233',
+                  }}
+                >
+                  Call Kim
+                </a>
+              </div>
             </div>
 
             {/* Details sidebar */}
@@ -752,27 +771,46 @@ export default function PotlatchPage() {
                 marginBottom: '40px',
               }}
             >
-              Contact Kim directly to schedule a showing, ask questions, or get current price and disclosure details.
+              Text or call Kim directly to set up a time to walk through, ask questions, or get current price and disclosure details.
             </p>
-            <Link
-              href="/contact"
-              style={{
-                display: 'inline-block',
-                padding: '16px 48px',
-                backgroundColor: '#B8845C',
-                color: '#FFFFFF',
-                fontFamily: 'var(--font-body)',
-                fontSize: '1rem',
-                fontWeight: 600,
-                borderRadius: '4px',
-                textDecoration: 'none',
-              }}
-            >
-              Schedule a Showing
-            </Link>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center' }}>
+              <a
+                href="sms:+14252509422?&body=Hi%20Kim%2C%20I%27m%20interested%20in%201406%20Potlatch%20Beach%20Road."
+                style={{
+                  display: 'inline-block',
+                  padding: '16px 48px',
+                  backgroundColor: '#B8845C',
+                  color: '#FFFFFF',
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '1rem',
+                  fontWeight: 600,
+                  borderRadius: '4px',
+                  textDecoration: 'none',
+                }}
+              >
+                Text Kim
+              </a>
+              <a
+                href="tel:+14252509422"
+                style={{
+                  display: 'inline-block',
+                  padding: '14px 46px',
+                  backgroundColor: 'transparent',
+                  color: 'rgba(248,245,240,0.95)',
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '1rem',
+                  fontWeight: 600,
+                  borderRadius: '4px',
+                  textDecoration: 'none',
+                  border: '2px solid rgba(248,245,240,0.95)',
+                }}
+              >
+                Call Kim
+              </a>
+            </div>
             <div style={{ marginTop: '20px' }}>
               <a
-                href="tel:14252509422"
+                href="tel:+14252509422"
                 style={{
                   fontFamily: 'var(--font-handwritten)',
                   fontSize: '1.4rem',
