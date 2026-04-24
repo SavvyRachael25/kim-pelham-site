@@ -35,12 +35,12 @@ export default function PotlatchPage() {
         {/* Hero image */}
         <div style={{ position: 'relative', width: '100%', height: 'clamp(300px, 55vw, 600px)' }}>
           <Image
-            src="/images/potlatch-03-sound-view.jpg"
-            alt="Puget Sound view from 1406 Potlatch Beach Road — sweeping water vista, Tulalip WA"
+            src="/images/potlatch-brien-sunset-golden.jpg"
+            alt="Golden sunset over Puget Sound from 1406 Potlatch Beach Road — Marysville WA waterfront property"
             fill
             priority
             quality={90}
-            style={{ objectFit: 'cover', objectPosition: 'center 40%' }}
+            style={{ objectFit: 'cover', objectPosition: 'center 55%' }}
             sizes="100vw"
           />
           <div
@@ -194,13 +194,80 @@ export default function PotlatchPage() {
           </div>
         </section>
 
+        {/* AEO Quick Info — semantic dl/dt/dd for answer engines */}
+        <section style={{ padding: '32px 24px', backgroundColor: '#F8F5F0', borderBottom: '1px solid #E8E3DA' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <h2
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '0.68rem',
+                fontWeight: 700,
+                color: '#B8845C',
+                textTransform: 'uppercase',
+                letterSpacing: '1.5px',
+                margin: '0 0 20px 0',
+              }}
+            >
+              Quick Property Facts &mdash; MLS# 2504310
+            </h2>
+            <dl
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fill, minmax(190px, 1fr))',
+                gap: '16px 24px',
+                margin: 0,
+              }}
+            >
+              {[
+                { term: 'Price', def: '$950,000' },
+                { term: 'Bedrooms', def: '3 + 2 Bonus Rooms' },
+                { term: 'Bathrooms', def: '2 Ensuite' },
+                { term: 'Square Feet', def: '1,662' },
+                { term: 'Lot Size', def: '0.36 Acres' },
+                { term: 'Year Built', def: '1925' },
+                { term: 'MLS#', def: '2504310' },
+                { term: 'Status', def: 'Active' },
+                { term: 'Waterfront', def: '50 ft High-Bank Puget Sound' },
+                { term: 'View', def: 'Sound, Islands, Olympic Mountains' },
+              ].map((item) => (
+                <div key={item.term}>
+                  <dt
+                    style={{
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '0.65rem',
+                      fontWeight: 700,
+                      color: '#888',
+                      textTransform: 'uppercase',
+                      letterSpacing: '1px',
+                      marginBottom: '4px',
+                    }}
+                  >
+                    {item.term}
+                  </dt>
+                  <dd
+                    style={{
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '0.975rem',
+                      fontWeight: 600,
+                      color: '#2C2C2C',
+                      margin: 0,
+                    }}
+                  >
+                    {item.def}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        </section>
+
         {/* Photo gallery */}
         <section style={{ padding: '40px 24px', backgroundColor: '#FFFFFF' }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridTemplateRows: '260px 260px', gap: '8px' }}>
               {[
                 { src: '/images/potlatch-02-exterior.jpg', alt: 'Exterior front — white home with wraparound porch and mature garden', col: '1 / 2', row: '1 / 3' },
-                { src: '/images/potlatch-03-sound-view.jpg', alt: 'Puget Sound view from the property — sweeping water vista', col: '2 / 3', row: '1 / 2' },
+                { src: '/images/potlatch-brien-sunset-golden.jpg', alt: 'Golden sunset over Puget Sound from 1406 Potlatch Beach Road', col: '2 / 3', row: '1 / 2' },
                 { src: '/images/potlatch-05-windows-view.jpg', alt: 'Floor-to-ceiling windows with Sound views from living room', col: '3 / 4', row: '1 / 2' },
                 { src: '/images/potlatch-04-living-room.jpg', alt: 'Living room with water views and modern finishes', col: '2 / 3', row: '2 / 3' },
                 { src: '/images/potlatch-06-interior.jpg', alt: 'Interior detail — natural light throughout', col: '3 / 4', row: '2 / 3' },
@@ -512,6 +579,20 @@ export default function PotlatchPage() {
             >
               Location &amp; Area
             </h2>
+            {/* GEO neighborhood context — natural language for AI answer engines */}
+            <p
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '1.05rem',
+                lineHeight: 1.8,
+                color: '#2C2C2C',
+                marginBottom: '32px',
+                fontWeight: 300,
+                maxWidth: '740px',
+              }}
+            >
+              Potlatch Beach Road sits on the western shoreline of Snohomish County, in the Tulalip area between Marysville and the Puget Sound. The address falls within Marysville city limits (98271), giving residents easy access to Marysville&#39;s growing downtown while living in one of the most scenic waterfront pockets in the region. The Tulalip Resort Casino and Outlets at Tulalip are less than 10 minutes away. Everett, home to Naval Station Everett and Boeing Paine Field, is roughly 15 minutes south. Seattle is approximately 40 minutes south on I-5 without traffic, making this a genuinely livable waterfront address in Snohomish County rather than a pure vacation property.
+            </p>
             <div
               style={{
                 display: 'grid',
@@ -557,6 +638,88 @@ export default function PotlatchPage() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* Visible FAQ — mirrors FAQPage JSON-LD for AEO/GEO */}
+        <section style={{ padding: '80px 24px', backgroundColor: '#FFFFFF' }}>
+          <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <p
+              style={{
+                fontFamily: 'var(--font-handwritten)',
+                fontSize: '22px',
+                color: '#B8845C',
+                margin: '0 0 10px 0',
+              }}
+            >
+              common questions
+            </p>
+            <h2
+              style={{
+                fontFamily: 'var(--font-heading)',
+                fontSize: '2rem',
+                fontWeight: 700,
+                color: '#2C2C2C',
+                margin: '0 0 48px 0',
+              }}
+            >
+              About 1406 Potlatch Beach Road
+            </h2>
+            {[
+              {
+                q: 'How much is 1406 Potlatch Beach Road?',
+                a: '1406 Potlatch Beach Road is listed at $950,000. This includes 1,662 square feet, 3 bedrooms plus 2 bonus rooms, 2 bathrooms, and 50 feet of high-bank Puget Sound waterfront on 0.36 acres. MLS# 2504310.',
+              },
+              {
+                q: 'How many bedrooms does 1406 Potlatch Beach Road have?',
+                a: 'The home has 3 bedrooms plus 2 bonus rooms, for 5 flexible rooms total. Two bedrooms are ensuites with private 3/4 bathrooms. The bonus rooms work well as a home office, creative studio, or guest space.',
+              },
+              {
+                q: 'Is 1406 Potlatch Beach Road waterfront?',
+                a: 'Yes. The property sits on 50 feet of high-bank Puget Sound waterfront in the Tulalip area of Marysville, WA. Views take in the Sound, nearby islands, the Olympic Mountains to the west, and Mt. Rainier to the south on clear days.',
+              },
+              {
+                q: 'Who is the listing agent for 1406 Potlatch Beach Road?',
+                a: 'The listing agent is Kim Pelham, a licensed real estate broker at The Pelham Group NW in Snohomish County, WA. Kim has 17+ years of experience and can be reached at (425) 250-9422.',
+              },
+              {
+                q: 'What school district is 1406 Potlatch Beach Road in?',
+                a: '1406 Potlatch Beach Road is in the Marysville School District in Snohomish County, Washington.',
+              },
+            ].map((item, idx, arr) => (
+              <div
+                key={item.q}
+                style={{
+                  padding: '28px 0',
+                  borderTop: '1px solid #E8E3DA',
+                  borderBottom: idx === arr.length - 1 ? '1px solid #E8E3DA' : 'none',
+                }}
+              >
+                <h3
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '1.05rem',
+                    fontWeight: 600,
+                    color: '#2F5233',
+                    margin: '0 0 12px 0',
+                  }}
+                >
+                  {item.q}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '1rem',
+                    lineHeight: 1.75,
+                    color: '#2C2C2C',
+                    margin: 0,
+                    fontWeight: 300,
+                  }}
+                >
+                  {item.a}
+                </p>
+              </div>
+            ))}
           </div>
         </section>
 
