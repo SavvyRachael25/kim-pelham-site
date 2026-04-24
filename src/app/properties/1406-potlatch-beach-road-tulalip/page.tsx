@@ -264,7 +264,7 @@ export default function PotlatchPage() {
         {/* Photo gallery */}
         <section style={{ padding: '40px 24px', backgroundColor: '#FFFFFF' }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
-            <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridTemplateRows: '260px 260px', gap: '8px' }}>
+            <div className="potlatch-gallery" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridTemplateRows: '260px 260px', gap: '8px' }}>
               {[
                 { src: '/images/potlatch-02-exterior.jpg', alt: 'Exterior front — white home with wraparound porch and mature garden', col: '1 / 2', row: '1 / 3' },
                 { src: '/images/potlatch-brien-sunset-golden.jpg', alt: 'Golden sunset over Puget Sound from 1406 Potlatch Beach Road', col: '2 / 3', row: '1 / 2' },
@@ -806,6 +806,17 @@ export default function PotlatchPage() {
         @media (max-width: 900px) {
           .potlatch-layout {
             grid-template-columns: 1fr !important;
+          }
+        }
+        @media (max-width: 700px) {
+          .potlatch-gallery {
+            grid-template-columns: 1fr 1fr !important;
+            grid-template-rows: unset !important;
+            grid-auto-rows: 160px;
+          }
+          .potlatch-gallery > div {
+            grid-column: auto !important;
+            grid-row: auto !important;
           }
         }
       `}</style>
