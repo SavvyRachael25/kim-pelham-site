@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import "./globals.css";
 import IntroAnimation from "@/components/IntroAnimation";
+import Analytics from "@/components/Analytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -23,6 +24,9 @@ export const metadata: Metadata = {
     title: "Kim Pelham | Snohomish County Real Estate Broker",
     description: "Your trusted Pacific Northwest real estate broker. 17+ years experience. 102.03% sale-to-list ratio.",
     images: ["/opengraph-image"],
+  },
+  verification: {
+    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION_CODE,
   },
 };
 
@@ -120,6 +124,8 @@ export default function RootLayout({
           data-widget-id="69e29c13141137f36a3cd275"
           strategy="afterInteractive"
         />
+        {/* Analytics & attribution — gated on env vars, no-op until configured */}
+        <Analytics />
       </body>
     </html>
   );
