@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Living in Snohomish, WA | Kim Pelham Real Estate',
     description: 'Insider guide to Snohomish  -  the most charming city in the county.',
-    url: 'https://kim-pelham-site.vercel.app/neighborhoods/snohomish',
+    url: 'https://thepelhamgroupnw.com/neighborhoods/snohomish',
   },
 };
 
@@ -24,7 +24,7 @@ export default function SnohomishLayout({ children }: { children: React.ReactNod
             "description": "The Antique Capital of the Northwest  -  a charming riverfront city with Victorian homes, award-winning schools, trail access, and genuine small-town character.",
             "containedInPlace": { "@type": "State", "name": "Washington" },
             "geo": { "@type": "GeoCoordinates", "latitude": 47.9126, "longitude": -122.0984 },
-            "url": "https://kim-pelham-site.vercel.app/neighborhoods/snohomish"
+            "url": "https://thepelhamgroupnw.com/neighborhoods/snohomish"
           })
         }}
       />

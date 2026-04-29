@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     images: ['/images/kim-with-door-cropped.jpg'],
     type: 'article',
   },
-  alternates: { canonical: 'https://kim-pelham-site.vercel.app/blog/sres-realtor-snohomish-county' },
+  alternates: { canonical: 'https://thepelhamgroupnw.com/blog/sres-realtor-snohomish-county' },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

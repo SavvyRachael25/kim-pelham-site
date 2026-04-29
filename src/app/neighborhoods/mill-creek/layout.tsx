@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Living in Mill Creek, WA | Kim Pelham Real Estate',
     description: 'Insider guide to Mill Creek  -  Snohomish County\'s most polished suburb.',
-    url: 'https://kim-pelham-site.vercel.app/neighborhoods/mill-creek',
+    url: 'https://thepelhamgroupnw.com/neighborhoods/mill-creek',
   },
 };
 
@@ -24,7 +24,7 @@ export default function MillCreekLayout({ children }: { children: React.ReactNod
             "description": "Snohomish County's premier planned community  -  5-star rated schools, 23 miles of trails, and a Town Center that actually draws people out of their houses.",
             "containedInPlace": { "@type": "State", "name": "Washington" },
             "geo": { "@type": "GeoCoordinates", "latitude": 47.8601, "longitude": -122.2043 },
-            "url": "https://kim-pelham-site.vercel.app/neighborhoods/mill-creek"
+            "url": "https://thepelhamgroupnw.com/neighborhoods/mill-creek"
           })
         }}
       />

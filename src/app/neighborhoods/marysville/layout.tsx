@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Living in Marysville, WA | Kim Pelham Real Estate',
     description: 'Insider guide to Marysville  -  the best value in Snohomish County.',
-    url: 'https://kim-pelham-site.vercel.app/neighborhoods/marysville',
+    url: 'https://thepelhamgroupnw.com/neighborhoods/marysville',
   },
 };
 
@@ -24,7 +24,7 @@ export default function MarysvilleLayout({ children }: { children: React.ReactNo
             "description": "Snohomish County's second-largest city and best-value market  -  spacious lots, Puget Sound waterfront access, and the Tulalip Resort just down the road.",
             "containedInPlace": { "@type": "State", "name": "Washington" },
             "geo": { "@type": "GeoCoordinates", "latitude": 48.0512, "longitude": -122.1771 },
-            "url": "https://kim-pelham-site.vercel.app/neighborhoods/marysville"
+            "url": "https://thepelhamgroupnw.com/neighborhoods/marysville"
           })
         }}
       />

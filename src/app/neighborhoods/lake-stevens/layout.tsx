@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Living in Lake Stevens, WA | Kim Pelham Real Estate',
     description: 'Insider guide to Lake Stevens  -  waterfront living, top schools, and real value.',
-    url: 'https://kim-pelham-site.vercel.app/neighborhoods/lake-stevens',
+    url: 'https://thepelhamgroupnw.com/neighborhoods/lake-stevens',
   },
 };
 
@@ -24,7 +24,7 @@ export default function LakeStevensLayout({ children }: { children: React.ReactN
             "description": "One of the fastest-growing cities in Snohomish County  -  home to the county's largest lake, the #2-ranked school district, and serious new construction value.",
             "containedInPlace": { "@type": "State", "name": "Washington" },
             "geo": { "@type": "GeoCoordinates", "latitude": 48.0134, "longitude": -122.0643 },
-            "url": "https://kim-pelham-site.vercel.app/neighborhoods/lake-stevens"
+            "url": "https://thepelhamgroupnw.com/neighborhoods/lake-stevens"
           })
         }}
       />

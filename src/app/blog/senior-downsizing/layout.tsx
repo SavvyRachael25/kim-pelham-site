@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     images: ['/images/kim-with-door-cropped.jpg'],
     type: 'article',
   },
-  alternates: { canonical: 'https://kim-pelham-site.vercel.app/blog/senior-downsizing' },
+  alternates: { canonical: 'https://thepelhamgroupnw.com/blog/senior-downsizing' },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

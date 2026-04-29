@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Snohomish Real Estate Market April 2026: Inventory Up 52%, Homes Still Selling in Days | Kim Pelham',
   description:
-    'April 2026 Snohomish and King County real estate market update from broker Kim Pelham. Inventory jumped 51.8% year over year, but well-priced homes still sell in days with multiple offers. Median prices, days on market, months of supply, and a broker-on-the-ground read.',
+    'April 2026 Snohomish and King County real estate market update from broker Kim Pelham. Inventory jumped 51.8% year over year, giving buyers more options, while well-priced homes still find offers in days. Median prices, days on market, months of supply, and a broker-on-the-ground read.',
   keywords: [
     'Snohomish County real estate market',
     'Snohomish housing market April 2026',
@@ -22,9 +22,9 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: 'Kim Pelham', url: 'https://thepelhamgroupnw.com/about' }],
   openGraph: {
-    title: 'The Snohomish Market Is Moving Faster Than the Headlines Say',
+    title: 'The Snohomish Market Is Slower, But Still Moving When Priced Right',
     description:
-      'Snohomish inventory jumped 52% year over year. Good homes still sell in days. A broker-on-the-ground read of the April 2026 market.',
+      'Snohomish inventory jumped 52% year over year, so buyers have more choices. Well-priced homes are still finding offers in days. A broker-on-the-ground read of the April 2026 market.',
     images: [
       {
         url: 'https://thepelhamgroupnw.com/images/potlatch-brien-sunset-golden.jpg',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Snohomish Real Estate April 2026: Inventory Up 52%, Homes Still Moving Fast',
+    title: 'Snohomish Real Estate April 2026: Inventory Up 52%, Pace Steadier',
     description:
       'Broker Kim Pelham breaks down what is actually happening in the Snohomish and King County market this month.',
     images: ['https://thepelhamgroupnw.com/images/potlatch-brien-sunset-golden.jpg'],
@@ -71,10 +71,10 @@ export default function PelhamPostLayout({ children }: { children: React.ReactNo
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
-    headline: 'The Snohomish Market Is Moving Faster Than the Headlines Say',
+    headline: 'The Snohomish Market Is Slower, But Still Moving When Priced Right',
     alternativeHeadline: 'Snohomish Real Estate Market Update, April 2026',
     description:
-      'Snohomish County inventory jumped 51.8% year over year in March 2026, but well-priced homes are still selling in days with multiple offers. Broker Kim Pelham gives a on-the-ground read of the current Snohomish and King County market.',
+      'Snohomish County inventory jumped 51.8% year over year in March 2026, giving buyers more to choose from. Well-priced, well-staged homes are still finding offers in days. Broker Kim Pelham reads the current Snohomish and King County market.',
     image: {
       '@type': 'ImageObject',
       url: 'https://thepelhamgroupnw.com/images/potlatch-brien-sunset-golden.jpg',
@@ -162,7 +162,7 @@ export default function PelhamPostLayout({ children }: { children: React.ReactNo
         name: 'Is the Snohomish County real estate market slowing down in April 2026?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Inventory in Snohomish County jumped 51.8% year over year in March 2026, which is one of the biggest increases in Washington state. Average days on market ticked up from 7 days in March 2025 to 10 days in March 2026. But the market is far from slow. Snohomish still has only 2.04 months of supply, the second tightest market in Washington. A balanced market is 4 to 6 months. Well-priced and well-staged homes are still selling in days with multiple offers.',
+          text: 'Inventory in Snohomish County jumped 51.8% year over year in March 2026, which is one of the biggest increases in Washington state. Average days on market ticked up from 7 days in March 2025 to 10 days in March 2026. The pace has cooled a bit, but the market remains seller-friendly: Snohomish still has only 2.04 months of supply, the second tightest market in Washington. A balanced market is 4 to 6 months. Well-priced and well-staged homes are still finding offers in days.',
         },
       },
       {
@@ -202,7 +202,7 @@ export default function PelhamPostLayout({ children }: { children: React.ReactNo
         name: 'Is now a good time to sell a home in Snohomish County?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'If you have been considering selling, you have not missed the window. The Snohomish County market still favors sellers with 2.04 months of inventory, well below the 4 to 6 months considered balanced. But pricing strategy and presentation matter more now than they did a year ago. Homes priced right and staged well are selling in days with multiple offers. Homes priced wrong are sitting and taking price cuts.',
+          text: 'If you have been considering selling, you have not missed the window. The Snohomish County market still favors sellers with 2.04 months of inventory, well below the 4 to 6 months considered balanced. Pricing strategy and presentation matter more now than they did a year ago. Homes priced to the comps and prepared well are still finding offers in days.',
         },
       },
       {
@@ -254,7 +254,7 @@ export default function PelhamPostLayout({ children }: { children: React.ReactNo
   const agentSchema = {
     '@context': 'https://schema.org',
     '@type': 'RealEstateAgent',
-    name: 'Kim Pelham — The Pelham Group NW',
+    name: 'Kim Pelham, The Pelham Group NW',
     image: 'https://thepelhamgroupnw.com/images/kim-headshot-msh.jpg',
     telephone: '+1-425-250-9422',
     email: 'hello@thepelhamgroupnw.com',

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: 'Living in Everett, WA | Kim Pelham Real Estate',
     description: 'Insider guide to Everett neighborhoods, schools, market stats, and what it\'s actually like to live there.',
-    url: 'https://kim-pelham-site.vercel.app/neighborhoods/everett',
+    url: 'https://thepelhamgroupnw.com/neighborhoods/everett',
   },
 };
 
@@ -24,7 +24,7 @@ export default function EverettLayout({ children }: { children: React.ReactNode 
             "description": "Snohomish County's largest city  -  waterfront community with urban energy, Boeing heritage, and some of the most affordable home prices in the Seattle metro.",
             "containedInPlace": { "@type": "State", "name": "Washington" },
             "geo": { "@type": "GeoCoordinates", "latitude": 47.9790, "longitude": -122.2021 },
-            "url": "https://kim-pelham-site.vercel.app/neighborhoods/everett"
+            "url": "https://thepelhamgroupnw.com/neighborhoods/everett"
           })
         }}
       />

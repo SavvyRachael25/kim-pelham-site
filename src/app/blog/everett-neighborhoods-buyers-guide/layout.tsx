@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     images: ['/images/property-01-everett-home-exterior.jpg'],
     type: 'article',
   },
-  alternates: { canonical: 'https://kim-pelham-site.vercel.app/blog/everett-neighborhoods-buyers-guide' },
+  alternates: { canonical: 'https://thepelhamgroupnw.com/blog/everett-neighborhoods-buyers-guide' },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

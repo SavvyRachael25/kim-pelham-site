@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     images: ['/images/staging-01-living-room.jpg'],
     type: 'article',
   },
-  alternates: { canonical: 'https://kim-pelham-site.vercel.app/blog/staging-psychology' },
+  alternates: { canonical: 'https://thepelhamgroupnw.com/blog/staging-psychology' },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

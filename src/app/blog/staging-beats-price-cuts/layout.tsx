@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     images: ['/images/hero-02-warm-kitchen.jpg'],
     type: 'article',
   },
-  alternates: { canonical: 'https://kim-pelham-site.vercel.app/blog/staging-beats-price-cuts' },
+  alternates: { canonical: 'https://thepelhamgroupnw.com/blog/staging-beats-price-cuts' },
 };
 
 export default function Layout({ children }: { children: React.ReactNode }) {

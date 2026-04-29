@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   alternates: {
-    canonical: 'https://kim-pelham-site.vercel.app/neighborhoods',
+    canonical: 'https://thepelhamgroupnw.com/neighborhoods',
   },
 };
 
