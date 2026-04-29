@@ -73,7 +73,7 @@ export default function PotlatchPage() {
                 marginBottom: '12px',
               }}
             >
-              New Listing — Waterfront
+              Just Relisted — Open House Sun May 3, 1-3 PM
             </div>
             <h1
               style={{
@@ -151,7 +151,7 @@ export default function PotlatchPage() {
                   lineHeight: 1,
                 }}
               >
-                $950,000
+                $899,900
               </p>
             </div>
 
@@ -194,6 +194,99 @@ export default function PotlatchPage() {
           </div>
         </section>
 
+        {/* Open House banner — visible signal for buyers + AEO mirror of Event schema */}
+        <section
+          style={{
+            backgroundColor: '#B8845C',
+            padding: '24px',
+            textAlign: 'center',
+            borderBottom: '1px solid rgba(255,255,255,0.15)',
+          }}
+        >
+          <div
+            style={{
+              maxWidth: '900px',
+              margin: '0 auto',
+              display: 'flex',
+              flexDirection: 'column',
+              gap: '8px',
+            }}
+          >
+            <p
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '0.72rem',
+                fontWeight: 700,
+                color: 'rgba(255,255,255,0.85)',
+                textTransform: 'uppercase',
+                letterSpacing: '2px',
+                margin: 0,
+              }}
+            >
+              Open House This Sunday
+            </p>
+            <p
+              style={{
+                fontFamily: 'var(--font-heading)',
+                fontSize: 'clamp(1.5rem, 3vw, 2.1rem)',
+                fontWeight: 700,
+                color: '#FFFFFF',
+                margin: 0,
+                lineHeight: 1.2,
+              }}
+            >
+              Sunday, May 3 &middot; 1:00 PM &ndash; 3:00 PM
+            </p>
+            <p
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '1rem',
+                color: 'rgba(255,255,255,0.92)',
+                margin: 0,
+              }}
+            >
+              1406 Potlatch Beach Road, Marysville WA 98271 &nbsp;&middot;&nbsp; No appointment needed
+            </p>
+            <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '6px' }}>
+              <a
+                href="sms:+14252509422?&body=Hi%20Kim%2C%20I%27m%20planning%20to%20stop%20by%20the%20Potlatch%20Beach%20Road%20open%20house%20Sunday."
+                style={{
+                  display: 'inline-block',
+                  padding: '10px 24px',
+                  backgroundColor: '#2F5233',
+                  color: '#FFFFFF',
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '0.92rem',
+                  fontWeight: 600,
+                  borderRadius: '4px',
+                  textDecoration: 'none',
+                }}
+              >
+                Text Kim You&apos;re Coming
+              </a>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=1406+Potlatch+Beach+Road+Marysville+WA+98271"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-block',
+                  padding: '10px 24px',
+                  backgroundColor: 'transparent',
+                  color: '#FFFFFF',
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '0.92rem',
+                  fontWeight: 600,
+                  borderRadius: '4px',
+                  textDecoration: 'none',
+                  border: '2px solid rgba(255,255,255,0.85)',
+                }}
+              >
+                Get Directions
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* AEO Quick Info — semantic dl/dt/dd for answer engines */}
         <section style={{ padding: '32px 24px', backgroundColor: '#F8F5F0', borderBottom: '1px solid #E8E3DA' }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
@@ -219,7 +312,7 @@ export default function PotlatchPage() {
               }}
             >
               {[
-                { term: 'Price', def: '$950,000' },
+                { term: 'Price', def: '$899,900' },
                 { term: 'Bedrooms', def: '3 + 2 Bonus Rooms' },
                 { term: 'Bathrooms', def: '2 Ensuite' },
                 { term: 'Square Feet', def: '1,662' },
@@ -317,7 +410,7 @@ export default function PotlatchPage() {
             >
               <iframe
                 src="https://www.youtube.com/embed/BekwRDZCUK0"
-                title="Waterfront Views — 1406 Potlatch Beach Road, Tulalip WA"
+                title="Waterfront Views — 1406 Potlatch Beach Road, Marysville WA"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 style={{
@@ -686,8 +779,12 @@ export default function PotlatchPage() {
             </h2>
             {[
               {
+                q: 'When is the open house at 1406 Potlatch Beach Road?',
+                a: 'The next open house is Sunday, May 3, 2026 from 1:00 PM to 3:00 PM. No appointment needed. Walk through, ask questions, get a real feel for the views. Text or call Kim at (425) 250-9422 if you plan to come.',
+              },
+              {
                 q: 'How much is 1406 Potlatch Beach Road?',
-                a: '1406 Potlatch Beach Road is listed at $950,000. This includes 1,662 square feet, 3 bedrooms plus 2 bonus rooms, 2 bathrooms, and 50 feet of high-bank Puget Sound waterfront on 0.36 acres. MLS# 2504310.',
+                a: '1406 Potlatch Beach Road is listed at $899,900. This includes 1,662 square feet, 3 bedrooms plus 2 bonus rooms, 2 bathrooms, and 50 feet of high-bank Puget Sound waterfront on 0.36 acres. MLS# 2504310.',
               },
               {
                 q: 'How many bedrooms does 1406 Potlatch Beach Road have?',
