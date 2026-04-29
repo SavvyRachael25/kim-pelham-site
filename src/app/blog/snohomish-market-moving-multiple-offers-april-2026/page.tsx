@@ -96,7 +96,7 @@ export default function PelhamPostAprilWeek4() {
                 textShadow: '0 2px 16px rgba(0,0,0,0.55)',
               }}
             >
-              The Snohomish Market Is Moving Faster Than the Headlines Say
+              The Snohomish Market Is Slower, But Still Moving When Priced Right
             </h1>
           </div>
         </div>
@@ -113,7 +113,7 @@ export default function PelhamPostAprilWeek4() {
             fontSize: '1.05rem',
           }}
         >
-          {/* TL;DR — the speakable summary for voice search and AEO */}
+          {/* TL;DR, the speakable summary for voice search and AEO */}
           <div
             id="tldr"
             style={{
@@ -128,7 +128,7 @@ export default function PelhamPostAprilWeek4() {
               The short version
             </p>
             <p style={{ margin: 0, color: '#1C1917', fontSize: '1.05rem', lineHeight: 1.7 }}>
-              Snohomish County inventory jumped 51.8% year over year in March 2026, one of the biggest increases in Washington. But Snohomish still has only 2.04 months of supply, second tightest in the state. Well-priced homes are still selling in days with multiple offers. A balanced market is 4 to 6 months. We are not there yet.
+              Snohomish County inventory jumped 51.8% year over year in March 2026, giving buyers more to choose from. Snohomish still has only 2.04 months of supply, second tightest in the state. Pace has cooled a bit, and well-priced homes are still finding offers in days. A balanced market is 4 to 6 months. We are not there yet.
             </p>
           </div>
 
@@ -137,7 +137,7 @@ export default function PelhamPostAprilWeek4() {
             I put a listing active on Monday. By this week it already had multiple offers on the table and is going over asking.
           </p>
           <p style={pStyle}>
-            That is the market I am seeing, not the one the national headlines are describing. If you have been waiting for things to cool off before you make a move, I want to gently tell you what I tell my clients: the window you are waiting for is not the one that is opening.
+            That is what I am seeing on the ground. The market is a little slower than it was last spring, and you have more inventory to look at, but well-priced homes are still moving fast. If you have been waiting for the picture to clarify before you make a move, this is the picture.
           </p>
 
           {/* Market data */}
@@ -147,13 +147,13 @@ export default function PelhamPostAprilWeek4() {
             Snohomish County active listings jumped <strong>51.8%</strong> year over year in March 2026, one of the biggest increases anywhere in Washington state. On paper, that sounds like a buyer market is forming.
           </p>
           <p style={pStyle}>
-            It isn&apos;t, not yet. We are still sitting at <strong>2.04 months of inventory</strong> in Snohomish, the second tightest market in Washington. A balanced market is 4 to 6 months. We are nowhere near balanced.
+            We are still at <strong>2.04 months of inventory</strong> in Snohomish, the second tightest market in Washington. A balanced market is 4 to 6 months, so even with the inventory growth, the supply side is well below balanced.
           </p>
           <p style={pStyle}>
             What actually happened is this: mortgage rates stuck above 6.5% have slowed the <em>buying</em> side of the equation. Homes linger a bit longer on the market than they did last spring. Average days on market in Snohomish County ticked up from 7 in March 2025 to 10 in March 2026. A small shift, but real.
           </p>
           <p style={pStyle}>
-            Meanwhile, the <em>selling</em> side has not caught up. There still are not enough well-priced, well-staged homes for the buyers who are active. So when a good one comes along, it moves fast.
+            On the supply side, the well-priced and well-staged homes are still meeting active buyers in days. The pace has slowed a bit. The fundamentals still favor sellers who price to the comps.
           </p>
 
           <div
@@ -178,20 +178,20 @@ export default function PelhamPostAprilWeek4() {
           <h2 id="pricing-strategy" style={h2Style}>The two things that still matter: price and presentation</h2>
 
           <p style={pStyle}>
-            Price and presentation. That is it. Priced right and staged well, homes in Snohomish and King Counties are still selling in days with multiple offers. Priced wrong, they sit and eventually get marked down.
+            Price and presentation. That is it. Priced to the comps and staged well, homes in Snohomish and King Counties are still finding offers in days. Priced above the comps, they tend to take longer and often see a price adjustment before the right offer comes.
           </p>
           <p style={pStyle}>
             This is not theoretical. I had this exact scenario play out in Arlington recently. The seller wanted to list at $630,000. I recommended $625,000. They went with $630,000. We got no action. Dropped to $625,000 and it sold almost immediately. A $5,000 swing was the difference between sitting for weeks and getting an offer in days.
           </p>
           <p style={pStyle}>
-            Buyers are doing their homework right now. They have Zillow, Redfin, the MLS, and their own spreadsheets. They know what something is worth. The old playbook of &ldquo;list it $10,000 over and see what happens&rdquo; is how you sit for 45 days and take a price cut. The new playbook is: price it right, stage it well, go to market in confidence.
+            Buyers are doing their homework. They have Zillow, Redfin, the MLS, and their own spreadsheets, and they know what a home is worth before they walk in. Pricing close to the comps from day one is showing up in faster offers. Pricing well above the comps is showing up in longer days on market and eventual adjustments.
           </p>
 
           {/* Featured listing */}
           <h2 id="featured-listing" style={h2Style}>Featured listing: 1406 Potlatch Beach Road, Tulalip</h2>
 
           <p style={pStyle}>
-            My current featured listing is a 3-bedroom, 2-bathroom high-bank waterfront at <strong>$950,000</strong>. West-facing lot, 1,662 square feet of livable space on a third of an acre, built in 1925 with good bones and a deck that faces the sunset. MLS #2504310.
+            My current featured listing is a 3-bedroom, 2-bathroom high-bank waterfront at <strong>$899,900</strong>. West-facing lot, 1,662 square feet of livable space on a third of an acre, built in 1925 with good bones and a deck that faces the sunset. MLS #2504310.
           </p>
           <p style={pStyle}>
             The view is the whole thing. The sunset photo at the top of this post was taken on a phone from the property deck. Not a drone. Not staging. Just Tuesday evening.
@@ -259,7 +259,7 @@ export default function PelhamPostAprilWeek4() {
             If you have been thinking about selling, you have not missed the window. You have just entered a market that rewards being prepared. Pricing strategy, staging, and presentation matter more right now than they have in years.
           </p>
           <p style={pStyle}>
-            If you have been thinking about buying, there is more inventory on the market in Snohomish County than there has been in a long time. More options. More room to negotiate. Still competitive on the good ones, but you have more choices than you did six months ago.
+            If you have been thinking about buying, there is more inventory on the market in Snohomish County than there has been in a long time. More options. More room to negotiate. The well-priced homes are still competitive, and you have more choices than you did six months ago.
           </p>
           <p style={pStyle}>
             Either way, the move is to talk through your specific situation, not to react to a headline. Text or call me and I will give you a real read on your neighborhood. No pressure and no pitch.
@@ -327,7 +327,7 @@ export default function PelhamPostAprilWeek4() {
           </div>
         </article>
 
-        {/* FAQ — AEO gold */}
+        {/* FAQ, AEO gold */}
         <section id="faq">
           <FAQSection
             title="Snohomish Real Estate Market: Frequently Asked Questions"
@@ -335,7 +335,7 @@ export default function PelhamPostAprilWeek4() {
               {
                 question: 'Is the Snohomish County real estate market slowing down in April 2026?',
                 answer:
-                  'Inventory in Snohomish County jumped 51.8% year over year in March 2026, which is one of the biggest increases in Washington. Average days on market ticked up from 7 days a year ago to 10 days now. But the market is far from slow. Snohomish still has only 2.04 months of supply, the second tightest market in Washington. Well-priced and well-staged homes are still selling in days with multiple offers.',
+                  'Inventory in Snohomish County jumped 51.8% year over year in March 2026, which is one of the biggest increases in Washington. Average days on market ticked up from 7 days a year ago to 10 days now. The pace has cooled a bit, but the market remains seller-friendly: Snohomish still has only 2.04 months of supply, the second tightest market in Washington. Well-priced and well-staged homes are still finding offers in days.',
               },
               {
                 question: 'What is the median home price in Snohomish County right now?',
@@ -350,7 +350,7 @@ export default function PelhamPostAprilWeek4() {
               {
                 question: 'Are homes in Snohomish County getting multiple offers in 2026?',
                 answer:
-                  'Yes. Well-priced, well-staged homes in Snohomish County are still receiving multiple offers and often selling over asking price, even as overall inventory has increased. A recent Kim Pelham listing went active Monday and had multiple offers on the table by the end of the same week, going over asking. The key variables are price accuracy and presentation quality.',
+                  'Yes. Well-priced and well-staged homes in Snohomish County are still receiving multiple offers and often selling over asking, even as overall inventory has increased. A recent Kim Pelham listing went active Monday and had multiple offers on the table by the end of the same week, going over asking. The key variables are price accuracy and presentation quality.',
               },
               {
                 question: 'What does months of inventory mean in real estate?',
@@ -360,12 +360,12 @@ export default function PelhamPostAprilWeek4() {
               {
                 question: 'Is now a good time to sell a home in Snohomish County?',
                 answer:
-                  'If you have been thinking about selling, you have not missed the window. Snohomish County still favors sellers at 2.04 months of supply, well below the 4 to 6 months considered balanced. But pricing strategy and presentation matter more now than a year ago. Homes priced right and staged well are selling in days with multiple offers. Homes priced wrong are sitting and taking price cuts.',
+                  'If you have been thinking about selling, you have not missed the window. Snohomish County still favors sellers at 2.04 months of supply, well below the 4 to 6 months considered balanced. Pricing strategy and presentation matter more now than a year ago. Homes priced to the comps and prepared well are still finding offers in days.',
               },
               {
                 question: 'How much waterfront home can I buy in Tulalip under a million dollars?',
                 answer:
-                  'Tulalip waterfront on Puget Sound is priced dramatically lower than comparable Seattle waterfront. Kim Pelham currently has 1406 Potlatch Beach Road listed at $950,000, a 3-bedroom 2-bathroom high-bank waterfront home on a third of an acre. Seattle waterfront with comparable Sound views typically starts at $3 million and up.',
+                  'Tulalip waterfront on Puget Sound is priced dramatically lower than comparable Seattle waterfront. Kim Pelham currently has 1406 Potlatch Beach Road listed at $899,900, a 3-bedroom 2-bathroom high-bank waterfront home on a third of an acre. Seattle waterfront with comparable Sound views typically starts at $3 million and up.',
               },
               {
                 question: 'Who should I contact to buy or sell a home in Everett, Snohomish, or Tulalip?',

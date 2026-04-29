@@ -157,7 +157,7 @@ export default function Properties() {
                     margin: '0 0 24px 0',
                   }}
                 >
-                  $950,000
+                  $899,900
                 </p>
 
                 {/* Stats */}
@@ -171,7 +171,7 @@ export default function Properties() {
                 >
                   {[
                     { label: 'Bed', value: '3' },
-                    { label: 'Bath', value: '1' },
+                    { label: 'Bath', value: '2' },
                     { label: 'Sqft', value: '1,662' },
                     { label: 'Acres', value: '0.36' },
                   ].map((stat) => (
@@ -209,7 +209,7 @@ export default function Properties() {
                     margin: '0 0 20px 0',
                   }}
                 >
-                  High-bank waterfront on Puget Sound. Sweeping Sound vistas, sunsets over the Olympics, 0.36 acres. Seattle waterfront starts at $3M. This one is $950K. Same water, 35 miles north.
+                  High-bank waterfront on Puget Sound. Sweeping Sound vistas, sunsets over the Olympics, 0.36 acres. Seattle waterfront starts at $3M. This one is $899K. Same water, 35 miles north. Open House Sunday, May 3 · 1–3 PM.
                 </p>
 
                 <p

@@ -210,7 +210,7 @@ export default function PelhamPostLayout({ children }: { children: React.ReactNo
         name: 'How much waterfront home can I buy in Tulalip under a million dollars?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Tulalip waterfront on Puget Sound is priced dramatically lower than comparable Seattle waterfront. Kim Pelham currently has 1406 Potlatch Beach Road listed at $950,000, a 3-bedroom, 2-bathroom high-bank waterfront home on a third of an acre. Seattle waterfront with comparable Sound views typically starts at $3 million and above.',
+          text: 'Tulalip waterfront on Puget Sound is priced dramatically lower than comparable Seattle waterfront. Kim Pelham currently has 1406 Potlatch Beach Road listed at $899,900, a 3-bedroom, 2-bathroom high-bank waterfront home on a third of an acre. Seattle waterfront with comparable Sound views typically starts at $3 million and above.',
         },
       },
       {

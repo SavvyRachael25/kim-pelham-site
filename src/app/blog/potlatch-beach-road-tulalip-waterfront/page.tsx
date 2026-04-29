@@ -182,6 +182,46 @@ export default function PotlatchBlogPost() {
               The price difference is not a quality difference. It is a zip code difference. And for buyers who have been priced out of Sound waterfront their entire lives, that distinction matters a lot.
             </p>
 
+            {/* Embedded video tour — same one shown on the listing page */}
+            <div
+              style={{
+                position: 'relative',
+                width: '100%',
+                paddingBottom: '56.25%',
+                height: 0,
+                borderRadius: '6px',
+                overflow: 'hidden',
+                boxShadow: '0 4px 24px rgba(0,0,0,0.12)',
+                margin: '0 0 32px 0',
+              }}
+            >
+              <iframe
+                src="https://www.youtube.com/embed/BekwRDZCUK0"
+                title="Waterfront Views — 1406 Potlatch Beach Road, Marysville WA"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                style={{
+                  position: 'absolute',
+                  top: 0,
+                  left: 0,
+                  width: '100%',
+                  height: '100%',
+                  border: 'none',
+                }}
+              />
+            </div>
+            <p
+              style={{
+                fontFamily: 'var(--font-handwritten)',
+                fontSize: '20px',
+                color: '#B8845C',
+                textAlign: 'center',
+                margin: '0 0 36px 0',
+              }}
+            >
+              the sunset reel — see why the price feels like a typo
+            </p>
+
             <h2
               style={{
                 fontFamily: 'var(--font-heading)',
