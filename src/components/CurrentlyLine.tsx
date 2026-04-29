@@ -1,8 +1,13 @@
 'use client';
 
-// COMPLIANCE NOTE (Kim 4/16/26): MLS pre-advertising rules + new WA state law may restrict
-// specific-listing callouts. Copy is generic until Rachael confirms with Katrina Eileen brokerage.
+// Site-wide live banner. Currently announcing the Sunday open house at the
+// Potlatch Beach Road active MLS listing (#2504310, public on MLS).
+// Compliance: Open-house callouts on already-active MLS listings are standard
+// practice; pre-advertising restrictions only apply to pre-MLS "coming soon"
+// listings. If a future "coming soon" property goes here, fall back to generic
+// "Currently: ..." copy until the listing hits MLS.
 
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 export default function CurrentlyLine() {
@@ -21,7 +26,8 @@ export default function CurrentlyLine() {
         borderBottom: '1px solid #E8E3DA',
       }}
     >
-      <div
+      <Link
+        href="/properties/1406-potlatch-beach-road-tulalip"
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -30,6 +36,7 @@ export default function CurrentlyLine() {
           flexWrap: 'wrap',
           maxWidth: '1200px',
           margin: '0 auto',
+          textDecoration: 'none',
         }}
       >
         {/* Pulse dot */}
@@ -38,8 +45,9 @@ export default function CurrentlyLine() {
             width: '12px',
             height: '12px',
             borderRadius: '50%',
-            backgroundColor: '#2F5233',
+            backgroundColor: '#B8845C',
             animation: mounted ? 'pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite' : 'none',
+            flexShrink: 0,
           }}
         />
 
@@ -52,7 +60,22 @@ export default function CurrentlyLine() {
             margin: 0,
           }}
         >
-          Currently: Serving a Snohomish County seller getting market-ready.
+          Open House this Sunday · 1406 Potlatch Beach Rd, Marysville · 1&ndash;3 PM
+          <span
+            style={{
+              fontFamily: 'var(--font-body)',
+              fontSize: '0.78rem',
+              fontWeight: 600,
+              color: '#2F5233',
+              textTransform: 'uppercase',
+              letterSpacing: '1.5px',
+              marginLeft: '12px',
+              borderBottom: '1.5px solid #2F5233',
+              paddingBottom: '1px',
+            }}
+          >
+            See the listing &rarr;
+          </span>
         </p>
 
         <style>{`
@@ -65,7 +88,7 @@ export default function CurrentlyLine() {
             }
           }
         `}</style>
-      </div>
+      </Link>
     </section>
   );
 }
