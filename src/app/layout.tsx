@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Script from "next/script";
+import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import "./globals.css";
 import IntroAnimation from "@/components/IntroAnimation";
 import Analytics from "@/components/Analytics";
@@ -126,6 +127,8 @@ export default function RootLayout({
         />
         {/* Analytics & attribution — gated on env vars, no-op until configured */}
         <Analytics />
+        {/* Vercel Analytics — first-party traffic + Web Vitals, no config needed */}
+        <VercelAnalytics />
       </body>
     </html>
   );
