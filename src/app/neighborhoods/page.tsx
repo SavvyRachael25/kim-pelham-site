@@ -57,23 +57,26 @@ const neighborhoods: NeighborhoodCard[] = [
     size: 'regular',
     rotation: -1.5,
   },
+];
+
+// Featured row: Marysville (active) + Monroe + Edmonds (coming soon)
+// kept on the same row per design request
+const featuredRow = [
   {
     id: 6,
     name: 'Marysville',
     description: 'Growing community with affordability, access to nature, and strong sense of community',
     image: '/images/neighborhood-03-snohomish-historic.jpg', // TODO: new Marysville photo — current one is wrong
-    size: 'regular',
     rotation: 1,
+    comingSoon: false,
   },
-];
-
-const comingSoonNeighborhoods = [
   {
     id: 7,
     name: 'Monroe',
     description: 'Gateway to the Skykomish Valley — farms, river views, and room to breathe',
     image: '/images/neighborhood-03-snohomish-historic.jpg',
     rotation: -1,
+    comingSoon: true,
   },
   {
     id: 8,
@@ -81,7 +84,11 @@ const comingSoonNeighborhoods = [
     description: 'Waterfront charm, arts district, and ferry views — one of the most livable small cities in Washington',
     image: '/images/neighborhood-01-everett-marina.jpg',
     rotation: 1.5,
+    comingSoon: true,
   },
+];
+
+const comingSoonNeighborhoods = [
   {
     id: 9,
     name: 'Arlington',
@@ -271,6 +278,126 @@ export default function NeighborhoodsPage() {
                   </div>
                 </article>
               ))}
+            </div>
+
+            {/* Featured row: Marysville + Monroe + Edmonds — same row per layout fix */}
+            <div className="neigh-featured-row" style={{ marginTop: '2rem' }}>
+              <div
+                style={{
+                  display: 'grid',
+                  gridTemplateColumns: 'repeat(3, 1fr)',
+                  gap: '2rem',
+                  gridAutoRows: '300px',
+                }}
+              >
+                {featuredRow.map((nb) => (
+                  <article
+                    key={nb.id}
+                    style={{
+                      position: 'relative',
+                      borderRadius: '8px',
+                      overflow: 'hidden',
+                      transform: `rotate(${nb.rotation}deg)`,
+                      boxShadow: '0 4px 12px rgba(44, 44, 44, 0.12)',
+                      backgroundColor: '#FFFFFF',
+                      opacity: nb.comingSoon ? 0.75 : 1,
+                      minHeight: '300px',
+                    }}
+                  >
+                    <Image
+                      src={nb.image}
+                      alt={nb.name}
+                      fill
+                      style={{
+                        objectFit: 'cover',
+                        filter: nb.comingSoon ? 'grayscale(40%)' : 'none',
+                      }}
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                    />
+                    <div
+                      style={{
+                        position: 'absolute',
+                        inset: 0,
+                        background:
+                          'linear-gradient(to top, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.35) 55%, transparent 100%)',
+                      }}
+                    />
+                    {nb.comingSoon && (
+                      <div
+                        style={{
+                          position: 'absolute',
+                          top: '16px',
+                          right: '16px',
+                          backgroundColor: '#B8845C',
+                          color: '#FFFFFF',
+                          fontFamily: 'var(--font-body)',
+                          fontSize: '0.7rem',
+                          fontWeight: 700,
+                          letterSpacing: '0.08em',
+                          textTransform: 'uppercase',
+                          padding: '4px 10px',
+                          borderRadius: '2px',
+                        }}
+                      >
+                        Coming Soon
+                      </div>
+                    )}
+                    <div
+                      style={{
+                        position: 'absolute',
+                        inset: 0,
+                        display: 'flex',
+                        flexDirection: 'column',
+                        justifyContent: 'flex-end',
+                        padding: '2rem',
+                        color: '#F8F5F0',
+                      }}
+                    >
+                      <h3
+                        style={{
+                          fontFamily: 'var(--font-heading)',
+                          fontSize: 'clamp(1.5rem, 4vw, 2rem)',
+                          fontWeight: 700,
+                          color: '#FFFFFF',
+                          margin: '0 0 0.75rem 0',
+                          lineHeight: 1.1,
+                        }}
+                      >
+                        {nb.name}
+                      </h3>
+                      <p
+                        style={{
+                          fontFamily: 'var(--font-body)',
+                          fontSize: '0.95rem',
+                          margin: '0 0 1rem 0',
+                          lineHeight: 1.5,
+                          opacity: nb.comingSoon ? 0.85 : 0.95,
+                        }}
+                      >
+                        {nb.description}
+                      </p>
+                      <Link
+                        href={`/neighborhoods/${nb.name.toLowerCase().replace(/\s+/g, '-')}`}
+                        style={{
+                          fontFamily: 'var(--font-body)',
+                          fontSize: nb.comingSoon ? '0.85rem' : '0.95rem',
+                          fontWeight: 600,
+                          color: nb.comingSoon ? 'rgba(248,245,240,0.8)' : '#F8F5F0',
+                          textDecoration: 'none',
+                          paddingBottom: nb.comingSoon ? '0.3rem' : '0.5rem',
+                          borderBottom: nb.comingSoon
+                            ? '1px solid rgba(248,245,240,0.45)'
+                            : '2px solid #F8F5F0',
+                          display: 'inline-block',
+                          width: 'fit-content',
+                        }}
+                      >
+                        {nb.comingSoon ? 'Learn More →' : 'Explore →'}
+                      </Link>
+                    </div>
+                  </article>
+                ))}
+              </div>
             </div>
 
             {/* Coming Soon Tiles */}

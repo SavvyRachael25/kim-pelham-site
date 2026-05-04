@@ -31,7 +31,7 @@ export const neighborhoods: Record<string, NeighborhoodData> = {
     zipCodes: ['98201', '98203', '98204', '98207', '98208'],
     geo: { lat: 47.979, lng: -122.2021 },
     priceRange: '$450K - $800K',
-    schools: 'Everett School District (Mukilteo SD in SW Everett)',
+    schools: 'Everett School District (Mukilteo School District in SW Everett)',
     commute: '~30 min to Seattle via Sounder train',
     faqs: [
       {
@@ -128,7 +128,7 @@ export const neighborhoods: Record<string, NeighborhoodData> = {
       {
         question: 'What are the best schools in Snohomish, WA?',
         answer:
-          'Snohomish School District serves the city with 19 schools and about 9,400 students. Snohomish High School earns a 91% four-year graduation rate and above-average academic ratings for Snohomish County. The district is rated favorably by Niche for mid-size districts in the region. It is not Northshore SD in Bothell, but it is a solidly good school district and families are well-served here.',
+          'Snohomish School District serves the city with 19 schools and about 9,400 students. Snohomish High School earns a 91% four-year graduation rate and above-average academic ratings for Snohomish County. The district is rated favorably by Niche for mid-size districts in the region. It is not Northshore School District in Bothell, but it is a solidly good school district and families are well-served here.',
       },
       {
         question: 'Is Snohomish, WA a good place to raise a family?',
@@ -160,7 +160,7 @@ export const neighborhoods: Record<string, NeighborhoodData> = {
     zipCodes: ['98012', '98082'],
     geo: { lat: 47.8595, lng: -122.2038 },
     priceRange: '$650K - $1.1M',
-    schools: 'Everett SD / Mukilteo SD (Henry M. Jackson HS)',
+    schools: 'Everett School District / Mukilteo School District (Henry M. Jackson HS)',
     commute: '~35 min to Seattle via I-5',
     faqs: [
       {
@@ -171,7 +171,7 @@ export const neighborhoods: Record<string, NeighborhoodData> = {
       {
         question: 'What are the best schools in Mill Creek, WA?',
         answer:
-          'Mill Creek is served by both Everett School District and Mukilteo School District, depending on the specific address. Henry M. Jackson High School, within Mukilteo SD, is five-star rated and ranked in the top 30 high schools in Washington state. Tambark Creek Elementary is ranked 14th in the entire state. The school boundary map is the first document I show buyers with children in Mill Creek.',
+          'Mill Creek is served by both Everett School District and Mukilteo School District, depending on the specific address. Henry M. Jackson High School, within Mukilteo School District, is five-star rated and ranked in the top 30 high schools in Washington state. Tambark Creek Elementary is ranked 14th in the entire state. The school boundary map is the first document I show buyers with children in Mill Creek.',
       },
       {
         question: 'Is Mill Creek, WA a good place to raise a family?',
@@ -257,7 +257,7 @@ export const neighborhoods: Record<string, NeighborhoodData> = {
       {
         question: 'What are the best schools in Marysville, WA?',
         answer:
-          'Marysville School District serves the city and has been actively investing in facilities and programs in recent years. The district is a growing district in a fast-growing city. For families focused primarily on school ratings, Northshore SD in Bothell or Mukilteo SD in Mill Creek will score higher. But for buyers where affordability is a real factor, Marysville School District offers a solid foundation and improving trend.',
+          'Marysville School District serves the city and has been actively investing in facilities and programs in recent years. The district is a growing district in a fast-growing city. For families focused primarily on school ratings, Northshore School District in Bothell or Mukilteo School District in Mill Creek will score higher. But for buyers where affordability is a real factor, Marysville School District offers a solid foundation and improving trend.',
       },
       {
         question: 'Is Marysville, WA a good place to raise a family?',
@@ -300,7 +300,7 @@ export const neighborhoods: Record<string, NeighborhoodData> = {
       {
         question: 'What are the best schools in Monroe, WA?',
         answer:
-          'Monroe School District is a community-focused district serving the city and surrounding rural area. The district has strong community support and a graduation rate that reflects the tight-knit nature of the local community. Monroe High School has active athletics and vocational programs that match the character of the area. Families who prioritize top academic rankings typically look at Northshore SD in Bothell, but Monroe SD serves its community well.',
+          'Monroe School District is a community-focused district serving the city and surrounding rural area. The district has strong community support and a graduation rate that reflects the tight-knit nature of the local community. Monroe High School has active athletics and vocational programs that match the character of the area. Families who prioritize top academic rankings typically look at Northshore School District in Bothell, but Monroe School District serves its community well.',
       },
       {
         question: 'Is Monroe, WA a good place to raise a family?',
@@ -343,7 +343,7 @@ export const neighborhoods: Record<string, NeighborhoodData> = {
       {
         question: 'What are the best schools in Edmonds, WA?',
         answer:
-          'Edmonds School District serves the city and is one of the larger and more established districts in Snohomish County. The district earns solid ratings and has strong community support. Edmonds-Woodway High School is the main secondary school and reflects the community well. For families focused primarily on academic rankings, Northshore SD in Bothell scores higher, but Edmonds SD is a well-regarded district with good outcomes.',
+          'Edmonds School District serves the city and is one of the larger and more established districts in Snohomish County. The district earns solid ratings and has strong community support. Edmonds-Woodway High School is the main secondary school and reflects the community well. For families focused primarily on academic rankings, Northshore School District in Bothell scores higher, but Edmonds School District is a well-regarded district with good outcomes.',
       },
       {
         question: 'Is Edmonds, WA a good place to raise a family?',
@@ -386,7 +386,7 @@ export const neighborhoods: Record<string, NeighborhoodData> = {
       {
         question: 'What are the best schools in Arlington, WA?',
         answer:
-          'Arlington School District serves the city with a community-focused approach and strong vocational and CTE programs. Arlington High School has active athletics and a graduation rate that reflects the tight community support in the area. The district is not Northshore SD, but it serves its community well and families with children in Arlington are generally happy with the education their kids receive.',
+          'Arlington School District serves the city with a community-focused approach and strong vocational and CTE programs. Arlington High School has active athletics and a graduation rate that reflects the tight community support in the area. The district is not Northshore School District, but it serves its community well and families with children in Arlington are generally happy with the education their kids receive.',
       },
       {
         question: 'Is Arlington, WA a good place to raise a family?',

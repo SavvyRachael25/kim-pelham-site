@@ -10,7 +10,7 @@ import FAQSection from '@/components/FAQSection';
 const stats = [
   { label: 'Median Home Price', value: '$662K–$715K', sub: '2025 range' },
   { label: 'Avg Days on Market', value: '~19 days', sub: 'very competitive' },
-  { label: 'School District', value: 'Lake Stevens SD', sub: '#2 in Snohomish County' },
+  { label: 'School District', value: 'Lake Stevens School District', sub: '#2 in Snohomish County' },
   { label: 'Commute to Everett', value: '10–15 min', sub: 'via US-2' },
 ];
 

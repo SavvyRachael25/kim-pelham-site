@@ -15,12 +15,12 @@ const stats = [
 ];
 
 const insiderFacts = [
-  { title: 'Jetty Island is a local treasure  -  and it\'s free', body: 'A 2-mile natural sand barrier island accessible by free ferry from the Port of Everett marina every summer. Warm, shallow water perfect for kids. Most Seattle people have never heard of it. Everett locals consider it their secret.' },
-  { title: 'That building you can see from I-5 is the world\'s largest by volume', body: 'The Boeing Everett factory is genuinely one of the most extraordinary things in Washington state. It\'s so big it generates its own weather inside. If you\'re moving here for aerospace, you\'re in the right zip code.' },
+  { title: 'Jetty Island is a local treasure  -  and it\'s free', body: 'A 2-mile natural sand barrier island accessible by ferry ($3–$5) from the Port of Everett marina every summer. Warm, shallow water perfect for kids. Most Seattle people have never heard of it. Everett locals consider it their secret.' },
+  { title: 'That building you can see from SR 526 is the world\'s largest by volume', body: 'The Boeing Everett factory is genuinely one of the most extraordinary things in Washington state. It\'s so big it generates its own weather inside  -  and the buildings are visible from space. If you\'re moving here for aerospace, you\'re in the right zip code.' },
   { title: 'The Sounder train goes straight to Seattle  -  no parking, no highway stress', body: 'Many Everett homeowners build their commute around the Sounder North line. Hop on at Everett Station, arrive at King Street Station in downtown Seattle. On a bad traffic day, it might be the only thing that keeps you sane.' },
-  { title: 'Silver Lake is the sleeper neighborhood nobody talks about', body: 'Tucked at the south end of Everett near the King County line, Silver Lake has access to the actual lake, quieter streets, and strong proximity to Mill Creek pricing without the Mill Creek price tag. Ask Kim about this one.' },
+  { title: 'Silver Lake is the sleeper neighborhood nobody talks about', body: 'Tucked at the south end of Everett near the King County line, Silver Lake has access to the actual lake, quieter streets, and strong proximity to Mill Creek without the Mill Creek price tag. Ask Kim about this one.' },
   { title: 'The waterfront is in the middle of a serious glow-up', body: 'Portside, Grand Avenue Park, the marina district  -  the Everett waterfront is mid-transformation and property values in that corridor are moving accordingly. Early is better.' },
-  { title: 'Part of Everett feeds into the Mukilteo School District', body: 'The southwest chunk of Everett (roughly the area near Airport Road) falls in the Mukilteo School District rather than Everett SD. Mukilteo SD is consistently rated higher. This matters when you\'re shopping addresses.' },
+  { title: 'Part of Everett feeds into the Mukilteo School District', body: 'The southwest chunk of Everett (roughly the area near Airport Road) falls in the Mukilteo School District rather than Everett School District. Mukilteo School District is consistently rated higher. This matters when you\'re shopping addresses.' },
 ];
 
 export default function EverettPage() {

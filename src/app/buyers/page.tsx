@@ -667,15 +667,15 @@ export default function BuyersPage() {
           },
           {
             question: "What is the difference between pre-approved and pre-qualified?",
-            answer: "Pre-qualification is a rough estimate based on self-reported information. Pre-approval is a verified review of your credit, income, and assets by a lender. In Snohomish County&apos;s competitive market, sellers expect pre-approval letters with offers. Pre-approval takes 3-5 days and costs nothing. Do not make offers without it.",
+            answer: "Pre-qualification is a rough estimate based on self-reported information. Pre-approval is a verified review of your credit, income, and assets by a lender. In Snohomish County's competitive market, sellers expect pre-approval letters with offers. Pre-approval takes 3-5 days and costs nothing. Do not make offers without it.",
           },
           {
             question: "I am moving from out of state. Which neighborhoods should I avoid?",
-            answer: "Areas to research carefully: far north Everett near the waterfront (flood history and industrial noise), neighborhoods under Boeing flight paths in Mukilteo and south Everett, and older developments near the Snohomish River floodplain. Great entry points for out-of-state buyers: Silver Lake, Boulevard Bluffs, and Lake Stevens. Kim has 17 years of local knowledge and will tell you the truth about any neighborhood.",
+            answer: "The neighborhood that's not so great is around Casino Road in South Everett. There's also a section of North Everett that has a higher crime rate than other areas of the city. For out-of-state buyers, my best advice is to use Google Street View to virtually tour any listing's surrounding blocks before you fly out — you can learn a lot about a neighborhood from a screen before you ever set foot in it. Great entry points for out-of-state buyers tend to be Silver Lake, Boulevard Bluffs, and Lake Stevens. After 17 years here, I'll tell you the truth about any address you're considering.",
           },
           {
             question: "What happens after I make an offer on a home?",
-            answer: "After your offer is accepted, the typical timeline is 30-45 days to closing. Days 1-7: inspection period (you can negotiate repairs or walk away). Days 7-21: appraisal and underwriting. Days 21-30: loan approval and title work. Final week: final walkthrough and closing. Kim manages every step and keeps you informed throughout. No surprises.",
+            answer: "After your offer is accepted, the typical timeline is around 30 days to closing — 45 days is unusual and usually only happens with complicated financing. Days 1-5: inspection period (inspections happen within the first 5 days; you can negotiate repairs or walk away). Days 7-21: appraisal and underwriting. Days 21-30: loan approval and title work. Final week: final walkthrough and closing. Kim manages every step and keeps you informed throughout. No surprises.",
           },
           {
             question: "Is now a good time to buy in Snohomish County?",

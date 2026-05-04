@@ -171,17 +171,17 @@ export default function SellersPage() {
               {
                 step: 3,
                 title: 'Staging',
-                desc: 'Professional staging — psychology-driven, magazine quality.',
+                desc: 'Psychology-driven to create an emotional attachment between the buyer and the house.',
               },
               {
                 step: 4,
                 title: 'Professional Photography + Matterport 3D Tours',
-                desc: 'Studio-quality photos and immersive Matterport 3D tours that make buyers want to see your home in person.',
+                desc: 'Magazine-quality photos and immersive Matterport 3D tours that make buyers want to see your home in person.',
               },
               {
                 step: 5,
                 title: 'Online Marketing',
-                desc: 'Strategic digital placement on the right platforms for your market.',
+                desc: 'Strategic digital placement on the right platforms for your market. Listings are featured on hundreds of popular websites — they sell 20% faster and for an average of $11,000 more with the homes.com membership.',
               },
               {
                 step: 6,
@@ -282,96 +282,6 @@ export default function SellersPage() {
             >
               Most transactions have a bump — sometimes small, sometimes large. My job is to get you over the bump with the least stress possible. A big bump can tank a sale, but over 17+ years I've learned that step by step, never giving up, almost always gets us through.
             </p>
-          </div>
-        </div>
-      </section>
-
-      {/* ========== THE SELLING PROCESS ========== */}
-      <section
-        style={{
-          padding: '80px 24px',
-          backgroundColor: '#FFFFFF',
-        }}
-      >
-        <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-          <h2
-            style={{
-              fontFamily: 'var(--font-heading)',
-              fontSize: 'clamp(32px, 6vw, 48px)',
-              fontWeight: 700,
-              color: '#2F5233',
-              textAlign: 'center',
-              margin: '0 0 60px 0',
-            }}
-          >
-            The Selling Process
-          </h2>
-
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns:
-                'repeat(auto-fit, minmax(260px, 1fr))',
-              gap: '40px',
-            }}
-          >
-            {[
-              {
-                title: 'Strategic Price Positioning',
-                desc: 'Data-driven pricing strategy that attracts serious buyers without leaving money on the table.',
-              },
-              {
-                title: 'Expert Guidance',
-                desc: 'I guide you through inspections, appraisals, and negotiations with clear explanations.',
-              },
-              {
-                title: 'Multiple Offer Mastery',
-                desc: 'When multiple offers come in, I help you choose the right one for your situation.',
-              },
-              {
-                title: 'Closing with Confidence',
-                desc: 'I handle the closing details so you can focus on your next chapter.',
-              },
-            ].map((item, idx) => (
-              <div
-                key={idx}
-                ref={(el) => setItemRef(`process${idx}`, el)}
-                style={{
-                  opacity: visibleItems[`process${idx}`] ? 1 : 0,
-                  transform: visibleItems[`process${idx}`]
-                    ? 'translateY(0)'
-                    : 'translateY(30px)',
-                  transition: `all 0.8s ease-out ${idx * 0.1}s`,
-                  padding: '40px',
-                  backgroundColor: '#F8F5F0',
-                  border: '1px solid #E8E3DA',
-                  borderRadius: '4px',
-                }}
-              >
-                <h3
-                  style={{
-                    fontFamily: 'var(--font-heading)',
-                    fontSize: '22px',
-                    fontWeight: 600,
-                    color: '#2F5233',
-                    margin: '0 0 12px 0',
-                  }}
-                >
-                  {item.title}
-                </h3>
-                <p
-                  style={{
-                    fontFamily: 'var(--font-body)',
-                    fontSize: '16px',
-                    color: '#2C2C2C',
-                    lineHeight: 1.6,
-                    margin: 0,
-                  }}
-                >
-                  {item.desc}
-                </p>
-              </div>
-            ))}
           </div>
         </div>
       </section>
@@ -505,7 +415,7 @@ export default function SellersPage() {
                   margin: '0 0 16px 0',
                 }}
               >
-                Data-Driven Pricing
+                Strategic Price Positioning
               </h3>
               <p
                 style={{
@@ -516,8 +426,7 @@ export default function SellersPage() {
                   margin: 0,
                 }}
               >
-                Market analysis that positions your home to attract the right
-                buyers and maximize your sale price.
+                Data-driven pricing strategy that attracts serious buyers without leaving money on the table.
               </p>
             </div>
 
@@ -793,15 +702,15 @@ export default function SellersPage() {
         faqs={[
           {
             question: "How much should I invest in repairs before selling?",
-            answer: "Less than you think. Most pre-sale renovations return less than their cost. A $10,000 kitchen remodel often nets back only $3,000-5,000. Instead, invest in decluttering, staging, and professional photography. Kim will tell you exactly which repairs move the needle on your sale price and which ones to skip.",
+            answer: "The answer is it really depends on what needs to be done to the house. If you have issues that would prevent the house from being financed, those need to be addressed up front and will net you the highest return. Kim will tell you exactly which repairs move the needle on your sale price and which ones to skip.",
           },
           {
             question: "How long will my home actually take to sell?",
-            answer: "The Snohomish County average is 21-28 days to a pending offer. Kim&apos;s clients average 14 days. The difference is staging and strategic pricing. Homes that are well-staged and correctly priced consistently go under contract in the first two weeks, often with multiple offers.",
+            answer: "The Snohomish County average is 21-28 days to a pending offer. Kim's clients average 14 days. The difference is staging and strategic pricing. Homes that are well-staged and correctly priced consistently go under contract in the first two weeks, often with multiple offers.",
           },
           {
             question: "Should I stage my home if I am still living in it?",
-            answer: "Yes. Occupied staging is Kim&apos;s specialty. She works around your life, not against it. Cost for occupied staging in Snohomish County typically runs $500-2,000 and delivers 10-15x return on investment. You do not need to move out or store your furniture.",
+            answer: "Yes. Occupied staging is Kim's specialty. She works around your life, not against it. Cost for occupied staging in Snohomish County typically runs $500-2,000 and delivers 10-15x return on investment. You do not need to move out or store your furniture.",
           },
           {
             question: "What will I net after commissions and closing costs?",

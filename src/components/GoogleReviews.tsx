@@ -63,7 +63,7 @@ function ReviewCard({ review }: { review: Review }) {
           margin: 0,
           flexGrow: 1,
           display: '-webkit-box',
-          WebkitLineClamp: 4,
+          WebkitLineClamp: 8,
           WebkitBoxOrient: 'vertical',
           overflow: 'hidden',
         } as React.CSSProperties}

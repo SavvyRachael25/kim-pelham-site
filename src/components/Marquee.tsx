@@ -26,7 +26,7 @@ export default function Marquee() {
       <div
         style={{
           display: 'flex',
-          animation: 'scroll 32s linear infinite',
+          animation: 'scroll 22s linear infinite',
           whiteSpace: 'nowrap',
           gap: '60px',
         }}

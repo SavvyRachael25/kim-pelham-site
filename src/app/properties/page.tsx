@@ -181,8 +181,10 @@ export default function PropertiesPage() {
               >
                 Curious about your home's current market value? Get a complimentary analysis and see how your property compares.
               </p>
-              <Link
-                href="/valuation"
+              <a
+                href="https://community.katrinaeileen.com/home-valuation?domain=kim.katrinaeileen.com"
+                target="_blank"
+                rel="noopener noreferrer"
                 style={{
                   fontFamily: 'var(--font-body)',
                   fontSize: '0.95rem',
@@ -197,7 +199,7 @@ export default function PropertiesPage() {
                 }}
               >
                 Get Valuation
-              </Link>
+              </a>
             </article>
           </div>
         </section>

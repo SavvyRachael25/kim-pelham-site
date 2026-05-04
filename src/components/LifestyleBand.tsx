@@ -12,8 +12,8 @@ export default function LifestyleBand() {
     >
       {/* Background image */}
       <Image
-        src="/images/lifestyle-01-farmers-market.jpg"
-        alt="Kim at the Snohomish County Farmers Market"
+        src="/lifestyle/marina-sunset.jpg"
+        alt="Sunset over the marina where Kim keeps her boat"
         fill
         quality={85}
         sizes="100vw"
@@ -113,7 +113,7 @@ export default function LifestyleBand() {
             margin: '32px 0 0 0',
           }}
         >
-           -  yes, I actually walk these streets
+           -  yes I actually have a boat in this Marina
         </p>
       </div>
     </section>

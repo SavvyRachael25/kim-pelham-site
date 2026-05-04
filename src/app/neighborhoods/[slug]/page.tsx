@@ -72,7 +72,6 @@ export default function NeighborhoodSlugPage() {
     schools,
     commute,
     faqs,
-    isComingSoon,
     nearbyNeighborhoods,
   } = neighborhood;
 
@@ -156,81 +155,6 @@ export default function NeighborhoodSlugPage() {
             ))}
           </div>
         </section>
-
-        {/* Coming Soon banner */}
-        {isComingSoon && (
-          <section
-            style={{
-              padding: '48px 24px',
-              backgroundColor: '#F8F5F0',
-              textAlign: 'center',
-            }}
-          >
-            <div
-              style={{
-                maxWidth: '640px',
-                margin: '0 auto',
-                border: '2px solid #B8845C',
-                borderRadius: '8px',
-                padding: '48px 40px',
-              }}
-            >
-              <div
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '0.75rem',
-                  fontWeight: 700,
-                  textTransform: 'uppercase',
-                  letterSpacing: '2px',
-                  color: '#B8845C',
-                  marginBottom: '16px',
-                }}
-              >
-                Coming Soon
-              </div>
-              <h2
-                style={{
-                  fontFamily: 'var(--font-heading)',
-                  fontSize: '2rem',
-                  fontWeight: 700,
-                  color: '#2F5233',
-                  marginBottom: '16px',
-                  lineHeight: 1.2,
-                }}
-              >
-                Listings Arriving Shortly
-              </h2>
-              <p
-                style={{
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '1.05rem',
-                  color: '#555',
-                  lineHeight: 1.7,
-                  marginBottom: '32px',
-                }}
-              >
-                I&apos;m building out my {name} listings page now. Contact me for early access to
-                available homes in this area before they hit the market.
-              </p>
-              <Link
-                href="/contact"
-                style={{
-                  display: 'inline-block',
-                  padding: '16px 40px',
-                  backgroundColor: '#B8845C',
-                  color: '#FFFFFF',
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '1rem',
-                  fontWeight: 600,
-                  borderRadius: '4px',
-                  textDecoration: 'none',
-                }}
-              >
-                Contact Kim for Early Access
-              </Link>
-            </div>
-          </section>
-        )}
 
         {/* FAQ section */}
         <FAQSection backgroundColor="#F8F5F0" faqs={faqs} />

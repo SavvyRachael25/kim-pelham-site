@@ -10,7 +10,7 @@ import FAQSection from '@/components/FAQSection';
 const stats = [
   { label: 'Median Home Price', value: '~$1.1M', sub: 'mid-2025' },
   { label: 'Avg Days on Market', value: '15–20 days', sub: 'competitive market' },
-  { label: 'School District', value: 'Northshore SD', sub: 'top 10 in Washington' },
+  { label: 'School District', value: 'Northshore School District', sub: 'top 10 in Washington' },
   { label: 'Commute to Bellevue', value: '20–30 min', sub: 'via I-405' },
 ];
 
@@ -123,7 +123,7 @@ export default function BothellPage() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
               {[
                 { title: 'Tech workers (Eastside access)', desc: 'Microsoft, Amazon, and dozens of tech companies in Redmond and Bellevue are 20–30 minutes away. This is the suburban pick for Eastside workers who want more space.' },
-                { title: 'School-first families', desc: 'If Northshore SD is non-negotiable, you\'re in Bothell. Full stop. The school district drives a meaningful portion of this market.' },
+                { title: 'School-first families', desc: 'If Northshore School District is non-negotiable, you\'re in Bothell. Full stop. The school district drives a meaningful portion of this market.' },
                 { title: 'Wine and outdoors people', desc: 'Woodinville wine country, the Sammamish River Trail, Bothell Landing Park  -  weekend quality of life here is genuinely high.' },
                 { title: 'Move-up buyers from south Snohomish County', desc: 'Buyers upgrading from Lynnwood, Kenmore, or south Everett often land in Bothell. It\'s the step up without leaving the county.' },
                 { title: 'Downtown lifestyle seekers', desc: 'Bothell\'s revitalized Main Street has real walkability  -  restaurants, cafes, the river. If you want urban energy without urban density, this works.' },
