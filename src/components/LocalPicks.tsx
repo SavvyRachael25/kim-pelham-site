@@ -5,19 +5,19 @@ import Image from 'next/image';
 const picks = [
   {
     id: 1,
-    image: '/images/hero-02-warm-kitchen.jpg', // TODO: replace with Loft Coffee Bar photo from Kim
+    image: '/lifestyle/loft-coffee-bar.webp',
     title: 'Loft Coffee Bar, Everett',
     description: "Old building, better espresso. My kind of place.",
   },
   {
     id: 2,
-    image: '/images/lifestyle-01-farmers-market.jpg', // TODO: replace with J&L Barbecue photo
+    image: '/lifestyle/jl-barbecue.jpg',
     title: 'J&L Barbecue, Everett',
     description: "Best barbecue around, and the cornbread is amazing. Get the takeout.",
   },
   {
     id: 3,
-    image: '/images/neighborhood-jetty-island.jpg', // TODO: photo from Kim — Everett Marina (she has 12 years of marina photos)
+    image: '/lifestyle/baby-seal-dinghy.jpg',
     title: 'Everett Marina',
     description: "We've lived at the marina for 12 years. It never gets old.",
   },
