@@ -401,7 +401,9 @@ export default function PotlatchPage() {
               style={{
                 position: 'relative',
                 width: '100%',
-                paddingBottom: '56.25%',
+                maxWidth: '760px',
+                margin: '0 auto',
+                paddingBottom: 'min(56.25%, 427px)',
                 height: 0,
                 borderRadius: '6px',
                 overflow: 'hidden',
