@@ -41,10 +41,10 @@ export default function SellersLayout({ children }: { children: React.ReactNode 
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "How much should I invest in repairs before selling my home?",
+                "name": "How much should I invest in repairs before selling?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Stop before you renovate. Most pre-sale renovations return less than their cost. A $10,000 kitchen remodel often nets back only $3,000-5,000. Instead, invest in decluttering, staging, and professional photography. Kim will tell you exactly which repairs actually move the needle on your sale price and which ones to skip."
+                  "text": "The answer is it really depends on what needs to be done to the house. If you have issues that would prevent the house from being financed, those need to be addressed up front and will net you the highest return. Kim will tell you exactly which repairs move the needle on your sale price and which ones to skip."
                 }
               },
               {

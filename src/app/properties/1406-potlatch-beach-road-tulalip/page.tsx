@@ -409,9 +409,10 @@ export default function PotlatchPage() {
               }}
             >
               <iframe
-                src="https://www.youtube.com/embed/BekwRDZCUK0"
-                title="Waterfront Views — 1406 Potlatch Beach Road, Marysville WA"
+                src="https://www.youtube.com/embed/AEA74t6Zy9s"
+                title="Marysville Waterfront Home Tour | Views in Every Room — 1406 Potlatch Beach"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
                 style={{
                   position: 'absolute',
