@@ -1,11 +1,6 @@
 'use client';
 
-// Site-wide live banner. Currently announcing the Sunday open house at the
-// Potlatch Beach Road active MLS listing (#2504310, public on MLS).
-// Compliance: Open-house callouts on already-active MLS listings are standard
-// practice; pre-advertising restrictions only apply to pre-MLS "coming soon"
-// listings. If a future "coming soon" property goes here, fall back to generic
-// "Currently: ..." copy until the listing hits MLS.
+// Site-wide live banner.
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
@@ -27,7 +22,7 @@ export default function CurrentlyLine() {
       }}
     >
       <Link
-        href="/properties/1406-potlatch-beach-road-tulalip"
+        href="/properties"
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -60,7 +55,7 @@ export default function CurrentlyLine() {
             margin: 0,
           }}
         >
-          Open House this Sunday · 1406 Potlatch Beach Rd, Marysville · 1&ndash;3 PM
+          Currently: helping a seller list in Marysville
           <span
             style={{
               fontFamily: 'var(--font-body)',
@@ -74,7 +69,7 @@ export default function CurrentlyLine() {
               paddingBottom: '1px',
             }}
           >
-            See the listing &rarr;
+            See active listings &rarr;
           </span>
         </p>
 
