@@ -134,8 +134,21 @@ export async function POST(req: NextRequest) {
   if (!ghlRes.ok) {
     const errBody = await ghlRes.text().catch(() => '(no body)');
     console.error(`[contact-api] GHL returned ${ghlRes.status}:`, errBody.slice(0, 200));
+    // TEMP DEBUG: include diagnostic info in response — REMOVE before final deploy
     return NextResponse.json(
-      { error: "We couldn't submit your request. Please try again or text/call Kim at 425-250-9422." },
+      {
+        error: "We couldn't submit your request. Please try again or text/call Kim at 425-250-9422.",
+        _debug: {
+          tokenPresent: !!GHL_API_TOKEN,
+          tokenLen: GHL_API_TOKEN?.length ?? 0,
+          tokenPrefix: GHL_API_TOKEN?.slice(0, 4) ?? '',
+          locationPresent: !!GHL_LOCATION_ID,
+          locationLen: GHL_LOCATION_ID?.length ?? 0,
+          locationPrefix: GHL_LOCATION_ID?.slice(0, 4) ?? '',
+          ghlStatus: ghlRes.status,
+          ghlBody: errBody.slice(0, 300),
+        },
+      },
       { status: 502 }
     );
   }
