@@ -55,7 +55,7 @@ export default function CurrentlyLine() {
             margin: 0,
           }}
         >
-          Currently: helping a seller list in Marysville
+          Two new listings, both under $1M
           <span
             style={{
               fontFamily: 'var(--font-body)',
@@ -69,7 +69,7 @@ export default function CurrentlyLine() {
               paddingBottom: '1px',
             }}
           >
-            See active listings &rarr;
+            Tulalip waterfront &middot; Mukilteo view &rarr;
           </span>
         </p>
 
