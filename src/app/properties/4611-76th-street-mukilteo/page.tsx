@@ -236,7 +236,7 @@ export default function MukilteoPage() {
                 lineHeight: 1.2,
               }}
             >
-              Walk it whenever works for you
+              Catch the view on your schedule
             </p>
             <p
               style={{
@@ -360,11 +360,11 @@ export default function MukilteoPage() {
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
             <div className="mukilteo-gallery" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridTemplateRows: '260px 260px', gap: '8px' }}>
               {[
-                { src: '/images/mukilteo-01-front-exterior.jpg', alt: 'Front exterior — 4611 76th Street SW Mukilteo with RV parking', col: '1 / 2', row: '1 / 3' },
-                { src: '/images/mukilteo-04-great-room.jpg', alt: 'Open-concept great room with kitchen, dining, and living', col: '2 / 3', row: '1 / 2' },
-                { src: '/images/mukilteo-05-kitchen-view.jpg', alt: 'Kitchen with bay window, quartz counters, and Sound view', col: '3 / 4', row: '1 / 2' },
-                { src: '/images/mukilteo-08-upper-deck.jpg', alt: 'Upper deck with patio set, gas grill, and French doors', col: '2 / 3', row: '2 / 3' },
-                { src: '/images/mukilteo-10-hot-tub.jpg', alt: 'Hot tub on side deck with Sound view', col: '3 / 4', row: '2 / 3' },
+                { src: '/images/mukilteo-09-deck-view.jpg', alt: 'View from the deck — Olympic Mountains across the Sound from 4611 76th Street SW', col: '1 / 2', row: '1 / 3' },
+                { src: '/images/mukilteo-05-kitchen-view.jpg', alt: 'Kitchen with bay window framing the Olympic Mountain view, quartz counters', col: '2 / 3', row: '1 / 2' },
+                { src: '/images/mukilteo-10-hot-tub.jpg', alt: 'Hot tub on side deck looking out at the Olympic Mountain view', col: '3 / 4', row: '1 / 2' },
+                { src: '/images/mukilteo-04-great-room.jpg', alt: 'Open-concept great room — half-wall remodel lets the view through to every space', col: '2 / 3', row: '2 / 3' },
+                { src: '/images/mukilteo-08-upper-deck.jpg', alt: 'Upper deck with patio set, gas grill, French doors — outdoor living facing the view', col: '3 / 4', row: '2 / 3' },
               ].map((photo) => (
                 <div key={photo.src} style={{ position: 'relative', gridColumn: photo.col, gridRow: photo.row, borderRadius: '4px', overflow: 'hidden' }}>
                   <Image src={photo.src} alt={photo.alt} fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 33vw" />
@@ -650,7 +650,7 @@ export default function MukilteoPage() {
                 maxWidth: '740px',
               }}
             >
-              4611 76th Street SW sits in the established Mukilteo neighborhood between Mukilteo Speedway and the Japanese Gulch greenbelt &mdash; a one-minute walk to the trailhead. The address is in the Mukilteo School District, with Boeing Paine Field five minutes away, the Mukilteo ferry to Whidbey Island ten minutes west, and downtown Edmonds twenty minutes south. Seattle is roughly 30 minutes south on I-5 outside of rush hour, and the Sounder commuter rail runs out of Mukilteo Station for an easier daily commute. This is a livable address in Snohomish County for buyers who want trees, trails, and ferry access without giving up a real connection to the metro.
+              4611 76th Street SW sits in the established Mukilteo neighborhood between Mukilteo Speedway and the Japanese Gulch greenbelt &mdash; a one-minute walk to the trailhead. The home faces west, which is the whole reason the previous owner&rsquo;s remodel works the way it does: the Olympic Mountains sit across Puget Sound on the western horizon, and the kitchen, great room, primary bedroom, and all three decks are positioned to catch them. The address is in the Mukilteo School District, with Boeing Paine Field five minutes away, the Mukilteo ferry to Whidbey Island ten minutes west, and downtown Edmonds twenty minutes south. Seattle is roughly 30 minutes south on I-5 outside of rush hour, and the Sounder commuter rail runs out of Mukilteo Station for an easier daily commute.
             </p>
             <div
               style={{
@@ -808,7 +808,7 @@ export default function MukilteoPage() {
                 marginBottom: '20px',
               }}
             >
-              Interested in This Property?
+              Come See the View
             </h2>
             <p
               style={{
@@ -819,7 +819,7 @@ export default function MukilteoPage() {
                 marginBottom: '40px',
               }}
             >
-              Text or call Kim directly to set up a time to walk through, ask questions, or get current price and disclosure details.
+              Photos help, but this house is built around the view &mdash; you really have to stand in it. Text or call Kim directly to set up a time to walk through, ask questions, or get current price and disclosure details.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center' }}>
               <a
