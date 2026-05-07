@@ -59,9 +59,11 @@ function buildKimAlert(p: ContactPayload, leadId?: string): string {
 }
 
 export async function POST(req: NextRequest) {
-  const GHL_API_TOKEN = process.env.GHL_API_TOKEN;
-  const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID;
-  const KIM_CONTACT_ID = process.env.GHL_KIM_NOTIFICATION_CONTACT_ID;
+  // Trim env vars defensively — Vercel's UI sometimes preserves leading/trailing
+  // whitespace from paste, and GHL rejects mismatched location IDs with a 403.
+  const GHL_API_TOKEN = process.env.GHL_API_TOKEN?.trim();
+  const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID?.trim();
+  const KIM_CONTACT_ID = process.env.GHL_KIM_NOTIFICATION_CONTACT_ID?.trim();
 
   if (!GHL_API_TOKEN || !GHL_LOCATION_ID) {
     console.error('[contact-api] Missing GHL_API_TOKEN or GHL_LOCATION_ID env vars');
@@ -134,21 +136,8 @@ export async function POST(req: NextRequest) {
   if (!ghlRes.ok) {
     const errBody = await ghlRes.text().catch(() => '(no body)');
     console.error(`[contact-api] GHL returned ${ghlRes.status}:`, errBody.slice(0, 200));
-    // TEMP DEBUG: include diagnostic info in response — REMOVE before final deploy
     return NextResponse.json(
-      {
-        error: "We couldn't submit your request. Please try again or text/call Kim at 425-250-9422.",
-        _debug: {
-          tokenPresent: !!GHL_API_TOKEN,
-          tokenLen: GHL_API_TOKEN?.length ?? 0,
-          tokenPrefix: GHL_API_TOKEN?.slice(0, 4) ?? '',
-          locationPresent: !!GHL_LOCATION_ID,
-          locationLen: GHL_LOCATION_ID?.length ?? 0,
-          locationPrefix: GHL_LOCATION_ID?.slice(0, 4) ?? '',
-          ghlStatus: ghlRes.status,
-          ghlBody: errBody.slice(0, 300),
-        },
-      },
+      { error: "We couldn't submit your request. Please try again or text/call Kim at 425-250-9422." },
       { status: 502 }
     );
   }
