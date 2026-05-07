@@ -1,14 +1,14 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'A $3 Million View for Under a Million — Potlatch Beach Road, Tulalip | Kim Pelham',
+  title: 'A $3 Million View for Under a Million — Potlatch Beach Road, Marysville | Kim Pelham',
   description:
-    'Seattle waterfront costs $3M+. This Puget Sound waterfront in Tulalip is under $1M. Same Sound, same sunsets, different price tag. 1406 Potlatch Beach Road — listed by Kim Pelham, The Pelham Group NW.',
+    'Seattle waterfront costs $3M+. This Puget Sound waterfront in Marysville (Tulalip area) is under $1M. Same Sound, same sunsets, different price tag. 1406 Potlatch Beach Road — listed by Kim Pelham, The Pelham Group NW.',
   openGraph: {
-    title: 'A $3 Million View for Under a Million — Potlatch Beach Road, Tulalip',
+    title: 'A $3 Million View for Under a Million — Potlatch Beach Road, Marysville',
     description:
-      'Seattle waterfront costs $3M+. This Puget Sound waterfront in Tulalip is under $1M. Same Sound, same sunsets, different price tag.',
-    images: [{ url: '/images/potlatch-01-aerial.jpg', width: 1536, height: 1152 }],
+      'Seattle waterfront costs $3M+. This Puget Sound waterfront in Marysville is under $1M. Same Sound, same sunsets, different price tag.',
+    images: [{ url: '/images/potlatch-og-2026-05.jpg', width: 1200, height: 630 }],
     type: 'article',
     url: 'https://thepelhamgroupnw.com/blog/potlatch-beach-road-tulalip-waterfront',
   },
@@ -21,7 +21,7 @@ export default function PotlatchBlogLayout({ children }: { children: React.React
   const articleSchema = {
     '@context': 'https://schema.org',
     '@type': 'BlogPosting',
-    headline: 'A $3 Million View for Under a Million — Potlatch Beach Road, Tulalip',
+    headline: 'A $3 Million View for Under a Million — Potlatch Beach Road, Marysville',
     description:
       'Seattle waterfront costs $3M+. This Puget Sound high-bank waterfront in Tulalip is under $1M. Same Sound, same sunsets, radically different price tag. Here is the full story on 1406 Potlatch Beach Road.',
     image: 'https://thepelhamgroupnw.com/images/property-03-lake-stevens-waterfront.jpg',

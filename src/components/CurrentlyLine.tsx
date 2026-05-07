@@ -69,7 +69,7 @@ export default function CurrentlyLine() {
               paddingBottom: '1px',
             }}
           >
-            Tulalip waterfront &middot; Mukilteo view &rarr;
+            Marysville waterfront &middot; Mukilteo view &rarr;
           </span>
         </p>
 

@@ -22,9 +22,9 @@ const listings: Listing[] = [
   {
     href: '/properties/1406-potlatch-beach-road-tulalip',
     image: '/images/potlatch-02-exterior.jpg',
-    imageAlt: '1406 Potlatch Beach Road exterior — waterfront home in Tulalip, WA',
+    imageAlt: '1406 Potlatch Beach Road exterior — waterfront home in Marysville, WA',
     badge: 'New Listing',
-    city: 'Tulalip, WA 98271',
+    city: 'Marysville, WA 98271',
     address: '1406 Potlatch Beach Road',
     price: '$899,900',
     stats: [

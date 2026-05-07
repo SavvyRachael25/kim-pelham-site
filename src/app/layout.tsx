@@ -4,6 +4,7 @@ import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
 import "./globals.css";
 import IntroAnimation from "@/components/IntroAnimation";
 import Analytics from "@/components/Analytics";
+import MobileListingsPopup from "@/components/MobileListingsPopup";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -125,6 +126,8 @@ export default function RootLayout({
           data-widget-id="69e29c13141137f36a3cd275"
           strategy="afterInteractive"
         />
+        {/* Mobile-only listings promo popup — auto-shows after 4s, links to /properties */}
+        <MobileListingsPopup />
         {/* Analytics & attribution — gated on env vars, no-op until configured */}
         <Analytics />
         {/* Vercel Analytics — first-party traffic + Web Vitals, no config needed */}

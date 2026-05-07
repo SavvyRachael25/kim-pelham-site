@@ -18,10 +18,10 @@ interface BlogPost {
 const blogPosts: BlogPost[] = [
   {
     id: '9',
-    title: 'A $3 Million View for Under a Million — Potlatch Beach Road, Tulalip',
+    title: 'A $3 Million View for Under a Million — Potlatch Beach Road, Marysville',
     slug: 'potlatch-beach-road-tulalip-waterfront',
     excerpt:
-      'Seattle waterfront costs $3M+. This Puget Sound high-bank waterfront in Tulalip is under $1M. Same Sound, same sunsets, radically different price tag. Here is why.',
+      'Seattle waterfront costs $3M+. This Puget Sound high-bank waterfront in Marysville is under $1M. Same Sound, same sunsets, radically different price tag. Here is why.',
     date: '2026-04-17',
     category: 'Featured Listing',
   },
