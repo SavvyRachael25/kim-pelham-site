@@ -560,10 +560,10 @@ export default function MukilteoMultigenMay2026Page() {
       <Nav />
       <main>
         <InnerHero
-          title={', '\}
+          title={'Mukilteo\'s most undercovered move: the multi-gen split-entry'}
           subtitle="By Kim Pelham"
           image="/images/hero-01-aerial-neighborhood.jpg"
-          imageAlt="Mukilteo's most undercovered move: the multi-gen split-entry"
+          imageAlt={'Mukilteos most undercovered move: the multi-gen split-entry'}
         />
         <article style={{ padding: '80px 20px', backgroundColor: '#fff' }}>
           <div style={{ maxWidth: '820px', margin: '0 auto' }} dangerouslySetInnerHTML={{ __html: ARTICLE_HTML }} />
