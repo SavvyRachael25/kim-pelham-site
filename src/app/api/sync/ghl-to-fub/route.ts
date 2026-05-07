@@ -56,8 +56,15 @@ function pickFirst<T>(...vals: (T | undefined | null | '')[]): T | undefined {
 }
 
 function normalizeTags(t: unknown): string[] {
-  if (Array.isArray(t)) return t.map(String).filter(Boolean);
-  if (typeof t === 'string') return t.split(',').map((s) => s.trim()).filter(Boolean);
+  // GHL's `{{contact.tags}}` template renders missing/empty values as the
+  // literal string "null". Filter those out plus other junk strings.
+  const isJunk = (s: string) => {
+    const v = s.trim().toLowerCase();
+    return !v || v === 'null' || v === 'undefined' || v === 'none';
+  };
+  const keep = (s: string) => !isJunk(s);
+  if (Array.isArray(t)) return t.map(String).filter(keep);
+  if (typeof t === 'string') return t.split(',').map((s) => s.trim()).filter(keep);
   return [];
 }
 
