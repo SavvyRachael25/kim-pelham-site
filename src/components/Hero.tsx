@@ -175,16 +175,9 @@ export default function Hero() {
         </Link>
       </div>
 
-      <style>{`
-        @media (max-width: 640px) {
-          h1 {
-            font-size: 32px;
-          }
-          p {
-            font-size: 16px;
-          }
-        }
-      `}</style>
+      {/* Hero h1 already uses clamp() for responsive sizing.
+          Removed unscoped <style>{ h1 { ... } p { ... } }</style> block
+          — it was global and was shrinking every h1/p site-wide. */}
     </section>
   );
 }

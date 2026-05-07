@@ -77,6 +77,10 @@ export default function MobileListingsPopup() {
           padding: '24px 20px 28px',
           paddingBottom: 'calc(28px + env(safe-area-inset-bottom))',
           zIndex: 9999,
+          // Cap height + scroll if content exceeds viewport (iPhone SE etc.)
+          maxHeight: 'calc(100dvh - 40px)',
+          overflowY: 'auto',
+          WebkitOverflowScrolling: 'touch',
           animation: 'pelhamPopupSlideUp 0.32s cubic-bezier(0.32, 0.72, 0, 1)',
         }}
       >
@@ -128,7 +132,7 @@ export default function MobileListingsPopup() {
         <h3
           style={{
             fontFamily: 'var(--font-heading)',
-            fontSize: '1.5rem',
+            fontSize: 'clamp(1.15rem, 4.5vw, 1.5rem)',
             fontWeight: 700,
             color: '#2C2C2C',
             margin: '0 0 14px 0',

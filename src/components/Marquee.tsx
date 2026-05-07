@@ -74,12 +74,9 @@ export default function Marquee() {
           }
         }
 
-        @media (max-width: 640px) {
-          span {
-            font-size: 16px;
-            gap: 40px;
-          }
-        }
+        /* Removed unscoped global span { ... } — was hitting every span site-wide.
+           If responsive sizing is needed for marquee items, add a className
+           and target it specifically. The current 20px is fine on mobile too. */
       `}</style>
     </section>
   );

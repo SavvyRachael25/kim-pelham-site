@@ -990,11 +990,18 @@ export default function PotlatchPage() {
           .potlatch-gallery {
             grid-template-columns: 1fr 1fr !important;
             grid-template-rows: unset !important;
-            grid-auto-rows: 160px;
+            grid-auto-rows: 200px !important;
+            grid-auto-flow: dense !important;
           }
           .potlatch-gallery > div {
             grid-column: auto !important;
             grid-row: auto !important;
+          }
+        }
+        @media (max-width: 480px) {
+          .potlatch-gallery {
+            grid-template-columns: 1fr !important;
+            grid-auto-rows: 240px !important;
           }
         }
       `}</style>

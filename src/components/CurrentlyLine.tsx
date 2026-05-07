@@ -46,17 +46,21 @@ export default function CurrentlyLine() {
           }}
         />
 
-        {/* Status text */}
-        <p
-          style={{
-            fontFamily: 'var(--font-handwritten)',
-            fontSize: '22px',
-            color: '#2C2C2C',
-            margin: 0,
-          }}
-        >
-          Two new listings, both under $1M
+        {/* Status text — wrapped in a div so the pill stacks under on mobile */}
+        <div className="currently-line-text">
+          <p
+            className="currently-line-headline"
+            style={{
+              fontFamily: 'var(--font-handwritten)',
+              fontSize: '22px',
+              color: '#2C2C2C',
+              margin: 0,
+            }}
+          >
+            Two new listings, both under $1M
+          </p>
           <span
+            className="currently-line-pill"
             style={{
               fontFamily: 'var(--font-body)',
               fontSize: '0.78rem',
@@ -71,7 +75,7 @@ export default function CurrentlyLine() {
           >
             Marysville waterfront &middot; Mukilteo view &rarr;
           </span>
-        </p>
+        </div>
 
         <style>{`
           @keyframes pulse {
@@ -80,6 +84,25 @@ export default function CurrentlyLine() {
             }
             50% {
               opacity: 0.5;
+            }
+          }
+          .currently-line-text {
+            display: inline-flex;
+            align-items: baseline;
+            gap: 0;
+          }
+          @media (max-width: 600px) {
+            .currently-line-headline {
+              font-size: 18px !important;
+            }
+            .currently-line-text {
+              flex-direction: column;
+              align-items: center;
+              gap: 6px;
+            }
+            .currently-line-pill {
+              margin-left: 0 !important;
+              font-size: 0.7rem !important;
             }
           }
         `}</style>
