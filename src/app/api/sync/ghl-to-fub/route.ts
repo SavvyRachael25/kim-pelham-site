@@ -44,6 +44,8 @@ interface GHLContactPayload {
   message?: string;
   full_name?: string;
   fullName?: string;
+  // GHL's `{{contact.name}}` template returns the full display name
+  name?: string;
   // Allow unknown extras
   [key: string]: unknown;
 }
@@ -66,7 +68,9 @@ function buildFubPayload(ghl: GHLContactPayload, kimUserId: number) {
   let fName = firstName;
   let lName = lastName;
   if (!fName && !lName) {
-    const full = pickFirst(ghl.full_name, ghl.fullName) ?? '';
+    // GHL's standard {{contact.name}} template returns the display name. Also
+    // accept full_name / fullName variants for other webhook sources.
+    const full = pickFirst(ghl.full_name, ghl.fullName, ghl.name) ?? '';
     if (full) {
       const idx = full.indexOf(' ');
       if (idx === -1) fName = full;
