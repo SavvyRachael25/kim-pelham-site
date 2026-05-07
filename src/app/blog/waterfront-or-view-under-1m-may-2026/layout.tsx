@@ -10,14 +10,14 @@ export const metadata: Metadata = {
     title: 'Waterfront or view? Two Snohomish homes under $1M',
     description: '$899,900 Tulalip waterfront vs. $975,000 Mukilteo view-first remodel — how to choose at sub-$1M in Snohomish County.',
     url: 'https://thepelhamgroupnw.com/blog/waterfront-or-view-under-1m-may-2026',
-    images: ['/images/potlatch-brien-sunset-golden.jpg'],
+    images: ['/images/blog-waterfront-or-view-og.jpg'],
     type: 'article',
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Waterfront or view? Two Snohomish homes under $1M',
     description: '$899,900 Tulalip waterfront vs. $975,000 Mukilteo view-first remodel — how to choose at sub-$1M in Snohomish County.',
-    images: ['/images/potlatch-brien-sunset-golden.jpg'],
+    images: ['/images/blog-waterfront-or-view-og.jpg'],
   },
 };
 

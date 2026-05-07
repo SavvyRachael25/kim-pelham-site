@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'Remodeled around the view. | 4611 76th St SW — Mukilteo Olympic Mountain Home',
     description:
       '1976 NW Contemporary remodeled around the Olympic Mountain view. Three decks, half-wall cut in the office to bring the view to the desk. 4 bed + office, 2.25 bath, 2,605 sqft. $975,000. MLS# NWM2513590.',
-    images: [{ url: '/images/mukilteo-03-olympic-sunset.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/images/mukilteo-og-2026-05.jpg', width: 1200, height: 630 }],
     type: 'website',
     url: 'https://thepelhamgroupnw.com/properties/4611-76th-street-mukilteo',
   },
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: '4611 76th St SW, Mukilteo WA 98275 | Olympic Mountain View Home | The Pelham Group NW',
     description:
       '1976 NW Contemporary remodeled around the Olympic Mountain view. 4 bed + office, 2.25 bath, 2,605 sqft. $975,000. MLS# NWM2513590.',
-    images: ['/images/mukilteo-03-olympic-sunset.jpg'],
+    images: ['/images/mukilteo-og-2026-05.jpg'],
   },
   alternates: {
     canonical: 'https://thepelhamgroupnw.com/properties/4611-76th-street-mukilteo',
@@ -35,7 +35,7 @@ export default function MukilteoLayout({ children }: { children: React.ReactNode
     url: 'https://thepelhamgroupnw.com/properties/4611-76th-street-mukilteo',
     image: [
       'https://thepelhamgroupnw.com/images/mukilteo-01-front-exterior.jpg',
-      'https://thepelhamgroupnw.com/images/mukilteo-03-olympic-sunset.jpg',
+      'https://thepelhamgroupnw.com/images/mukilteo-og-2026-05.jpg',
       'https://thepelhamgroupnw.com/images/mukilteo-04-great-room.jpg',
       'https://thepelhamgroupnw.com/images/mukilteo-05-kitchen-view.jpg',
     ],

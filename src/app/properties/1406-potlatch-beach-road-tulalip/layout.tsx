@@ -8,7 +8,7 @@ export const metadata: Metadata = {
     title: 'A $3M View for Under $1M | 1406 Potlatch Beach Road — Waterfront Marysville',
     description:
       '50 feet of high-bank Puget Sound waterfront. 3 bedrooms + 2 bonus rooms, 2 ensuite bathrooms, 1,662 sqft on 0.36 acres. $899,900. MLS# 2504310.',
-    images: [{ url: '/images/potlatch-brien-sunset-og.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/images/potlatch-og-2026-05.jpg', width: 1200, height: 630 }],
     type: 'website',
     url: 'https://thepelhamgroupnw.com/properties/1406-potlatch-beach-road-tulalip',
   },
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     title: '1406 Potlatch Beach Road, Marysville WA 98271 | Waterfront Home | The Pelham Group NW',
     description:
       '50 feet of high-bank Puget Sound waterfront. 3 bedrooms + 2 bonus rooms, 2 ensuite bathrooms, 1,662 sqft on 0.36 acres. $899,900. MLS# 2504310.',
-    images: ['/images/potlatch-brien-sunset-og.jpg'],
+    images: ['/images/potlatch-og-2026-05.jpg'],
   },
   alternates: {
     canonical: 'https://thepelhamgroupnw.com/properties/1406-potlatch-beach-road-tulalip',
