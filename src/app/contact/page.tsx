@@ -1,97 +1,35 @@
 'use client';
 
-import { useState } from 'react';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
-import A2PConsent, { MARKETING_TEXT, TRANSACTIONAL_TEXT } from '@/components/A2PConsent';
-import type { A2PConsentState } from '@/components/A2PConsent';
 
-const inputStyle: React.CSSProperties = {
-  width: '100%',
-  padding: '12px 16px',
-  borderRadius: '4px',
-  border: '2px solid var(--color-border)',
-  fontFamily: 'var(--font-body)',
-  fontSize: '1rem',
-  backgroundColor: 'var(--color-cream)',
-  transition: 'border-color 0.3s, box-shadow 0.3s',
-  boxSizing: 'border-box',
-  color: 'var(--color-text)',
-  outline: 'none',
-};
+const KIM_PHONE_DISPLAY = '(425) 250-9422';
+const KIM_PHONE_RAW = '+14252509422';
+const KIM_EMAIL = 'Kim@ThePelhamGroupNW.com';
 
-const labelStyle: React.CSSProperties = {
-  display: 'block',
-  fontFamily: 'var(--font-body)',
-  fontSize: '0.875rem',
-  fontWeight: 600,
-  color: 'var(--color-text)',
-  marginBottom: '8px',
-};
+// Programmatically open the GHL chat widget. The widget script (loaded in
+// app/layout.tsx) attaches a global. We try a few well-known names + fall
+// back to dispatching a click on the launcher button if present.
+function openChatWidget() {
+  if (typeof window === 'undefined') return;
+  const w = window as unknown as {
+    LeadConnector?: { open?: () => void };
+    leadconnector?: { open?: () => void };
+    lcChatWidget?: { open?: () => void };
+  };
+  w.LeadConnector?.open?.();
+  w.leadconnector?.open?.();
+  w.lcChatWidget?.open?.();
+  // Fallback: the GHL widget renders a floating launcher; click it if present
+  const launcher = document.querySelector<HTMLElement>(
+    'lc-chat-button, .lc-chat-launcher, [data-widget-id], [aria-label*="chat" i], [aria-label*="Open chat" i]'
+  );
+  launcher?.click();
+}
 
 export default function ContactPage() {
-  const [form, setForm] = useState({
-    firstName: '',
-    lastName: '',
-    phone: '',
-    email: '',
-    interested: '',
-    message: '',
-  });
-  const [consent, setConsent] = useState<A2PConsentState>({
-    marketing: false,
-    transactional: false,
-  });
-  const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle');
-  const [errorMsg, setErrorMsg] = useState('');
-
-  const handleChange = (field: string) => (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
-  ) => setForm((prev) => ({ ...prev, [field]: e.target.value }));
-
-  const focusOn = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    e.currentTarget.style.borderColor = 'var(--color-forest)';
-    e.currentTarget.style.boxShadow = '0 0 0 3px rgba(47, 82, 51, 0.1)';
-  };
-  const focusOff = (e: React.FocusEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    e.currentTarget.style.borderColor = 'var(--color-border)';
-    e.currentTarget.style.boxShadow = 'none';
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!form.firstName || !form.email) return;
-    setStatus('loading');
-    setErrorMsg('');
-
-    try {
-      const res = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          ...form,
-          smsMarketingConsent: consent.marketing,
-          smsTransactionalConsent: consent.transactional,
-          marketingCheckboxText: MARKETING_TEXT,
-          transactionalCheckboxText: TRANSACTIONAL_TEXT,
-        }),
-      });
-
-      if (!res.ok) {
-        const body = await res.json().catch(() => ({}));
-        setErrorMsg(body.error ?? "We couldn't submit your request. Please try again or call Kim at 425-250-9422.");
-        setStatus('error');
-      } else {
-        setStatus('success');
-      }
-    } catch {
-      setErrorMsg("We couldn't submit your request. Please try again or call Kim at 425-250-9422.");
-      setStatus('error');
-    }
-  };
-
   return (
     <>
       <ScrollProgress />
@@ -104,455 +42,296 @@ export default function ContactPage() {
           imageAlt="Local community in Snohomish County"
         />
 
-        {/* Contact Content Section */}
+        {/* Three-channel CTA grid */}
         <section style={{ padding: '80px 20px', backgroundColor: '#fff' }}>
-          <div
-            style={{
-              maxWidth: '1200px',
-              margin: '0 auto',
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(400px, 1fr))',
-              gap: '60px',
-            }}
-          >
-            {/* ── Contact Form ── */}
-            <div>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <div style={{ textAlign: 'center', marginBottom: '48px' }}>
+              <p
+                style={{
+                  fontFamily: 'var(--font-handwritten)',
+                  fontSize: '22px',
+                  color: '#B8845C',
+                  margin: '0 0 12px 0',
+                }}
+              >
+                three ways to reach me
+              </p>
               <h2
                 style={{
                   fontFamily: 'var(--font-heading)',
-                  fontSize: '2rem',
-                  fontWeight: 400,
-                  color: 'var(--color-forest)',
-                  marginBottom: '32px',
+                  fontSize: 'clamp(2rem, 4vw, 2.75rem)',
+                  fontWeight: 700,
+                  color: '#2C2C2C',
+                  margin: '0 0 16px 0',
+                  lineHeight: 1.2,
                 }}
               >
-                Let&apos;s Connect
+                Pick what feels right
               </h2>
+              <p
+                style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '1.05rem',
+                  color: '#555',
+                  lineHeight: 1.7,
+                  maxWidth: '640px',
+                  margin: '0 auto',
+                }}
+              >
+                I answer my own phone, read my own messages, and reply to my own emails.
+                No call center, no auto-responder. Whichever you choose, you&rsquo;ll
+                hear back from me &mdash; usually same day.
+              </p>
+            </div>
 
-              {status === 'success' ? (
+            <div
+              className="contact-channels"
+              style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(3, 1fr)',
+                gap: '24px',
+                marginBottom: '48px',
+              }}
+            >
+              {/* Chat — primary, fastest path */}
+              <button
+                type="button"
+                onClick={openChatWidget}
+                style={{
+                  appearance: 'none',
+                  border: '2px solid #2F5233',
+                  background: '#2F5233',
+                  color: '#F8F5F0',
+                  borderRadius: '6px',
+                  padding: '36px 24px',
+                  textAlign: 'center',
+                  cursor: 'pointer',
+                  fontFamily: 'var(--font-body)',
+                  transition: 'transform 0.2s, box-shadow 0.2s',
+                  boxShadow: '0 4px 16px rgba(47,82,51,0.18)',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-3px)';
+                  e.currentTarget.style.boxShadow = '0 12px 28px rgba(47,82,51,0.24)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = '0 4px 16px rgba(47,82,51,0.18)';
+                }}
+              >
                 <div
                   style={{
-                    background: '#F0F7F0',
-                    border: '1.5px solid #2F5233',
-                    borderRadius: '6px',
-                    padding: '32px 28px',
-                    textAlign: 'center',
+                    fontFamily: 'var(--font-handwritten)',
+                    fontSize: '20px',
+                    color: '#B8845C',
+                    marginBottom: '6px',
                   }}
                 >
-                  <p style={{ fontSize: '2rem', margin: '0 0 12px 0' }}>🏡</p>
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-heading)',
-                      fontSize: '1.6rem',
-                      fontWeight: 600,
-                      color: '#2F5233',
-                      margin: '0 0 10px 0',
-                    }}
-                  >
-                    Message received!
-                  </h3>
-                  <p style={{ fontFamily: 'var(--font-body)', color: '#555', lineHeight: 1.7 }}>
-                    Kim will be in touch within 24 hours. In the meantime, feel free to call or text at{' '}
-                    <a href="tel:+14252509422" style={{ color: '#2F5233', fontWeight: 600 }}>
-                      425-250-9422
-                    </a>
-                    .
-                  </p>
+                  fastest
                 </div>
-              ) : (
-                <form
-                  onSubmit={handleSubmit}
-                  noValidate
-                  style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}
+                <div
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: '1.6rem',
+                    fontWeight: 700,
+                    color: '#F8F5F0',
+                    marginBottom: '10px',
+                    lineHeight: 1.1,
+                  }}
                 >
-                  {/* Name row */}
-                  <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '16px' }}>
-                    <div>
-                      <label htmlFor="firstName" style={labelStyle}>First Name *</label>
-                      <input
-                        id="firstName"
-                        type="text"
-                        placeholder="John"
-                        required
-                        value={form.firstName}
-                        onChange={handleChange('firstName')}
-                        style={inputStyle}
-                        onFocus={focusOn}
-                        onBlur={focusOff}
-                      />
-                    </div>
-                    <div>
-                      <label htmlFor="lastName" style={labelStyle}>Last Name</label>
-                      <input
-                        id="lastName"
-                        type="text"
-                        placeholder="Doe"
-                        value={form.lastName}
-                        onChange={handleChange('lastName')}
-                        style={inputStyle}
-                        onFocus={focusOn}
-                        onBlur={focusOff}
-                      />
-                    </div>
-                  </div>
+                  Chat with Kim
+                </div>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.95rem',
+                    color: 'rgba(248,245,240,0.85)',
+                    lineHeight: 1.5,
+                  }}
+                >
+                  Open the chat — Kim sees it on her phone in real time. Best for quick questions or to get a showing on the calendar.
+                </div>
+              </button>
 
-                  {/* Phone */}
-                  <div>
-                    <label htmlFor="phone" style={labelStyle}>Phone</label>
-                    <input
-                      id="phone"
-                      type="tel"
-                      placeholder="(425) 555-0000"
-                      value={form.phone}
-                      onChange={handleChange('phone')}
-                      style={inputStyle}
-                      onFocus={focusOn}
-                      onBlur={focusOff}
-                      autoComplete="tel"
-                    />
-                  </div>
-
-                  {/* A2P consent block — positioned directly below the phone field per A2P spec */}
-                  {form.phone && (
-                    <A2PConsent
-                      variant="full"
-                      value={consent}
-                      onChange={setConsent}
-                    />
-                  )}
-
-                  {/* Email */}
-                  <div>
-                    <label htmlFor="email" style={labelStyle}>Email *</label>
-                    <input
-                      id="email"
-                      type="email"
-                      placeholder="john@example.com"
-                      required
-                      value={form.email}
-                      onChange={handleChange('email')}
-                      style={inputStyle}
-                      onFocus={focusOn}
-                      onBlur={focusOff}
-                      autoComplete="email"
-                    />
-                  </div>
-
-                  {/* Interest */}
-                  <div>
-                    <label htmlFor="interested" style={labelStyle}>I&apos;m Interested In</label>
-                    <select
-                      id="interested"
-                      value={form.interested}
-                      onChange={handleChange('interested')}
-                      style={{ ...inputStyle, cursor: 'pointer' }}
-                      onFocus={focusOn}
-                      onBlur={focusOff}
-                    >
-                      <option value="">Select an option...</option>
-                      <option value="buying">Buying</option>
-                      <option value="selling">Selling</option>
-                      <option value="both">Both</option>
-                      <option value="valuation">Home Valuation</option>
-                      <option value="repairs">Repair Services</option>
-                      <option value="other">Other</option>
-                    </select>
-                  </div>
-
-                  {/* Message */}
-                  <div>
-                    <label htmlFor="message" style={labelStyle}>Message</label>
-                    <textarea
-                      id="message"
-                      placeholder="Tell us a bit about your real estate needs..."
-                      rows={5}
-                      value={form.message}
-                      onChange={handleChange('message')}
-                      style={{ ...inputStyle, resize: 'vertical' }}
-                      onFocus={focusOn}
-                      onBlur={focusOff}
-                    />
-                  </div>
-
-                  {/* Error */}
-                  {status === 'error' && errorMsg && (
-                    <p
-                      style={{
-                        fontFamily: 'var(--font-body)',
-                        fontSize: '0.875rem',
-                        color: '#c0392b',
-                        margin: 0,
-                      }}
-                    >
-                      {errorMsg}
-                    </p>
-                  )}
-
-                  {/* Submit */}
-                  <button
-                    type="submit"
-                    disabled={status === 'loading' || !form.firstName || !form.email}
-                    aria-label="Send Message"
-                    style={{
-                      padding: '16px 32px',
-                      borderRadius: '4px',
-                      border: 'none',
-                      backgroundColor: status === 'loading' || !form.firstName || !form.email
-                        ? '#9aad9c'
-                        : 'var(--color-clay)',
-                      color: '#fff',
-                      fontFamily: 'var(--font-body)',
-                      fontSize: '1rem',
-                      fontWeight: 600,
-                      cursor: status === 'loading' || !form.firstName || !form.email ? 'default' : 'pointer',
-                      transition: 'all 0.3s',
-                    }}
-                    onMouseEnter={(e) => {
-                      if (form.firstName && form.email && status !== 'loading') {
-                        e.currentTarget.style.backgroundColor = '#a0743d';
-                        e.currentTarget.style.transform = 'translateY(-2px)';
-                        e.currentTarget.style.boxShadow = '0 8px 16px rgba(47, 82, 51, 0.15)';
-                      }
-                    }}
-                    onMouseLeave={(e) => {
-                      e.currentTarget.style.backgroundColor = form.firstName && form.email ? 'var(--color-clay)' : '#9aad9c';
-                      e.currentTarget.style.transform = 'translateY(0)';
-                      e.currentTarget.style.boxShadow = 'none';
-                    }}
-                  >
-                    {status === 'loading' ? 'Sending...' : 'Send Message'}
-                  </button>
-                </form>
-              )}
-            </div>
-
-            {/* ── Contact Info ── */}
-            <div>
-              <h2
+              {/* Call */}
+              <a
+                href={`tel:${KIM_PHONE_RAW}`}
                 style={{
-                  fontFamily: 'var(--font-heading)',
-                  fontSize: '2rem',
-                  fontWeight: 400,
-                  color: 'var(--color-forest)',
-                  marginBottom: '32px',
+                  border: '2px solid #B8845C',
+                  background: '#FFFFFF',
+                  color: '#2C2C2C',
+                  borderRadius: '6px',
+                  padding: '36px 24px',
+                  textAlign: 'center',
+                  textDecoration: 'none',
+                  fontFamily: 'var(--font-body)',
+                  display: 'block',
+                  transition: 'transform 0.2s, box-shadow 0.2s',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-3px)';
+                  e.currentTarget.style.boxShadow = '0 12px 28px rgba(184,132,92,0.20)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
                 }}
               >
-                Contact Information
-              </h2>
-
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '32px' }}>
-                {/* Phone */}
-                <div>
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-body)',
-                      fontSize: '0.875rem',
-                      fontWeight: 600,
-                      color: 'var(--color-text)',
-                      textTransform: 'uppercase',
-                      letterSpacing: '1px',
-                      marginBottom: '8px',
-                    }}
-                  >
-                    Phone
-                  </h3>
-                  <a
-                    href="tel:+14252509422"
-                    style={{
-                      fontFamily: 'var(--font-body)',
-                      fontSize: '1.25rem',
-                      color: 'var(--color-clay)',
-                      textDecoration: 'none',
-                      transition: 'color 0.3s',
-                    }}
-                    onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--color-forest)'; }}
-                    onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--color-clay)'; }}
-                  >
-                    425.250.9422
-                  </a>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-handwritten)',
+                    fontSize: '20px',
+                    color: '#B8845C',
+                    marginBottom: '6px',
+                  }}
+                >
+                  if you&rsquo;d rather talk
                 </div>
-
-                {/* Email */}
-                <div>
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-body)',
-                      fontSize: '0.875rem',
-                      fontWeight: 600,
-                      color: 'var(--color-text)',
-                      textTransform: 'uppercase',
-                      letterSpacing: '1px',
-                      marginBottom: '8px',
-                    }}
-                  >
-                    Email
-                  </h3>
-                  <a
-                    href="mailto:hello@thepelhamgroupnw.com"
-                    style={{
-                      fontFamily: 'var(--font-body)',
-                      fontSize: '1.125rem',
-                      color: 'var(--color-clay)',
-                      textDecoration: 'none',
-                      transition: 'color 0.3s',
-                      wordBreak: 'break-all',
-                    }}
-                    onMouseEnter={(e) => { e.currentTarget.style.color = 'var(--color-forest)'; }}
-                    onMouseLeave={(e) => { e.currentTarget.style.color = 'var(--color-clay)'; }}
-                  >
-                    hello@thepelhamgroupnw.com
-                  </a>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: '1.6rem',
+                    fontWeight: 700,
+                    color: '#2C2C2C',
+                    marginBottom: '10px',
+                    lineHeight: 1.1,
+                  }}
+                >
+                  Call {KIM_PHONE_DISPLAY}
                 </div>
-
-                {/* Address */}
-                <div>
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-body)',
-                      fontSize: '0.875rem',
-                      fontWeight: 600,
-                      color: 'var(--color-text)',
-                      textTransform: 'uppercase',
-                      letterSpacing: '1px',
-                      marginBottom: '8px',
-                    }}
-                  >
-                    Address
-                  </h3>
-                  <address
-                    style={{
-                      fontFamily: 'var(--font-body)',
-                      fontSize: '1rem',
-                      color: 'var(--color-text)',
-                      lineHeight: '1.6',
-                      fontStyle: 'normal',
-                    }}
-                  >
-                    2815 Baker Ave Suite 102
-                    <br />
-                    Everett, WA 98201
-                  </address>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.95rem',
+                    color: '#666',
+                    lineHeight: 1.5,
+                  }}
+                >
+                  My direct line. Voicemail goes to my pocket if I&rsquo;m showing &mdash; I&rsquo;ll call you back the same day.
                 </div>
+              </a>
 
-                {/* Office Hours */}
-                <div>
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-body)',
-                      fontSize: '0.875rem',
-                      fontWeight: 600,
-                      color: 'var(--color-text)',
-                      textTransform: 'uppercase',
-                      letterSpacing: '1px',
-                      marginBottom: '8px',
-                    }}
-                  >
-                    Office Hours
-                  </h3>
-                  <div
-                    style={{
-                      fontFamily: 'var(--font-body)',
-                      fontSize: '1rem',
-                      color: 'var(--color-text)',
-                      lineHeight: '1.6',
-                    }}
-                  >
-                    <p style={{ margin: '4px 0' }}>Monday - Friday: 9am - 6pm</p>
-                    <p style={{ margin: '4px 0' }}>Weekends: By appointment</p>
-                  </div>
+              {/* Text */}
+              <a
+                href={`sms:${KIM_PHONE_RAW}`}
+                style={{
+                  border: '2px solid #2F5233',
+                  background: '#FFFFFF',
+                  color: '#2C2C2C',
+                  borderRadius: '6px',
+                  padding: '36px 24px',
+                  textAlign: 'center',
+                  textDecoration: 'none',
+                  fontFamily: 'var(--font-body)',
+                  display: 'block',
+                  transition: 'transform 0.2s, box-shadow 0.2s',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.transform = 'translateY(-3px)';
+                  e.currentTarget.style.boxShadow = '0 12px 28px rgba(47,82,51,0.18)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.transform = 'translateY(0)';
+                  e.currentTarget.style.boxShadow = 'none';
+                }}
+              >
+                <div
+                  style={{
+                    fontFamily: 'var(--font-handwritten)',
+                    fontSize: '20px',
+                    color: '#B8845C',
+                    marginBottom: '6px',
+                  }}
+                >
+                  text-friendly
                 </div>
-              </div>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: '1.6rem',
+                    fontWeight: 700,
+                    color: '#2C2C2C',
+                    marginBottom: '10px',
+                    lineHeight: 1.1,
+                  }}
+                >
+                  Text {KIM_PHONE_DISPLAY}
+                </div>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '0.95rem',
+                    color: '#666',
+                    lineHeight: 1.5,
+                  }}
+                >
+                  Same number as my line. Quick photos of a place, a question while you&rsquo;re driving by &mdash; texts work great.
+                </div>
+              </a>
             </div>
-          </div>
-        </section>
 
-        {/* What to Expect Section */}
-        <section style={{ padding: '80px 20px', backgroundColor: 'var(--color-cream)' }}>
-          <div style={{ maxWidth: '1000px', margin: '0 auto' }}>
-            <h2
+            {/* Email + office details */}
+            <div
               style={{
-                fontFamily: 'var(--font-heading)',
-                fontSize: '2.5rem',
-                fontWeight: 400,
-                color: 'var(--color-forest)',
-                marginBottom: '60px',
+                background: '#F8F5F0',
+                border: '1px solid #E8E3DA',
+                borderRadius: '6px',
+                padding: '32px',
                 textAlign: 'center',
               }}
             >
-              What to Expect
-            </h2>
-
-            <div
-              style={{
-                display: 'grid',
-                gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
-                gap: '40px',
-              }}
-            >
-              {[
-                {
-                  num: 1,
-                  title: "We'll Connect",
-                  body: "We'll reach out within 24 hours to understand your unique situation and goals.",
-                },
-                {
-                  num: 2,
-                  title: "We'll Strategize",
-                  body: "Together, we'll develop a personalized plan tailored to your specific needs.",
-                },
-                {
-                  num: 3,
-                  title: "We'll Execute",
-                  body: "We move forward with confidence, keeping you informed every step of the way.",
-                },
-              ].map(({ num, title, body }) => (
-                <div key={num} style={{ textAlign: 'center' }}>
-                  <div
-                    style={{
-                      width: '60px',
-                      height: '60px',
-                      borderRadius: '50%',
-                      backgroundColor: 'var(--color-clay)',
-                      color: '#fff',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      fontFamily: 'var(--font-heading)',
-                      fontSize: '2rem',
-                      fontWeight: 400,
-                      margin: '0 auto 20px',
-                    }}
-                  >
-                    {num}
-                  </div>
-                  <h3
-                    style={{
-                      fontFamily: 'var(--font-heading)',
-                      fontSize: '1.5rem',
-                      fontWeight: 400,
-                      color: 'var(--color-forest)',
-                      marginBottom: '12px',
-                    }}
-                  >
-                    {title}
-                  </h3>
-                  <p
-                    style={{
-                      fontFamily: 'var(--font-body)',
-                      fontSize: '1rem',
-                      color: 'var(--color-text)',
-                      lineHeight: '1.6',
-                    }}
-                  >
-                    {body}
-                  </p>
-                </div>
-              ))}
+              <p
+                style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '0.72rem',
+                  fontWeight: 700,
+                  color: '#B8845C',
+                  textTransform: 'uppercase',
+                  letterSpacing: '1.5px',
+                  margin: '0 0 12px 0',
+                }}
+              >
+                Email
+              </p>
+              <a
+                href={`mailto:${KIM_EMAIL}`}
+                style={{
+                  fontFamily: 'var(--font-heading)',
+                  fontSize: '1.4rem',
+                  fontWeight: 600,
+                  color: '#2F5233',
+                  textDecoration: 'none',
+                }}
+              >
+                {KIM_EMAIL}
+              </a>
+              <p
+                style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '0.95rem',
+                  color: '#666',
+                  marginTop: '24px',
+                  lineHeight: 1.7,
+                  maxWidth: '560px',
+                  margin: '24px auto 0',
+                }}
+              >
+                Brokered by <strong>Katrina Eileen Real Estate</strong> &middot; serving Snohomish County and surrounding areas of Washington State.
+              </p>
             </div>
           </div>
         </section>
       </main>
+
       <Footer />
+
+      <style>{`
+        @media (max-width: 800px) {
+          .contact-channels {
+            grid-template-columns: 1fr !important;
+          }
+        }
+      `}</style>
     </>
   );
 }
