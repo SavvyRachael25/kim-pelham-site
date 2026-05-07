@@ -7,7 +7,7 @@ const socials = [
     label: 'Instagram',
     href: 'https://www.instagram.com/pelhamgroupnw/',
     icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
         <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
         <circle cx="12" cy="12" r="4"/>
         <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
@@ -18,7 +18,7 @@ const socials = [
     label: 'Facebook',
     href: 'https://www.facebook.com/PelhamGroupNW/',
     icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
       </svg>
     ),
@@ -27,7 +27,7 @@ const socials = [
     label: 'LinkedIn',
     href: 'https://www.linkedin.com/in/kimpelham/',
     icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
         <rect x="2" y="9" width="4" height="12"/>
         <circle cx="4" cy="4" r="2"/>
@@ -38,7 +38,7 @@ const socials = [
     label: 'Zillow',
     href: 'https://www.zillow.com/profile/kimpelham',
     icon: (
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
         <path d="M12 2L2 9.5l1.5 1.5L12 5l8.5 6 1.5-1.5L12 2z"/>
         <path d="M12 7L5 12v9h5v-6h4v6h5v-9L12 7z"/>
       </svg>
@@ -67,40 +67,53 @@ export default function Footer() {
               </p>
             </div>
 
-            {/* Social icons */}
-            <div style={{ display: 'flex', gap: '12px', alignItems: 'center' }}>
-              {socials.map((s) => (
-                <a
-                  key={s.label}
-                  href={s.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={`Kim Pelham on ${s.label}`}
-                  style={{
-                    display: 'flex',
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    width: '36px',
-                    height: '36px',
-                    borderRadius: '50%',
-                    border: '1px solid #444',
-                    color: '#999',
-                    transition: 'color 0.2s, border-color 0.2s, background 0.2s',
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.color = '#B8845C';
-                    e.currentTarget.style.borderColor = '#B8845C';
-                    e.currentTarget.style.background = 'rgba(184,132,92,0.1)';
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.color = '#999';
-                    e.currentTarget.style.borderColor = '#444';
-                    e.currentTarget.style.background = 'transparent';
-                  }}
-                >
-                  {s.icon}
-                </a>
-              ))}
+            {/* Social icons — Follow label + brighter so it reads on dark bg */}
+            <div>
+              <p
+                style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '0.7rem',
+                  fontWeight: 700,
+                  color: '#B8845C',
+                  textTransform: 'uppercase',
+                  letterSpacing: '1.5px',
+                  margin: '0 0 10px 0',
+                }}
+              >
+                Follow
+              </p>
+              <div style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
+                {socials.map((s) => (
+                  <a
+                    key={s.label}
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Kim Pelham on ${s.label}`}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      width: '42px',
+                      height: '42px',
+                      borderRadius: '50%',
+                      border: '1px solid #B8845C',
+                      color: '#F8F5F0',
+                      transition: 'color 0.2s, background 0.2s',
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.color = '#1a1a1a';
+                      e.currentTarget.style.background = '#B8845C';
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.color = '#F8F5F0';
+                      e.currentTarget.style.background = 'transparent';
+                    }}
+                  >
+                    {s.icon}
+                  </a>
+                ))}
+              </div>
             </div>
 
             {/* Call + Text */}

@@ -4,6 +4,85 @@ import { useState, useEffect, useRef } from 'react';
 import { createPortal } from 'react-dom';
 import Link from 'next/link';
 
+const navSocials = [
+  {
+    label: 'Instagram',
+    href: 'https://www.instagram.com/pelhamgroupnw/',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+        <circle cx="12" cy="12" r="4" />
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+      </svg>
+    ),
+  },
+  {
+    label: 'Facebook',
+    href: 'https://www.facebook.com/PelhamGroupNW/',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+      </svg>
+    ),
+  },
+  {
+    label: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/kimpelham/',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+        <rect x="2" y="9" width="4" height="12" />
+        <circle cx="4" cy="4" r="2" />
+      </svg>
+    ),
+  },
+];
+
+function NavSocialIcons({ inMobileMenu = false }: { inMobileMenu?: boolean }) {
+  return (
+    <div
+      className={inMobileMenu ? 'mobile-nav-socials' : 'desktop-nav-socials'}
+      style={{
+        display: 'flex',
+        gap: inMobileMenu ? '20px' : '10px',
+        alignItems: 'center',
+      }}
+    >
+      {navSocials.map((s) => (
+        <a
+          key={s.label}
+          href={s.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={`Kim Pelham on ${s.label}`}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            width: inMobileMenu ? '44px' : '32px',
+            height: inMobileMenu ? '44px' : '32px',
+            borderRadius: '50%',
+            color: inMobileMenu ? '#2F5233' : '#555',
+            border: inMobileMenu ? '1px solid #E8E3DA' : 'none',
+            transition: 'color 0.2s, background 0.2s, border-color 0.2s',
+            textDecoration: 'none',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.color = '#B8845C';
+            if (inMobileMenu) e.currentTarget.style.borderColor = '#B8845C';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.color = inMobileMenu ? '#2F5233' : '#555';
+            if (inMobileMenu) e.currentTarget.style.borderColor = '#E8E3DA';
+          }}
+        >
+          {s.icon}
+        </a>
+      ))}
+    </div>
+  );
+}
+
 function NavLinkItem({ href, label }: { href: string; label: string }) {
   const [isHovered, setIsHovered] = useState(false);
   return (
@@ -354,7 +433,9 @@ export default function Nav() {
           })}
         </div>
 
-        {/* Right side: Button — hidden on mobile via CSS below */}
+        {/* Right side: socials + Talk to Kim button — hidden on mobile via CSS */}
+        <div id="desktop-nav-right" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
+          <NavSocialIcons />
         <button
           id="desktop-cta"
           style={buttonStyle}
@@ -375,6 +456,7 @@ export default function Nav() {
         >
           Talk to Kim
         </button>
+        </div>
 
         {/* Mobile Hamburger Menu */}
         <button
@@ -495,6 +577,52 @@ export default function Nav() {
           >
             Talk to Kim
           </button>
+
+          {/* Mobile menu socials — visible on dark bg */}
+          <div
+            style={{
+              display: 'flex',
+              gap: '20px',
+              alignItems: 'center',
+              justifyContent: 'center',
+              marginTop: '32px',
+              paddingTop: '24px',
+              borderTop: '1px solid rgba(248,245,240,0.15)',
+            }}
+          >
+            {navSocials.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`Kim Pelham on ${s.label}`}
+                onClick={() => setMobileMenuOpen(false)}
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  width: '44px',
+                  height: '44px',
+                  borderRadius: '50%',
+                  border: '1px solid rgba(248,245,240,0.25)',
+                  color: 'rgba(248,245,240,0.85)',
+                  textDecoration: 'none',
+                  transition: 'color 0.2s, border-color 0.2s',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.color = '#B8845C';
+                  e.currentTarget.style.borderColor = '#B8845C';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.color = 'rgba(248,245,240,0.85)';
+                  e.currentTarget.style.borderColor = 'rgba(248,245,240,0.25)';
+                }}
+              >
+                {s.icon}
+              </a>
+            ))}
+          </div>
         </div>,
         document.body
       )}
@@ -502,14 +630,16 @@ export default function Nav() {
       {/* CSS media queries — controls desktop vs mobile element visibility.
           Using !important to override inline styles without JS matchMedia flicker. */}
       <style>{`
-        #desktop-nav  { display: flex; }
-        #desktop-cta  { display: inline-block; }
-        #mobile-hamburger { display: none; }
+        #desktop-nav        { display: flex; }
+        #desktop-nav-right  { display: flex; }
+        #desktop-cta        { display: inline-block; }
+        #mobile-hamburger   { display: none; }
 
         @media (max-width: 768px) {
-          #desktop-nav      { display: none !important; }
-          #desktop-cta      { display: none !important; }
-          #mobile-hamburger { display: flex !important; }
+          #desktop-nav        { display: none !important; }
+          #desktop-nav-right  { display: none !important; }
+          #desktop-cta        { display: none !important; }
+          #mobile-hamburger   { display: flex !important; }
         }
       `}</style>
     </nav>
