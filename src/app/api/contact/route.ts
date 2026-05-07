@@ -3,35 +3,26 @@ import { NextRequest, NextResponse } from 'next/server';
 /**
  * POST /api/contact
  *
- * Receives the contact form payload from the Next.js frontend,
- * captures consent metadata server-side (IP, timestamp), and
- * writes the contact + consent fields to GHL via the Contacts API.
+ * Receives the contact form payload from the Next.js frontend, captures consent
+ * metadata server-side, creates the contact in GHL, attaches the message as a
+ * note, and immediately texts Kim with the lead details so she can respond
+ * within minutes.
  *
- * A2P 10DLC compliance requirements:
- * - Consent boolean persisted to CRM custom fields
- * - ISO 8601 UTC timestamp recorded at moment of write
- * - IP captured from Vercel x-forwarded-for header (not client)
- * - Verbatim checkbox text stored for audit trail
- * - Server logs errors but never exposes PII in log messages
+ * Flow:
+ *   1. Validate input (firstName + email required)
+ *   2. POST contact to GHL Contacts API (with consent tags)
+ *   3. POST message as a note on the contact (best-effort)
+ *   4. POST SMS to Kim's notification contact via Conversations API (best-effort)
+ *   5. Return 200 to the form even if (3) or (4) fail — the lead is captured
  *
- * GHL custom fields needed (create in GHL Settings → Custom Fields):
- *   sms_marketing_consent          (boolean / checkbox)
- *   sms_marketing_consent_timestamp (date/time)
- *   sms_transactional_consent      (boolean / checkbox)
- *   sms_transactional_consent_timestamp (date/time)
- *   consent_ip_address             (text)
- *   consent_source_url             (text)
- *   consent_checkbox_text_marketing    (text / long text)
- *   consent_checkbox_text_transactional (text / long text)
+ * Environment variables:
+ *   GHL_API_TOKEN                 — GHL Private Integration Token (required)
+ *   GHL_LOCATION_ID               — Kim's sub-account location ID (required)
+ *   GHL_KIM_NOTIFICATION_CONTACT_ID — Kim's contact record in her own GHL (for SMS routing; optional)
  *
- * TODO (Phase 1): Confirm GHL custom field keys/IDs after Phase 1 audit.
- *   The `customField` keys below must match the keys set in GHL exactly.
- *   If GHL uses numeric IDs instead of string keys, replace accordingly.
- *
- * Environment variables required:
- *   GHL_API_TOKEN          — GHL private integration token (never public)
- *   GHL_LOCATION_ID        — Kim's sub-account location ID
- *   NEXT_PUBLIC_LEGAL_BUSINESS_NAME — confirmed from GHL Brand registration
+ * GHL→FUB sync: HLApps already mirrors GHL contacts to Follow Up Boss, so
+ * writing to GHL is sufficient — do NOT also write to FUB directly (creates
+ * duplicate records and race conditions).
  */
 
 const GHL_API_BASE = 'https://services.leadconnectorhq.com';
@@ -52,10 +43,25 @@ interface ContactPayload {
   source?: string;
 }
 
+function buildKimAlert(p: ContactPayload, leadId?: string): string {
+  const lines: string[] = [];
+  lines.push(`🏡 New Pelham website lead`);
+  lines.push(`${p.firstName}${p.lastName ? ' ' + p.lastName : ''}`);
+  if (p.phone) lines.push(`📱 ${p.phone}`);
+  lines.push(`✉️ ${p.email}`);
+  if (p.interested) lines.push(`Interested: ${p.interested}`);
+  if (p.message) {
+    const trimmed = p.message.length > 220 ? p.message.slice(0, 220) + '…' : p.message;
+    lines.push(`"${trimmed}"`);
+  }
+  if (leadId) lines.push(`GHL: ${leadId.slice(0, 8)}`);
+  return lines.join('\n');
+}
 
 export async function POST(req: NextRequest) {
   const GHL_API_TOKEN = process.env.GHL_API_TOKEN;
   const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID;
+  const KIM_CONTACT_ID = process.env.GHL_KIM_NOTIFICATION_CONTACT_ID;
 
   if (!GHL_API_TOKEN || !GHL_LOCATION_ID) {
     console.error('[contact-api] Missing GHL_API_TOKEN or GHL_LOCATION_ID env vars');
@@ -90,10 +96,6 @@ export async function POST(req: NextRequest) {
   }
 
   // Build GHL contact payload
-  // GHL API v2 (2021-07-28) accepts: firstName, lastName, email, phone, locationId,
-  // source, tags, customFields (array of {id, value}), notes (separate endpoint).
-  // Custom field IDs must be created in GHL Settings first — using tags to carry
-  // consent + context until those field IDs are confirmed.
   const consentTags: string[] = [];
   if (smsMarketingConsent) consentTags.push('consent-marketing');
   if (smsTransactionalConsent) consentTags.push('consent-transactional');
@@ -109,6 +111,7 @@ export async function POST(req: NextRequest) {
     tags: [...(customTags ?? ['website-lead']), ...consentTags],
   };
 
+  // 1. Create the contact
   let ghlRes: Response;
   try {
     ghlRes = await fetch(`${GHL_API_BASE}/contacts/`, {
@@ -137,25 +140,58 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // If a message was submitted, attach it as a note on the newly created contact
-  if (message) {
+  // Pull the new contact ID for downstream calls
+  let newContactId: string | undefined;
+  try {
+    const data = (await ghlRes.clone().json()) as { contact?: { id?: string } };
+    newContactId = data.contact?.id;
+  } catch {
+    // Non-fatal — we just won't be able to attach a note
+  }
+
+  // 2. Best-effort: attach the message as a note on the new contact
+  if (message && newContactId) {
     try {
-      const { contact } = await ghlRes.clone().json() as { contact: { id: string } };
-      if (contact?.id) {
-        await fetch(`${GHL_API_BASE}/contacts/${contact.id}/notes`, {
-          method: 'POST',
-          headers: {
-            Authorization: `Bearer ${GHL_API_TOKEN}`,
-            'Content-Type': 'application/json',
-            Version: GHL_API_VERSION,
-          },
-          body: JSON.stringify({ body: message }),
-        });
-      }
+      await fetch(`${GHL_API_BASE}/contacts/${newContactId}/notes`, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${GHL_API_TOKEN}`,
+          'Content-Type': 'application/json',
+          Version: GHL_API_VERSION,
+        },
+        body: JSON.stringify({ body: message }),
+      });
     } catch {
-      // Note creation is best-effort — don't fail the whole request over it
       console.error('[contact-api] Failed to create note on contact');
     }
+  }
+
+  // 3. Best-effort: text Kim immediately so she can respond within minutes
+  if (KIM_CONTACT_ID) {
+    try {
+      const alertBody = buildKimAlert(body, newContactId);
+      const smsRes = await fetch(`${GHL_API_BASE}/conversations/messages`, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${GHL_API_TOKEN}`,
+          'Content-Type': 'application/json',
+          Version: GHL_API_VERSION,
+        },
+        body: JSON.stringify({
+          type: 'SMS',
+          contactId: KIM_CONTACT_ID,
+          message: alertBody,
+        }),
+      });
+      if (!smsRes.ok) {
+        const errTxt = await smsRes.text().catch(() => '(no body)');
+        console.error(`[contact-api] Kim alert SMS returned ${smsRes.status}:`, errTxt.slice(0, 200));
+      }
+    } catch (err) {
+      console.error('[contact-api] Failed to send Kim alert SMS:', (err as Error).message);
+    }
+  } else {
+    console.warn('[contact-api] GHL_KIM_NOTIFICATION_CONTACT_ID not set — lead captured but Kim was not texted');
   }
 
   return NextResponse.json({ success: true }, { status: 200 });
