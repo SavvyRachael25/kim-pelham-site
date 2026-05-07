@@ -40,7 +40,7 @@ const listings: Listing[] = [
   {
     href: '/properties/4611-76th-street-mukilteo',
     image: '/images/mukilteo-01-front-exterior.jpg',
-    imageAlt: '4611 76th Street SW exterior — multi-gen home in Mukilteo, WA',
+    imageAlt: '4611 76th Street SW exterior — Olympic Mountain view home in Mukilteo, WA',
     badge: 'New Listing',
     city: 'Mukilteo, WA 98275',
     address: '4611 76th Street SW',
@@ -51,8 +51,8 @@ const listings: Listing[] = [
       { label: 'Sqft', value: '2,605' },
       { label: 'Lot', value: '10,454' },
     ],
-    tagline: 'Two homes in one. Multi-gen on a fenced corner lot.',
-    body: 'Fully remodeled 1976 NW Contemporary. Quartz kitchen, three decks for the Olympic Mountain views, hot tub, RV parking. Full downstairs kitchenette plus family room, bath, and bedroom — the whole lower level lives like a separate residence.',
+    tagline: 'Remodeled around the view.',
+    body: 'Fully remodeled 1976 NW Contemporary positioned for the Olympic Mountains. Three decks, quartz kitchen, walk-in primary, hot tub, RV parking. The previous owner even cut half a wall in the office so you can see the view while you work.',
     handwritten: 'Showings by appointment — walk it whenever works',
   },
 ];

@@ -8,14 +8,16 @@ import ScrollProgress from '@/components/ScrollProgress';
 
 const details = [
   { label: 'Bedrooms', value: '4 + Office' },
+  { label: 'Bedroom Layout', value: 'Two upstairs, two downstairs' },
   { label: 'Bathrooms', value: '2.25' },
   { label: 'Sq Footage', value: '2,605 sqft (per MLS)' },
   { label: 'Lot Size', value: '10,454 sqft fenced corner lot' },
   { label: 'Style', value: '1976 NW Contemporary, fully remodeled' },
   { label: 'Year Built', value: '1976' },
+  { label: 'View Feature', value: 'Half-wall removed in office for view-from-desk' },
   { label: 'Decks', value: 'Three (Olympic Mountain views)' },
-  { label: 'Multi-Gen Setup', value: 'Full downstairs kitchenette + bath + bedroom' },
   { label: 'Kitchen', value: 'Quartz, Fisher & Paykel appliances' },
+  { label: 'Downstairs', value: 'Family room, wet bar (microwave), 3rd + 4th bed, bath' },
   { label: 'Hot Tub', value: 'Yes' },
   { label: 'Gas Grill Hookup', value: 'Plumbed on the main deck' },
   { label: 'RV Parking', value: 'Yes' },
@@ -407,7 +409,7 @@ export default function MukilteoPage() {
                   lineHeight: 1.2,
                 }}
               >
-                Two homes in one. Multi-gen on the corner lot.
+                Remodeled around the view.
               </h2>
 
               <p
@@ -420,7 +422,7 @@ export default function MukilteoPage() {
                   fontWeight: 300,
                 }}
               >
-                It&rsquo;s a 1976 NW Contemporary that someone took down to the studs and brought back with quartz counters, Fisher &amp; Paykel appliances, a walk-in primary closet, and three decks that catch the Olympic Mountains in the right light. The corner lot is fenced, 10,454 sqft, with a rose garden that&rsquo;s been here longer than I&rsquo;ve been selling houses in Snohomish County.
+                It&rsquo;s a 1976 NW Contemporary that someone took down to the studs and rebuilt for the view. The Olympic Mountains sit on the horizon to the west, and the previous owner remodeled this house so you&rsquo;d see them from everywhere that mattered &mdash; the kitchen, the great room, the primary bedroom, all three decks. They even cut half a wall in the office so the view comes in from your desk while you work from home. That&rsquo;s the kind of detail you don&rsquo;t get unless someone really lived here.
               </p>
 
               <p
@@ -433,7 +435,7 @@ export default function MukilteoPage() {
                   fontWeight: 300,
                 }}
               >
-                What makes it rare at this price band: there&rsquo;s a full kitchenette downstairs, plus a family room, a bath, and a fourth bedroom. So the whole lower level lives like a separate residence &mdash; the kind of setup that solves real problems for real families. Two generations under one roof. A grown kid landing back home for a year. A long-term guest. A short-term rental, if your zoning allows. It&rsquo;s flexibility you don&rsquo;t have to renovate to get.
+                The remodel itself is full top-to-bottom: quartz counters, Fisher &amp; Paykel appliances, a walk-in primary closet, fresh flooring, fresh fixtures. Two bedrooms upstairs, two more downstairs along with a family room, a wet bar (microwave only, no cooktop), and a full bath &mdash; so the lower level holds its own when you have adult kids landing back home, a long-term guest, or you simply want multi-generational space without renovating to get there.
               </p>
 
               <p
@@ -446,7 +448,7 @@ export default function MukilteoPage() {
                   fontWeight: 300,
                 }}
               >
-                Outside, three decks wrap the upper level &mdash; one off the primary bedroom, one off the kitchen with a gas grill hookup plumbed in, one with the hot tub catching the Sound view. RV parking off the driveway. One-minute walk to the Japanese Gulch trail system. Mukilteo ferry, Boeing Paine Field, and the Mukilteo Speedway commercial corridor are all within five minutes. Built 1976, fully remodeled. All measurements per MLS.
+                Outside, three decks wrap the upper level &mdash; one off the primary bedroom, one off the kitchen with a gas grill hookup plumbed in, one with the hot tub. The corner lot is fenced, 10,454 sqft, with a rose garden that&rsquo;s been here longer than I&rsquo;ve been selling houses in Snohomish County. RV parking off the driveway. One-minute walk to the Japanese Gulch trail system. Mukilteo ferry, Boeing Paine Field, and the Mukilteo Speedway corridor are all within five minutes. Built 1976, fully remodeled. All measurements per MLS.
               </p>
 
               {/* Kim's note */}
@@ -462,7 +464,7 @@ export default function MukilteoPage() {
                   borderLeft: '3px solid #B8845C',
                 }}
               >
-                &ldquo;Multi-gen homes that actually live like multi-gen homes are rare under a million. This one solves the problem most families can&rsquo;t solve without a full renovation.&rdquo;
+                &ldquo;The previous owner remodeled this house around the view &mdash; even cut half a wall in the office so you can see the Olympics from your desk. That&rsquo;s the kind of thoughtful detail you only get when someone really lived here.&rdquo;
                 <footer
                   style={{
                     fontFamily: 'var(--font-body)',
@@ -728,12 +730,16 @@ export default function MukilteoPage() {
                 a: '4611 76th Street SW is listed at $975,000. The home offers 2,605 square feet, 4 bedrooms plus an office, 2.25 bathrooms, and a full downstairs kitchenette on a 10,454 sqft fenced corner lot in Mukilteo, WA 98275. MLS# NWM2513590.',
               },
               {
-                q: 'Is 4611 76th Street SW set up for multi-generational living?',
-                a: 'Yes. The lower level has a full kitchenette plus a family room, full bath, and a fourth bedroom — so the whole downstairs lives like a separate residence. It works for two generations under one roof, an adult child landing back home, a long-term guest, or a short-term rental where zoning allows.',
+                q: 'What makes 4611 76th Street SW special?',
+                a: 'The previous owner remodeled the house around the view. The Olympic Mountains sit to the west, and the home is positioned and reconfigured so you see them from the kitchen, great room, primary bedroom, and all three decks. They even cut half a wall in the office so the view comes through your workspace. Top-to-bottom remodel inside (quartz, Fisher & Paykel appliances, walk-in primary closet) plus a multi-generational layout downstairs.',
+              },
+              {
+                q: 'Can 4611 76th Street SW work for multi-generational living?',
+                a: 'Yes. The lower level has the 3rd and 4th bedrooms, a family room, a full bath, and a wet bar with a microwave (no cooktop) — so it can comfortably hold an adult child landing back home, a long-term guest, or a parent moving in. It is not a fully separate ADU, but it gives independent living space without needing to renovate.',
               },
               {
                 q: 'How many bedrooms does 4611 76th Street SW have?',
-                a: 'The home has 4 bedrooms plus an office, for 5 flexible rooms total. Per MLS measurements. The office adds a fifth flex space useful for remote work or a guest room.',
+                a: 'The home has 4 bedrooms plus an office (5 flexible rooms total). Two bedrooms upstairs and two downstairs. Per MLS measurements.',
               },
               {
                 q: 'Are there showings or open houses at 4611 76th Street SW?',

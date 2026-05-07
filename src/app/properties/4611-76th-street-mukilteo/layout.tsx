@@ -1,22 +1,22 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '4611 76th St SW, Mukilteo WA 98275 | Multi-Gen Home | The Pelham Group NW',
+  title: '4611 76th St SW, Mukilteo WA 98275 | Olympic Mountain View Home | The Pelham Group NW',
   description:
-    'Fully remodeled 1976 NW Contemporary on a 10,454 sqft fenced corner lot. 4 bed + office, 2.25 bath, 2,605 sqft. Full downstairs kitchenette — lives like two homes in one. $975,000. MLS# NWM2513590. Contact Kim Pelham (425) 250-9422.',
+    '1976 NW Contemporary remodeled around the Olympic Mountain view — half-wall cut in the office to see it from your desk. 4 bed + office, 2.25 bath, 2,605 sqft on a 10,454 sqft fenced corner lot. $975,000. MLS# NWM2513590. Contact Kim Pelham (425) 250-9422.',
   openGraph: {
-    title: 'Two homes in one. | 4611 76th St SW — Mukilteo Multi-Gen Contemporary',
+    title: 'Remodeled around the view. | 4611 76th St SW — Mukilteo Olympic Mountain Home',
     description:
-      'Fully remodeled 1976 NW Contemporary on a 10,454 sqft fenced corner lot. 4 bed + office, 2.25 bath, 2,605 sqft. Full downstairs kitchenette. $975,000. MLS# NWM2513590.',
+      '1976 NW Contemporary remodeled around the Olympic Mountain view. Three decks, half-wall cut in the office to bring the view to the desk. 4 bed + office, 2.25 bath, 2,605 sqft. $975,000. MLS# NWM2513590.',
     images: [{ url: '/images/mukilteo-03-olympic-sunset.jpg', width: 1200, height: 630 }],
     type: 'website',
     url: 'https://thepelhamgroupnw.com/properties/4611-76th-street-mukilteo',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '4611 76th St SW, Mukilteo WA 98275 | Multi-Gen Home | The Pelham Group NW',
+    title: '4611 76th St SW, Mukilteo WA 98275 | Olympic Mountain View Home | The Pelham Group NW',
     description:
-      'Fully remodeled 1976 NW Contemporary on a 10,454 sqft fenced corner lot. 4 bed + office, 2.25 bath, 2,605 sqft. Full downstairs kitchenette. $975,000. MLS# NWM2513590.',
+      '1976 NW Contemporary remodeled around the Olympic Mountain view. 4 bed + office, 2.25 bath, 2,605 sqft. $975,000. MLS# NWM2513590.',
     images: ['/images/mukilteo-03-olympic-sunset.jpg'],
   },
   alternates: {
@@ -31,7 +31,7 @@ export default function MukilteoLayout({ children }: { children: React.ReactNode
     '@type': 'RealEstateListing',
     name: '4611 76th Street SW, Mukilteo WA 98275',
     description:
-      'Fully remodeled 1976 NW Contemporary on a 10,454 sqft fenced corner lot in Mukilteo. 4 bedrooms plus office, 2.25 bathrooms, 2,605 square feet. Quartz kitchen, walk-in primary closet, three decks with Olympic Mountain views, hot tub. Full downstairs kitchenette plus family room, bath, and bedroom for multi-generational living. RV parking, gas grill hookup, mature rose garden. One-minute walk to Japanese Gulch trails. $975,000. MLS# NWM2513590.',
+      '1976 NW Contemporary in Mukilteo, fully remodeled around the Olympic Mountain view — even the office had half a wall cut to bring the view to the desk. 4 bedrooms plus office (two upstairs, two downstairs), 2.25 bathrooms, 2,605 square feet on a 10,454 sqft fenced corner lot. Quartz kitchen, Fisher & Paykel appliances, walk-in primary closet, three decks (one with hot tub, one with gas grill hookup). Lower level has family room, wet bar (microwave), and full bath supporting multi-generational use. RV parking, mature rose garden. One-minute walk to Japanese Gulch trails. $975,000. MLS# NWM2513590.',
     url: 'https://thepelhamgroupnw.com/properties/4611-76th-street-mukilteo',
     image: [
       'https://thepelhamgroupnw.com/images/mukilteo-01-front-exterior.jpg',
@@ -114,10 +114,18 @@ export default function MukilteoLayout({ children }: { children: React.ReactNode
       },
       {
         '@type': 'Question',
-        name: 'Is 4611 76th Street SW set up for multi-generational living?',
+        name: 'What makes 4611 76th Street SW special?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Yes. The lower level has a full kitchenette plus a family room, full bath, and a fourth bedroom — so the whole downstairs lives like a separate residence. It works for two generations under one roof, an adult child landing back home, a long-term guest, or a short-term rental where zoning allows.',
+          text: 'The previous owner remodeled the house around the Olympic Mountain view to the west. The home is positioned so the view comes through from the kitchen, great room, primary bedroom, and all three decks — and they cut half a wall in the office so you can see the mountains from your desk. Combined with a top-to-bottom interior remodel (quartz, Fisher & Paykel appliances, walk-in primary closet) and a flexible downstairs layout that supports multi-generational living.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Can 4611 76th Street SW work for multi-generational living?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Yes. The lower level has the 3rd and 4th bedrooms, a family room, a full bath, and a wet bar with a microwave (no cooktop) — comfortable for an adult child landing back home, a long-term guest, or a parent moving in. It is not a fully separate ADU but it gives independent living space without needing to renovate.',
         },
       },
       {
@@ -125,7 +133,7 @@ export default function MukilteoLayout({ children }: { children: React.ReactNode
         name: 'How many bedrooms does 4611 76th Street SW have?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The home has 4 bedrooms plus an office, for 5 flexible rooms total. Per MLS measurements. The office adds a fifth flex space useful for remote work or a guest room.',
+          text: '4 bedrooms plus an office (5 flexible rooms total). Two bedrooms upstairs and two downstairs. Per MLS measurements.',
         },
       },
       {
