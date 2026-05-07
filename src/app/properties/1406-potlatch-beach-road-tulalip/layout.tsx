@@ -34,10 +34,11 @@ export default function PotlatchLayout({ children }: { children: React.ReactNode
       '50 feet of high-bank Puget Sound waterfront. 3 bedrooms plus 2 bonus rooms, 2 ensuite bathrooms, 1,662 square feet on a 0.36-acre lot. Built 1925, meticulously maintained. Hot tub, gazebo, panoramic Sound, island, and Olympic Mountain views. $899,900. MLS# 2504310.',
     url: 'https://thepelhamgroupnw.com/properties/1406-potlatch-beach-road-tulalip',
     image: [
-      'https://thepelhamgroupnw.com/images/potlatch-brien-sunset-golden.jpg',
-      'https://thepelhamgroupnw.com/images/potlatch-01-aerial.jpg',
+      'https://thepelhamgroupnw.com/images/potlatch-hero-2400w.jpg',
+      'https://thepelhamgroupnw.com/images/potlatch-gallery-04-dramatic-mountains.jpg',
+      'https://thepelhamgroupnw.com/images/potlatch-gallery-01-panoramic.jpg',
       'https://thepelhamgroupnw.com/images/potlatch-02-exterior.jpg',
-      'https://thepelhamgroupnw.com/images/potlatch-03-sound-view.jpg',
+      'https://thepelhamgroupnw.com/images/potlatch-04-living-room.jpg',
     ],
     address: {
       '@type': 'PostalAddress',

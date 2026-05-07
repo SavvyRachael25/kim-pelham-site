@@ -35,12 +35,12 @@ export default function PotlatchPage() {
         {/* Hero image */}
         <div style={{ position: 'relative', width: '100%', height: 'clamp(300px, 55vw, 600px)' }}>
           <Image
-            src="/images/potlatch-brien-sunset-golden.jpg"
-            alt="Golden sunset over Puget Sound from 1406 Potlatch Beach Road — Marysville WA waterfront property"
+            src="/images/potlatch-hero-2400w.jpg"
+            alt="Waterfront home on Potlatch Beach at sunset with westward Puget Sound view — house visible on left, panoramic Sound and Olympic Mountains center"
             fill
             priority
             quality={90}
-            style={{ objectFit: 'cover', objectPosition: 'center 55%' }}
+            style={{ objectFit: 'cover', objectPosition: 'center 60%' }}
             sizes="100vw"
           />
           <div
@@ -355,15 +355,55 @@ export default function PotlatchPage() {
         </section>
 
         {/* Photo gallery */}
-        <section style={{ padding: '40px 24px', backgroundColor: '#FFFFFF' }}>
+        <section style={{ padding: '64px 24px 40px', backgroundColor: '#FFFFFF' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto 32px', textAlign: 'center' }}>
+            <p
+              style={{
+                fontFamily: 'var(--font-handwritten)',
+                fontSize: '22px',
+                color: '#B8845C',
+                margin: '0 0 10px 0',
+              }}
+            >
+              not stock photography
+            </p>
+            <h2
+              style={{
+                fontFamily: 'var(--font-heading)',
+                fontSize: 'clamp(1.75rem, 3vw, 2.25rem)',
+                fontWeight: 700,
+                color: '#2C2C2C',
+                margin: '0 0 16px 0',
+                lineHeight: 1.2,
+              }}
+            >
+              Tuesday evening from the deck
+            </h2>
+            <p
+              style={{
+                fontFamily: 'var(--font-body)',
+                fontSize: '1.05rem',
+                color: '#555',
+                lineHeight: 1.7,
+                maxWidth: '640px',
+                margin: '0 auto',
+              }}
+            >
+              These are Kim&rsquo;s phone photos from one evening on the deck of 1406 Potlatch Beach Road. Not staged, not drone, not a portfolio shot. Just what the view actually does.
+            </p>
+          </div>
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            {/* Gallery sequenced per Kim's photo-from-the-deck story:
+                01 establishes location (panoramic), 04 emotional peak (dramatic),
+                02 intimate detail (orange water), 03 proves it's not a one-off (pastel),
+                + one interior to anchor the home itself */}
             <div className="potlatch-gallery" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridTemplateRows: '260px 260px', gap: '8px' }}>
               {[
-                { src: '/images/potlatch-02-exterior.jpg', alt: 'Exterior front — white home with wraparound porch and mature garden', col: '1 / 2', row: '1 / 3' },
-                { src: '/images/potlatch-brien-sunset-golden.jpg', alt: 'Golden sunset over Puget Sound from 1406 Potlatch Beach Road', col: '2 / 3', row: '1 / 2' },
-                { src: '/images/potlatch-05-windows-view.jpg', alt: 'Floor-to-ceiling windows with Sound views from living room', col: '3 / 4', row: '1 / 2' },
-                { src: '/images/potlatch-04-living-room.jpg', alt: 'Living room with water views and modern finishes', col: '2 / 3', row: '2 / 3' },
-                { src: '/images/potlatch-06-interior.jpg', alt: 'Interior detail — natural light throughout', col: '3 / 4', row: '2 / 3' },
+                { src: '/images/potlatch-gallery-01-panoramic.jpg', alt: 'Panoramic sunset over Puget Sound from the deck at 1406 Potlatch Beach Road — house edge visible left', col: '1 / 2', row: '1 / 3' },
+                { src: '/images/potlatch-gallery-04-dramatic-mountains.jpg', alt: 'Dramatic sunset over Olympic Mountains from Potlatch Beach', col: '2 / 3', row: '1 / 2' },
+                { src: '/images/potlatch-gallery-02-orange-water.jpg', alt: 'Orange and pink sunset reflecting on calm Puget Sound water from the deck', col: '3 / 4', row: '1 / 2' },
+                { src: '/images/potlatch-gallery-03-pastel-evening.jpg', alt: 'Pastel evening sky over Puget Sound with distant city lights', col: '2 / 3', row: '2 / 3' },
+                { src: '/images/potlatch-04-living-room.jpg', alt: 'Living room with water views and modern finishes — the inside that lives with this view every day', col: '3 / 4', row: '2 / 3' },
               ].map((photo) => (
                 <div key={photo.src} style={{ position: 'relative', gridColumn: photo.col, gridRow: photo.row, borderRadius: '4px', overflow: 'hidden' }}>
                   <Image src={photo.src} alt={photo.alt} fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 33vw" />
