@@ -40,7 +40,7 @@ export default function WaterfrontOrViewPage() {
       <main>
         <InnerHero
           title="Waterfront or view? Two Snohomish homes under $1M"
-          subtitle="By Kim Pelham — May 6, 2026 — 7 min read"
+          subtitle="By Kim Pelham · May 6, 2026 · 7 min read"
           image="/images/potlatch-brien-sunset-golden.jpg"
           imageAlt="Sunset over Puget Sound from Marysville waterfront home in the Tulalip area"
         />
@@ -77,10 +77,10 @@ export default function WaterfrontOrViewPage() {
               At $899,900 and $975,000, you&rsquo;re looking at houses with similar mortgages but completely different daily experiences. Waterfront and view sound like the same kind of luxury until you live with each one. They&rsquo;re not. The maintenance schedule is different. The insurance is different. The commute is different. What you do on a Saturday morning is different. Below is what I&rsquo;d tell a buyer of mine, sitting at a coffee shop, when they ask which one to walk first.
             </p>
 
-            <h3 style={h3Style}>The Marysville waterfront — $899,900</h3>
+            <h3 style={h3Style}>The Marysville waterfront · $899,900</h3>
 
             <p style={bodyP}>
-              <Link href="/properties/1406-potlatch-beach-road-tulalip">1406 Potlatch Beach Road</Link> in Marysville (98271) sits on 50 feet of high-bank Puget Sound frontage about 35 miles north of Seattle. The view is the Sound itself, then the Olympic Mountains across the water, then sunsets that stop you cold every evening. Three bedrooms plus two bonus rooms, two bathrooms (both ensuite), 1,662 square feet on a 0.36-acre lot. The 1925 build was meticulously maintained &mdash; new architectural roof, Andersen windows, exterior paint in 2023, ductless mini-split heating and cooling. There&rsquo;s an indoor hot tub, a gazebo for sunset cocktails, and the kind of yard where you watch eagles overhead while orcas feed below.
+              <Link href="/properties/1406-potlatch-beach-road-tulalip">1406 Potlatch Beach Road</Link> in Marysville (98271) sits on 50 feet of high-bank Puget Sound frontage about 35 miles north of Seattle. The view is the Sound itself, then the Olympic Mountains across the water, then sunsets that stop you cold every evening. Three bedrooms plus two bonus rooms, two bathrooms (both ensuite), 1,662 square feet on a 0.36-acre lot. The 1925 build was meticulously maintained: new architectural roof, Andersen windows, exterior paint in 2023, ductless mini-split heating and cooling. There&rsquo;s an indoor hot tub, a gazebo for sunset cocktails, and the kind of yard where you watch eagles overhead while orcas feed below.
             </p>
 
             <p style={bodyP}>
@@ -91,14 +91,14 @@ export default function WaterfrontOrViewPage() {
               <strong>Who this fits:</strong> someone whose Saturday morning is a kayak or a coffee on the deck. Someone who&rsquo;ll trade a longer commute for sound-of-water-on-rocks every day. Someone who likes that the home is older and lower-square-footage but sits on land that simply isn&rsquo;t made anymore.
             </p>
 
-            <h3 style={h3Style}>The Mukilteo view-first remodel — $975,000</h3>
+            <h3 style={h3Style}>The Mukilteo view-first remodel · $975,000</h3>
 
             <p style={bodyP}>
               <Link href="/properties/4611-76th-street-mukilteo">4611 76th Street SW</Link> is a 1976 NW Contemporary that the previous owner remodeled around the Olympic Mountain view. The Olympics sit on the western horizon across Puget Sound, and the home is positioned so the kitchen, great room, primary bedroom, and all three decks catch them. The detail I keep telling people about: the previous owner cut half a wall in the office so the view comes in from your desk while you work from home. That&rsquo;s the kind of thing you only do when you really live somewhere.
             </p>
 
             <p style={bodyP}>
-              The remodel itself is full top-to-bottom inside &mdash; quartz counters, Fisher &amp; Paykel appliances, walk-in primary closet, fresh flooring, fresh fixtures. Two bedrooms upstairs, two more downstairs along with a family room, a wet bar (microwave, no cooktop), and a full bath, so the lower level holds its own when you&rsquo;ve got an adult kid landing back home or a parent moving in. RV parking, gas grill hookup on the main deck, hot tub on the side deck, fenced corner lot, mature rose garden, one-minute walk to the Japanese Gulch trail system. Mukilteo ferry to Whidbey is ten minutes west; Boeing Paine Field is five minutes inland.
+              The remodel itself is full top-to-bottom inside: quartz counters, Fisher &amp; Paykel appliances, walk-in primary closet, fresh flooring, fresh fixtures. Two bedrooms upstairs, two more downstairs along with a family room, a wet bar (microwave, no cooktop), and a full bath, so the lower level holds its own when you&rsquo;ve got an adult kid landing back home or a parent moving in. RV parking, gas grill hookup on the main deck, hot tub on the side deck, fenced corner lot, mature rose garden, one-minute walk to the Japanese Gulch trail system. Mukilteo ferry to Whidbey is ten minutes west; Boeing Paine Field is five minutes inland.
             </p>
 
             <p style={bodyP}>
@@ -113,22 +113,22 @@ export default function WaterfrontOrViewPage() {
 
             <h3 style={h3Style}>1. Maintenance and insurance</h3>
             <p style={bodyP}>
-              Waterfront homes carry real costs that view-only homes don&rsquo;t. Bulkhead inspections, salt-air corrosion on metal fixtures, higher home insurance premiums, sometimes flood riders depending on elevation. Potlatch is high-bank waterfront so flood risk is lower than low-bank, but you&rsquo;re still paying carrier rates for being on the Sound. Mukilteo is a standard residential lot &mdash; insurance is whatever a comparable inland home would cost, and there&rsquo;s no shoreline obligation.
+              Waterfront homes carry real costs that view-only homes don&rsquo;t. Bulkhead inspections, salt-air corrosion on metal fixtures, higher home insurance premiums, sometimes flood riders depending on elevation. Potlatch is high-bank waterfront so flood risk is lower than low-bank, but you&rsquo;re still paying carrier rates for being on the Sound. Mukilteo is a standard residential lot. Insurance is whatever a comparable inland home would cost, and there&rsquo;s no shoreline obligation.
             </p>
 
             <h3 style={h3Style}>2. Daily life</h3>
             <p style={bodyP}>
-              The waterfront experience is more immersive and more isolated. Your nearest neighbor matters more because the lots are typically larger and the road is quieter. Your weekend is shaped by the water &mdash; tides, weather windows, whether to put the kayak in. The view experience from a Mukilteo home is honestly almost as visually stunning (those Olympic sunsets are the same sunsets) but the daily-life context is different. You&rsquo;re in a residential neighborhood with sidewalks, neighbors, a school district, kids on bikes. Trader Joe&rsquo;s is five minutes away.
+              The waterfront experience is more immersive and more isolated. Your nearest neighbor matters more because the lots are typically larger and the road is quieter. Your weekend is shaped by the water (tides, weather windows, whether to put the kayak in). The view experience from a Mukilteo home is honestly almost as visually stunning (those Olympic sunsets are the same sunsets) but the daily-life context is different. You&rsquo;re in a residential neighborhood with sidewalks, neighbors, a school district, kids on bikes.
             </p>
 
             <h3 style={h3Style}>3. Resale</h3>
             <p style={bodyP}>
-              True waterfront in Snohomish County is a finite, irreplaceable inventory class. There are only so many feet of Puget Sound shoreline, and they&rsquo;re not making more. That tends to support resale values regardless of broader market cycles. View homes are more correlated with their neighborhood &mdash; if the surrounding values move, the view home moves with them. Both are good resale stories at this price point. Waterfront has a slightly thinner buyer pool but a more stable floor.
+              True waterfront in Snohomish County is a finite, irreplaceable inventory class. There are only so many feet of Puget Sound shoreline, and they&rsquo;re not making more. That tends to support resale values regardless of broader market cycles. View homes are more correlated with their neighborhood. If the surrounding values move, the view home moves with them. Both are good resale stories at this price point. Waterfront has a slightly thinner buyer pool but a more stable floor.
             </p>
 
             <h3 style={h3Style}>4. Financing</h3>
             <p style={bodyP}>
-              Most lenders treat both like standard residential mortgages at this price point. The Potlatch waterfront is on deeded land (not leased, not condominium) which is the case that makes financing easy. If you&rsquo;re putting 20% down on either, you&rsquo;re looking at a comparable monthly payment within a few hundred dollars. Property taxes are different &mdash; Potlatch annual taxes are $7,152, Mukilteo is $6,423.
+              Most lenders treat both like standard residential mortgages at this price point. The Potlatch waterfront is on deeded land (not leased, not condominium) which is the case that makes financing easy. If you&rsquo;re putting 20% down on either, you&rsquo;re looking at a comparable monthly payment within a few hundred dollars. Property taxes are different: Potlatch annual taxes are $7,152, Mukilteo is $6,423.
             </p>
 
             <h2 style={h2Style}>Three questions to ask yourself</h2>
@@ -138,10 +138,10 @@ export default function WaterfrontOrViewPage() {
 
             <ol style={{ ...bodyP, paddingLeft: '24px' }}>
               <li style={{ marginBottom: '16px' }}>
-                <strong>Where do you want to be on a Saturday morning at 9 a.m.?</strong> If the answer is &ldquo;outside, in the water or on the deck, with a coffee, ignoring my phone,&rdquo; that&rsquo;s a waterfront answer. If the answer involves the trail system, the farmer&rsquo;s market, the school pickup, neighbors waving &mdash; that&rsquo;s a view-home answer.
+                <strong>Where do you want to be on a Saturday morning at 9 a.m.?</strong> If the answer is &ldquo;outside, in the water or on the deck, with a coffee, ignoring my phone,&rdquo; that&rsquo;s a waterfront answer. If the answer involves the trail system, the farmer&rsquo;s market, the school pickup, neighbors waving, that&rsquo;s a view-home answer.
               </li>
               <li style={{ marginBottom: '16px' }}>
-                <strong>How many bedrooms do you actually need?</strong> Potlatch is 3+2 bonus rooms (so 5 flex rooms total, but the &ldquo;bonus&rdquo; rooms are smaller). Mukilteo is 4 bedrooms plus a real office, with a fully separate downstairs that lives like a second residence. If you&rsquo;ve got family situations &mdash; aging parents, returning college kids, long-term guests &mdash; Mukilteo&rsquo;s downstairs is hard to replicate at this price.
+                <strong>How many bedrooms do you actually need?</strong> Potlatch is 3+2 bonus rooms (so 5 flex rooms total, but the &ldquo;bonus&rdquo; rooms are smaller). Mukilteo is 4 bedrooms plus a real office, with a fully separate downstairs that lives like a second residence. If you&rsquo;ve got family situations (aging parents, returning college kids, long-term guests), Mukilteo&rsquo;s downstairs is hard to replicate at this price.
               </li>
               <li style={{ marginBottom: '16px' }}>
                 <strong>Are you a maintenance-tolerant or maintenance-averse buyer?</strong> Be honest. Waterfront rewards the maintenance-tolerant. View-from-an-inland-lot rewards the maintenance-averse. Both are valid. Just know which one you are before you fall in love with a sunset.
@@ -150,11 +150,11 @@ export default function WaterfrontOrViewPage() {
 
             <h2 style={h2Style}>The honest answer most of the time</h2>
             <p style={bodyP}>
-              Most of my buyers walk both before they decide. The right answer is whichever one feels right when you stand in it &mdash; and it&rsquo;s rarely the one you predicted on paper. That&rsquo;s the value of getting in person. Photos help, but neither of these homes really makes sense until you stand on the deck and watch the sun set over the Olympics.
+              Most of my buyers walk both before they decide. The right answer is whichever one feels right when you stand in it, and it&rsquo;s rarely the one you predicted on paper. That&rsquo;s the value of getting in person. Photos help, but neither of these homes really makes sense until you stand on the deck and watch the sun set over the Olympics.
             </p>
 
             <p style={bodyP}>
-              If you want to walk one or both this week, text or call me at <a href="tel:+14252509422" style={{ color: 'var(--color-forest)' }}>(425) 250-9422</a>. Showings are by appointment, and I keep my schedule flexible &mdash; weekday evenings and weekends both work. I&rsquo;ll meet you at either house, walk the property with you, and answer real questions about the trade-offs. No pressure either direction.
+              If you want to walk one or both this week, text or call me at <a href="tel:+14252509422" style={{ color: 'var(--color-forest)' }}>(425) 250-9422</a>. Showings are by appointment, and I keep my schedule flexible. Weekday evenings and weekends both work. I&rsquo;ll meet you at either house, walk the property with you, and answer real questions about the trade-offs. No pressure either direction.
             </p>
 
             <div
