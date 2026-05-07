@@ -354,32 +354,60 @@ export default function MediaPage() {
             >
               Interested in featuring Kim or The Pelham Group NW? We're happy to provide hi-res photos, a full biography, key stats, and story angles. Just reach out.
             </p>
-            <a
-              href="mailto:hello@thepelhamgroupnw.com?subject=Press%20Kit%20Request"
-              style={{
-                display: 'inline-block',
-                padding: '16px 40px',
-                backgroundColor: '#2F5233',
-                color: '#F8F5F0',
-                fontFamily: 'var(--font-body)',
-                fontSize: '0.95rem',
-                fontWeight: 600,
-                borderRadius: '4px',
-                textDecoration: 'none',
-                transition: 'all 0.3s',
-                marginBottom: '48px',
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.backgroundColor = '#3d6b42';
-                e.currentTarget.style.transform = 'translateY(-2px)';
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.backgroundColor = '#2F5233';
-                e.currentTarget.style.transform = 'translateY(0)';
-              }}
-            >
-              Request Press Kit
-            </a>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '14px', justifyContent: 'center', marginBottom: '48px' }}>
+              <a
+                href="/press/kim-pelham-press-kit.pdf"
+                download
+                style={{
+                  display: 'inline-block',
+                  padding: '16px 40px',
+                  backgroundColor: '#2F5233',
+                  color: '#F8F5F0',
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '0.95rem',
+                  fontWeight: 600,
+                  borderRadius: '4px',
+                  textDecoration: 'none',
+                  transition: 'all 0.3s',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#3d6b42';
+                  e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = '#2F5233';
+                  e.currentTarget.style.transform = 'translateY(0)';
+                }}
+              >
+                Download Press Kit (PDF)
+              </a>
+              <a
+                href="mailto:hello@thepelhamgroupnw.com?subject=Press%20Kit%20Request"
+                style={{
+                  display: 'inline-block',
+                  padding: '16px 36px',
+                  backgroundColor: 'transparent',
+                  color: '#2F5233',
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '0.95rem',
+                  fontWeight: 600,
+                  borderRadius: '4px',
+                  textDecoration: 'none',
+                  border: '2px solid #2F5233',
+                  transition: 'all 0.3s',
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = '#2F5233';
+                  e.currentTarget.style.color = '#F8F5F0';
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = 'transparent';
+                  e.currentTarget.style.color = '#2F5233';
+                }}
+              >
+                Email Kim Directly
+              </a>
+            </div>
 
             <div
               style={{
