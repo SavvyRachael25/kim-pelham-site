@@ -194,7 +194,7 @@ export default function Footer() {
                 'Best of Zillow',
                 'SRES Certified',
                 '17+ Years Experience',
-                '102.03% Sale-to-List Ratio',
+                '102.3% Sale-to-List Ratio',
               ].map((badge) => (
                 <div
                   key={badge}
@@ -224,6 +224,15 @@ export default function Footer() {
             &copy; 2026 Kim Pelham &middot; The Pelham Group NW. All rights reserved.
           </p>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
+            <Link
+              href="/sources"
+              style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: '#777', textDecoration: 'none' }}
+              onMouseEnter={(e) => { e.currentTarget.style.color = '#B8845C'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.color = '#777'; }}
+            >
+              Sources
+            </Link>
+            <span style={{ color: '#555', fontSize: '0.7rem' }}>|</span>
             <Link
               href="/privacy"
               style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: '#777', textDecoration: 'none' }}

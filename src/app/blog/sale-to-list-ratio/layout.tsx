@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Sale-to-List Ratio in Snohomish County Explained | Kim Pelham',
-  description: "What is a sale-to-list ratio and why does Kim Pelham's 102.03% matter? Here's what this number tells you about who to trust with your Snohomish County home sale.",
+  description: "What is a sale-to-list ratio and why does Kim Pelham's 102.3% matter? Here's what this number tells you about who to trust with your Snohomish County home sale.",
   openGraph: {
     title: "Sale-to-List Ratio in Snohomish County Explained",
-    description: "What is a sale-to-list ratio and why does Kim Pelham's 102.03% matter? Here's what this number tells you about who to trust with your Snohomish County home sale.",
+    description: "What is a sale-to-list ratio and why does Kim Pelham's 102.3% matter? Here's what this number tells you about who to trust with your Snohomish County home sale.",
     images: ['/images/property-01-everett-home-exterior.jpg'],
     type: 'article',
   },
@@ -25,7 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               {
                 "@type": "Question",
                 "name": "What is a good sale-to-list ratio in Snohomish County?",
-                "acceptedAnswer": { "@type": "Answer", "text": "In Snohomish County, a sale-to-list ratio between 100–102% is considered strong, meaning the home sold at or slightly above asking price. A ratio above 102% is very strong and typically indicates multiple offers. A ratio of 102% or higher — like Kim Pelham's 102.03% average — is exceptional and reflects a consistent process of strategic pricing and competitive buyer demand generation." }
+                "acceptedAnswer": { "@type": "Answer", "text": "In Snohomish County, a sale-to-list ratio between 100–102% is considered strong, meaning the home sold at or slightly above asking price. A ratio above 102% is very strong and typically indicates multiple offers. A ratio of 102% or higher — like Kim Pelham's 102.3% average — is exceptional and reflects a consistent process of strategic pricing and competitive buyer demand generation." }
               },
               {
                 "@type": "Question",

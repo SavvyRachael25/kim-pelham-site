@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Why Staging Beats Price Cuts: A Snohomish County Broker\u2019s Data-Driven Case | Kim Pelham',
-  description: 'Kim Pelham\u2019s 102.03% sale-to-list ratio proves it: staging a home before selling consistently outperforms price cuts in Snohomish County. Here\u2019s the math.',
+  description: 'Kim Pelham\u2019s 102.3% sale-to-list ratio proves it: staging a home before selling consistently outperforms price cuts in Snohomish County. Here\u2019s the math.',
   openGraph: {
     title: 'Why Staging Beats Price Cuts: A Snohomish County Broker\u2019s Data-Driven Case',
-    description: 'Kim Pelham\u2019s 102.03% sale-to-list ratio proves it: staging a home before selling consistently outperforms price cuts in Snohomish County. Here\u2019s the math.',
+    description: 'Kim Pelham\u2019s 102.3% sale-to-list ratio proves it: staging a home before selling consistently outperforms price cuts in Snohomish County. Here\u2019s the math.',
     images: ['/images/hero-02-warm-kitchen.jpg'],
     type: 'article',
   },
@@ -25,7 +25,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               {
                 "@type": "Question",
                 "name": "Does staging really help sell a home for more money?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Staged homes in Snohomish County sell for a higher percentage of asking price than non-staged homes. Kim Pelham\u2019s average sale-to-list ratio is 102.03% vs 100.2% for the NWMLS market. The difference on a $600,000 home is over $10,000." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Staged homes in Snohomish County sell for a higher percentage of asking price than non-staged homes. Kim Pelham\u2019s average sale-to-list ratio is 102.3% vs 100.2% for the NWMLS market. The difference on a $600,000 home is over $10,000." }
               },
               {
                 "@type": "Question",
@@ -35,7 +35,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               {
                 "@type": "Question",
                 "name": "What is the ROI of home staging?",
-                "acceptedAnswer": { "@type": "Answer", "text": "The National Association of Realtors reports that 81% of buyer brokers say staging helps buyers visualize a home as theirs. Staged homes sell 30\u201350% faster and consistently command higher final prices. Kim\u2019s 102.03% sale-to-list ratio reflects this in her actual client results." }
+                "acceptedAnswer": { "@type": "Answer", "text": "The National Association of Realtors reports that 81% of buyer brokers say staging helps buyers visualize a home as theirs. Staged homes sell 30\u201350% faster and consistently command higher final prices. Kim\u2019s 102.3% sale-to-list ratio reflects this in her actual client results." }
               },
               {
                 "@type": "Question",

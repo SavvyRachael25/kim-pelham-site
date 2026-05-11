@@ -44,8 +44,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               },
               {
                 "@type": "Question",
-                "name": "How does Kim Pelham achieve a 102.03% sale-to-list ratio?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Kim's 102.03% sale-to-list ratio in Snohomish County results from a structured pre-launch process: strategic pricing based on current comps, professional staging and photography, and a targeted marketing rollout timed to maximize buyer attention in the first 72 hours. The goal is to create competitive conditions where multiple buyers are making decisions simultaneously — which consistently drives final sale prices above list." }
+                "name": "How does Kim Pelham achieve a 102.3% sale-to-list ratio?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Kim's 102.3% sale-to-list ratio in Snohomish County results from a structured pre-launch process: strategic pricing based on current comps, professional staging and photography, and a targeted marketing rollout timed to maximize buyer attention in the first 72 hours. The goal is to create competitive conditions where multiple buyers are making decisions simultaneously — which consistently drives final sale prices above list." }
               }
             ]
           })

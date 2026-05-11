@@ -317,7 +317,7 @@ export default function FirstSeventyTwoHoursPage() {
                 marginBottom: '24px',
               }}
             >
-              My 102.03% average sale-to-list ratio isn't luck — it's the result of mastering this window, consistently, across every price point and neighborhood in Snohomish County. Every listing gets the full treatment because I know that these three days set the tone for everything that follows.
+              My 102.3% average sale-to-list ratio isn't luck — it's the result of mastering this window, consistently, across every price point and neighborhood in Snohomish County. Every listing gets the full treatment because I know that these three days set the tone for everything that follows.
             </p>
 
             <h2

@@ -67,6 +67,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://thepelhamgroupnw.com/sources</loc>
+    <lastmod>2026-05-10</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://thepelhamgroupnw.com/testimonials</loc>
     <lastmod>2026-04-08</lastmod>
     <changefreq>monthly</changefreq>
@@ -145,7 +151,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://thepelhamgroupnw.com/blog/potlatch-beach-road-tulalip-waterfront</loc>
+    <loc>https://thepelhamgroupnw.com/blog/potlatch-beach-road-marysville-waterfront</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -187,7 +193,7 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://thepelhamgroupnw.com/properties/1406-potlatch-beach-road-tulalip</loc>
+    <loc>https://thepelhamgroupnw.com/properties/1406-potlatch-beach-road-marysville</loc>
     <lastmod>2026-04-28</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>

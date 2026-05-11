@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'How to Sell 5% Above Market Value: Staging + Pricing Framework | Kim Pelham',
-  description: 'Kim Pelham achieves a 102.03% sale-to-list ratio in Snohomish County using a three-phase staging framework and strategic pricing. Here\u2019s exactly how it works.',
+  description: 'Kim Pelham achieves a 102.3% sale-to-list ratio in Snohomish County using a three-phase staging framework and strategic pricing. Here\u2019s exactly how it works.',
   openGraph: {
     title: 'How to Sell 5% Above Market Value: The Staging + Pricing Framework That Gets Results in Snohomish County',
-    description: 'Kim Pelham achieves a 102.03% sale-to-list ratio in Snohomish County using a three-phase staging framework and strategic pricing. Here\u2019s exactly how it works.',
+    description: 'Kim Pelham achieves a 102.3% sale-to-list ratio in Snohomish County using a three-phase staging framework and strategic pricing. Here\u2019s exactly how it works.',
     images: ['/images/hero-02-warm-kitchen.jpg'],
     type: 'article',
   },
@@ -30,7 +30,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               {
                 "@type": "Question",
                 "name": "What is a good sale-to-list ratio in Snohomish County?",
-                "acceptedAnswer": { "@type": "Answer", "text": "The Snohomish County market average sale-to-list ratio hovers around 100.2%, meaning most homes sell very close to their asking price. A ratio above 101% indicates the home sold above list price, which typically means strong demand, competitive offers, and a well-executed pricing and presentation strategy. Kim Pelham\u2019s 102.03% average reflects consistent execution across staging, pricing, and marketing." }
+                "acceptedAnswer": { "@type": "Answer", "text": "The Snohomish County market average sale-to-list ratio hovers around 100.2%, meaning most homes sell very close to their asking price. A ratio above 101% indicates the home sold above list price, which typically means strong demand, competitive offers, and a well-executed pricing and presentation strategy. Kim Pelham\u2019s 102.3% average reflects consistent execution across staging, pricing, and marketing." }
               },
               {
                 "@type": "Question",

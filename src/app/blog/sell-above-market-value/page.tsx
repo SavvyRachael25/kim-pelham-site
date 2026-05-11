@@ -34,7 +34,7 @@ export default function SellAboveMarketValuePage() {
                 fontWeight: 700,
               }}
             >
-              On a $600,000 home, a 2% difference between what you net and what your neighbor nets is $12,000. That&apos;s real money. My average sale-to-list ratio in Snohomish County is 102.03% compared to the market average of 100.2%. That gap doesn&apos;t happen by accident. It&apos;s the result of a repeatable staging and pricing framework I&apos;ve refined over 17 years in this market.
+              On a $600,000 home, a 2% difference between what you net and what your neighbor nets is $12,000. That&apos;s real money. My average sale-to-list ratio in Snohomish County is 102.3% compared to the market average of 100.2%. That gap doesn&apos;t happen by accident. It&apos;s the result of a repeatable staging and pricing framework I&apos;ve refined over 17 years in this market.
             </p>
 
             {/* Stat Callout Box */}
@@ -46,7 +46,7 @@ export default function SellAboveMarketValuePage() {
               margin: '0 0 40px 0',
             }}>
               <p style={{ fontFamily: 'var(--font-heading)', fontSize: '2.5rem', fontWeight: 700, color: 'var(--color-forest)', margin: '0 0 6px 0', lineHeight: 1 }}>
-                102.03%
+                102.3%
               </p>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', margin: '0 0 8px 0', lineHeight: 1.6 }}>
                 That&apos;s Kim Pelham&apos;s average sale-to-list ratio in Snohomish County, versus the market average of 100.2%. On a $600,000 home, that&apos;s roughly an additional $10,980 in your pocket compared to the average seller. On a $750,000 home, the difference climbs to over $13,700.
@@ -415,7 +415,7 @@ export default function SellAboveMarketValuePage() {
                 marginBottom: '24px',
               }}
             >
-              The ROI math is straightforward. On a $550,000 home, the difference between my average 102.03% sale-to-list ratio and the market&apos;s 100.2% is about $10,000. A $1,500 staging investment that contributes even a portion of that gap isn&apos;t a cost. It&apos;s a multiplier.
+              The ROI math is straightforward. On a $550,000 home, the difference between my average 102.3% sale-to-list ratio and the market&apos;s 100.2% is about $10,000. A $1,500 staging investment that contributes even a portion of that gap isn&apos;t a cost. It&apos;s a multiplier.
             </p>
 
             {/* Pull Quote */}
@@ -600,7 +600,7 @@ export default function SellAboveMarketValuePage() {
                   What is a good sale-to-list ratio in Snohomish County?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  The market average in Snohomish County sits around 100.2%. Any ratio above 101% means the home sold above asking, which reflects strong demand and competitive offers. At 102.03%, Kim Pelham&apos;s listings consistently outperform the market average by a meaningful margin.
+                  The market average in Snohomish County sits around 100.2%. Any ratio above 101% means the home sold above asking, which reflects strong demand and competitive offers. At 102.3%, Kim Pelham&apos;s listings consistently outperform the market average by a meaningful margin.
                 </p>
               </div>
 

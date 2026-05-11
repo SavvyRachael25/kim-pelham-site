@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   ),
   title: "Kim Pelham | Snohomish County Real Estate Broker | Everett, Bothell, Mill Creek WA",
   description:
-    "Kim Pelham is a Snohomish County real estate broker serving Everett, Bothell, Snohomish, Mill Creek, Lake Stevens & Marysville WA. 17+ years of experience, 102.03% sale-to-list ratio, and a two-buyer-max policy.",
+    "Kim Pelham is a Snohomish County real estate broker serving Everett, Bothell, Snohomish, Mill Creek, Lake Stevens & Marysville WA. 17+ years of experience, 102.3% sale-to-list ratio, and a two-buyer-max policy.",
   openGraph: {
     title: "Kim Pelham | Snohomish County Real Estate Broker",
     description:
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Kim Pelham | Snohomish County Real Estate Broker",
-    description: "Your trusted Pacific Northwest real estate broker. 17+ years experience. 102.03% sale-to-list ratio.",
+    description: "Your trusted Pacific Northwest real estate broker. 17+ years experience. 102.3% sale-to-list ratio.",
     images: ["/opengraph-image"],
   },
   verification: {

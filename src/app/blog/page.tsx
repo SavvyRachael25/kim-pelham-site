@@ -57,7 +57,7 @@ const blogPosts: BlogPost[] = [
     title: 'How to Sell 5% Above Market Value in Snohomish County',
     slug: 'sell-above-market-value',
     excerpt:
-      'My 102.03% sale-to-list ratio is not luck. It is the result of a specific staging and pricing framework applied to every listing. Here is how it works.',
+      'My 102.3% sale-to-list ratio is not luck. It is the result of a specific staging and pricing framework applied to every listing. Here is how it works.',
     date: '2026-04-17',
     category: 'Selling Tips',
   },
@@ -90,7 +90,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: '4',
-    title: 'Understanding Your Sale-to-List Ratio (And Why Kim\'s Is 102.03%)',
+    title: 'Understanding Your Sale-to-List Ratio (And Why Kim\'s Is 102.3%)',
     slug: 'sale-to-list-ratio',
     excerpt:
       'The most useful number for evaluating a real estate broker, and most sellers never ask about it. Here is what it means and how to use it.',

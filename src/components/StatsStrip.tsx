@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useRef, useState } from 'react';
 
 interface Stat {
@@ -8,6 +9,8 @@ interface Stat {
   suffix?: string;
   label: string;
   quip: string;
+  citationId?: string;
+  citationN?: number;
 }
 
 const stats: Stat[] = [
@@ -15,22 +18,30 @@ const stats: Stat[] = [
     number: 17,
     label: 'Years in Real Estate',
     quip: '(and counting)',
+    citationId: 'experience',
+    citationN: 5,
   },
   {
     number: 102,
     suffix: '%',
     label: 'Sale-to-List Ratio',
-    quip: '(102.03% vs 100.2% market avg)',
+    quip: '(102.3% vs 100.2% market avg)',
+    citationId: 'sale-to-list',
+    citationN: 1,
   },
   {
     number: 2,
     label: 'Buyers Max at a Time',
     quip: '(you deserve my full attention)',
+    citationId: 'two-client-policy',
+    citationN: 6,
   },
   {
     number: 176,
     label: 'Homes Sold',
     quip: '(and counting)',
+    citationId: 'homes-sold',
+    citationN: 7,
   },
 ];
 
@@ -108,6 +119,29 @@ function StatCounter({ stat, isVisible }: StatCounterProps) {
         }}
       >
         {stat.label}
+        {stat.citationId && stat.citationN ? (
+          <sup
+            style={{
+              fontSize: '0.6em',
+              marginLeft: '3px',
+              verticalAlign: 'super',
+              lineHeight: 0,
+            }}
+          >
+            <Link
+              href={`/sources#${stat.citationId}`}
+              aria-label={`Source ${stat.citationN}`}
+              title="View source"
+              style={{
+                color: '#F8F5F0',
+                textDecoration: 'none',
+                opacity: 0.65,
+              }}
+            >
+              [{stat.citationN}]
+            </Link>
+          </sup>
+        ) : null}
       </p>
       <p
         style={{

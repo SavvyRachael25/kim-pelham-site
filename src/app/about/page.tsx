@@ -6,6 +6,7 @@ import ScrollProgress from '@/components/ScrollProgress';
 import Image from 'next/image';
 import Link from 'next/link';
 import InnerHero from '@/components/InnerHero';
+import Citation from '@/components/Citation';
 import { useEffect, useRef, useState } from 'react';
 
 export default function AboutPage() {
@@ -168,7 +169,7 @@ export default function AboutPage() {
                 margin: 0,
               }}
             >
-              102.03%
+              102.3%<Citation id="sale-to-list" n={1} light />
             </p>
             <p
               style={{
@@ -179,7 +180,7 @@ export default function AboutPage() {
                 opacity: 0.9,
               }}
             >
-              Average sale-to-list ratio (vs 100.2% NWMLS avg)
+              Average sale-to-list ratio (vs 100.2% NWMLS avg<Citation id="market-average" n={2} light />)
             </p>
           </div>
 
@@ -213,7 +214,7 @@ export default function AboutPage() {
                 opacity: 0.9,
               }}
             >
-              Total volume (176 homes sold)
+              Total volume (176 homes sold<Citation id="homes-sold" n={7} light />)
             </p>
           </div>
 
@@ -247,7 +248,7 @@ export default function AboutPage() {
                 opacity: 0.9,
               }}
             >
-              Years of experience
+              Years of experience<Citation id="experience" n={5} light />
             </p>
           </div>
         </div>

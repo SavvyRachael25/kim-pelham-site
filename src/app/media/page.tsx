@@ -6,16 +6,31 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
+import Citation from '@/components/Citation';
 
 // pressItems removed — all entries were unconfirmed. See FIX 5 (audit 4/16/26).
 
-const awards = [
+interface Award {
+  image?: string;
+  imageAlt?: string;
+  title: string;
+  sub: string;
+  hasImage: boolean;
+  stat?: string;
+  statSuffix?: string;
+  citationId?: string;
+  citationN?: number;
+}
+
+const awards: Award[] = [
   {
     image: '/images/best-of-snoco-2024-no-background.png',
     imageAlt: 'Best of Snohomish County 2024',
     title: 'Best of Snohomish County',
-    sub: '2024',
+    sub: '2023 & 2024',
     hasImage: true,
+    citationId: 'best-of-snoco',
+    citationN: 4,
   },
   {
     image: '/images/best-of-zillow-portrait.jpg',
@@ -25,10 +40,12 @@ const awards = [
     hasImage: true,
   },
   {
-    stat: '102.03%',
+    stat: '102.3%',
     title: 'Sale-to-List Ratio',
     sub: 'vs 100.2% NWMLS avg.',
     hasImage: false,
+    citationId: 'sale-to-list',
+    citationN: 1,
   },
   {
     stat: '14',
@@ -42,6 +59,8 @@ const awards = [
     title: 'Zillow & Google Reviews',
     sub: '40+ verified reviews',
     hasImage: false,
+    citationId: 'google-reviews',
+    citationN: 3,
   },
 ];
 
@@ -212,6 +231,9 @@ export default function MediaPage() {
                       }}
                     >
                       {award.title}
+                      {award.citationId && award.citationN ? (
+                        <Citation id={award.citationId} n={award.citationN} />
+                      ) : null}
                     </p>
                     <p
                       style={{

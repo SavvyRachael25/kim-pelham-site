@@ -6,6 +6,7 @@ import ScrollProgress from '@/components/ScrollProgress';
 import Link from 'next/link';
 import InnerHero from '@/components/InnerHero';
 import FAQSection from '@/components/FAQSection';
+import Citation from '@/components/Citation';
 import { useEffect, useRef, useState } from 'react';
 
 export default function SellersPage() {
@@ -48,7 +49,7 @@ export default function SellersPage() {
 
       <InnerHero
         title="Sell Your Home for More"
-        subtitle="102.03% sale-to-list ratio vs. 100.2% NWMLS market average"
+        subtitle="102.3% sale-to-list ratio vs. 100.2% NWMLS market average"
         image="/images/kim-with-door.jpg"
         imageAlt="Kim Pelham helping sellers"
       />
@@ -100,7 +101,7 @@ export default function SellersPage() {
             }}
           >
             On average, homes sell for 100.2% of the listing price in the NWMLS
-            market.
+            market.<Citation id="market-average" n={2} />
           </p>
           <p
             style={{
@@ -111,7 +112,7 @@ export default function SellersPage() {
               margin: '0 0 20px 0',
             }}
           >
-            My clients see 102.03%
+            My clients see 102.3%<Citation id="sale-to-list" n={1} />
           </p>
           <p
             style={{

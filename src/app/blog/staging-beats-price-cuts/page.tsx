@@ -58,7 +58,7 @@ export default function StagingBeatsPriceCutsPage() {
                 marginBottom: '32px',
               }}
             >
-              My average sale-to-list ratio is 102.03%. That means my clients sell for more than they ask. That number is not an accident. It is the result of doing the work before the listing goes live, and staging is a significant part of that work.
+              My average sale-to-list ratio is 102.3%. That means my clients sell for more than they ask. That number is not an accident. It is the result of doing the work before the listing goes live, and staging is a significant part of that work.
             </p>
 
             {/* Stat Callout Box */}
@@ -70,7 +70,7 @@ export default function StagingBeatsPriceCutsPage() {
               margin: '0 0 40px 0',
             }}>
               <p style={{ fontFamily: 'var(--font-heading)', fontSize: '2.5rem', fontWeight: 700, color: 'var(--color-forest)', margin: '0 0 6px 0', lineHeight: 1 }}>
-                102.03% vs 100.2%
+                102.3% vs 100.2%
               </p>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', margin: '0 0 12px 0', lineHeight: 1.6 }}>
                 Kim Pelham&apos;s average sale-to-list ratio vs the NWMLS Snohomish County market average. On a $600,000 home, that 1.83% gap is $10,980 in your pocket.
@@ -254,7 +254,7 @@ export default function StagingBeatsPriceCutsPage() {
                 marginBottom: '24px',
               }}
             >
-              My own numbers bear this out. My clients average 102.03% of list price. The NWMLS Snohomish County market average is 100.2%. That gap is not explained entirely by staging, but staging is a consistent part of how I get there. It is not the only variable. It is a reliable one.
+              My own numbers bear this out. My clients average 102.3% of list price. The NWMLS Snohomish County market average is 100.2%. That gap is not explained entirely by staging, but staging is a consistent part of how I get there. It is not the only variable. It is a reliable one.
             </p>
 
             {/* Pull Quote */}
@@ -521,7 +521,7 @@ export default function StagingBeatsPriceCutsPage() {
                   Does staging really help sell a home for more money?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  Yes. Staged homes in Snohomish County sell for a higher percentage of asking price than non-staged homes. Kim Pelham&apos;s average sale-to-list ratio is 102.03% vs 100.2% for the NWMLS market. The difference on a $600,000 home is over $10,000.
+                  Yes. Staged homes in Snohomish County sell for a higher percentage of asking price than non-staged homes. Kim Pelham&apos;s average sale-to-list ratio is 102.3% vs 100.2% for the NWMLS market. The difference on a $600,000 home is over $10,000.
                 </p>
               </div>
 
@@ -539,7 +539,7 @@ export default function StagingBeatsPriceCutsPage() {
                   What is the ROI of home staging?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  The National Association of Realtors reports that 81% of buyer brokers say staging helps buyers visualize a home as theirs. Staged homes sell 30 to 50% faster and consistently command higher final prices. Kim&apos;s 102.03% sale-to-list ratio reflects this in her actual client results.
+                  The National Association of Realtors reports that 81% of buyer brokers say staging helps buyers visualize a home as theirs. Staged homes sell 30 to 50% faster and consistently command higher final prices. Kim&apos;s 102.3% sale-to-list ratio reflects this in her actual client results.
                 </p>
               </div>
 
