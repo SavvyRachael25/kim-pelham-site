@@ -6,25 +6,34 @@ interface IntroAnimationProps {
   children: ReactNode;
 }
 
+// Session key for "I've already seen the intro this session" so return visits skip it.
+const INTRO_SEEN_KEY = "pelham-intro-seen-2026-05";
+
 export default function IntroAnimation({ children }: IntroAnimationProps) {
-  const [showIntro, setShowIntro] = useState(true);
-  const [prefersReducedMotion, setPrefersReducedMotion] = useState(false);
+  // Default to NOT showing. Only flip on after client-side checks pass. This
+  // keeps the intro from blocking server-rendered LCP for crawlers and slow
+  // connections (Lighthouse was measuring 11s+ LCP with the old overlay).
+  const [showIntro, setShowIntro] = useState(false);
 
   useEffect(() => {
-    // Check for prefers-reduced-motion
-    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
-    setPrefersReducedMotion(mediaQuery.matches);
+    // Skip the intro for users who prefer reduced motion.
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
-    if (mediaQuery.matches) {
-      // Skip intro if user prefers reduced motion
-      setShowIntro(false);
+    // Skip the intro for return visits in the same session.
+    if (typeof window !== "undefined" && sessionStorage.getItem(INTRO_SEEN_KEY)) {
       return;
     }
 
-    // Timeline: 2.2s slide up, then 3s total before hiding
+    setShowIntro(true);
+    if (typeof window !== "undefined") {
+      sessionStorage.setItem(INTRO_SEEN_KEY, "1");
+    }
+
+    // Faster timeline: 0.6s display, 0.4s slide up = 1.0s total
+    // (Previously 3.0s, which dragged LCP past 11s on Lighthouse.)
     const hideTimer = setTimeout(() => {
       setShowIntro(false);
-    }, 3000);
+    }, 1000);
 
     return () => clearTimeout(hideTimer);
   }, []);
@@ -69,7 +78,7 @@ export default function IntroAnimation({ children }: IntroAnimationProps) {
           align-items: center;
           justify-content: center;
           z-index: 150;
-          animation: introSlideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) 2.2s forwards;
+          animation: introSlideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1) 0.6s forwards;
         }
 
         .intro-content {
@@ -116,9 +125,9 @@ export default function IntroAnimation({ children }: IntroAnimationProps) {
         }
       `}</style>
 
-      <div className="intro-overlay">
+      <div className="intro-overlay" aria-hidden="true">
         <div className="intro-content">
-          <h1 className="intro-name">Kim Pelham</h1>
+          <p className="intro-name">Kim Pelham</p>
           <p className="intro-tagline">your neighbor in real estate</p>
           <p className="intro-subtitle">(425) 250-9422  -  Snohomish County</p>
         </div>
