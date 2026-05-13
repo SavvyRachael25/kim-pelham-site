@@ -140,8 +140,8 @@ export default function Hero() {
             animation: 'fadeSlideUp 0.8s ease-out 0.2s both',
           }}
         >
-          17+ years helping families buy and sell in Snohomish County. Two-buyer-max policy
-          because you deserve my full attention.
+          I'm a Snohomish County real estate broker with 17 years of experience and a 102.3% sale-to-list ratio.
+          I work with a maximum of two active clients at a time, so every showing, listing, and closing earns my full attention.
         </p>
 
         {/* CTA Button */}
