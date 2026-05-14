@@ -126,26 +126,50 @@ export default function FAQSection({
                     +
                   </span>
                 </button>
-                {isOpen && (
-                  <div
+                {/*
+                  Render the answer in the DOM at all times (visually
+                  collapsed when not open) so SEO/AEO crawlers can read it.
+                  Previously this was a conditional render (`isOpen && ...`)
+                  which meant the answer text only entered the DOM after
+                  a user click — invisible to bots. Audit (Savvy AEO,
+                  2026-05-13) flagged this as the cause of Citability 35.
+                */}
+                <div
+                  style={{
+                    padding: isOpen ? '0 28px 24px' : '0 28px 0',
+                    borderTop: isOpen ? '1px solid #F0EDE7' : 'none',
+                    maxHeight: isOpen ? '2000px' : '0',
+                    overflow: 'hidden',
+                    transition: 'max-height 0.3s ease, padding 0.2s ease',
+                  }}
+                  aria-hidden={!isOpen}
+                >
+                  <p
                     style={{
-                      padding: '0 28px 24px',
-                      borderTop: '1px solid #F0EDE7',
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '1rem',
+                      lineHeight: 1.7,
+                      color: '#555555',
+                      margin: isOpen ? '16px 0 0 0' : '0',
                     }}
                   >
-                    <p
-                      style={{
-                        fontFamily: 'var(--font-body)',
-                        fontSize: '1rem',
-                        lineHeight: 1.7,
-                        color: '#555555',
-                        margin: '16px 0 0 0',
-                      }}
-                    >
-                      {faq.answer}
-                    </p>
-                  </div>
-                )}
+                    {faq.answer.split(/(\bhttps?:\/\/[^\s)]+)/g).map((part, i) =>
+                      /^https?:\/\//.test(part) ? (
+                        <a
+                          key={i}
+                          href={part}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={{ color: '#B8845C', textDecoration: 'underline' }}
+                        >
+                          {part}
+                        </a>
+                      ) : (
+                        <span key={i}>{part}</span>
+                      )
+                    )}
+                  </p>
+                </div>
               </div>
             );
           })}

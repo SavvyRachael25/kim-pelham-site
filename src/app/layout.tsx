@@ -185,7 +185,90 @@ export default function RootLayout({
                       "name": "Sources & Citations",
                       "url": "https://thepelhamgroupnw.com/sources"
                     }
+                  ],
+                  "makesOffer": [
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Home Listing & Sale",
+                        "description": "Full-service home selling in Snohomish County. Pricing strategy, in-house staging, professional photography with Matterport 3D tours, full digital and physical marketing, and negotiation. 102.3% average sale-to-list ratio.",
+                        "url": "https://thepelhamgroupnw.com/sellers",
+                        "areaServed": "Snohomish County, WA",
+                        "provider": { "@id": "https://thepelhamgroupnw.com/#business" }
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Buyer Representation",
+                        "description": "Snohomish County buyer agent services including search, evaluation, offer strategy, and closing. Two-client-max policy means every property walk is in person with Kim Pelham.",
+                        "url": "https://thepelhamgroupnw.com/buyers",
+                        "areaServed": "Snohomish County, WA",
+                        "provider": { "@id": "https://thepelhamgroupnw.com/#business" }
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "In-House Home Staging",
+                        "description": "Psychology-driven home staging done in-house by Kim Pelham, included with every Pelham Group NW listing. No outsourced staging fees. Designed to create emotional attachment between buyers and the home.",
+                        "url": "https://thepelhamgroupnw.com/staging",
+                        "areaServed": "Snohomish County, WA",
+                        "provider": { "@id": "https://thepelhamgroupnw.com/#business" }
+                      }
+                    },
+                    {
+                      "@type": "Offer",
+                      "itemOffered": {
+                        "@type": "Service",
+                        "name": "Senior Real Estate Specialist (SRES) Services",
+                        "description": "Senior moves and downsizing concierge service. Coordinates move timeline, staging, donation logistics, document handling, and family communication. Kim Pelham holds the SRES designation from the National Association of Realtors.",
+                        "url": "https://thepelhamgroupnw.com/senior-services",
+                        "areaServed": "Snohomish County, WA",
+                        "provider": { "@id": "https://thepelhamgroupnw.com/#business" }
+                      }
+                    }
                   ]
+                },
+                {
+                  "@type": "Organization",
+                  "@id": "https://thepelhamgroupnw.com/#organization",
+                  "name": "The Pelham Group NW",
+                  "legalName": "The Pelham Group NW",
+                  "url": "https://thepelhamgroupnw.com",
+                  "logo": "https://thepelhamgroupnw.com/images/kim-headshot-msh.jpg",
+                  "founder": { "@id": "https://thepelhamgroupnw.com/#kim" },
+                  "member": { "@id": "https://thepelhamgroupnw.com/#kim" },
+                  "areaServed": [
+                    {"@type": "AdministrativeArea", "name": "Snohomish County, WA"},
+                    {"@type": "AdministrativeArea", "name": "King County, WA"},
+                    {"@type": "AdministrativeArea", "name": "Pierce County, WA"},
+                    {"@type": "AdministrativeArea", "name": "Skagit County, WA"}
+                  ],
+                  "parentOrganization": {
+                    "@type": "Organization",
+                    "name": "Katrina Eileen Real Estate",
+                    "url": "https://katrinaeileen.com"
+                  },
+                  "sameAs": [
+                    "https://www.facebook.com/PelhamGroupNW",
+                    "https://www.instagram.com/pelhamgroupnw/",
+                    "https://www.linkedin.com/in/kimpelham/",
+                    "https://www.youtube.com/channel/UCfDuJ0P0qccTvYOKbR4AZWA",
+                    "https://www.google.com/search?q=The+Pelham+Group+NW+Everett+WA"
+                  ]
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://thepelhamgroupnw.com/#website",
+                  "url": "https://thepelhamgroupnw.com",
+                  "name": "The Pelham Group NW",
+                  "description": "Kim Pelham, Snohomish County real estate broker. 17 years experience, 102.3% sale-to-list ratio, maximum two active clients at a time.",
+                  "publisher": { "@id": "https://thepelhamgroupnw.com/#organization" },
+                  "inLanguage": "en-US"
                 },
                 {
                   "@type": "LocalBusiness",
