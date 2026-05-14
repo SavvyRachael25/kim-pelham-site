@@ -159,7 +159,33 @@ export default function RootLayout({
                     "@type": "Organization",
                     "name": "Katrina Eileen Real Estate"
                   },
-                  "citation": "https://thepelhamgroupnw.com/sources"
+                  "citation": [
+                    {
+                      "@type": "CreativeWork",
+                      "name": "NWMLS Market Statistics",
+                      "url": "https://www.nwmls.com/discover/news-and-statistics/"
+                    },
+                    {
+                      "@type": "CreativeWork",
+                      "name": "Washington State Department of Licensing — Real Estate Broker License Lookup",
+                      "url": "https://professionals.dol.wa.gov/s/license-lookup"
+                    },
+                    {
+                      "@type": "CreativeWork",
+                      "name": "The Daily Herald — Best of Snohomish County",
+                      "url": "https://www.heraldnet.com/"
+                    },
+                    {
+                      "@type": "CreativeWork",
+                      "name": "Google Business Profile",
+                      "url": "https://www.google.com/search?q=The+Pelham+Group+NW+Everett+WA"
+                    },
+                    {
+                      "@type": "WebPage",
+                      "name": "Sources & Citations",
+                      "url": "https://thepelhamgroupnw.com/sources"
+                    }
+                  ]
                 },
                 {
                   "@type": "LocalBusiness",
@@ -214,7 +240,33 @@ export default function RootLayout({
                     {"@type": "City", "name": "Mukilteo", "addressRegion": "WA"},
                     {"@type": "AdministrativeArea", "name": "Snohomish County", "addressRegion": "WA"}
                   ],
-                  "citation": "https://thepelhamgroupnw.com/sources",
+                  "citation": [
+                    {
+                      "@type": "CreativeWork",
+                      "name": "NWMLS Market Statistics",
+                      "url": "https://www.nwmls.com/discover/news-and-statistics/"
+                    },
+                    {
+                      "@type": "CreativeWork",
+                      "name": "Washington State Department of Licensing — Real Estate Broker License Lookup",
+                      "url": "https://professionals.dol.wa.gov/s/license-lookup"
+                    },
+                    {
+                      "@type": "CreativeWork",
+                      "name": "The Daily Herald — Best of Snohomish County",
+                      "url": "https://www.heraldnet.com/"
+                    },
+                    {
+                      "@type": "CreativeWork",
+                      "name": "Google Business Profile",
+                      "url": "https://www.google.com/search?q=The+Pelham+Group+NW+Everett+WA"
+                    },
+                    {
+                      "@type": "WebPage",
+                      "name": "Sources & Citations",
+                      "url": "https://thepelhamgroupnw.com/sources"
+                    }
+                  ],
                   "sameAs": [
                     "https://www.facebook.com/PelhamGroupNW",
                     "https://www.instagram.com/pelhamgroupnw/",
