@@ -11,10 +11,37 @@ interface FAQSectionProps {
   title?: string;
   faqs: FAQ[];
   backgroundColor?: string;
+  /**
+   * Emit FAQPage JSON-LD schema alongside the visible Q&A. Default true.
+   * AI engines (ChatGPT, Perplexity, Google AI Overviews) lift verbatim
+   * answers from FAQPage schema, so this should stay on unless there's
+   * a duplicate-schema concern on a given page.
+   */
+  emitSchema?: boolean;
 }
 
-export default function FAQSection({ title = 'Frequently Asked Questions', faqs, backgroundColor = '#FFFFFF' }: FAQSectionProps) {
+export default function FAQSection({
+  title = 'Frequently Asked Questions',
+  faqs,
+  backgroundColor = '#FFFFFF',
+  emitSchema = true,
+}: FAQSectionProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const faqSchema = emitSchema
+    ? {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: faqs.map((f) => ({
+          '@type': 'Question',
+          name: f.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: f.answer,
+          },
+        })),
+      }
+    : null;
 
   return (
     <section
@@ -23,6 +50,12 @@ export default function FAQSection({ title = 'Frequently Asked Questions', faqs,
         backgroundColor,
       }}
     >
+      {faqSchema ? (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      ) : null}
       <div style={{ maxWidth: '800px', margin: '0 auto', width: '100%' }}>
         <h2
           style={{

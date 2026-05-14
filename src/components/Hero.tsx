@@ -21,8 +21,10 @@ export default function Hero() {
         alt="Aerial view of Snohomish County neighborhood"
         fill
         priority
-        quality={85}
-        sizes="100vw"
+        // Dropped from 85 to 78 — mobile LCP win, no visible quality loss
+        // on the heavily-darkened gradient overlay.
+        quality={78}
+        sizes="(max-width: 768px) 100vw, 100vw"
         style={{
           objectFit: 'cover',
           objectPosition: 'center',

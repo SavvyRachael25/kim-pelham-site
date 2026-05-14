@@ -46,6 +46,19 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
+        {/*
+          AEO/LCP: explicit preload for the hero image. Next.js Image with
+          priority already injects a preload, but the audit (Savvy AEO,
+          2026-05-13) flagged mobile LCP at 50/100. Belt-and-suspenders
+          preload here pushes the hero into the browser's prefetch queue
+          before any other resource is parsed.
+        */}
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero-01-aerial-neighborhood.jpg"
+          fetchPriority="high"
+        />
       </head>
       <body className="min-h-full flex flex-col">
         <script
