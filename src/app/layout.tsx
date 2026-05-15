@@ -259,7 +259,13 @@ export default function RootLayout({
                     "name": "Katrina Eileen Real Estate",
                     "url": "https://katrinaeileen.com"
                   },
+                  "identifier": {
+                    "@type": "PropertyValue",
+                    "propertyID": "Wikidata",
+                    "value": "Q139813050"
+                  },
                   "sameAs": [
+                    "https://www.wikidata.org/wiki/Q139813050",
                     "https://www.facebook.com/PelhamGroupNW",
                     "https://www.instagram.com/pelhamgroupnw/",
                     "https://www.linkedin.com/in/kimpelham/",
@@ -356,7 +362,13 @@ export default function RootLayout({
                       "url": "https://thepelhamgroupnw.com/sources"
                     }
                   ],
+                  "identifier": {
+                    "@type": "PropertyValue",
+                    "propertyID": "Wikidata",
+                    "value": "Q139813050"
+                  },
                   "sameAs": [
+                    "https://www.wikidata.org/wiki/Q139813050",
                     "https://www.facebook.com/PelhamGroupNW",
                     "https://www.instagram.com/pelhamgroupnw/",
                     "https://www.linkedin.com/in/kimpelham/",
