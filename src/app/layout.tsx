@@ -1,10 +1,41 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/next";
+import { Cormorant_Garamond, Inter, Caveat } from "next/font/google";
 import "./globals.css";
 import IntroAnimation from "@/components/IntroAnimation";
 import Analytics from "@/components/Analytics";
 import MobileListingsPopup from "@/components/MobileListingsPopup";
+
+/*
+  LCP optimization: self-host the three brand fonts via next/font/google.
+  next/font downloads the woff2 files at build time, serves them from the
+  same origin (no extra DNS + TLS handshakes), and injects preload tags
+  with `font-display: swap` automatically. Replaces the external <link>
+  to fonts.googleapis.com which was render-blocking on slow 4G.
+*/
+const cormorant = Cormorant_Garamond({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  style: ["normal", "italic"],
+  variable: "--font-heading",
+  display: "swap",
+  preload: true,
+});
+const inter = Inter({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-body",
+  display: "swap",
+  preload: true,
+});
+const caveat = Caveat({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-handwritten",
+  display: "swap",
+  preload: false,
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -38,27 +69,24 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full antialiased">
+    <html
+      lang="en"
+      className={`h-full antialiased ${cormorant.variable} ${inter.variable} ${caveat.variable}`}
+    >
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Caveat:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
         {/*
-          AEO/LCP: explicit preload for the hero image. Next.js Image with
-          priority already injects a preload, but the audit (Savvy AEO,
-          2026-05-13) flagged mobile LCP at 50/100. Belt-and-suspenders
-          preload here pushes the hero into the browser's prefetch queue
-          before any other resource is parsed.
+          Fonts are now handled by next/font/google (see top of this file).
+          That gives us:
+            - Self-hosted woff2 served from the same origin as HTML
+            - Automatic <link rel="preload"> for the primary subsets
+            - font-display: swap baked in
+          Net effect: no render-blocking external stylesheet, faster LCP.
+
+          The hero image preload was removed because Next.js Image with
+          `priority` auto-injects a more accurate <link rel="preload">
+          (with imagesrcset for the actual served variants), which made
+          the manual preload here a double-fetch of the source JPG.
         */}
-        <link
-          rel="preload"
-          as="image"
-          href="/images/hero-01-aerial-neighborhood.jpg"
-          fetchPriority="high"
-        />
       </head>
       <body className="min-h-full flex flex-col">
         <script
