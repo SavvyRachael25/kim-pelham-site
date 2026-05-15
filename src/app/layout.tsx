@@ -98,7 +98,13 @@ export default function RootLayout({
                     }
                   },
                   "worksFor": { "@id": "https://thepelhamgroupnw.com/#business" },
+                  "identifier": {
+                    "@type": "PropertyValue",
+                    "propertyID": "Wikidata",
+                    "value": "Q139812411"
+                  },
                   "sameAs": [
+                    "https://www.wikidata.org/wiki/Q139812411",
                     "https://www.facebook.com/PelhamGroupNW",
                     "https://www.instagram.com/pelhamgroupnw/",
                     "https://www.linkedin.com/in/kimpelham/",
