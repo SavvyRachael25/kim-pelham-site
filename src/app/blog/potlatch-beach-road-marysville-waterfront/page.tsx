@@ -166,7 +166,7 @@ export default function PotlatchBlogPost() {
                 fontWeight: 300,
               }}
             >
-              1406 Potlatch Beach Road in Marysville is listed at $899,900. It is high-bank waterfront on Puget Sound. The views are sweeping. The sunsets are the kind that stop you mid-sentence. It is 35 miles north of Seattle on the same water.
+              1406 Potlatch Beach Road in Marysville is listed at $799,900. It is high-bank waterfront on Puget Sound. The views are sweeping. The sunsets are the kind that stop you mid-sentence. It is 35 miles north of Seattle on the same water.
             </p>
 
             <p
@@ -386,7 +386,7 @@ export default function PotlatchBlogPost() {
                 }}
               >
                 {[
-                  { label: 'Price', value: '$899,900' },
+                  { label: 'Price', value: '$799,900' },
                   { label: 'Beds', value: '3' },
                   { label: 'Baths', value: '1' },
                   { label: 'Sqft', value: '1,662' },
@@ -557,7 +557,7 @@ export default function PotlatchBlogPost() {
             {
               question: 'What are the property taxes in Marysville WA?',
               answer:
-                'Property tax rates in Marysville (ZIP 98271, Snohomish County) run approximately 0.9% to 1.1% of assessed value annually. On a $899,900 property, expect roughly $8,100 to $9,900 per year. Snohomish County property taxes are generally lower than King County rates for comparable assessed values. Verify current figures for any specific parcel with the Snohomish County Assessor at snohomishcountywa.gov.',
+                'Property tax rates in Marysville (ZIP 98271, Snohomish County) run approximately 0.9% to 1.1% of assessed value annually. On a $799,900 property, expect roughly $8,100 to $9,900 per year. Snohomish County property taxes are generally lower than King County rates for comparable assessed values. Verify current figures for any specific parcel with the Snohomish County Assessor at snohomishcountywa.gov.',
             },
           ]}
         />

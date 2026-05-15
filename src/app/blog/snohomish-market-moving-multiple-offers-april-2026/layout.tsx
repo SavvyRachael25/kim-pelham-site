@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     'King County median home price',
     'Snohomish County median home price',
     'Everett real estate market',
-    'Tulalip waterfront home for sale',
+    'Marysville waterfront home for sale',
     'multiple offers Snohomish County',
     'Kim Pelham real estate broker',
     'Pelham Group NW',
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
         url: 'https://thepelhamgroupnw.com/images/potlatch-brien-sunset-golden.jpg',
         width: 1200,
         height: 900,
-        alt: 'Golden sunset over Puget Sound from 1406 Potlatch Beach Road, Tulalip WA',
+        alt: 'Golden sunset over Puget Sound from 1406 Potlatch Beach Road, Marysville WA',
       },
     ],
     type: 'article',
@@ -207,15 +207,15 @@ export default function PelhamPostLayout({ children }: { children: React.ReactNo
       },
       {
         '@type': 'Question',
-        name: 'How much waterfront home can I buy in Tulalip under a million dollars?',
+        name: 'How much waterfront home can I buy in Marysville under a million dollars?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Tulalip waterfront on Puget Sound is priced dramatically lower than comparable Seattle waterfront. Kim Pelham currently has 1406 Potlatch Beach Road listed at $899,900, a 3-bedroom, 2-bathroom high-bank waterfront home on a third of an acre. Seattle waterfront with comparable Sound views typically starts at $3 million and above.',
+          text: 'Marysville waterfront on Puget Sound is priced dramatically lower than comparable Seattle waterfront. Kim Pelham currently has 1406 Potlatch Beach Road listed at $799,900, a 3-bedroom, 2-bathroom high-bank waterfront home on a third of an acre. Seattle waterfront with comparable Sound views typically starts at $3 million and above.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Who should I contact to buy or sell a home in Everett, Snohomish, or Tulalip?',
+        name: 'Who should I contact to buy or sell a home in Everett, Snohomish, or Marysville?',
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'Kim Pelham of The Pelham Group NW is a real estate broker serving Snohomish, King, Pierce, and Skagit Counties. Kim can be reached by text or call at 425-250-9422, by email at hello@thepelhamgroupnw.com, or through the contact form at thepelhamgroupnw.com.',

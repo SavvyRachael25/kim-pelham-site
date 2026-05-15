@@ -48,7 +48,7 @@ export default function WaterfrontOrViewPage() {
         <article style={{ padding: '80px 20px', backgroundColor: '#fff' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <p style={{ ...bodyP, fontWeight: 700 }}>
-              Two of my current listings sit just under the million-dollar mark in Snohomish County, and they answer the same question two completely different ways. One is a high-bank Puget Sound waterfront in Marysville at $899,900. The other is a fully remodeled view-first home in Mukilteo at $975,000. If you&rsquo;re shopping in this price band, this is the trade-off that actually matters.
+              Two of my current listings sit just under the million-dollar mark in Snohomish County, and they answer the same question two completely different ways. One is a high-bank Puget Sound waterfront in Marysville at $799,900. The other is a fully remodeled view-first home in Mukilteo at $975,000. If you&rsquo;re shopping in this price band, this is the trade-off that actually matters.
             </p>
 
             <div
@@ -64,7 +64,7 @@ export default function WaterfrontOrViewPage() {
                 Side-by-side at a glance
               </p>
               <p style={{ ...bodyP, fontSize: '1rem', marginBottom: '8px' }}>
-                <strong>1406 Potlatch Beach Road, Marysville:</strong> $899,900 · 50&prime; high-bank waterfront on Puget Sound · 3 bed + 2 bonus rooms · 1,662 sqft · 0.36 acres · MLS# 2504310
+                <strong>1406 Potlatch Beach Road, Marysville:</strong> $799,900 · 50&prime; high-bank waterfront on Puget Sound · 3 bed + 2 bonus rooms · 1,662 sqft · 0.36 acres · MLS# 2504310
               </p>
               <p style={{ ...bodyP, fontSize: '1rem', margin: 0 }}>
                 <strong>4611 76th Street SW, Mukilteo:</strong> $975,000 · Olympic Mountain view, view-first remodel · 4 bed + office · 2,605 sqft · 10,454 sqft fenced corner lot · MLS# NWM2513590
@@ -74,10 +74,10 @@ export default function WaterfrontOrViewPage() {
             <h2 style={h2Style}>Two homes, same budget, very different lifestyles</h2>
 
             <p style={bodyP}>
-              At $899,900 and $975,000, you&rsquo;re looking at houses with similar mortgages but completely different daily experiences. Waterfront and view sound like the same kind of luxury until you live with each one. They&rsquo;re not. The maintenance schedule is different. The insurance is different. The commute is different. What you do on a Saturday morning is different. Below is what I&rsquo;d tell a buyer of mine, sitting at a coffee shop, when they ask which one to walk first.
+              At $799,900 and $975,000, you&rsquo;re looking at houses with similar mortgages but completely different daily experiences. Waterfront and view sound like the same kind of luxury until you live with each one. They&rsquo;re not. The maintenance schedule is different. The insurance is different. The commute is different. What you do on a Saturday morning is different. Below is what I&rsquo;d tell a buyer of mine, sitting at a coffee shop, when they ask which one to walk first.
             </p>
 
-            <h3 style={h3Style}>The Marysville waterfront · $899,900</h3>
+            <h3 style={h3Style}>The Marysville waterfront · $799,900</h3>
 
             <p style={bodyP}>
               <Link href="/properties/1406-potlatch-beach-road-tulalip">1406 Potlatch Beach Road</Link> in Marysville (98271) sits on 50 feet of high-bank Puget Sound frontage about 35 miles north of Seattle. The view is the Sound itself, then the Olympic Mountains across the water, then sunsets that stop you cold every evening. Three bedrooms plus two bonus rooms, two bathrooms (both ensuite), 1,662 square feet on a 0.36-acre lot. The 1925 build was meticulously maintained: new architectural roof, Andersen windows, exterior paint in 2023, ductless mini-split heating and cooling. There&rsquo;s an indoor hot tub, a gazebo for sunset cocktails, and the kind of yard where you watch eagles overhead while orcas feed below.

@@ -82,7 +82,7 @@ export default function PotlatchBlogLayout({ children }: { children: React.React
         name: 'What are the property taxes in Marysville WA?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Property tax rates in Marysville (ZIP 98271, Snohomish County) run approximately 0.9% to 1.1% of assessed value annually. On a $899,900 property, expect roughly $8,100 to $9,900 per year. Snohomish County property taxes are generally lower than King County rates for comparable assessed values. For precise current tax figures on a specific parcel, verify with the Snohomish County Assessor at snohomishcountywa.gov.',
+          text: 'Property tax rates in Marysville (ZIP 98271, Snohomish County) run approximately 0.9% to 1.1% of assessed value annually. On a $799,900 property, expect roughly $8,100 to $9,900 per year. Snohomish County property taxes are generally lower than King County rates for comparable assessed values. For precise current tax figures on a specific parcel, verify with the Snohomish County Assessor at snohomishcountywa.gov.',
         },
       },
     ],

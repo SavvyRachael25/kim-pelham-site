@@ -289,7 +289,7 @@ export default function SnohomishMarketMay2026() {
                 href="/properties/1406-potlatch-beach-road-marysville"
                 style={linkStyle}
               >
-                <strong>1406 Potlatch Beach Road, Marysville, $899,900.</strong>
+                <strong>1406 Potlatch Beach Road, Marysville, $799,900.</strong>
               </Link>{' '}
               Puget Sound high-bank waterfront. One of the rarer view setups
               I&apos;ve represented this year.

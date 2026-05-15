@@ -184,7 +184,7 @@ export default function MobileListingsPopup() {
                 borderRadius: 3,
               }}
             >
-              Marysville · $899,900
+              Marysville · $799,900
             </div>
           </div>
 

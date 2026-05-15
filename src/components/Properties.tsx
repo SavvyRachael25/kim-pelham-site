@@ -26,7 +26,7 @@ const listings: Listing[] = [
     badge: 'New Listing',
     city: 'Marysville, WA 98271',
     address: '1406 Potlatch Beach Road',
-    price: '$899,900',
+    price: '$799,900',
     stats: [
       { label: 'Bed', value: '3' },
       { label: 'Bath', value: '2' },
@@ -34,7 +34,7 @@ const listings: Listing[] = [
       { label: 'Acres', value: '0.36' },
     ],
     tagline: 'A $3 million view for under a million.',
-    body: 'High-bank waterfront on Puget Sound. Sweeping Sound vistas, sunsets over the Olympics, 0.36 acres. Seattle waterfront starts at $3M. This one is $899K. Same water, 35 miles north.',
+    body: 'High-bank waterfront on Puget Sound. Sweeping Sound vistas, sunsets over the Olympics, 0.36 acres. Seattle waterfront starts at $3M. This one is $799K. Same water, 35 miles north.',
     handwritten: 'The sunsets here stop you cold every time',
   },
   {

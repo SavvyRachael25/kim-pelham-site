@@ -30,7 +30,7 @@ export default function PelhamPostAprilWeek4() {
         <div style={{ position: 'relative', width: '100%', height: 'clamp(280px, 50vw, 540px)' }}>
           <Image
             src="/images/potlatch-brien-sunset-golden.jpg"
-            alt="Golden sunset over Puget Sound from 1406 Potlatch Beach Road, Tulalip WA, April 2026"
+            alt="Golden sunset over Puget Sound from 1406 Potlatch Beach Road, Marysville WA, April 2026"
             fill
             priority
             quality={90}
@@ -188,10 +188,10 @@ export default function PelhamPostAprilWeek4() {
           </p>
 
           {/* Featured listing */}
-          <h2 id="featured-listing" style={h2Style}>Featured listing: 1406 Potlatch Beach Road, Tulalip</h2>
+          <h2 id="featured-listing" style={h2Style}>Featured listing: 1406 Potlatch Beach Road, Marysville</h2>
 
           <p style={pStyle}>
-            My current featured listing is a 3-bedroom, 2-bathroom high-bank waterfront at <strong>$899,900</strong>. West-facing lot, 1,662 square feet of livable space on a third of an acre, built in 1925 with good bones and a deck that faces the sunset. MLS #2504310.
+            My current featured listing is a 3-bedroom, 2-bathroom high-bank waterfront at <strong>$799,900</strong>. West-facing lot, 1,662 square feet of livable space on a third of an acre, built in 1925 with good bones and a deck that faces the sunset. MLS #2504310.
           </p>
           <p style={pStyle}>
             The view is the whole thing. The sunset photo at the top of this post was taken on a phone from the property deck. Not a drone. Not staging. Just Tuesday evening.
@@ -202,7 +202,7 @@ export default function PelhamPostAprilWeek4() {
 
           <div style={{ margin: '28px 0' }}>
             <Link
-              href="/properties/1406-potlatch-beach-road-tulalip"
+              href="/properties/1406-potlatch-beach-road-marysville"
               style={{
                 display: 'inline-block',
                 padding: '14px 32px',
@@ -363,12 +363,12 @@ export default function PelhamPostAprilWeek4() {
                   'If you have been thinking about selling, you have not missed the window. Snohomish County still favors sellers at 2.04 months of supply, well below the 4 to 6 months considered balanced. Pricing strategy and presentation matter more now than a year ago. Homes priced to the comps and prepared well are still finding offers in days.',
               },
               {
-                question: 'How much waterfront home can I buy in Tulalip under a million dollars?',
+                question: 'How much waterfront home can I buy in Marysville under a million dollars?',
                 answer:
-                  'Tulalip waterfront on Puget Sound is priced dramatically lower than comparable Seattle waterfront. Kim Pelham currently has 1406 Potlatch Beach Road listed at $899,900, a 3-bedroom 2-bathroom high-bank waterfront home on a third of an acre. Seattle waterfront with comparable Sound views typically starts at $3 million and up.',
+                  'Marysville waterfront on Puget Sound is priced dramatically lower than comparable Seattle waterfront. Kim Pelham currently has 1406 Potlatch Beach Road listed at $799,900, a 3-bedroom 2-bathroom high-bank waterfront home on a third of an acre. Seattle waterfront with comparable Sound views typically starts at $3 million and up.',
               },
               {
-                question: 'Who should I contact to buy or sell a home in Everett, Snohomish, or Tulalip?',
+                question: 'Who should I contact to buy or sell a home in Everett, Snohomish, or Marysville?',
                 answer:
                   'Kim Pelham of The Pelham Group NW is a real estate broker serving Snohomish, King, Pierce, and Skagit Counties. Kim can be reached by text or call at 425-250-9422, by email at hello@thepelhamgroupnw.com, or through the contact form at thepelhamgroupnw.com.',
               },

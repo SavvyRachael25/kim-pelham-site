@@ -151,7 +151,7 @@ export default function PotlatchPage() {
                   lineHeight: 1,
                 }}
               >
-                $899,900
+                $799,900
               </p>
             </div>
 
@@ -312,7 +312,7 @@ export default function PotlatchPage() {
               }}
             >
               {[
-                { term: 'Price', def: '$899,900' },
+                { term: 'Price', def: '$799,900' },
                 { term: 'Bedrooms', def: '3 + 2 Bonus Rooms' },
                 { term: 'Bathrooms', def: '2 Ensuite' },
                 { term: 'Square Feet', def: '1,662' },
@@ -784,7 +784,7 @@ export default function PotlatchPage() {
               },
               {
                 q: 'How much is 1406 Potlatch Beach Road?',
-                a: '1406 Potlatch Beach Road is listed at $899,900. This includes 1,662 square feet, 3 bedrooms plus 2 bonus rooms, 2 bathrooms, and 50 feet of high-bank Puget Sound waterfront on 0.36 acres. MLS# 2504310.',
+                a: '1406 Potlatch Beach Road is listed at $799,900. This includes 1,662 square feet, 3 bedrooms plus 2 bonus rooms, 2 bathrooms, and 50 feet of high-bank Puget Sound waterfront on 0.36 acres. MLS# 2504310.',
               },
               {
                 q: 'How many bedrooms does 1406 Potlatch Beach Road have?',
