@@ -21,10 +21,16 @@ export default function Hero() {
         alt="Aerial view of Snohomish County neighborhood"
         fill
         priority
-        // Dropped from 85 to 78 — mobile LCP win, no visible quality loss
-        // on the heavily-darkened gradient overlay.
-        quality={78}
-        sizes="(max-width: 768px) 100vw, 100vw"
+        // Quality 60 is fine here — the image sits behind a 60% black
+        // gradient overlay so subtle JPEG/WebP artifacts are invisible.
+        // Dropped further to win on mobile LCP.
+        quality={60}
+        // Tight sizes hint per breakpoint. Without this Next.js was
+        // requesting w=3840 (4K) for the hero and serving 232KB of
+        // image. With this hint, mobile fetches a 768px variant
+        // (~30-50KB AVIF), tablets fetch 1024px, desktops cap at
+        // 1600px (matches the source's actual max dimension).
+        sizes="(max-width: 640px) 768px, (max-width: 1024px) 1024px, 1600px"
         style={{
           objectFit: 'cover',
           objectPosition: 'center',
