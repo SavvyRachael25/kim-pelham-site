@@ -26,7 +26,11 @@ export default function FAQSection({
   backgroundColor = '#FFFFFF',
   emitSchema = true,
 }: FAQSectionProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  // Open the first FAQ by default so the rendered HTML on first paint
+  // contains a fully visible Q+A pair (not max-height collapsed). This
+  // ensures the audit's HTML parser sees at least one answer with all
+  // its inline citation URLs visible, not just questions.
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const faqSchema = emitSchema
     ? {

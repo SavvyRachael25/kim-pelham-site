@@ -204,6 +204,78 @@ export default function StatsStrip() {
           <StatCounter key={idx} stat={stat} isVisible={isVisible} />
         ))}
       </div>
+      {/*
+        Citation line — visible inline citation pattern for the four stats
+        above. AEO audit (2026-05-13/14) flagged Citability 35/100 because
+        the small [N] superscripts on each stat were not pattern-matched
+        as "cites sources." This sentence names the sources explicitly
+        and links to the full breakdown.
+      */}
+      <p
+        style={{
+          maxWidth: '1200px',
+          margin: '48px auto 0',
+          textAlign: 'center',
+          fontFamily: 'var(--font-body)',
+          fontSize: '13px',
+          color: 'rgba(248, 245, 240, 0.78)',
+          lineHeight: 1.6,
+          padding: '0 16px',
+        }}
+      >
+        Sources for these statistics:{' '}
+        <cite style={{ fontStyle: 'normal' }}>
+          <a
+            href="https://www.nwmls.com/discover/news-and-statistics/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: '#F8F5F0', textDecoration: 'underline' }}
+          >
+            Northwest Multiple Listing Service (NWMLS) market reports
+          </a>
+        </cite>
+        ,{' '}
+        <cite style={{ fontStyle: 'normal' }}>
+          <a
+            href="https://professionals.dol.wa.gov/s/license-lookup"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: '#F8F5F0', textDecoration: 'underline' }}
+          >
+            Washington State Department of Licensing
+          </a>
+        </cite>
+        ,{' '}
+        <cite style={{ fontStyle: 'normal' }}>
+          <a
+            href="https://www.heraldnet.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: '#F8F5F0', textDecoration: 'underline' }}
+          >
+            The Daily Herald
+          </a>
+        </cite>
+        , and{' '}
+        <cite style={{ fontStyle: 'normal' }}>
+          <a
+            href="https://www.google.com/search?q=The+Pelham+Group+NW+Everett+WA"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: '#F8F5F0', textDecoration: 'underline' }}
+          >
+            Google Business Profile
+          </a>
+        </cite>
+        . Full breakdown at{' '}
+        <a
+          href="/sources"
+          style={{ color: '#F8F5F0', textDecoration: 'underline' }}
+        >
+          thepelhamgroupnw.com/sources
+        </a>
+        .
+      </p>
     </section>
   );
 }
