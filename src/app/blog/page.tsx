@@ -17,6 +17,15 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: '10',
+    title: 'Snohomish County, May 2026: The Market Got More Honest This Month',
+    slug: 'snohomish-market-may-2026',
+    excerpt:
+      'Active listings up 58.2% year over year. Months of inventory at 2.2. Median sale price down 3.8%. Mortgage rates at 6.36%. A broker-on-the-ground read of the May 2026 Snohomish County market for buyers and sellers.',
+    date: '2026-05-15',
+    category: 'Market Updates',
+  },
+  {
     id: '9',
     title: 'A $3 Million View for Under a Million — Potlatch Beach Road, Marysville',
     slug: 'potlatch-beach-road-tulalip-waterfront',
