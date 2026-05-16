@@ -88,7 +88,7 @@ export default function WaterfrontOrViewPage() {
             </p>
 
             <p style={bodyP}>
-              <strong>Who this fits:</strong> someone whose Saturday morning is a kayak or a coffee on the deck. Someone who&rsquo;ll trade a longer commute for sound-of-water-on-rocks every day. Someone who likes that the home is older and lower-square-footage but sits on land that simply isn&rsquo;t made anymore.
+              <strong>Who this fits:</strong> someone whose Saturday morning is coffee on the deck while orcas feed below the bluff. Someone who&rsquo;ll trade a longer commute for sound-of-water-on-rocks every day. Someone who likes that the home is older and lower-square-footage but sits on land that simply isn&rsquo;t made anymore.
             </p>
 
             <h3 style={h3Style}>The Mukilteo view-first remodel · $975,000</h3>
