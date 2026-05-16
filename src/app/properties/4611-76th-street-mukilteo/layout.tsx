@@ -138,10 +138,10 @@ export default function MukilteoLayout({ children }: { children: React.ReactNode
       },
       {
         '@type': 'Question',
-        name: 'Are there showings or open houses at 4611 76th Street SW?',
+        name: 'When is the open house at 4611 76th Street SW?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'Showings are by appointment. Text or call Kim Pelham at (425) 250-9422 to schedule a walk-through. Times are flexible — weekday evenings and weekends both work.',
+          text: 'The next open house at 4611 76th Street SW, Mukilteo WA is Saturday, May 16, 2026 from 1:00 PM to 4:00 PM. No appointment needed. Walk through, see the Olympic Mountain view from every room. Hosted by Kim Pelham, The Pelham Group NW. Text Kim at (425) 250-9422 if you plan to come, or to schedule a private showing at a different time.',
         },
       },
       {
@@ -163,11 +163,51 @@ export default function MukilteoLayout({ children }: { children: React.ReactNode
     ],
   };
 
+  // Open House Event schema (GEO — surfaces in Google "Events near me" and Local Pack)
+  const openHouseSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Event',
+    name: 'Open House · 4611 76th Street SW, Mukilteo WA',
+    description:
+      'Public open house at 4611 76th Street SW, Mukilteo WA. A $975,000 fully-remodeled 4-bedroom home with Olympic Mountain views from every primary room. Hosted by Kim Pelham, The Pelham Group NW. Walk through, no appointment needed.',
+    startDate: '2026-05-16T13:00:00-07:00',
+    endDate: '2026-05-16T16:00:00-07:00',
+    eventStatus: 'https://schema.org/EventScheduled',
+    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
+    location: {
+      '@type': 'Place',
+      name: '4611 76th Street SW',
+      address: {
+        '@type': 'PostalAddress',
+        streetAddress: '4611 76th Street SW',
+        addressLocality: 'Mukilteo',
+        addressRegion: 'WA',
+        postalCode: '98275',
+        addressCountry: 'US',
+      },
+    },
+    organizer: {
+      '@type': 'RealEstateAgent',
+      name: 'Kim Pelham',
+      telephone: '+14252509422',
+      url: 'https://thepelhamgroupnw.com',
+    },
+    offers: {
+      '@type': 'Offer',
+      url: 'https://thepelhamgroupnw.com/properties/4611-76th-street-mukilteo',
+      price: 0,
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
+      validFrom: '2026-05-15T00:00:00-07:00',
+    },
+  };
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listingSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(openHouseSchema) }} />
       {children}
     </>
   );

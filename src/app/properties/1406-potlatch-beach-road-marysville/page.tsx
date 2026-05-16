@@ -73,7 +73,7 @@ export default function PotlatchPage() {
                 marginBottom: '12px',
               }}
             >
-              Just Relisted — Open House Sun May 3, 1-3 PM
+              Price Drop · Open House Sun May 17, 1-3 PM
             </div>
             <h1
               style={{
@@ -235,7 +235,7 @@ export default function PotlatchPage() {
                 lineHeight: 1.2,
               }}
             >
-              Sunday, May 3 &middot; 1:00 PM &ndash; 3:00 PM
+              Sunday, May 17 &middot; 1:00 PM to 3:00 PM
             </p>
             <p
               style={{
@@ -780,7 +780,7 @@ export default function PotlatchPage() {
             {[
               {
                 q: 'When is the open house at 1406 Potlatch Beach Road?',
-                a: 'The next open house is Sunday, May 3, 2026 from 1:00 PM to 3:00 PM. No appointment needed. Walk through, ask questions, get a real feel for the views. Text or call Kim at (425) 250-9422 if you plan to come.',
+                a: 'The next open house is Sunday, May 17, 2026 from 1:00 PM to 3:00 PM. No appointment needed. Walk through, ask questions, get a real feel for the views. Text or call Kim at (425) 250-9422 if you plan to come.',
               },
               {
                 q: 'How much is 1406 Potlatch Beach Road?',

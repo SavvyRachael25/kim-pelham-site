@@ -195,7 +195,7 @@ export default function MukilteoPage() {
           </div>
         </section>
 
-        {/* Showings by Appointment banner — replaces Open House since this is post-Mother's-Day pivot */}
+        {/* Open House banner */}
         <section
           style={{
             backgroundColor: '#B8845C',
@@ -224,7 +224,7 @@ export default function MukilteoPage() {
                 margin: 0,
               }}
             >
-              Showings by Appointment
+              Open House This Saturday
             </p>
             <p
               style={{
@@ -236,7 +236,7 @@ export default function MukilteoPage() {
                 lineHeight: 1.2,
               }}
             >
-              Catch the view on your schedule
+              Saturday, May 16 &middot; 1:00 PM to 4:00 PM
             </p>
             <p
               style={{
@@ -246,11 +246,11 @@ export default function MukilteoPage() {
                 margin: 0,
               }}
             >
-              4611 76th Street SW, Mukilteo WA 98275 &nbsp;&middot;&nbsp; Weekday evenings + weekends
+              4611 76th Street SW, Mukilteo WA 98275 &nbsp;&middot;&nbsp; No appointment needed
             </p>
             <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '6px' }}>
               <a
-                href="sms:+14252509422?&body=Hi%20Kim%2C%20I%27d%20like%20to%20schedule%20a%20showing%20at%204611%2076th%20Street%20SW%20in%20Mukilteo."
+                href="sms:+14252509422?&body=Hi%20Kim%2C%20I%27m%20planning%20to%20stop%20by%20the%20Mukilteo%20open%20house%20Saturday."
                 style={{
                   display: 'inline-block',
                   padding: '10px 24px',
@@ -263,7 +263,7 @@ export default function MukilteoPage() {
                   textDecoration: 'none',
                 }}
               >
-                Text Kim to Schedule
+                Text Kim You&apos;re Coming
               </a>
               <a
                 href="https://www.google.com/maps/dir/?api=1&destination=4611+76th+Street+SW+Mukilteo+WA+98275"
@@ -743,7 +743,7 @@ export default function MukilteoPage() {
               },
               {
                 q: 'Are there showings or open houses at 4611 76th Street SW?',
-                a: 'Showings are by appointment. Text or call Kim Pelham at (425) 250-9422 to schedule a walk-through. Times are flexible — weekday evenings and weekends both work.',
+                a: 'Open house Saturday, May 16, 2026 from 1:00 PM to 4:00 PM. No appointment needed. Walk through, ask questions, see the Olympic Mountain view from every room. Text or call Kim Pelham at (425) 250-9422 if you plan to come, or to schedule a private showing at a different time.',
               },
               {
                 q: 'Who is the listing agent for 4611 76th Street SW?',

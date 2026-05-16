@@ -106,8 +106,8 @@ export default function PotlatchLayout({ children }: { children: React.ReactNode
     name: 'Open House — 1406 Potlatch Beach Road, Marysville WA',
     description:
       'Public open house at 1406 Potlatch Beach Road, Marysville WA — a $799,900 high-bank Puget Sound waterfront home with 50 feet of frontage, 3 bedrooms plus 2 bonus rooms, 1,662 square feet, panoramic Sound and Olympic Mountain views. Hosted by Kim Pelham, The Pelham Group NW. Walk through, ask questions, no appointment needed.',
-    startDate: '2026-05-03T13:00:00-07:00',
-    endDate: '2026-05-03T15:00:00-07:00',
+    startDate: '2026-05-17T13:00:00-07:00',
+    endDate: '2026-05-17T15:00:00-07:00',
     eventStatus: 'https://schema.org/EventScheduled',
     eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
     location: {
@@ -154,7 +154,7 @@ export default function PotlatchLayout({ children }: { children: React.ReactNode
         name: 'When is the open house at 1406 Potlatch Beach Road?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The next open house at 1406 Potlatch Beach Road, Marysville WA is Sunday, May 3, 2026 from 1:00 PM to 3:00 PM. No appointment needed. Hosted by Kim Pelham, The Pelham Group NW. Text Kim at (425) 250-9422 if you plan to attend.',
+          text: 'The next open house at 1406 Potlatch Beach Road, Marysville WA is Sunday, May 17, 2026 from 1:00 PM to 3:00 PM. No appointment needed. Hosted by Kim Pelham, The Pelham Group NW. Text Kim at (425) 250-9422 if you plan to attend.',
         },
       },
       {
