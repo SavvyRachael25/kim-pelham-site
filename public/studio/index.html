@@ -4,6 +4,13 @@
   <meta charset="utf-8" />
   <title>Pelham Brand Studio — Internal Template Library</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!--
+    Resolve all relative URLs (CSS, JSX, assets) from /studio/ regardless
+    of whether Vercel strips the trailing slash on the parent URL.
+    Without this, /studio/design-system/colors_and_type.css resolves
+    incorrectly when the browser is at /studio (no trailing slash).
+  -->
+  <base href="/studio/">
   <!-- Internal tooling — never index in public search engines or AI crawlers -->
   <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
   <meta name="googlebot" content="noindex, nofollow" />
