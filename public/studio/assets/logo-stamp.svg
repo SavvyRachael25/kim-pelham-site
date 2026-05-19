@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" width="320" height="320" role="img" aria-label="Kim Pelham · The Pelham Group NW · Snohomish County · WA">
+  <defs>
+    
+    
+    <path id="arcTop" d="M 40 160 a 120 120 0 0 1 240 0" fill="none"></path>
+    
+    <path id="arcBottom" d="M 40 160 a 120 120 0 0 0 240 0" fill="none"></path>
+  </defs>
+  
+  <circle cx="160" cy="160" r="155" fill="#2F5233"></circle>
+  
+  <circle cx="160" cy="160" r="143" fill="none" stroke="#B8845C" stroke-width="1.5" opacity="0.55"></circle>
+  <circle cx="160" cy="160" r="138" fill="none" stroke="#B8845C" stroke-width="0.5" opacity="0.4"></circle>
+  
+  <text class="arc" font-size="13">
+    <textPath href="#arcTop" startOffset="50%" text-anchor="middle">THE PELHAM GROUP NW</textPath>
+  </text>
+  
+  <text class="arc-sm" font-size="10">
+    <textPath href="#arcBottom" startOffset="50%" text-anchor="middle">SNOHOMISH COUNTY · WASHINGTON</textPath>
+  </text>
+  
+  <circle cx="22" cy="160" r="3" fill="#B8845C"></circle>
+  <circle cx="298" cy="160" r="3" fill="#B8845C"></circle>
+  
+  <text class="name-italic" x="160" y="148" font-size="42" text-anchor="middle">Kim Pelham</text>
+  
+  <path d="M 96 162 Q 160 155 224 162" stroke="#B8845C" stroke-width="1.75" fill="none" stroke-linecap="round"></path>
+  
+  <text class="arc" x="160" y="190" font-size="9" text-anchor="middle">EST · 17 YEARS · SRES</text>
+</svg>

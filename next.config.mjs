@@ -36,6 +36,47 @@ const nextConfig = {
       },
     ];
   },
+  /*
+    Subdomain: templates.thepelhamgroupnw.com
+    ─────────────────────────────────────────
+    The Brand Studio (Pelham Content Flywheel) lives at public/studio/.
+    Requests to templates.thepelhamgroupnw.com are internally rewritten
+    to /studio/* so the studio serves at the root of that subdomain.
+
+    Setup steps for the subdomain (one-time):
+      1. In Vercel dashboard → kim-pelham-site → Settings → Domains:
+         add `templates.thepelhamgroupnw.com`
+      2. Vercel will tell you the CNAME value (something like cname.vercel-dns.com)
+      3. In your DNS provider (where thepelhamgroupnw.com is registered):
+         add CNAME record:  templates → cname.vercel-dns.com
+      4. Wait ~5-15 min for HTTPS cert provisioning
+      5. Subdomain is live, this rewrite handles the rest
+  */
+  async rewrites() {
+    return [
+      {
+        source: '/',
+        has: [{ type: 'host', value: 'templates.thepelhamgroupnw.com' }],
+        destination: '/studio/index.html',
+      },
+      {
+        source: '/:path+',
+        has: [{ type: 'host', value: 'templates.thepelhamgroupnw.com' }],
+        destination: '/studio/:path+',
+      },
+    ];
+  },
+  async headers() {
+    return [
+      {
+        // Keep the brand studio out of Google's index — internal tooling only
+        source: '/studio/:path*',
+        headers: [
+          { key: 'X-Robots-Tag', value: 'noindex, nofollow' },
+        ],
+      },
+    ];
+  },
 };
 
 export default nextConfig;

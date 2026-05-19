@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 180" width="480" height="180" role="img" aria-label="Kim Pelham · The Pelham Group NW">
+  <defs>
+    
+  </defs>
+  <text class="name" x="240" y="86" font-size="76" text-anchor="middle">Kim Pelham</text>
+  <path class="rule" d="M 96 108 Q 156 100 216 106 Q 276 112 336 104 Q 384 100 384 106" stroke-width="3"></path>
+  <line class="rule" x1="92" y1="108" x2="100" y2="108" stroke-width="2"></line>
+  <line class="rule" x1="380" y1="106" x2="388" y2="106" stroke-width="2"></line>
+  <text class="sub" x="240" y="138" font-size="14" text-anchor="middle">THE PELHAM GROUP NW</text>
+</svg>

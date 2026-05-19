@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Pelham Brand Studio — Internal Template Library</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Internal tooling — never index in public search engines or AI crawlers -->
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet" />
+  <meta name="googlebot" content="noindex, nofollow" />
+  <link rel="stylesheet" href="design-system/colors_and_type.css" />
+  <template id="__bundler_thumbnail">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+      <rect width="200" height="200" fill="#F8F5F0"/>
+      <rect x="20" y="60" width="160" height="80" fill="#2F5233" rx="4"/>
+      <text x="100" y="105" text-anchor="middle" font-family="Cormorant Garamond, serif"
+        font-style="italic" font-size="28" font-weight="700" fill="#F8F5F0">Pelham</text>
+      <text x="100" y="130" text-anchor="middle" font-family="Cormorant Garamond, serif"
+        font-style="italic" font-size="20" font-weight="700" fill="#B8845C">NW</text>
+      <path d="M40 155 Q100 165 160 155" stroke="#B8845C" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+    </svg>
+  </template>
+  <style>
+    /*  ════════════════════════════════════════════════════════════════════
+        Shell chrome.
+        Templates render inside .stage — they declare their own native
+        width/height; the shell applies transform: scale() to fit.
+        ════════════════════════════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; overflow: hidden; background: #efeae1; }
+    body {
+      font-family: var(--font-body);
+      color: var(--color-text);
+      background-image: var(--paper, none);
+    }
+
+    .shell {
+      display: grid;
+      grid-template-columns: 300px 1fr;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    /* ===== Sidebar ===== */
+    .sidebar {
+      background: #1e1c19;
+      color: #cbc6bc;
+      overflow-y: auto;
+      border-right: 1px solid #000;
+      display: flex; flex-direction: column;
+    }
+    .sidebar-head {
+      padding: 22px 22px 18px;
+      border-bottom: 1px solid #2c2a26;
+      position: sticky; top: 0;
+      background: #1e1c19;
+      z-index: 5;
+    }
+    .sidebar-head .title {
+      font-family: var(--font-heading);
+      font-size: 19px; font-weight: 600;
+      color: #fff;
+      line-height: 1.15;
+      margin: 0 0 8px 0;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .sidebar-head .title em {
+      color: var(--color-clay);
+      font-style: italic;
+    }
+    .sidebar-head .sub {
+      font-family: var(--font-handwritten);
+      font-size: 18px;
+      color: #8a8275;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .sidebar-head .search {
+      margin-top: 14px;
+      width: 100%;
+      background: #2a2823;
+      border: 1px solid #34322c;
+      color: #e9e3d4;
+      font-family: var(--font-body); font-size: 12px;
+      padding: 9px 12px; border-radius: 4px;
+      outline: none;
+    }
+    .sidebar-head .search:focus { border-color: var(--color-clay); }
+    .sidebar-head .meta {
+      font-family: var(--font-body); font-size: 10px;
+      color: #6a6358;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      margin: 12px 0 0 0;
+      display: flex; justify-content: space-between;
+    }
+
+    .group {
+      padding: 0;
+      border-bottom: 1px solid #2c2a26;
+    }
+    .group-head {
+      padding: 14px 22px 8px;
+      display: flex; align-items: baseline; justify-content: space-between;
+    }
+    .group-head .label {
+      font-family: var(--font-body);
+      font-size: 10px; font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: var(--color-clay);
+    }
+    .group-head .sub {
+      font-family: var(--font-body); font-size: 9px;
+      color: #6a6358; letter-spacing: .04em;
+    }
+    .group-list { padding: 0 8px 12px; }
+
+    .tpl-item {
+      display: block;
+      padding: 8px 14px;
+      margin: 1px 0;
+      border-radius: 4px;
+      background: transparent;
+      color: #c9c2b3;
+      font-family: var(--font-body);
+      font-size: 12px;
+      cursor: default;
+      transition: background .15s, color .15s;
+      border: none;
+      width: 100%; text-align: left;
+      line-height: 1.35;
+    }
+    .tpl-item:hover { background: #2a2823; color: #fff; }
+    .tpl-item.active {
+      background: var(--color-forest);
+      color: #fff;
+    }
+    .tpl-item .name { display: block; }
+    .tpl-item .dims {
+      display: block;
+      font-size: 9px;
+      color: #8a8275;
+      letter-spacing: .04em;
+      margin-top: 2px;
+    }
+    .tpl-item.active .dims { color: rgba(255,255,255,.7); }
+
+    .footer-credit {
+      margin-top: auto;
+      padding: 16px 22px;
+      border-top: 1px solid #2c2a26;
+      font-family: var(--font-body); font-size: 10px;
+      color: #6a6358; line-height: 1.5;
+    }
+
+    /* ===== Right pane — toolbar + stage ===== */
+    .right {
+      display: flex; flex-direction: column;
+      background: #efeae1;
+      background-image:
+        radial-gradient(circle at 25% 25%, rgba(0,0,0,.025) 0, transparent 60%),
+        radial-gradient(circle at 75% 75%, rgba(0,0,0,.025) 0, transparent 60%);
+      overflow: hidden;
+    }
+    .toolbar {
+      flex: 0 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 12px 24px;
+      background: rgba(248, 245, 240, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border);
+      gap: 16px;
+    }
+    .toolbar .crumb {
+      font-family: var(--font-body); font-size: 11px;
+      color: var(--color-text-muted);
+      letter-spacing: 1.5px; text-transform: uppercase;
+    }
+    .toolbar .crumb strong {
+      color: var(--color-forest); font-weight: 600;
+    }
+    .toolbar .tpl-name {
+      font-family: var(--font-heading);
+      font-size: 20px; font-weight: 600;
+      color: var(--color-forest);
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+    .toolbar .tpl-meta {
+      font-family: var(--font-handwritten);
+      font-size: 14px;
+      color: var(--color-clay);
+      margin-left: 10px;
+      white-space: nowrap;
+      align-self: center;
+      transform: translateY(-1px);
+    }
+    .tb-right { display: flex; gap: 12px; align-items: center; }
+
+    .zoom-pill {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: #fff;
+      border: 1px solid var(--color-border);
+      border-radius: 999px;
+      padding: 6px 4px 6px 14px;
+      font-family: var(--font-body); font-size: 11px;
+      color: var(--color-text-light);
+      letter-spacing: .04em;
+    }
+    .zoom-pill button {
+      background: var(--color-cream-dark);
+      border: none; cursor: default;
+      width: 22px; height: 22px;
+      border-radius: 999px;
+      font-family: var(--font-body); font-size: 13px; font-weight: 600;
+      color: var(--color-forest);
+    }
+    .zoom-pill button:hover { background: var(--color-clay-light); color: #fff; }
+    .zoom-pill .val { font-variant-numeric: tabular-nums; min-width: 44px; text-align: center; }
+
+    .stage-wrap {
+      flex: 1 1 auto;
+      position: relative;
+      overflow: auto;
+      padding: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .stage-wrap.center { align-items: center; }
+    .stage {
+      transform-origin: top left;
+      transition: transform .25s cubic-bezier(.16,1,.3,1);
+      flex-shrink: 0;
+    }
+    .stage-frame {
+      background: #fff;
+      box-shadow: 0 20px 60px rgba(0,0,0,.18), 0 4px 12px rgba(0,0,0,.08);
+      position: relative;
+    }
+    .stage-frame.no-shadow { box-shadow: none; background: transparent; }
+
+    /* surface labels (e.g. PHONE STATUS BAR over IG content) */
+    .frame-chrome { position: absolute; pointer-events: none; }
+
+    .empty {
+      font-family: var(--font-heading); font-size: 32px; font-style: italic;
+      color: var(--color-text-faint);
+      text-align: center; padding: 80px 24px;
+      line-height: 1.3;
+    }
+    .empty .sub {
+      font-family: var(--font-body); font-size: 13px;
+      color: var(--color-text-muted);
+      letter-spacing: .04em; margin-top: 12px;
+    }
+
+    /* When tweaks is on, leave room on the right */
+    body.tweaks-open .right { padding-right: 0; }
+
+    /* prevent transform: scale inside the body from being undone by tweaks panel */
+    .twk-panel { right: 24px !important; bottom: 24px !important; }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-head">
+        <p class="title">The Pelham Group <em>NW</em></p>
+        <p class="sub">content flywheel · template library</p>
+        <input class="search" id="search" type="search" placeholder="Search templates…" />
+        <p class="meta">
+          <span id="tpl-count">0 templates</span>
+          <span>v1</span>
+        </p>
+      </div>
+      <div id="groups"></div>
+      <div class="footer-credit">
+        Every template renders<br/>
+        EHO · WA Broker #119262 · MLS #103153<br/>
+        Brokered by Katrina Eileen RE
+      </div>
+    </aside>
+
+    <div class="right" id="right">
+      <div class="toolbar">
+        <div>
+          <div class="crumb"><strong id="crumb-group">—</strong> · <span id="crumb-tier">—</span></div>
+          <div style="display:flex; align-items:baseline;">
+            <span class="tpl-name" id="tpl-name">Loading…</span>
+            <span class="tpl-meta" id="tpl-meta"></span>
+          </div>
+        </div>
+        <div class="tb-right">
+          <div class="zoom-pill">
+            <span>FIT</span>
+            <button id="zoom-fit" title="Fit">⤢</button>
+            <span class="val" id="zoom-val">100%</span>
+            <button id="zoom-out" title="Zoom out">−</button>
+            <button id="zoom-in"  title="Zoom in">+</button>
+          </div>
+        </div>
+      </div>
+      <div class="stage-wrap" id="stage-wrap">
+        <div class="stage" id="stage">
+          <div class="empty">
+            Pick a template from the left
+            <div class="sub">36 templates · 10 surfaces · all brand-compliant</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- React + Babel pinned -->
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <!-- Brand kit + registry first -->
+  <script type="text/babel" src="lib/registry.jsx"></script>
+  <script type="text/babel" src="lib/brand.jsx"></script>
+  <script type="text/babel" src="lib/tweaks-panel.jsx"></script>
+
+  <!-- Template files (each calls registerTemplate) -->
+  <script type="text/babel" src="templates/email.jsx"></script>
+  <script type="text/babel" src="templates/ig-feed.jsx"></script>
+  <script type="text/babel" src="templates/ig-story.jsx"></script>
+  <script type="text/babel" src="templates/fb-linkedin.jsx"></script>
+  <script type="text/babel" src="templates/reels.jsx"></script>
+  <script type="text/babel" src="templates/meta-ad.jsx"></script>
+  <script type="text/babel" src="templates/blog.jsx"></script>
+  <script type="text/babel" src="templates/print.jsx"></script>
+  <script type="text/babel" src="templates/script.jsx"></script>
+
+  <!-- Shell app -->
+  <script type="text/babel" src="app.jsx"></script>
+</body>
+</html>
