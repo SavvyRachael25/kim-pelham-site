@@ -429,6 +429,12 @@ export default function RootLayout({
         <Analytics />
         {/* Vercel Analytics — first-party traffic + Web Vitals, no config needed */}
         <VercelAnalytics />
+        {/* Umami — privacy-friendly product analytics, cookieless */}
+        <Script
+          src="https://cloud.umami.is/script.js"
+          data-website-id="3fc3eb60-38d2-41b2-a52e-511704cb8fcf"
+          strategy="afterInteractive"
+        />
       </body>
     </html>
   );
