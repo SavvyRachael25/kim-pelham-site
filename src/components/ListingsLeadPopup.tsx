@@ -356,7 +356,7 @@ export default function ListingsLeadPopup() {
                     margin: 0,
                   }}
                 >
-                  The 108-page playbook I walk every seller through. Pricing, staging room by room, repairs prioritized by ROI, the eight-week timeline, and what to actually expect along the way. Yours, free.
+                  The pre-listing playbook I walk every seller through. Pricing, staging room by room, repairs prioritized by ROI, the eight-week timeline, and what to actually expect along the way. Yours, free.
                 </p>
               </div>
 

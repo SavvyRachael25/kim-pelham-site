@@ -50,7 +50,7 @@ export function renderListingsWelcomeEmail(opts: { firstName?: string }): {
   const text = [
     greeting,
     '',
-    "As promised, here's the pre-listing playbook. It's the 108-page guide I walk every seller through before we go live on MLS.",
+    "As promised, here's the pre-listing playbook. It's the guide I walk every seller through before we go live on MLS.",
     '',
     `Download it here: ${PDF_URL}`,
     '',
@@ -80,7 +80,7 @@ export function renderListingsWelcomeEmail(opts: { firstName?: string }): {
 </head>
 <body style="margin:0;padding:0;background:${CREAM_DARK};font-family:Inter,Helvetica,Arial,sans-serif;color:${TEXT};">
   <span style="display:none;visibility:hidden;mso-hide:all;font-size:1px;color:${CREAM_DARK};line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
-    The 108-page pre-listing playbook is yours. Pricing, staging, repairs, timeline.
+    Your pre-listing playbook is here. Pricing, staging, repairs, timeline.
   </span>
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:${CREAM_DARK};">
     <tr><td align="center" style="padding:32px 16px;">
@@ -100,7 +100,7 @@ export function renderListingsWelcomeEmail(opts: { firstName?: string }): {
         <tr><td style="padding:18px 40px 8px 40px;font-family:Inter,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.7;color:${TEXT};">
           <p style="margin:0 0 14px 0;">${greeting}</p>
           <p style="margin:0 0 14px 0;">
-            As promised, here&rsquo;s the pre-listing playbook. It&rsquo;s the 108-page guide I walk every seller through before we go live on MLS.
+            As promised, here&rsquo;s the pre-listing playbook. It&rsquo;s the guide I walk every seller through before we go live on MLS.
           </p>
         </td></tr>
 
@@ -113,7 +113,7 @@ export function renderListingsWelcomeEmail(opts: { firstName?: string }): {
               </a>
             </td></tr>
           </table>
-          <p style="margin:8px 0 0 0;font-family:Inter,Helvetica,Arial,sans-serif;font-size:12px;color:${MUTED};">108 pages &middot; ~11 MB</p>
+          <p style="margin:8px 0 0 0;font-family:Inter,Helvetica,Arial,sans-serif;font-size:12px;color:${MUTED};">PDF &middot; opens in a new tab</p>
         </td></tr>
 
         <!-- What's inside -->
