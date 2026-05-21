@@ -177,35 +177,42 @@ export async function POST(req: NextRequest) {
     const proto = req.headers.get('x-forwarded-proto') ?? 'https';
     const host = req.headers.get('host') ?? 'thepelhamgroupnw.com';
     const syncUrl = `${proto}://${host}/api/sync/ghl-to-fub`;
-    fetch(syncUrl, {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-        ...(webhookSecret ? { 'X-Pelham-Webhook-Secret': webhookSecret } : {}),
-      },
-      body: JSON.stringify({
-        contact_id: ghlContactId,
-        firstName,
-        lastName: lastName ?? '',
-        email: email ?? '',
-        phone: phone ?? '',
-        source: customSource ?? 'website_contact_form',
-        tags: [...(customTags ?? []), ...consentTags],
-      }),
-    }).then(async (r) => {
-      if (!r.ok) {
-        const body = await r.text().catch(() => '');
+    // IMPORTANT: await this. A fire-and-forget fetch gets killed when the
+    // serverless function freezes after returning the response, so the
+    // sync silently never runs for returning leads (where the GHL
+    // workflow doesn't fire either). Awaiting adds ~1-2s but guarantees
+    // the contact mirrors to FUB and the automation fires. The popup
+    // shows a loading state, so the extra latency is acceptable.
+    try {
+      const syncRes = await fetch(syncUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          ...(webhookSecret ? { 'X-Pelham-Webhook-Secret': webhookSecret } : {}),
+        },
+        body: JSON.stringify({
+          contact_id: ghlContactId,
+          firstName,
+          lastName: lastName ?? '',
+          email: email ?? '',
+          phone: phone ?? '',
+          source: customSource ?? 'website_contact_form',
+          tags: [...(customTags ?? []), ...consentTags],
+        }),
+      });
+      if (!syncRes.ok) {
+        const body = await syncRes.text().catch(() => '');
         console.error(
-          `[contact-api] self-triggered FUB sync ${r.status}:`,
+          `[contact-api] self-triggered FUB sync ${syncRes.status}:`,
           body.slice(0, 200)
         );
       }
-    }).catch((err) => {
+    } catch (err) {
       console.error(
         '[contact-api] self-triggered FUB sync threw:',
         (err as Error).message
       );
-    });
+    }
   }
 
   // If a message was submitted, attach it as a note on the newly created contact
