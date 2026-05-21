@@ -6,6 +6,7 @@ import "./globals.css";
 import IntroAnimation from "@/components/IntroAnimation";
 import Analytics from "@/components/Analytics";
 import MobileListingsPopup from "@/components/MobileListingsPopup";
+import ListingsLeadPopup from "@/components/ListingsLeadPopup";
 
 /*
   LCP optimization: self-host the three brand fonts via next/font/google.
@@ -425,6 +426,8 @@ export default function RootLayout({
         />
         {/* Mobile-only listings promo popup — auto-shows after 4s, links to /properties */}
         <MobileListingsPopup />
+        {/* Site-wide listings lead-magnet popup — name + phone, captures first-look list */}
+        <ListingsLeadPopup />
         {/* Analytics & attribution — gated on env vars, no-op until configured */}
         <Analytics />
         {/* Vercel Analytics — first-party traffic + Web Vitals, no config needed */}
