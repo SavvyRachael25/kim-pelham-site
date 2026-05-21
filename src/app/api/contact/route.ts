@@ -150,6 +150,64 @@ export async function POST(req: NextRequest) {
     );
   }
 
+  // Pull the GHL contact id from the upsert response so we can pipe it
+  // into the FUB sync below.
+  let ghlContactId: string | undefined;
+  try {
+    const data = (await ghlRes.clone().json()) as { contact?: { id?: string } };
+    ghlContactId = data.contact?.id;
+  } catch {
+    // non-fatal
+  }
+
+  // Self-trigger the GHL->FUB sync directly instead of relying on the
+  // GHL workflow webhook. The workflow only fires on "contact created"
+  // by default, so any returning lead (anyone we've already touched
+  // via newsletter, prior form, etc.) would get upserted in GHL but
+  // never mirror to FUB, never trigger the FUB automation, never get
+  // the welcome email. Calling our own sync route ensures every popup
+  // submission lands in FUB regardless of GHL workflow config.
+  //
+  // We POST to the same path that GHL hits, with the webhook secret,
+  // and a payload shaped exactly like what GHL would send. The route
+  // already hydrates the full contact from GHL via the contact id, so
+  // it gets the freshly-merged tags.
+  if (ghlContactId) {
+    const webhookSecret = process.env.PELHAM_WEBHOOK_SECRET?.trim();
+    const proto = req.headers.get('x-forwarded-proto') ?? 'https';
+    const host = req.headers.get('host') ?? 'thepelhamgroupnw.com';
+    const syncUrl = `${proto}://${host}/api/sync/ghl-to-fub`;
+    fetch(syncUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        ...(webhookSecret ? { 'X-Pelham-Webhook-Secret': webhookSecret } : {}),
+      },
+      body: JSON.stringify({
+        contact_id: ghlContactId,
+        firstName,
+        lastName: lastName ?? '',
+        email: email ?? '',
+        phone: phone ?? '',
+        source: customSource ?? 'website_contact_form',
+        tags: [...(customTags ?? []), ...consentTags],
+      }),
+    }).then(async (r) => {
+      if (!r.ok) {
+        const body = await r.text().catch(() => '');
+        console.error(
+          `[contact-api] self-triggered FUB sync ${r.status}:`,
+          body.slice(0, 200)
+        );
+      }
+    }).catch((err) => {
+      console.error(
+        '[contact-api] self-triggered FUB sync threw:',
+        (err as Error).message
+      );
+    });
+  }
+
   // If a message was submitted, attach it as a note on the newly created contact
   if (message) {
     try {
