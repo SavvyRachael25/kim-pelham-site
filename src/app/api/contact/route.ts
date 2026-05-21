@@ -138,9 +138,16 @@ export async function POST(req: NextRequest) {
 
   if (!ghlRes.ok) {
     const errBody = await ghlRes.text().catch(() => '(no body)');
-    console.error(`[contact-api] GHL returned ${ghlRes.status}:`, errBody.slice(0, 200));
+    console.error(`[contact-api] GHL returned ${ghlRes.status}:`, errBody.slice(0, 600));
+    // Caller-side diagnostics: when the request includes the X-Pelham-Debug
+    // header we echo the upstream GHL status + body so we can debug 502s
+    // from the browser. No secrets are echoed — only GHL's own error text.
+    const debug = req.headers.get('x-pelham-debug') === '1';
     return NextResponse.json(
-      { error: "We couldn't submit your request. Please try again or text/call Kim at 425-250-9422." },
+      {
+        error: "We couldn't submit your request. Please try again or text/call Kim at 425-250-9422.",
+        ...(debug ? { ghlStatus: ghlRes.status, ghlBody: errBody.slice(0, 600) } : {}),
+      },
       { status: 502 }
     );
   }
