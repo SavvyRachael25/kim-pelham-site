@@ -17,18 +17,28 @@ import Link from 'next/link';
 type Range = '7d' | '30d' | '90d';
 
 type MetricRow = { x: string; y: number };
-type StatBucket = { value: number; prev?: number };
+
+// Umami Cloud /stats returns flat numbers plus a `comparison` sibling
+// holding the previous-period counts.
+type UmamiStats = {
+  pageviews: number;
+  visitors: number;
+  visits: number;
+  bounces: number;
+  totaltime: number;
+  comparison?: {
+    pageviews?: number;
+    visitors?: number;
+    visits?: number;
+    bounces?: number;
+    totaltime?: number;
+  };
+};
 
 type AnalyticsPayload = {
   range: Range;
   generatedAt: string;
-  stats: {
-    pageviews: StatBucket;
-    visitors: StatBucket;
-    visits: StatBucket;
-    bounces: StatBucket;
-    totaltime: StatBucket;
-  };
+  stats: UmamiStats;
   timeseries: { pageviews: { x: string; y: number }[]; sessions: { x: string; y: number }[] };
   topPages: MetricRow[];
   topReferrers: MetricRow[];
@@ -55,10 +65,10 @@ function formatDuration(seconds: number | undefined): string {
   return `${m}m ${s}s`;
 }
 
-function bounceRate(stats: AnalyticsPayload['stats'] | undefined): string {
+function bounceRate(stats: UmamiStats | undefined): string {
   if (!stats) return '—';
-  const v = stats.visits?.value ?? 0;
-  const b = stats.bounces?.value ?? 0;
+  const v = stats.visits ?? 0;
+  const b = stats.bounces ?? 0;
   if (v === 0) return '—';
   return `${((b / v) * 100).toFixed(1)}%`;
 }
@@ -300,28 +310,28 @@ export default function DashboardPage() {
           <div style={cardStyle}>
             <div style={statLabelStyle}>Pageviews</div>
             <div style={statValueStyle}>
-              {loading ? '…' : formatNumber(data?.stats?.pageviews?.value)}
+              {loading ? '…' : formatNumber(data?.stats?.pageviews)}
             </div>
             <div style={{ fontSize: 12, color: 'var(--color-text-muted)', marginTop: 4 }}>
-              {delta(data?.stats?.pageviews?.value, data?.stats?.pageviews?.prev) || ' '}
+              {delta(data?.stats?.pageviews, data?.stats?.comparison?.pageviews) || ' '}
             </div>
           </div>
           <div style={cardStyle}>
             <div style={statLabelStyle}>Unique visitors</div>
             <div style={statValueStyle}>
-              {loading ? '…' : formatNumber(data?.stats?.visitors?.value)}
+              {loading ? '…' : formatNumber(data?.stats?.visitors)}
             </div>
             <div style={{ fontSize: 12, color: 'var(--color-text-muted)', marginTop: 4 }}>
-              {delta(data?.stats?.visitors?.value, data?.stats?.visitors?.prev) || ' '}
+              {delta(data?.stats?.visitors, data?.stats?.comparison?.visitors) || ' '}
             </div>
           </div>
           <div style={cardStyle}>
             <div style={statLabelStyle}>Sessions</div>
             <div style={statValueStyle}>
-              {loading ? '…' : formatNumber(data?.stats?.visits?.value)}
+              {loading ? '…' : formatNumber(data?.stats?.visits)}
             </div>
             <div style={{ fontSize: 12, color: 'var(--color-text-muted)', marginTop: 4 }}>
-              {delta(data?.stats?.visits?.value, data?.stats?.visits?.prev) || ' '}
+              {delta(data?.stats?.visits, data?.stats?.comparison?.visits) || ' '}
             </div>
           </div>
           <div style={cardStyle}>
@@ -335,8 +345,8 @@ export default function DashboardPage() {
               {loading
                 ? '…'
                 : formatDuration(
-                    (data?.stats?.totaltime?.value ?? 0) /
-                      Math.max(data?.stats?.visits?.value ?? 1, 1)
+                    (data?.stats?.totaltime ?? 0) /
+                      Math.max(data?.stats?.visits ?? 1, 1)
                   )}
             </div>
             <div style={{ fontSize: 12, color: 'var(--color-text-muted)', marginTop: 4 }}>&nbsp;</div>
