@@ -64,6 +64,52 @@ function normalizeTags(t: unknown): string[] {
   return [];
 }
 
+/*
+  GHL → FUB tag mapping.
+  ─────────────────────
+  GHL tags are kebab-case (e.g. `prelisting-guide`). FUB tags use Title
+  Case to match the rest of Kim's CRM taxonomy. This map handles the
+  rename so FUB smart lists can filter on human-readable tag names.
+
+  Also derives high-intent tags like `Engaged Core` so a single FUB
+  smart list can capture every lead-magnet/popup/form submission
+  regardless of which specific magnet they came from.
+*/
+const GHL_TO_FUB_TAG: Record<string, string> = {
+  'prelisting-guide': 'Pre-Listing Playbook',
+  'listings-first-look': 'Listings First Look',
+  'seller-lead': 'Seller Lead',
+  'buyer-lead': 'Buyer Lead',
+  'newsletter-signup': 'Newsletter Subscriber',
+  'website-lead': 'Website Lead',
+  'consent-marketing': 'SMS Marketing Consent',
+  'consent-transactional': 'SMS Transactional Consent',
+};
+
+const ENGAGED_CORE_TRIGGERS = new Set([
+  'prelisting-guide',
+  'listings-first-look',
+  'seller-lead',
+  'buyer-lead',
+  'home-value-request',
+  'staging-gallery-request',
+  'newsletter-signup',
+]);
+
+function mapTagsForFub(ghlTags: string[]): string[] {
+  const mapped = new Set<string>();
+  for (const tag of ghlTags) {
+    const fubTag = GHL_TO_FUB_TAG[tag] ?? tag;
+    mapped.add(fubTag);
+  }
+  // Derived: any lead from a high-intent source gets bucketed into
+  // Engaged Core so Kim's nurture campaign can target one smart list.
+  if (ghlTags.some((t) => ENGAGED_CORE_TRIGGERS.has(t))) {
+    mapped.add('Engaged Core');
+  }
+  return [...mapped];
+}
+
 function fubAuthHeader(apiKey: string) {
   return `Basic ${Buffer.from(`${apiKey}:`).toString('base64')}`;
 }
@@ -82,14 +128,15 @@ function buildFubPayload(ghl: GHLContactPayload, kimUserId: number) {
     }
   }
 
-  const tags = normalizeTags(ghl.tags);
+  const rawTags = normalizeTags(ghl.tags);
+  const fubTags = mapTagsForFub(rawTags);
 
   const fub: Record<string, unknown> = {
     firstName: fName || 'Lead',
     lastName: lName || '',
     source: ghl.source ? String(ghl.source) : 'Pelham Website / Chat',
     assignedUserId: kimUserId,
-    tags: ['synced-from-ghl', ...tags],
+    tags: ['Synced from GHL', ...fubTags],
   };
 
   if (ghl.email) fub.emails = [{ value: String(ghl.email), type: 'home' }];
