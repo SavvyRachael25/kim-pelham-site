@@ -166,12 +166,13 @@ export async function POST(req: NextRequest) {
     }
   }
 
-  // Best-effort branded welcome email for the listings first-look popup.
-  // No-ops if RESEND_API_KEY isn't set, so the form keeps working even
-  // before Resend is configured. Errors are logged but don't fail the
-  // request — the lead is already in GHL+FUB at this point.
+  // Best-effort branded welcome email that delivers the pre-listing
+  // playbook PDF download link. No-ops if RESEND_API_KEY isn't set, so
+  // the form keeps working before Resend is configured. Errors are
+  // logged but don't fail the request — the lead is already in GHL+FUB
+  // at this point.
   const tagSet = new Set([...(customTags ?? []), ...consentTags]);
-  if (email && tagSet.has('listings-first-look')) {
+  if (email && tagSet.has('prelisting-guide')) {
     const { subject, html, text } = renderListingsWelcomeEmail({ firstName });
     sendEmail({
       to: email,
@@ -179,7 +180,7 @@ export async function POST(req: NextRequest) {
       html,
       text,
       tags: [
-        { name: 'campaign', value: 'listings-first-look' },
+        { name: 'campaign', value: 'prelisting-guide' },
         { name: 'source', value: 'website-popup' },
       ],
     }).then((r) => {

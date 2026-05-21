@@ -26,7 +26,9 @@ import type { A2PConsentState } from '@/components/A2PConsent';
  *   • No urgency tactics, no superlatives, no em dashes (per voice rules)
  */
 
-const STORAGE_KEY = 'pelham_listings_lead_popup_dismissed_v1';
+// v2 = pivoted to seller-side pre-listing playbook (was buyer-side first-look)
+// Bumping the version invalidates the prior dismissal so the new copy gets shown.
+const STORAGE_KEY = 'pelham_prelisting_popup_dismissed_v2';
 const DISMISS_DAYS = 7;
 const SHOW_AFTER_MS = 9000;
 const SCROLL_TRIGGER = 0.45;
@@ -91,7 +93,8 @@ export default function ListingsLeadPopup() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const digits = phone.replace(/\D/g, '');
-    if (!firstName.trim() || digits.length < 10) return;
+    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+    if (!firstName.trim() || digits.length < 10 || !emailOk) return;
     setStatus('loading');
 
     try {
@@ -111,8 +114,8 @@ export default function ListingsLeadPopup() {
           transactionalCheckboxText: consent.transactional
             ? `I consent to receive non-marketing text messages from The Pelham Group NW related to transactional messages on your account.`
             : '',
-          tags: ['listings-first-look', 'website-lead'],
-          source: 'listings_lead_popup',
+          tags: ['prelisting-guide', 'seller-lead', 'website-lead'],
+          source: 'prelisting_guide_popup',
         }),
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
@@ -126,7 +129,14 @@ export default function ListingsLeadPopup() {
   if (!visible) return null;
 
   const digits = phone.replace(/\D/g, '');
-  const canSubmit = firstName.trim().length > 0 && digits.length === 10 && status !== 'loading';
+  // Email is required so we can actually deliver the pre-listing playbook.
+  // Phone stays required for A2P follow-up from Kim.
+  const hasEmail = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
+  const canSubmit =
+    firstName.trim().length > 0 &&
+    digits.length === 10 &&
+    hasEmail &&
+    status !== 'loading';
 
   return (
     <>
@@ -233,7 +243,7 @@ export default function ListingsLeadPopup() {
                     color: '#B8845C',
                   }}
                 >
-                  on the list
+                  the playbook is yours
                 </div>
                 <h2
                   style={{
@@ -245,7 +255,7 @@ export default function ListingsLeadPopup() {
                     lineHeight: 1.25,
                   }}
                 >
-                  You&apos;re in.
+                  Check your email.
                 </h2>
                 <p
                   style={{
@@ -256,7 +266,28 @@ export default function ListingsLeadPopup() {
                     margin: '0 0 16px',
                   }}
                 >
-                  Next time I list a home, you&apos;ll get a text from me with photos and the backstory. Reply STOP any time to opt out.
+                  The pre-listing playbook is on its way to your inbox right now. You can also grab it directly here:
+                </p>
+                <p style={{ margin: '0 0 16px' }}>
+                  <a
+                    href="/lead-magnets/PrelistingGuide_PelhamGroup_2026.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: 'inline-block',
+                      padding: '10px 18px',
+                      background: '#2F5233',
+                      color: '#F8F5F0',
+                      textDecoration: 'none',
+                      borderRadius: 3,
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '0.92rem',
+                      fontWeight: 600,
+                      letterSpacing: '0.01em',
+                    }}
+                  >
+                    Download the playbook (PDF)
+                  </a>
                 </p>
                 <p
                   style={{
@@ -298,7 +329,7 @@ export default function ListingsLeadPopup() {
                     margin: '0 0 6px 0',
                   }}
                 >
-                  first look
+                  the playbook
                 </p>
 
                 <h2
@@ -312,8 +343,8 @@ export default function ListingsLeadPopup() {
                     lineHeight: 1.25,
                   }}
                 >
-                  Be the first to see my new{' '}
-                  <span style={{ color: '#2F5233' }}>Snohomish County listings</span>.
+                  Thinking about listing? Here&apos;s my{' '}
+                  <span style={{ color: '#2F5233' }}>pre-listing playbook</span>.
                 </h2>
 
                 <p
@@ -325,7 +356,7 @@ export default function ListingsLeadPopup() {
                     margin: 0,
                   }}
                 >
-                  I send a short text the morning a new listing goes live, with photos and the story behind the home. Most of mine go pending in under two weeks. Drop your name and number, that&apos;s it.
+                  The 108-page playbook I walk every seller through. Pricing, staging room by room, repairs prioritized by ROI, the eight-week timeline, and what to actually expect along the way. Yours, free.
                 </p>
               </div>
 
@@ -414,7 +445,7 @@ export default function ListingsLeadPopup() {
                       letterSpacing: '0.07em',
                     }}
                   >
-                    Email <span style={{ color: '#999', fontWeight: 400, textTransform: 'none', letterSpacing: 0 }}>(optional, for listing photos)</span>
+                    Email <span style={{ color: '#B8845C' }}>*</span> <span style={{ color: '#999', fontWeight: 400, textTransform: 'none', letterSpacing: 0 }}>(we&apos;ll send the playbook here)</span>
                   </label>
                   <input
                     id="listings-email"
@@ -461,7 +492,7 @@ export default function ListingsLeadPopup() {
                     if (canSubmit) e.currentTarget.style.background = '#2F5233';
                   }}
                 >
-                  {status === 'loading' ? 'Adding you to the list...' : 'Text me when a listing drops →'}
+                  {status === 'loading' ? 'Sending you the playbook...' : 'Send me the playbook →'}
                 </button>
 
                 {status === 'error' && (

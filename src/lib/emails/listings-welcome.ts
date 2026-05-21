@@ -1,10 +1,19 @@
 /*
-  Resend welcome email for the listings-first-look popup.
-  ───────────────────────────────────────────────────────
+  Resend welcome email for the pre-listing playbook lead magnet.
+  ──────────────────────────────────────────────────────────────
+  Delivers the PDF via a download link (Resend's attachment limit is
+  4 MB and the PDF is ~11 MB, so a link is the only reliable path).
+
   Plain-HTML template using inline styles so it renders correctly in
   Gmail/Outlook/iOS Mail without a CSS pipeline. Brand tokens are
   duplicated from globals.css (forest/clay/cream + Cormorant + Inter +
-  Caveat) because email clients won't load Google Fonts on iOS.
+  Caveat).
+
+  The exported function name and signature are kept as
+  `renderListingsWelcomeEmail` so /api/contact does not need to change
+  its import. The popup pivoted from buyer first-look to seller
+  pre-listing playbook on 2026-05-21; this template was rewritten in
+  the same pass.
 
   Sender: hello@thepelhamgroupnw.com (requires the domain to be verified
   in Resend before send goes through).
@@ -16,6 +25,8 @@ const CREAM = '#F8F5F0';
 const CREAM_DARK = '#F0EDE7';
 const TEXT = '#2C2C2C';
 const MUTED = '#666';
+const PDF_PATH = '/lead-magnets/PrelistingGuide_PelhamGroup_2026.pdf';
+const PDF_URL = `https://thepelhamgroupnw.com${PDF_PATH}`;
 
 function escapeHtml(s: string): string {
   return s
@@ -34,16 +45,18 @@ export function renderListingsWelcomeEmail(opts: { firstName?: string }): {
   const name = (opts.firstName ?? '').trim();
   const greeting = name ? `Hi ${escapeHtml(name)},` : 'Hi there,';
 
-  const subject = "You're on my first-look list";
+  const subject = 'Your pre-listing playbook from Kim';
 
   const text = [
     greeting,
     '',
-    "Quick note to confirm: you're on my first-look list for Snohomish County listings.",
+    "As promised, here's the pre-listing playbook. It's the 108-page guide I walk every seller through before we go live on MLS.",
     '',
-    "When a new home is about to hit the market, I'll text you the morning it goes live, with photos and the story behind the home. Two or three texts a month, no spam, reply STOP any time.",
+    `Download it here: ${PDF_URL}`,
     '',
-    "If you want to chat about your timeline or a specific neighborhood, just reply to this email or text me at 425-250-9422. I work with a maximum of two active clients at a time, so I actually have room to talk.",
+    "Inside: pricing strategy, the eight-week timeline, staging room by room, repairs prioritized by ROI, what to expect on the journey, and the negotiation prep I do before every offer comes in.",
+    '',
+    "Read at your own pace. When you're ready to talk through your timeline or just bounce ideas around, reply to this email or text me at 425-250-9422. I work with a maximum of two active clients at a time, so I actually have room to talk.",
     '',
     'Always,',
     'Kim',
@@ -53,7 +66,7 @@ export function renderListingsWelcomeEmail(opts: { firstName?: string }): {
     'Brokered by Katrina Eileen Real Estate',
     '2815 Baker Ave Suite 103, Everett WA 98201',
     '',
-    'You received this email because you signed up at thepelhamgroupnw.com.',
+    'You received this email because you requested the pre-listing playbook at thepelhamgroupnw.com.',
     'Reply STOP to opt out of texts. Unsubscribe from email: hello@thepelhamgroupnw.com',
   ].join('\n');
 
@@ -67,7 +80,7 @@ export function renderListingsWelcomeEmail(opts: { firstName?: string }): {
 </head>
 <body style="margin:0;padding:0;background:${CREAM_DARK};font-family:Inter,Helvetica,Arial,sans-serif;color:${TEXT};">
   <span style="display:none;visibility:hidden;mso-hide:all;font-size:1px;color:${CREAM_DARK};line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
-    On the first-look list. Texts the morning a new listing goes live, with photos and the backstory.
+    The 108-page pre-listing playbook is yours. Pricing, staging, repairs, timeline.
   </span>
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:${CREAM_DARK};">
     <tr><td align="center" style="padding:32px 16px;">
@@ -79,19 +92,43 @@ export function renderListingsWelcomeEmail(opts: { firstName?: string }): {
         <tr><td style="padding:32px 40px 8px 40px;">
           <p style="margin:0 0 4px 0;font-family:'Caveat',cursive;font-size:18px;color:${CLAY};letter-spacing:0.01em;">a note from Kim</p>
           <h1 style="margin:0;font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:30px;line-height:1.18;color:${FOREST};">
-            You&rsquo;re on the first-look list.
+            Your pre-listing playbook is here.
           </h1>
         </td></tr>
 
         <!-- Body -->
         <tr><td style="padding:18px 40px 8px 40px;font-family:Inter,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.7;color:${TEXT};">
           <p style="margin:0 0 14px 0;">${greeting}</p>
-          <p style="margin:0 0 14px 0;">Quick note to confirm: you&rsquo;re on my first-look list for Snohomish County.</p>
           <p style="margin:0 0 14px 0;">
-            When a new home is about to hit the market, I&rsquo;ll text you the morning it goes live, with photos and the story behind the home. Two or three texts a month, no spam, reply STOP any time.
+            As promised, here&rsquo;s the pre-listing playbook. It&rsquo;s the 108-page guide I walk every seller through before we go live on MLS.
           </p>
+        </td></tr>
+
+        <!-- Big CTA -->
+        <tr><td align="center" style="padding:6px 40px 20px 40px;">
+          <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+            <tr><td bgcolor="${FOREST}" style="border-radius:4px;">
+              <a href="${PDF_URL}" target="_blank" rel="noopener" style="display:inline-block;padding:14px 28px;font-family:Inter,Helvetica,Arial,sans-serif;font-size:15px;font-weight:600;color:${CREAM};text-decoration:none;letter-spacing:0.01em;">
+                Download the playbook (PDF) &rarr;
+              </a>
+            </td></tr>
+          </table>
+          <p style="margin:8px 0 0 0;font-family:Inter,Helvetica,Arial,sans-serif;font-size:12px;color:${MUTED};">108 pages &middot; ~11 MB</p>
+        </td></tr>
+
+        <!-- What's inside -->
+        <tr><td style="padding:0 40px 8px 40px;font-family:Inter,Helvetica,Arial,sans-serif;font-size:15px;line-height:1.7;color:${TEXT};">
+          <p style="margin:0 0 8px 0;font-weight:600;color:${FOREST};">What&rsquo;s inside:</p>
+          <ul style="margin:0 0 14px 22px;padding:0;color:${TEXT};">
+            <li>Pricing strategy that hits 102.3% sale-to-list</li>
+            <li>The eight-week timeline I walk every seller through</li>
+            <li>Staging room by room</li>
+            <li>Repairs prioritized by ROI, what to skip</li>
+            <li>What to expect on the journey, week by week</li>
+            <li>Negotiation prep I do before every offer comes in</li>
+          </ul>
           <p style="margin:0 0 14px 0;">
-            If you want to chat about your timeline or a specific neighborhood, just reply to this email or text me at <a href="sms:+14252509422" style="color:${FOREST};text-decoration:underline;">425.250.9422</a>. I work with a maximum of two active clients at a time, so I actually have room to talk.
+            Read at your own pace. When you&rsquo;re ready to talk through your timeline or just bounce ideas around, reply to this email or text me at <a href="sms:+14252509422" style="color:${FOREST};text-decoration:underline;">425.250.9422</a>. I work with a maximum of two active clients at a time, so I actually have room to talk.
           </p>
         </td></tr>
 
@@ -115,7 +152,7 @@ export function renderListingsWelcomeEmail(opts: { firstName?: string }): {
           <p style="margin:0 0 6px 0;">WA Broker #119262 &middot; NWMLS Broker #103153</p>
           <p style="margin:0 0 12px 0;">2815 Baker Ave Suite 103, Everett WA 98201</p>
           <p style="margin:0;color:#9a948a;font-size:11px;">
-            You received this email because you signed up at <a href="https://thepelhamgroupnw.com" style="color:#9a948a;text-decoration:underline;">thepelhamgroupnw.com</a>. Reply STOP to opt out of texts.
+            You received this email because you requested the pre-listing playbook at <a href="https://thepelhamgroupnw.com" style="color:#9a948a;text-decoration:underline;">thepelhamgroupnw.com</a>. Reply STOP to opt out of texts.
             To unsubscribe from email, reply UNSUBSCRIBE or email <a href="mailto:hello@thepelhamgroupnw.com" style="color:#9a948a;text-decoration:underline;">hello@thepelhamgroupnw.com</a>.
           </p>
         </td></tr>
