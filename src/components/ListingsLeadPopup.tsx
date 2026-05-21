@@ -256,7 +256,7 @@ export default function ListingsLeadPopup() {
                     margin: '0 0 16px',
                   }}
                 >
-                  Next time I list a home, you&apos;ll get a text from me before it hits Zillow. Reply STOP any time to opt out.
+                  Next time I list a home, you&apos;ll get a text from me with photos and the backstory. Reply STOP any time to opt out.
                 </p>
                 <p
                   style={{
@@ -325,7 +325,7 @@ export default function ListingsLeadPopup() {
                     margin: 0,
                   }}
                 >
-                  I send a short text the morning a new listing goes live, before it hits Zillow or Redfin. Most of mine go pending in under two weeks. Drop your name and number, that&apos;s it.
+                  I send a short text the morning a new listing goes live, with photos and the story behind the home. Most of mine go pending in under two weeks. Drop your name and number, that&apos;s it.
                 </p>
               </div>
 

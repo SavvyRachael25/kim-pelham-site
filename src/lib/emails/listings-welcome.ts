@@ -41,7 +41,7 @@ export function renderListingsWelcomeEmail(opts: { firstName?: string }): {
     '',
     "Quick note to confirm: you're on my first-look list for Snohomish County listings.",
     '',
-    "When a new home is about to hit the market, I'll text you the morning it goes live, before it shows up on Zillow or Redfin. Two or three texts a month, no spam, reply STOP any time.",
+    "When a new home is about to hit the market, I'll text you the morning it goes live, with photos and the story behind the home. Two or three texts a month, no spam, reply STOP any time.",
     '',
     "If you want to chat about your timeline or a specific neighborhood, just reply to this email or text me at 425-250-9422. I work with a maximum of two active clients at a time, so I actually have room to talk.",
     '',
@@ -67,7 +67,7 @@ export function renderListingsWelcomeEmail(opts: { firstName?: string }): {
 </head>
 <body style="margin:0;padding:0;background:${CREAM_DARK};font-family:Inter,Helvetica,Arial,sans-serif;color:${TEXT};">
   <span style="display:none;visibility:hidden;mso-hide:all;font-size:1px;color:${CREAM_DARK};line-height:1px;max-height:0;max-width:0;opacity:0;overflow:hidden;">
-    On the first-look list. Texts the morning a new listing goes live, before Zillow or Redfin.
+    On the first-look list. Texts the morning a new listing goes live, with photos and the backstory.
   </span>
   <table role="presentation" width="100%" cellpadding="0" cellspacing="0" border="0" style="background:${CREAM_DARK};">
     <tr><td align="center" style="padding:32px 16px;">
@@ -88,7 +88,7 @@ export function renderListingsWelcomeEmail(opts: { firstName?: string }): {
           <p style="margin:0 0 14px 0;">${greeting}</p>
           <p style="margin:0 0 14px 0;">Quick note to confirm: you&rsquo;re on my first-look list for Snohomish County.</p>
           <p style="margin:0 0 14px 0;">
-            When a new home is about to hit the market, I&rsquo;ll text you the morning it goes live, before it shows up on Zillow or Redfin. Two or three texts a month, no spam, reply STOP any time.
+            When a new home is about to hit the market, I&rsquo;ll text you the morning it goes live, with photos and the story behind the home. Two or three texts a month, no spam, reply STOP any time.
           </p>
           <p style="margin:0 0 14px 0;">
             If you want to chat about your timeline or a specific neighborhood, just reply to this email or text me at <a href="sms:+14252509422" style="color:${FOREST};text-decoration:underline;">425.250.9422</a>. I work with a maximum of two active clients at a time, so I actually have room to talk.
