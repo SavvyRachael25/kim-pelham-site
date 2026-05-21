@@ -70,12 +70,12 @@ async function hydrateGhlContact(
     return {
       ...body,
       ...c,
-      tags: (c.tags as unknown) ?? body.tags,
-      email: (c.email as string) ?? body.email,
-      phone: (c.phone as string) ?? body.phone,
-      firstName: (c.firstName as string) ?? body.firstName ?? body.first_name,
-      lastName: (c.lastName as string) ?? body.lastName ?? body.last_name,
-      source: (c.source as string) ?? body.source,
+      tags: (c.tags as string[] | string | undefined) ?? body.tags,
+      email: (c.email as string | undefined) ?? body.email,
+      phone: (c.phone as string | undefined) ?? body.phone,
+      firstName: (c.firstName as string | undefined) ?? body.firstName ?? body.first_name,
+      lastName: (c.lastName as string | undefined) ?? body.lastName ?? body.last_name,
+      source: (c.source as string | undefined) ?? body.source,
     };
   } catch (err) {
     console.warn('[ghl-to-fub] hydrate fetch threw, falling back:', (err as Error).message);
