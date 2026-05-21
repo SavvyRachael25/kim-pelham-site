@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 Disallow: /studio/
+Disallow: /dashboard
+Disallow: /api/
 
 Sitemap: https://thepelhamgroupnw.com/sitemap.xml
