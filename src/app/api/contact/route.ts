@@ -1,4 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { sendEmail } from '@/lib/resend';
+import { renderListingsWelcomeEmail } from '@/lib/emails/listings-welcome';
 
 /**
  * POST /api/contact
@@ -162,6 +164,29 @@ export async function POST(req: NextRequest) {
       // Note creation is best-effort — don't fail the whole request over it
       console.error('[contact-api] Failed to create note on contact');
     }
+  }
+
+  // Best-effort branded welcome email for the listings first-look popup.
+  // No-ops if RESEND_API_KEY isn't set, so the form keeps working even
+  // before Resend is configured. Errors are logged but don't fail the
+  // request — the lead is already in GHL+FUB at this point.
+  const tagSet = new Set([...(customTags ?? []), ...consentTags]);
+  if (email && tagSet.has('listings-first-look')) {
+    const { subject, html, text } = renderListingsWelcomeEmail({ firstName });
+    sendEmail({
+      to: email,
+      subject,
+      html,
+      text,
+      tags: [
+        { name: 'campaign', value: 'listings-first-look' },
+        { name: 'source', value: 'website-popup' },
+      ],
+    }).then((r) => {
+      if (!r.ok) {
+        console.error('[contact-api] Resend send failed:', r.reason);
+      }
+    });
   }
 
   return NextResponse.json({ success: true }, { status: 200 });

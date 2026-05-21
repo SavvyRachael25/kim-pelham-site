@@ -35,6 +35,7 @@ export default function ListingsLeadPopup() {
   const [visible, setVisible] = useState(false);
   const [firstName, setFirstName] = useState('');
   const [phone, setPhone] = useState('');
+  const [email, setEmail] = useState('');
   const [consent, setConsent] = useState<A2PConsentState>({
     marketing: false,
     transactional: false,
@@ -100,7 +101,7 @@ export default function ListingsLeadPopup() {
         body: JSON.stringify({
           firstName: firstName.trim(),
           lastName: '',
-          email: '',
+          email: email.trim(),
           phone: `+1${digits}`,
           smsMarketingConsent: consent.marketing,
           smsTransactionalConsent: consent.transactional,
@@ -389,6 +390,39 @@ export default function ListingsLeadPopup() {
                     placeholder="(425) 555-0188"
                     autoComplete="tel"
                     required
+                    style={inputStyle}
+                    onFocus={(e) => {
+                      e.currentTarget.style.borderColor = '#2F5233';
+                    }}
+                    onBlur={(e) => {
+                      e.currentTarget.style.borderColor = '#DDD8CF';
+                    }}
+                  />
+                </div>
+
+                <div style={{ marginBottom: 10 }}>
+                  <label
+                    htmlFor="listings-email"
+                    style={{
+                      display: 'block',
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '0.72rem',
+                      fontWeight: 600,
+                      color: '#666',
+                      marginBottom: 5,
+                      textTransform: 'uppercase',
+                      letterSpacing: '0.07em',
+                    }}
+                  >
+                    Email <span style={{ color: '#999', fontWeight: 400, textTransform: 'none', letterSpacing: 0 }}>(optional, for listing photos)</span>
+                  </label>
+                  <input
+                    id="listings-email"
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="you@email.com"
+                    autoComplete="email"
                     style={inputStyle}
                     onFocus={(e) => {
                       e.currentTarget.style.borderColor = '#2F5233';
