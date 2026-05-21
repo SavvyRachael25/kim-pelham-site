@@ -117,9 +117,14 @@ export async function POST(req: NextRequest) {
     tags: [...(customTags ?? ['website-lead']), ...consentTags],
   };
 
+  // Use GHL's upsert endpoint so repeat submitters don't 4xx. If the
+  // contact already exists (matched by email or phone within this
+  // location), GHL merges the new tags/source onto the existing record;
+  // otherwise it creates a new contact. Lets the same person grab
+  // multiple lead magnets over time without breaking the form.
   let ghlRes: Response;
   try {
-    ghlRes = await fetch(`${GHL_API_BASE}/contacts/`, {
+    ghlRes = await fetch(`${GHL_API_BASE}/contacts/upsert`, {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${GHL_API_TOKEN}`,
