@@ -29,6 +29,59 @@ import { NextRequest, NextResponse } from 'next/server';
  */
 
 const FUB_API_BASE = 'https://api.followupboss.com/v1';
+const GHL_API_BASE = 'https://services.leadconnectorhq.com';
+const GHL_API_VERSION = '2021-07-28';
+
+/*
+  Hydrate the GHL contact from GHL's API using the contact id from the
+  webhook payload. GHL workflows can be configured to send any subset
+  of fields, so to guarantee we have tags (and any future custom fields)
+  we re-fetch the full record. Returns the original payload unchanged
+  if the fetch fails — the route is best-effort.
+*/
+async function hydrateGhlContact(
+  body: GHLContactPayload,
+  ghlToken: string
+): Promise<GHLContactPayload> {
+  const contactId =
+    (typeof body.contact_id === 'string' && body.contact_id) ||
+    (typeof body.id === 'string' && body.id) ||
+    undefined;
+  if (!contactId || !ghlToken) return body;
+  try {
+    const res = await fetch(`${GHL_API_BASE}/contacts/${contactId}`, {
+      method: 'GET',
+      headers: {
+        Authorization: `Bearer ${ghlToken}`,
+        Version: GHL_API_VERSION,
+        Accept: 'application/json',
+      },
+    });
+    if (!res.ok) {
+      console.warn(`[ghl-to-fub] hydrate fetch returned ${res.status}, falling back to webhook payload`);
+      return body;
+    }
+    const data = (await res.json()) as { contact?: Record<string, unknown> };
+    const c = data.contact;
+    if (!c) return body;
+    // GHL returns the full record as `contact` — merge into our shape,
+    // letting the freshly-fetched values overwrite anything sparser from
+    // the workflow webhook.
+    return {
+      ...body,
+      ...c,
+      tags: (c.tags as unknown) ?? body.tags,
+      email: (c.email as string) ?? body.email,
+      phone: (c.phone as string) ?? body.phone,
+      firstName: (c.firstName as string) ?? body.firstName ?? body.first_name,
+      lastName: (c.lastName as string) ?? body.lastName ?? body.last_name,
+      source: (c.source as string) ?? body.source,
+    };
+  } catch (err) {
+    console.warn('[ghl-to-fub] hydrate fetch threw, falling back:', (err as Error).message);
+    return body;
+  }
+}
 
 interface GHLContactPayload {
   contact_id?: string;
@@ -184,7 +237,28 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: 'Invalid JSON body' }, { status: 400 });
   }
 
-  const incomingTags = normalizeTags(body.tags);
+  // Re-fetch the full contact from GHL using its id so we always have
+  // the latest tags / fields regardless of how the GHL workflow webhook
+  // is configured. Falls back to the webhook payload if GHL is down.
+  const GHL_TOKEN = process.env.GHL_API_TOKEN?.trim() ?? '';
+  body = await hydrateGhlContact(body, GHL_TOKEN);
+
+  // Diagnostics: log what arrived (post-hydrate) so we can see exactly
+  // what tags GHL is giving us. Counts only, no PII.
+  const hydratedTags = normalizeTags(body.tags);
+  console.log(
+    '[ghl-to-fub] inbound',
+    JSON.stringify({
+      hasId: !!(body.contact_id || body.id),
+      hasEmail: !!body.email,
+      hasPhone: !!body.phone,
+      tagCount: hydratedTags.length,
+      tagsPreview: hydratedTags.slice(0, 12),
+      source: body.source ?? null,
+    })
+  );
+
+  const incomingTags = hydratedTags;
 
   if (incomingTags.includes('internal-notifications') || incomingTags.includes('do-not-market')) {
     return NextResponse.json({ skipped: true, reason: 'internal contact' }, { status: 200 });
