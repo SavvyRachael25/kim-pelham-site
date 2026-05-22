@@ -38,7 +38,7 @@ import {
 */
 
 export const runtime = 'nodejs';
-export const maxDuration = 60;
+export const maxDuration = 300; // headroom for the cascade renders (capped to plan max)
 export const dynamic = 'force-dynamic'; // GET diagnostic must reflect live runtime, never cached
 
 interface IncomingPayload {
@@ -133,16 +133,15 @@ export async function POST(req: NextRequest) {
     error?: string;
   }> = [];
 
-  // One browser for the whole cascade — launching per template exceeded the
-  // 60s function limit. Reuse it across every render, close once at the end.
-  const browser = await launchRenderBrowser();
-  try {
-  for (const item of cascade.items) {
+  // One browser for the whole cascade (launching per template blew the 60s
+  // limit). Render in batches of 2 concurrent pages: halves wall-time vs fully
+  // sequential while capping memory (the Studio recompiles ~13 JSX files with
+  // Babel on every page load, so each render is several seconds of CPU).
+  const renderItem = async (item: (typeof cascade.items)[number]) => {
     try {
       const studioUrl = buildStudioUrl(item.templateId, row);
       const jpeg = await screenshotTemplate(browser, studioUrl, item.width, item.height);
       const imageUrl = await hostImage(jpeg, `${slug}-${item.key}`);
-
       if (item.channel === 'social' && item.platform) {
         const r = await postToZernio({
           caption: item.caption ?? '',
@@ -163,12 +162,7 @@ export async function POST(req: NextRequest) {
         });
       } else {
         // Collateral asset: rendered + hosted, not posted.
-        results.push({
-          key: item.key,
-          label: item.label,
-          channel: item.channel,
-          imageUrl,
-        });
+        results.push({ key: item.key, label: item.label, channel: item.channel, imageUrl });
       }
     } catch (err) {
       results.push({
@@ -179,7 +173,14 @@ export async function POST(req: NextRequest) {
         error: (err as Error).message,
       });
     }
-  }
+  };
+
+  const browser = await launchRenderBrowser();
+  try {
+    const BATCH = 2;
+    for (let i = 0; i < cascade.items.length; i += BATCH) {
+      await Promise.all(cascade.items.slice(i, i + BATCH).map(renderItem));
+    }
   } finally {
     await browser.close();
   }
