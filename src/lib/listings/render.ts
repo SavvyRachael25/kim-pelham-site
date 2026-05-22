@@ -45,6 +45,11 @@ const BRAND_FONT_URLS = [
 let fontsRegistered = false;
 async function registerBrandFonts(): Promise<void> {
   if (fontsRegistered) return;
+  // On Lambda only /tmp is writable. chromium.font() writes to $HOME/.fonts and
+  // Chromium's fontconfig reads $HOME/.fonts — so HOME must point at a writable
+  // dir or the registration silently fails and text never rasterizes. Force it
+  // to /tmp; the browser launch (env: {...process.env}) inherits the same HOME.
+  process.env.HOME = '/tmp';
   await Promise.all(BRAND_FONT_URLS.map((u) => chromium.font(u).catch(() => {})));
   fontsRegistered = true;
 }

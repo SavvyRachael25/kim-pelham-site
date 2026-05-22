@@ -222,9 +222,17 @@ export async function GET() {
     node: process.version,
     awsExecEnv: process.env.AWS_EXECUTION_ENV ?? null,
     awsJsRuntimeForced: process.env.AWS_LAMBDA_JS_RUNTIME ?? null,
+    homeBefore: process.env.HOME ?? null,
     ldBefore,
   };
   const fs = await import('node:fs');
+  // Font-registration check: HOME must be writable for chromium.font().
+  try {
+    diag.tmpFontsExists = fs.existsSync('/tmp/.fonts');
+    diag.tmpFontsDir = fs.existsSync('/tmp/.fonts') ? fs.readdirSync('/tmp/.fonts') : null;
+  } catch (e) {
+    diag.tmpFontsErr = (e as Error).message;
+  }
   // Is the AL2023 lib tarball actually bundled into the function?
   const binCandidates = [
     '/var/task/node_modules/@sparticuz/chromium/bin',
