@@ -19,7 +19,12 @@
   intentionally skipped with reasons until those studio templates exist.
 */
 
-export const STUDIO_BASE = 'https://templates.thepelhamgroupnw.com';
+// The Brand Studio is served from the main domain at /studio (public/studio).
+// The templates.thepelhamgroupnw.com subdomain was never DNS-configured, so
+// the headless renderer (which needs a publicly resolvable URL) points at the
+// same-origin path instead. Override via STUDIO_BASE if the subdomain goes live.
+export const STUDIO_BASE =
+  process.env.STUDIO_BASE?.trim() || 'https://thepelhamgroupnw.com/studio';
 
 export type Channel = 'social' | 'asset';
 export type SocialPlatform = 'instagram' | 'facebook' | 'googlebusiness';
@@ -124,7 +129,9 @@ export function buildStudioUrl(templateId: string, row: ListingRow): string {
   if (row.mls) params.set('listingMls', row.mls);
   if (row.hook) params.set('listingHook', row.hook);
   if (row.openHouse) params.set('openHouseRaw', row.openHouse);
-  return `${STUDIO_BASE}/?${params.toString()}`;
+  // index.html explicitly so it resolves whether STUDIO_BASE is the /studio
+  // path on the main domain or a subdomain root.
+  return `${STUDIO_BASE}/index.html?${params.toString()}`;
 }
 
 export function buildCascade(row: ListingRow): Cascade {
