@@ -138,8 +138,18 @@ export async function launchRenderBrowser(): Promise<Browser> {
   if (!ldPaths.includes(libDir)) {
     process.env.LD_LIBRARY_PATH = [libDir, ...ldPaths].join(':');
   }
+  // @sparticuz v131 hardcodes "--use-gl=angle --use-angle=swiftshader" and the
+  // setGraphicsMode setter is a no-op (always true) in this build. SwiftShader's
+  // GPU emulation fails to composite the gradient/overlay + text layers in this
+  // environment — the photo and simple shapes paint, but gradients and every
+  // word drop out. Strip the GL/angle flags and force CPU rasterization, which
+  // renders the full graphic correctly.
+  const args = chromium.args.filter(
+    (a) => !a.startsWith('--use-gl') && !a.startsWith('--use-angle')
+  );
+  args.push('--disable-gpu');
   return puppeteer.launch({
-    args: chromium.args,
+    args,
     executablePath,
     headless: true,
     env: { ...process.env },
