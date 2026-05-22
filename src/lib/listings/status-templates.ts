@@ -218,13 +218,16 @@ export function buildCascade(row: ListingRow): Cascade {
       break;
     }
     case 'coming-soon':
-      newsletterItem = {
-        section: 'Coming Soon',
-        headline: `Coming soon in ${city}`,
-        blurb: `${addr} is about to hit the market. Want a first look before it is live? Reply and I will keep you posted.`,
-        listingUrl: row.listingUrl,
-      };
-      skipped.push({ key: 'social', reason: 'No "Coming Soon" social template in the studio yet.' });
+      // ⛔ COMPLIANCE HARD BLOCK — never generate "Coming Soon" content.
+      // Publicly marketing a listing before it is active in the MLS violates
+      // NWMLS Clear Cooperation Policy and is a Fair Housing / licensing risk
+      // (it can get a broker's license pulled). No social, no newsletter, no
+      // "first look before it's live" teaser — produce nothing and tell Kim why.
+      skipped.push({
+        key: 'all',
+        reason:
+          'BLOCKED for compliance: "Coming Soon" pre-marketing is not permitted (NWMLS Clear Cooperation Policy / Fair Housing). No assets were generated. List the property as Active / Just Listed in the MLS first, then change the status here.',
+      });
       break;
     case 'pending':
     case 'pending-inspection':
