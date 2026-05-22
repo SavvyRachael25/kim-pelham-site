@@ -189,7 +189,11 @@ export async function screenshotTemplate(
           const f = document.querySelector('.stage-frame');
           if (!f) return false;
           const r = (f as HTMLElement).getBoundingClientRect();
-          const text = (f as HTMLElement).innerText || '';
+          // textContent (NOT innerText): the frame is clipped to 0 width inside
+          // the collapsed ui-clean grid, so innerText returns '' even when the
+          // text nodes exist — that made this wait time out and screenshot a
+          // half-rendered frame. textContent reflects the DOM regardless.
+          const text = f.textContent || '';
           return r.width > 100 && r.height > 100 && f.querySelectorAll('*').length >= 8 && text.trim().length > 3;
         },
         { timeout: 22000, polling: 250 }
