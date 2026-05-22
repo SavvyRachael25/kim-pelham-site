@@ -39,7 +39,16 @@ export async function renderTemplateToJpeg(
   // extracts, and Chromium dies with "libnss3.so: cannot open shared
   // object file". Forcing the runtime string makes executablePath() inflate
   // the AL2023 pack — the exact code path a real Lambda would take.
-  if (!process.env.AWS_EXECUTION_ENV && !process.env.AWS_LAMBDA_JS_RUNTIME) {
+  //
+  // IMPORTANT: the package only extracts the AL2023 pack (the one its
+  // LD_LIBRARY_PATH points at, /tmp/al2023/lib) when AWS_EXECUTION_ENV or
+  // AWS_LAMBDA_JS_RUNTIME contains "20.x"/"22.x". If Vercel sets
+  // AWS_EXECUTION_ENV to e.g. "AWS_Lambda_nodejs24.x", a guard that only
+  // acts when those vars are *unset* would never fire and we'd be back to
+  // the missing-lib error. So force AWS_LAMBDA_JS_RUNTIME unless it already
+  // indicates 20/22.
+  const jsRuntime = process.env.AWS_LAMBDA_JS_RUNTIME ?? '';
+  if (!jsRuntime.includes('20.x') && !jsRuntime.includes('22.x')) {
     process.env.AWS_LAMBDA_JS_RUNTIME = 'nodejs20.x';
   }
   const browser = await puppeteer.launch({
