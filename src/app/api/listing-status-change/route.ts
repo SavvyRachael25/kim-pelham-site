@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import {
-  planForStatus,
+  buildCascade,
   buildStudioUrl,
   type ListingRow,
 } from '@/lib/listings/status-templates';
@@ -103,64 +103,91 @@ export async function POST(req: NextRequest) {
     );
   }
 
-  // 2. Plan
-  const plan = planForStatus(row);
-  if (!plan.ready || !plan.templateId) {
+  // 2. Build the cascade for this status
+  const cascade = buildCascade(row);
+  if (cascade.items.length === 0) {
     console.log(
-      `[listing-webhook] skip ${row.address} (${row.status}): ${plan.reason}`
+      `[listing-webhook] no cascade for ${row.address} (${row.status}): ${cascade.skipped.map((s) => s.reason).join('; ')}`
     );
     return NextResponse.json(
-      { skipped: true, reason: plan.reason },
+      { skipped: cascade.skipped, results: [] },
       { status: 200 }
     );
   }
 
-  const studioUrl = buildStudioUrl(plan.templateId, row);
   const publishNow = process.env.LISTING_AUTOPUBLISH?.trim() === 'true';
+  const slug = slugify(row.address);
 
-  try {
-    // 3. Render
-    const jpeg = await renderTemplateToJpeg(
-      studioUrl,
-      plan.width ?? 1080,
-      plan.height ?? 1080
-    );
-    // 4. Host
-    const imageUrl = await hostImage(jpeg, slugify(row.address));
-    // 5. Post
-    const result = await postToZernio({
-      caption: plan.caption ?? '',
-      imageUrl,
-      publishNow,
-    });
+  // 3-5. Render → host → (social) draft via Zernio, for each cascade item.
+  // Each item is independent; one failure doesn't abort the rest.
+  const results: Array<{
+    key: string;
+    label: string;
+    channel: string;
+    platform?: string;
+    imageUrl?: string;
+    posted?: boolean;
+    mode?: string;
+    error?: string;
+  }> = [];
 
-    if (!result.ok) {
-      console.error(
-        `[listing-webhook] Zernio ${result.status}: ${result.body}`
-      );
-      return NextResponse.json(
-        { error: 'Zernio post failed', status: result.status, detail: result.body },
-        { status: 502 }
-      );
+  for (const item of cascade.items) {
+    try {
+      const studioUrl = buildStudioUrl(item.templateId, row);
+      const jpeg = await renderTemplateToJpeg(studioUrl, item.width, item.height);
+      const imageUrl = await hostImage(jpeg, `${slug}-${item.key}`);
+
+      if (item.channel === 'social' && item.platform) {
+        const r = await postToZernio({
+          caption: item.caption ?? '',
+          imageUrl,
+          platform: item.platform,
+          contentType: item.contentType,
+          publishNow,
+        });
+        results.push({
+          key: item.key,
+          label: item.label,
+          channel: item.channel,
+          platform: item.platform,
+          imageUrl,
+          posted: r.ok,
+          mode: publishNow ? 'published' : 'draft',
+          error: r.ok ? undefined : `Zernio ${r.status}: ${r.body}`,
+        });
+      } else {
+        // Collateral asset: rendered + hosted, not posted.
+        results.push({
+          key: item.key,
+          label: item.label,
+          channel: item.channel,
+          imageUrl,
+        });
+      }
+    } catch (err) {
+      results.push({
+        key: item.key,
+        label: item.label,
+        channel: item.channel,
+        platform: item.platform,
+        error: (err as Error).message,
+      });
     }
-
-    console.log(
-      `[listing-webhook] ${publishNow ? 'published' : 'drafted'} ${plan.templateId} for ${row.address}`
-    );
-    return NextResponse.json({
-      success: true,
-      mode: publishNow ? 'published' : 'draft',
-      template: plan.templateId,
-      imageUrl,
-      studioUrl,
-    });
-  } catch (err) {
-    console.error('[listing-webhook] render/post error:', (err as Error).message);
-    return NextResponse.json(
-      { error: 'Render or post failed', detail: (err as Error).message },
-      { status: 500 }
-    );
   }
+
+  const okCount = results.filter((r) => !r.error).length;
+  console.log(
+    `[listing-webhook] ${row.address} (${row.status}): ${okCount}/${results.length} cascade items ok, mode=${publishNow ? 'published' : 'draft'}`
+  );
+
+  return NextResponse.json({
+    success: true,
+    mode: publishNow ? 'published' : 'draft',
+    address: row.address,
+    status: row.status,
+    results,
+    skipped: cascade.skipped,
+  });
 }
 
 // Health check / Apps Script connectivity ping

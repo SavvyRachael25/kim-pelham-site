@@ -18,9 +18,12 @@ import { put } from '@vercel/blob';
 
 const ZERNIO_API = 'https://zernio.com/api/v1/posts';
 
-// Kim Pelham profile account IDs (env override wins).
-const FB_ACCOUNT_ID = process.env.ZERNIO_FB_ACCOUNT_ID ?? '6a0f3ef2520992756d952519';
-const IG_ACCOUNT_ID = process.env.ZERNIO_IG_ACCOUNT_ID ?? '6a0f9581520992756d97c91e';
+// Kim Pelham profile account IDs per platform (env override wins).
+const ACCOUNT_IDS: Record<string, string> = {
+  facebook: process.env.ZERNIO_FB_ACCOUNT_ID ?? '6a0f3ef2520992756d952519',
+  instagram: process.env.ZERNIO_IG_ACCOUNT_ID ?? '6a0f9581520992756d97c91e',
+  googlebusiness: process.env.ZERNIO_GBP_ACCOUNT_ID ?? '6a0f988a520992756d97d85f',
+};
 
 export async function renderTemplateToJpeg(
   url: string,
@@ -68,11 +71,22 @@ export interface ZernioPostResult {
 export async function postToZernio(opts: {
   caption: string;
   imageUrl: string;
+  platform: 'instagram' | 'facebook' | 'googlebusiness';
+  contentType?: 'post' | 'story';
   publishNow: boolean;
 }): Promise<ZernioPostResult> {
   const apiKey = process.env.ZERNIO_API_KEY;
   if (!apiKey) {
     return { ok: false, status: 0, body: 'ZERNIO_API_KEY not set' };
+  }
+  const accountId = ACCOUNT_IDS[opts.platform];
+  if (!accountId) {
+    return { ok: false, status: 0, body: `No account ID for platform ${opts.platform}` };
+  }
+  const platformEntry: Record<string, unknown> = { platform: opts.platform, accountId };
+  // Instagram supports stories vs feed posts via platformSpecificData.
+  if (opts.platform === 'instagram' && opts.contentType === 'story') {
+    platformEntry.platformSpecificData = { mediaType: 'stories' };
   }
   const res = await fetch(ZERNIO_API, {
     method: 'POST',
@@ -83,10 +97,7 @@ export async function postToZernio(opts: {
     body: JSON.stringify({
       content: opts.caption,
       mediaItems: [{ type: 'image', url: opts.imageUrl }],
-      platforms: [
-        { platform: 'instagram', accountId: IG_ACCOUNT_ID },
-        { platform: 'facebook', accountId: FB_ACCOUNT_ID },
-      ],
+      platforms: [platformEntry],
       publishNow: opts.publishNow,
       isDraft: !opts.publishNow,
     }),

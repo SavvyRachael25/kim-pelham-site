@@ -1,32 +1,45 @@
 /*
-  Listing status → Brand Studio template mapping + caption builder.
-  ─────────────────────────────────────────────────────────────────
-  Drives the event-driven social pipeline: Kim changes a row's Status
-  in the Listings Master tracker → Apps Script webhook → /api/listing-
-  status-change → this map decides which Studio template to render and
-  what caption to post.
+  Listing status → Brand Studio CASCADE.
+  ───────────────────────────────────────
+  A single status change in the Listings Master tracker fans out into a
+  full set of brand assets (Mara's flywheel). Each status produces a
+  cascade of CascadeItems:
+    - channel:'social' items are drafted to a platform via Zernio
+      (Instagram / Facebook / Google Business). Default is DRAFT — nothing
+      auto-publishes until LISTING_AUTOPUBLISH=true.
+    - channel:'asset' items (email, flyer) are rendered + hosted as links
+      for Kim/Riley to use manually (paste email into GHL, print flyer).
 
-  Studio lives at https://templates.thepelhamgroupnw.com and is driven
-  by URL query params (see studio/AGENT-PROTOCOL.md §1-2). We screenshot
-  the template at its native dimensions with ?ui=clean.
+  Template IDs + dimensions are taken from the live studio registry
+  (public/studio/templates/*.jsx), not assumptions.
 
-  TEMPLATE COVERAGE (as of 2026-05-22):
-    Just Listed     -> meta-ad-listing-single-image  (EXISTS)
-    Price Reduced   -> meta-ad-price-drop            (EXISTS)
-    Open House      -> meta-ad-open-house-drive       (EXISTS)
-    Sold            -> meta-ad-just-sold              (TODO: build in studio)
-    Coming Soon     -> meta-ad-coming-soon            (TODO: build in studio)
-    Pending         -> meta-ad-pending                (TODO: build in studio)
-    Pending Inspect -> meta-ad-pending                (TODO: build in studio)
-    Contingent      -> meta-ad-contingent             (TODO: build in studio)
-  Statuses whose template doesn't exist yet return ready:false, so the
-  webhook logs + skips rather than posting a broken graphic.
+  COVERAGE (2026-05-22): Just Listed, Price Reduced, Open House, and the
+  Sold email are wired. IG Story (no clean single-frame 9:16 template
+  yet), Sold social graphic, Coming Soon / Pending / Contingent are
+  intentionally skipped with reasons until those studio templates exist.
 */
 
 export const STUDIO_BASE = 'https://templates.thepelhamgroupnw.com';
 
-// Native render dimensions per template (matches studio registry).
-const SQUARE = { width: 1080, height: 1080 };
+export type Channel = 'social' | 'asset';
+export type SocialPlatform = 'instagram' | 'facebook' | 'googlebusiness';
+
+export interface CascadeItem {
+  key: string; // unique within a cascade: 'ig-feed','fb','gbp','email','flyer','ad'
+  label: string; // human label for the sheet write-back
+  channel: Channel;
+  platform?: SocialPlatform; // social only
+  contentType?: 'post' | 'story'; // social only
+  templateId: string;
+  width: number;
+  height: number;
+  caption?: string; // social only
+}
+
+export interface Cascade {
+  items: CascadeItem[];
+  skipped: { key: string; reason: string }[];
+}
 
 export interface ListingRow {
   status: string;
@@ -43,32 +56,22 @@ export interface ListingRow {
   hook?: string;
 }
 
-export interface TemplatePlan {
-  ready: boolean;
-  templateId?: string;
-  width?: number;
-  height?: number;
-  caption?: string;
-  reason?: string; // why not ready, when ready:false
-}
-
-// Normalize the freeform sheet status ("SOLD 5/21", "coming 6/29/26",
-// "Pending Inspection") down to a canonical key.
 export function normalizeStatus(raw: string): string {
   const s = (raw || '').trim().toLowerCase();
   if (!s) return '';
   if (s.startsWith('sold')) return 'sold';
-  if (s.startsWith('closing')) return 'sold'; // "closing 5/29" treated as sold-pending celebration
+  if (s.startsWith('closing')) return 'sold';
   if (s.startsWith('coming')) return 'coming-soon';
   if (s.includes('price') && (s.includes('reduc') || s.includes('drop'))) return 'price-reduced';
+  if (s.includes('open house') || s.includes('open-house')) return 'open-house';
   if (s.includes('pending') && s.includes('inspect')) return 'pending-inspection';
   if (s.startsWith('pending')) return 'pending';
   if (s.startsWith('contingent')) return 'contingent';
-  if (s.includes('just listed') || s === 'active' || s.includes('active')) return 'just-listed';
+  if (s.includes('just listed') || s.includes('active')) return 'just-listed';
   return s;
 }
 
-const EHO_LINE =
+const EHO =
   'Equal Housing Opportunity. Brokered by Katrina Eileen Real Estate. Kim Pelham, WA Broker #119262.';
 
 function priceText(row: ListingRow): string {
@@ -92,7 +95,7 @@ function hashtags(row: ListingRow): string {
   return base.join(' ');
 }
 
-// Build the studio render URL with slot overrides for a given template.
+// Studio render URL with slot overrides for a given template.
 export function buildStudioUrl(templateId: string, row: ListingRow): string {
   const params = new URLSearchParams({
     template: templateId,
@@ -101,80 +104,94 @@ export function buildStudioUrl(templateId: string, row: ListingRow): string {
     listingAddress: (row.address || '').trim(),
     listingPrice: priceText(row),
   });
-  if (row.oldPrice) params.set('listingOldPrice', row.oldPrice.startsWith('$') ? row.oldPrice : `$${row.oldPrice}`);
+  if (row.oldPrice) {
+    params.set('listingOldPrice', row.oldPrice.startsWith('$') ? row.oldPrice : `$${row.oldPrice}`);
+  }
   if (row.beds) params.set('listingBeds', row.beds);
   if (row.baths) params.set('listingBaths', row.baths);
   if (row.sqft) params.set('listingSqft', row.sqft);
   if (row.mls) params.set('listingMls', row.mls);
   if (row.hook) params.set('listingHook', row.hook);
+  if (row.openHouse) params.set('openHouseRaw', row.openHouse);
   return `${STUDIO_BASE}/?${params.toString()}`;
 }
 
-export function planForStatus(row: ListingRow): TemplatePlan {
+export function buildCascade(row: ListingRow): Cascade {
   const status = normalizeStatus(row.status);
   const city = (row.city || '').trim();
   const addr = (row.address || '').trim();
   const price = priceText(row);
   const specs = specLine(row);
   const tags = hashtags(row);
-  const sig = `\n\nAlways, Kim\n\n${EHO_LINE}\n\n${tags}`;
+  const sig = `\n\nAlways, Kim\n\n${EHO}\n\n${tags}`;
+
+  const items: CascadeItem[] = [];
+  const skipped: { key: string; reason: string }[] = [];
 
   switch (status) {
-    case 'just-listed':
-      return {
-        ready: true,
-        templateId: 'meta-ad-listing-single-image',
-        ...SQUARE,
-        caption:
-          `Just listed in ${city}. ${addr}${price ? `, offered at ${price}` : ''}.` +
-          (specs ? `\n\n${specs}.` : '') +
-          `\n\nI take two active clients at a time, so every showing gets my full attention. Want to walk it in person? Send me a message or text 425.250.9422.` +
-          sig,
-      };
-    case 'price-reduced':
-      return {
-        ready: true,
-        templateId: 'meta-ad-price-drop',
-        ...SQUARE,
-        caption:
-          `Price improved in ${city}. ${addr}${price ? `, now ${price}` : ''}.` +
-          `\n\nThe price was adjusted to reflect where the market is today, which makes this a good moment to take a real look.` +
-          `\n\nMessage me or text 425.250.9422 for a private showing.` +
-          sig,
-      };
-    case 'open-house':
-      return {
-        ready: true,
-        templateId: 'meta-ad-open-house-drive',
-        ...SQUARE,
-        caption:
-          `Open house in ${city}. ${addr}.` +
-          (row.openHouse ? `\n\n${row.openHouse}.` : '') +
-          `\n\nStop by, no appointment needed. Questions before you come? Text 425.250.9422.` +
-          sig,
-      };
-    case 'sold':
-      return {
-        ready: false,
-        reason: 'No "Sold" social template in the studio yet (meta-ad-just-sold). Build it, then enable.',
-      };
+    case 'just-listed': {
+      const caption =
+        `Just listed in ${city}. ${addr}${price ? `, offered at ${price}` : ''}.` +
+        (specs ? `\n\n${specs}.` : '') +
+        `\n\nI take two active clients at a time, so every showing gets my full attention. Want to walk it in person? Send me a message or text 425.250.9422.` +
+        sig;
+      items.push(
+        { key: 'ig-feed', label: 'Instagram Feed', channel: 'social', platform: 'instagram', contentType: 'post', templateId: 'ig-feed-listing-portrait', width: 1080, height: 1350, caption },
+        { key: 'fb', label: 'Facebook', channel: 'social', platform: 'facebook', contentType: 'post', templateId: 'fb-post-listing', width: 1200, height: 628, caption },
+        { key: 'gbp', label: 'Google Business', channel: 'social', platform: 'googlebusiness', contentType: 'post', templateId: 'meta-ad-listing-single-image', width: 1080, height: 1080, caption },
+        { key: 'email', label: 'Email (listing announcement)', channel: 'asset', templateId: 'email-listing-announcement', width: 760, height: 1720 },
+        { key: 'flyer', label: 'Flyer (feature sheet)', channel: 'asset', templateId: 'flyer-listing-feature-sheet', width: 816, height: 1056 }
+      );
+      skipped.push({ key: 'ig-story', reason: 'No clean single-frame 9:16 story template yet (only 3-frame strip).' });
+      break;
+    }
+    case 'price-reduced': {
+      const caption =
+        `Price improved in ${city}. ${addr}${price ? `, now ${price}` : ''}.` +
+        `\n\nThe price was adjusted to reflect where the market is today, which makes this a good moment to take a real look. Message me or text 425.250.9422 for a private showing.` +
+        sig;
+      items.push(
+        { key: 'ig-feed', label: 'Instagram Feed', channel: 'social', platform: 'instagram', contentType: 'post', templateId: 'meta-ad-price-drop', width: 1080, height: 1080, caption },
+        { key: 'fb', label: 'Facebook', channel: 'social', platform: 'facebook', contentType: 'post', templateId: 'meta-ad-price-drop', width: 1080, height: 1080, caption },
+        { key: 'gbp', label: 'Google Business', channel: 'social', platform: 'googlebusiness', contentType: 'post', templateId: 'meta-ad-price-drop', width: 1080, height: 1080, caption },
+        { key: 'email', label: 'Email (price drop alert)', channel: 'asset', templateId: 'email-price-drop-alert', width: 760, height: 1620 }
+      );
+      break;
+    }
+    case 'open-house': {
+      const caption =
+        `Open house in ${city}. ${addr}.` +
+        (row.openHouse ? `\n\n${row.openHouse}.` : '') +
+        `\n\nStop by, no appointment needed. Questions before you come? Text 425.250.9422.` +
+        sig;
+      items.push(
+        { key: 'ig-feed', label: 'Instagram Feed', channel: 'social', platform: 'instagram', contentType: 'post', templateId: 'meta-ad-open-house-drive', width: 1080, height: 1080, caption },
+        { key: 'fb', label: 'Facebook', channel: 'social', platform: 'facebook', contentType: 'post', templateId: 'meta-ad-open-house-drive', width: 1080, height: 1080, caption },
+        { key: 'gbp', label: 'Google Business', channel: 'social', platform: 'googlebusiness', contentType: 'post', templateId: 'meta-ad-open-house-drive', width: 1080, height: 1080, caption },
+        { key: 'email', label: 'Email (open house invite)', channel: 'asset', templateId: 'email-open-house-invite', width: 760, height: 1600 },
+        { key: 'flyer', label: 'Flyer (open house)', channel: 'asset', templateId: 'flyer-open-house', width: 816, height: 1056 }
+      );
+      skipped.push({ key: 'ig-story', reason: 'Open-house countdown story is a 3-frame strip; needs a single 9:16 frame to post.' });
+      break;
+    }
+    case 'sold': {
+      items.push({ key: 'email', label: 'Email (just sold celebration)', channel: 'asset', templateId: 'email-just-sold-celebration', width: 760, height: 1620 });
+      skipped.push({ key: 'social', reason: 'No square "Just Sold" social graphic in the studio yet — build meta-ad-just-sold to enable IG/FB/GBP.' });
+      break;
+    }
     case 'coming-soon':
-      return {
-        ready: false,
-        reason: 'No "Coming Soon" social template in the studio yet (meta-ad-coming-soon).',
-      };
+      skipped.push({ key: 'all', reason: 'No "Coming Soon" templates in the studio yet.' });
+      break;
     case 'pending':
     case 'pending-inspection':
-      return {
-        ready: false,
-        reason: 'No "Pending" social template in the studio yet (meta-ad-pending).',
-      };
+      skipped.push({ key: 'all', reason: 'No "Pending" templates in the studio yet.' });
+      break;
     case 'contingent':
-      return {
-        ready: false,
-        reason: 'No "Contingent" social template in the studio yet (meta-ad-contingent).',
-      };
+      skipped.push({ key: 'all', reason: 'No "Contingent" templates in the studio yet.' });
+      break;
     default:
-      return { ready: false, reason: `Unrecognized status: "${row.status}"` };
+      skipped.push({ key: 'all', reason: `Unrecognized status: "${row.status}"` });
   }
+
+  return { items, skipped };
 }
