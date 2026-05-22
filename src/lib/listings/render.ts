@@ -98,9 +98,40 @@ export async function renderTemplateToJpeg(
     } catch {
       // proceed to screenshot anyway — better a degraded shot than a hard fail
     }
-    // Let webfonts settle so headings/handwriting render crisply.
+    // The Studio's ui=clean CSS grid collapses the stage column to 0 width,
+    // which clips the rendered template to nothing — every screenshot came out
+    // a blank cream rectangle even though the DOM had the full graphic.
+    // (Confirmed by local headless debugging: .stage-wrap / .right measured
+    // width 0.) Relocate the .stage-frame out of that broken layout into a clean
+    // fixed box at native size, force zoom back to 1, and hide everything else,
+    // so the clip captures the complete graphic.
+    await page.evaluate(
+      ({ w, h }) => {
+        const f = document.querySelector('.stage-frame') as HTMLElement | null;
+        if (!f) return;
+        const zoomDiv = f.parentElement as HTMLElement | null;
+        if (zoomDiv) zoomDiv.style.zoom = '1';
+        document.body.appendChild(f);
+        Object.assign(f.style, {
+          position: 'fixed',
+          top: '0',
+          left: '0',
+          zoom: '1',
+          margin: '0',
+          width: `${w}px`,
+          height: `${h}px`,
+        });
+        document.documentElement.style.margin = '0';
+        document.body.style.margin = '0';
+        Array.from(document.body.children).forEach((c) => {
+          if (c !== f) (c as HTMLElement).style.display = 'none';
+        });
+      },
+      { w: width, h: height }
+    );
+    // Let webfonts + the relocated images settle so text/photos render crisply.
     await page.evaluate(() => (document as unknown as { fonts: { ready: Promise<unknown> } }).fonts?.ready).catch(() => {});
-    await new Promise((r) => setTimeout(r, 800));
+    await new Promise((r) => setTimeout(r, 700));
     const buf = (await page.screenshot({
       type: 'jpeg',
       quality: 80,
