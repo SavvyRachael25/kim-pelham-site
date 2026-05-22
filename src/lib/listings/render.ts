@@ -153,26 +153,31 @@ export async function renderTemplateToJpeg(
     // downloaded — compile + render happen after. Wait for the template to
     // actually paint into .stage-frame instead of a blind timeout (faster AND
     // reliable). Falls through to the screenshot if the signal never comes.
+    // Wait for the template to be FULLY rendered, not just present. On the slow
+    // serverless CPU React renders incrementally (photo first, then gradient
+    // overlays and text). Requiring real text content + a populated subtree
+    // avoids screenshotting a half-rendered frame.
     try {
       await page.waitForFunction(
         () => {
           const f = document.querySelector('.stage-frame');
           if (!f) return false;
           const r = (f as HTMLElement).getBoundingClientRect();
-          return r.width > 100 && r.height > 100 && f.childElementCount > 0;
+          const text = (f as HTMLElement).innerText || '';
+          return r.width > 100 && r.height > 100 && f.querySelectorAll('*').length >= 8 && text.trim().length > 3;
         },
         { timeout: 30000, polling: 250 }
       );
     } catch {
       // proceed to screenshot anyway — better a degraded shot than a hard fail
     }
-    // The Studio's ui=clean CSS grid collapses the stage column to 0 width,
-    // which clips the rendered template to nothing — every screenshot came out
-    // a blank cream rectangle even though the DOM had the full graphic.
-    // (Confirmed by local headless debugging: .stage-wrap / .right measured
-    // width 0.) Relocate the .stage-frame out of that broken layout into a clean
-    // fixed box at native size, force zoom back to 1, and hide everything else,
-    // so the clip captures the complete graphic.
+    // The Studio's ui=clean CSS grid collapses the stage column to width 0,
+    // clipping the template to nothing. Relocating .stage-frame into a clean
+    // fixed box at native size is the layout fix that actually un-clips it
+    // (verified locally: full 185KB graphic vs a blank otherwise). The earlier
+    // production failure (photo but no text) was NOT this move — it was moving
+    // BEFORE the template finished rendering on the slow CPU; the waitForFunction
+    // above now blocks until the text is present, so the move captures it all.
     await page.evaluate(
       ({ w, h }) => {
         const f = document.querySelector('.stage-frame') as HTMLElement | null;
