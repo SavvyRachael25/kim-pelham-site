@@ -15,6 +15,7 @@
 import chromium from '@sparticuz/chromium';
 import puppeteer from 'puppeteer-core';
 import { put } from '@vercel/blob';
+import { readFileSync } from 'node:fs';
 
 const ZERNIO_API = 'https://zernio.com/api/v1/posts';
 
@@ -42,15 +43,42 @@ const BRAND_FONT_URLS = [
   '/design-system/fonts/Caveat-Bold.ttf',
 ].map((p) => `${FONT_HOST}${p}`);
 
+// Map each downloaded TTF (basename) to its @font-face descriptors.
+const FONT_FACES: Array<{ file: string; family: string; style: string; weight: string }> = [
+  { file: 'CormorantGaramond-VariableFont_wght.ttf', family: 'Cormorant Garamond', style: 'normal', weight: '100 900' },
+  { file: 'CormorantGaramond-Italic-VariableFont_wght.ttf', family: 'Cormorant Garamond', style: 'italic', weight: '100 900' },
+  { file: 'Inter-VariableFont_opsz_wght.ttf', family: 'Inter', style: 'normal', weight: '100 900' },
+  { file: 'Inter-Italic-VariableFont_opsz_wght.ttf', family: 'Inter', style: 'italic', weight: '100 900' },
+  { file: 'Caveat-Regular.ttf', family: 'Caveat', style: 'normal', weight: '400' },
+  { file: 'Caveat-Medium.ttf', family: 'Caveat', style: 'normal', weight: '500' },
+  { file: 'Caveat-SemiBold.ttf', family: 'Caveat', style: 'normal', weight: '600' },
+  { file: 'Caveat-Bold.ttf', family: 'Caveat', style: 'normal', weight: '700' },
+];
+
 let fontsRegistered = false;
+let embeddedFontCss = '';
 async function registerBrandFonts(): Promise<void> {
   if (fontsRegistered) return;
-  // On Lambda only /tmp is writable. chromium.font() writes to $HOME/.fonts and
-  // Chromium's fontconfig reads $HOME/.fonts — so HOME must point at a writable
-  // dir or the registration silently fails and text never rasterizes. Force it
-  // to /tmp; the browser launch (env: {...process.env}) inherits the same HOME.
+  // On Lambda only /tmp is writable; chromium.font() writes to $HOME/.fonts, so
+  // force HOME to a writable dir. (We don't rely on fontconfig finding them —
+  // @sparticuz points fontconfig at /tmp/fonts, not ~/.fonts — we use the
+  // downloaded files to build inline base64 @font-face CSS, which is the only
+  // reliable way to get web fonts to rasterize in this Chromium build.)
   process.env.HOME = '/tmp';
   await Promise.all(BRAND_FONT_URLS.map((u) => chromium.font(u).catch(() => {})));
+  // Build the inline @font-face stylesheet from the downloaded TTFs.
+  const parts: string[] = [];
+  for (const f of FONT_FACES) {
+    try {
+      const b64 = readFileSync(`/tmp/.fonts/${f.file}`).toString('base64');
+      parts.push(
+        `@font-face{font-family:'${f.family}';font-style:${f.style};font-weight:${f.weight};font-display:block;src:url(data:font/ttf;base64,${b64}) format('truetype');}`
+      );
+    } catch {
+      /* a missing file just means that face falls back; non-fatal */
+    }
+  }
+  embeddedFontCss = parts.join('\n');
   fontsRegistered = true;
 }
 
@@ -112,6 +140,14 @@ export async function renderTemplateToJpeg(
     const page = await browser.newPage();
     await page.setViewport(viewport);
     await page.goto(url, { waitUntil: 'networkidle0', timeout: 45000 });
+    // Inject the brand fonts as inline base64 @font-face. @sparticuz Chromium's
+    // fontconfig doesn't scan the downloaded files, and the Studio's own
+    // url()-based @font-face never rasterizes here (text silently drops out).
+    // Inline data-URI fonts are decoded directly by the engine — the reliable
+    // path. Injected before the template paints so the text picks them up.
+    if (embeddedFontCss) {
+      await page.addStyleTag({ content: embeddedFontCss }).catch(() => {});
+    }
     // The Studio compiles ~13 JSX files with Babel-standalone in the browser,
     // then React renders the template. networkidle0 only means the files
     // downloaded — compile + render happen after. Wait for the template to
