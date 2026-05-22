@@ -4,8 +4,10 @@
  * WHAT IT DOES
  * When Kim changes a listing's Status in the "Listings Master" tab, this
  * fires the Vercel webhook (/api/listing-status-change), which renders the
- * matching Brand Studio template and posts it to Instagram + Facebook via
- * Zernio.
+ * matching Brand Studio templates and drafts them to Instagram + Facebook +
+ * Google Business via Zernio. The webhook also returns a newsletter entry,
+ * which this script appends to the "Pelham Post Queue" tab so the listing
+ * is included in Thursday's Pelham Post. (No standalone email is sent.)
  *
  * ── ONE-TIME SETUP ───────────────────────────────────────────────────────
  * 1. The spreadsheet MUST be a native Google Sheet (File → Save as Google
@@ -98,14 +100,57 @@ function onListingEdit(e) {
     });
 
     var code = res.getResponseCode();
-    var label = code >= 200 && code < 300 ? 'sent' : 'error ' + code;
-    sheet.getActiveCell(); // keep focus
+    var ok = code >= 200 && code < 300;
+
+    // On success, queue the listing for the next Pelham Post.
+    if (ok) {
+      try {
+        var data = JSON.parse(res.getContentText());
+        if (data && data.newsletter) {
+          queueForPelhamPost(payload, data.newsletter);
+        }
+      } catch (parseErr) {
+        // non-fatal — drafts still happened, just couldn't queue
+      }
+    }
+
     SpreadsheetApp.getActive().toast(
-      'Listing automation: ' + payload.address + ' → ' + label,
+      'Listing automation: ' + payload.address + ' → ' + (ok ? 'drafted + queued' : 'error ' + code),
       'Status: ' + payload.status,
       6
     );
   } catch (err) {
     SpreadsheetApp.getActive().toast('Listing automation error: ' + err.message);
   }
+}
+
+/**
+ * Append a listing update to the "Pelham Post Queue" tab. Creates the tab
+ * (with headers) on first use. The Thursday Pelham Post is assembled from
+ * the unsent rows here; mark Sent = TRUE once included.
+ */
+function queueForPelhamPost(payload, newsletter) {
+  var QUEUE_NAME = 'Pelham Post Queue';
+  var ss = SpreadsheetApp.getActive();
+  var q = ss.getSheetByName(QUEUE_NAME);
+  if (!q) {
+    q = ss.insertSheet(QUEUE_NAME);
+    q.appendRow([
+      'Queued At', 'Status', 'Section', 'Headline', 'Blurb',
+      'Address', 'Listing URL', 'Image URL', 'Sent',
+    ]);
+    q.getRange(1, 1, 1, 9).setFontWeight('bold');
+    q.setFrozenRows(1);
+  }
+  q.appendRow([
+    new Date(),
+    payload.status || '',
+    newsletter.section || '',
+    newsletter.headline || '',
+    newsletter.blurb || '',
+    payload.address || '',
+    newsletter.listingUrl || payload.listingUrl || '',
+    newsletter.imageUrl || '',
+    false,
+  ]);
 }

@@ -36,8 +36,19 @@ export interface CascadeItem {
   caption?: string; // social only
 }
 
+// A queued entry for the weekly Pelham Post (newsletter, ships Thursday
+// mornings). Status changes no longer fire a standalone email — instead
+// they accumulate here and get assembled into the next Pelham Post.
+export interface NewsletterItem {
+  section: string; // maps to the Pelham Post section, e.g. "Featured Listing"
+  headline: string;
+  blurb: string;
+  listingUrl?: string;
+}
+
 export interface Cascade {
   items: CascadeItem[];
+  newsletterItem?: NewsletterItem;
   skipped: { key: string; reason: string }[];
 }
 
@@ -127,6 +138,7 @@ export function buildCascade(row: ListingRow): Cascade {
 
   const items: CascadeItem[] = [];
   const skipped: { key: string; reason: string }[] = [];
+  let newsletterItem: NewsletterItem | undefined;
 
   switch (status) {
     case 'just-listed': {
@@ -139,9 +151,17 @@ export function buildCascade(row: ListingRow): Cascade {
         { key: 'ig-feed', label: 'Instagram Feed', channel: 'social', platform: 'instagram', contentType: 'post', templateId: 'ig-feed-listing-portrait', width: 1080, height: 1350, caption },
         { key: 'fb', label: 'Facebook', channel: 'social', platform: 'facebook', contentType: 'post', templateId: 'fb-post-listing', width: 1200, height: 628, caption },
         { key: 'gbp', label: 'Google Business', channel: 'social', platform: 'googlebusiness', contentType: 'post', templateId: 'meta-ad-listing-single-image', width: 1080, height: 1080, caption },
-        { key: 'email', label: 'Email (listing announcement)', channel: 'asset', templateId: 'email-listing-announcement', width: 760, height: 1720 },
         { key: 'flyer', label: 'Flyer (feature sheet)', channel: 'asset', templateId: 'flyer-listing-feature-sheet', width: 816, height: 1056 }
       );
+      newsletterItem = {
+        section: 'Featured Listing',
+        headline: `Just listed in ${city}`,
+        blurb:
+          `${addr}${price ? `, offered at ${price}` : ''}.` +
+          (specs ? ` ${specs}.` : '') +
+          ` I work with a maximum of two active clients at a time, so reach out and I will walk you through it personally.`,
+        listingUrl: row.listingUrl,
+      };
       skipped.push({ key: 'ig-story', reason: 'No clean single-frame 9:16 story template yet (only 3-frame strip).' });
       break;
     }
@@ -153,9 +173,15 @@ export function buildCascade(row: ListingRow): Cascade {
       items.push(
         { key: 'ig-feed', label: 'Instagram Feed', channel: 'social', platform: 'instagram', contentType: 'post', templateId: 'meta-ad-price-drop', width: 1080, height: 1080, caption },
         { key: 'fb', label: 'Facebook', channel: 'social', platform: 'facebook', contentType: 'post', templateId: 'meta-ad-price-drop', width: 1080, height: 1080, caption },
-        { key: 'gbp', label: 'Google Business', channel: 'social', platform: 'googlebusiness', contentType: 'post', templateId: 'meta-ad-price-drop', width: 1080, height: 1080, caption },
-        { key: 'email', label: 'Email (price drop alert)', channel: 'asset', templateId: 'email-price-drop-alert', width: 760, height: 1620 }
+        { key: 'gbp', label: 'Google Business', channel: 'social', platform: 'googlebusiness', contentType: 'post', templateId: 'meta-ad-price-drop', width: 1080, height: 1080, caption }
       );
+      newsletterItem = {
+        section: 'Featured Listing',
+        headline: `Price improved in ${city}`,
+        blurb:
+          `${addr} is now ${price || 'newly priced'}. Adjusted to meet the market, which makes this a good week to take a look. Reply or text me for a private showing.`,
+        listingUrl: row.listingUrl,
+      };
       break;
     }
     case 'open-house': {
@@ -168,23 +194,41 @@ export function buildCascade(row: ListingRow): Cascade {
         { key: 'ig-feed', label: 'Instagram Feed', channel: 'social', platform: 'instagram', contentType: 'post', templateId: 'meta-ad-open-house-drive', width: 1080, height: 1080, caption },
         { key: 'fb', label: 'Facebook', channel: 'social', platform: 'facebook', contentType: 'post', templateId: 'meta-ad-open-house-drive', width: 1080, height: 1080, caption },
         { key: 'gbp', label: 'Google Business', channel: 'social', platform: 'googlebusiness', contentType: 'post', templateId: 'meta-ad-open-house-drive', width: 1080, height: 1080, caption },
-        { key: 'email', label: 'Email (open house invite)', channel: 'asset', templateId: 'email-open-house-invite', width: 760, height: 1600 },
         { key: 'flyer', label: 'Flyer (open house)', channel: 'asset', templateId: 'flyer-open-house', width: 816, height: 1056 }
       );
+      newsletterItem = {
+        section: 'Open House',
+        headline: `Open house in ${city}`,
+        blurb:
+          `${addr}${row.openHouse ? `, ${row.openHouse}` : ''}. Stop by, no appointment needed. I will have coffee on.`,
+        listingUrl: row.listingUrl,
+      };
       skipped.push({ key: 'ig-story', reason: 'Open-house countdown story is a 3-frame strip; needs a single 9:16 frame to post.' });
       break;
     }
     case 'sold': {
-      items.push({ key: 'email', label: 'Email (just sold celebration)', channel: 'asset', templateId: 'email-just-sold-celebration', width: 760, height: 1620 });
+      newsletterItem = {
+        section: 'Recently Sold',
+        headline: `Just sold in ${city}`,
+        blurb:
+          `${addr} is closed. Another Snohomish County chapter, start to finish. If you are wondering what your home could do in this market, that is exactly the conversation I like to have.`,
+        listingUrl: row.listingUrl,
+      };
       skipped.push({ key: 'social', reason: 'No square "Just Sold" social graphic in the studio yet — build meta-ad-just-sold to enable IG/FB/GBP.' });
       break;
     }
     case 'coming-soon':
-      skipped.push({ key: 'all', reason: 'No "Coming Soon" templates in the studio yet.' });
+      newsletterItem = {
+        section: 'Coming Soon',
+        headline: `Coming soon in ${city}`,
+        blurb: `${addr} is about to hit the market. Want a first look before it is live? Reply and I will keep you posted.`,
+        listingUrl: row.listingUrl,
+      };
+      skipped.push({ key: 'social', reason: 'No "Coming Soon" social template in the studio yet.' });
       break;
     case 'pending':
     case 'pending-inspection':
-      skipped.push({ key: 'all', reason: 'No "Pending" templates in the studio yet.' });
+      skipped.push({ key: 'all', reason: 'No "Pending" templates in the studio yet (and pending listings usually skip the newsletter).' });
       break;
     case 'contingent':
       skipped.push({ key: 'all', reason: 'No "Contingent" templates in the studio yet.' });
@@ -193,5 +237,5 @@ export function buildCascade(row: ListingRow): Cascade {
       skipped.push({ key: 'all', reason: `Unrecognized status: "${row.status}"` });
   }
 
-  return { items, skipped };
+  return { items, newsletterItem, skipped };
 }

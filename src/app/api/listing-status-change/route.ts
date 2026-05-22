@@ -180,12 +180,27 @@ export async function POST(req: NextRequest) {
     `[listing-webhook] ${row.address} (${row.status}): ${okCount}/${results.length} cascade items ok, mode=${publishNow ? 'published' : 'draft'}`
   );
 
+  // Pick a primary image for the Pelham Post queue entry (prefer the
+  // square GBP/feed render, fall back to whatever rendered first).
+  const primaryImage =
+    results.find((r) => r.key === 'gbp' && r.imageUrl)?.imageUrl ??
+    results.find((r) => r.key === 'ig-feed' && r.imageUrl)?.imageUrl ??
+    results.find((r) => r.imageUrl)?.imageUrl;
+
+  // The Apps Script reads `newsletter` and appends it to the
+  // "Pelham Post Queue" tab. Status changes no longer send a standalone
+  // email; they accumulate here for Thursday's Pelham Post.
+  const newsletter = cascade.newsletterItem
+    ? { ...cascade.newsletterItem, imageUrl: primaryImage ?? '' }
+    : null;
+
   return NextResponse.json({
     success: true,
     mode: publishNow ? 'published' : 'draft',
     address: row.address,
     status: row.status,
     results,
+    newsletter,
     skipped: cascade.skipped,
   });
 }
