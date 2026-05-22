@@ -30,6 +30,18 @@ export async function renderTemplateToJpeg(
   width: number,
   height: number
 ): Promise<Buffer> {
+  // @sparticuz/chromium only extracts its bundled shared libraries
+  // (libnss3.so, etc. → /tmp/al2023/lib, which it already adds to
+  // LD_LIBRARY_PATH at import) when it detects an AWS Lambda Node 20/22
+  // runtime via the AWS_EXECUTION_ENV / AWS_LAMBDA_JS_RUNTIME env strings.
+  // Vercel runs functions on Lambda (AL2023) but doesn't reliably expose
+  // those strings, so the detection returns false, the lib pack never
+  // extracts, and Chromium dies with "libnss3.so: cannot open shared
+  // object file". Forcing the runtime string makes executablePath() inflate
+  // the AL2023 pack — the exact code path a real Lambda would take.
+  if (!process.env.AWS_EXECUTION_ENV && !process.env.AWS_LAMBDA_JS_RUNTIME) {
+    process.env.AWS_LAMBDA_JS_RUNTIME = 'nodejs20.x';
+  }
   const browser = await puppeteer.launch({
     args: chromium.args,
     executablePath: await chromium.executablePath(),
