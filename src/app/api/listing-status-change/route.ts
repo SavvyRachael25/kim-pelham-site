@@ -212,25 +212,50 @@ export async function POST(req: NextRequest) {
 // whether @sparticuz/chromium's lib pack actually extracts. Remove once the
 // render path is confirmed green.
 export async function GET() {
+  const ldBefore = process.env.LD_LIBRARY_PATH ?? null;
+  // Mirror the POST path: force the runtime string so detection fires.
+  const jsr = process.env.AWS_LAMBDA_JS_RUNTIME ?? '';
+  if (!jsr.includes('20.x') && !jsr.includes('22.x')) {
+    process.env.AWS_LAMBDA_JS_RUNTIME = 'nodejs20.x';
+  }
   const diag: Record<string, unknown> = {
     node: process.version,
     awsExecEnv: process.env.AWS_EXECUTION_ENV ?? null,
-    awsJsRuntime: process.env.AWS_LAMBDA_JS_RUNTIME ?? null,
-    ldLibraryPath: process.env.LD_LIBRARY_PATH ?? null,
+    awsJsRuntimeForced: process.env.AWS_LAMBDA_JS_RUNTIME ?? null,
+    ldBefore,
   };
+  const fs = await import('node:fs');
+  // Is the AL2023 lib tarball actually bundled into the function?
+  const binCandidates = [
+    '/var/task/node_modules/@sparticuz/chromium/bin',
+    process.cwd() + '/node_modules/@sparticuz/chromium/bin',
+  ];
+  for (const p of binCandidates) {
+    try {
+      if (fs.existsSync(p)) {
+        diag.binDir = p;
+        diag.binFiles = fs.readdirSync(p);
+        break;
+      }
+    } catch {
+      /* ignore */
+    }
+  }
+  if (!diag.binDir) diag.binDir = 'NOT FOUND in candidates';
   try {
     const chromium = (await import('@sparticuz/chromium')).default;
     diag.chromiumPath = await chromium.executablePath();
   } catch (e) {
     diag.execErr = (e as Error).message;
   }
+  diag.ldAfter = process.env.LD_LIBRARY_PATH ?? null;
   try {
-    const fs = await import('node:fs');
     diag.al2023Exists = fs.existsSync('/tmp/al2023');
     diag.libnss3Exists = fs.existsSync('/tmp/al2023/lib/libnss3.so');
     diag.al2023LibDir = fs.existsSync('/tmp/al2023/lib')
-      ? fs.readdirSync('/tmp/al2023/lib').slice(0, 12)
+      ? fs.readdirSync('/tmp/al2023/lib').slice(0, 16)
       : null;
+    diag.tmpList = fs.readdirSync('/tmp').slice(0, 30);
   } catch (e) {
     diag.fsErr = (e as Error).message;
   }
