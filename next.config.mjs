@@ -1,5 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Keep the headless-Chromium packages out of the bundler — they ship
+  // platform binaries that must be required at runtime, not webpacked.
+  // Used by /api/listing-status-change to screenshot Studio templates.
+  experimental: {
+    serverComponentsExternalPackages: ['@sparticuz/chromium', 'puppeteer-core'],
+  },
   images: {
     /*
       LCP optimization (per AEO audit 2026-05-13/14, mobile LCP measured
