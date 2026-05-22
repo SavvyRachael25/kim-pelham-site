@@ -129,9 +129,26 @@ export async function renderTemplateToJpeg(
       },
       { w: width, h: height }
     );
-    // Let webfonts + the relocated images settle so text/photos render crisply.
-    await page.evaluate(() => (document as unknown as { fonts: { ready: Promise<unknown> } }).fonts?.ready).catch(() => {});
-    await new Promise((r) => setTimeout(r, 700));
+    // Force-load the brand webfonts (variable TTFs: Cormorant Garamond / Inter /
+    // Caveat) and await them before snapping. @sparticuz Chromium otherwise
+    // rasterizes the screenshot before the text faces are ready, so the photo
+    // and shapes render but every word drops out. fonts.ready alone isn't
+    // enough — actively trigger each face, then wait.
+    await page
+      .evaluate(async () => {
+        const d = document as unknown as {
+          fonts: { load: (s: string) => Promise<unknown>; ready: Promise<unknown> };
+        };
+        const fams = ['"Cormorant Garamond"', '"Inter"', '"Caveat"'];
+        const weights = ['400', '500', '600', '700'];
+        const jobs: Promise<unknown>[] = [];
+        for (const f of fams) for (const w of weights) jobs.push(d.fonts.load(`${w} 48px ${f}`).catch(() => {}));
+        jobs.push(d.fonts.load('italic 48px "Cormorant Garamond"').catch(() => {}));
+        await Promise.all(jobs);
+        await d.fonts.ready;
+      })
+      .catch(() => {});
+    await new Promise((r) => setTimeout(r, 900));
     const buf = (await page.screenshot({
       type: 'jpeg',
       quality: 80,
