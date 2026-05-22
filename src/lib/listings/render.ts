@@ -25,6 +25,30 @@ const ACCOUNT_IDS: Record<string, string> = {
   googlebusiness: process.env.ZERNIO_GBP_ACCOUNT_ID ?? '6a0f988a520992756d97d85f',
 };
 
+// Brand fonts (self-hosted variable TTFs on the live site). @sparticuz Chromium
+// has an empty fontconfig, so @font-face web fonts loaded by the page don't
+// rasterize — text silently drops out of the screenshot. chromium.font() must
+// be called BEFORE launch: it downloads each file into ~/.fonts so Chromium's
+// fontconfig picks them up at startup.
+const FONT_HOST = process.env.STUDIO_BASE?.trim() || 'https://thepelhamgroupnw.com/studio';
+const BRAND_FONT_URLS = [
+  '/design-system/fonts/CormorantGaramond-VariableFont_wght.ttf',
+  '/design-system/fonts/CormorantGaramond-Italic-VariableFont_wght.ttf',
+  '/design-system/fonts/Inter-VariableFont_opsz_wght.ttf',
+  '/design-system/fonts/Inter-Italic-VariableFont_opsz_wght.ttf',
+  '/design-system/fonts/Caveat-Regular.ttf',
+  '/design-system/fonts/Caveat-Medium.ttf',
+  '/design-system/fonts/Caveat-SemiBold.ttf',
+  '/design-system/fonts/Caveat-Bold.ttf',
+].map((p) => `${FONT_HOST}${p}`);
+
+let fontsRegistered = false;
+async function registerBrandFonts(): Promise<void> {
+  if (fontsRegistered) return;
+  await Promise.all(BRAND_FONT_URLS.map((u) => chromium.font(u).catch(() => {})));
+  fontsRegistered = true;
+}
+
 export async function renderTemplateToJpeg(
   url: string,
   width: number,
@@ -51,6 +75,9 @@ export async function renderTemplateToJpeg(
   if (!jsRuntime.includes('20.x') && !jsRuntime.includes('22.x')) {
     process.env.AWS_LAMBDA_JS_RUNTIME = 'nodejs20.x';
   }
+  // Register the brand fonts in the OS font dir before Chromium starts, so the
+  // text in the template actually rasterizes (see registerBrandFonts above).
+  await registerBrandFonts();
   // Triggers the AL2023 lib-pack extraction to /tmp/al2023/lib.
   const executablePath = await chromium.executablePath();
   // CONFIRMED via the GET diagnostic: the libs (libnss3.so et al.) DO extract
