@@ -38,6 +38,7 @@ import {
 
 export const runtime = 'nodejs';
 export const maxDuration = 60;
+export const dynamic = 'force-dynamic'; // GET diagnostic must reflect live runtime, never cached
 
 interface IncomingPayload {
   status?: string;
@@ -205,12 +206,39 @@ export async function POST(req: NextRequest) {
   });
 }
 
-// Health check / Apps Script connectivity ping
+// Health check / Apps Script connectivity ping + runtime diagnostic.
+// The diag block reports the actual Node version + AWS Lambda env strings
+// Vercel exposes (the missing facts behind the libnss3 render failures) and
+// whether @sparticuz/chromium's lib pack actually extracts. Remove once the
+// render path is confirmed green.
 export async function GET() {
+  const diag: Record<string, unknown> = {
+    node: process.version,
+    awsExecEnv: process.env.AWS_EXECUTION_ENV ?? null,
+    awsJsRuntime: process.env.AWS_LAMBDA_JS_RUNTIME ?? null,
+    ldLibraryPath: process.env.LD_LIBRARY_PATH ?? null,
+  };
+  try {
+    const chromium = (await import('@sparticuz/chromium')).default;
+    diag.chromiumPath = await chromium.executablePath();
+  } catch (e) {
+    diag.execErr = (e as Error).message;
+  }
+  try {
+    const fs = await import('node:fs');
+    diag.al2023Exists = fs.existsSync('/tmp/al2023');
+    diag.libnss3Exists = fs.existsSync('/tmp/al2023/lib/libnss3.so');
+    diag.al2023LibDir = fs.existsSync('/tmp/al2023/lib')
+      ? fs.readdirSync('/tmp/al2023/lib').slice(0, 12)
+      : null;
+  } catch (e) {
+    diag.fsErr = (e as Error).message;
+  }
   return NextResponse.json({
     status: 'ok',
     endpoint: '/api/listing-status-change',
     method: 'POST',
     autopublish: process.env.LISTING_AUTOPUBLISH?.trim() === 'true',
+    diag,
   });
 }
