@@ -226,12 +226,32 @@ export async function GET() {
     ldBefore,
   };
   const fs = await import('node:fs');
-  // Font-registration check: HOME must be writable for chromium.font().
+  // Actively test chromium.font() registration so we can see, per file, whether
+  // the downloads succeed and where they land.
   try {
-    diag.tmpFontsExists = fs.existsSync('/tmp/.fonts');
-    diag.tmpFontsDir = fs.existsSync('/tmp/.fonts') ? fs.readdirSync('/tmp/.fonts') : null;
+    process.env.HOME = '/tmp';
+    const chromium = (await import('@sparticuz/chromium')).default as unknown as {
+      font: (u: string) => Promise<string>;
+    };
+    const testFonts = [
+      'CormorantGaramond-VariableFont_wght.ttf',
+      'Inter-VariableFont_opsz_wght.ttf',
+      'Caveat-Regular.ttf',
+    ];
+    const fontResults: Record<string, string> = {};
+    for (const f of testFonts) {
+      const u = `https://thepelhamgroupnw.com/studio/design-system/fonts/${f}`;
+      try {
+        const r = await chromium.font(u);
+        fontResults[f] = `ok:${r}`;
+      } catch (e) {
+        fontResults[f] = `ERR:${(e as Error).message}`;
+      }
+    }
+    diag.fontResults = fontResults;
+    diag.tmpFontsAfter = fs.existsSync('/tmp/.fonts') ? fs.readdirSync('/tmp/.fonts') : null;
   } catch (e) {
-    diag.tmpFontsErr = (e as Error).message;
+    diag.fontTestErr = (e as Error).message;
   }
   // Is the AL2023 lib tarball actually bundled into the function?
   const binCandidates = [
