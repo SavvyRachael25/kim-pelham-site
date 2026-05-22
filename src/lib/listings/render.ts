@@ -64,19 +64,43 @@ export async function renderTemplateToJpeg(
   if (!ldPaths.includes(libDir)) {
     process.env.LD_LIBRARY_PATH = [libDir, ...ldPaths].join(':');
   }
+  // The Studio auto-fits with hardcoded 80px padding and zoom = min(sx, sy, 1).
+  // At a viewport equal to the template size that scales it to ~92%. Give the
+  // viewport extra room so the fit caps at zoom=1 and the template renders at
+  // native size at the top-left, where we clip.
+  const viewport = { width: width + 200, height: height + 200, deviceScaleFactor: 1 };
   const browser = await puppeteer.launch({
     args: chromium.args,
     executablePath,
     headless: true,
-    defaultViewport: { width, height, deviceScaleFactor: 1 },
+    defaultViewport: viewport,
     env: { ...process.env },
   });
   try {
     const page = await browser.newPage();
-    await page.setViewport({ width, height, deviceScaleFactor: 1 });
+    await page.setViewport(viewport);
     await page.goto(url, { waitUntil: 'networkidle0', timeout: 45000 });
-    // Studio is React + Babel compiled in-browser — give it time to hydrate.
-    await new Promise((r) => setTimeout(r, 3500));
+    // The Studio compiles ~13 JSX files with Babel-standalone in the browser,
+    // then React renders the template. networkidle0 only means the files
+    // downloaded — compile + render happen after. Wait for the template to
+    // actually paint into .stage-frame instead of a blind timeout (faster AND
+    // reliable). Falls through to the screenshot if the signal never comes.
+    try {
+      await page.waitForFunction(
+        () => {
+          const f = document.querySelector('.stage-frame');
+          if (!f) return false;
+          const r = (f as HTMLElement).getBoundingClientRect();
+          return r.width > 100 && r.height > 100 && f.childElementCount > 0;
+        },
+        { timeout: 30000, polling: 250 }
+      );
+    } catch {
+      // proceed to screenshot anyway — better a degraded shot than a hard fail
+    }
+    // Let webfonts settle so headings/handwriting render crisply.
+    await page.evaluate(() => (document as unknown as { fonts: { ready: Promise<unknown> } }).fonts?.ready).catch(() => {});
+    await new Promise((r) => setTimeout(r, 800));
     const buf = (await page.screenshot({
       type: 'jpeg',
       quality: 80,
