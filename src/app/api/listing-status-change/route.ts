@@ -5,7 +5,8 @@ import {
   type ListingRow,
 } from '@/lib/listings/status-templates';
 import {
-  renderTemplateToJpeg,
+  launchRenderBrowser,
+  screenshotTemplate,
   hostImage,
   postToZernio,
 } from '@/lib/listings/render';
@@ -132,10 +133,14 @@ export async function POST(req: NextRequest) {
     error?: string;
   }> = [];
 
+  // One browser for the whole cascade — launching per template exceeded the
+  // 60s function limit. Reuse it across every render, close once at the end.
+  const browser = await launchRenderBrowser();
+  try {
   for (const item of cascade.items) {
     try {
       const studioUrl = buildStudioUrl(item.templateId, row);
-      const jpeg = await renderTemplateToJpeg(studioUrl, item.width, item.height);
+      const jpeg = await screenshotTemplate(browser, studioUrl, item.width, item.height);
       const imageUrl = await hostImage(jpeg, `${slug}-${item.key}`);
 
       if (item.channel === 'social' && item.platform) {
@@ -174,6 +179,9 @@ export async function POST(req: NextRequest) {
         error: (err as Error).message,
       });
     }
+  }
+  } finally {
+    await browser.close();
   }
 
   const okCount = results.filter((r) => !r.error).length;

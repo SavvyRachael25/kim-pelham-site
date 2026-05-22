@@ -14,6 +14,7 @@
 
 import chromium from '@sparticuz/chromium';
 import puppeteer from 'puppeteer-core';
+import type { Browser } from 'puppeteer-core';
 import { put } from '@vercel/blob';
 import { readFileSync } from 'node:fs';
 
@@ -104,40 +105,65 @@ export async function renderTemplateToJpeg(
   // acts when those vars are *unset* would never fire and we'd be back to
   // the missing-lib error. So force AWS_LAMBDA_JS_RUNTIME unless it already
   // indicates 20/22.
+  const browser = await launchRenderBrowser();
+  try {
+    return await screenshotTemplate(browser, url, width, height);
+  } finally {
+    await browser.close();
+  }
+}
+
+/**
+ * Launch a single headless Chromium configured for the serverless environment
+ * (AL2023 lib path + brand fonts). Reuse this ONE browser across all cascade
+ * renders — launching a browser per template blew past the 60s function limit.
+ */
+export async function launchRenderBrowser(): Promise<Browser> {
+  // @sparticuz only extracts its AL2023 lib pack (libnss3.so → /tmp/al2023/lib,
+  // already on LD_LIBRARY_PATH) when AWS_EXECUTION_ENV / AWS_LAMBDA_JS_RUNTIME
+  // contains "20.x"/"22.x". Vercel exposes neither, so force the runtime string.
   const jsRuntime = process.env.AWS_LAMBDA_JS_RUNTIME ?? '';
   if (!jsRuntime.includes('20.x') && !jsRuntime.includes('22.x')) {
     process.env.AWS_LAMBDA_JS_RUNTIME = 'nodejs20.x';
   }
-  // Register the brand fonts in the OS font dir before Chromium starts, so the
-  // text in the template actually rasterizes (see registerBrandFonts above).
+  // Download + build the inline base64 brand fonts (once per cold start).
   await registerBrandFonts();
   // Triggers the AL2023 lib-pack extraction to /tmp/al2023/lib.
   const executablePath = await chromium.executablePath();
-  // CONFIRMED via the GET diagnostic: the libs (libnss3.so et al.) DO extract
-  // to /tmp/al2023/lib, but the package's setupLambdaEnvironment runs at import
-  // — before we force the runtime string — so LD_LIBRARY_PATH never gains that
-  // dir and Chromium dies with "libnss3.so: cannot open shared object file".
-  // The libs are now on disk, so wire up the path ourselves and hand it to the
-  // spawned browser explicitly.
+  // setupLambdaEnvironment runs at import (before we force the runtime), so
+  // LD_LIBRARY_PATH never gained /tmp/al2023/lib. The libs are on disk now, so
+  // wire up the path ourselves and hand it to the spawned browser explicitly.
   const libDir = '/tmp/al2023/lib';
   const ldPaths = (process.env.LD_LIBRARY_PATH ?? '').split(':').filter(Boolean);
   if (!ldPaths.includes(libDir)) {
     process.env.LD_LIBRARY_PATH = [libDir, ...ldPaths].join(':');
   }
+  return puppeteer.launch({
+    args: chromium.args,
+    executablePath,
+    headless: true,
+    env: { ...process.env },
+  });
+}
+
+/**
+ * Render one Studio template URL to a JPEG using an existing browser. Opens a
+ * fresh page (sized to the template) and closes it when done; leaves the
+ * browser open for reuse.
+ */
+export async function screenshotTemplate(
+  browser: Browser,
+  url: string,
+  width: number,
+  height: number
+): Promise<Buffer> {
   // The Studio auto-fits with hardcoded 80px padding and zoom = min(sx, sy, 1).
   // At a viewport equal to the template size that scales it to ~92%. Give the
   // viewport extra room so the fit caps at zoom=1 and the template renders at
   // native size at the top-left, where we clip.
   const viewport = { width: width + 200, height: height + 200, deviceScaleFactor: 1 };
-  const browser = await puppeteer.launch({
-    args: chromium.args,
-    executablePath,
-    headless: true,
-    defaultViewport: viewport,
-    env: { ...process.env },
-  });
+  const page = await browser.newPage();
   try {
-    const page = await browser.newPage();
     await page.setViewport(viewport);
     await page.goto(url, { waitUntil: 'networkidle0', timeout: 45000 });
     // Inject the brand fonts as inline base64 @font-face. @sparticuz Chromium's
@@ -166,7 +192,7 @@ export async function renderTemplateToJpeg(
           const text = (f as HTMLElement).innerText || '';
           return r.width > 100 && r.height > 100 && f.querySelectorAll('*').length >= 8 && text.trim().length > 3;
         },
-        { timeout: 30000, polling: 250 }
+        { timeout: 22000, polling: 250 }
       );
     } catch {
       // proceed to screenshot anyway — better a degraded shot than a hard fail
@@ -221,7 +247,7 @@ export async function renderTemplateToJpeg(
         await d.fonts.ready;
       })
       .catch(() => {});
-    await new Promise((r) => setTimeout(r, 900));
+    await new Promise((r) => setTimeout(r, 500));
     const buf = (await page.screenshot({
       type: 'jpeg',
       quality: 80,
@@ -229,7 +255,7 @@ export async function renderTemplateToJpeg(
     })) as Buffer;
     return buf;
   } finally {
-    await browser.close();
+    await page.close();
   }
 }
 
