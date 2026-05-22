@@ -51,11 +51,25 @@ export async function renderTemplateToJpeg(
   if (!jsRuntime.includes('20.x') && !jsRuntime.includes('22.x')) {
     process.env.AWS_LAMBDA_JS_RUNTIME = 'nodejs20.x';
   }
+  // Triggers the AL2023 lib-pack extraction to /tmp/al2023/lib.
+  const executablePath = await chromium.executablePath();
+  // CONFIRMED via the GET diagnostic: the libs (libnss3.so et al.) DO extract
+  // to /tmp/al2023/lib, but the package's setupLambdaEnvironment runs at import
+  // — before we force the runtime string — so LD_LIBRARY_PATH never gains that
+  // dir and Chromium dies with "libnss3.so: cannot open shared object file".
+  // The libs are now on disk, so wire up the path ourselves and hand it to the
+  // spawned browser explicitly.
+  const libDir = '/tmp/al2023/lib';
+  const ldPaths = (process.env.LD_LIBRARY_PATH ?? '').split(':').filter(Boolean);
+  if (!ldPaths.includes(libDir)) {
+    process.env.LD_LIBRARY_PATH = [libDir, ...ldPaths].join(':');
+  }
   const browser = await puppeteer.launch({
     args: chromium.args,
-    executablePath: await chromium.executablePath(),
+    executablePath,
     headless: true,
     defaultViewport: { width, height, deviceScaleFactor: 1 },
+    env: { ...process.env },
   });
   try {
     const page = await browser.newPage();
