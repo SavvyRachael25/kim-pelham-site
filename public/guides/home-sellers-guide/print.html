@@ -1,0 +1,745 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Selling Your Home in Snohomish County: A Guide by Kim Pelham</title>
+<link rel="stylesheet" href="design-system/colors_and_type.css">
+<style>
+  /* ───── Print page setup ───── */
+  @page { size: letter; margin: 0; }
+
+  html, body { margin: 0; padding: 0; background: #d9d4c8; }
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  * { box-sizing: border-box; }
+
+  /* Screen viewing: center pages with margin between them */
+  @media screen {
+    body { padding: 40px 0; }
+    .page {
+      margin: 0 auto 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    }
+  }
+
+  /* Each page is 8.5×11 letter */
+  .page {
+    width: 8.5in;
+    height: 11in;
+    background: var(--color-cream);
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    break-after: page;
+  }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+
+  /* Paper noise overlay: subtle, like the brand site */
+  .page::before {
+    content: "";
+    position: absolute; inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.2  0 0 0 0 0.18  0 0 0 0 0.14  0 0 0 0.06 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+    opacity: 0.5;
+    z-index: 1;
+  }
+  .page > * { position: relative; z-index: 2; }
+
+  /* ───── Shared elements ───── */
+  .eyebrow {
+    font: 700 11px/1 var(--font-body);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-clay);
+  }
+  .hand {
+    font-family: var(--font-handwritten);
+    color: var(--color-clay);
+    line-height: 1;
+  }
+  h1, h2, h3 { font-family: var(--font-heading); color: var(--color-forest); margin: 0; line-height: 1.1; }
+  p { margin: 0; line-height: 1.65; color: var(--color-text); }
+
+  .page-num {
+    position: absolute; bottom: 32px; right: 40px;
+    font: 600 10px/1 var(--font-body);
+    letter-spacing: 2px;
+    color: var(--color-text-muted);
+  }
+  .page-foot-brand {
+    position: absolute; bottom: 32px; left: 40px;
+    font: 400 10px/1 var(--font-body);
+    letter-spacing: 1.5px;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+  }
+
+  /* ───── Page 1 · Cover ───── */
+  .cover { display: flex; flex-direction: column; }
+  .cover-photo {
+    height: 6.6in; width: 100%; overflow: hidden; position: relative;
+  }
+  .cover-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .cover-photo::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,0) 70%, rgba(47,82,51,0.55) 100%);
+  }
+  .cover-photo .label {
+    position: absolute; top: 36px; left: 40px;
+    color: #fff; font: 700 11px/1 var(--font-body);
+    letter-spacing: 2.5px; text-transform: uppercase;
+  }
+  .cover-photo .stamp { position: absolute; top: 32px; right: 40px; width: 88px; height: 88px; }
+  .cover-bottom { flex: 1; padding: 48px 56px 56px; display: flex; flex-direction: column; justify-content: space-between; }
+  .cover-bottom .hand { font-size: 32px; margin-bottom: 14px; }
+  .cover-bottom h1 {
+    font-size: 64px; font-weight: 600; line-height: 1; color: var(--color-forest);
+  }
+  .cover-bottom h1 em { font-style: italic; color: var(--color-clay); }
+  .cover-meta {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    padding-top: 24px; border-top: 1px solid var(--color-border);
+  }
+  .cover-meta .by { font: 600 11px/1.4 var(--font-body); letter-spacing: 1.5px; text-transform: uppercase; color: var(--color-text-light); }
+  .cover-meta .by strong { display: block; font-family: var(--font-heading); font-size: 18px; font-style: italic; font-weight: 500; letter-spacing: 0; color: var(--color-forest); text-transform: none; margin-top: 4px; }
+
+  /* ───── Page 2 · Letter from Kim ───── */
+  .letter { padding: 64px 64px 80px; display: grid; grid-template-columns: 1fr 2.2fr; gap: 40px; align-items: start; }
+  .letter-photo {
+    border: 8px solid #fff;
+    box-shadow: var(--shadow-polaroid);
+    transform: rotate(-2deg);
+    margin-top: 12px;
+  }
+  .letter-photo img { width: 100%; height: 320px; object-fit: cover; display: block; }
+  .letter-photo .caption {
+    font-family: var(--font-handwritten);
+    color: var(--color-text);
+    text-align: center;
+    padding: 10px 0 4px;
+    font-size: 18px;
+  }
+  .letter-body .hand { font-size: 26px; margin-bottom: 10px; }
+  .letter-body h2 { font-size: 36px; font-weight: 600; font-style: italic; margin-bottom: 24px; }
+  .letter-body p { font-size: 12.5pt; line-height: 1.7; margin-bottom: 14px; color: var(--color-text); }
+  .letter-body .sig {
+    font-family: var(--font-handwritten); font-size: 36px; color: var(--color-forest);
+    margin-top: 22px; line-height: 1;
+  }
+  .letter-body .sig-name {
+    font-family: var(--font-body); font-size: 11pt; color: var(--color-text-light);
+    margin-top: 4px; letter-spacing: .04em;
+  }
+
+  /* ───── Section pages (3–7) ───── */
+  .section-page { padding: 56px 56px 64px; display: flex; flex-direction: column; }
+  .section-head { margin-bottom: 20px; }
+  .section-head .eyebrow { margin-bottom: 10px; }
+  .section-head h2 {
+    font-size: 42px; font-weight: 600; line-height: 1.1; color: var(--color-forest);
+  }
+  .section-head h2 em { font-style: italic; color: var(--color-clay); }
+  .section-lede {
+    font-family: var(--font-heading);
+    font-size: 16pt;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--color-forest);
+    line-height: 1.4;
+    margin: 12px 0 18px;
+  }
+  .body-prose p { font-size: 11.5pt; line-height: 1.65; margin-bottom: 10px; }
+  .body-prose p strong { color: var(--color-forest); font-weight: 600; }
+
+  /* Pricing stat card */
+  .stat-card {
+    background: var(--color-forest);
+    color: #fff;
+    padding: 32px 32px;
+    margin: 24px 0 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .stat-card::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><pattern id='w' x='0' y='0' width='40' height='40' patternUnits='userSpaceOnUse'><path d='M0 20 Q 10 10 20 20 T 40 20' stroke='%23ffffff' stroke-width='0.6' fill='none' opacity='0.5'/></pattern></defs><rect width='200' height='200' fill='url(%23w)'/></svg>");
+    opacity: 0.10;
+  }
+  .stat-card > * { position: relative; }
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .stat-grid .n { font-family: var(--font-heading); font-size: 56px; font-weight: 700; color: var(--color-clay); line-height: 1; }
+  .stat-grid .l { font: 700 10px/1.3 var(--font-body); letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,.85); margin-top: 8px; }
+  .stat-card .quote {
+    font-family: var(--font-heading); font-size: 14pt; font-style: italic;
+    color: rgba(255,255,255,.92); line-height: 1.5; margin-top: 22px; max-width: 92%;
+  }
+  .stat-card .stat-source {
+    font-family: var(--font-body); font-size: 8pt; line-height: 1.4;
+    color: rgba(255,255,255,.6); margin-top: 18px; letter-spacing: .02em;
+  }
+
+  /* Timeline */
+  .timeline { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+  .timeline-row { display: grid; grid-template-columns: 96px 1fr; gap: 22px; align-items: start; padding-bottom: 14px; border-bottom: 1px solid var(--color-border); }
+  .timeline-row:last-child { border-bottom: 0; }
+  .timeline-row .when {
+    font-family: var(--font-heading); font-size: 26px; font-weight: 700;
+    color: var(--color-forest); line-height: 1;
+  }
+  .timeline-row .when small { display: block; font: 700 9px/1 var(--font-body); letter-spacing: 1.5px; color: var(--color-clay); text-transform: uppercase; margin-top: 4px; }
+  .timeline-row .what h4 { font: 600 13pt/1.3 var(--font-body); color: var(--color-text); margin: 0 0 4px 0; }
+  .timeline-row .what p { font-size: 10.5pt; color: var(--color-text-light); line-height: 1.55; margin: 0; }
+
+  /* Two-column checklist */
+  .checklist-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 36px; margin-top: 8px; }
+  .checklist-2col h4 { font: 700 11px/1 var(--font-body); letter-spacing: 1.8px; text-transform: uppercase; color: var(--color-clay); margin: 0 0 10px 0; }
+  .checklist-2col ul { margin: 0; padding: 0; list-style: none; }
+  .checklist-2col li {
+    font-size: 10pt; line-height: 1.45; padding: 5px 0 5px 22px;
+    position: relative; border-bottom: 1px solid var(--color-border);
+    color: var(--color-text);
+  }
+  .checklist-2col li::before {
+    content: ""; position: absolute; left: 0; top: 10px;
+    width: 12px; height: 12px; border: 1.5px solid var(--color-clay); border-radius: 2px;
+    background: #fff;
+  }
+
+  .staging-spread .body-prose p { font-size: 11pt; line-height: 1.55; margin-bottom: 8px; }
+
+  /* Cost breakdown table */
+  .cost-table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+  .cost-table th, .cost-table td { text-align: left; padding: 6px 12px; font-size: 10pt; }
+  .cost-table thead th {
+    font: 700 10px/1 var(--font-body); letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--color-clay); border-bottom: 1.5px solid var(--color-forest); padding-bottom: 7px;
+  }
+  .cost-table tbody tr { border-bottom: 1px solid var(--color-border); }
+  .cost-table tbody td.label { color: var(--color-text); }
+  .cost-table tbody td.label strong { color: var(--color-forest); font-weight: 600; display: block; font-family: var(--font-heading); font-size: 12pt; line-height: 1.2; }
+  .cost-table tbody td.label .sub { font-size: 8.5pt; color: var(--color-text-muted); margin-top: 1px; display: block; line-height: 1.35; }
+  .cost-table tbody td.range { text-align: right; font-family: var(--font-heading); font-weight: 600; color: var(--color-forest); font-size: 12pt; white-space: nowrap; line-height: 1.2; }
+  .cost-table tbody td.range.range-two { font-size: 10.5pt; white-space: normal; line-height: 1.35; }
+  .cost-note { background: var(--color-cream-mint); border-left: 4px solid var(--color-clay); padding: 12px 18px; margin-top: 12px; }
+  .cost-note .hand { font-size: 18px; color: var(--color-forest); margin-bottom: 4px; }
+  .cost-note p { font-size: 10pt; color: var(--color-text); line-height: 1.55; margin: 0; }
+
+  /* Staging spread */
+  .staging-spread { display: grid; grid-template-columns: 1.1fr 1fr; gap: 36px; align-items: start; }
+  .staging-photo {
+    border: 8px solid #fff; box-shadow: var(--shadow-polaroid);
+    transform: rotate(-1.5deg);
+  }
+  .staging-photo img { width: 100%; height: 190px; object-fit: cover; display: block; }
+  .staging-photo .caption {
+    text-align: center; padding: 10px 0 4px;
+    font-family: var(--font-handwritten); color: var(--color-text); font-size: 17px;
+  }
+  .staging-list { margin-top: 16px; }
+  .staging-list h4 {
+    font: 700 11px/1 var(--font-body); letter-spacing: 1.8px; text-transform: uppercase;
+    color: var(--color-clay); margin: 0 0 14px 0;
+  }
+  .staging-list ol { margin: 0; padding: 0; list-style: none; counter-reset: r; }
+  .staging-list li {
+    counter-increment: r; padding: 12px 0 12px 38px; position: relative;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 11pt; line-height: 1.55; color: var(--color-text);
+  }
+  .staging-list li::before {
+    content: counter(r, decimal-leading-zero);
+    position: absolute; left: 0; top: 12px;
+    font-family: var(--font-heading); font-size: 16pt; font-weight: 700;
+    color: var(--color-forest); font-style: italic;
+  }
+  .staging-list li b { color: var(--color-forest); font-weight: 600; }
+
+  /* ───── Page 8 · Let's talk ───── */
+  .closing { padding: 0; display: flex; flex-direction: column; }
+  .closing-top { background: var(--color-forest); color: #fff; padding: 60px 56px 48px; position: relative; overflow: hidden; }
+  .closing-top::before {
+    content: ""; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><pattern id='w' x='0' y='0' width='40' height='40' patternUnits='userSpaceOnUse'><path d='M0 20 Q 10 10 20 20 T 40 20' stroke='%23ffffff' stroke-width='0.6' fill='none' opacity='0.5'/></pattern></defs><rect width='200' height='200' fill='url(%23w)'/></svg>");
+    opacity: 0.10;
+  }
+  .closing-top > * { position: relative; }
+  .closing-top .hand { color: var(--color-clay); font-size: 36px; margin-bottom: 14px; }
+  .closing-top h2 {
+    font-family: var(--font-heading); font-size: 56px; font-weight: 600; color: #fff;
+    line-height: 1.05; margin-bottom: 18px;
+  }
+  .closing-top h2 em { font-style: italic; color: var(--color-clay); }
+  .closing-top p { color: rgba(255,255,255,.88); font-size: 12pt; line-height: 1.65; max-width: 5.5in; }
+  .closing-mid { padding: 40px 56px 32px; flex: 1; }
+  .closing-mid h3 {
+    font: 700 11px/1 var(--font-body); letter-spacing: 2px; text-transform: uppercase;
+    color: var(--color-clay); margin: 0 0 12px 0;
+  }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 36px; margin-bottom: 28px; }
+  .contact-grid .row .l { font: 600 10px/1 var(--font-body); letter-spacing: 1.5px; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 4px; }
+  .contact-grid .row .v { font-family: var(--font-heading); font-size: 17pt; font-weight: 600; color: var(--color-forest); }
+  .closing-signature {
+    border-top: 1px solid var(--color-border); padding-top: 22px; margin-top: 18px;
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+  .closing-signature .sig-block .hand { font-size: 38px; color: var(--color-forest); margin-bottom: 4px; }
+  .closing-signature .sig-block p { font-size: 11pt; color: var(--color-text-light); margin: 0; }
+  .closing-signature .badges { display: flex; gap: 12px; align-items: center; }
+  .closing-signature .badges img { height: 72px; width: auto; }
+
+  /* Compliance footer band on page 8 */
+  .closing-footer {
+    background: var(--color-cream-dark);
+    border-top: 1px solid var(--color-border);
+    padding: 16px 40px 18px;
+    display: flex; align-items: center; gap: 18px;
+  }
+  .closing-footer .marks { display: flex; gap: 14px; align-items: center; flex-shrink: 0; }
+  .closing-footer .marks .eho,
+  .closing-footer .marks .realtor { height: 40px; width: auto; display: block; }
+  .closing-footer .marks .nwmls { height: 30px; width: auto; display: block; }
+  .closing-footer .disclosure { flex: 1; }
+  .closing-footer .disclosure p {
+    font-family: var(--font-body); font-size: 7.5pt; line-height: 1.45;
+    color: var(--color-text-muted); margin: 0;
+  }
+  .closing-footer .disclosure p + p { margin-top: 4px; }
+  .closing-footer .disclosure p strong { color: var(--color-text); font-weight: 600; }
+
+  /* Print: drop screen shadows */
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { box-shadow: none; margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE 1: COVER
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="page cover">
+  <div class="cover-photo">
+    <img src="assets/aerial-neighborhood.jpg" alt="">
+    <span class="label">A pre-listing guide · Snohomish County · 2026</span>
+    <img class="stamp" src="assets/logo-stamp.svg" alt="">
+  </div>
+  <div class="cover-bottom">
+    <div>
+      <p class="hand">selling your home,</p>
+      <h1>Strategy, not luck.<br><em>The pre-listing guide.</em></h1>
+    </div>
+    <div class="cover-meta">
+      <p class="by">By
+        <strong>Kim Pelham · The Pelham Group NW</strong>
+      </p>
+      <p class="by" style="text-align:right;">17 years · Snohomish County<br>
+        <strong>102.3% sale-to-list ratio</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE 2: NOTE FROM KIM
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="page">
+  <div class="letter">
+    <div class="letter-photo">
+      <img src="assets/kim-headshot.jpg" alt="">
+      <div class="caption">your neighbor in real estate</div>
+    </div>
+    <div class="letter-body">
+      <p class="hand">hey neighbor,</p>
+      <h2>This is what a thoughtful sale <em>could</em> look like.</h2>
+      <p>I have been selling homes in Snohomish County for 17 years, brokered by Katrina Eileen out of Everett. I cap my buyer clients at two at a time, which is part of what protects the attention your listing gets. But the ideas in here are not really about me. They are about what works.</p>
+      <p>I put this together because most sellers I meet have never seen what a careful pre-listing process actually looks like. They have seen agents who show up two weeks before the sign goes in the yard and call it a strategy. Sellers deserve better than that, and so do the homes they have lived in.</p>
+      <p>So this is the version of "what to expect" I wish every seller in Snohomish County had before their first agent conversation. The 90 days before list. The unsexy parts that actually move the price. How to think about staging. What it costs. What happens after closing day. Whether you and I end up working together or not, the framework is the same.</p>
+      <p>Read what is useful. Skip what is not. And when you are ready to talk, my number is on the last page.</p>
+      <p class="sig">Kim</p>
+      <p class="sig-name">Kim Pelham · The Pelham Group NW · Everett, WA</p>
+    </div>
+  </div>
+  <span class="page-foot-brand">The Pelham Group NW · Brokered by Katrina Eileen Real Estate · Kim Pelham, Real Estate Broker</span>
+  <span class="page-num">02</span>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE 3: PRICING
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="page section-page">
+  <header class="section-head">
+    <p class="eyebrow">Chapter 01 · Pricing</p>
+    <h2>The price is <em>the whole game.</em></h2>
+    <p class="section-lede">Almost every listing problem traces back to a number set in the wrong week. Pricing is not where you start the negotiation. It is the negotiation.</p>
+  </header>
+
+  <div class="body-prose">
+    <p>Here is what I see most often. A seller anchors to what a neighbor got six months ago, an agent agrees to it because they want the listing, and the home goes live priced for a market that does not exist anymore. By week three the listing is stale, buyers assume something is wrong with it, and the eventual sale comes in under what an honest number would have produced on day one.</p>
+    <p><strong>Most of that is preventable.</strong> The prep work up front is the difference. A thoughtful pricing conversation starts with real comps (closed in the last 45 days, in the same submarket, accounting for view, lot, and condition) and an in-person walk-through of the home before any number ends up on paper. The goal is to land on what the house actually appraises against today, not what it could have last spring.</p>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-grid">
+      <div>
+        <p class="n">102.3%</p>
+        <p class="l">My sale-to-list ratio</p>
+      </div>
+      <div>
+        <p class="n">100.2%</p>
+        <p class="l">Snohomish County avg</p>
+      </div>
+    </div>
+    <p class="quote">"Pricing ego is the only thing slowing sellers down right now. The good inventory still moves quickly, when the number is right."</p>
+    <p class="stat-source">Source: NWMLS closed transactions, Snohomish County, trailing 12 months. Kim Pelham personal production figures based on Kim's closed sides during the same period. Past performance does not guarantee future results.</p>
+  </div>
+
+  <div class="body-prose">
+    <p><strong>One thing worth holding on to:</strong> the first 14 days of a listing are the most valuable window you will have. Every buyer watching the area sees you in that window. If the price is wrong, the window closes. If the price is right, you can end up with competing offers, which is most of where that 102.3% comes from. Not from listing high. From listing honestly, and letting demand do the rest.</p>
+  </div>
+
+  <span class="page-foot-brand">The Pelham Group NW · Brokered by Katrina Eileen Real Estate · Kim Pelham, Real Estate Broker</span>
+  <span class="page-num">03</span>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE 4: 90-DAY TIMELINE
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="page section-page">
+  <header class="section-head">
+    <p class="eyebrow">Chapter 02 · Timeline</p>
+    <h2>The <em>90 days</em> before we list.</h2>
+    <p class="section-lede">A good listing is not a sprint at the end. It is a sequence. Here is what it looks like when it is run well.</p>
+  </header>
+
+  <div class="timeline">
+    <div class="timeline-row">
+      <div class="when">T–90<small>3 months out</small></div>
+      <div class="what">
+        <h4>Walk-through and honest assessment</h4>
+        <p>I come over, we go room by room. I tell you what to fix, what to leave alone, what to declutter, and what to spend money on. I also pull early comps so we can talk about a price band, not a number yet.</p>
+      </div>
+    </div>
+    <div class="timeline-row">
+      <div class="when">T–60<small>2 months out</small></div>
+      <div class="what">
+        <h4>Pre-listing inspection &amp; sewer scope</h4>
+        <p>We get ahead of every surprise a buyer's inspector would find. Roof, foundation, electrical, plumbing, sewer line. Fixing what is fixable now beats negotiating it on the back end.</p>
+      </div>
+    </div>
+    <div class="timeline-row">
+      <div class="when">T–30<small>1 month out</small></div>
+      <div class="what">
+        <h4>Repairs, paint, decluttering</h4>
+        <p>Contractors lined up. Walls get a fresh neutral coat where it matters. We clear half of what is on every shelf. Garage gets emptied of anything that does not need to be in the photos.</p>
+      </div>
+    </div>
+    <div class="timeline-row">
+      <div class="when">T–14<small>2 weeks out</small></div>
+      <div class="what">
+        <h4>Staging weekend &amp; photography</h4>
+        <p>I stage with my own pieces (sofas, art, lamps, rugs) over a weekend. Photographer comes the following Tuesday morning, golden hour. Drone shots if the lot calls for it. Twilights if the view does.</p>
+      </div>
+    </div>
+    <div class="timeline-row">
+      <div class="when">T–7<small>1 week out</small></div>
+      <div class="what">
+        <h4>MLS prep, disclosures, pricing call</h4>
+        <p>We finalize the price with the most recent week of comps. I write the listing copy. You sign disclosures. We coordinate the live date for a Thursday or Friday to maximize weekend traffic.</p>
+      </div>
+    </div>
+    <div class="timeline-row">
+      <div class="when">Day 0<small>live on MLS</small></div>
+      <div class="what">
+        <h4>Listing goes live · open house weekend</h4>
+        <p>Hits MLS Thursday morning. Open house Saturday and Sunday, twelve to three. I sit them both. By Sunday evening we know if we are reviewing offers Monday.</p>
+      </div>
+    </div>
+  </div>
+
+  <span class="page-foot-brand">The Pelham Group NW · Brokered by Katrina Eileen Real Estate · Kim Pelham, Real Estate Broker</span>
+  <span class="page-num">04</span>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE 5: THE UNSEXY STUFF
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="page section-page">
+  <header class="section-head">
+    <p class="eyebrow">Chapter 03 · Diligence</p>
+    <h2>The <em>unsexy stuff</em> that decides every sale.</h2>
+    <p class="section-lede">Buyers fall in love with the kitchen. They walk away because of the roof. We get every one of these in front of you before they get in front of a buyer's inspector.</p>
+  </header>
+
+  <div class="checklist-2col">
+    <div>
+      <h4>Pre-listing inspection</h4>
+      <ul>
+        <li>Roof age, condition, and remaining life</li>
+        <li>Attic ventilation and insulation</li>
+        <li>Crawlspace, foundation, drainage</li>
+        <li>Electrical panel and amperage</li>
+        <li>Plumbing supply lines and water heater age</li>
+        <li>Sewer scope to the city main</li>
+        <li>Furnace, ducts, and filter condition</li>
+        <li>Windows, seals, and visible flashing</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Documents I will gather for you</h4>
+      <ul>
+        <li>Form 17 seller disclosure (every line walked through)</li>
+        <li>Permit history for any work done</li>
+        <li>HOA documents, CC&amp;Rs, dues, reserves</li>
+        <li>Most recent property tax statement</li>
+        <li>Survey or plat map if available</li>
+        <li>Warranties on roof, HVAC, appliances</li>
+        <li>Septic records, if applicable</li>
+        <li>Mineral, water, and easement disclosures</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Repairs I usually recommend</h4>
+      <ul>
+        <li>Replace any failed window seals (cheap, obvious to buyers)</li>
+        <li>Service the furnace and clean ducts</li>
+        <li>Caulk and re-grout bathrooms thoroughly</li>
+        <li>Fix every running toilet and slow drain</li>
+        <li>Touch up paint at door frames and baseboards</li>
+        <li>Power wash siding, walkways, deck</li>
+        <li>Replace any burnt-out bulbs (every one)</li>
+        <li>Address pet smells before staging, not after</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Repairs I will tell you to skip</h4>
+      <ul>
+        <li>Full kitchen or bath remodels (you won't recoup)</li>
+        <li>Carpet replacement if the existing is clean</li>
+        <li>New appliances unless the current ones are broken</li>
+        <li>Driveway resurfacing unless cracked through</li>
+        <li>Roof replacement if 5+ years of life remain</li>
+        <li>Landscaping beyond mulch, mow, and edging</li>
+        <li>Bedroom paint colors that already read neutral</li>
+        <li>Anything cosmetic that a buyer will want to redo</li>
+      </ul>
+    </div>
+  </div>
+
+  <span class="page-foot-brand">The Pelham Group NW · Brokered by Katrina Eileen Real Estate · Kim Pelham, Real Estate Broker</span>
+  <span class="page-num">05</span>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE 6: STAGING
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="page section-page">
+  <header class="section-head">
+    <p class="eyebrow">Chapter 04 · Staging</p>
+    <h2>What <em>good staging</em> looks like.</h2>
+    <p class="section-lede">Staging is not decoration. It is the bridge between how you live in your house and how a buyer pictures themselves living there. Five rooms do almost all of the work.</p>
+  </header>
+
+  <div class="staging-spread">
+    <div>
+      <div class="staging-photo">
+        <img src="assets/staging-living-room.jpg" alt="">
+        <div class="caption">pieces chosen for the room, not wheeled in from a warehouse</div>
+      </div>
+      <div class="body-prose" style="margin-top: 18px;">
+        <p>Rental staging is fine, and it works well for vacant homes. For lived-in homes, the best results usually come from pieces selected specifically for the room (sofas, rugs, art, lamps, books) chosen for the way the home photographs. I stage every one of my listings myself, with pieces I have collected over the years for exactly this work.</p>
+        <p><strong>The goal is not "Pinterest perfect."</strong> The goal is a buyer pausing at the threshold of every room and picturing themselves there.</p>
+        <p><strong>The consultation is on me</strong> &mdash; I walk every room and leave you with a written plan, no charge. Hands-on staging runs $1,000 to $1,800 occupied, $2,500 and up vacant. Most sellers earn it back many times over. If paying up front is hard, it can be deferred to closing.</p>
+      </div>
+    </div>
+
+    <div class="staging-list">
+      <h4>The 5 rooms that decide it</h4>
+      <ol>
+        <li><b>Living room.</b> A single conversation grouping, one anchor rug, no more than three pieces of art on any wall. Buyers stand here longest.</li>
+        <li><b>Kitchen.</b> Counters cleared to two intentional objects. Cabinet contents reduced by half. Pendant bulbs matching, warm white.</li>
+        <li><b>Primary bedroom.</b> Bed made hotel-style, two nightstands matching, lamps on, blinds tilted up. Closets must look half-empty.</li>
+        <li><b>Primary bath.</b> Towels rolled, mirror perfect, two products visible total. No personal medication, no clutter on the back of the toilet.</li>
+        <li><b>Front porch &amp; entry.</b> The first 8 seconds of every showing. Doormat, planter, paint touched up, working light, swept walk.</li>
+      </ol>
+    </div>
+  </div>
+
+  <span class="page-foot-brand">The Pelham Group NW · Brokered by Katrina Eileen Real Estate · Kim Pelham, Real Estate Broker</span>
+  <span class="page-num">06</span>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE 7: WHAT IT COSTS
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="page section-page">
+  <header class="section-head">
+    <p class="eyebrow">Chapter 05 · Costs</p>
+    <h2>What it <em>actually costs</em> to sell.</h2>
+    <p class="section-lede">A good sale comes with no surprises at closing. Here is what comes out of your proceeds, with realistic ranges for a Snohomish County sale around the county median.</p>
+  </header>
+
+  <table class="cost-table">
+    <thead>
+      <tr><th>Line item</th><th style="text-align:right;">Typical range</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="label">
+          <strong>Listing brokerage commission</strong>
+          <span class="sub">Negotiated up front. We discuss this on call one. No surprises.</span>
+        </td>
+        <td class="range">Negotiated</td>
+      </tr>
+      <tr>
+        <td class="label">
+          <strong>Buyer's agent compensation</strong>
+          <span class="sub">Post-2024 rule changes. May be paid by buyer, seller, or split. We strategize.</span>
+        </td>
+        <td class="range">Negotiated</td>
+      </tr>
+      <tr>
+        <td class="label">
+          <strong>Excise tax (WA state)</strong>
+          <span class="sub">Tiered: 1.10% to 3.00% depending on sale price.</span>
+        </td>
+        <td class="range">1.10–3.00%</td>
+      </tr>
+      <tr>
+        <td class="label">
+          <strong>Title insurance &amp; escrow</strong>
+          <span class="sub">Owner's title policy + escrow fees.</span>
+        </td>
+        <td class="range">$1,800–$3,200</td>
+      </tr>
+      <tr>
+        <td class="label">
+          <strong>Pre-listing inspection &amp; sewer scope</strong>
+          <span class="sub">Recommended. Both standard in this market. Saves more than they cost in nine out of ten sales.</span>
+        </td>
+        <td class="range">$625–$925</td>
+      </tr>
+      <tr>
+        <td class="label">
+          <strong>Photography &amp; marketing</strong>
+          <span class="sub">Listing photos, MLS prep, twilights, drone, and video where the home calls for it. I cover this on every listing I take.</span>
+        </td>
+        <td class="range">Included</td>
+      </tr>
+      <tr>
+        <td class="label">
+          <strong>Staging</strong>
+          <span class="sub">Free consult with a room-by-room plan. Hands-on staging optional. Can be deferred to closing.</span>
+        </td>
+        <td class="range range-two">Free consult,<br>$1,000&ndash;$1,800 occupied,<br>$2,500+ vacant</td>
+      </tr>
+      <tr>
+        <td class="label">
+          <strong>Repairs &amp; concessions (varies)</strong>
+          <span class="sub">Negotiated after inspection. The pre-listing inspection minimizes this.</span>
+        </td>
+        <td class="range">0.5–1.5%</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="cost-note">
+    <p class="hand">my promise.</p>
+    <p>Before we sign anything, you get a written net-sheet showing your estimated proceeds at three different sale prices. You will know your bottom number before the sign goes in the yard. If something does shift between list and close, you hear about it from me first, not from a closing statement.</p>
+  </div>
+
+  <span class="page-foot-brand">The Pelham Group NW · Brokered by Katrina Eileen Real Estate · Kim Pelham, Real Estate Broker</span>
+  <span class="page-num">07</span>
+</section>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     PAGE 8: LET'S TALK
+     ═══════════════════════════════════════════════════════════════ -->
+<section class="page closing">
+  <div class="closing-top">
+    <p class="hand">your next chapter.</p>
+    <h2>When you are ready,<br><em>I have your back.</em></h2>
+    <p>I keep my buyer roster small &mdash; two at a time, by design &mdash; so the listings I take always have the front of my calendar. If we are going to work together I want to make sure the fit is right for both of us. The first conversation is twenty minutes, on your couch or on the phone. No pitch, no pressure, no agenda. Just questions.</p>
+  </div>
+
+  <div class="closing-mid">
+    <h3>The first call</h3>
+    <div class="contact-grid">
+      <div class="row">
+        <p class="l">Phone &amp; text</p>
+        <p class="v">425-250-9422</p>
+      </div>
+      <div class="row">
+        <p class="l">Email</p>
+        <p class="v">kim@thepelhamgroupnw.com</p>
+      </div>
+      <div class="row">
+        <p class="l">Office</p>
+        <p class="v">Brokered by Katrina Eileen<br><span style="font-size:11pt;color:var(--color-text-light);font-weight:400;font-family:var(--font-body);">Everett, WA</span></p>
+      </div>
+      <div class="row">
+        <p class="l">Serving</p>
+        <p class="v" style="font-size:14pt;">Everett · Bothell · Mill Creek<br>Snohomish · Lake Stevens · Marysville · Mukilteo</p>
+      </div>
+    </div>
+
+    <div class="closing-signature">
+      <div class="sig-block">
+        <p class="hand">Kim</p>
+        <p>your neighbor in real estate</p>
+      </div>
+      <div class="badges">
+        <img src="assets/badge-snoco-2024.png" alt="Best of Snohomish County 2024">
+        <img src="assets/badge-zillow.png" alt="Best of Zillow">
+      </div>
+    </div>
+  </div>
+
+  <div class="closing-footer">
+    <div class="marks" aria-hidden="true">
+      <!-- Equal Housing Opportunity: official HUD mark -->
+      <img class="eho" src="assets/eho-logo.png" alt="Equal Housing Opportunity">
+      <!-- REALTOR® mark: official NAR member asset -->
+      <img class="realtor" src="assets/realtor-logo.png" alt="REALTOR®">
+      <!-- NWMLS: source of market statistics cited above -->
+      <img class="nwmls" src="assets/nwmls-logo.png" alt="Northwest Multiple Listing Service">
+    </div>
+    <div class="disclosure">
+      <p><strong>Kim Pelham, Real Estate Broker</strong> · WA License #119262 · NWMLS Broker #103153 · Brokered by Katrina Eileen Real Estate · Everett, WA</p>
+      <p>Equal Housing Opportunity. All services are offered in accordance with the federal Fair Housing Act, the Washington Law Against Discrimination, and all applicable federal, state, and local laws. Information in this guide is for general educational purposes and is believed accurate but not guaranteed. Market statistics cited are sourced from the Northwest Multiple Listing Service (NWMLS); past performance does not guarantee future results. Sellers should consult their own legal and tax advisors regarding any specific transaction.</p>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Auto-print once fonts and images are ready
+  (async () => {
+    try {
+      if (document.fonts && document.fonts.ready) {
+        await document.fonts.ready;
+      }
+      // Wait for any in-flight images
+      const imgs = Array.from(document.images);
+      await Promise.all(imgs.map(img => {
+        if (img.complete) return Promise.resolve();
+        return new Promise(res => {
+          img.addEventListener('load', res, { once: true });
+          img.addEventListener('error', res, { once: true });
+        });
+      }));
+      // Safety delay so the layout fully settles
+      await new Promise(r => setTimeout(r, 500));
+      window.print();
+    } catch (e) {
+      window.print();
+    }
+  })();
+</script>
+
+</body>
+</html>
