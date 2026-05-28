@@ -208,7 +208,7 @@ function BlogListingFeature({ tweaks, listing }) {
       <div style={{ padding: "40px 80px 20px", maxWidth: 880 }}>
         <Eyebrow color={clay} size={11}>Listing Story · May 2026 · {listing.cityShort}</Eyebrow>
         <h1 style={{ fontFamily: FONT.heading, fontSize: 56, fontWeight: 600, color: forest, margin: "16px 0 0 0", lineHeight: 1.05 }}>
-          A view you buy <em style={{ color: clay, fontStyle: "italic" }}>once</em> — inside {listing.address}.
+          Inside <em style={{ color: clay, fontStyle: "italic" }}>{listing.address}</em>.
         </h1>
         <p style={{ fontFamily: FONT.body, fontSize: 14, color: C.textMuted, margin: "16px 0 0 0", letterSpacing: ".04em" }}>
           By Kim Pelham · 6 min read · MLS #{listing.mls}

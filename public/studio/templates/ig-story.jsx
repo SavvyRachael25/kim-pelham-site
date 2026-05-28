@@ -89,11 +89,11 @@ function IgStoryListing({ tweaks, listing }) {
             psst —
           </Handwritten>
           <h1 style={{
-            fontFamily: FONT.heading, fontSize: 120, fontWeight: 700,
+            fontFamily: FONT.heading, fontSize: 96, fontWeight: 700,
             color: "#fff", margin: 0, lineHeight: 1.05,
           }}>
-            Mukilteo just got<br/>
-            <em style={{ color: clay, fontStyle: "italic" }}>this view</em>
+            {listing.cityShort} just got<br/>
+            <em style={{ color: clay, fontStyle: "italic" }}>{listing.priceShort}</em>
           </h1>
           <p style={{
             fontFamily: FONT.body, fontSize: 28, color: "rgba(255,255,255,.85)",
