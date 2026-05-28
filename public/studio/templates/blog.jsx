@@ -324,7 +324,7 @@ function PropertyPageActive({ tweaks, listing }) {
             { v: listing.beds, l: "Bed" },
             { v: listing.baths, l: "Bath" },
             { v: listing.sqft, l: "Sqft" },
-            { v: "1976", l: "Built" },
+            { v: (listing.specSheet && listing.specSheet[0] && (String(listing.specSheet[0][1]).match(/\d{4}/) || [""])[0]) || "—", l: "Built" },
           ].map(s => (
             <div key={s.l} style={{ textAlign: "center" }}>
               <p style={{ fontFamily: FONT.heading, fontSize: 22, fontWeight: 700, color: C.text, margin: 0, lineHeight: 1 }}>{s.v}</p>
