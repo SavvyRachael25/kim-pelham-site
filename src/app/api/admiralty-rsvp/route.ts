@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { sendEmail } from '@/lib/resend';
 
 /**
  * POST /api/admiralty-rsvp
@@ -328,24 +327,33 @@ export async function POST(req: NextRequest) {
     }).catch(() => {});
   }
 
-  // 5) Best-effort RSVP confirmation email
-  if (email) {
+  // 5) RSVP confirmation email via GHL Conversations API (no Resend dep)
+  if (email && ghlContactId) {
     const greeting = firstName.charAt(0).toUpperCase() + firstName.slice(1);
     const html = renderRsvpEmail({ firstName: greeting });
-    sendEmail({
-      to: email,
-      subject: 'You\'re on the list for Saturday\'s open house',
-      html,
-      text: rsvpEmailText(greeting),
-      tags: [
-        { name: 'campaign', value: 'admiralty-open-house' },
-        { name: 'source', value: sourceSlug },
-      ],
-    }).then((r) => {
-      if (!r.ok) console.error('[admiralty-rsvp] Resend failed:', r.reason);
-    }).catch((err) => {
-      console.error('[admiralty-rsvp] Resend threw:', (err as Error).message);
-    });
+    try {
+      const emailRes = await fetch(`${GHL_API_BASE}/conversations/messages`, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${GHL_API_TOKEN}`,
+          'Content-Type': 'application/json',
+          Version: GHL_API_VERSION,
+        },
+        body: JSON.stringify({
+          type: 'Email',
+          contactId: ghlContactId,
+          subject: "You're on the list for Saturday's open house",
+          html,
+          emailFrom: process.env.GHL_FROM_EMAIL?.trim() || undefined,
+        }),
+      });
+      if (!emailRes.ok) {
+        const t = await emailRes.text().catch(() => '');
+        console.error(`[admiralty-rsvp] GHL email ${emailRes.status}:`, t.slice(0, 300));
+      }
+    } catch (err) {
+      console.error('[admiralty-rsvp] GHL email threw:', (err as Error).message);
+    }
   }
 
   return NextResponse.json({ ok: true });
@@ -399,26 +407,3 @@ function renderRsvpEmail({ firstName }: { firstName: string }): string {
 </html>`;
 }
 
-function rsvpEmailText(firstName: string): string {
-  return `Hi ${firstName},
-
-You're on the list for the open house at 11706 Admiralty Way Unit B in Everett. Saturday May 30, 1 to 3 PM.
-
-What to expect on site:
-- Disclosures, inspection summary, and HOA docs printed in the kitchen
-- Ground floor entry, all one level, parking right by the front door
-- Me, ready to answer the unsexy questions about the building, the HOA, and the comps
-- Bring whoever has a vote in your decision
-
-Directions: ${MAP_URL}
-Listing: ${LISTING_URL}
-
-If plans change, reply here or text me at 425-250-9422.
-
-Always,
-Kim Pelham
-The Pelham Group NW
-425-250-9422
-
-Brokered by Katrina Eileen Real Estate. WA Broker #119262. NWMLS #2528831. Equal Housing Opportunity.`;
-}

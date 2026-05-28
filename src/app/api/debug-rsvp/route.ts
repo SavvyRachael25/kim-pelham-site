@@ -1,5 +1,4 @@
 import { NextRequest, NextResponse } from 'next/server';
-import { sendEmail } from '@/lib/resend';
 
 /**
  * /api/debug-rsvp
@@ -30,7 +29,7 @@ export async function GET(req: NextRequest) {
 
   const GHL_API_TOKEN = process.env.GHL_API_TOKEN;
   const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID;
-  const RESEND_API_KEY = process.env.RESEND_API_KEY;
+  const GHL_FROM_EMAIL = process.env.GHL_FROM_EMAIL;
   const KIM_ALERT_PHONE = process.env.KIM_ALERT_PHONE ?? '+14252509422';
   const KIM_ALERT_CONTACT_ID = process.env.KIM_ALERT_CONTACT_ID;
 
@@ -43,7 +42,7 @@ export async function GET(req: NextRequest) {
       ghlTokenLen: GHL_API_TOKEN?.length ?? 0,
       hasGhlLocation: !!GHL_LOCATION_ID,
       ghlLocationId: GHL_LOCATION_ID,
-      hasResendKey: !!RESEND_API_KEY,
+      ghlFromEmail: GHL_FROM_EMAIL ?? '(not set, GHL will use location default)',
       hasKimContactId: !!KIM_ALERT_CONTACT_ID,
       kimAlertPhone: KIM_ALERT_PHONE,
     },
@@ -204,21 +203,32 @@ export async function GET(req: NextRequest) {
     }
   }
 
-  // 5. Resend test
-  if (email) {
+  // 5. GHL email test (no Resend — email via GHL Conversations API)
+  if (email && debugContactId) {
     try {
-      const r = await sendEmail({
-        to: email,
-        subject: 'Debug RSVP — Resend test',
-        html: '<p>Debug Resend send.</p>',
-        text: 'Debug Resend send.',
+      const r = await fetch(`${GHL_API_BASE}/conversations/messages`, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${GHL_API_TOKEN}`,
+          'Content-Type': 'application/json',
+          Version: GHL_API_VERSION,
+        },
+        body: JSON.stringify({
+          type: 'Email',
+          contactId: debugContactId,
+          subject: 'Debug RSVP - GHL email test',
+          html: '<p>If you can see this, GHL email is wired up correctly.</p>',
+          emailFrom: GHL_FROM_EMAIL || undefined,
+        }),
       });
-      (out.steps as Record<string, unknown>).resendEmail = {
+      const txt = await r.text();
+      (out.steps as Record<string, unknown>).ghlEmail = {
+        status: r.status,
         ok: r.ok,
-        reason: 'reason' in r ? r.reason : undefined,
+        bodySnippet: txt.slice(0, 500),
       };
     } catch (err) {
-      (out.steps as Record<string, unknown>).resendEmail = { error: (err as Error).message };
+      (out.steps as Record<string, unknown>).ghlEmail = { error: (err as Error).message };
     }
   }
 
