@@ -1,0 +1,285 @@
+import { NextRequest, NextResponse } from 'next/server';
+import { sendEmail } from '@/lib/resend';
+
+/**
+ * POST /api/admiralty-rsvp
+ *
+ * Open-house RSVP capture for 11706 Admiralty Way Unit B, Everett (MLS #2528831).
+ *
+ * Flow:
+ *   1. Validate payload (firstName + email or phone required)
+ *   2. Upsert contact in GHL with tags: admiralty-rsvp, open-house-may-30,
+ *      source-<utmSource> (or 'website-rsvp' fallback)
+ *   3. Attach a GHL note carrying "Who's coming" + free-text notes
+ *   4. Self-trigger FUB sync (mirrors contact + tags)
+ *   5. Send branded RSVP confirmation email via Resend (best-effort)
+ *
+ * Downstream automation: a GHL workflow listens for the `admiralty-rsvp` tag
+ * and runs the SMS sequence (immediate confirm, Friday reminder, Saturday
+ * morning reminder, Sunday recap). See ghl-open-house-funnel.md for specs.
+ *
+ * Env required:
+ *   GHL_API_TOKEN, GHL_LOCATION_ID
+ *   RESEND_API_KEY (optional — email no-ops without it)
+ *   PELHAM_WEBHOOK_SECRET (optional — used for FUB sync)
+ */
+
+const GHL_API_BASE = 'https://services.leadconnectorhq.com';
+const GHL_API_VERSION = '2021-07-28';
+const LISTING_URL =
+  'https://thepelhamgroupnw.com/properties/11706-admiralty-way-unit-b-everett';
+const MAP_URL =
+  'https://www.google.com/maps/dir/?api=1&destination=11706+Admiralty+Way+B+Everett+WA+98204';
+
+interface RsvpPayload {
+  firstName: string;
+  lastName?: string;
+  email?: string;
+  phone?: string;
+  bringing?: string;
+  notes?: string;
+  smsConsent: boolean;
+  consentText: string;
+  utmSource?: string;
+  utmMedium?: string;
+  utmCampaign?: string;
+  utmContent?: string;
+}
+
+export async function POST(req: NextRequest) {
+  const GHL_API_TOKEN = process.env.GHL_API_TOKEN;
+  const GHL_LOCATION_ID = process.env.GHL_LOCATION_ID;
+
+  if (!GHL_API_TOKEN || !GHL_LOCATION_ID) {
+    console.error('[admiralty-rsvp] Missing GHL_API_TOKEN or GHL_LOCATION_ID');
+    return NextResponse.json(
+      { error: 'Server configuration error. Please text Kim at 425-250-9422.' },
+      { status: 500 }
+    );
+  }
+
+  let body: RsvpPayload;
+  try {
+    body = await req.json();
+  } catch {
+    return NextResponse.json({ error: 'Invalid request body.' }, { status: 400 });
+  }
+
+  const { firstName, lastName, email, phone, bringing, notes, smsConsent, consentText, utmSource, utmMedium, utmCampaign, utmContent } = body;
+
+  if (!firstName || (!email && !phone)) {
+    return NextResponse.json(
+      { error: 'First name and either email or phone are required.' },
+      { status: 400 }
+    );
+  }
+
+  // Build tag set
+  const sourceSlug = (utmSource && utmSource.trim())
+    ? utmSource.trim().toLowerCase().replace(/[^a-z0-9-]/g, '-')
+    : 'website-rsvp';
+  const tags = [
+    'admiralty-rsvp',
+    'open-house-may-30',
+    `source-${sourceSlug}`,
+    'mls-2528831',
+  ];
+  if (smsConsent) tags.push('consent-transactional');
+  if (bringing) tags.push(`bringing-${bringing.toLowerCase().replace(/\s+/g, '-')}`);
+
+  // Source field — combined for GHL's source attribute
+  const ghlSource = `admiralty-open-house-${sourceSlug}`;
+
+  const ghlPayload: Record<string, unknown> = {
+    firstName,
+    lastName: lastName ?? '',
+    email: email ?? '',
+    phone: phone ?? '',
+    locationId: GHL_LOCATION_ID,
+    source: ghlSource,
+    tags,
+  };
+
+  // 1) Upsert contact
+  let ghlRes: Response;
+  try {
+    ghlRes = await fetch(`${GHL_API_BASE}/contacts/upsert`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${GHL_API_TOKEN}`,
+        'Content-Type': 'application/json',
+        Version: GHL_API_VERSION,
+      },
+      body: JSON.stringify(ghlPayload),
+    });
+  } catch (err) {
+    console.error('[admiralty-rsvp] Network error calling GHL:', (err as Error).message);
+    return NextResponse.json(
+      { error: "We couldn't save your RSVP. Please text Kim at 425-250-9422." },
+      { status: 502 }
+    );
+  }
+
+  if (!ghlRes.ok) {
+    const errBody = await ghlRes.text().catch(() => '(no body)');
+    console.error(`[admiralty-rsvp] GHL ${ghlRes.status}:`, errBody.slice(0, 600));
+    return NextResponse.json(
+      { error: "We couldn't save your RSVP. Please text Kim at 425-250-9422." },
+      { status: 502 }
+    );
+  }
+
+  // 2) Extract contact id, attach note with bringing + free-text + UTM context
+  let ghlContactId: string | undefined;
+  try {
+    const data = (await ghlRes.clone().json()) as { contact?: { id?: string } };
+    ghlContactId = data.contact?.id;
+  } catch {
+    // non-fatal
+  }
+
+  if (ghlContactId) {
+    const noteLines: string[] = ['Open house RSVP · 11706 Admiralty Way Unit B · May 30, 1-3 PM'];
+    if (bringing) noteLines.push(`Bringing: ${bringing}`);
+    if (notes) noteLines.push(`Notes: ${notes}`);
+    if (utmSource || utmMedium || utmCampaign || utmContent) {
+      noteLines.push(
+        `Source: ${[utmSource, utmMedium, utmCampaign, utmContent].filter(Boolean).join(' / ')}`
+      );
+    }
+    if (smsConsent) noteLines.push(`SMS consent: yes · "${consentText.slice(0, 200)}"`);
+
+    try {
+      await fetch(`${GHL_API_BASE}/contacts/${ghlContactId}/notes`, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${GHL_API_TOKEN}`,
+          'Content-Type': 'application/json',
+          Version: GHL_API_VERSION,
+        },
+        body: JSON.stringify({ body: noteLines.join('\n') }),
+      });
+    } catch (err) {
+      console.error('[admiralty-rsvp] Note attach failed (non-fatal):', (err as Error).message);
+    }
+
+    // 3) Self-trigger FUB sync (mirrors to FUB)
+    const webhookSecret = process.env.PELHAM_WEBHOOK_SECRET?.trim();
+    const proto = req.headers.get('x-forwarded-proto') ?? 'https';
+    const host = req.headers.get('host') ?? 'thepelhamgroupnw.com';
+    try {
+      await fetch(`${proto}://${host}/api/sync/ghl-to-fub`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          ...(webhookSecret ? { 'X-Pelham-Webhook-Secret': webhookSecret } : {}),
+        },
+        body: JSON.stringify({
+          contact_id: ghlContactId,
+          firstName,
+          lastName: lastName ?? '',
+          email: email ?? '',
+          phone: phone ?? '',
+          source: ghlSource,
+          tags,
+        }),
+      });
+    } catch (err) {
+      console.error('[admiralty-rsvp] FUB sync failed (non-fatal):', (err as Error).message);
+    }
+  }
+
+  // 4) Best-effort RSVP confirmation email
+  if (email) {
+    const greeting = firstName.charAt(0).toUpperCase() + firstName.slice(1);
+    const html = renderRsvpEmail({ firstName: greeting });
+    sendEmail({
+      to: email,
+      subject: 'You\'re on the list for Saturday\'s open house',
+      html,
+      text: rsvpEmailText(greeting),
+      tags: [
+        { name: 'campaign', value: 'admiralty-open-house' },
+        { name: 'source', value: sourceSlug },
+      ],
+    }).then((r) => {
+      if (!r.ok) console.error('[admiralty-rsvp] Resend failed:', r.reason);
+    }).catch((err) => {
+      console.error('[admiralty-rsvp] Resend threw:', (err as Error).message);
+    });
+  }
+
+  return NextResponse.json({ ok: true });
+}
+
+// Branded confirmation email body
+function renderRsvpEmail({ firstName }: { firstName: string }): string {
+  return `<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>You're on the list</title></head>
+<body style="margin:0;padding:0;background:#F8F5F0;font-family:Arial,Helvetica,sans-serif;color:#2C2C2C;">
+<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#F8F5F0;">
+  <tr><td align="center" style="padding:24px 16px;">
+    <table role="presentation" width="560" cellpadding="0" cellspacing="0" style="max-width:560px;background:#FFFFFF;border:1px solid #E8E3DA;border-radius:6px;overflow:hidden;">
+      <tr><td>
+        <img src="https://thepelhamgroupnw.com/listings/2528831-admiralty/photos/hero-living-fireplace.jpg" alt="11706 Admiralty Way Unit B, Everett WA" width="560" style="width:100%;display:block;">
+      </td></tr>
+      <tr><td style="background:#2F5233;padding:28px 24px;text-align:center;">
+        <p style="margin:0;font-family:Georgia,'Cormorant Garamond',serif;font-style:italic;font-size:18px;color:#B8845C;">walk it with me</p>
+        <h1 style="margin:6px 0 0 0;font-family:Georgia,'Cormorant Garamond',serif;font-size:34px;color:#F8F5F0;">Saturday, May 30</h1>
+        <p style="margin:6px 0 0 0;font-size:15px;color:#F8F5F0;">1:00 PM to 3:00 PM</p>
+      </td></tr>
+      <tr><td style="padding:32px 28px;">
+        <p style="margin:0 0 14px 0;font-size:16px;">Hi ${firstName},</p>
+        <p style="margin:0 0 14px 0;font-size:15px;line-height:1.7;">You're on the list for the open house at <strong>11706 Admiralty Way Unit B in Everett</strong>. Walk through, ask questions, no pitch.</p>
+        <p style="margin:0 0 22px 0;font-size:15px;line-height:1.7;">If your plans change, just reply to this email or text me at 425-250-9422.</p>
+        <p style="margin:0 0 6px 0;font-size:13px;font-weight:700;color:#B8845C;letter-spacing:1px;text-transform:uppercase;">What to expect on site</p>
+        <ul style="margin:0 0 22px 0;padding-left:18px;font-size:14px;line-height:1.7;">
+          <li>Disclosures, inspection summary, and HOA docs printed in the kitchen</li>
+          <li>Ground-floor entry, all one level, parking right by the front door</li>
+          <li>Me, ready to answer the unsexy questions about the building, the HOA, and the comps</li>
+          <li>Bring whoever has a vote in your decision</li>
+        </ul>
+        <table role="presentation" cellpadding="0" cellspacing="0" style="margin:0 auto;">
+          <tr>
+            <td style="padding:0 6px 0 0;"><a href="${MAP_URL}" style="display:inline-block;padding:12px 22px;background:#2F5233;color:#F8F5F0;text-decoration:none;font-size:14px;font-weight:600;border-radius:4px;">Get Directions</a></td>
+            <td style="padding:0 0 0 6px;"><a href="${LISTING_URL}" style="display:inline-block;padding:12px 22px;background:#B8845C;color:#FFFFFF;text-decoration:none;font-size:14px;font-weight:600;border-radius:4px;">See the Listing</a></td>
+          </tr>
+        </table>
+        <p style="margin:32px 0 6px 0;font-size:14px;">Always,</p>
+        <p style="margin:0;font-family:Georgia,'Cormorant Garamond',serif;font-style:italic;font-size:22px;color:#2F5233;">Kim</p>
+        <p style="margin:0;font-size:12px;color:#777;">Kim Pelham · The Pelham Group NW · 425-250-9422</p>
+      </td></tr>
+      <tr><td style="padding:18px 24px;background:#F8F5F0;border-top:1px solid #E8E3DA;text-align:center;">
+        <p style="margin:0;font-size:11px;color:#777;line-height:1.5;">Brokered by Katrina Eileen Real Estate · WA Broker #119262 · NWMLS #2528831 · Equal Housing Opportunity</p>
+      </td></tr>
+    </table>
+  </td></tr>
+</table>
+</body>
+</html>`;
+}
+
+function rsvpEmailText(firstName: string): string {
+  return `Hi ${firstName},
+
+You're on the list for the open house at 11706 Admiralty Way Unit B in Everett. Saturday May 30, 1 to 3 PM.
+
+What to expect on site:
+- Disclosures, inspection summary, and HOA docs printed in the kitchen
+- Ground floor entry, all one level, parking right by the front door
+- Me, ready to answer the unsexy questions about the building, the HOA, and the comps
+- Bring whoever has a vote in your decision
+
+Directions: ${MAP_URL}
+Listing: ${LISTING_URL}
+
+If plans change, reply here or text me at 425-250-9422.
+
+Always,
+Kim Pelham
+The Pelham Group NW
+425-250-9422
+
+Brokered by Katrina Eileen Real Estate. WA Broker #119262. NWMLS #2528831. Equal Housing Opportunity.`;
+}

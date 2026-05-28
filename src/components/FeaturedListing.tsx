@@ -199,8 +199,8 @@ export default function FeaturedListing({ variant = 'wide' }: { variant?: Varian
             >
               See the Listing
             </Link>
-            <a
-              href="sms:+14252509422?&body=Hi%20Kim%2C%20I%27d%20like%20to%20RSVP%20for%20the%20open%20house%20at%2011706%20Admiralty%20Way%20Unit%20B%20on%20Saturday%20May%2030."
+            <Link
+              href="/open-house"
               style={{
                 display: 'inline-block',
                 padding: '12px 30px',
@@ -214,8 +214,8 @@ export default function FeaturedListing({ variant = 'wide' }: { variant?: Varian
                 border: '2px solid #2F5233',
               }}
             >
-              RSVP by Text
-            </a>
+              RSVP for Open House
+            </Link>
           </div>
         </div>
       </div>

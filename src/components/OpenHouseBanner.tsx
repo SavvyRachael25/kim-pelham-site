@@ -27,8 +27,12 @@ export default function OpenHouseBanner() {
     if (typeof window !== 'undefined' && sessionStorage.getItem(STORAGE_KEY)) {
       return;
     }
-    // Hide on the property page itself
-    if (typeof window !== 'undefined' && window.location.pathname.includes(LISTING_SLUG)) {
+    // Hide on the property page + RSVP page (banner would be noise there)
+    if (
+      typeof window !== 'undefined' &&
+      (window.location.pathname.includes(LISTING_SLUG) ||
+        window.location.pathname.startsWith('/open-house'))
+    ) {
       return;
     }
     setVisible(true);
@@ -56,7 +60,7 @@ export default function OpenHouseBanner() {
       }}
     >
       <Link
-        href={`/properties/${LISTING_SLUG}`}
+        href="/open-house"
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -101,7 +105,7 @@ export default function OpenHouseBanner() {
             whiteSpace: 'nowrap',
           }}
         >
-          See the listing &rarr;
+          RSVP &rarr;
         </span>
       </Link>
       <button
