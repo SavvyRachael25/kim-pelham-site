@@ -21,11 +21,17 @@ import { NextRequest, NextResponse } from 'next/server';
 const GHL_API_BASE = 'https://services.leadconnectorhq.com';
 const GHL_API_VERSION = '2021-07-28';
 
-const MESSAGES: Record<string, (firstName: string) => string> = {
-  'day-before': (n) =>
-    `Hi ${n}, tomorrow's the day. Open house 1 to 3 PM at 11706 Admiralty Way Unit B in Everett. Reply Y if you're still planning to come, N if plans changed, R if you'd rather schedule a private tour. Kim`,
-  'day-of': (n) =>
-    `Good morning ${n}. Open house today, 1 to 3 PM, 11706 Admiralty Way Unit B in Everett. Text me when you're 10 minutes out so I can flag you parking. Kim`,
+const MESSAGES: Record<string, { body: (firstName: string) => string; media: string }> = {
+  'day-before': {
+    body: (n) =>
+      `Hi ${n}, tomorrow's the day. Open house 1 to 3 PM at 11706 Admiralty Way Unit B in Everett. Reply Y if you're still planning to come, N if plans changed, R if you'd rather schedule a private tour. Kim`,
+    media: 'https://thepelhamgroupnw.com/social/admiralty/02-open-house.jpg',
+  },
+  'day-of': {
+    body: (n) =>
+      `Good morning ${n}. Open house today, 1 to 3 PM, 11706 Admiralty Way Unit B in Everett. Text me when you're 10 minutes out so I can flag you parking. Kim`,
+    media: 'https://thepelhamgroupnw.com/social/admiralty/02-open-house.jpg',
+  },
 };
 
 export async function GET(req: NextRequest) {
@@ -59,8 +65,8 @@ async function handle(req: NextRequest) {
   }
 
   const stage = req.nextUrl.searchParams.get('stage') ?? 'day-of';
-  const tmpl = MESSAGES[stage];
-  if (!tmpl) {
+  const cfg = MESSAGES[stage];
+  if (!cfg) {
     return NextResponse.json({ error: `Unknown stage: ${stage}` }, { status: 400 });
   }
 
@@ -128,22 +134,40 @@ async function handle(req: NextRequest) {
       continue;
     }
     const firstName = c.firstName?.trim() ? c.firstName : 'there';
-    const message = tmpl(firstName);
+    const message = cfg.body(firstName);
 
     try {
-      const smsRes = await fetch(`${GHL_API_BASE}/conversations/messages`, {
+      let smsRes = await fetch(`${GHL_API_BASE}/conversations/messages`, {
         method: 'POST',
         headers: {
           Authorization: `Bearer ${GHL_API_TOKEN}`,
           'Content-Type': 'application/json',
           Version: GHL_API_VERSION,
         },
-        body: JSON.stringify({ type: 'SMS', contactId: c.id, message }),
+        body: JSON.stringify({
+          type: 'SMS',
+          contactId: c.id,
+          message,
+          attachments: [cfg.media],
+        }),
       });
       if (!smsRes.ok) {
-        const t = await smsRes.text().catch(() => '');
-        errors.push(`${c.id} ${smsRes.status} ${t.slice(0, 120)}`);
-        continue;
+        // Retry as plain SMS in case MMS was rejected
+        const mmsErr = await smsRes.text().catch(() => '');
+        smsRes = await fetch(`${GHL_API_BASE}/conversations/messages`, {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${GHL_API_TOKEN}`,
+            'Content-Type': 'application/json',
+            Version: GHL_API_VERSION,
+          },
+          body: JSON.stringify({ type: 'SMS', contactId: c.id, message }),
+        });
+        if (!smsRes.ok) {
+          const t = await smsRes.text().catch(() => '');
+          errors.push(`${c.id} MMS:${mmsErr.slice(0, 60)} SMS:${smsRes.status}:${t.slice(0, 60)}`);
+          continue;
+        }
       }
       sent += 1;
       // Tag as sent so the cron is safe to re-fire

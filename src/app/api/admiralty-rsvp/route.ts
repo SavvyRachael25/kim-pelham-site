@@ -163,11 +163,14 @@ export async function POST(req: NextRequest) {
       console.error('[admiralty-rsvp] Note attach failed (non-fatal):', (err as Error).message);
     }
 
-    // Immediate SMS confirmation via GHL Conversations API
-    // (requires GHL number provisioned + SMS scope on the API token)
+    // Immediate MMS confirmation via GHL Conversations API.
+    // Outbound from the Pelham GHL number (425-472-3623). Includes the branded
+    // Just-Listed card so the recipient gets price/specs/MLS visually instead
+    // of just a wall of text. Falls back to SMS if attachments are rejected.
     if (smsConsent && phone) {
       const greeting = firstName.charAt(0).toUpperCase() + firstName.slice(1);
-      const smsBody = `Hi ${greeting}, this is Kim Pelham. Got your RSVP for Saturday 1 to 3 PM at 11706 Admiralty Way Unit B in Everett. Anything you want me to have ready for you? Reply here. Kim`;
+      const smsBody = `Hi ${greeting}, this is Kim Pelham. Got your RSVP for Saturday 1 to 3 PM at 11706 Admiralty Way Unit B in Everett. Anything you want me to have ready for you? Reply here, this comes straight to me. Kim`;
+      const mediaUrl = 'https://thepelhamgroupnw.com/social/admiralty/01-just-listed.jpg';
       try {
         const smsRes = await fetch(`${GHL_API_BASE}/conversations/messages`, {
           method: 'POST',
@@ -180,11 +183,30 @@ export async function POST(req: NextRequest) {
             type: 'SMS',
             contactId: ghlContactId,
             message: smsBody,
+            attachments: [mediaUrl],
           }),
         });
         if (!smsRes.ok) {
           const t = await smsRes.text().catch(() => '');
-          console.error(`[admiralty-rsvp] SMS send ${smsRes.status}:`, t.slice(0, 300));
+          console.error(`[admiralty-rsvp] MMS send ${smsRes.status}:`, t.slice(0, 300));
+          // Retry as plain SMS in case the attachment was the blocker
+          try {
+            await fetch(`${GHL_API_BASE}/conversations/messages`, {
+              method: 'POST',
+              headers: {
+                Authorization: `Bearer ${GHL_API_TOKEN}`,
+                'Content-Type': 'application/json',
+                Version: GHL_API_VERSION,
+              },
+              body: JSON.stringify({
+                type: 'SMS',
+                contactId: ghlContactId,
+                message: smsBody,
+              }),
+            });
+          } catch {
+            /* swallow — already logged */
+          }
         }
       } catch (err) {
         console.error('[admiralty-rsvp] SMS send threw (non-fatal):', (err as Error).message);

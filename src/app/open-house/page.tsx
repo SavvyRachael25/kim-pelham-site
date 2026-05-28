@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 
 const CONSENT_TEXT =
-  'I agree to receive a transactional SMS confirmation and reminder for this open house from Kim Pelham, The Pelham Group NW. Reply STOP to opt out. Msg & data rates may apply.';
+  'I agree to receive transactional SMS/MMS messages (confirmation, day-before reminder, day-of reminder) for this open house from Kim Pelham, The Pelham Group NW. Messages send from (425) 472-3623. Reply STOP to opt out. Msg & data rates may apply.';
 
 export default function OpenHousePage() {
   const [submitting, setSubmitting] = useState(false);
