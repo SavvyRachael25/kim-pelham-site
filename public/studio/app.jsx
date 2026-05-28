@@ -29,7 +29,19 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "headlineNewsletter": "Mukilteo is moving, here is what I am watching",
   "complianceVisibility": "subtle",
   "accentColor": "#B8845C",
-  "forestColor": "#2F5233"
+  "forestColor": "#2F5233",
+  /* Photo slots — empty by default so we fall back to DEFAULT_LISTING images.
+     Override per-listing via URL params: ?photoExterior=https://...&photoInterior=https://... */
+  "listingLot": "",
+  "listingCityShort": "",
+  "listingPriceShort": "",
+  "listingFeature": "",
+  "photoExterior": "",
+  "photoHero": "",
+  "photoInterior": "",
+  "photoView": "",
+  "photoLiving": "",
+  "photoPorch": ""
 }/*EDITMODE-END*/;
 
 /* ---------- Sidebar ---------- */
@@ -143,18 +155,29 @@ function Stage({ template, tweaks, zoom, onAutoZoom }) {
 }
 
 function makeListing(t) {
+  // Coalesce: a slot only overrides DEFAULT_LISTING if the URL/tweak value is non-empty.
+  const pick = (v, fallback) => (v && String(v).trim() !== "" ? v : fallback);
   return {
     ...DEFAULT_LISTING,
-    cityShort: t.listingCity,
-    city: `${t.listingCity}, WA`,
+    cityShort: pick(t.listingCityShort, t.listingCity),
+    city: t.listingCity ? `${t.listingCity}, WA` : DEFAULT_LISTING.city,
     address: t.listingAddress,
     price: t.listingPrice,
+    priceShort: pick(t.listingPriceShort, DEFAULT_LISTING.priceShort),
     oldPrice: t.listingOldPrice,
     beds: t.listingBeds,
     baths: t.listingBaths,
     sqft: t.listingSqft,
+    lot: pick(t.listingLot, DEFAULT_LISTING.lot),
     mls: t.listingMls,
     hook: t.listingHook,
+    feature: pick(t.listingFeature, DEFAULT_LISTING.feature),
+    exterior: pick(t.photoExterior, DEFAULT_LISTING.exterior),
+    hero: pick(t.photoHero, pick(t.photoExterior, DEFAULT_LISTING.hero)),
+    view: pick(t.photoView, DEFAULT_LISTING.view),
+    interior: pick(t.photoInterior, DEFAULT_LISTING.interior),
+    living: pick(t.photoLiving, DEFAULT_LISTING.living),
+    porch: pick(t.photoPorch, DEFAULT_LISTING.porch),
     openHouse: {
       day: t.openHouseDay,
       date: t.openHouseDate,
