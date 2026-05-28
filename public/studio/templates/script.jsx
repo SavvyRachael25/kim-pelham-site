@@ -61,13 +61,14 @@ function Beat({ tc, shot, action, vo, clay, forest, last }) {
 /* ── script-listing-reel-30s ──────────── */
 function ScriptListingReel({ tweaks, listing }) {
   const clay = tweaks.C_clay; const forest = tweaks.C_forest;
+  const cityNice = String(listing.cityShort || "").charAt(0) + String(listing.cityShort || "").slice(1).toLowerCase();
   const beats = [
-    { tc: "0:00–0:03", shot: "Drone pull-back", action: "Aerial reverse from front door, reveal full façade and Olympics in distance. No music until 0:03.", vo: "Mukilteo, four bed, remodeled around the Olympic Mountains." },
-    { tc: "0:03–0:08", shot: "Interior cuts ×3", action: "Three 1-second cuts: kitchen quartz, living vaulted ceiling, primary suite. Specs type on-screen.", vo: "Quartz kitchen. Three decks. Hot tub. RV parking." },
-    { tc: "0:08–0:13", shot: "Static — the deck", action: "Locked tripod on the upper deck. Sunset over the Olympics. No talking. Captions only.", vo: "(silent) caption: the view you bought it for" },
-    { tc: "0:13–0:20", shot: "Kim talking head", action: "Kim mid-frame, porch behind her. Direct to camera, conversational, no read.", vo: "Open Saturday twelve to three. Coffee on the porch. Bring whoever has a vote." },
-    { tc: "0:20–0:26", shot: "B-roll cuts ×4", action: "Detail cuts: fireplace, deck handrail, view-over-kitchen-island, walk-in closet.", vo: "Four-twenty-six-eleven seventy-sixth, Mukilteo. Nine seventy-five." },
-    { tc: "0:26–0:30", shot: "Kim closer + URL", action: "Kim laughs at end. Logo + URL types in. Hold black for 0.5s post-CTA.", vo: "I'm Kim Pelham. Your neighbor in real estate." },
+    { tc: "0:00 to 0:03", shot: "Establishing shot", action: "Exterior pull-in or pull-back that reveals the property at its best angle. No music until 0:03.", vo: `${cityNice}. ${listing.beds} bed, ${listing.baths} bath. ${listing.hook}` },
+    { tc: "0:03 to 0:08", shot: "Interior cuts x3", action: "Three 1-second cuts of the strongest interior moments. Specs type on-screen.", vo: listing.feature || "Key features. Hold each beat one second." },
+    { tc: "0:08 to 0:13", shot: "Static, the moment", action: "Locked tripod on the property's signature space. Captions only.", vo: `(silent) caption: ${listing.valueProps || listing.hook}` },
+    { tc: "0:13 to 0:20", shot: "Kim talking head", action: "Kim mid-frame, listing behind her. Direct to camera, conversational, no read.", vo: `Open ${String(listing.openHouse.day).toLowerCase()} ${listing.openHouse.time}. ${listing.openHouseTagline}. Bring whoever has a vote.` },
+    { tc: "0:20 to 0:26", shot: "B-roll cuts x4", action: "Detail cuts that show what the listing photos can't: texture, light, scale, transitions.", vo: `${listing.address}, ${cityNice}. ${listing.price}.` },
+    { tc: "0:26 to 0:30", shot: "Kim closer + URL", action: "Kim laughs at end. Logo + URL types in. Hold black for 0.5s post-CTA.", vo: "I'm Kim Pelham. Your neighbor in real estate." },
   ];
 
   return (
@@ -83,8 +84,8 @@ function ScriptListingReel({ tweaks, listing }) {
       <div style={{ padding: "32px 48px 0" }}>
         <Eyebrow color={clay} size={11}>Logline</Eyebrow>
         <p style={{ fontFamily: FONT.heading, fontSize: 22, fontStyle: "italic", color: forest, margin: "8px 0 0 0", lineHeight: 1.5 }}>
-          A Snohomish County agent who lives in the neighborhood she sells in shows
-          you a Mukilteo home built around its view, in thirty seconds.
+          A Snohomish County agent who lives in the neighborhood she sells in walks
+          you through {listing.address} in thirty seconds. {listing.hook}
         </p>
       </div>
 
