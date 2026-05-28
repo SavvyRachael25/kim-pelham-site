@@ -221,20 +221,15 @@ function BlogListingFeature({ tweaks, listing }) {
 
       <div style={{ padding: "40px 80px 0", maxWidth: 880 }}>
         <p style={{ fontFamily: FONT.heading, fontSize: 22, fontStyle: "italic", color: forest, margin: 0, lineHeight: 1.6 }}>
-          When the sellers walked me through this house for the first time, they kept
-          stopping at the same windows. The Olympic Mountains were doing the talking.
-          That is when I knew how to position it.
+          {listing.hook}
         </p>
 
         <h2 style={{ fontFamily: FONT.heading, fontSize: 32, fontWeight: 600, color: forest, margin: "40px 0 16px 0" }}>
           The house, plainly stated
         </h2>
         <p style={{ fontFamily: FONT.body, fontSize: 16, color: C.text, lineHeight: 1.8, margin: 0 }}>
-          {listing.beds} bedrooms (one purpose-built as an office), {listing.baths} baths,
-          {" "}{listing.sqft} square feet on a {listing.lot} lot. The 1976 NW Contemporary
-          bones are intact — vaulted ceilings, a wood-and-stone fireplace in the great
-          room, generous decks oriented west. The remodel was conservative in the right
-          ways: it preserved the architecture and updated the systems.
+          {listing.beds} {Number.parseFloat(listing.beds) === 1 ? "bedroom" : "bedrooms"},
+          {" "}{listing.baths} baths, {listing.sqft} square feet, {listing.lot}.
         </p>
 
         <h2 style={{ fontFamily: FONT.heading, fontSize: 32, fontWeight: 600, color: forest, margin: "32px 0 16px 0" }}>
@@ -250,10 +245,7 @@ function BlogListingFeature({ tweaks, listing }) {
         </div>
 
         <p style={{ fontFamily: FONT.body, fontSize: 16, color: C.text, lineHeight: 1.8, margin: 0 }}>
-          You buy the view. The kitchen, the primary suite, the upper deck — they all
-          orient west. You buy the location: five minutes to the Mukilteo ferry, fifteen
-          to Boeing's main gate, inside Kamiak HS zoning. You buy a remodel that lets the
-          architecture breathe, not one that papered over it with cabinet-grade laminate.
+          {listing.description}
         </p>
 
         <h2 style={{ fontFamily: FONT.heading, fontSize: 32, fontWeight: 600, color: forest, margin: "32px 0 16px 0" }}>
@@ -284,7 +276,7 @@ function BlogListingFeature({ tweaks, listing }) {
               Open {listing.openHouse.day}, {listing.openHouse.date} · {listing.openHouse.time}
             </h3>
             <p style={{ fontFamily: FONT.body, fontSize: 14, color: "rgba(255,255,255,.8)", margin: "12px 0 0 0", lineHeight: 1.5 }}>
-              Coffee on the upper deck. I will be in boots. Bring whoever has a vote in your decision.
+              {listing.openHouseTagline}. Bring whoever has a vote in your decision.
             </p>
           </div>
           <div style={{ background: clay, color: "#fff", padding: "16px 24px", fontFamily: FONT.body, fontSize: 14, fontWeight: 700, letterSpacing: "1.5px" }}>
@@ -375,10 +367,7 @@ function PropertyPageActive({ tweaks, listing }) {
           {listing.hook}
         </h2>
         <p style={{ fontFamily: FONT.body, fontSize: 16, color: C.text, lineHeight: 1.8, margin: 0 }}>
-          Fully remodeled 1976 NW Contemporary positioned for the Olympic Mountains. Three decks
-          oriented west, quartz waterfall island in the kitchen, walk-in primary closet,
-          hot tub on the upper deck, RV parking. New roof 2022, new windows 2021,
-          250-amp service.
+          {listing.description}
         </p>
       </div>
 
@@ -386,16 +375,7 @@ function PropertyPageActive({ tweaks, listing }) {
       <div style={{ padding: "32px 56px 0", maxWidth: 880 }}>
         <h3 style={{ fontFamily: FONT.heading, fontSize: 24, fontWeight: 600, color: forest, margin: "0 0 16px 0" }}>The spec sheet</h3>
         <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0 32px" }}>
-          {[
-            ["Year built", "1976 (remodeled 2021)"],
-            ["Lot", "10,454 sqft / 0.24 acres"],
-            ["HVAC", "Heat pump + radiant floors"],
-            ["Roof", "Composition · 2022 install"],
-            ["Schools", "Mukilteo Elem · Kamiak HS"],
-            ["Parking", "2-car attached + RV pad"],
-            ["Taxes", "$6,840 / yr"],
-            ["HOA", "None"],
-          ].map(([k, v], i) => (
+          {listing.specSheet.map(([k, v], i) => (
             <div key={i} style={{ display: "flex", justifyContent: "space-between", padding: "12px 0", borderBottom: `1px solid ${C.border}` }}>
               <span style={{ fontFamily: FONT.body, fontSize: 13, color: C.textMuted, letterSpacing: ".06em" }}>{k}</span>
               <span style={{ fontFamily: FONT.body, fontSize: 13, fontWeight: 600, color: C.text }}>{v}</span>
