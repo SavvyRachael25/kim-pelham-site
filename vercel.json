@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "crons": [
+    {
+      "path": "/api/admiralty-reminder?stage=day-before",
+      "schedule": "0 16 29 5 *"
+    },
+    {
+      "path": "/api/admiralty-reminder?stage=day-of",
+      "schedule": "0 17 30 5 *"
+    }
+  ]
+}

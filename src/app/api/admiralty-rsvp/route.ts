@@ -163,6 +163,34 @@ export async function POST(req: NextRequest) {
       console.error('[admiralty-rsvp] Note attach failed (non-fatal):', (err as Error).message);
     }
 
+    // Immediate SMS confirmation via GHL Conversations API
+    // (requires GHL number provisioned + SMS scope on the API token)
+    if (smsConsent && phone) {
+      const greeting = firstName.charAt(0).toUpperCase() + firstName.slice(1);
+      const smsBody = `Hi ${greeting}, this is Kim Pelham. Got your RSVP for Saturday 1 to 3 PM at 11706 Admiralty Way Unit B in Everett. Anything you want me to have ready for you? Reply here. Kim`;
+      try {
+        const smsRes = await fetch(`${GHL_API_BASE}/conversations/messages`, {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${GHL_API_TOKEN}`,
+            'Content-Type': 'application/json',
+            Version: GHL_API_VERSION,
+          },
+          body: JSON.stringify({
+            type: 'SMS',
+            contactId: ghlContactId,
+            message: smsBody,
+          }),
+        });
+        if (!smsRes.ok) {
+          const t = await smsRes.text().catch(() => '');
+          console.error(`[admiralty-rsvp] SMS send ${smsRes.status}:`, t.slice(0, 300));
+        }
+      } catch (err) {
+        console.error('[admiralty-rsvp] SMS send threw (non-fatal):', (err as Error).message);
+      }
+    }
+
     // 3) Self-trigger FUB sync (mirrors to FUB)
     const webhookSecret = process.env.PELHAM_WEBHOOK_SECRET?.trim();
     const proto = req.headers.get('x-forwarded-proto') ?? 'https';
