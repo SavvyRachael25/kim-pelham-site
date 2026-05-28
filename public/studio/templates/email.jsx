@@ -291,7 +291,7 @@ function EmailOpenHouse({ tweaks, listing }) {
   const clay = tweaks.C_clay; const forest = tweaks.C_forest;
   return (
     <EmailClient
-      subject={`Open House this ${listing.openHouse.day.toLowerCase()} — Mukilteo`}
+      subject={`Open House this ${String(listing.openHouse.day).toLowerCase()} in ${listing.cityShort.charAt(0) + listing.cityShort.slice(1).toLowerCase()}`}
       preview={`${listing.openHouse.date}, ${listing.openHouse.time} · ${listing.address}`}
       date="May 19, 2026"
       height={1600}>
@@ -335,10 +335,10 @@ function EmailOpenHouse({ tweaks, listing }) {
           What to expect on site
         </p>
         <ul style={{ fontFamily: FONT.body, fontSize: 13.5, color: C.text, lineHeight: 1.8, margin: 0, paddingLeft: 20 }}>
-          <li>Coffee + pastries on the upper deck (the one with the view)</li>
-          <li>Disclosures, inspection summary, and HOA docs printed on the kitchen island</li>
-          <li>Me, in boots, ready to answer the unsexy questions about the roof, septic, and the comps</li>
-          <li>Bring partners, parents, contractors — anyone who has a vote in your decision</li>
+          <li>{listing.openHouseTagline.charAt(0).toUpperCase() + listing.openHouseTagline.slice(1)}</li>
+          <li>Disclosures, inspection summary, and HOA docs printed in the kitchen</li>
+          <li>Me, ready to answer the unsexy questions about the building, the HOA, and the comps</li>
+          <li>Bring partners, parents, contractors, anyone who has a vote in your decision</li>
         </ul>
       </div>
 

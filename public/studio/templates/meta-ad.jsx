@@ -78,9 +78,12 @@ function MetaAdListingPortrait({ tweaks, listing }) {
 
       <div style={{ position: "absolute", top: 220, left: 80, right: 80, color: "#fff" }}>
         <Handwritten color={clay} size={56} rotate={-3}>just listed —</Handwritten>
-        <h1 style={{ fontFamily: FONT.heading, fontSize: 128, fontWeight: 600, margin: "20px 0 0 0", lineHeight: 1.0, color: "#fff" }}>
-          A view you<br/>buy <em style={{ color: clay, fontStyle: "italic" }}>once</em>.
+        <h1 style={{ fontFamily: FONT.heading, fontSize: 112, fontWeight: 600, margin: "20px 0 0 0", lineHeight: 1.0, color: "#fff" }}>
+          {listing.address}
         </h1>
+        <p style={{ fontFamily: FONT.heading, fontSize: 96, fontStyle: "italic", color: clay, margin: "16px 0 0 0", lineHeight: 1 }}>
+          {listing.price}
+        </p>
       </div>
 
       <div style={{
