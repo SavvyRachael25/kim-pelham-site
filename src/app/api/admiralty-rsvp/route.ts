@@ -31,6 +31,77 @@ const LISTING_URL =
 const MAP_URL =
   'https://www.google.com/maps/dir/?api=1&destination=11706+Admiralty+Way+B+Everett+WA+98204';
 
+// Kim's personal mobile gets a hot-lead alert on every RSVP. Same pattern as
+// the Devon hot-lead SMS. Requires either KIM_ALERT_CONTACT_ID (preferred,
+// avoids polluting the lead pipeline with Kim's own number) or
+// KIM_ALERT_PHONE (fallback: upserts an internal "Kim Pelham Alerts" contact).
+async function notifyKim(opts: {
+  apiToken: string;
+  locationId: string;
+  summary: string;
+}): Promise<void> {
+  const { apiToken, locationId, summary } = opts;
+  let contactId = process.env.KIM_ALERT_CONTACT_ID?.trim();
+  const kimPhone = process.env.KIM_ALERT_PHONE?.trim() ?? '+14252509422';
+
+  // Fallback: upsert an internal alert contact for Kim
+  if (!contactId) {
+    try {
+      const upRes = await fetch(`${GHL_API_BASE}/contacts/upsert`, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${apiToken}`,
+          'Content-Type': 'application/json',
+          Version: GHL_API_VERSION,
+        },
+        body: JSON.stringify({
+          firstName: 'Kim',
+          lastName: 'Pelham (Alerts)',
+          phone: kimPhone,
+          locationId,
+          source: 'internal-alerts',
+          tags: ['internal-kim-alerts', 'do-not-market'],
+        }),
+      });
+      if (upRes.ok) {
+        const data = (await upRes.json()) as { contact?: { id?: string } };
+        contactId = data.contact?.id;
+      } else {
+        console.error('[admiralty-rsvp] Kim alert upsert failed:', upRes.status);
+      }
+    } catch (err) {
+      console.error('[admiralty-rsvp] Kim alert upsert threw:', (err as Error).message);
+    }
+  }
+
+  if (!contactId) {
+    console.error('[admiralty-rsvp] Kim alert: no contactId, skipping');
+    return;
+  }
+
+  try {
+    const res = await fetch(`${GHL_API_BASE}/conversations/messages`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${apiToken}`,
+        'Content-Type': 'application/json',
+        Version: GHL_API_VERSION,
+      },
+      body: JSON.stringify({
+        type: 'SMS',
+        contactId,
+        message: summary,
+      }),
+    });
+    if (!res.ok) {
+      const t = await res.text().catch(() => '');
+      console.error(`[admiralty-rsvp] Kim alert SMS ${res.status}:`, t.slice(0, 300));
+    }
+  } catch (err) {
+    console.error('[admiralty-rsvp] Kim alert SMS threw:', (err as Error).message);
+  }
+}
+
 interface RsvpPayload {
   firstName: string;
   lastName?: string;
@@ -239,7 +310,25 @@ export async function POST(req: NextRequest) {
     }
   }
 
-  // 4) Best-effort RSVP confirmation email
+  // 4) Hot-lead alert to Kim's personal mobile (425-250-9422)
+  // Fire-and-forget — never block the form response on this
+  {
+    const parts = [
+      `NEW Admiralty RSVP: ${firstName}${lastName ? ' ' + lastName : ''}`,
+      phone ? `Phone ${phone}` : null,
+      email ? `Email ${email}` : null,
+      bringing ? `Bringing ${bringing}` : null,
+      notes ? `Note: ${notes.slice(0, 80)}` : null,
+      utmSource ? `via ${utmSource}` : null,
+    ].filter(Boolean);
+    notifyKim({
+      apiToken: GHL_API_TOKEN,
+      locationId: GHL_LOCATION_ID,
+      summary: parts.join(' · '),
+    }).catch(() => {});
+  }
+
+  // 5) Best-effort RSVP confirmation email
   if (email) {
     const greeting = firstName.charAt(0).toUpperCase() + firstName.slice(1);
     const html = renderRsvpEmail({ firstName: greeting });
