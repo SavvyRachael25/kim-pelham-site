@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
+import { sendOpsAlert } from '@/lib/ops-alerts';
 
 /**
  * /api/admiralty-reminder
@@ -185,11 +186,11 @@ async function handle(req: NextRequest) {
     }
   }
 
-  // Operational ping to Kim's mobile so she knows the cron ran
+  // Operational ping to Kim + Rachael so they know the cron ran
   try {
     const stageLabel = stage === 'day-before' ? 'Friday reminder' : 'Saturday day-of';
     const summary = `Admiralty ${stageLabel} sent: ${sent}/${contacts.length} contacts (skipped ${skipped}${errors.length ? `, ${errors.length} errors` : ''})`;
-    await sendKimOpsAlert(GHL_API_TOKEN, GHL_LOCATION_ID, summary);
+    await sendOpsAlert({ apiToken: GHL_API_TOKEN, locationId: GHL_LOCATION_ID, summary });
   } catch {
     /* non-fatal */
   }
@@ -201,46 +202,4 @@ async function handle(req: NextRequest) {
     skipped,
     errors: errors.slice(0, 20),
   });
-}
-
-// Same helper pattern as /api/admiralty-rsvp — keeps the alert path consistent
-async function sendKimOpsAlert(apiToken: string, locationId: string, summary: string): Promise<void> {
-  let contactId = process.env.KIM_ALERT_CONTACT_ID?.trim();
-  const kimPhone = process.env.KIM_ALERT_PHONE?.trim() ?? '+14252509422';
-  if (!contactId) {
-    try {
-      const upRes = await fetch(`${GHL_API_BASE}/contacts/upsert`, {
-        method: 'POST',
-        headers: {
-          Authorization: `Bearer ${apiToken}`,
-          'Content-Type': 'application/json',
-          Version: GHL_API_VERSION,
-        },
-        body: JSON.stringify({
-          firstName: 'Kim',
-          lastName: 'Pelham (Alerts)',
-          phone: kimPhone,
-          locationId,
-          source: 'internal-alerts',
-          tags: ['internal-kim-alerts', 'do-not-market'],
-        }),
-      });
-      if (upRes.ok) {
-        const data = (await upRes.json()) as { contact?: { id?: string } };
-        contactId = data.contact?.id;
-      }
-    } catch {
-      /* swallow */
-    }
-  }
-  if (!contactId) return;
-  await fetch(`${GHL_API_BASE}/conversations/messages`, {
-    method: 'POST',
-    headers: {
-      Authorization: `Bearer ${apiToken}`,
-      'Content-Type': 'application/json',
-      Version: GHL_API_VERSION,
-    },
-    body: JSON.stringify({ type: 'SMS', contactId, message: summary }),
-  }).catch(() => {});
 }
