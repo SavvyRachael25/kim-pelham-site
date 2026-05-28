@@ -17,10 +17,15 @@ const GHL_API_BASE = 'https://services.leadconnectorhq.com';
 const GHL_API_VERSION = '2021-07-28';
 
 export async function GET(req: NextRequest) {
-  const CRON_SECRET = process.env.CRON_SECRET;
+  const CRON_SECRET = process.env.CRON_SECRET?.trim();
+  const PELHAM_WEBHOOK_SECRET = process.env.PELHAM_WEBHOOK_SECRET?.trim();
   const presentedSecret = req.nextUrl.searchParams.get('secret') ?? '';
-  if (!CRON_SECRET || presentedSecret !== CRON_SECRET) {
-    return NextResponse.json({ error: 'Unauthorized — pass ?secret=<CRON_SECRET>' }, { status: 401 });
+  const allowed = [CRON_SECRET, PELHAM_WEBHOOK_SECRET].filter(Boolean) as string[];
+  if (allowed.length === 0 || !allowed.includes(presentedSecret)) {
+    return NextResponse.json(
+      { error: 'Unauthorized — pass ?secret=<CRON_SECRET or PELHAM_WEBHOOK_SECRET>' },
+      { status: 401 }
+    );
   }
 
   const GHL_API_TOKEN = process.env.GHL_API_TOKEN;
