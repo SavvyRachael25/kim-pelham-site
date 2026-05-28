@@ -5,6 +5,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
+import FeaturedListing from '@/components/FeaturedListing';
 
 // Fabricated property cards removed (audit 4/16/26). Use real MLS data when available.
 
@@ -52,16 +53,19 @@ export default function PropertiesPage() {
           </a>
         </section>
 
-        {/* Properties Grid — empty state, pending real MLS data */}
+        {/* Featured listing — Admiralty Way */}
+        <FeaturedListing variant="wide" />
+
+        {/* Search all listings prompt */}
         <section
           style={{
             padding: '3rem 2rem',
             backgroundColor: '#F8F5F0',
           }}
         >
-          <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center', padding: '40px 24px' }}>
+          <div style={{ maxWidth: '1200px', margin: '0 auto', textAlign: 'center', padding: '20px 24px' }}>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: '#555', lineHeight: 1.7, marginBottom: '24px' }}>
-              Browse all of Kim's current listings directly on her KERE profile.
+              Browse every active NWMLS listing through Kim&rsquo;s search portal.
             </p>
             <a
               href="https://community.katrinaeileen.com/team/kim-pelham"

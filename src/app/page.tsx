@@ -18,6 +18,7 @@ import LocalPicks from '@/components/LocalPicks';
 import BlogPreview from '@/components/BlogPreview';
 import ContactCTA from '@/components/ContactCTA';
 import FAQSection from '@/components/FAQSection';
+import FeaturedListing from '@/components/FeaturedListing';
 
 export const metadata = {
   title: 'Kim Pelham — The Realtor Next Door | Snohomish County',
@@ -46,6 +47,7 @@ export default function Home() {
       <Nav />
       <CurrentlyLine />
       <Hero />
+      <FeaturedListing variant="wide" />
       <Marquee />
       <StatsStrip />
       <SocialProof />

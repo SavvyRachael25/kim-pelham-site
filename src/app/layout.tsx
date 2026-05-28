@@ -7,6 +7,7 @@ import IntroAnimation from "@/components/IntroAnimation";
 import Analytics from "@/components/Analytics";
 import MobileListingsPopup from "@/components/MobileListingsPopup";
 import ListingsLeadPopup from "@/components/ListingsLeadPopup";
+import OpenHouseBanner from "@/components/OpenHouseBanner";
 
 /*
   LCP optimization: self-host the three brand fonts via next/font/google.
@@ -414,6 +415,7 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link">
           Skip to main content
         </a>
+        <OpenHouseBanner />
         <IntroAnimation>
           <div id="main-content">{children}</div>
         </IntroAnimation>
