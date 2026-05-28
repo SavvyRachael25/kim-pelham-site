@@ -36,6 +36,10 @@ const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
   "listingCityShort": "",
   "listingPriceShort": "",
   "listingFeature": "",
+  "listingDescription": "",
+  "listingSpecSheetJson": "",
+  "listingValueProps": "",
+  "openHouseTagline": "",
   "photoExterior": "",
   "photoHero": "",
   "photoInterior": "",
@@ -157,6 +161,12 @@ function Stage({ template, tweaks, zoom, onAutoZoom }) {
 function makeListing(t) {
   // Coalesce: a slot only overrides DEFAULT_LISTING if the URL/tweak value is non-empty.
   const pick = (v, fallback) => (v && String(v).trim() !== "" ? v : fallback);
+  // Spec sheet: JSON-encoded array of [key,val] pairs, falls back to DEFAULT_LISTING.specSheet
+  let specSheet = DEFAULT_LISTING.specSheet;
+  if (t.listingSpecSheetJson && t.listingSpecSheetJson.trim() !== "") {
+    try { specSheet = JSON.parse(t.listingSpecSheetJson); }
+    catch (e) { console.warn("[brand-studio] listingSpecSheetJson invalid, using default", e); }
+  }
   return {
     ...DEFAULT_LISTING,
     cityShort: pick(t.listingCityShort, t.listingCity),
@@ -172,6 +182,10 @@ function makeListing(t) {
     mls: t.listingMls,
     hook: t.listingHook,
     feature: pick(t.listingFeature, DEFAULT_LISTING.feature),
+    description: pick(t.listingDescription, DEFAULT_LISTING.description),
+    specSheet: specSheet,
+    valueProps: pick(t.listingValueProps, DEFAULT_LISTING.valueProps),
+    openHouseTagline: pick(t.openHouseTagline, DEFAULT_LISTING.openHouseTagline),
     exterior: pick(t.photoExterior, DEFAULT_LISTING.exterior),
     hero: pick(t.photoHero, pick(t.photoExterior, DEFAULT_LISTING.hero)),
     view: pick(t.photoView, DEFAULT_LISTING.view),

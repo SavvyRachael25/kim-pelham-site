@@ -36,7 +36,7 @@ function IgFeedListing({ tweaks, listing }) {
           padding: "10px 20px",
           fontSize: 14, fontWeight: 700, letterSpacing: "2px",
           textTransform: "uppercase",
-        }}>Open Sun · 1 – 3 PM</div>
+        }}>Open {String(listing.openHouse.day).slice(0,3)} · {listing.openHouse.time}</div>
       </div>
 
       {/* Top-left handwritten note */}

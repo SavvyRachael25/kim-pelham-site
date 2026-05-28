@@ -145,8 +145,8 @@ function EmailNewsletter({ tweaks, listing }) {
               {listing.hook}
             </p>
             <p style={{ fontFamily: FONT.body, fontSize: 13, color: C.textLight, lineHeight: 1.6, margin: "0 0 16px 0" }}>
-              {listing.beds} bed, {listing.baths} bath, {listing.sqft} sqft. Three decks, quartz kitchen,
-              walk-in primary, hot tub, RV parking. Open Saturday twelve to three, coffee on the porch.
+              {listing.beds} bed, {listing.baths} bath, {listing.sqft} sqft. {listing.feature}.
+              {listing.openHouse && listing.openHouse.day ? ` Open ${String(listing.openHouse.day).toLowerCase()} ${listing.openHouse.time}.` : ""}
             </p>
             <CtaButton clay={clay}>See the listing →</CtaButton>
           </div>
@@ -251,15 +251,10 @@ function EmailListingAnnouncement({ tweaks, listing }) {
           {listing.hook}
         </p>
         <p style={{ fontFamily: FONT.body, fontSize: 14, color: C.text, lineHeight: 1.75, margin: "20px 0 0 0" }}>
-          {listing.beds} bedrooms (one as office), {listing.baths} baths, {listing.sqft} square feet on a
-          {" "}{listing.lot} lot. The remodel was done thoughtfully — quartz waterfall island,
-          new windows oriented to the view, walk-in primary closet, and a hot tub on the upper deck.
-          Three decks in total. RV parking. Five minutes to the Mukilteo ferry, fifteen to Boeing,
-          inside Kamiak HS zoning.
+          {listing.description}
         </p>
         <p style={{ fontFamily: FONT.body, fontSize: 14, color: C.text, lineHeight: 1.75, margin: "16px 0 24px 0" }}>
-          We are open Saturday twelve to three. Coffee will be on the porch. I will be the one
-          with the boots, not heels.
+          Open {String(listing.openHouse.day).toLowerCase()} {listing.openHouse.date} from {listing.openHouse.time}. {listing.openHouseTagline}.
         </p>
       </div>
 

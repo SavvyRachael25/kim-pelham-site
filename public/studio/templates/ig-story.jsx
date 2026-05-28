@@ -335,7 +335,7 @@ function IgStoryOpenHouse({ tweaks, listing }) {
               <path d="M12 2a8 8 0 0 0-8 8c0 5.4 7 12 7.4 12.3a.8.8 0 0 0 1.2 0C13 22 20 15.4 20 10a8 8 0 0 0-8-8zm0 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
             </svg>
             <p style={{ fontFamily: FONT.body, fontSize: 24, fontWeight: 600, color: C.textLight, margin: 0, letterSpacing: "1px" }}>
-              Olympic Mountain View · 5 min to ferry
+              {listing.valueProps}
             </p>
           </div>
         </div>

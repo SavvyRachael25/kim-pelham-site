@@ -206,6 +206,23 @@ const DEFAULT_LISTING = {
   mls: "2287416",
   hook: "Remodeled around the Olympic Mountain view.",
   feature: "Three decks · Quartz kitchen · Hot tub · RV parking",
+  // Long-form description used in feature sheet body, email, blog
+  description: "Fully remodeled 1976 NW Contemporary positioned for the Olympic Mountains. Three decks oriented west, quartz waterfall island, walk-in primary, hot tub on the upper deck, RV parking. New roof 2022, new windows 2021. Five minutes to the Mukilteo ferry, fifteen to Boeing.",
+  // Spec sheet rows — used by feature sheet + blog property page
+  specSheet: [
+    ["Year built", "1976 (remodeled 2021)"],
+    ["Lot",       "10,454 SF / 0.24 acres"],
+    ["HVAC",      "Heat pump + radiant floors"],
+    ["Roof",      "Composition · 2022"],
+    ["Schools",   "Mukilteo Elem · Kamiak HS"],
+    ["Parking",   "2-car attached + RV pad"],
+    ["Taxes",     "$6,840 / yr"],
+    ["HOA",       "None"],
+  ],
+  // Short "value prop" line for IG story / open-house drive overlays
+  valueProps: "Olympic Mountain View · 5 min to ferry",
+  // Open house tagline used by fb post + email
+  openHouseTagline: "coffee on the porch",
   exterior: "assets/mukilteo-exterior.jpg",
   hero: "assets/mukilteo-exterior.jpg",
   view: "assets/mukilteo-sunset.jpg",

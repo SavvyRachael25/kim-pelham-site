@@ -147,24 +147,12 @@ function FlyerFeatureSheet({ tweaks, listing }) {
             {listing.hook}
           </p>
           <p style={{ fontFamily: FONT.body, fontSize: 11, color: C.text, lineHeight: 1.65, margin: 0 }}>
-            Fully remodeled 1976 NW Contemporary positioned for the Olympic Mountains. Three decks
-            oriented west, quartz waterfall island, walk-in primary, hot tub on the upper deck,
-            RV parking. New roof 2022, new windows 2021. Five minutes to the Mukilteo ferry,
-            fifteen to Boeing.
+            {listing.description}
           </p>
 
           <p style={{ fontFamily: FONT.body, fontSize: 9, fontWeight: 700, color: clay, letterSpacing: "1.5px", textTransform: "uppercase", margin: "14px 0 6px 0" }}>Spec sheet</p>
           <div style={{ fontFamily: FONT.body, fontSize: 11, color: C.text }}>
-            {[
-              ["Year built", "1976 (remodeled 2021)"],
-              ["Lot", `${listing.lot} / 0.24 acres`],
-              ["HVAC", "Heat pump + radiant floors"],
-              ["Roof", "Composition · 2022"],
-              ["Schools", "Mukilteo Elem · Kamiak HS"],
-              ["Parking", "2-car attached + RV pad"],
-              ["Taxes", "$6,840 / yr"],
-              ["HOA", "None"],
-            ].map(([k, v], i) => (
+            {listing.specSheet.map(([k, v], i) => (
               <div key={i} style={{ display: "flex", justifyContent: "space-between", padding: "4px 0", borderBottom: `1px dotted ${C.border}` }}>
                 <span style={{ color: C.textMuted }}>{k}</span>
                 <span style={{ fontWeight: 600 }}>{v}</span>

@@ -33,8 +33,8 @@ function FbPostListing({ tweaks, listing }) {
         </div>
         <div>
           <div style={{ background: clay, color: "#fff", padding: "10px 18px", display: "inline-block",
-            fontFamily: FONT.body, fontSize: 12, fontWeight: 700, letterSpacing: "1.5px" }}>OPEN SAT 12 – 3</div>
-          <p style={{ fontFamily: FONT.hand, fontSize: 18, color: C.textLight, margin: "12px 0 0 0" }}>coffee on the porch</p>
+            fontFamily: FONT.body, fontSize: 12, fontWeight: 700, letterSpacing: "1.5px" }}>OPEN {String(listing.openHouse.day).slice(0,3).toUpperCase()} {listing.openHouse.time}</div>
+          <p style={{ fontFamily: FONT.hand, fontSize: 18, color: C.textLight, margin: "12px 0 0 0" }}>{listing.openHouseTagline}</p>
         </div>
       </div>
       {/* Brand stamp on photo side */}
