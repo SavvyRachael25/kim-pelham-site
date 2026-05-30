@@ -1,0 +1,79 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../studio/design-system/fonts.css">
+<link rel="stylesheet" href="../_card-styles.css">
+<style>
+  /* SOLD card variant — big diagonal stamp, brokerage prominent */
+  .pc-sold .pc-stamp {
+    position: absolute;
+    top: 240px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 4;
+    transform: rotate(-6deg);
+  }
+  .pc-sold .pc-stamp .stamp-frame {
+    display: inline-block;
+    background: #B8845C;
+    color: #FFFFFF;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 220px;
+    font-weight: 700;
+    letter-spacing: 12px;
+    padding: 20px 70px 30px 70px;
+    border: 4px solid #FFFFFF;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+    text-transform: uppercase;
+    line-height: 0.95;
+  }
+  .pc-sold .pc-content { padding: 0 64px 130px; }
+  .pc-sold .pc-eyebrow-sold {
+    font-family: 'Caveat'; font-size: 56px; color: #e8b78a;
+    margin: 0 0 12px 0; line-height: 1; letter-spacing: 0.5px;
+    text-shadow: 0 1px 8px rgba(0,0,0,0.65);
+  }
+  .pc-sold .pc-address-sold {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 88px; font-weight: 600; line-height: 1;
+    color: #FFFFFF; margin: 0 0 14px 0; letter-spacing: -1.5px;
+    text-shadow: 0 2px 22px rgba(0,0,0,0.55);
+  }
+  .pc-sold .pc-city-sold {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic; font-size: 42px; color: #e8b78a;
+    margin: 0 0 22px 0; text-shadow: 0 1px 8px rgba(0,0,0,0.65);
+  }
+  .pc-sold .pc-broker-sold {
+    font-family: 'Inter'; font-size: 14px; font-weight: 600;
+    letter-spacing: 2px; text-transform: uppercase; color: #FFFFFF;
+    margin: 0; opacity: 0.92;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.7);
+  }
+</style>
+</head><body>
+<div class="pc-card pc-sold">
+  <img class="pc-photo" src="../../images/arlington/arlington-01.jpg" alt="">
+  <div class="pc-gradient"></div>
+
+  <div class="pc-topbar">
+    <p class="pc-eyebrow">PELHAM GROUP NW</p>
+    <div class="pc-badges">
+      <img src="../../studio/assets/badge-snoco-2024.png" alt="">
+      <img src="../../studio/assets/badge-zillow.png" alt="">
+    </div>
+  </div>
+
+  <div class="pc-stamp">
+    <span class="stamp-frame">SOLD</span>
+  </div>
+
+  <div class="pc-content">
+    <p class="pc-eyebrow-sold">closed today</p>
+    <h1 class="pc-address-sold">19721 47th Ave NE</h1>
+    <p class="pc-city-sold">Arlington, WA</p>
+    <p class="pc-broker-sold">Brokered by Katrina Eileen Real Estate · NWMLS</p>
+  </div>
+
+  <p class="pc-sig">Kim</p>
+</div>
+</body></html>
