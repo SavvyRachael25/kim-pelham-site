@@ -281,7 +281,7 @@ export default function SellersPage() {
                 margin: 0,
               }}
             >
-              Most transactions have a bump — sometimes small, sometimes large. My job is to get you over the bump with the least stress possible. A big bump can tank a sale, but over 17+ years I've learned that step by step, never giving up, almost always gets us through.
+              Most transactions have a bump, sometimes small, sometimes large. My job is to get you over the bump with the least stress possible. A big bump can tank a sale, but over 17+ years I've learned that step by step, never giving up, almost always gets us through.
             </p>
           </div>
         </div>
@@ -311,7 +311,7 @@ export default function SellersPage() {
 
           <div style={{ textAlign: 'center', padding: '40px 24px', background: '#F8F5F0', borderRadius: '4px' }}>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: '#555', lineHeight: 1.7, margin: '0 0 16px 0' }}>
-              Seller stories coming soon — Kim has 40+ Google reviews.
+              Seller stories coming soon. Kim has 40+ Google reviews.
             </p>
             <a
               href="https://www.google.com/search?q=pelham+group+nw"
