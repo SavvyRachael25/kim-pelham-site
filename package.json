@@ -9,7 +9,9 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "lint:em-dash": "./scripts/check-em-dashes.sh --all",
+    "hooks:install": "git config core.hooksPath .githooks && echo 'Pre-commit hook installed.'"
   },
   "dependencies": {
     "@sparticuz/chromium": "^131.0.0",

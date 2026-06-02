@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+#
+# Pre-commit hook for kim-pelham-site.
+# Enforces the Savvy Digital Co. brand rules at commit time.
+#
+# To activate this hook for your local clone, run once:
+#   git config core.hooksPath .githooks
+#
+# Skip a single commit (emergency override only) with:
+#   git commit --no-verify
+# ...but please don't.
+
+set -e
+
+REPO_ROOT="$(git rev-parse --show-toplevel)"
+cd "$REPO_ROOT"
+
+# === Em dash check (Savvy brand rule: no em dashes, ever) ===
+if [[ -x "./scripts/check-em-dashes.sh" ]]; then
+  ./scripts/check-em-dashes.sh --staged || {
+    echo ""
+    echo "Commit blocked by em-dash check."
+    echo "Fix the violations above, re-stage, and try again."
+    echo "Override (not recommended): git commit --no-verify"
+    exit 1
+  }
+fi
+
+exit 0
