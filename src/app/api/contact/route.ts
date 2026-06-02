@@ -52,6 +52,41 @@ interface ContactPayload {
   transactionalCheckboxText: string;
   tags?: string[];
   source?: string;
+  utmSource?: string;
+  utmMedium?: string;
+  utmCampaign?: string;
+  utmContent?: string;
+  utmTerm?: string;
+}
+
+/**
+ * Build channel-attribution tags from UTM parameters so Iris can group
+ * leads by source on Friday reports. Values are lowercased + slugified.
+ * Body values win over query-string values. Both fall back to nothing.
+ */
+function buildUtmTags(
+  body: ContactPayload,
+  url: URL
+): { tags: string[]; utm: Record<string, string> } {
+  const params = url.searchParams;
+  const utm = {
+    source: (body.utmSource ?? params.get('utm_source') ?? '').trim(),
+    medium: (body.utmMedium ?? params.get('utm_medium') ?? '').trim(),
+    campaign: (body.utmCampaign ?? params.get('utm_campaign') ?? '').trim(),
+    content: (body.utmContent ?? params.get('utm_content') ?? '').trim(),
+    term: (body.utmTerm ?? params.get('utm_term') ?? '').trim(),
+  };
+  const slug = (s: string) =>
+    s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
+  const tags: string[] = [];
+  if (utm.source) tags.push(`utm-source-${slug(utm.source)}`);
+  if (utm.medium) tags.push(`utm-medium-${slug(utm.medium)}`);
+  if (utm.campaign) tags.push(`utm-campaign-${slug(utm.campaign)}`);
+  if (utm.content) tags.push(`utm-content-${slug(utm.content)}`);
+  if (utm.term) tags.push(`utm-term-${slug(utm.term)}`);
+  const present: Record<string, string> = {};
+  for (const [k, v] of Object.entries(utm)) if (v) present[k] = v;
+  return { tags, utm: present };
 }
 
 
@@ -107,6 +142,11 @@ export async function POST(req: NextRequest) {
   if (smsTransactionalConsent) consentTags.push('consent-transactional');
   if (interested) consentTags.push(`interested-${interested.toLowerCase().replace(/\s+/g, '-')}`);
 
+  // Capture UTM attribution from body (popup forwards them) or fall back
+  // to the request URL query string (direct API calls / curl tests).
+  // UTMs become tags so Iris can group leads by channel each Friday.
+  const utmInfo = buildUtmTags(body, new URL(req.url));
+
   const ghlPayload: Record<string, unknown> = {
     firstName,
     lastName: lastName ?? '',
@@ -114,7 +154,7 @@ export async function POST(req: NextRequest) {
     phone: phone ?? '',
     locationId: GHL_LOCATION_ID,
     source: customSource ?? 'website_contact_form',
-    tags: [...(customTags ?? ['website-lead']), ...consentTags],
+    tags: [...(customTags ?? ['website-lead']), ...consentTags, ...utmInfo.tags],
   };
 
   // Use GHL's upsert endpoint so repeat submitters don't 4xx. If the
@@ -197,7 +237,8 @@ export async function POST(req: NextRequest) {
           email: email ?? '',
           phone: phone ?? '',
           source: customSource ?? 'website_contact_form',
-          tags: [...(customTags ?? []), ...consentTags],
+          tags: [...(customTags ?? []), ...consentTags, ...utmInfo.tags],
+          utm: utmInfo.utm,
         }),
       });
       if (!syncRes.ok) {

@@ -116,6 +116,19 @@ export default function ListingsLeadPopup() {
             : '',
           tags: ['prelisting-guide', 'seller-lead', 'website-lead'],
           source: 'prelisting_guide_popup',
+          ...(typeof window !== 'undefined'
+            ? (() => {
+                const p = new URLSearchParams(window.location.search);
+                const out: Record<string, string> = {};
+                const get = (k: string) => p.get(k)?.trim();
+                if (get('utm_source')) out.utmSource = get('utm_source')!;
+                if (get('utm_medium')) out.utmMedium = get('utm_medium')!;
+                if (get('utm_campaign')) out.utmCampaign = get('utm_campaign')!;
+                if (get('utm_content')) out.utmContent = get('utm_content')!;
+                if (get('utm_term')) out.utmTerm = get('utm_term')!;
+                return out;
+              })()
+            : {}),
         }),
       });
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
