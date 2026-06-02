@@ -22,7 +22,7 @@ const listings: Listing[] = [
   {
     href: '/properties/1406-potlatch-beach-road-tulalip',
     image: '/images/potlatch-02-exterior.jpg',
-    imageAlt: '1406 Potlatch Beach Road exterior — waterfront home in Marysville, WA',
+    imageAlt: '1406 Potlatch Beach Road exterior, waterfront home in Marysville, WA',
     badge: 'New Listing',
     city: 'Marysville, WA 98271',
     address: '1406 Potlatch Beach Road',
@@ -40,7 +40,7 @@ const listings: Listing[] = [
   {
     href: '/properties/4611-76th-street-mukilteo',
     image: '/images/mukilteo-01-front-exterior.jpg',
-    imageAlt: '4611 76th Street SW exterior — Olympic Mountain view home in Mukilteo, WA',
+    imageAlt: '4611 76th Street SW exterior, Olympic Mountain view home in Mukilteo, WA',
     badge: 'New Listing',
     city: 'Mukilteo, WA 98275',
     address: '4611 76th Street SW',
@@ -53,7 +53,7 @@ const listings: Listing[] = [
     ],
     tagline: 'Remodeled around the view.',
     body: 'Fully remodeled 1976 NW Contemporary positioned for the Olympic Mountains. Three decks, quartz kitchen, walk-in primary, hot tub, RV parking. The previous owner even cut half a wall in the office so you can see the view while you work.',
-    handwritten: 'Showings by appointment — walk it whenever works',
+    handwritten: 'Showings by appointment, walk it whenever works',
   },
 ];
 

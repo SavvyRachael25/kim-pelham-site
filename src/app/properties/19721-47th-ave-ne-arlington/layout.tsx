@@ -3,18 +3,18 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: '19721 47th Ave NE, Arlington WA 98223 | 3 Bed / 2 Bath Single Family | The Pelham Group NW',
   description:
-    'Just back on market. 19721 47th Avenue NE, Arlington WA 98223 — 3 bedrooms, 2 bathrooms, 1,624 square feet. $625,000. MLS# 2492864. Listed by Kim Pelham, The Pelham Group NW. Call (425) 250-9422.',
+    'Just back on market. 19721 47th Avenue NE, Arlington WA 98223 to 3 bedrooms, 2 bathrooms, 1,624 square feet. $625,000. MLS# 2492864. Listed by Kim Pelham, The Pelham Group NW. Call (425) 250-9422.',
   openGraph: {
     title: 'Just Back on Market | 19721 47th Ave NE, Arlington WA',
     description:
-      '3 bedrooms, 2 bathrooms, 1,624 sqft single family home in Arlington, Snohomish County. $625,000. MLS# 2492864. Buyer financing fell through — this one is your second chance.',
+      '3 bedrooms, 2 bathrooms, 1,624 sqft single family home in Arlington, Snohomish County. $625,000. MLS# 2492864. Buyer financing fell through, this one is your second chance.',
     images: [{ url: '/images/arlington/arlington-01.jpg', width: 1200, height: 800 }],
     type: 'website',
     url: 'https://thepelhamgroupnw.com/properties/19721-47th-ave-ne-arlington',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '19721 47th Ave NE, Arlington WA — Back on Market | The Pelham Group NW',
+    title: '19721 47th Ave NE, Arlington WA · Back on Market | The Pelham Group NW',
     description:
       '3 bed / 2 bath / 1,624 sqft. $625,000. MLS# 2492864. Listed by Kim Pelham.',
     images: ['/images/arlington/arlington-01.jpg'],
@@ -111,7 +111,7 @@ export default function ArlingtonLayout({ children }: { children: React.ReactNod
         name: 'Why is 19721 47th Ave NE back on the market?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The previous buyer backed out — financing fell through before close. The home is now back on the market in Arlington, WA. This kind of price-and-condition reset usually means the next buyer gets in faster and cleaner. Contact Kim Pelham at (425) 250-9422 for current status, disclosures, and showings.',
+          text: 'The previous buyer backed out, financing fell through before close. The home is now back on the market in Arlington, WA. This kind of price-and-condition reset usually means the next buyer gets in faster and cleaner. Contact Kim Pelham at (425) 250-9422 for current status, disclosures, and showings.',
         },
       },
       {

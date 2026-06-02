@@ -34,7 +34,7 @@ export default function SaleToListRatioPage() {
                 fontWeight: 700,
               }}
             >
-              Your sale-to-list ratio is the single most useful number for evaluating a real estate broker's performance — and most sellers never ask about it. It measures what percentage of the asking price a home actually sells for. A 102.3% ratio means sellers are walking away with significantly more than they asked for. That's not luck. That's strategy.
+              Your sale-to-list ratio is the single most useful number for evaluating a real estate broker's performance, and most sellers never ask about it. It measures what percentage of the asking price a home actually sells for. A 102.3% ratio means sellers are walking away with significantly more than they asked for. That's not luck. That's strategy.
             </p>
 
             {/* Stat Callout Box */}
@@ -49,7 +49,7 @@ export default function SaleToListRatioPage() {
                 102.3%
               </p>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', margin: '0 0 8px 0', lineHeight: 1.6 }}>
-                Kim Pelham's average sale-to-list ratio — meaning her sellers receive an average of $24,000+ above asking price on a $600K home. Snohomish County market average: ~99–100%.
+                Kim Pelham's average sale-to-list ratio, meaning her sellers receive an average of $24,000+ above asking price on a $600K home. Snohomish County market average: ~99 to 100%.
               </p>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: '#595959', margin: 0 }}>
                 Source: Kim Pelham verified transaction data, Snohomish County MLS
@@ -65,7 +65,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              If you've looked at my marketing materials or heard me speak about my business, you've probably seen the number: 102.3%. That's my average sale-to-list ratio — the percentage of your home's asking price that it actually sells for. It's not a coincidence or luck. It's a direct reflection of strategy, preparation, and genuine expertise built over 17+ years of selling homes across Snohomish County. In this article, I want to break down what this metric means, why it matters, and how you can achieve similar results.
+              If you've looked at my marketing materials or heard me speak about my business, you've probably seen the number: 102.3%. That's my average sale-to-list ratio, the percentage of your home's asking price that it actually sells for. It's not a coincidence or luck. It's a direct reflection of strategy, preparation, and genuine expertise built over 17+ years of selling homes across Snohomish County. In this article, I want to break down what this metric means, why it matters, and how you can achieve similar results.
             </p>
 
             <h2
@@ -102,7 +102,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              This metric is powerful because it reveals two things: first, how well your home was positioned and presented to the market, and second, the strength of buyer demand for your property. A high sale-to-list ratio isn't luck — it's evidence of strategic pricing, excellent marketing, proper staging, and expert negotiation. In a competitive market like Snohomish County, every percentage point above 100% represents additional thousands of dollars in your pocket.
+              This metric is powerful because it reveals two things: first, how well your home was positioned and presented to the market, and second, the strength of buyer demand for your property. A high sale-to-list ratio isn't luck, it's evidence of strategic pricing, excellent marketing, proper staging, and expert negotiation. In a competitive market like Snohomish County, every percentage point above 100% represents additional thousands of dollars in your pocket.
             </p>
 
             <h2
@@ -139,7 +139,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              The local average sale-to-list ratio hovers around 99–100%, depending on the sub-market and time of year. This means most homes either sell at asking price or slightly below. When a home sells at 104% — consistently, across different neighborhoods from Everett to Marysville to Mill Creek — it signals something deliberate. That home is positioned right. The marketing is working. Buyers see it and want it. That's what my clients experience again and again.
+              The local average sale-to-list ratio hovers around 99 to 100%, depending on the sub-market and time of year. This means most homes either sell at asking price or slightly below. When a home sells at 104%, consistently, across different neighborhoods from Everett to Marysville to Mill Creek, it signals something deliberate. That home is positioned right. The marketing is working. Buyers see it and want it. That's what my clients experience again and again.
             </p>
 
             <h2
@@ -189,7 +189,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              Many sellers think pricing high is smart — it gives room to negotiate down. This is actually counterproductive. When you price a home too high, you've already lost the most active and motivated buyers. They stop showing up. Your home sits, creating the impression of weakness. Then, weeks later, you price it lower than you would have if you'd priced right initially.
+              Many sellers think pricing high is smart, it gives room to negotiate down. This is actually counterproductive. When you price a home too high, you've already lost the most active and motivated buyers. They stop showing up. Your home sits, creating the impression of weakness. Then, weeks later, you price it lower than you would have if you'd priced right initially.
             </p>
 
             <p
@@ -242,7 +242,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              Professional photography and video are non-negotiable. Studies consistently show that homes with excellent photos and video tours receive 24% more inquiries and sell faster. But it's more than just pretty pictures. It's about showing your home in the best possible light — literally. We stage during optimal lighting, use drone photography to show the property's setting, and create virtual tours that let buyers walk through your home at their own pace.
+              Professional photography and video are non-negotiable. Studies consistently show that homes with excellent photos and video tours receive 24% more inquiries and sell faster. But it's more than just pretty pictures. It's about showing your home in the best possible light, literally. We stage during optimal lighting, use drone photography to show the property's setting, and create virtual tours that let buyers walk through your home at their own pace.
             </p>
 
             <p
@@ -254,7 +254,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              Then there's the physical staging — the thoughtful arrangement of furniture, the decluttering, the fresh paint, the landscaping. Every listing I take includes a staging consultation because I know from experience that the visual presentation is what converts online browsers into in-person buyers. My clients consistently see homes sell faster and for higher prices when they've invested in presentation. The return on that investment is often 5–15 times the cost.
+              Then there's the physical staging, the thoughtful arrangement of furniture, the decluttering, the fresh paint, the landscaping. Every listing I take includes a staging consultation because I know from experience that the visual presentation is what converts online browsers into in-person buyers. My clients consistently see homes sell faster and for higher prices when they've invested in presentation. The return on that investment is often 5 to 15 times the cost.
             </p>
 
             <h3
@@ -279,7 +279,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              Getting the right buyers to see your home is critical. This means targeted advertising on the platforms where buyers are searching, open houses that attract serious interest, and agent-to-agent communication about your property. I use data about buyer behavior and interest patterns to drive the right traffic to your listing — and I coordinate the launch so your home hits Zillow, Redfin, and the MLS simultaneously on day one with full momentum.
+              Getting the right buyers to see your home is critical. This means targeted advertising on the platforms where buyers are searching, open houses that attract serious interest, and agent-to-agent communication about your property. I use data about buyer behavior and interest patterns to drive the right traffic to your listing, and I coordinate the launch so your home hits Zillow, Redfin, and the MLS simultaneously on day one with full momentum.
             </p>
 
             <p
@@ -291,7 +291,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              Then comes offer management. When you get multiple offers (which strong pricing and marketing make possible), how you manage them matters enormously. I guide clients through counteroffers, negotiate contingencies, and help them choose the strongest overall package — not just the highest number. Closing certainty matters. Financing strength matters. This is where a skilled agent's experience translates directly to money in your pocket.
+              Then comes offer management. When you get multiple offers (which strong pricing and marketing make possible), how you manage them matters enormously. I guide clients through counteroffers, negotiate contingencies, and help them choose the strongest overall package, not just the highest number. Closing certainty matters. Financing strength matters. This is where a skilled agent's experience translates directly to money in your pocket.
             </p>
 
             <h2
@@ -316,7 +316,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              When you're interviewing brokers, ask about their sale-to-list ratio. If a broker says they consistently achieve 104%, that's a meaningful differentiator. It suggests they know how to price homes right, market them effectively, and negotiate on behalf of their clients. But don't just take the number at face value — ask what kinds of homes achieve that ratio. Context matters.
+              When you're interviewing brokers, ask about their sale-to-list ratio. If a broker says they consistently achieve 104%, that's a meaningful differentiator. It suggests they know how to price homes right, market them effectively, and negotiate on behalf of their clients. But don't just take the number at face value, ask what kinds of homes achieve that ratio. Context matters.
             </p>
 
             <p
@@ -328,7 +328,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              My 102.3% average comes from homes across diverse price points, neighborhoods, and property types throughout Snohomish County — because I apply the same strategic approach to every listing, regardless of price point. A $350,000 townhouse in Lynnwood gets the same level of preparation and marketing as a $900,000 home on the water in Mukilteo. Every seller deserves that.
+              My 102.3% average comes from homes across diverse price points, neighborhoods, and property types throughout Snohomish County, because I apply the same strategic approach to every listing, regardless of price point. A $350,000 townhouse in Lynnwood gets the same level of preparation and marketing as a $900,000 home on the water in Mukilteo. Every seller deserves that.
             </p>
 
             <h2
@@ -353,7 +353,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '40px',
               }}
             >
-              If you're getting ready to sell, remember: your sale-to-list ratio starts the moment you list your home. It's determined by how it's priced, presented, and marketed. There's no magic here — just strategy and expertise applied consistently. I'd love to discuss how we can work together to achieve your best possible outcome. That 102.3% represents real dollars, real returns, and real success for my clients. Let's make it happen for you.
+              If you're getting ready to sell, remember: your sale-to-list ratio starts the moment you list your home. It's determined by how it's priced, presented, and marketed. There's no magic here, just strategy and expertise applied consistently. I'd love to discuss how we can work together to achieve your best possible outcome. That 102.3% represents real dollars, real returns, and real success for my clients. Let's make it happen for you.
             </p>
 
             {/* FAQ Section */}
@@ -368,7 +368,7 @@ export default function SaleToListRatioPage() {
                   What is a good sale-to-list ratio for Snohomish County?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  In Snohomish County, a ratio of 99–101% is considered average. Anything above 102% signals strong demand and strategic pricing. Kim Pelham's consistent 102.3% average places her well above the market norm and reflects a disciplined approach to pricing, presentation, and offer management.
+                  In Snohomish County, a ratio of 99 to 101% is considered average. Anything above 102% signals strong demand and strategic pricing. Kim Pelham's consistent 102.3% average places her well above the market norm and reflects a disciplined approach to pricing, presentation, and offer management.
                 </p>
               </div>
 
@@ -395,7 +395,7 @@ export default function SaleToListRatioPage() {
                   Does pricing a home lower always lead to a higher sale price?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  Not always — but strategic pricing that generates multiple offers often does. The goal isn't to underprice; it's to price at the level that attracts maximum qualified buyer attention. When two or more buyers compete for the same home, the final price almost always exceeds asking. That's the mechanics behind a strong sale-to-list ratio.
+                  Not always, but strategic pricing that generates multiple offers often does. The goal isn't to underprice; it's to price at the level that attracts maximum qualified buyer attention. When two or more buyers compete for the same home, the final price almost always exceeds asking. That's the mechanics behind a strong sale-to-list ratio.
                 </p>
               </div>
 
@@ -404,7 +404,7 @@ export default function SaleToListRatioPage() {
                   How can I find out what my home might sell for in today's Snohomish County market?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  Contact Kim Pelham for a complimentary home valuation. She'll analyze recent comparable sales in your specific neighborhood, assess your home's condition and positioning, and give you an honest, data-backed price range — not a number inflated to win your listing.
+                  Contact Kim Pelham for a complimentary home valuation. She'll analyze recent comparable sales in your specific neighborhood, assess your home's condition and positioning, and give you an honest, data-backed price range, not a number inflated to win your listing.
                 </p>
               </div>
             </section>

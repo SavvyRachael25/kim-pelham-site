@@ -36,7 +36,7 @@ export default function PotlatchPage() {
         <div style={{ position: 'relative', width: '100%', height: 'clamp(300px, 55vw, 600px)' }}>
           <Image
             src="/images/potlatch-brien-sunset-golden.jpg"
-            alt="Golden sunset over Puget Sound from 1406 Potlatch Beach Road — Marysville WA waterfront property"
+            alt="Golden sunset over Puget Sound from 1406 Potlatch Beach Road, Marysville WA waterfront property"
             fill
             priority
             quality={90}
@@ -359,11 +359,11 @@ export default function PotlatchPage() {
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
             <div className="potlatch-gallery" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridTemplateRows: '260px 260px', gap: '8px' }}>
               {[
-                { src: '/images/potlatch-02-exterior.jpg', alt: 'Exterior front — white home with wraparound porch and mature garden', col: '1 / 2', row: '1 / 3' },
+                { src: '/images/potlatch-02-exterior.jpg', alt: 'Exterior front, white home with wraparound porch and mature garden', col: '1 / 2', row: '1 / 3' },
                 { src: '/images/potlatch-brien-sunset-golden.jpg', alt: 'Golden sunset over Puget Sound from 1406 Potlatch Beach Road', col: '2 / 3', row: '1 / 2' },
                 { src: '/images/potlatch-05-windows-view.jpg', alt: 'Floor-to-ceiling windows with Sound views from living room', col: '3 / 4', row: '1 / 2' },
                 { src: '/images/potlatch-04-living-room.jpg', alt: 'Living room with water views and modern finishes', col: '2 / 3', row: '2 / 3' },
-                { src: '/images/potlatch-06-interior.jpg', alt: 'Interior detail — natural light throughout', col: '3 / 4', row: '2 / 3' },
+                { src: '/images/potlatch-06-interior.jpg', alt: 'Interior detail, natural light throughout', col: '3 / 4', row: '2 / 3' },
               ].map((photo) => (
                 <div key={photo.src} style={{ position: 'relative', gridColumn: photo.col, gridRow: photo.row, borderRadius: '4px', overflow: 'hidden' }}>
                   <Image src={photo.src} alt={photo.alt} fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 33vw" />
@@ -410,7 +410,7 @@ export default function PotlatchPage() {
             >
               <iframe
                 src="https://www.youtube.com/embed/BekwRDZCUK0"
-                title="Waterfront Views — 1406 Potlatch Beach Road, Marysville WA"
+                title="Waterfront Views · 1406 Potlatch Beach Road, Marysville WA"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 style={{
@@ -474,7 +474,7 @@ export default function PotlatchPage() {
                   fontWeight: 300,
                 }}
               >
-                Wake each morning to sweeping Sound vistas and end your days with unforgettable sunsets from this meticulously maintained high-bank waterfront retreat. A full wall of sliding glass doors opens to fresh ocean breezes and ever-changing coastal scenery. The flexible layout offers three bedrooms plus two bonus rooms — perfect for creative space, remote work, or hosting guests. Architectural charm runs through multiple levels with a loft perched above the living room. Two ensuite bedrooms each have their own 3/4 bath, and the bright kitchen features upgraded stainless appliances and a high-end induction range — all positioned to take in the view.
+                Wake each morning to sweeping Sound vistas and end your days with unforgettable sunsets from this meticulously maintained high-bank waterfront retreat. A full wall of sliding glass doors opens to fresh ocean breezes and ever-changing coastal scenery. The flexible layout offers three bedrooms plus two bonus rooms, perfect for creative space, remote work, or hosting guests. Architectural charm runs through multiple levels with a loft perched above the living room. Two ensuite bedrooms each have their own 3/4 bath, and the bright kitchen features upgraded stainless appliances and a high-end induction range, all positioned to take in the view.
               </p>
 
               <p

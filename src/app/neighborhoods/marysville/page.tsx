@@ -8,10 +8,10 @@ import InnerHero from '@/components/InnerHero';
 import FAQSection from '@/components/FAQSection';
 
 const stats = [
-  { label: 'Median Home Price', value: '$655K–$675K', sub: '2025 range' },
+  { label: 'Median Home Price', value: '$655K to $675K', sub: '2025 range' },
   { label: 'Population', value: '~73,000', sub: '2nd largest city in county' },
   { label: 'Lot Sizes', value: 'Larger lots', sub: 'vs south Snohomish County' },
-  { label: 'Commute to Everett', value: '15–20 min', sub: 'via I-5' },
+  { label: 'Commute to Everett', value: '15 to 20 min', sub: 'via I-5' },
 ];
 
 const insiderFacts = [
@@ -139,7 +139,7 @@ export default function MarysvillePage() {
             { question: 'Is Marysville WA a good place to live?', answer: 'Depends entirely on your priorities. For value buyers, retirees, families using private schools, and people who want waterfront access and more space  -  yes, absolutely. For families who prioritize public school district performance above everything else, other Snohomish County cities will serve you better. The honest answer is that Marysville is underappreciated by people who haven\'t visited Smokey Point or stood at Mission Beach.' },
             { question: 'How are the schools in Marysville WA?', answer: 'Below county average in standardized test scores  -  27% math proficiency and 41% reading proficiency. This is the honest answer. The district does offer a distinctive indigenous language education program and serves a diverse community. Families prioritizing academic metrics typically consider Lake Stevens, Bothell, or Mill Creek instead.' },
             { question: 'What is Marysville WA known for?', answer: 'Several things: the Tulalip Resort Casino and Seattle Premium Outlets (major regional destinations), the Hibulb Cultural Center (award-winning museum), Mission Beach and Tulalip Bay waterfront access, the Marysville Opera House, and being Snohomish County\'s second-largest city with some of the best home value in the region.' },
-            { question: 'How far is Marysville from Everett?', answer: 'About 10–15 miles north of Everett\'s center  -  typically a 15–20 minute drive via I-5 without traffic. Rush hour can extend this to 30–40 minutes on southbound I-5. The commute to Seattle is approximately 45–55 minutes without traffic, 60–75 minutes in peak hours.' },
+            { question: 'How far is Marysville from Everett?', answer: 'About 10 to 15 miles north of Everett\'s center  -  typically a 15 to 20 minute drive via I-5 without traffic. Rush hour can extend this to 30 to 40 minutes on southbound I-5. The commute to Seattle is approximately 45 to 55 minutes without traffic, 60 to 75 minutes in peak hours.' },
             { question: 'Is Marysville WA safe?', answer: 'Like most large cities, Marysville has variation by area. The Smokey Point corridor in north Marysville and the neighborhoods adjacent to the Tulalip Resort area are generally safer and more suburban in character. Older parts of central Marysville near downtown have higher property crime rates. As with any city, I can pull address-specific data for any property you\'re seriously considering.' },
           ]}
         />

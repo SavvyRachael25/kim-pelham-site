@@ -671,11 +671,11 @@ export default function BuyersPage() {
           },
           {
             question: "I am moving from out of state. Which neighborhoods should I avoid?",
-            answer: "The neighborhood that's not so great is around Casino Road in South Everett. There's also a section of North Everett that has a higher crime rate than other areas of the city. For out-of-state buyers, my best advice is to use Google Street View to virtually tour any listing's surrounding blocks before you fly out — you can learn a lot about a neighborhood from a screen before you ever set foot in it. Great entry points for out-of-state buyers tend to be Silver Lake, Boulevard Bluffs, and Lake Stevens. After 17 years here, I'll tell you the truth about any address you're considering.",
+            answer: "The neighborhood that's not so great is around Casino Road in South Everett. There's also a section of North Everett that has a higher crime rate than other areas of the city. For out-of-state buyers, my best advice is to use Google Street View to virtually tour any listing's surrounding blocks before you fly out, you can learn a lot about a neighborhood from a screen before you ever set foot in it. Great entry points for out-of-state buyers tend to be Silver Lake, Boulevard Bluffs, and Lake Stevens. After 17 years here, I'll tell you the truth about any address you're considering.",
           },
           {
             question: "What happens after I make an offer on a home?",
-            answer: "After your offer is accepted, the typical timeline is around 30 days to closing — 45 days is unusual and usually only happens with complicated financing. Days 1-5: inspection period (inspections happen within the first 5 days; you can negotiate repairs or walk away). Days 7-21: appraisal and underwriting. Days 21-30: loan approval and title work. Final week: final walkthrough and closing. Kim manages every step and keeps you informed throughout. No surprises.",
+            answer: "After your offer is accepted, the typical timeline is around 30 days to closing, 45 days is unusual and usually only happens with complicated financing. Days 1-5: inspection period (inspections happen within the first 5 days; you can negotiate repairs or walk away). Days 7-21: appraisal and underwriting. Days 21-30: loan approval and title work. Final week: final walkthrough and closing. Kim manages every step and keeps you informed throughout. No surprises.",
           },
           {
             question: "Is now a good time to buy in Snohomish County?",

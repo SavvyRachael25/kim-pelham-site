@@ -8,7 +8,7 @@ export interface Review {
 export const reviews: Review[] = [
   {
     name: 'Chi Okafor',
-    text: "Kim was a pleasure to work with. I outreached her and within the same hour placed an offer on a home and it got accepted within 20 mins as a result of her clever tactic. She worked with me to make seller demands — communicated effectively and I got the result I wanted. The aftercare was also amazing. Certainly a royal memorable experience. Thank you Kim!",
+    text: "Kim was a pleasure to work with. I outreached her and within the same hour placed an offer on a home and it got accepted within 20 mins as a result of her clever tactic. She worked with me to make seller demands, communicated effectively and I got the result I wanted. The aftercare was also amazing. Certainly a royal memorable experience. Thank you Kim!",
     date: '11 months ago',
     rating: 5,
   },
@@ -56,7 +56,7 @@ export const reviews: Review[] = [
   },
   {
     name: 'Fawn Morgan',
-    text: "Working with Kim Pelham has been nothing short of inspiring. Kim is the kind of real estate professional every client hopes to have by their side — knowledgeable, compassionate, and truly committed to serving others.",
+    text: "Working with Kim Pelham has been nothing short of inspiring. Kim is the kind of real estate professional every client hopes to have by their side, knowledgeable, compassionate, and truly committed to serving others.",
     date: '10 months ago',
     rating: 5,
   },
@@ -68,7 +68,7 @@ export const reviews: Review[] = [
   },
   {
     name: 'Daniel Bayla',
-    text: "Kim is simply AMAZING! She helped my family save a ton on a great home in an outstanding neighborhood. Her negotiation skills allowed my family to spend the saved money on things that are important to us — we negotiated $70k off the purchase price!",
+    text: "Kim is simply AMAZING! She helped my family save a ton on a great home in an outstanding neighborhood. Her negotiation skills allowed my family to spend the saved money on things that are important to us, we negotiated $70k off the purchase price!",
     date: '2020',
     rating: 5,
   },
@@ -80,7 +80,7 @@ export const reviews: Review[] = [
   },
   {
     name: 'Candi Kidd',
-    text: "Beyond impressed by Kim! We had a very complicated real estate need — purchasing a Christmas tree farm business and home on the same property. Kim held our hand the entire way. We could have NEVER done it without her.",
+    text: "Beyond impressed by Kim! We had a very complicated real estate need, purchasing a Christmas tree farm business and home on the same property. Kim held our hand the entire way. We could have NEVER done it without her.",
     date: '2020',
     rating: 5,
   },
@@ -98,7 +98,7 @@ export const reviews: Review[] = [
   },
   {
     name: 'Wendy Porter',
-    text: "I've had friends use Kim Pelham for their real estate needs, so she came with wonderful, verifiable reviews. I knew when I needed a Realtor she would be my first choice — and she did not disappoint. She is a gem.",
+    text: "I've had friends use Kim Pelham for their real estate needs, so she came with wonderful, verifiable reviews. I knew when I needed a Realtor she would be my first choice, and she did not disappoint. She is a gem.",
     date: '2023',
     rating: 5,
   },
@@ -110,7 +110,7 @@ export const reviews: Review[] = [
   },
   {
     name: 'Laura Giordano',
-    text: "Kim worked with our family for months, patiently guiding us toward our dream home. She worked around the clock — communicating with brokers, helping us secure contractors, and advocating for us every step of the way.",
+    text: "Kim worked with our family for months, patiently guiding us toward our dream home. She worked around the clock, communicating with brokers, helping us secure contractors, and advocating for us every step of the way.",
     date: '2021',
     rating: 5,
   },
@@ -122,7 +122,7 @@ export const reviews: Review[] = [
   },
   {
     name: 'Jennifer Perry',
-    text: "Kim has been a dream to work with. She is extremely professional and really understands the market. She taught us a lot about staging our home — the cards she puts together showing buyers how to see the potential of the home are truly impressive.",
+    text: "Kim has been a dream to work with. She is extremely professional and really understands the market. She taught us a lot about staging our home, the cards she puts together showing buyers how to see the potential of the home are truly impressive.",
     date: '2020',
     rating: 5,
   },

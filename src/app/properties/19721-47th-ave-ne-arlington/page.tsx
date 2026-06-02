@@ -29,7 +29,7 @@ export default function ArlingtonPage() {
         <div style={{ position: 'relative', width: '100%', height: 'clamp(300px, 55vw, 600px)' }}>
           <Image
             src="/images/arlington/arlington-01.jpg"
-            alt="19721 47th Ave NE, Arlington WA — exterior front of single family home"
+            alt="19721 47th Ave NE, Arlington WA, exterior front of single family home"
             fill
             priority
             quality={90}
@@ -349,11 +349,11 @@ export default function ArlingtonPage() {
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
             <div className="arlington-gallery" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridTemplateRows: '260px 260px', gap: '8px' }}>
               {[
-                { src: '/images/arlington/arlington-02.jpg', alt: '19721 47th Ave NE Arlington — interior living area', col: '1 / 2', row: '1 / 3' },
-                { src: '/images/arlington/arlington-03.jpg', alt: '19721 47th Ave NE Arlington — kitchen / dining', col: '2 / 3', row: '1 / 2' },
-                { src: '/images/arlington/arlington-04.jpg', alt: '19721 47th Ave NE Arlington — bedroom', col: '3 / 4', row: '1 / 2' },
-                { src: '/images/arlington/arlington-05.jpg', alt: '19721 47th Ave NE Arlington — bathroom', col: '2 / 3', row: '2 / 3' },
-                { src: '/images/arlington/arlington-06.jpg', alt: '19721 47th Ave NE Arlington — additional interior view', col: '3 / 4', row: '2 / 3' },
+                { src: '/images/arlington/arlington-02.jpg', alt: '19721 47th Ave NE Arlington, interior living area', col: '1 / 2', row: '1 / 3' },
+                { src: '/images/arlington/arlington-03.jpg', alt: '19721 47th Ave NE Arlington, kitchen / dining', col: '2 / 3', row: '1 / 2' },
+                { src: '/images/arlington/arlington-04.jpg', alt: '19721 47th Ave NE Arlington, bedroom', col: '3 / 4', row: '1 / 2' },
+                { src: '/images/arlington/arlington-05.jpg', alt: '19721 47th Ave NE Arlington, bathroom', col: '2 / 3', row: '2 / 3' },
+                { src: '/images/arlington/arlington-06.jpg', alt: '19721 47th Ave NE Arlington, additional interior view', col: '3 / 4', row: '2 / 3' },
               ].map((photo) => (
                 <div key={photo.src} style={{ position: 'relative', gridColumn: photo.col, gridRow: photo.row, borderRadius: '4px', overflow: 'hidden' }}>
                   <Image src={photo.src} alt={photo.alt} fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 33vw" />
@@ -410,7 +410,7 @@ export default function ArlingtonPage() {
                   fontWeight: 300,
                 }}
               >
-                19721 47th Avenue NE is a 1,624 square foot single family home in Arlington, Washington — three bedrooms, two bathrooms, in the 98223 ZIP that covers most of the Arlington area in north Snohomish County. The home went under contract recently and is now back on the market because the previous buyer&apos;s financing did not come together. Nothing about the home changed. The buyer&apos;s lender did. That happens, and when it does the next buyer usually wins on timing.
+                19721 47th Avenue NE is a 1,624 square foot single family home in Arlington, Washington, three bedrooms, two bathrooms, in the 98223 ZIP that covers most of the Arlington area in north Snohomish County. The home went under contract recently and is now back on the market because the previous buyer&apos;s financing did not come together. Nothing about the home changed. The buyer&apos;s lender did. That happens, and when it does the next buyer usually wins on timing.
               </p>
 
               <p
@@ -423,7 +423,7 @@ export default function ArlingtonPage() {
                   fontWeight: 300,
                 }}
               >
-                Arlington sits roughly 50 minutes north of Seattle and 25 minutes north of Everett via I-5. It is a town with a real downtown, an active general aviation airport, the Stillaguamish River running through it, and quick access to the Cascades for weekend hiking and skiing. For buyers priced out of King County or even south Snohomish, north Snohomish County is where the math still works — a single family detached home under $650K that sits on its own land, with a manageable commute corridor when needed.
+                Arlington sits roughly 50 minutes north of Seattle and 25 minutes north of Everett via I-5. It is a town with a real downtown, an active general aviation airport, the Stillaguamish River running through it, and quick access to the Cascades for weekend hiking and skiing. For buyers priced out of King County or even south Snohomish, north Snohomish County is where the math still works, a single family detached home under $650K that sits on its own land, with a manageable commute corridor when needed.
               </p>
 
               <p
@@ -436,7 +436,7 @@ export default function ArlingtonPage() {
                   fontWeight: 300,
                 }}
               >
-                Showings are easy to schedule and disclosures are ready to send. Text or call Kim directly for current status, financing options, and to walk through. Cleanly priced inventory in north Snohomish moves fast — even after a delay like this one, especially after a delay like this one.
+                Showings are easy to schedule and disclosures are ready to send. Text or call Kim directly for current status, financing options, and to walk through. Cleanly priced inventory in north Snohomish moves fast, even after a delay like this one, especially after a delay like this one.
               </p>
 
               {/* Kim's note */}
@@ -638,7 +638,7 @@ export default function ArlingtonPage() {
                 maxWidth: '740px',
               }}
             >
-              Arlington is in north Snohomish County, set between the Stillaguamish River and the foothills of the Cascades. The downtown core has working restaurants, the Stillaguamish Eagle Festival every winter, and a community that knows itself. Arlington Municipal Airport is one of the most active general aviation airports in the state. For commuters, I-5 access is straightforward — Everett is about 25 minutes south, Seattle is around 50 minutes without traffic. For weekends, Mt. Pilchuck and the North Cascades trailheads are 30 to 60 minutes east. This is a part of Snohomish County where buyers actually get land, a real house, and a town with character — at price points that have largely moved out of reach further south.
+              Arlington is in north Snohomish County, set between the Stillaguamish River and the foothills of the Cascades. The downtown core has working restaurants, the Stillaguamish Eagle Festival every winter, and a community that knows itself. Arlington Municipal Airport is one of the most active general aviation airports in the state. For commuters, I-5 access is straightforward, Everett is about 25 minutes south, Seattle is around 50 minutes without traffic. For weekends, Mt. Pilchuck and the North Cascades trailheads are 30 to 60 minutes east. This is a part of Snohomish County where buyers actually get land, a real house, and a town with character, at price points that have largely moved out of reach further south.
             </p>
             <div
               style={{
@@ -719,7 +719,7 @@ export default function ArlingtonPage() {
               },
               {
                 q: 'Why is 19721 47th Ave NE back on the market?',
-                a: 'The previous buyer backed out — financing fell through before close. The home is now back on the market in Arlington, WA. This kind of price-and-condition reset usually means the next buyer gets in faster and cleaner. Contact Kim Pelham at (425) 250-9422 for current status, disclosures, and showings.',
+                a: 'The previous buyer backed out, financing fell through before close. The home is now back on the market in Arlington, WA. This kind of price-and-condition reset usually means the next buyer gets in faster and cleaner. Contact Kim Pelham at (425) 250-9422 for current status, disclosures, and showings.',
               },
               {
                 q: 'How many bedrooms does 19721 47th Ave NE have?',

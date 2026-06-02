@@ -182,7 +182,7 @@ export default function SellersPage() {
               {
                 step: 5,
                 title: 'Online Marketing',
-                desc: 'Strategic digital placement on the right platforms for your market. Listings are featured on hundreds of popular websites — they sell 20% faster and for an average of $11,000 more with the homes.com membership.',
+                desc: 'Strategic digital placement on the right platforms for your market. Listings are featured on hundreds of popular websites, they sell 20% faster and for an average of $11,000 more with the homes.com membership.',
               },
               {
                 step: 6,

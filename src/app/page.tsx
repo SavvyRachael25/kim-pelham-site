@@ -21,10 +21,10 @@ import FAQSection from '@/components/FAQSection';
 import FeaturedListing from '@/components/FeaturedListing';
 
 export const metadata = {
-  title: 'Kim Pelham — The Realtor Next Door | Snohomish County',
+  title: 'Kim Pelham · The Realtor Next Door | Snohomish County',
   description: 'Your neighbor in real estate. 17+ years helping families buy and sell in Snohomish County. I answer my own phone, stage with my own hands, and fight for every dollar.',
   openGraph: {
-    title: 'Kim Pelham — The Realtor Next Door',
+    title: 'Kim Pelham · The Realtor Next Door',
     description: '17+ years in Snohomish County. I answer my own phone, stage with my own hands, and fight for every dollar. The Pelham Group NW.',
     images: [{ url: '/images/kim-by-water.jpg', width: 1024, height: 683 }],
     type: 'website',
@@ -32,7 +32,7 @@ export const metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Kim Pelham — The Realtor Next Door',
+    title: 'Kim Pelham · The Realtor Next Door',
     description: '17+ years in Snohomish County. I answer my own phone, stage with my own hands, and fight for every dollar.',
     images: ['/images/kim-by-water.jpg'],
   },

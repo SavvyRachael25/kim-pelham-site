@@ -8,10 +8,10 @@ import InnerHero from '@/components/InnerHero';
 import FAQSection from '@/components/FAQSection';
 
 const stats = [
-  { label: 'Median Home Price', value: '$605K–$770K', sub: '2025 range' },
-  { label: 'Avg Days on Market', value: '12–34 days', sub: 'faster than county avg' },
+  { label: 'Median Home Price', value: '$605K to $770K', sub: '2025 range' },
+  { label: 'Avg Days on Market', value: '12 to 34 days', sub: 'faster than county avg' },
   { label: 'Population', value: '~12,000', sub: 'small city, big personality' },
-  { label: 'Commute to Seattle', value: '35–50 min', sub: 'via I-5 or US-2' },
+  { label: 'Commute to Seattle', value: '35 to 50 min', sub: 'via I-5 or US-2' },
 ];
 
 const insiderFacts = [
@@ -49,7 +49,7 @@ export default function SnohomishPage() {
               Snohomish is small  -  about 12,000 people  -  but it punches way above its weight. First Street is a genuine destination. The river is right there. The Centennial Trail is accessible. The school district is above average. And the homes? You can find 1880s Victorians next to contemporary builds, all on tree-lined streets that look like someone designed them for a movie.
             </p>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.1rem', lineHeight: 1.8, color: '#2C2C2C' }}>
-              The commute is the honest caveat. Snohomish is about 35–50 minutes to Seattle without traffic  -  US-2 and I-5 are your routes, and rush hour adds meaningful time. Most buyers here are hybrid or remote workers, or they&apos;ve decided the lifestyle trade-off is worth it. Many say it&apos;s the best decision they ever made.
+              The commute is the honest caveat. Snohomish is about 35 to 50 minutes to Seattle without traffic  -  US-2 and I-5 are your routes, and rush hour adds meaningful time. Most buyers here are hybrid or remote workers, or they&apos;ve decided the lifestyle trade-off is worth it. Many say it&apos;s the best decision they ever made.
             </p>
           </div>
         </section>
@@ -140,8 +140,8 @@ export default function SnohomishPage() {
           faqs={[
             { question: 'Is Snohomish WA a good place to live?', answer: 'For the right buyer  -  absolutely one of the best in Snohomish County. It offers something most suburbs can\'t replicate: genuine character, historic downtown, walkable First Street, river access, Centennial Trail at your doorstep, and above-average schools. The caveat is the commute  -  Snohomish rewards hybrid and remote workers most.' },
             { question: 'What is there to do in Snohomish WA?', answer: 'More than people expect. Antique shopping on First Street (400+ dealers), kayaking the Snohomish River from Pilchuck Park, cycling the 31-mile Centennial Trail, hiking Lord Hill Regional Park (1,400 acres), visiting U-pick farms in the Snohomish Valley, and dining/drinking in the historic downtown corridor. The Oxford Saloon has been open since 1900.' },
-            { question: 'How far is Snohomish from Seattle?', answer: 'About 30 miles north of Seattle  -  typically 35–50 minutes without traffic via I-5 or US-2. The reality in rush hour is 55–75 minutes depending on the route. Most residents who commute to Seattle either go during off-peak hours or do 2–3 days per week max.' },
-            { question: 'Are homes in Snohomish expensive?', answer: 'Relative to other Snohomish County cities, Snohomish is mid-range. Median home prices run $605K–$770K, which is significantly above Marysville but meaningfully below Mill Creek and Bothell. Historic homes in the city core can run higher due to their character and location.' },
+            { question: 'How far is Snohomish from Seattle?', answer: 'About 30 miles north of Seattle  -  typically 35 to 50 minutes without traffic via I-5 or US-2. The reality in rush hour is 55 to 75 minutes depending on the route. Most residents who commute to Seattle either go during off-peak hours or do 2 to 3 days per week max.' },
+            { question: 'Are homes in Snohomish expensive?', answer: 'Relative to other Snohomish County cities, Snohomish is mid-range. Median home prices run $605K to $770K, which is significantly above Marysville but meaningfully below Mill Creek and Bothell. Historic homes in the city core can run higher due to their character and location.' },
             { question: 'What zip code is Snohomish WA?', answer: 'The primary zip codes are 98290 (city of Snohomish and immediate area) and 98291 (another Snohomish area code). Some rural properties east of the city use 98296 (Woodinville area zip that overlaps into south Snohomish County). When in doubt, confirm the school district at the specific address.' },
           ]}
         />

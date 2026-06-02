@@ -8,14 +8,14 @@ import InnerHero from '@/components/InnerHero';
 import FAQSection from '@/components/FAQSection';
 
 const stats = [
-  { label: 'Median Home Price', value: '$548K–$635K', sub: '2025 range' },
+  { label: 'Median Home Price', value: '$548K to $635K', sub: '2025 range' },
   { label: 'Avg Days on Market', value: '37 days', sub: 'late 2025' },
   { label: 'Population', value: '113,000+', sub: 'largest in county' },
-  { label: 'Commute to Seattle', value: '30–45 min', sub: 'via I-5' },
+  { label: 'Commute to Seattle', value: '30 to 45 min', sub: 'via I-5' },
 ];
 
 const insiderFacts = [
-  { title: 'Jetty Island is a local treasure  -  and it\'s free', body: 'A 2-mile natural sand barrier island accessible by ferry ($3–$5) from the Port of Everett marina every summer. Warm, shallow water perfect for kids. Most Seattle people have never heard of it. Everett locals consider it their secret.' },
+  { title: 'Jetty Island is a local treasure  -  and it\'s free', body: 'A 2-mile natural sand barrier island accessible by ferry ($3 to $5) from the Port of Everett marina every summer. Warm, shallow water perfect for kids. Most Seattle people have never heard of it. Everett locals consider it their secret.' },
   { title: 'That building you can see from SR 526 is the world\'s largest by volume', body: 'The Boeing Everett factory is genuinely one of the most extraordinary things in Washington state. It\'s so big it generates its own weather inside  -  and the buildings are visible from space. If you\'re moving here for aerospace, you\'re in the right zip code.' },
   { title: 'The Sounder train goes straight to Seattle  -  no parking, no highway stress', body: 'Many Everett homeowners build their commute around the Sounder North line. Hop on at Everett Station, arrive at King Street Station in downtown Seattle. On a bad traffic day, it might be the only thing that keeps you sane.' },
   { title: 'Silver Lake is the sleeper neighborhood nobody talks about', body: 'Tucked at the south end of Everett near the King County line, Silver Lake has access to the actual lake, quieter streets, and strong proximity to Mill Creek without the Mill Creek price tag. Ask Kim about this one.' },
@@ -46,7 +46,7 @@ export default function EverettPage() {
               Everett is the most misunderstood city in Snohomish County. People drive through it on I-5 and see Boeing and big-box stores, and they keep going. That&apos;s their loss. Because once you get off the highway and actually explore  -  the marina, Jetty Island, the neighborhoods tucked above the water in North Everett, the revitalized 2nd Street corridor  -  Everett starts to make a lot of sense.
             </p>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.1rem', lineHeight: 1.8, color: '#2C2C2C', marginBottom: '20px' }}>
-              This is the most affordable entry point in Snohomish County for buyers coming from Seattle or King County. Median home prices run $100K–$300K below Bothell and Mill Creek, and you still get Sounder access, good schools in the right pockets, and a city that&apos;s clearly investing in itself. The waterfront is actively revitalizing. The timing is good.
+              This is the most affordable entry point in Snohomish County for buyers coming from Seattle or King County. Median home prices run $100K to $300K below Bothell and Mill Creek, and you still get Sounder access, good schools in the right pockets, and a city that&apos;s clearly investing in itself. The waterfront is actively revitalizing. The timing is good.
             </p>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.1rem', lineHeight: 1.8, color: '#2C2C2C' }}>
               I&apos;ve sold a lot of homes in Everett. I know which neighborhoods hold value, which ones are up-and-coming, and which ones to avoid. If you want a real conversation about it, I&apos;m happy to have it.
@@ -145,7 +145,7 @@ export default function EverettPage() {
             { question: 'Is Everett a good place to buy a home in 2025?', answer: 'Yes  -  it remains one of the most affordable cities in the Seattle metro with the least-appreciated upside. The waterfront revitalization, Paine Field commercial service expansion, and Naval Station presence create stable long-term demand. For first-time buyers or investors, the entry price and growth trajectory make a strong case.' },
             { question: 'What are the best neighborhoods in Everett to buy a home?', answer: 'North Everett (especially near Rucker Ave and Grand Ave) has charming older homes with water views. Silver Lake in south Everett is the sleeper pick  -  lake access at sub-Mill-Creek prices. The waterfront/marina corridor is actively improving. For newer construction, southeast Everett neighborhoods near the Mill Creek border offer good value.' },
             { question: 'Does Everett flood? What are the natural hazard concerns?', answer: 'Most of Everett proper is not in a high-risk flood zone. Low-lying areas near the Snohomish River delta to the east and some waterfront-adjacent areas carry more risk. A good inspection and flood zone check during due diligence covers this.' },
-            { question: 'How is the commute from Everett to Seattle?', answer: '30–45 minutes by car on I-5 without traffic; 60–75+ minutes during weekday rush hour. The Sounder commuter train is the alternative  -  Everett to Seattle King Street Station with no highway stress. Many residents build their week around the train schedule.' },
+            { question: 'How is the commute from Everett to Seattle?', answer: '30 to 45 minutes by car on I-5 without traffic; 60 to 75+ minutes during weekday rush hour. The Sounder commuter train is the alternative  -  Everett to Seattle King Street Station with no highway stress. Many residents build their week around the train schedule.' },
             { question: 'What is the crime rate in Everett, WA?', answer: 'Like most large cities, Everett has variation by neighborhood. The downtown area has had issues with property crime that the city has been actively addressing. Residential neighborhoods  -  particularly north Everett, Silver Lake, and the east/southeast areas  -  are notably safer. Always ask me to pull specific neighborhood-level data for any address you\'re seriously considering.' },
           ]}
         />

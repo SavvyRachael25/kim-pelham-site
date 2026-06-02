@@ -225,7 +225,7 @@ export default function HomeRepairPage() {
                     marginBottom: '16px',
                   }}
                 >
-                  Most repairs are paid upfront as work is completed, using Kim's trusted trade partner network. This means no contractor stress for you — just results.
+                  Most repairs are paid upfront as work is completed, using Kim's trusted trade partner network. This means no contractor stress for you, just results.
                 </p>
                 <ul
                   style={{
@@ -457,7 +457,7 @@ export default function HomeRepairPage() {
                       lineHeight: '1.6',
                     }}
                   >
-                    Work is completed through Kim's established trade partner network — contractors who deliver quality results on time.
+                    Work is completed through Kim's established trade partner network, contractors who deliver quality results on time.
                   </p>
                 </div>
               </div>
@@ -612,11 +612,11 @@ export default function HomeRepairPage() {
             },
             {
               question: "How long does the repair process take before I can list?",
-              answer: "Most pre-sale repair projects are completed within 2–4 weeks depending on scope. Kim manages the entire timeline to ensure your home is market-ready as efficiently as possible.",
+              answer: "Most pre-sale repair projects are completed within 2 to 4 weeks depending on scope. Kim manages the entire timeline to ensure your home is market-ready as efficiently as possible.",
             },
             {
               question: "Do I have to pay for repairs out of pocket?",
-              answer: "Most repairs are paid upfront as work is completed. For qualifying listings, pay-at-closing arrangements are available on a case-by-case basis — ask Kim.",
+              answer: "Most repairs are paid upfront as work is completed. For qualifying listings, pay-at-closing arrangements are available on a case-by-case basis, ask Kim.",
             },
           ]}
         />
@@ -633,7 +633,7 @@ export default function HomeRepairPage() {
                 fontStyle: 'italic',
               }}
             >
-              Deferred payment options available when needed — ask Kim about pay-at-closing arrangements for qualifying listings.
+              Deferred payment options available when needed, ask Kim about pay-at-closing arrangements for qualifying listings.
             </p>
           </div>
         </section>

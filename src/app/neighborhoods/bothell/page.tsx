@@ -9,9 +9,9 @@ import FAQSection from '@/components/FAQSection';
 
 const stats = [
   { label: 'Median Home Price', value: '~$1.1M', sub: 'mid-2025' },
-  { label: 'Avg Days on Market', value: '15–20 days', sub: 'competitive market' },
+  { label: 'Avg Days on Market', value: '15 to 20 days', sub: 'competitive market' },
   { label: 'School District', value: 'Northshore School District', sub: 'top 10 in Washington' },
-  { label: 'Commute to Bellevue', value: '20–30 min', sub: 'via I-405' },
+  { label: 'Commute to Bellevue', value: '20 to 30 min', sub: 'via I-405' },
 ];
 
 const insiderFacts = [
@@ -43,7 +43,7 @@ export default function BothellPage() {
               The Honest Take on Bothell
             </h2>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.1rem', lineHeight: 1.8, color: '#2C2C2C', marginBottom: '20px' }}>
-              Bothell has become one of the most desirable addresses in Snohomish County  -  and the price reflects it. When I talk to buyers who are relocating from the Eastside or coming from King County, Bothell is usually the city that keeps coming up. The reasons are consistent: Northshore School District, the revitalized downtown, and the ability to get to Bellevue or Redmond in 20–30 minutes without going through Seattle.
+              Bothell has become one of the most desirable addresses in Snohomish County  -  and the price reflects it. When I talk to buyers who are relocating from the Eastside or coming from King County, Bothell is usually the city that keeps coming up. The reasons are consistent: Northshore School District, the revitalized downtown, and the ability to get to Bellevue or Redmond in 20 to 30 minutes without going through Seattle.
             </p>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.1rem', lineHeight: 1.8, color: '#2C2C2C', marginBottom: '20px' }}>
               The median home price here sits around $1.1M. That&apos;s not a typo, and it&apos;s not going to surprise anyone who has been shopping the Eastside. But for what King County would charge you for a similar home in a comparable location, Bothell still represents real value  -  especially when you factor in lot sizes and the quality of the school district.
@@ -122,7 +122,7 @@ export default function BothellPage() {
             <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', fontWeight: 400, color: '#2C2C2C', marginBottom: '40px' }}>Who Bothell Is Right For</h2>
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '20px' }}>
               {[
-                { title: 'Tech workers (Eastside access)', desc: 'Microsoft, Amazon, and dozens of tech companies in Redmond and Bellevue are 20–30 minutes away. This is the suburban pick for Eastside workers who want more space.' },
+                { title: 'Tech workers (Eastside access)', desc: 'Microsoft, Amazon, and dozens of tech companies in Redmond and Bellevue are 20 to 30 minutes away. This is the suburban pick for Eastside workers who want more space.' },
                 { title: 'School-first families', desc: 'If Northshore School District is non-negotiable, you\'re in Bothell. Full stop. The school district drives a meaningful portion of this market.' },
                 { title: 'Wine and outdoors people', desc: 'Woodinville wine country, the Sammamish River Trail, Bothell Landing Park  -  weekend quality of life here is genuinely high.' },
                 { title: 'Move-up buyers from south Snohomish County', desc: 'Buyers upgrading from Lynnwood, Kenmore, or south Everett often land in Bothell. It\'s the step up without leaving the county.' },
@@ -143,7 +143,7 @@ export default function BothellPage() {
             { question: 'Is Bothell in King County or Snohomish County?', answer: 'Both. Bothell straddles the county line. Zip code 98011 is King County; zip code 98021 (Canyon Park area, northeast Bothell) is Snohomish County. Both fall within the Northshore School District, so school quality isn\'t affected. Property taxes and some county services differ between the two sides.' },
             { question: 'What is the Northshore School District rating?', answer: 'Northshore School District is ranked #10 out of 247 school districts in Washington state. North Creek High School is consistently top 25 in the state. This is the primary reason families choose Bothell over comparable cities.' },
             { question: 'Is Bothell expensive to live in?', answer: 'Yes, relatively. Median home prices in Bothell are around $1.1M as of 2025  -  some of the highest in Snohomish County. But compared to equivalent homes in King County cities at similar distance from Bellevue or Seattle, Bothell still represents value. Families consistently cite schools and lifestyle as justifying the price.' },
-            { question: 'How far is Bothell from Microsoft and Amazon?', answer: 'Bothell to Microsoft\'s Redmond campus: approximately 20 minutes via I-405 without traffic. To Amazon\'s Seattle headquarters: 30–40 minutes via I-405 or SR-522 to the University District, then downtown. Many Bothell residents at Amazon specifically commute to the Eastside office campuses.' },
+            { question: 'How far is Bothell from Microsoft and Amazon?', answer: 'Bothell to Microsoft\'s Redmond campus: approximately 20 minutes via I-405 without traffic. To Amazon\'s Seattle headquarters: 30 to 40 minutes via I-405 or SR-522 to the University District, then downtown. Many Bothell residents at Amazon specifically commute to the Eastside office campuses.' },
             { question: 'What neighborhoods in Bothell are best for families?', answer: 'The Canyon Park area (zip 98021) and North Bothell feed into North Creek High School  -  the most in-demand school in the district. The Shelby Creek, North Creek, and Canyon Park neighborhoods specifically offer newer construction, good trail access, and proximity to the UW Bothell campus.' },
           ]}
         />

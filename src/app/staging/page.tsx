@@ -58,7 +58,7 @@ export default function StagingPage() {
           Staging isn't about decoration - it's about psychology. Every piece of furniture, every color choice, every lighting
           adjustment is designed to help buyers envision themselves in your home. Professional staging removes distractions,
           highlights your home's best features, and creates an emotional connection that translates directly to higher offers
-          and faster sales. Staging also distracts from any flaws the home has — which can actually save sellers money, because the home doesn't have to be 100% perfect when it's staged.
+          and faster sales. Staging also distracts from any flaws the home has, which can actually save sellers money, because the home doesn't have to be 100% perfect when it's staged.
         </p>
       </section>
 
@@ -248,7 +248,7 @@ export default function StagingPage() {
             },
             {
               title: 'Staging Results in Higher Offers',
-              description: "Staged homes sell 30–50% faster and typically 3–8% higher than non-staged homes. In my experience, staging is one of the highest-ROI investments a seller can make — you'll typically make 2–5× what you invest.",
+              description: "Staged homes sell 30 to 50% faster and typically 3 to 8% higher than non-staged homes. In my experience, staging is one of the highest-ROI investments a seller can make, you'll typically make 2 to 5× what you invest.",
             },
           ].map((item, idx) => (
             <div

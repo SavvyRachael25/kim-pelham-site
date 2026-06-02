@@ -18,7 +18,7 @@ export default function PotlatchBlogPost() {
         <div style={{ position: 'relative', width: '100%', height: 'clamp(280px, 50vw, 540px)' }}>
           <Image
             src="/images/potlatch-03-sound-view.jpg"
-            alt="Puget Sound view from 1406 Potlatch Beach Road, Marysville WA — sweeping water vista"
+            alt="Puget Sound view from 1406 Potlatch Beach Road, Marysville WA, sweeping water vista"
             fill
             priority
             quality={90}
@@ -95,7 +95,7 @@ export default function PotlatchBlogPost() {
                 margin: '10px 0 0 0',
               }}
             >
-              Potlatch Beach Road, Marysville WA — same Sound, same sunsets, different price tag
+              Potlatch Beach Road, Marysville WA, same Sound, same sunsets, different price tag
             </p>
           </div>
         </div>
@@ -197,7 +197,7 @@ export default function PotlatchBlogPost() {
             >
               <iframe
                 src="https://www.youtube.com/embed/BekwRDZCUK0"
-                title="Waterfront Views — 1406 Potlatch Beach Road, Marysville WA"
+                title="Waterfront Views · 1406 Potlatch Beach Road, Marysville WA"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowFullScreen
                 style={{
@@ -219,7 +219,7 @@ export default function PotlatchBlogPost() {
                 margin: '0 0 36px 0',
               }}
             >
-              the sunset reel — see why the price feels like a typo
+              the sunset reel, see why the price feels like a typo
             </p>
 
             <h2
@@ -376,7 +376,7 @@ export default function PotlatchBlogPost() {
                   margin: '0 0 20px 0',
                 }}
               >
-                1406 Potlatch Beach Road — Property Snapshot
+                1406 Potlatch Beach Road, Property Snapshot
               </p>
               <div
                 style={{

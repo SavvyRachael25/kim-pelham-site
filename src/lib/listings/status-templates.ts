@@ -221,7 +221,7 @@ export function buildCascade(row: ListingRow): Cascade {
           `${addr} is closed. Another Snohomish County chapter, start to finish. If you are wondering what your home could do in this market, that is exactly the conversation I like to have.`,
         listingUrl: row.listingUrl,
       };
-      skipped.push({ key: 'social', reason: 'No square "Just Sold" social graphic in the studio yet — build meta-ad-just-sold to enable IG/FB/GBP.' });
+      skipped.push({ key: 'social', reason: 'No square "Just Sold" social graphic in the studio yet, build meta-ad-just-sold to enable IG/FB/GBP.' });
       break;
     }
     case 'coming-soon':

@@ -53,12 +53,12 @@ const RANGES: { id: Range; label: string }[] = [
 ];
 
 function formatNumber(n: number | undefined): string {
-  if (n === undefined || n === null || Number.isNaN(n)) return '—';
+  if (n === undefined || n === null || Number.isNaN(n)) return ', ';
   return new Intl.NumberFormat('en-US').format(Math.round(n));
 }
 
 function formatDuration(seconds: number | undefined): string {
-  if (!seconds || Number.isNaN(seconds)) return '—';
+  if (!seconds || Number.isNaN(seconds)) return ', ';
   const m = Math.floor(seconds / 60);
   const s = Math.round(seconds % 60);
   if (m === 0) return `${s}s`;
@@ -66,10 +66,10 @@ function formatDuration(seconds: number | undefined): string {
 }
 
 function bounceRate(stats: UmamiStats | undefined): string {
-  if (!stats) return '—';
+  if (!stats) return ', ';
   const v = stats.visits ?? 0;
   const b = stats.bounces ?? 0;
-  if (v === 0) return '—';
+  if (v === 0) return ', ';
   return `${((b / v) * 100).toFixed(1)}%`;
 }
 

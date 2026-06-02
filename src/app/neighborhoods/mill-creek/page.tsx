@@ -8,10 +8,10 @@ import InnerHero from '@/components/InnerHero';
 import FAQSection from '@/components/FAQSection';
 
 const stats = [
-  { label: 'Median Home Price', value: '$925K–$1.09M', sub: '2025 range' },
-  { label: 'Avg Days on Market', value: '22–39 days', sub: 'hot homes sell faster' },
+  { label: 'Median Home Price', value: '$925K to $1.09M', sub: '2025 range' },
+  { label: 'Avg Days on Market', value: '22 to 39 days', sub: 'hot homes sell faster' },
   { label: 'Notable School', value: 'Jackson HS', sub: '5-star rated, top 30 in WA' },
-  { label: 'Commute to Seattle', value: '35–45 min', sub: 'via I-5' },
+  { label: 'Commute to Seattle', value: '35 to 45 min', sub: 'via I-5' },
 ];
 
 const insiderFacts = [
@@ -140,9 +140,9 @@ export default function MillCreekPage() {
           faqs={[
             { question: 'Is Mill Creek WA a good place to live?', answer: 'Consistently rated one of the best places to live in Snohomish County. The combination of top-tier schools, an embedded trail network, a genuine Town Center, and well-maintained neighborhoods makes it the benchmark suburb that other Snohomish County cities get compared to.' },
             { question: 'What school district is Mill Creek WA in?', answer: 'Mill Creek falls within the Everett School District, but specifically feeds into the Henry M. Jackson High School cluster  -  which performs dramatically above the Everett School District average. Jackson is 5-star rated and top 30 in Washington state. Always confirm the school boundary at the specific address you\'re considering, as district assignment depends on exact location.' },
-            { question: 'How much does a home cost in Mill Creek WA?', answer: 'Median home prices in Mill Creek run $925K–$1.09M in 2025. Entry-level homes (smaller or older construction) can be found in the $750K–$900K range. Premium homes backing up to the golf course or on the larger lots can exceed $1.5M. The premium reflects the school district and planned community infrastructure.' },
+            { question: 'How much does a home cost in Mill Creek WA?', answer: 'Median home prices in Mill Creek run $925K to $1.09M in 2025. Entry-level homes (smaller or older construction) can be found in the $750K to $900K range. Premium homes backing up to the golf course or on the larger lots can exceed $1.5M. The premium reflects the school district and planned community infrastructure.' },
             { question: 'Does Mill Creek WA have an HOA?', answer: 'Many subdivisions in Mill Creek have HOAs, though not all. The planned community structure means there are design standards throughout the city even in non-HOA areas. When you\'re seriously considering a property, I\'ll pull the specific HOA information, dues, and CC&Rs as part of the due diligence process.' },
-            { question: 'How far is Mill Creek WA from Seattle?', answer: 'Mill Creek is about 20 miles north of Seattle  -  typically 35–45 minutes via I-5 without traffic, 50–70 minutes during rush hour. To Bellevue via I-405, the drive is typically 25–35 minutes. Mill Creek\'s central location between the two makes it appealing for households where one person commutes each direction.' },
+            { question: 'How far is Mill Creek WA from Seattle?', answer: 'Mill Creek is about 20 miles north of Seattle  -  typically 35 to 45 minutes via I-5 without traffic, 50 to 70 minutes during rush hour. To Bellevue via I-405, the drive is typically 25 to 35 minutes. Mill Creek\'s central location between the two makes it appealing for households where one person commutes each direction.' },
           ]}
         />
 

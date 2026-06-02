@@ -30,7 +30,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               {
                 "@type": "Question",
                 "name": "When is the best time to downsize your home as a senior?",
-                "acceptedAnswer": { "@type": "Answer", "text": "The best time to downsize is typically when two or more of these conditions are true: home maintenance has become burdensome, the home is larger than daily life requires, equity represents a significant untapped financial resource, and you have a clear vision of where you want to go next. Downsizing before a health or financial crisis — proactively, on your own timeline — consistently produces better outcomes than downsizing reactively under pressure." }
+                "acceptedAnswer": { "@type": "Answer", "text": "The best time to downsize is typically when two or more of these conditions are true: home maintenance has become burdensome, the home is larger than daily life requires, equity represents a significant untapped financial resource, and you have a clear vision of where you want to go next. Downsizing before a health or financial crisis, proactively, on your own timeline, consistently produces better outcomes than downsizing reactively under pressure." }
               },
               {
                 "@type": "Question",
@@ -45,7 +45,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               {
                 "@type": "Question",
                 "name": "How long does the downsizing process take for seniors in Snohomish County?",
-                "acceptedAnswer": { "@type": "Answer", "text": "Most seniors benefit from a 60–90 day preparation period before listing — longer than the 2–3 weeks a typical seller needs. This accounts for decluttering, sorting belongings with family, making light repairs, and emotionally processing the transition. The actual sale, once listed, typically takes 2–6 weeks in active Snohomish County markets. Total timeline from decision to closing: plan for 3–6 months to do it thoughtfully." }
+                "acceptedAnswer": { "@type": "Answer", "text": "Most seniors benefit from a 60 to 90 day preparation period before listing, longer than the 2 to 3 weeks a typical seller needs. This accounts for decluttering, sorting belongings with family, making light repairs, and emotionally processing the transition. The actual sale, once listed, typically takes 2 to 6 weeks in active Snohomish County markets. Total timeline from decision to closing: plan for 3 to 6 months to do it thoughtfully." }
               }
             ]
           })

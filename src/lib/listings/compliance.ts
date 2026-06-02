@@ -178,7 +178,7 @@ const RULES: ComplianceRule[] = [
     severity: 'warn',
     pattern: /\b(55\+|age[\s-]?restricted|senior\s+(living|community))\b/i,
     message:
-      '55+/age-restricted may be a valid HOPA community — confirm it qualifies before publishing.',
+      '55+/age-restricted may be a valid HOPA community, confirm it qualifies before publishing.',
   },
   // ── Fair Housing — sex / gender ───────────────────────────────────────
   {
@@ -196,7 +196,7 @@ const RULES: ComplianceRule[] = [
     severity: 'block',
     pattern: /\b(safe|crime[\s-]?free|low[\s-]?crime)\s+(neighborhood|area|community|street|block)\b/i,
     message:
-      '"Safe neighborhood" implies other areas are unsafe — classic steering proxy (FHA). Remove.',
+      '"Safe neighborhood" implies other areas are unsafe, classic steering proxy (FHA). Remove.',
   },
   {
     id: 'fh-steering-schools',
@@ -227,7 +227,7 @@ const RULES: ComplianceRule[] = [
     severity: 'warn',
     pattern:
       /\b(act\s+now|don'?t\s+miss|limited\s+time|hurry|last\s+chance|won'?t\s+last|must\s+sell|once[\s-]in[\s-]a[\s-]lifetime)\b/i,
-    message: 'Urgency tactic — against Kim\'s voice rules. Soften or remove.',
+    message: 'Urgency tactic, against Kim\'s voice rules. Soften or remove.',
   },
   {
     id: 'brand-superlative',

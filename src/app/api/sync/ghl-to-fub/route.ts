@@ -223,11 +223,11 @@ export async function POST(req: NextRequest) {
   if (PELHAM_WEBHOOK_SECRET) {
     const provided = req.headers.get('x-pelham-webhook-secret');
     if (provided !== PELHAM_WEBHOOK_SECRET) {
-      console.warn('[ghl-to-fub] Webhook secret mismatch — rejecting');
+      console.warn('[ghl-to-fub] Webhook secret mismatch, rejecting');
       return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
     }
   } else {
-    console.warn('[ghl-to-fub] PELHAM_WEBHOOK_SECRET not set — running unauthenticated (NOT recommended)');
+    console.warn('[ghl-to-fub] PELHAM_WEBHOOK_SECRET not set, running unauthenticated (NOT recommended)');
   }
 
   let body: GHLContactPayload;
@@ -324,7 +324,7 @@ export async function POST(req: NextRequest) {
         '',
         'Auto-response email is handled by the GHL workflow (Send Email action).',
       ].filter(Boolean);
-      await postFubNote(FUB_API_KEY, newPersonId, 'Website lead — auto-captured', lines.join('\n'));
+      await postFubNote(FUB_API_KEY, newPersonId, 'Website lead, auto-captured', lines.join('\n'));
     } catch (err) {
       console.error('[ghl-to-fub] Failed to add audit note:', (err as Error).message);
     }

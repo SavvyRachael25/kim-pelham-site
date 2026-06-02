@@ -203,12 +203,12 @@ export default function RootLayout({
                     },
                     {
                       "@type": "CreativeWork",
-                      "name": "Washington State Department of Licensing — Real Estate Broker License Lookup",
+                      "name": "Washington State Department of Licensing Real Estate Broker License Lookup",
                       "url": "https://professionals.dol.wa.gov/s/license-lookup"
                     },
                     {
                       "@type": "CreativeWork",
-                      "name": "The Daily Herald — Best of Snohomish County",
+                      "name": "The Daily Herald Best of Snohomish County",
                       "url": "https://www.heraldnet.com/"
                     },
                     {
@@ -373,12 +373,12 @@ export default function RootLayout({
                     },
                     {
                       "@type": "CreativeWork",
-                      "name": "Washington State Department of Licensing — Real Estate Broker License Lookup",
+                      "name": "Washington State Department of Licensing Real Estate Broker License Lookup",
                       "url": "https://professionals.dol.wa.gov/s/license-lookup"
                     },
                     {
                       "@type": "CreativeWork",
-                      "name": "The Daily Herald — Best of Snohomish County",
+                      "name": "The Daily Herald Best of Snohomish County",
                       "url": "https://www.heraldnet.com/"
                     },
                     {

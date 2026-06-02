@@ -163,7 +163,7 @@ export default function MobileListingsPopup() {
           >
             <Image
               src="/images/potlatch-gallery-04-dramatic-mountains.jpg"
-              alt="Marysville waterfront — 1406 Potlatch Beach Road"
+              alt="Marysville waterfront, 1406 Potlatch Beach Road"
               fill
               sizes="50vw"
               style={{ objectFit: 'cover' }}
@@ -200,7 +200,7 @@ export default function MobileListingsPopup() {
           >
             <Image
               src="/images/mukilteo-01-front-exterior.jpg"
-              alt="Mukilteo view-first remodel — 4611 76th Street SW"
+              alt="Mukilteo view-first remodel, 4611 76th Street SW"
               fill
               sizes="50vw"
               style={{ objectFit: 'cover' }}

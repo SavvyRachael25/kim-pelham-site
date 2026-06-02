@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   description:
     '50 feet of high-bank Puget Sound waterfront. 3 bedrooms + 2 bonus rooms, 2 ensuite bathrooms, 1,662 sqft on 0.36 acres. $799,900. MLS# 2504310. Contact Kim Pelham (425) 250-9422.',
   openGraph: {
-    title: 'A $3M View for Under $1M | 1406 Potlatch Beach Road — Waterfront Marysville',
+    title: 'A $3M View for Under $1M | 1406 Potlatch Beach Road · Waterfront Marysville',
     description:
       '50 feet of high-bank Puget Sound waterfront. 3 bedrooms + 2 bonus rooms, 2 ensuite bathrooms, 1,662 sqft on 0.36 acres. $799,900. MLS# 2504310.',
     images: [{ url: '/images/potlatch-brien-sunset-og.jpg', width: 1200, height: 630 }],
@@ -103,9 +103,9 @@ export default function PotlatchLayout({ children }: { children: React.ReactNode
   const openHouseSchema = {
     '@context': 'https://schema.org',
     '@type': 'Event',
-    name: 'Open House — 1406 Potlatch Beach Road, Marysville WA',
+    name: 'Open House · 1406 Potlatch Beach Road, Marysville WA',
     description:
-      'Public open house at 1406 Potlatch Beach Road, Marysville WA — a $799,900 high-bank Puget Sound waterfront home with 50 feet of frontage, 3 bedrooms plus 2 bonus rooms, 1,662 square feet, panoramic Sound and Olympic Mountain views. Hosted by Kim Pelham, The Pelham Group NW. Walk through, ask questions, no appointment needed.',
+      'Public open house at 1406 Potlatch Beach Road, Marysville WA, a $799,900 high-bank Puget Sound waterfront home with 50 feet of frontage, 3 bedrooms plus 2 bonus rooms, 1,662 square feet, panoramic Sound and Olympic Mountain views. Hosted by Kim Pelham, The Pelham Group NW. Walk through, ask questions, no appointment needed.',
     startDate: '2026-05-17T13:00:00-07:00',
     endDate: '2026-05-17T15:00:00-07:00',
     eventStatus: 'https://schema.org/EventScheduled',

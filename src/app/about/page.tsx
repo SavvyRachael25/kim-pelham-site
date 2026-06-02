@@ -125,7 +125,7 @@ export default function AboutPage() {
                 margin: 0,
               }}
             >
-              I'm a lifelong Pacific Northwesterner. I lived in Ballard until I was about eight, and spent enough of my teenage years there to meet my husband Brien — he went to Ballard High. Today, home base is Snohomish County, where I've built 17+ years in real estate (including three years in commercial property management). This isn't just where I work. It's where I raise my family, where my kids went to school, and where I actually know my neighbors.
+              I'm a lifelong Pacific Northwesterner. I lived in Ballard until I was about eight, and spent enough of my teenage years there to meet my husband Brien, he went to Ballard High. Today, home base is Snohomish County, where I've built 17+ years in real estate (including three years in commercial property management). This isn't just where I work. It's where I raise my family, where my kids went to school, and where I actually know my neighbors.
             </p>
           </div>
         </div>
@@ -449,7 +449,7 @@ export default function AboutPage() {
               {
                 step: 3,
                 title: 'Staging',
-                desc: 'Professional staging — psychology-driven, magazine quality.',
+                desc: 'Professional staging, psychology-driven, magazine quality.',
               },
               {
                 step: 4,

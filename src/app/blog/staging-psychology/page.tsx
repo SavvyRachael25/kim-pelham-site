@@ -34,7 +34,7 @@ export default function StagingPsychologyPage() {
                 fontWeight: 700,
               }}
             >
-              Home staging works — and the data is not subtle about it. Staged homes sell faster, attract more showings, and command higher prices than their unstaged counterparts. The reason isn't magic; it's neuroscience. Buyers make emotional decisions in the first 90 seconds, and staging is how you win those 90 seconds.
+              Home staging works, and the data is not subtle about it. Staged homes sell faster, attract more showings, and command higher prices than their unstaged counterparts. The reason isn't magic; it's neuroscience. Buyers make emotional decisions in the first 90 seconds, and staging is how you win those 90 seconds.
             </p>
 
             {/* Stat Callout Box */}
@@ -65,7 +65,7 @@ export default function StagingPsychologyPage() {
                 marginBottom: '24px',
               }}
             >
-              Home staging isn't about deception or creating a fairy tale. It's about removing the barriers between a buyer's imagination and their vision of home. When I work with clients to stage their homes, I'm not just arranging furniture — I'm shaping emotions. And when it comes to real estate, emotions drive decisions that change lives.
+              Home staging isn't about deception or creating a fairy tale. It's about removing the barriers between a buyer's imagination and their vision of home. When I work with clients to stage their homes, I'm not just arranging furniture, I'm shaping emotions. And when it comes to real estate, emotions drive decisions that change lives.
             </p>
 
             <h2
@@ -102,7 +102,7 @@ export default function StagingPsychologyPage() {
                 marginBottom: '24px',
               }}
             >
-              When a buyer enters a home, their brain is processing multiple sensory inputs simultaneously: light, smell, color, scale, and arrangement. If those inputs feel cohesive and welcoming, the buyer's amygdala — the emotional center of the brain — responds positively. They relax. They smile. They imagine themselves in the space. This is when love begins. It's not a logical exercise; it's a visceral one. I've watched buyers walk into a beautifully staged Bothell craftsman and turn to their spouse before they've even made it to the living room. That look? That's an offer forming in real time.
+              When a buyer enters a home, their brain is processing multiple sensory inputs simultaneously: light, smell, color, scale, and arrangement. If those inputs feel cohesive and welcoming, the buyer's amygdala, the emotional center of the brain, responds positively. They relax. They smile. They imagine themselves in the space. This is when love begins. It's not a logical exercise; it's a visceral one. I've watched buyers walk into a beautifully staged Bothell craftsman and turn to their spouse before they've even made it to the living room. That look? That's an offer forming in real time.
             </p>
 
             <h2
@@ -139,7 +139,7 @@ export default function StagingPsychologyPage() {
                 marginBottom: '24px',
               }}
             >
-              When we stage a home, we remove 30–50% of personal items and furniture. Yes, this makes rooms look larger — but more importantly, it gives the buyer's brain space to breathe. Suddenly, they can see themselves in the space. They can envision their own furniture, their own family moments. The home becomes a canvas for their dreams, not a museum of yours. This is especially important in the $450K–$750K range that describes much of Snohomish County — these buyers have high expectations and limited patience for homes that feel busy.
+              When we stage a home, we remove 30 to 50% of personal items and furniture. Yes, this makes rooms look larger, but more importantly, it gives the buyer's brain space to breathe. Suddenly, they can see themselves in the space. They can envision their own furniture, their own family moments. The home becomes a canvas for their dreams, not a museum of yours. This is especially important in the $450K to $750K range that describes much of Snohomish County, these buyers have high expectations and limited patience for homes that feel busy.
             </p>
 
             <h2
@@ -164,7 +164,7 @@ export default function StagingPsychologyPage() {
                 marginBottom: '24px',
               }}
             >
-              Color and lighting communicate before anything else. Bright, natural light is universally perceived as welcoming and healthy. Dark, dim interiors trigger subtle anxiety. This is evolutionary — our brains associate light with safety and darkness with threat.
+              Color and lighting communicate before anything else. Bright, natural light is universally perceived as welcoming and healthy. Dark, dim interiors trigger subtle anxiety. This is evolutionary, our brains associate light with safety and darkness with threat.
             </p>
 
             <p
@@ -176,7 +176,7 @@ export default function StagingPsychologyPage() {
                 marginBottom: '24px',
               }}
             >
-              When staging Snohomish County homes, I always focus on maximizing natural light. Open curtains, trim tree branches that block windows, and add strategic mirrors to reflect light throughout the space. For color, neutral tones — soft whites, warm grays, gentle beiges — create a sense of calm and allow buyers to project their own style onto the space. Bold, personal colors, while beautiful, can feel limiting to a buyer who needs to imagine their own life there. Staged homes should feel like a thoughtful blank canvas, not someone else's statement.
+              When staging Snohomish County homes, I always focus on maximizing natural light. Open curtains, trim tree branches that block windows, and add strategic mirrors to reflect light throughout the space. For color, neutral tones, soft whites, warm grays, gentle beiges, create a sense of calm and allow buyers to project their own style onto the space. Bold, personal colors, while beautiful, can feel limiting to a buyer who needs to imagine their own life there. Staged homes should feel like a thoughtful blank canvas, not someone else's statement.
             </p>
 
             {/* Pull Quote */}
@@ -188,7 +188,7 @@ export default function StagingPsychologyPage() {
               borderRadius: '0 4px 4px 0',
             }}>
               <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 400, fontStyle: 'italic', color: 'var(--color-forest)', margin: 0, lineHeight: 1.6 }}>
-                "Buyers decide emotionally in the first 90 seconds — before they've checked the square footage or thought about the commute. Staging is how you win those 90 seconds."
+                "Buyers decide emotionally in the first 90 seconds, before they've checked the square footage or thought about the commute. Staging is how you win those 90 seconds."
               </p>
               <cite style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: 'var(--color-clay)', marginTop: '10px', display: 'block' }}>
                 Kim Pelham, Snohomish County Real Estate Broker
@@ -217,7 +217,7 @@ export default function StagingPsychologyPage() {
                 marginBottom: '24px',
               }}
             >
-              Every room needs a story. A bedroom becomes a sanctuary — serene, with clean lines and a cozy but uncluttered aesthetic. A living room becomes a gathering place — comfortable seating arranged for conversation, warm lighting that says "spend time here." A kitchen becomes the heart of the home — clean, organized, with a little touch of life (fresh flowers, fresh fruit in a bowl).
+              Every room needs a story. A bedroom becomes a sanctuary, serene, with clean lines and a cozy but uncluttered aesthetic. A living room becomes a gathering place, comfortable seating arranged for conversation, warm lighting that says "spend time here." A kitchen becomes the heart of the home, clean, organized, with a little touch of life (fresh flowers, fresh fruit in a bowl).
             </p>
 
             <p
@@ -229,7 +229,7 @@ export default function StagingPsychologyPage() {
                 marginBottom: '24px',
               }}
             >
-              The living room, primary bedroom, and kitchen move the needle most. These are the rooms buyers photograph in their minds. A stunning kitchen can offset a mediocre guest room. A spa-like primary suite can close a deal that the square footage alone never would have. Don't spread your staging budget equally — concentrate it where buyers spend the most emotional energy. When buyers can see themselves gathering with family in the living room, or starting their morning in that bright kitchen, the home transforms from a property into a lifestyle. That emotional connection is what tips the scale from "interested" to "in love."
+              The living room, primary bedroom, and kitchen move the needle most. These are the rooms buyers photograph in their minds. A stunning kitchen can offset a mediocre guest room. A spa-like primary suite can close a deal that the square footage alone never would have. Don't spread your staging budget equally, concentrate it where buyers spend the most emotional energy. When buyers can see themselves gathering with family in the living room, or starting their morning in that bright kitchen, the home transforms from a property into a lifestyle. That emotional connection is what tips the scale from "interested" to "in love."
             </p>
 
             <h2
@@ -254,7 +254,7 @@ export default function StagingPsychologyPage() {
                 marginBottom: '24px',
               }}
             >
-              Don't underestimate the power of smell. The olfactory sense is directly connected to memory and emotion. When a home smells fresh and clean — not over-perfumed, but genuinely fresh — it signals care and cleanliness. Fresh coffee brewing, fresh-cut flowers, or the subtle scent of lavender can create positive associations that a buyer carries with them long after they've left.
+              Don't underestimate the power of smell. The olfactory sense is directly connected to memory and emotion. When a home smells fresh and clean, not over-perfumed, but genuinely fresh, it signals care and cleanliness. Fresh coffee brewing, fresh-cut flowers, or the subtle scent of lavender can create positive associations that a buyer carries with them long after they've left.
             </p>
 
             <p
@@ -266,7 +266,7 @@ export default function StagingPsychologyPage() {
                 marginBottom: '40px',
               }}
             >
-              I always tell my clients: clean the home thoroughly, bake fresh bread or cookies before a showing, and crack a window. The combination of cleanliness, the aroma of baked goods, and fresh air creates a warm, welcoming emotional experience that registers deeply in a buyer's brain. These aren't tricks — they're honest ways to show your home at its absolute best. And in a competitive market like Snohomish County, showing at your absolute best is the only strategy worth having.
+              I always tell my clients: clean the home thoroughly, bake fresh bread or cookies before a showing, and crack a window. The combination of cleanliness, the aroma of baked goods, and fresh air creates a warm, welcoming emotional experience that registers deeply in a buyer's brain. These aren't tricks, they're honest ways to show your home at its absolute best. And in a competitive market like Snohomish County, showing at your absolute best is the only strategy worth having.
             </p>
 
             {/* FAQ Section */}
@@ -281,7 +281,7 @@ export default function StagingPsychologyPage() {
                   Does home staging really make a difference in Snohomish County?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  Absolutely. In competitive markets like Everett, Bothell, and Mill Creek, staged homes consistently attract more showings and stronger offers. Buyers in the $450K–$750K range — which describes much of Snohomish County — are emotionally driven. Staging gives them something to fall in love with.
+                  Absolutely. In competitive markets like Everett, Bothell, and Mill Creek, staged homes consistently attract more showings and stronger offers. Buyers in the $450K to $750K range, which describes much of Snohomish County, are emotionally driven. Staging gives them something to fall in love with.
                 </p>
               </div>
 
@@ -290,7 +290,7 @@ export default function StagingPsychologyPage() {
                   How much does home staging cost in Snohomish County?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  Professional staging in Snohomish County typically runs $1,500–$4,000 depending on home size and how much furniture is brought in. The ROI is almost always positive — staged homes routinely sell for 5–10% more than unstaged equivalents, which on a $600K home is $30,000–$60,000.
+                  Professional staging in Snohomish County typically runs $1,500 to $4,000 depending on home size and how much furniture is brought in. The ROI is almost always positive, staged homes routinely sell for 5 to 10% more than unstaged equivalents, which on a $600K home is $30,000 to $60,000.
                 </p>
               </div>
 
@@ -299,7 +299,7 @@ export default function StagingPsychologyPage() {
                   Can I stage my home myself?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  You can absolutely do a lot yourself — deep clean, declutter ruthlessly, remove personal photos, and maximize natural light. Where sellers usually need help is in furniture arrangement and knowing what to remove vs. keep. A one-hour consultation with a professional stager can make a huge difference even if you do the work yourself.
+                  You can absolutely do a lot yourself, deep clean, declutter ruthlessly, remove personal photos, and maximize natural light. Where sellers usually need help is in furniture arrangement and knowing what to remove vs. keep. A one-hour consultation with a professional stager can make a huge difference even if you do the work yourself.
                 </p>
               </div>
 
@@ -308,7 +308,7 @@ export default function StagingPsychologyPage() {
                   What rooms matter most for staging?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  The living room, primary bedroom, and kitchen move the needle most. These are the rooms buyers photograph in their minds. A stunning kitchen can offset a mediocre guest room. A spa-like primary suite can close the deal. Don't spread your staging budget equally — concentrate it where buyers spend the most emotional energy.
+                  The living room, primary bedroom, and kitchen move the needle most. These are the rooms buyers photograph in their minds. A stunning kitchen can offset a mediocre guest room. A spa-like primary suite can close the deal. Don't spread your staging budget equally, concentrate it where buyers spend the most emotional energy.
                 </p>
               </div>
 
@@ -317,7 +317,7 @@ export default function StagingPsychologyPage() {
                   Does Kim Pelham include staging help with her listings?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  Yes. Every Kim Pelham listing includes a staging consultation as part of her service. She walks through the home with sellers before listing and identifies the highest-impact changes — often simple adjustments that cost nothing but make a significant difference in how the home photographs and shows.
+                  Yes. Every Kim Pelham listing includes a staging consultation as part of her service. She walks through the home with sellers before listing and identifies the highest-impact changes, often simple adjustments that cost nothing but make a significant difference in how the home photographs and shows.
                 </p>
               </div>
             </section>

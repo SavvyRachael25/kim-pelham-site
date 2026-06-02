@@ -34,7 +34,7 @@ export default function SeniorDownsizingPage() {
                 fontWeight: 700,
               }}
             >
-              Senior downsizing in Snohomish County is one of the most meaningful — and most financially significant — transitions a homeowner can make. Done well, it frees up hundreds of thousands of dollars in equity, reduces your living costs, and opens the door to a lifestyle that fits who you are right now. Done poorly, it's stressful and leaves money on the table. The difference is having the right guidance, the right pace, and a broker who actually knows what they're doing with senior transitions.
+              Senior downsizing in Snohomish County is one of the most meaningful, and most financially significant, transitions a homeowner can make. Done well, it frees up hundreds of thousands of dollars in equity, reduces your living costs, and opens the door to a lifestyle that fits who you are right now. Done poorly, it's stressful and leaves money on the table. The difference is having the right guidance, the right pace, and a broker who actually knows what they're doing with senior transitions.
             </p>
 
             {/* Stat Callout Box */}
@@ -49,7 +49,7 @@ export default function SeniorDownsizingPage() {
                 $380,000+
               </p>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', margin: '0 0 8px 0', lineHeight: 1.6 }}>
-                Average home equity held by senior homeowners in Snohomish County — often their largest financial asset. Adults 65+ are the fastest-growing segment of home sellers in the Pacific Northwest.
+                Average home equity held by senior homeowners in Snohomish County, often their largest financial asset. Adults 65+ are the fastest-growing segment of home sellers in the Pacific Northwest.
               </p>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: '#595959', margin: 0 }}>
                 Source: 2024 AARP Housing Report
@@ -65,7 +65,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              Downsizing isn't about losing memories or stepping backward — it's about gaining freedom. In my years working with Snohomish County retirees, I've seen how the right move at the right time can transform this chapter of life into something truly exciting. Whether you're selling the family home or exploring new living options, this guide will help you navigate one of life's most meaningful decisions with clarity and confidence.
+              Downsizing isn't about losing memories or stepping backward, it's about gaining freedom. In my years working with Snohomish County retirees, I've seen how the right move at the right time can transform this chapter of life into something truly exciting. Whether you're selling the family home or exploring new living options, this guide will help you navigate one of life's most meaningful decisions with clarity and confidence.
             </p>
 
             <h2
@@ -90,7 +90,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              The reasons are deeply personal and beautifully practical. Many of my clients tell me they're tired of maintaining a four-bedroom house they don't need, with a yard that requires constant attention. There's the financial advantage too — selling a fully-appreciated home in Snohomish County can generate significant capital, whether that's for travel, healthcare, or creating a legacy for your children.
+              The reasons are deeply personal and beautifully practical. Many of my clients tell me they're tired of maintaining a four-bedroom house they don't need, with a yard that requires constant attention. There's the financial advantage too, selling a fully-appreciated home in Snohomish County can generate significant capital, whether that's for travel, healthcare, or creating a legacy for your children.
             </p>
 
             <p
@@ -102,7 +102,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              But there's something else, something less tangible: freedom. Freedom from the worry of home repairs, from the isolation of living alone in a large house, from the physical demands of maintenance. Downsizing allows you to focus on what matters most in this phase of life — relationships, experiences, and peace of mind. I hold the SRES (Senior Real Estate Specialist) designation specifically because I believe this transition deserves specialized expertise, not a generalist approach.
+              But there's something else, something less tangible: freedom. Freedom from the worry of home repairs, from the isolation of living alone in a large house, from the physical demands of maintenance. Downsizing allows you to focus on what matters most in this phase of life, relationships, experiences, and peace of mind. I hold the SRES (Senior Real Estate Specialist) designation specifically because I believe this transition deserves specialized expertise, not a generalist approach.
             </p>
 
             <h2
@@ -139,7 +139,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              I encourage my clients to take photographs of meaningful spaces and objects before they go. Some create photo albums or even small videos documenting the home's history. This creates closure while honoring the memories. One client took photos of each room and wrote a note about what that space meant to her family — it became a treasure for her grandchildren to read someday. This is the part of my work that I find most meaningful, and it's something no algorithm or iBuyer can ever replicate.
+              I encourage my clients to take photographs of meaningful spaces and objects before they go. Some create photo albums or even small videos documenting the home's history. This creates closure while honoring the memories. One client took photos of each room and wrote a note about what that space meant to her family, it became a treasure for her grandchildren to read someday. This is the part of my work that I find most meaningful, and it's something no algorithm or iBuyer can ever replicate.
             </p>
 
             {/* Pull Quote */}
@@ -192,7 +192,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              I recommend decluttering aggressively — and I mean that kindly. Remove personal items, family photos, and collections that make the space feel smaller or overly specific. Open closets, clear countertops, and make rooms feel spacious and move-in ready. Fresh paint in neutral tones, updated lighting, and clean landscaping can add years of appeal to an older home. The goal is to help buyers envision themselves in the space. I connect my downsizing clients with trusted estate sale professionals and senior move managers throughout Snohomish County — you don't have to figure out the logistics alone.
+              I recommend decluttering aggressively, and I mean that kindly. Remove personal items, family photos, and collections that make the space feel smaller or overly specific. Open closets, clear countertops, and make rooms feel spacious and move-in ready. Fresh paint in neutral tones, updated lighting, and clean landscaping can add years of appeal to an older home. The goal is to help buyers envision themselves in the space. I connect my downsizing clients with trusted estate sale professionals and senior move managers throughout Snohomish County, you don't have to figure out the logistics alone.
             </p>
 
             <h2
@@ -217,7 +217,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              Snohomish County offers wonderful options for downsizing. There are 55+ active adult communities in Bothell, Everett, and Marysville — designed with single-level living, social amenities, and low-maintenance lifestyles in mind. Single-level condos in walkable areas of Edmonds or downtown Everett give you proximity to restaurants, shops, and medical services. Smaller single-family homes closer to family members are another popular choice. Some clients even use the equity from their sale to explore the broader Pacific Northwest and move closer to their dream retirement destination.
+              Snohomish County offers wonderful options for downsizing. There are 55+ active adult communities in Bothell, Everett, and Marysville, designed with single-level living, social amenities, and low-maintenance lifestyles in mind. Single-level condos in walkable areas of Edmonds or downtown Everett give you proximity to restaurants, shops, and medical services. Smaller single-family homes closer to family members are another popular choice. Some clients even use the equity from their sale to explore the broader Pacific Northwest and move closer to their dream retirement destination.
             </p>
 
             <p
@@ -229,7 +229,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              The key is thinking beyond square footage. Consider proximity to healthcare, walkability, community offerings, and whether you want to be in town or in a quieter setting. Think about future needs too — will this home work in five or ten years? The best downsize moves aren't just about right now; they're about the next chapter you're building. As your SRES-certified broker, I know these submarkets in detail and can help you match your lifestyle priorities to the right neighborhood.
+              The key is thinking beyond square footage. Consider proximity to healthcare, walkability, community offerings, and whether you want to be in town or in a quieter setting. Think about future needs too, will this home work in five or ten years? The best downsize moves aren't just about right now; they're about the next chapter you're building. As your SRES-certified broker, I know these submarkets in detail and can help you match your lifestyle priorities to the right neighborhood.
             </p>
 
             <h2
@@ -254,7 +254,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              For many retirees, the financial aspect of downsizing is significant. Your home represents one of your largest assets — and for Snohomish County seniors, that often means $380,000 or more in equity. Understanding the tax implications, transaction costs, and how the proceeds fit into your retirement plan is crucial. Washington has no state income tax, which is a real advantage for home sellers. Federally, the primary residence exclusion allows married couples to exclude up to $500,000 in capital gains from the sale. I always encourage my downsizing clients to consult with their CPA or financial advisor before finalizing plans.
+              For many retirees, the financial aspect of downsizing is significant. Your home represents one of your largest assets, and for Snohomish County seniors, that often means $380,000 or more in equity. Understanding the tax implications, transaction costs, and how the proceeds fit into your retirement plan is crucial. Washington has no state income tax, which is a real advantage for home sellers. Federally, the primary residence exclusion allows married couples to exclude up to $500,000 in capital gains from the sale. I always encourage my downsizing clients to consult with their CPA or financial advisor before finalizing plans.
             </p>
 
             <p
@@ -266,7 +266,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              What I can tell you is that selling strategically — with proper pricing, staging, and marketing — ensures you capture the full value of your home. In a market where a well-presented home in Snohomish County can exceed its asking price, the difference between a mediocre sale and an excellent one can be substantial. My sellers average 102.3% of asking price. On a $600,000 home, that's $24,000+ more in your retirement account.
+              What I can tell you is that selling strategically, with proper pricing, staging, and marketing, ensures you capture the full value of your home. In a market where a well-presented home in Snohomish County can exceed its asking price, the difference between a mediocre sale and an excellent one can be substantial. My sellers average 102.3% of asking price. On a $600,000 home, that's $24,000+ more in your retirement account.
             </p>
 
             <h2
@@ -291,7 +291,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '40px',
               }}
             >
-              There's no standard timeline for downsizing. Some clients sell their home and move within a few months. Others prefer to take their time, finding the perfect next space before letting go of the old one. Some even rent temporarily while they decide what's next. The best timeline is the one that feels right for you — not what feels rushed or pressured. I work at your pace, not mine. And if it's helpful, I'm glad to coordinate with your family members so everyone feels informed and confident throughout the process.
+              There's no standard timeline for downsizing. Some clients sell their home and move within a few months. Others prefer to take their time, finding the perfect next space before letting go of the old one. Some even rent temporarily while they decide what's next. The best timeline is the one that feels right for you, not what feels rushed or pressured. I work at your pace, not mine. And if it's helpful, I'm glad to coordinate with your family members so everyone feels informed and confident throughout the process.
             </p>
 
             {/* FAQ Section */}
@@ -306,7 +306,7 @@ export default function SeniorDownsizingPage() {
                   When is the right time for seniors to downsize in Snohomish County?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  There's no universal right time — but common triggers include when home maintenance feels overwhelming, when mobility or health needs change, when children have left, or when financial goals shift. The best time is when you feel ready, not when you feel forced. Kim works at your pace, not hers.
+                  There's no universal right time, but common triggers include when home maintenance feels overwhelming, when mobility or health needs change, when children have left, or when financial goals shift. The best time is when you feel ready, not when you feel forced. Kim works at your pace, not hers.
                 </p>
               </div>
 
@@ -333,7 +333,7 @@ export default function SeniorDownsizingPage() {
                   How do I handle a lifetime of belongings when downsizing?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  This is where most people feel stuck — and it's completely normal. Kim connects her downsizing clients with trusted estate sale professionals, senior move managers, and donation resources throughout Snohomish County. You don't have to figure this out alone, and you don't have to rush it.
+                  This is where most people feel stuck, and it's completely normal. Kim connects her downsizing clients with trusted estate sale professionals, senior move managers, and donation resources throughout Snohomish County. You don't have to figure this out alone, and you don't have to rush it.
                 </p>
               </div>
 
@@ -342,7 +342,7 @@ export default function SeniorDownsizingPage() {
                   What does it cost to work with Kim Pelham on a senior downsizing sale?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  Kim's seller commission is paid from closing proceeds — you don't pay anything out of pocket upfront. Her SRES certification means you get specialized expertise in senior transitions at no additional cost. She also coordinates with your family members if helpful, and moves at whatever pace feels right for your situation.
+                  Kim's seller commission is paid from closing proceeds, you don't pay anything out of pocket upfront. Her SRES certification means you get specialized expertise in senior transitions at no additional cost. She also coordinates with your family members if helpful, and moves at whatever pace feels right for your situation.
                 </p>
               </div>
             </section>

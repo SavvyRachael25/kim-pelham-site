@@ -10,7 +10,7 @@ import ScrollProgress from '@/components/ScrollProgress';
 const stats = [
   { number: '17+', label: 'Years serving Snohomish County', note: 'deep roots, not just a zip code' },
   { number: '6', label: 'Neighborhoods Kim calls home turf', note: 'Everett, Bothell, Mill Creek + more' },
-  { number: '2', label: 'Buyers max — ever', note: "you're not a number here" },
+  { number: '2', label: 'Buyers max, ever', note: "you're not a number here" },
   { number: '40+', label: 'Five-star reviews', note: '40 Google · 28 Zillow' },
 ];
 
@@ -19,14 +19,14 @@ const events = [
     cadence: 'Periodically',
     title: 'First-Time Buyer Workshops',
     description:
-      'Workshops on first-time buying happen periodically — call to find out when the next one is scheduled.',
+      'Workshops on first-time buying happen periodically, call to find out when the next one is scheduled.',
     cta: { label: 'Learn more', href: '/buyers' },
   },
   {
     cadence: 'Periodically',
     title: 'Senior Downsizing Seminars',
     description:
-      'Workshops on senior downsizing happen periodically — call to find out when the next one is scheduled.',
+      'Workshops on senior downsizing happen periodically, call to find out when the next one is scheduled.',
     cta: { label: 'Senior services', href: '/senior-services' },
   },
   {
@@ -42,7 +42,7 @@ const partnerships = [
   {
     icon: '🔨',
     title: 'Pelham Group NW Home Transition Team',
-    description: 'Pre-sale repairs and coordinated improvements — so you sell for more without the contractor stress.',
+    description: 'Pre-sale repairs and coordinated improvements, so you sell for more without the contractor stress.',
   },
   {
     icon: '📸',
@@ -52,7 +52,7 @@ const partnerships = [
   {
     icon: '🪑',
     title: 'Home Staging Specialists',
-    description: 'Kim handles staging herself or works with specialists — depending on what the home needs to shine.',
+    description: 'Kim handles staging herself or works with specialists, depending on what the home needs to shine.',
   },
   {
     icon: '📊',
@@ -201,7 +201,7 @@ export default function CommunityPage() {
                   marginBottom: '16px',
                 }}
               >
-                I've built my career on understanding the communities I serve — not just the market data, but the streets, the schools, the coffee shops, and the people. Snohomish County is my home. I live here, shop here, and raise my family here.
+                I've built my career on understanding the communities I serve, not just the market data, but the streets, the schools, the coffee shops, and the people. Snohomish County is my home. I live here, shop here, and raise my family here.
               </p>
               <p
                 style={{
@@ -267,7 +267,7 @@ export default function CommunityPage() {
                   margin: 0,
                 }}
               >
-                Most agents juggle 20+ clients. I cap mine at two buyers at any given time — so you get my full attention, not a callback from an assistant.
+                Most agents juggle 20+ clients. I cap mine at two buyers at any given time, so you get my full attention, not a callback from an assistant.
               </p>
             </div>
           </div>
@@ -379,7 +379,7 @@ export default function CommunityPage() {
                   key={idx}
                   href={n.href}
                   style={{ textDecoration: 'none' }}
-                  aria-label={`Explore ${n.name} — ${n.tagline}`}
+                  aria-label={`Explore ${n.name}, ${n.tagline}`}
                 >
                   <article
                     style={{
@@ -705,7 +705,7 @@ export default function CommunityPage() {
                 marginBottom: '40px',
               }}
             >
-              Whether you're thinking about buying, selling, or just want the honest truth about the market — I'm happy to have that conversation.
+              Whether you're thinking about buying, selling, or just want the honest truth about the market, I'm happy to have that conversation.
             </p>
             <Link
               href="/contact"

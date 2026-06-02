@@ -149,7 +149,7 @@ export default function ContactPage() {
                     lineHeight: 1.5,
                   }}
                 >
-                  Open the chat — Kim sees it on her phone in real time. Best for quick questions or to get a showing on the calendar.
+                  Open the chat, Kim sees it on her phone in real time. Best for quick questions or to get a showing on the calendar.
                 </div>
               </button>
 

@@ -73,7 +73,7 @@ const featuredRow = [
   {
     id: 7,
     name: 'Monroe',
-    description: 'Gateway to the Skykomish Valley — farms, river views, and room to breathe',
+    description: 'Gateway to the Skykomish Valley, farms, river views, and room to breathe',
     image: '/images/neighborhood-03-snohomish-historic.jpg',
     rotation: -1,
     comingSoon: true,
@@ -81,7 +81,7 @@ const featuredRow = [
   {
     id: 8,
     name: 'Edmonds',
-    description: 'Waterfront charm, arts district, and ferry views — one of the most livable small cities in Washington',
+    description: 'Waterfront charm, arts district, and ferry views, one of the most livable small cities in Washington',
     image: '/images/neighborhood-01-everett-marina.jpg',
     rotation: 1.5,
     comingSoon: true,
@@ -92,7 +92,7 @@ const comingSoonNeighborhoods = [
   {
     id: 9,
     name: 'Arlington',
-    description: 'Small-town feel with big outdoor access — foothills, rivers, and a tight-knit community',
+    description: 'Small-town feel with big outdoor access, foothills, rivers, and a tight-knit community',
     image: '/images/neighborhood-03-snohomish-historic.jpg',
     rotation: -0.5,
   },

@@ -37,7 +37,7 @@ export default function MukilteoPage() {
         <div style={{ position: 'relative', width: '100%', height: 'clamp(300px, 55vw, 600px)' }}>
           <Image
             src="/images/mukilteo-03-olympic-sunset.jpg"
-            alt="Olympic Mountains sunset view from 4611 76th Street SW — Mukilteo WA multi-gen home"
+            alt="Olympic Mountains sunset view from 4611 76th Street SW, Mukilteo WA multi-gen home"
             fill
             priority
             quality={90}
@@ -360,11 +360,11 @@ export default function MukilteoPage() {
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
             <div className="mukilteo-gallery" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr', gridTemplateRows: '260px 260px', gap: '8px' }}>
               {[
-                { src: '/images/mukilteo-09-deck-view.jpg', alt: 'View from the deck — Olympic Mountains across the Sound from 4611 76th Street SW', col: '1 / 2', row: '1 / 3' },
+                { src: '/images/mukilteo-09-deck-view.jpg', alt: 'View from the deck, Olympic Mountains across the Sound from 4611 76th Street SW', col: '1 / 2', row: '1 / 3' },
                 { src: '/images/mukilteo-05-kitchen-view.jpg', alt: 'Kitchen with bay window framing the Olympic Mountain view, quartz counters', col: '2 / 3', row: '1 / 2' },
                 { src: '/images/mukilteo-10-hot-tub.jpg', alt: 'Hot tub on side deck looking out at the Olympic Mountain view', col: '3 / 4', row: '1 / 2' },
-                { src: '/images/mukilteo-04-great-room.jpg', alt: 'Open-concept great room — half-wall remodel lets the view through to every space', col: '2 / 3', row: '2 / 3' },
-                { src: '/images/mukilteo-08-upper-deck.jpg', alt: 'Upper deck with patio set, gas grill, French doors — outdoor living facing the view', col: '3 / 4', row: '2 / 3' },
+                { src: '/images/mukilteo-04-great-room.jpg', alt: 'Open-concept great room, half-wall remodel lets the view through to every space', col: '2 / 3', row: '2 / 3' },
+                { src: '/images/mukilteo-08-upper-deck.jpg', alt: 'Upper deck with patio set, gas grill, French doors, outdoor living facing the view', col: '3 / 4', row: '2 / 3' },
               ].map((photo) => (
                 <div key={photo.src} style={{ position: 'relative', gridColumn: photo.col, gridRow: photo.row, borderRadius: '4px', overflow: 'hidden' }}>
                   <Image src={photo.src} alt={photo.alt} fill style={{ objectFit: 'cover' }} sizes="(max-width: 768px) 100vw, 33vw" />
@@ -735,7 +735,7 @@ export default function MukilteoPage() {
               },
               {
                 q: 'Can 4611 76th Street SW work for multi-generational living?',
-                a: 'Yes. The lower level has the 3rd and 4th bedrooms, a family room, a full bath, and a wet bar with a microwave (no cooktop) — so it can comfortably hold an adult child landing back home, a long-term guest, or a parent moving in. It is not a fully separate ADU, but it gives independent living space without needing to renovate.',
+                a: 'Yes. The lower level has the 3rd and 4th bedrooms, a family room, a full bath, and a wet bar with a microwave (no cooktop), so it can comfortably hold an adult child landing back home, a long-term guest, or a parent moving in. It is not a fully separate ADU, but it gives independent living space without needing to renovate.',
               },
               {
                 q: 'How many bedrooms does 4611 76th Street SW have?',

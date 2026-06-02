@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 
 export const metadata = {
   title: 'Privacy Policy | The Pelham Group NW',
-  description: 'Privacy Policy for The Pelham Group NW — how we collect, use, and protect your personal information.',
+  description: 'Privacy Policy for The Pelham Group NW, how we collect, use, and protect your personal information.',
 };
 
 const LEGAL_NAME = 'The Pelham Group NW';

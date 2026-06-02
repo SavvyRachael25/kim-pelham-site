@@ -27,7 +27,7 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: '9',
-    title: 'A $3 Million View for Under a Million — Potlatch Beach Road, Marysville',
+    title: 'A $3 Million View for Under a Million · Potlatch Beach Road, Marysville',
     slug: 'potlatch-beach-road-tulalip-waterfront',
     excerpt:
       'Seattle waterfront costs $3M+. This Puget Sound high-bank waterfront in Marysville is under $1M. Same Sound, same sunsets, radically different price tag. Here is why.',
@@ -39,7 +39,7 @@ const blogPosts: BlogPost[] = [
     title: 'The Everett Neighborhoods That Flood in November (And 3 That Don\'t)',
     slug: 'everett-neighborhoods-buyers-guide',
     excerpt:
-      '17 years and 50+ Everett homes sold. Here is what I actually know about the neighborhoods — which most people won\'t tell you until you ask.',
+      '17 years and 50+ Everett homes sold. Here is what I actually know about the neighborhoods, which most people won\'t tell you until you ask.',
     date: '2026-04-17',
     category: 'Buyer Guide',
   },
