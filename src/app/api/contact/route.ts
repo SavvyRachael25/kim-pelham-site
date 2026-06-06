@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { sendEmail } from '@/lib/resend';
 import { renderListingsWelcomeEmail } from '@/lib/emails/listings-welcome';
+import { sendOpsAlert } from '@/lib/ops-alerts';
 
 /**
  * POST /api/contact
@@ -199,6 +200,30 @@ export async function POST(req: NextRequest) {
   } catch {
     // non-fatal
   }
+
+  // Instant SMS to Kim (and any other ALERT_PHONE in env). Fires on every
+  // lead, code-level — independent of any GHL workflow. Replaces the
+  // historically-blank GHL workflow SMS. Speed is the moat: a 90-second
+  // text beats a 4-hour email every time. fire-and-forget; never blocks
+  // the response and never throws.
+  const utmTagBits = utmInfo.tags
+    .filter((t) => t.startsWith('utm-'))
+    .map((t) => t.replace(/^utm-/, ''));
+  const smsParts = [
+    'NEW LEAD',
+    customSource ?? 'website_contact_form',
+    [firstName, lastName].filter(Boolean).join(' ').trim() || '(no name)',
+    email || phone || '(no contact)',
+    phone && email ? phone : '',
+    interested ? `int: ${interested}` : '',
+    message ? `note: ${message.slice(0, 80)}` : '',
+    utmTagBits.length ? `via ${utmTagBits.join(' · ')}` : '',
+  ].filter(Boolean);
+  sendOpsAlert({
+    apiToken: GHL_API_TOKEN,
+    locationId: GHL_LOCATION_ID,
+    summary: smsParts.join(' · '),
+  }).catch(() => {});
 
   // Self-trigger the GHL->FUB sync directly instead of relying on the
   // GHL workflow webhook. The workflow only fires on "contact created"
