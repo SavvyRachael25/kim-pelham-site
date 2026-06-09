@@ -1,0 +1,148 @@
+/* ============================================================
+   PRE-SALE RENOVATION CAMPAIGN — ad + page helpers
+   Built on colors_and_type.css tokens. Loss-aversion lead-gen
+   creative for Kim Pelham's pre-sale concierge / GC service.
+   ============================================================ */
+
+/* ---------- Wordmark lockup (rebuilt from logo-horizontal.svg) ---------- */
+.kp-mark { display: inline-flex; align-items: center; gap: 14px; line-height: 1; }
+.kp-mark .kp-name {
+  font-family: var(--font-heading);
+  font-style: italic;
+  font-weight: 600;
+  color: var(--color-forest);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+}
+.kp-mark .kp-sub b, .kp-mark .kp-sub span { white-space: nowrap; }
+.kp-mark .kp-rule { width: 1.5px; align-self: stretch; background: var(--color-clay); opacity: 0.85; }
+.kp-mark .kp-sub {
+  display: flex; flex-direction: column; gap: 4px; justify-content: center;
+}
+.kp-mark .kp-sub b {
+  font-family: var(--font-body); font-weight: 700;
+  color: var(--color-forest);
+  text-transform: uppercase; letter-spacing: 0.18em; line-height: 1.1;
+}
+.kp-mark .kp-sub span {
+  font-family: var(--font-body); font-weight: 600;
+  color: var(--color-text-faint);
+  text-transform: uppercase; letter-spacing: 0.22em; line-height: 1.1;
+}
+.kp-mark.on-dark .kp-name { color: var(--color-cream); }
+.kp-mark.on-dark .kp-sub b { color: var(--color-cream); }
+.kp-mark.on-dark .kp-sub span { color: rgba(248,245,240,0.6); }
+.kp-mark.on-dark .kp-rule { background: var(--color-clay-light); }
+
+/* ---------- Eyebrow on light/dark ---------- */
+.eyebrow.on-dark { color: var(--color-clay-light); }
+
+/* ---------- Sticky handwritten tag ---------- */
+.sticky-tag {
+  display: inline-block;
+  font-family: var(--font-handwritten);
+  color: var(--color-cream);
+  background: var(--color-clay);
+  padding: 6px 18px 8px;
+  border-radius: 3px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
+  transform: rotate(-2.5deg);
+  line-height: 1;
+}
+
+/* ---------- Hand underline (clay squiggle), scalable ---------- */
+.squiggle { position: relative; display: inline-block; }
+.squiggle::after {
+  content: '';
+  position: absolute; left: -2%; bottom: -0.18em;
+  width: 104%; height: 0.34em;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12'%3E%3Cpath d='M2 8 Q30 2 60 7 Q90 12 120 6 Q150 1 180 7 Q195 10 198 8' fill='none' stroke='%23B8845C' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center;
+  background-size: 100% 100%;
+}
+.squiggle.light::after {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12'%3E%3Cpath d='M2 8 Q30 2 60 7 Q90 12 120 6 Q150 1 180 7 Q195 10 198 8' fill='none' stroke='%23d4a07a' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+/* ---------- Before / After comparison ---------- */
+.ba { position: relative; overflow: hidden; background: var(--color-cream-dark); }
+.ba image-slot { display: block; width: 100%; height: 100%; }
+
+.ba-split { display: grid; grid-template-columns: 1fr 1fr; }
+.ba-split .ba-half { position: relative; overflow: hidden; }
+.ba-divider {
+  position: absolute; top: 0; bottom: 0; left: 50%;
+  width: 4px; transform: translateX(-2px);
+  background: var(--color-clay);
+  box-shadow: 0 0 0 1px rgba(255,255,255,0.5);
+  z-index: 3;
+}
+.ba-stack { display: grid; grid-template-rows: 1fr 1fr; }
+.ba-stack .ba-half { position: relative; overflow: hidden; }
+.ba-stack .ba-divider { left: 0; right: 0; top: 50%; bottom: auto; width: auto; height: 4px; transform: translateY(-2px); }
+
+.ba-tag {
+  position: absolute; z-index: 4;
+  font-family: var(--font-body); font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.18em;
+  color: var(--color-cream);
+  background: rgba(26,26,26,0.55);
+  backdrop-filter: blur(2px);
+  padding: 7px 14px; border-radius: 2px;
+}
+.ba-tag.after { background: var(--color-forest); }
+
+/* arrow chip that sits on the divider */
+.ba-chip {
+  position: absolute; z-index: 5; left: 50%; top: 50%;
+  transform: translate(-50%,-50%);
+  width: 64px; height: 64px; border-radius: 999px;
+  background: var(--color-clay); color: var(--color-cream);
+  display: grid; place-items: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.28);
+  border: 3px solid var(--color-cream);
+}
+
+/* ---------- CTA bar ---------- */
+.cta-bar {
+  background: var(--color-forest);
+  color: var(--color-cream);
+  display: flex; align-items: center; gap: 20px;
+}
+.cta-pill {
+  display: inline-flex; align-items: center; gap: 10px;
+  background: var(--color-clay); color: var(--color-cream);
+  font-family: var(--font-body); font-weight: 700;
+  border-radius: 4px;
+  box-shadow: 0 4px 14px rgba(0,0,0,0.22);
+  white-space: nowrap;
+}
+.cta-bar .cta-meta { display: flex; flex-direction: column; line-height: 1.25; }
+.cta-bar .cta-meta b { font-family: var(--font-heading); font-weight: 700; color: var(--color-cream); }
+.cta-bar .cta-meta span { color: rgba(248,245,240,0.7); font-weight: 500; }
+
+/* ---------- Stat / award chips ---------- */
+.stat-chip { display: inline-flex; align-items: baseline; gap: 8px; }
+.stat-chip b { font-family: var(--font-heading); color: var(--color-clay); font-weight: 700; line-height: 1; }
+.stat-chip span { font-family: var(--font-body); color: var(--color-text-light); }
+
+.award-row { display: inline-flex; align-items: center; gap: 18px; }
+.award-row img { display: block; }
+
+/* ---------- generic forest texture overlay ---------- */
+.green-textured { position: relative; background: var(--color-forest); }
+.green-textured::before {
+  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.06;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M0 30 Q30 10 60 30 T120 30 M0 60 Q30 40 60 60 T120 60 M0 90 Q30 70 60 90 T120 90' fill='none' stroke='%23ffffff' stroke-width='2'/%3E%3C/svg%3E");
+}
+.green-textured > * { position: relative; z-index: 1; }
+
+/* ---------- Polaroid ---------- */
+.polaroid {
+  background: #fff; padding: 12px 12px 0;
+  box-shadow: var(--shadow-polaroid);
+}
+.polaroid .pol-img { position: relative; overflow: hidden; }
+.polaroid .pol-cap {
+  font-family: var(--font-handwritten); color: var(--color-text-light);
+  text-align: center; padding: 10px 4px 14px;
+}

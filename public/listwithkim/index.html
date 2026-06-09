@@ -1,471 +1,12 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>The Pre-Sale Renovation Playbook — Kim Pelham</title>
-<meta name="description" content="Don't list as-is and leave money on the table. Get Kim Pelham's free Pre-Sale Renovation Playbook — the updates that pay you back before you sell, with $0 upfront concierge prep in Snohomish County.">
-<meta property="og:title" content="Don't list as-is and leave $40,000 on the table.">
-<meta property="og:description" content="The free Pre-Sale Renovation Playbook — what to fix, what to skip, and how Kim fronts the cost so you pay nothing until closing.">
-<meta property="og:type" content="website">
-<style>/* ============================================================
-   THE PELHAM GROUP NW — Design Tokens
-   ----------------------------------------------------------
-   Lifted directly from src/app/globals.css in the production
-   codebase (SavvyRachael25/kim-pelham-site). Use these CSS
-   custom properties for ANY mock, slide, or production work
-   so the result feels native to the brand.
-   ============================================================ */
-
-/* Fonts — self-hosted via fonts.css. Variable-axis TTFs live
-   in /fonts/. Both files reference the same relative path so
-   either one can be the entry point. */
-/* ============================================================
-   Local @font-face declarations for The Pelham Group NW.
-
-   Cormorant Garamond, Inter, and Caveat — all variable-axis
-   TTFs from the official Google Fonts repository, OFL-1.1
-   licensed (see fonts/OFL-*.txt). Self-host these so prototypes
-   and print artifacts don't depend on a network round-trip.
-
-   Reference paths from the project root. If you import this
-   file from a sub-folder, the relative path "fonts/..." still
-   resolves because @font-face URLs are evaluated relative to
-   this stylesheet, not the importing document.
-   ============================================================ */
-
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: normal;
-  font-weight: 300 700;             /* variable axis */
-  font-display: swap;
-  src: url("6a8c54e0-5a6d-483e-8838-5c46c96fba3e.ttf") format('truetype-variations'),
-       url("6a8c54e0-5a6d-483e-8838-5c46c96fba3e.ttf") format('truetype');
-}
-@font-face {
-  font-family: 'Cormorant Garamond';
-  font-style: italic;
-  font-weight: 300 700;
-  font-display: swap;
-  src: url("022a8f92-383f-4407-99b3-1f209b2fc745.ttf") format('truetype-variations'),
-       url("022a8f92-383f-4407-99b3-1f209b2fc745.ttf") format('truetype');
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("a93ddecd-d12f-4f20-9dfc-62a7f887d323.ttf") format('truetype-variations'),
-       url("a93ddecd-d12f-4f20-9dfc-62a7f887d323.ttf") format('truetype');
-}
-@font-face {
-  font-family: 'Inter';
-  font-style: italic;
-  font-weight: 100 900;
-  font-display: swap;
-  src: url("b7cb2575-9c41-45ca-9fad-9bd9982f5432.ttf") format('truetype-variations'),
-       url("b7cb2575-9c41-45ca-9fad-9bd9982f5432.ttf") format('truetype');
-}
-
-/* Caveat — using the user-provided static weight files (Regular,
-   Medium, SemiBold, Bold). Each file is a single weight, so we
-   declare four faces rather than the variable axis. */
-@font-face {
-  font-family: 'Caveat';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("ef646094-27dd-4a75-8948-347df3625f00.ttf") format('truetype');
-}
-@font-face {
-  font-family: 'Caveat';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("24e487e9-cd6b-4ded-9080-89dc07b8fcdb.ttf") format('truetype');
-}
-@font-face {
-  font-family: 'Caveat';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("ebae040d-89a5-4fe0-8119-877c3189d383.ttf") format('truetype');
-}
-@font-face {
-  font-family: 'Caveat';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("8bf22c87-12ef-4281-a860-ceef7385983f.ttf") format('truetype');
-}
-
-
-:root {
-  /* ===== COLOR — RAW TOKENS ===== */
-  /* Forest — primary brand green. Used for nav text, h1-h4
-     color, dark sections, CTAs with handwritten labels. */
-  --color-forest:        #2F5233;
-  --color-forest-light:  #3d6b42;
-
-  /* Clay — accent. Used for the hand-drawn underline, all
-     handwritten micro-copy ("featured listings"), badges,
-     primary action buttons, hover-state underlines. */
-  --color-clay:          #B8845C;
-  --color-clay-light:    #d4a07a;
-  --color-clay-dark:     #A07550;   /* button :hover */
-
-  /* Cream — page background. Slightly warm off-white with
-     a fractal-noise paper texture baked in via globals.css. */
-  --color-cream:         #F8F5F0;
-  --color-cream-dark:    #F0EDE7;   /* secondary surface */
-  --color-cream-mint:    #EBF3EC;   /* "currently" banner bg */
-
-  /* Borders & lines */
-  --color-border:        #E8E3DA;
-
-  /* Text scale — warm near-black through faint */
-  --color-text:          #2C2C2C;
-  --color-text-light:    #555;
-  --color-text-muted:    #777;
-  --color-text-faint:    #888;
-  --color-dark:          #1a1a1a;   /* footer background */
-
-  /* Semantic accents (used sparingly) */
-  --color-pin-red:       #DC2626;   /* the NoteFromKim push-pin */
-  --color-white:         #FFFFFF;
-
-
-  /* ===== TYPOGRAPHY — FAMILIES ===== */
-  --font-heading:        'Cormorant Garamond', Georgia, serif;
-  --font-body:           'Inter', system-ui, -apple-system, sans-serif;
-  --font-handwritten:    'Caveat', cursive;
-
-
-  /* ===== TYPOGRAPHY — SEMANTIC ROLES =====
-     Use these in element rules below. Values are the same
-     ones used in the codebase's inline styles. */
-  --fs-h1:        clamp(32px, 7vw, 64px); /* @kind font */ /* Hero only */
-  --fs-h2:        40px;                     /* Section headers */
-  --fs-h3:        20px;                     /* Card titles */
-  --fs-h4:        16px;
-  --fs-body:      15px;                     /* Default paragraph */
-  --fs-body-lg:   18px;                     /* Hero paragraph */
-  --fs-small:     14px;
-  --fs-eyebrow:   0.78rem;                  /* All-caps mini-label */
-  --fs-hand-sm:   18px;                     /* Inline handwritten */
-  --fs-hand-md:   22px;                     /* "featured listings" */
-  --fs-hand-lg:   32px;                     /* "- Kim" signature */
-  --fs-stat:      44px;                     /* StatsStrip numbers */
-
-  --lh-tight:     1.2;   /* @kind font */
-  --lh-normal:    1.4;   /* @kind font */
-  --lh-body:      1.7;   /* @kind font */
-  --lh-prose:     1.8;   /* @kind font */
-
-  --tracking-eyebrow:  0.06em;
-  --tracking-stat:     1.5px;
-
-
-  /* ===== SPACING & LAYOUT ===== */
-  --space-1:   4px;
-  --space-2:   8px;
-  --space-3:   12px;
-  --space-4:   16px;
-  --space-5:   24px;
-  --space-6:   32px;
-  --space-7:   48px;
-  --space-8:   64px;
-  --space-9:   80px;       /* standard section padding y */
-
-  --container-max:  1200px;
-  --container-prose: 700px;
-
-  /* Border radii — the brand is restrained on roundness */
-  --radius-xs:  2px;        /* buttons, small badges */
-  --radius-sm:  3px;        /* property badges */
-  --radius-md:  4px;        /* most buttons, cards */
-  --radius-lg:  6px;        /* property card outer */
-  --radius-pill: 999px;
-
-  /* Shadows — soft, never harsh */
-  --shadow-xs:  0 2px 8px rgba(0,0,0,0.06);
-  --shadow-sm:  0 4px 16px rgba(0,0,0,0.10);
-  --shadow-md:  0 8px 24px rgba(0,0,0,0.08);
-  --shadow-lg:  0 16px 40px rgba(47,82,51,0.14); /* forest-tinted hover */
-  --shadow-polaroid:  0 3px 12px rgba(0,0,0,0.10), 0 1px 3px rgba(0,0,0,0.06);
-
-  /* Motion */
-  --ease-out:        cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
-  --dur-fast:        0.2s;   /* @kind other */
-  --dur-base:        0.3s;   /* @kind other */
-  --dur-reveal:      0.8s;   /* @kind other */
-}
-
-
-/* ===== ELEMENT DEFAULTS =====
-   Drop colors_and_type.css into any prototype and these
-   selectors will get you 80% of the way to brand-correct
-   typography without writing inline styles. */
-
-html { scroll-behavior: smooth; }
-
-body {
-  font-family: var(--font-body);
-  color: var(--color-text);
-  line-height: var(--lh-body);
-  background-color: var(--color-cream);
-  /* Paper-noise texture lifted from globals.css */
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='256' height='256' filter='url(%23n)' opacity='0.025'/%3E%3C/svg%3E");
-}
-
-h1, h2, h3, h4 {
-  font-family: var(--font-heading);
-  color: var(--color-forest);
-  line-height: var(--lh-tight);
-  font-weight: 700;
-}
-h1 { font-size: var(--fs-h1); }
-h2 { font-size: var(--fs-h2); }
-h3 { font-size: var(--fs-h3); }
-h4 { font-size: var(--fs-h4); }
-
-p { font-size: var(--fs-body); }
-
-/* Eyebrow — the small uppercase tag above headlines.
-   Always Inter, always clay or muted. */
-.eyebrow {
-  font-family: var(--font-body);
-  font-size: var(--fs-eyebrow);
-  font-weight: 700;
-  color: var(--color-clay);
-  text-transform: uppercase;
-  letter-spacing: var(--tracking-stat);
-  margin: 0 0 var(--space-3) 0;
-}
-
-/* Handwritten micro-copy — lowercase, Caveat, clay color.
-   Used as warm in-line voice ("featured listings",
-   "your neighbor in real estate"). NEVER use for body copy. */
-.hand,
-.handwritten {
-  font-family: var(--font-handwritten);
-  font-size: var(--fs-hand-md);
-  color: var(--color-clay);
-}
-
-/* Hand-drawn underline — wraps an inline span under a word
-   you want to emphasize. The clay squiggle is an SVG. */
-.hand-underline { position: relative; display: inline; }
-.hand-underline::after {
-  content: '';
-  position: absolute;
-  left: 0; bottom: -4px;
-  width: 100%; height: 8px;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12'%3E%3Cpath d='M2 8 Q30 2 60 7 Q90 12 120 6 Q150 1 180 7 Q195 10 198 8' fill='none' stroke='%23B8845C' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center;
-  background-size: 100% 100%;
-}
-
-/* Buttons — three flavors */
-.btn-primary,         /* Clay, white text, the most common CTA */
-.btn-secondary,       /* Forest, cream text, handwritten label */
-.btn-ghost {          /* Underlined clay text link */
-  font-family: var(--font-body);
-  font-size: var(--fs-small);
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  text-decoration: none;
-  display: inline-block;
-  transition: background-color var(--dur-base) ease, box-shadow var(--dur-base) ease, color var(--dur-fast);
-}
-.btn-primary {
-  background: var(--color-clay);
-  color: var(--color-white);
-  padding: 11px 26px;
-  border-radius: var(--radius-md);
-  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-}
-.btn-primary:hover {
-  background: var(--color-clay-dark);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-}
-.btn-secondary {
-  background: var(--color-forest);
-  color: var(--color-cream);
-  padding: 0.75rem 1.5rem;
-  border-radius: var(--radius-xs);
-  font-family: var(--font-handwritten);
-  font-size: 20px;
-}
-.btn-secondary:hover {
-  background: var(--color-forest-light);
-  transform: translateY(-1px);
-}
-.btn-ghost {
-  color: var(--color-clay);
-  text-decoration: underline;
-  background: transparent;
-  padding: 0;
-}
-.btn-ghost:hover { color: var(--color-clay-dark); }
-
-/* Focus ring */
-:focus-visible {
-  outline: 3px solid var(--color-clay);
-  outline-offset: 2px;
-  border-radius: 2px;
-}
-</style>
-<style>/* ============================================================
-   PRE-SALE RENOVATION CAMPAIGN — ad + page helpers
-   Built on colors_and_type.css tokens. Loss-aversion lead-gen
-   creative for Kim Pelham's pre-sale concierge / GC service.
-   ============================================================ */
-
-/* ---------- Wordmark lockup (rebuilt from logo-horizontal.svg) ---------- */
-.kp-mark { display: inline-flex; align-items: center; gap: 14px; line-height: 1; }
-.kp-mark .kp-name {
-  font-family: var(--font-heading);
-  font-style: italic;
-  font-weight: 600;
-  color: var(--color-forest);
-  letter-spacing: 0.01em;
-  white-space: nowrap;
-}
-.kp-mark .kp-sub b, .kp-mark .kp-sub span { white-space: nowrap; }
-.kp-mark .kp-rule { width: 1.5px; align-self: stretch; background: var(--color-clay); opacity: 0.85; }
-.kp-mark .kp-sub {
-  display: flex; flex-direction: column; gap: 4px; justify-content: center;
-}
-.kp-mark .kp-sub b {
-  font-family: var(--font-body); font-weight: 700;
-  color: var(--color-forest);
-  text-transform: uppercase; letter-spacing: 0.18em; line-height: 1.1;
-}
-.kp-mark .kp-sub span {
-  font-family: var(--font-body); font-weight: 600;
-  color: var(--color-text-faint);
-  text-transform: uppercase; letter-spacing: 0.22em; line-height: 1.1;
-}
-.kp-mark.on-dark .kp-name { color: var(--color-cream); }
-.kp-mark.on-dark .kp-sub b { color: var(--color-cream); }
-.kp-mark.on-dark .kp-sub span { color: rgba(248,245,240,0.6); }
-.kp-mark.on-dark .kp-rule { background: var(--color-clay-light); }
-
-/* ---------- Eyebrow on light/dark ---------- */
-.eyebrow.on-dark { color: var(--color-clay-light); }
-
-/* ---------- Sticky handwritten tag ---------- */
-.sticky-tag {
-  display: inline-block;
-  font-family: var(--font-handwritten);
-  color: var(--color-cream);
-  background: var(--color-clay);
-  padding: 6px 18px 8px;
-  border-radius: 3px;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.18);
-  transform: rotate(-2.5deg);
-  line-height: 1;
-}
-
-/* ---------- Hand underline (clay squiggle), scalable ---------- */
-.squiggle { position: relative; display: inline-block; }
-.squiggle::after {
-  content: '';
-  position: absolute; left: -2%; bottom: -0.18em;
-  width: 104%; height: 0.34em;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12'%3E%3Cpath d='M2 8 Q30 2 60 7 Q90 12 120 6 Q150 1 180 7 Q195 10 198 8' fill='none' stroke='%23B8845C' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E") no-repeat center;
-  background-size: 100% 100%;
-}
-.squiggle.light::after {
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 12'%3E%3Cpath d='M2 8 Q30 2 60 7 Q90 12 120 6 Q150 1 180 7 Q195 10 198 8' fill='none' stroke='%23d4a07a' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E");
-}
-
-/* ---------- Before / After comparison ---------- */
-.ba { position: relative; overflow: hidden; background: var(--color-cream-dark); }
-.ba image-slot { display: block; width: 100%; height: 100%; }
-
-.ba-split { display: grid; grid-template-columns: 1fr 1fr; }
-.ba-split .ba-half { position: relative; overflow: hidden; }
-.ba-divider {
-  position: absolute; top: 0; bottom: 0; left: 50%;
-  width: 4px; transform: translateX(-2px);
-  background: var(--color-clay);
-  box-shadow: 0 0 0 1px rgba(255,255,255,0.5);
-  z-index: 3;
-}
-.ba-stack { display: grid; grid-template-rows: 1fr 1fr; }
-.ba-stack .ba-half { position: relative; overflow: hidden; }
-.ba-stack .ba-divider { left: 0; right: 0; top: 50%; bottom: auto; width: auto; height: 4px; transform: translateY(-2px); }
-
-.ba-tag {
-  position: absolute; z-index: 4;
-  font-family: var(--font-body); font-weight: 700;
-  text-transform: uppercase; letter-spacing: 0.18em;
-  color: var(--color-cream);
-  background: rgba(26,26,26,0.55);
-  backdrop-filter: blur(2px);
-  padding: 7px 14px; border-radius: 2px;
-}
-.ba-tag.after { background: var(--color-forest); }
-
-/* arrow chip that sits on the divider */
-.ba-chip {
-  position: absolute; z-index: 5; left: 50%; top: 50%;
-  transform: translate(-50%,-50%);
-  width: 64px; height: 64px; border-radius: 999px;
-  background: var(--color-clay); color: var(--color-cream);
-  display: grid; place-items: center;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.28);
-  border: 3px solid var(--color-cream);
-}
-
-/* ---------- CTA bar ---------- */
-.cta-bar {
-  background: var(--color-forest);
-  color: var(--color-cream);
-  display: flex; align-items: center; gap: 20px;
-}
-.cta-pill {
-  display: inline-flex; align-items: center; gap: 10px;
-  background: var(--color-clay); color: var(--color-cream);
-  font-family: var(--font-body); font-weight: 700;
-  border-radius: 4px;
-  box-shadow: 0 4px 14px rgba(0,0,0,0.22);
-  white-space: nowrap;
-}
-.cta-bar .cta-meta { display: flex; flex-direction: column; line-height: 1.25; }
-.cta-bar .cta-meta b { font-family: var(--font-heading); font-weight: 700; color: var(--color-cream); }
-.cta-bar .cta-meta span { color: rgba(248,245,240,0.7); font-weight: 500; }
-
-/* ---------- Stat / award chips ---------- */
-.stat-chip { display: inline-flex; align-items: baseline; gap: 8px; }
-.stat-chip b { font-family: var(--font-heading); color: var(--color-clay); font-weight: 700; line-height: 1; }
-.stat-chip span { font-family: var(--font-body); color: var(--color-text-light); }
-
-.award-row { display: inline-flex; align-items: center; gap: 18px; }
-.award-row img { display: block; }
-
-/* ---------- generic forest texture overlay ---------- */
-.green-textured { position: relative; background: var(--color-forest); }
-.green-textured::before {
-  content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 0.06;
-  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cpath d='M0 30 Q30 10 60 30 T120 30 M0 60 Q30 40 60 60 T120 60 M0 90 Q30 70 60 90 T120 90' fill='none' stroke='%23ffffff' stroke-width='2'/%3E%3C/svg%3E");
-}
-.green-textured > * { position: relative; z-index: 1; }
-
-/* ---------- Polaroid ---------- */
-.polaroid {
-  background: #fff; padding: 12px 12px 0;
-  box-shadow: var(--shadow-polaroid);
-}
-.polaroid .pol-img { position: relative; overflow: hidden; }
-.polaroid .pol-cap {
-  font-family: var(--font-handwritten); color: var(--color-text-light);
-  text-align: center; padding: 10px 4px 14px;
-}
-</style>
-<script src="bc8f501d-3063-4075-8e48-5493d6e5df45.js"></script>
+<link rel="stylesheet" href="colors_and_type.css" />
+<link rel="stylesheet" href="renovation-campaign/campaign.css" />
+<script src="renovation-campaign/image-slot.js"></script>
 <style>
   * { box-sizing: border-box; }
   body { margin: 0; }
@@ -609,8 +150,8 @@ p { font-size: var(--fs-body); }
   <div class="wrap hero-grid">
     <div>
       <div class="eyebrow">Free Guide · Snohomish County Sellers</div>
-      <h1>Don’t list as-is and leave <span style="color:var(--color-clay)">$40,000</span> <span class="hand-underline">on the table.</span></h1>
-      <p class="lede">The updates that pay you back before you sell — and the ones that quietly waste your money. Plus how my concierge service fronts the cost, so you pay nothing until closing.</p>
+      <h1>Don&rsquo;t list as-is and leave <span style="color:var(--color-clay)">$40,000</span> <span class="hand-underline">on the table.</span></h1>
+      <p class="lede">The updates that pay you back before you sell &mdash; and the ones that quietly waste your money. Plus my done-for-you concierge service that handles the whole renovation, start to finish.</p>
 
       <div class="proof" style="background:transparent;color:inherit;padding:26px 0 0">
         <div class="wrap" style="padding:0;justify-content:flex-start;gap:30px">
@@ -642,22 +183,22 @@ p { font-size: var(--fs-body); }
         </div>
         <form id="optinForm">
           <label for="f-name">First name</label>
-          <input id="f-name" type="text" placeholder="Jane" required="">
+          <input id="f-name" type="text" placeholder="Jane" required />
           <label for="f-email">Email</label>
-          <input id="f-email" type="email" placeholder="jane@email.com" required="">
-          <label for="f-addr">Home address <span style="text-transform:none;font-weight:400;color:var(--color-text-faint)">(optional — for a tailored estimate)</span></label>
-          <input id="f-addr" type="text" placeholder="123 Cedar Ln, Mill Creek">
+          <input id="f-email" type="email" placeholder="jane@email.com" required />
+          <label for="f-addr">Home address <span style="text-transform:none;font-weight:400;color:var(--color-text-faint)">(optional &mdash; for a tailored estimate)</span></label>
+          <input id="f-addr" type="text" placeholder="123 Cedar Ln, Mill Creek" />
           <button type="submit" class="btn-submit">
-            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"></path><polyline points="7 11 12 16 17 11"></polyline><path d="M5 20h14"></path></svg>
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><path d="M5 20h14"/></svg>
             Download the free Playbook
           </button>
-          <p class="fineprint">I answer my own phone &amp; email. Your details stay with me — never sold, never spammed.</p>
+          <p class="fineprint">I answer my own phone &amp; email. Your details stay with me &mdash; never sold, never spammed.</p>
         </form>
         <div class="thanks">
           <div style="font-family:var(--font-heading);font-size:30px;color:var(--color-forest)">Check your inbox.</div>
-          <p style="font-size:15px;color:var(--color-text-light);margin:10px 0 18px;line-height:1.6">The Playbook is on its way to <b id="thx-email">you</b>. Want to talk through your home specifically? I keep just two clients at a time — reach me directly.</p>
+          <p style="font-size:15px;color:var(--color-text-light);margin:10px 0 18px;line-height:1.6">The Playbook is on its way to <b id="thx-email">you</b>. Want to talk through your home specifically? I keep just two clients at a time &mdash; reach me directly.</p>
           <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-            <a href="The Pre-Sale Renovation Playbook.html" target="_blank" class="btn-primary" id="thx-playbook" style="padding:12px 24px">Open the Playbook</a>
+            <a href="The Pre-Sale Renovation Playbook.html" target="_blank" class="btn-primary" style="padding:12px 24px">Open the Playbook</a>
             <a href="mailto:kim@thepelhamgroupnw.com" class="btn-secondary" style="font-size:16px;padding:12px 22px">Email Kim</a>
           </div>
         </div>
@@ -676,8 +217,8 @@ p { font-size: var(--fs-body); }
     <div class="stat"><b>176</b><span>homes sold to date</span></div>
     <div class="divider"></div>
     <div style="display:flex;gap:18px;align-items:center">
-      <img src="38c391fb-cac2-45a2-bf6a-c6c06f7e5ac3.png" alt="Best of Snohomish County 2024" style="height:64px">
-      <img src="5df930f1-60c9-4676-ab91-fc95c9cc2d33.png" alt="Best of Zillow" style="height:50px;filter:brightness(0) invert(1);opacity:0.9">
+      <img src="assets/best-of-snoco-2024-no-background.png" alt="Best of Snohomish County 2024" style="height:64px" />
+      <img src="assets/best-of-zillow.png" alt="Best of Zillow" style="height:50px;filter:brightness(0) invert(1);opacity:0.9" />
     </div>
   </div>
 </div>
@@ -685,15 +226,15 @@ p { font-size: var(--fs-body); }
 <!-- WHAT'S INSIDE -->
 <section>
   <div class="wrap">
-    <div class="eyebrow">What’s inside</div>
-    <h2 class="sec">28 pages of exactly what to fix —<br>and what to leave alone.</h2>
+    <div class="eyebrow">What&rsquo;s inside</div>
+    <h2 class="sec">28 pages of exactly what to fix &mdash;<br />and what to leave alone.</h2>
     <p class="prose" style="font-size:18px;color:var(--color-text-light);line-height:1.7;margin:0">No fluff, no generic checklists. This is the same playbook I walk my own clients through before a single photo is taken.</p>
     <div class="inside-grid">
-      <div class="inside-item"><div class="num">1</div><div><h4>The 9 updates that pay you back</h4><p>Ranked by return in our market — paint, lighting, and the three rooms buyers actually price on.</p></div></div>
-      <div class="inside-item"><div class="num">2</div><div><h4>The money-pits to skip</h4><p>The “improvements” that feel productive but never come back at the closing table.</p></div></div>
-      <div class="inside-item"><div class="num">3</div><div><h4>The $0-upfront concierge plan</h4><p>How I front the cost of updates and staging, so you pay nothing until your home sells.</p></div></div>
-      <div class="inside-item"><div class="num">4</div><div><h4>A realistic 3-week timeline</h4><p>From walkthrough to listing photos — what happens each week, and who does it.</p></div></div>
-      <div class="inside-item"><div class="num">5</div><div><h4>Real Snohomish County before/afters</h4><p>Actual homes, actual numbers — what we spent and what it returned.</p></div></div>
+      <div class="inside-item"><div class="num">1</div><div><h4>The 9 updates that pay you back</h4><p>Ranked by return in our market &mdash; paint, lighting, and the three rooms buyers actually price on.</p></div></div>
+      <div class="inside-item"><div class="num">2</div><div><h4>The money-pits to skip</h4><p>The &ldquo;improvements&rdquo; that feel productive but never come back at the closing table.</p></div></div>
+      <div class="inside-item"><div class="num">3</div><div><h4>The done-for-you concierge plan</h4><p>How I manage every update, repair, and staging detail &mdash; so you don&rsquo;t lift a finger or chase a single contractor.</p></div></div>
+      <div class="inside-item"><div class="num">4</div><div><h4>A realistic 3-week timeline</h4><p>From walkthrough to listing photos &mdash; what happens each week, and who does it.</p></div></div>
+      <div class="inside-item"><div class="num">5</div><div><h4>Real Snohomish County before/afters</h4><p>Actual homes, actual numbers &mdash; what we spent and what it returned.</p></div></div>
       <div class="inside-item"><div class="num">6</div><div><h4>Your pre-listing walkthrough checklist</h4><p>A room-by-room page you can print and carry through your own home this weekend.</p></div></div>
     </div>
   </div>
@@ -703,21 +244,21 @@ p { font-size: var(--fs-body); }
 <section style="background:var(--color-cream-dark);border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border)">
   <div class="wrap">
     <div class="eyebrow">The proof</div>
-    <h2 class="sec">Same home. A very<br>different first impression.</h2>
-    <p class="prose" style="font-size:18px;color:var(--color-text-light);margin:0 0 34px">A recent Snohomish County home I prepped and staged start to finish — paint, new flooring, a refreshed fireplace, lighting, and styling. Same square footage. A completely different first impression.</p>
+    <h2 class="sec">Same home. A very<br />different first impression.</h2>
+    <p class="prose" style="font-size:18px;color:var(--color-text-light);margin:0 0 34px">A recent Snohomish County home I prepped and staged start to finish &mdash; paint, new flooring, a refreshed fireplace, lighting, and styling. Same square footage. A completely different first impression.</p>
 
     <div class="feat-ba">
       <div class="pair">
-        <div class="h"><img src="d27328a2-8903-481c-8869-bde649495930.jpg" alt="Living room before pre-sale prep — dated tile fireplace, dark accent wall, worn carpet"><span class="ba-tag" style="left:14px;bottom:14px;font-size:13px">Before</span></div>
+        <div class="h"><img src="assets/ba-living-before.jpg" alt="Living room before pre-sale prep — dated tile fireplace, dark accent wall, worn carpet" /><span class="ba-tag" style="left:14px;bottom:14px;font-size:13px">Before</span></div>
         <div class="ba-divider"></div>
-        <div class="h"><img src="ed28800b-950e-45ec-8f75-107c686f2644.jpg" alt="The same living room after — marble-tile fireplace, light wood floors, staged and bright"><span class="ba-tag after" style="right:14px;bottom:14px;font-size:13px">After</span></div>
+        <div class="h"><img src="assets/ba-living-after.jpg" alt="The same living room after — marble-tile fireplace, light wood floors, staged and bright" /><span class="ba-tag after" style="right:14px;bottom:14px;font-size:13px">After</span></div>
       </div>
       <div class="meta">
         <div style="display:flex;align-items:center;gap:13px">
           <span style="width:12px;height:12px;border-radius:999px;background:var(--color-clay);box-shadow:0 0 0 4px rgba(184,132,92,0.18);flex:0 0 auto"></span>
           <div>
             <div style="font-family:var(--font-heading);font-weight:700;font-size:25px;color:var(--color-forest);line-height:1.12">Prepped, staged &amp; on the market now</div>
-            <div style="font-family:var(--font-body);font-size:14px;color:var(--color-text-muted)">A current Pelham Group concierge prep — Snohomish County</div>
+            <div style="font-family:var(--font-body);font-size:14px;color:var(--color-text-muted)">A current Pelham Group concierge prep &mdash; Snohomish County</div>
           </div>
         </div>
         <span class="cap">this is what prep buys</span>
@@ -725,20 +266,20 @@ p { font-size: var(--fs-body); }
     </div>
 
     <div class="start-row">
-      <span class="hand-accent" style="font-family:var(--font-handwritten);font-size:22px;color:var(--color-clay);margin-right:4px">where we started —</span>
-      <div class="sm"><img src="094fa2a7-f9f6-4e42-a4d3-6b83eab52728.jpg" alt="Great room before prep"><span class="t">Before</span></div>
-      <div class="sm"><img src="add5dc19-4558-4fc8-af52-19e2d83bbe19.jpg" alt="Bathroom before prep"><span class="t">Before</span></div>
-      <span style="font-size:14px;color:var(--color-text-muted);line-height:1.5;max-width:280px">Lived-in, dated, and full of life — exactly where most sellers begin.</span>
+      <span class="hand-accent" style="font-family:var(--font-handwritten);font-size:22px;color:var(--color-clay);margin-right:4px">where we started &mdash;</span>
+      <div class="sm"><img src="assets/before-greatroom.jpg" alt="Great room before prep" /><span class="t">Before</span></div>
+      <div class="sm"><img src="assets/before-bath.jpg" alt="Bathroom before prep" /><span class="t">Before</span></div>
+      <span style="font-size:14px;color:var(--color-text-muted);line-height:1.5;max-width:280px">Lived-in, dated, and full of life &mdash; exactly where most sellers begin.</span>
     </div>
 
     <div style="margin-top:42px">
       <div class="eyebrow" style="margin-bottom:8px">The finished listing</div>
       <p class="prose" style="font-size:16px;color:var(--color-text-light);margin:0">How the rest of the home photographed once the prep was done.</p>
       <div class="fin4">
-        <div class="fin"><img src="0e15d27d-f57c-42ee-b9c4-cf47a1dbecc1.jpg" alt="Refreshed kitchen, staged"><span class="lab">Kitchen</span></div>
-        <div class="fin"><img src="be6112d8-cb11-4fe2-a362-216c02fbf7eb.jpg" alt="Staged primary bedroom"><span class="lab">Primary bed</span></div>
-        <div class="fin"><img src="b31bf675-2697-49fb-9ec3-9f909e5a6798.jpg" alt="Light-filled sitting area at the garden doors"><span class="lab">Garden doors</span></div>
-        <div class="fin"><img src="c62d4c5c-bb75-4ba1-a141-db6142bafa12.jpg" alt="Manicured entry and curb"><span class="lab">Curb</span></div>
+        <div class="fin"><img src="assets/after-kitchen.jpg" alt="Refreshed kitchen, staged" /><span class="lab">Kitchen</span></div>
+        <div class="fin"><img src="assets/after-bedroom.jpg" alt="Staged primary bedroom" /><span class="lab">Primary bed</span></div>
+        <div class="fin"><img src="assets/after-frenchdoors.jpg" alt="Light-filled sitting area at the garden doors" /><span class="lab">Garden doors</span></div>
+        <div class="fin"><img src="assets/after-curb.jpg" alt="Manicured entry and curb" /><span class="lab">Curb</span></div>
       </div>
     </div>
   </div>
@@ -748,13 +289,14 @@ p { font-size: var(--fs-body); }
 <section>
   <div class="wrap">
     <div class="eyebrow">The concierge difference</div>
-    <h2 class="sec">$0 upfront. I prep your home.<br>You pay at closing.</h2>
-    <p class="prose" style="font-size:18px;color:var(--color-text-light);margin:0">You don’t need cash on hand or a contractor in your phone. I coordinate the whole thing and front the cost — it comes out of the proceeds when your home sells.</p>
+    <h2 class="sec">I prep your home to sell.<br />You don&rsquo;t lift a finger.</h2>
+    <p class="prose" style="font-size:18px;color:var(--color-text-light);margin:0">You don&rsquo;t need a contractor in your phone or a free weekend. I plan the updates that matter, manage my own vetted crew, and stage it with my own hands &mdash; one point of contact, start to finish.</p>
     <div class="steps3">
-      <div class="step-card"><div class="sn">1</div><h4>I front the cost</h4><p>Updates, repairs, and staging — covered upfront, no out-of-pocket from you.</p></div>
-      <div class="step-card"><div class="sn">2</div><h4>My crew does the work</h4><p>Vetted local trades I’ve worked with for years. I manage every step and stage it with my own hands.</p></div>
-      <div class="step-card"><div class="sn">3</div><h4>You pay at closing</h4><p>The investment comes out of your sale proceeds — after it’s already worked for you.</p></div>
+      <div class="step-card"><div class="sn">1</div><h4>We make the plan</h4><p>A focused walkthrough &mdash; exactly what to update for the highest return, and what to leave alone.</p></div>
+      <div class="step-card"><div class="sn">2</div><h4>My crew does the work</h4><p>Vetted local trades I&rsquo;ve worked with for years. I manage every step and stage it myself.</p></div>
+      <div class="step-card"><div class="sn">3</div><h4>Your home hits the market</h4><p>Photographed, staged, and priced to sell &mdash; ready for buyers from day one.</p></div>
     </div>
+    <p class="prose" style="font-size:15px;color:var(--color-text-muted);margin:24px 0 0;line-height:1.6">Prefer to settle up later? For qualifying homes, financing is available so the cost of prep can be paid at closing &mdash; just ask.</p>
   </div>
 </section>
 
@@ -763,9 +305,9 @@ p { font-size: var(--fs-body); }
   <div class="wrap">
     <div class="note">
       <div class="pin"></div>
-      <div class="greet">a quick note —</div>
-      <p>I don’t just sell homes here. I live here. For 17 years I’ve walked families through the hardest, most hopeful moves of their lives — downsizing, settling an estate, starting the next chapter. The number on the contract matters, and so does how you get there. This guide is everything I’d tell you over coffee, before we ever talk about listing. No pitch. Just what works.</p>
-      <div class="sig">— Kim</div>
+      <div class="greet">a quick note &mdash;</div>
+      <p>I don&rsquo;t just sell homes here. I live here. For 17 years I&rsquo;ve walked families through the hardest, most hopeful moves of their lives &mdash; downsizing, settling an estate, starting the next chapter. The number on the contract matters, and so does how you get there. This guide is everything I&rsquo;d tell you over coffee, before we ever talk about listing. No pitch. Just what works.</p>
+      <div class="sig">&mdash; Kim</div>
     </div>
   </div>
 </section>
@@ -775,10 +317,10 @@ p { font-size: var(--fs-body); }
   <div class="wrap prose" style="max-width:840px">
     <div class="eyebrow">What people ask before they call me</div>
     <h2 class="sec">Honest answers.</h2>
-    <div class="faq-item"><h4>Do I really pay nothing upfront?</h4><p>Yes. For qualifying homes, I front the cost of the agreed updates and staging. It’s repaid from your proceeds at closing — nothing comes out of your pocket along the way.</p></div>
-    <div class="faq-item"><h4>What if my home doesn’t need much?</h4><p>Then I’ll tell you that. Sometimes the right move is paint and a deep clean, not a remodel. The Playbook helps you see the difference before you spend a dollar.</p></div>
+    <div class="faq-item"><h4>Can I pay for the work at closing?</h4><p>If you&rsquo;d rather not pay as we go, yes &mdash; for qualifying homes, financing is available so the cost of the agreed updates and staging can be settled from your proceeds at closing. It&rsquo;s an option, not the only way; many sellers simply pay for the prep directly.</p></div>
+    <div class="faq-item"><h4>What if my home doesn&rsquo;t need much?</h4><p>Then I&rsquo;ll tell you that. Sometimes the right move is paint and a deep clean, not a remodel. The Playbook helps you see the difference before you spend a dollar.</p></div>
     <div class="faq-item"><h4>Is this just for big, expensive homes?</h4><p>No. The biggest returns I see are often on modest homes that simply photograph and show better after a focused, affordable prep.</p></div>
-    <div class="faq-item"><h4>What’s the catch with the free guide?</h4><p>There isn’t one. I keep two clients at a time, so I’d rather start a real relationship than chase a quick sale. Read it, use it, call me if it’s helpful.</p></div>
+    <div class="faq-item"><h4>What&rsquo;s the catch with the free guide?</h4><p>There isn&rsquo;t one. I keep two clients at a time, so I&rsquo;d rather start a real relationship than chase a quick sale. Read it, use it, call me if it&rsquo;s helpful.</p></div>
   </div>
 </section>
 
@@ -787,9 +329,9 @@ p { font-size: var(--fs-body); }
   <div class="wrap">
     <div class="eyebrow on-dark" style="justify-content:center">Free · Snohomish County edition</div>
     <h2 class="sec" style="margin-top:6px">Get the Playbook. Keep the $40,000.</h2>
-    <p>Twenty-eight pages on prepping your home for the highest possible sale — and how to do it without spending a cent before closing.</p>
+    <p>Twenty-eight pages on prepping your home for the highest possible sale &mdash; and a done-for-you concierge service that handles all of it for you.</p>
     <a href="#get" class="btn-cream">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"></path><polyline points="7 11 12 16 17 11"></polyline><path d="M5 20h14"></path></svg>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.25" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12"/><polyline points="7 11 12 16 17 11"/><path d="M5 20h14"/></svg>
       Download the free Playbook
     </a>
   </div>
@@ -808,19 +350,11 @@ p { font-size: var(--fs-body); }
     </div>
   </div>
   <div class="wrap">
-    <p class="legal">The $40,000 figure is illustrative of the value a focused pre-sale preparation can add and is not a guarantee. The home pictured was prepared and staged by The Pelham Group NW and is currently listed for sale — it is shown to illustrate preparation and staging quality, not a completed sale. The 102.3% average sale-to-list ratio reflects Kim’s track record across past listings (vs. the 100.2% NWMLS market average) and is not a guarantee of future results. Concierge cost-fronting is offered for qualifying listings, subject to agreement. Kim Pelham is a licensed real estate broker in Washington State.</p>
+    <p class="legal">The $40,000 figure is illustrative of the value a focused pre-sale preparation can add and is not a guarantee. The home pictured was prepared and staged by The Pelham Group NW and is currently listed for sale &mdash; it is shown to illustrate preparation and staging quality, not a completed sale. The 102.3% average sale-to-list ratio reflects Kim&rsquo;s track record across past listings (vs. the 100.2% NWMLS market average) and is not a guarantee of future results. Concierge cost-fronting is offered for qualifying listings, subject to agreement. Kim Pelham is a licensed real estate broker in Washington State.</p>
   </div>
 </footer>
 
 <script>
-  /* LIST WITH KIM funnel config.
-     Leads route to Kim's /api/contact, which upserts in GHL, mirrors to
-     FUB, and triggers Devon SMS + welcome email automation.
-     PLAYBOOK_URL: the hosted PDF the thank-you button links to. Update
-     when the actual playbook PDF is uploaded to /public/playbook.pdf. */
-  var LEAD_ENDPOINT = '/api/contact';
-  var PLAYBOOK_URL  = '/playbook.pdf';
-
   // reveal on scroll
   const io = new IntersectionObserver((es) => es.forEach(e => { if (e.isIntersecting) { e.target.style.opacity = 1; e.target.style.transform = 'none'; io.unobserve(e.target); } }), { threshold: 0.12 });
   document.querySelectorAll('section .wrap > *, .inside-item, .step-card, .feat-ba, .fin4 .fin').forEach((el, i) => {
@@ -828,14 +362,17 @@ p { font-size: var(--fs-body); }
     el.style.transition = 'opacity .7s cubic-bezier(0.16,1,0.3,1) ' + ((i % 6) * 0.05) + 's, transform .7s cubic-bezier(0.16,1,0.3,1) ' + ((i % 6) * 0.05) + 's';
     io.observe(el);
   });
+  /* Form wiring. Leads route to Kim's /api/contact, which upserts in GHL,
+     mirrors to FUB, fires Devon SMS to Kim's mobile, and queues the
+     welcome email. UTMs from the URL are forwarded so Iris can
+     attribute the lead back to the ad concept. */
+  const LEAD_ENDPOINT = '/api/contact';
+  const PLAYBOOK_URL  = '/playbook.pdf';
 
-  // point the thank-you button at the hosted PDF
-  var thxPb = document.getElementById('thx-playbook');
-  if (thxPb && PLAYBOOK_URL) { thxPb.setAttribute('href', PLAYBOOK_URL); }
+  // Point the thank-you button at the hosted PDF
+  const thxPlaybook = document.querySelector('.thanks a.btn-primary');
+  if (thxPlaybook && PLAYBOOK_URL) thxPlaybook.setAttribute('href', PLAYBOOK_URL);
 
-  // form — shape payload to match /api/contact's ContactPayload schema
-  // so leads flow through the existing GHL/FUB pipeline. The address (if
-  // provided) is attached as a note so Kim sees it in the contact record.
   const form = document.getElementById('optinForm');
   form.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -843,8 +380,6 @@ p { font-size: var(--fs-body); }
     const email = document.getElementById('f-email').value.trim();
     const addr  = document.getElementById('f-addr').value.trim();
 
-    // Forward UTMs from the current URL so Iris can attribute the lead
-    // back to the ad concept that drove the click.
     const qs = new URLSearchParams(location.search);
     const utm = {
       utmSource:   qs.get('utm_source')   || undefined,
@@ -883,7 +418,5 @@ p { font-size: var(--fs-body); }
     try { localStorage.setItem('playbook-lead', JSON.stringify({ n: name, e: email, t: Date.now() })); } catch (x) {}
   });
 </script>
-
-
-
-</body></html>
+</body>
+</html>
