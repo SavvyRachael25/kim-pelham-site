@@ -323,6 +323,27 @@ function byDateDesc(a: BlogPost, b: BlogPost): number {
   return b.date.localeCompare(a.date);
 }
 
+// ---------------- Stats Strip Helpers ----------------
+function Stat({ number, label, sub }: { number: string; label: string; sub: string }) {
+  return (
+    <div className="authority-stat" style={{ flex: '1 1 0', minWidth: 0 }}>
+      <div style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(28px, 3vw, 38px)', fontWeight: 700, color: 'var(--color-clay-light, #d4a07a)', lineHeight: 1, marginBottom: 8, whiteSpace: 'nowrap' }}>
+        {number}
+      </div>
+      <div style={{ fontFamily: 'var(--font-body)', fontSize: 13.5, color: 'rgba(248,245,240,0.92)', lineHeight: 1.35, fontWeight: 600, marginBottom: 4 }}>
+        {label}
+      </div>
+      <div style={{ fontFamily: 'var(--font-body)', fontSize: 12, color: 'rgba(248,245,240,0.6)', lineHeight: 1.4 }}>
+        {sub}
+      </div>
+    </div>
+  );
+}
+
+function Divider() {
+  return <div className="authority-divider" style={{ width: 1, height: 56, background: 'rgba(248,245,240,0.18)', flex: '0 0 auto' }} aria-hidden="true" />;
+}
+
 // ---------------- Share Buttons ----------------
 function ShareButtons({ post }: { post: BlogPost }) {
   const [copied, setCopied] = useState(false);
@@ -611,11 +632,26 @@ export default function BlogPage() {
         />
 
         {/* AEO opener — direct answer paragraph */}
-        <section style={{ background: 'var(--color-cream)', padding: '40px 24px', borderBottom: '1px solid var(--color-border)' }}>
+        <section style={{ background: 'var(--color-cream)', padding: '48px 24px 36px', borderBottom: '1px solid var(--color-border)' }}>
           <div style={{ maxWidth: 880, margin: '0 auto' }}>
-            <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.05rem', lineHeight: 1.7, color: 'var(--color-text)', margin: 0 }}>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.06rem', lineHeight: 1.7, color: 'var(--color-text)', margin: 0 }}>
               <b>What this blog is.</b> A working library for sellers, buyers, and Snohomish County families thinking about their next move. Every article is written from 17 years of broker-on-the-ground experience, sourced against NWMLS, the National Association of Realtors, JLC Cost vs Value, and Seattle Times reporting, and updated when the market does. Browse by topic below or jump to the featured piece.
             </p>
+          </div>
+        </section>
+
+        {/* Authority stats strip — E-E-A-T + GEO signal */}
+        <section aria-label="The Pelham Group by the numbers" style={{ background: 'var(--color-forest)', color: 'var(--color-cream)', padding: '40px 24px' }}>
+          <div style={{ maxWidth: 1180, margin: '0 auto' }} className="authority-strip">
+            <Stat number="102.3%" label="average sale-to-list ratio" sub="vs 100.2% county average" />
+            <Divider />
+            <Stat number="17" label="years selling Snohomish County" sub="brokered by Katrina Eileen Real Estate" />
+            <Divider />
+            <Stat number="176" label="homes sold" sub="across Snohomish + King County" />
+            <Divider />
+            <Stat number="SRES" label="seniors real estate specialist" sub="certified by NAR" />
+            <Divider />
+            <Stat number={`${blogPosts.length}`} label="articles" sub="updated with monthly NWMLS data" />
           </div>
         </section>
 
@@ -748,26 +784,53 @@ export default function BlogPage() {
           );
         })}
 
-        {/* AUTHOR BIO — E-E-A-T signal */}
-        <section style={{ padding: '64px 24px', background: 'var(--color-cream)', borderTop: '1px solid var(--color-border)' }}>
-          <div style={{ maxWidth: 980, margin: '0 auto', display: 'grid', gridTemplateColumns: '180px 1fr', gap: 32, alignItems: 'center' }} className="bio-grid">
-            <div style={{ position: 'relative', width: 180, height: 180, borderRadius: '50%', overflow: 'hidden', boxShadow: '0 8px 24px rgba(47, 82, 51, 0.12)' }}>
-              <Image src="/images/kim-headshot-msh.jpg" alt="Kim Pelham, Snohomish County Real Estate Broker" fill sizes="180px" style={{ objectFit: 'cover' }} />
+        {/* Signature pull-quote — Kim voice, editorial rhythm break */}
+        <section style={{ background: 'var(--color-cream)', padding: '72px 24px', borderTop: '1px solid var(--color-border)', borderBottom: '1px solid var(--color-border)', position: 'relative' }}>
+          <div style={{ maxWidth: 880, margin: '0 auto', textAlign: 'center' }}>
+            <span style={{ display: 'inline-block', fontFamily: 'var(--font-heading)', fontSize: 80, color: 'var(--color-clay)', lineHeight: 0.6, margin: '0 0 0 -10px', opacity: 0.55 }} aria-hidden="true">
+              &ldquo;
+            </span>
+            <blockquote style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontWeight: 400, fontSize: 'clamp(22px, 2.6vw, 30px)', color: 'var(--color-forest)', lineHeight: 1.35, margin: '0 0 24px', padding: 0 }}>
+              I do not believe every seller needs to renovate before listing. Sometimes the right move is paint, a deep clean, and beautiful staging. The honest answer depends on the home, the neighborhood, and the buyer pool. My job is to walk through that with you, and tell you what is actually worth doing.
+            </blockquote>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 12 }}>
+              <span style={{ display: 'inline-block', width: 32, height: 1, background: 'var(--color-clay)' }} aria-hidden="true" />
+              <span style={{ fontFamily: 'var(--font-handwritten)', fontSize: 24, color: 'var(--color-clay)' }}>
+                Kim Pelham
+              </span>
+            </div>
+          </div>
+        </section>
+
+        {/* AUTHOR BIO — magazine-style editorial spread, E-E-A-T signal */}
+        <section style={{ padding: '88px 24px', background: '#fff' }}>
+          <div style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: '280px 1fr', gap: 56, alignItems: 'center' }} className="bio-grid">
+            <div style={{ position: 'relative', aspectRatio: '4 / 5', borderRadius: 8, overflow: 'hidden', boxShadow: '0 16px 40px rgba(47, 82, 51, 0.16)' }}>
+              <Image src="/images/kim-pelham-headshot.jpg" alt="Kim Pelham, Snohomish County Real Estate Broker, SRES certified" fill sizes="(max-width: 880px) 280px, 280px" style={{ objectFit: 'cover' }} />
+              <div style={{ position: 'absolute', bottom: 14, left: 14, background: 'var(--color-cream)', padding: '6px 12px', borderRadius: 3, fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700, color: 'var(--color-forest)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
+                Best of Snohomish 2024
+              </div>
             </div>
             <div>
-              <span style={{ fontFamily: 'var(--font-handwritten)', fontSize: 22, color: 'var(--color-clay)' }}>about the author</span>
-              <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(26px, 3vw, 34px)', fontWeight: 500, color: 'var(--color-forest)', margin: '4px 0 12px', lineHeight: 1.15 }}>
+              <span style={{ fontFamily: 'var(--font-handwritten)', fontSize: 26, color: 'var(--color-clay)' }}>about the author</span>
+              <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(28px, 3.2vw, 38px)', fontWeight: 500, color: 'var(--color-forest)', margin: '6px 0 18px', lineHeight: 1.15 }}>
                 Kim Pelham, The Pelham Group NW
               </h2>
-              <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.02rem', color: 'var(--color-text-light)', lineHeight: 1.65, margin: '0 0 16px' }}>
-                17 years selling Snohomish County. 176 closed transactions. A 102.3% average sale-to-list ratio against a 100.2% NWMLS county average. SRES certified for senior real estate transitions. Best of Snohomish County in 2023 and 2024. I work with a maximum of two active buyers at a time so every client gets a true concierge experience, and I prep, stage, and photograph my listings myself.
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.06rem', color: 'var(--color-text-light)', lineHeight: 1.7, margin: '0 0 18px' }}>
+                Kim has spent 17 years walking Snohomish County families through the biggest moves of their lives. Her 102.3% average sale-to-list ratio outperforms the 100.2% NWMLS county average across 176 closed transactions. She is SRES certified for senior real estate transitions, brokered by Katrina Eileen Real Estate, and was named Best of Snohomish County in both 2023 and 2024.
               </p>
-              <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
-                <Link href="/about" style={{ fontFamily: 'var(--font-body)', fontSize: 14, fontWeight: 700, color: 'var(--color-forest)', textDecoration: 'none', borderBottom: '2px solid var(--color-clay)', paddingBottom: 2 }}>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.06rem', color: 'var(--color-text-light)', lineHeight: 1.7, margin: '0 0 26px' }}>
+                Every article on this site is written from her own broker-on-the-ground experience, sourced against NWMLS data, the National Association of Realtors, JLC Cost vs Value, and Seattle Times reporting. She works with a maximum of two active buyers at a time so every client gets a true concierge experience, and she preps, stages, and photographs her listings herself.
+              </p>
+              <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', alignItems: 'center' }}>
+                <Link href="/about" style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, fontWeight: 700, color: 'var(--color-forest)', textDecoration: 'none', borderBottom: '2px solid var(--color-clay)', paddingBottom: 3 }}>
                   Read Kim&apos;s story
                 </Link>
-                <Link href="/contact" style={{ fontFamily: 'var(--font-body)', fontSize: 14, fontWeight: 700, color: 'var(--color-forest)', textDecoration: 'none', borderBottom: '2px solid var(--color-clay)', paddingBottom: 2 }}>
-                  Reach out
+                <Link href="/contact" style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, fontWeight: 700, color: 'var(--color-forest)', textDecoration: 'none', borderBottom: '2px solid var(--color-clay)', paddingBottom: 3 }}>
+                  Reach out directly
+                </Link>
+                <Link href="/sources" style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, fontWeight: 700, color: 'var(--color-forest)', textDecoration: 'none', borderBottom: '2px solid var(--color-clay)', paddingBottom: 3 }}>
+                  See our sources
                 </Link>
               </div>
             </div>
@@ -814,13 +877,35 @@ export default function BlogPage() {
       <style>{`
         .topic-pill:hover { background: var(--color-forest) !important; color: var(--color-cream) !important; border-color: var(--color-forest) !important; }
         .topic-pill:hover span { color: rgba(248,245,240,0.7) !important; }
+        .authority-strip {
+          display: flex;
+          align-items: center;
+          gap: 28px;
+          justify-content: space-between;
+        }
+        .authority-stat {
+          text-align: center;
+          padding: 0 4px;
+        }
+        @media (max-width: 1100px) {
+          .authority-strip {
+            display: grid !important;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px 24px !important;
+          }
+          .authority-divider { display: none !important; }
+        }
         @media (max-width: 880px) {
           .featured-grid { grid-template-columns: 1fr !important; gap: 28px !important; }
-          .bio-grid { grid-template-columns: 1fr !important; text-align: center; }
-          .bio-grid > div:first-child { margin: 0 auto; }
+          .bio-grid { grid-template-columns: 1fr !important; text-align: center; gap: 36px !important; }
+          .bio-grid > div:first-child { margin: 0 auto; max-width: 280px; }
+          .authority-strip { grid-template-columns: repeat(2, 1fr) !important; }
         }
         @media (max-width: 720px) {
           .post-grid { grid-template-columns: 1fr !important; }
+        }
+        @media (max-width: 520px) {
+          .authority-strip { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </>

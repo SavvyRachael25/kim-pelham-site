@@ -8,6 +8,7 @@ import Analytics from "@/components/Analytics";
 import MobileListingsPopup from "@/components/MobileListingsPopup";
 import ListingsLeadPopup from "@/components/ListingsLeadPopup";
 import OpenHouseBanner from "@/components/OpenHouseBanner";
+import AccessibilityWidget from "@/components/AccessibilityWidget";
 
 /*
   LCP optimization: self-host the three brand fonts via next/font/google.
@@ -430,6 +431,8 @@ export default function RootLayout({
         <MobileListingsPopup />
         {/* Site-wide listings lead-magnet popup — name + phone, captures first-look list */}
         <ListingsLeadPopup />
+        {/* Brand-matched accessibility widget — floating bottom-left, settings persist */}
+        <AccessibilityWidget />
         {/* Analytics & attribution — gated on env vars, no-op until configured */}
         <Analytics />
         {/* Vercel Analytics — first-party traffic + Web Vitals, no config needed */}
@@ -448,7 +451,7 @@ export default function RootLayout({
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
           })(window, document, "clarity", "script", "x209s3f534");`}
         </Script>
-        {/* Meta Pixel — pixel 426526406973253, for Meta Ads attribution */}
+        {/* Meta Pixels — fires to both Savvy and Pelham ad accounts */}
         <Script id="meta-pixel" strategy="afterInteractive">
           {`!function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -459,6 +462,7 @@ export default function RootLayout({
           s.parentNode.insertBefore(t,s)}(window, document,'script',
           'https://connect.facebook.net/en_US/fbevents.js');
           fbq('init', '426526406973253');
+          fbq('init', '1360835299238719');
           fbq('track', 'PageView');`}
         </Script>
         <noscript>
@@ -468,6 +472,14 @@ export default function RootLayout({
             width="1"
             style={{ display: 'none' }}
             src="https://www.facebook.com/tr?id=426526406973253&ev=PageView&noscript=1"
+            alt=""
+          />
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            height="1"
+            width="1"
+            style={{ display: 'none' }}
+            src="https://www.facebook.com/tr?id=1360835299238719&ev=PageView&noscript=1"
             alt=""
           />
         </noscript>
