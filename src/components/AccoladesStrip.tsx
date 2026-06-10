@@ -26,21 +26,16 @@ export default function AccoladesStrip() {
           listStyle: 'none',
           padding: 0,
           margin: '0 auto',
-          maxWidth: 1180,
+          maxWidth: 1280,
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          gap: 28,
+          gap: 22,
           flexWrap: 'nowrap',
           overflowX: 'auto',
           WebkitOverflowScrolling: 'touch',
         }}
       >
-        <li className="accolade-eyebrow" style={{ fontFamily: 'var(--font-body)', fontSize: 10, fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', color: '#9a9a8e', flex: '0 0 auto', whiteSpace: 'nowrap' }}>
-          Earned, not bought
-        </li>
-
-        <li className="accolade-divider" aria-hidden="true" style={{ width: 1, height: 22, background: '#E0DDD4', flex: '0 0 auto' }} />
 
         <li style={{ flex: '0 0 auto' }}>
           <Link
