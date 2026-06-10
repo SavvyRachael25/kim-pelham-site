@@ -7,9 +7,35 @@ interface InnerHeroProps {
   subtitle: string;
   image: string;
   imageAlt: string;
+  /**
+   * Visual style for the subtitle.
+   * - 'handwritten' (default): Caveat font in clay color. Good for short signature
+   *   lines like "Real estate wisdom from Snohomish County".
+   * - 'body': Inter font in cream color. Good for longer descriptive copy like
+   *   article counts or topic summaries — handwritten font loses legibility past
+   *   ~50 chars, and clay on the dark green overlay has weak contrast.
+   */
+  subtitleStyle?: 'handwritten' | 'body';
 }
 
-export default function InnerHero({ title, subtitle, image, imageAlt }: InnerHeroProps) {
+export default function InnerHero({ title, subtitle, image, imageAlt, subtitleStyle = 'handwritten' }: InnerHeroProps) {
+  const subtitleStyles =
+    subtitleStyle === 'body'
+      ? {
+          fontFamily: 'var(--font-body)',
+          fontSize: 'clamp(16px, 1.4vw, 19px)',
+          fontWeight: 400 as const,
+          color: '#F8F5F0',
+          lineHeight: 1.55,
+          maxWidth: 680,
+          marginInline: 'auto',
+        }
+      : {
+          fontFamily: 'var(--font-handwritten)',
+          fontSize: '24px',
+          color: '#E5C29A',
+          lineHeight: 1.3,
+        };
   return (
     <section
       style={{
@@ -81,11 +107,9 @@ export default function InnerHero({ title, subtitle, image, imageAlt }: InnerHer
         style={{
           position: 'relative',
           zIndex: 3,
-          fontFamily: 'var(--font-handwritten)',
-          fontSize: '24px',
-          color: '#B8845C',
           margin: 0,
           animation: 'fadeSlideUp 0.8s ease-out 0.1s both',
+          ...subtitleStyles,
         }}
       >
         {subtitle}

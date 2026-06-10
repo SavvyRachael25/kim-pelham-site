@@ -629,6 +629,7 @@ export default function BlogPage() {
           subtitle={`${blogPosts.length} articles on selling, market trends, senior transitions, and neighborhood guides. Updated regularly with NWMLS data.`}
           image="/images/hero-02-warm-kitchen.jpg"
           imageAlt="Warm kitchen interior in a Snohomish County home"
+          subtitleStyle="body"
         />
 
         {/* AEO opener — direct answer paragraph */}
