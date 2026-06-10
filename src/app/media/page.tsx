@@ -10,6 +10,71 @@ import FAQSection from '@/components/FAQSection';
 
 const SITE = 'https://thepelhamgroupnw.com';
 
+// ---------------- Featured video ----------------
+const FEATURED_VIDEO = {
+  id: 'jpE0S64ky7w',
+  title: "Think You Can't Afford to Sell Your Home? Watch This First",
+  description:
+    'Kim walks through the most common worry she hears from Snohomish County sellers, that they cannot afford the prep work it takes to list well, and the concierge plan that handles every update with payment deferred to closing.',
+  uploadDate: '2025-09-01',
+};
+
+// ---------------- Kim's socials ----------------
+interface Social {
+  name: string;
+  handle: string;
+  url: string;
+  icon: 'instagram' | 'facebook' | 'linkedin' | 'youtube' | 'zillow';
+}
+
+const socials: Social[] = [
+  { name: 'Instagram', handle: '@pelhamgroupnw', url: 'https://www.instagram.com/pelhamgroupnw/', icon: 'instagram' },
+  { name: 'Facebook', handle: 'PelhamGroupNW', url: 'https://www.facebook.com/PelhamGroupNW/', icon: 'facebook' },
+  { name: 'LinkedIn', handle: 'kimpelham', url: 'https://www.linkedin.com/in/kimpelham/', icon: 'linkedin' },
+  { name: 'YouTube', handle: 'The Pelham Group NW', url: 'https://www.youtube.com/channel/UCfDuJ0P0qccTvYOKbR4AZWA', icon: 'youtube' },
+  { name: 'Zillow', handle: 'kimpelham', url: 'https://www.zillow.com/profile/kimpelham', icon: 'zillow' },
+];
+
+function SocialIcon({ icon }: { icon: Social['icon'] }) {
+  const common = { width: 22, height: 22, viewBox: '0 0 24 24', fill: 'currentColor' };
+  switch (icon) {
+    case 'instagram':
+      return (
+        <svg {...common} aria-hidden="true">
+          <path fill="none" stroke="currentColor" strokeWidth="1.75" d="M2 7.5C2 4.46243 4.46243 2 7.5 2H16.5C19.5376 2 22 4.46243 22 7.5V16.5C22 19.5376 19.5376 22 16.5 22H7.5C4.46243 22 2 19.5376 2 16.5V7.5Z" />
+          <circle cx="12" cy="12" r="4.25" fill="none" stroke="currentColor" strokeWidth="1.75" />
+          <circle cx="17.5" cy="6.5" r="1.1" />
+        </svg>
+      );
+    case 'facebook':
+      return (
+        <svg {...common} aria-hidden="true">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+        </svg>
+      );
+    case 'linkedin':
+      return (
+        <svg {...common} aria-hidden="true">
+          <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+          <rect x="2" y="9" width="4" height="12" />
+          <circle cx="4" cy="4" r="2" />
+        </svg>
+      );
+    case 'youtube':
+      return (
+        <svg {...common} aria-hidden="true">
+          <path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8C5.8 19 12 19 12 19s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5.2 3L10 15z" />
+        </svg>
+      );
+    case 'zillow':
+      return (
+        <svg {...common} aria-hidden="true">
+          <path d="M12 2 2 10v2h3v9h5v-6h4v6h5v-9h3v-2L12 2z" />
+        </svg>
+      );
+  }
+}
+
 // ---------------- Confirmed press ----------------
 interface PressItem {
   outlet: string;
@@ -190,6 +255,20 @@ export default function MediaPage() {
       datePublished: p.date,
       publisher: { '@type': 'NewsMediaOrganization', name: p.outlet },
     })),
+    sameAs: socials.map((s) => s.url),
+  };
+
+  const videoSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'VideoObject',
+    name: FEATURED_VIDEO.title,
+    description: FEATURED_VIDEO.description,
+    thumbnailUrl: `https://img.youtube.com/vi/${FEATURED_VIDEO.id}/maxresdefault.jpg`,
+    uploadDate: FEATURED_VIDEO.uploadDate,
+    contentUrl: `https://youtu.be/${FEATURED_VIDEO.id}`,
+    embedUrl: `https://www.youtube.com/embed/${FEATURED_VIDEO.id}`,
+    creator: { '@type': 'Person', name: 'Kim Pelham', url: SITE },
+    publisher: { '@type': 'RealEstateAgent', name: 'The Pelham Group NW', url: SITE },
   };
 
   const breadcrumbSchema = {
@@ -240,6 +319,7 @@ export default function MediaPage() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bookSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(videoSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       {newsArticleSchemas.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
@@ -371,6 +451,85 @@ export default function MediaPage() {
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--color-text-faint)', lineHeight: 1.6, margin: '14px 0 0', textAlign: 'center', fontStyle: 'italic' }}>
               For interviews, speaking requests, or story ideas, see the press kit section below.
             </p>
+          </div>
+        </section>
+
+        {/* FEATURED VIDEO — embed of the most-watched Kim piece */}
+        <section style={{ padding: '88px 24px', background: '#fff', borderTop: '1px solid var(--color-border)' }}>
+          <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+            <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 18 }}>
+              <span style={{ display: 'inline-block', width: 24, height: 1, background: 'var(--color-clay)' }} aria-hidden="true" />
+              <span style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--color-clay)' }}>
+                On video
+              </span>
+            </div>
+            <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(28px, 3.4vw, 40px)', fontWeight: 500, color: 'var(--color-forest)', margin: '0 0 22px', lineHeight: 1.15, maxWidth: 720 }}>
+              {FEATURED_VIDEO.title}
+            </h2>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.06rem', color: 'var(--color-text-light)', lineHeight: 1.7, margin: '0 0 28px', maxWidth: 720 }}>
+              {FEATURED_VIDEO.description}
+            </p>
+
+            <div
+              style={{
+                position: 'relative',
+                width: '100%',
+                aspectRatio: '16 / 9',
+                borderRadius: 8,
+                overflow: 'hidden',
+                boxShadow: '0 24px 60px rgba(26,26,26,0.20)',
+                background: '#000',
+              }}
+            >
+              <iframe
+                src={`https://www.youtube-nocookie.com/embed/${FEATURED_VIDEO.id}?rel=0&modestbranding=1`}
+                title={FEATURED_VIDEO.title}
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0 }}
+              />
+            </div>
+
+            <div style={{ marginTop: 18, display: 'flex', flexWrap: 'wrap', gap: 16, alignItems: 'center' }}>
+              <a
+                href={`https://youtu.be/${FEATURED_VIDEO.id}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  fontFamily: 'var(--font-body)',
+                  fontSize: 14,
+                  fontWeight: 700,
+                  color: 'var(--color-clay)',
+                  textDecoration: 'none',
+                  borderBottom: '2px solid var(--color-clay)',
+                  paddingBottom: 2,
+                }}
+              >
+                Watch on YouTube <span aria-hidden="true">↗</span>
+              </a>
+              <a
+                href="https://www.youtube.com/channel/UCfDuJ0P0qccTvYOKbR4AZWA"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: 6,
+                  fontFamily: 'var(--font-body)',
+                  fontSize: 14,
+                  fontWeight: 700,
+                  color: 'var(--color-forest)',
+                  textDecoration: 'none',
+                }}
+              >
+                Subscribe to the channel <span aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
         </section>
 
@@ -562,6 +721,97 @@ export default function MediaPage() {
           backgroundColor="#fff"
         />
 
+        {/* WHERE TO FIND KIM — socials */}
+        <section style={{ padding: '72px 24px', background: 'var(--color-cream)', borderTop: '1px solid var(--color-border)' }}>
+          <div style={{ maxWidth: 1100, margin: '0 auto' }}>
+            <div style={{ marginBottom: 32 }}>
+              <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
+                <span style={{ display: 'inline-block', width: 24, height: 1, background: 'var(--color-clay)' }} aria-hidden="true" />
+                <span style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--color-clay)' }}>
+                  Find Kim
+                </span>
+              </div>
+              <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(28px, 3.4vw, 40px)', fontWeight: 500, color: 'var(--color-forest)', margin: '0 0 12px', lineHeight: 1.15, maxWidth: 720 }}>
+                Where Kim shows up online.
+              </h2>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.02rem', color: 'var(--color-text-light)', lineHeight: 1.6, margin: 0, maxWidth: 720 }}>
+                Snohomish County market reads, new listings, behind the scenes of staging days, and short pieces with Kim and Brien. Pick your channel.
+              </p>
+            </div>
+
+            <ul
+              style={{
+                listStyle: 'none',
+                padding: 0,
+                margin: 0,
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(180px, 1fr))',
+                gap: 14,
+              }}
+            >
+              {socials.map((s) => (
+                <li key={s.url}>
+                  <a
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`${s.name} (${s.handle}) — opens in a new tab`}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      gap: 14,
+                      padding: '16px 18px',
+                      background: '#fff',
+                      border: '1px solid var(--color-border)',
+                      borderRadius: 8,
+                      textDecoration: 'none',
+                      color: 'inherit',
+                      transition: 'transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease',
+                    }}
+                    className="social-card"
+                  >
+                    <span
+                      aria-hidden="true"
+                      style={{
+                        width: 38,
+                        height: 38,
+                        borderRadius: 6,
+                        background: 'var(--color-forest)',
+                        color: 'var(--color-cream)',
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        flex: '0 0 auto',
+                      }}
+                    >
+                      <SocialIcon icon={s.icon} />
+                    </span>
+                    <span style={{ minWidth: 0 }}>
+                      <span style={{ display: 'block', fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700, letterSpacing: '0.1em', textTransform: 'uppercase', color: 'var(--color-text-faint)' }}>
+                        {s.name}
+                      </span>
+                      <span
+                        style={{
+                          display: 'block',
+                          fontFamily: 'var(--font-body)',
+                          fontSize: 14.5,
+                          fontWeight: 600,
+                          color: 'var(--color-forest)',
+                          overflow: 'hidden',
+                          textOverflow: 'ellipsis',
+                          whiteSpace: 'nowrap',
+                        }}
+                      >
+                        {s.handle}
+                      </span>
+                    </span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
         {/* PRESS KIT + DIRECT CONTACT */}
         <section style={{ padding: '88px 24px 96px', background: '#fff' }}>
           <div style={{ maxWidth: 980, margin: '0 auto', display: 'grid', gridTemplateColumns: '1.1fr 1fr', gap: 56, alignItems: 'center' }} className="presskit-grid">
@@ -651,6 +901,11 @@ export default function MediaPage() {
       <Footer />
 
       <style>{`
+        .social-card:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 8px 22px rgba(47, 82, 51, 0.10);
+          border-color: var(--color-clay) !important;
+        }
         .featured-in-mark {
           font-family: var(--font-heading);
           font-style: italic;
