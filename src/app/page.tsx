@@ -46,10 +46,10 @@ export default function Home() {
   return (
     <main>
       <Nav />
+      <AccoladesStrip />
       <CurrentlyLine />
       <Hero />
       <FeaturedBlogBanner />
-      <AccoladesStrip />
       <Marquee />
       <StatsStrip />
       <SocialProof />
