@@ -17,6 +17,51 @@ interface BlogPost {
 
 const blogPosts: BlogPost[] = [
   {
+    id: '15',
+    title: 'Should You Renovate Before Selling Your Snohomish County Home? A 2026 ROI Reality Check',
+    slug: 'pre-sale-renovation-roi-snohomish-2026',
+    excerpt:
+      'The 2024 Cost vs Value Report shows which pre-sale improvements actually recoup their cost (garage doors at 194%) and which lose money (upscale kitchens at 38%). A Snohomish County broker breaks down which updates to make, which to skip, and how the concierge plan handles the financing.',
+    date: '2026-06-09',
+    category: 'Seller Strategy',
+  },
+  {
+    id: '14',
+    title: 'The Snohomish County Cooling Market in 2026: What Sellers in Mill Creek, Bothell & Everett Need to Know',
+    slug: 'snohomish-cooling-market-sellers-2026',
+    excerpt:
+      'Active listings up. Months of inventory in the 2-to-3-month range. Sale-to-list ratios down from 2021 highs. Why this is not a crash, why preparation matters more than ever, and the strategy that works for sellers in each Snohomish County sub-market.',
+    date: '2026-06-09',
+    category: 'Market Updates',
+  },
+  {
+    id: '13',
+    title: 'How Much Is My Home Worth in Snohomish County? An Honest Guide to Comps, Zestimates & What Actually Matters',
+    slug: 'how-much-is-my-home-worth-snohomish-county',
+    excerpt:
+      'A Zestimate is a starting point, not a price. Here is how brokers and appraisers actually value a home using the comparative market analysis approach, why automated estimates can miss by $35,000 to $140,000, and what specifically moves a Snohomish County valuation in 2026.',
+    date: '2026-06-09',
+    category: 'Seller Strategy',
+  },
+  {
+    id: '12',
+    title: "Selling a Parent's Home in Washington: The Estate Sale Process for Snohomish County Families",
+    slug: 'selling-parents-home-washington-estate-sale',
+    excerpt:
+      'The 7-step Washington estate sale process: legal authority, deed clean-up, stepped-up cost basis valuation, clearing personal property, targeted prep, listing, and closing. Written for adult children navigating an estate sale alongside grief, sibling coordination, and probate timelines.',
+    date: '2026-06-09',
+    category: 'Senior & Estate',
+  },
+  {
+    id: '11',
+    title: 'What Buyers in Mill Creek, Bothell & Lake Stevens Actually Want in 2026',
+    slug: 'what-buyers-want-snohomish-county-2026',
+    excerpt:
+      '17 years of buyer feedback distilled. The 9 features Snohomish County buyers actually look for, the 5 dealbreakers that kill listings before they start, and how to read your sub-market: Mill Creek, Bothell, Lake Stevens, Everett, and Mukilteo all behave differently in 2026.',
+    date: '2026-06-09',
+    category: 'Seller Strategy',
+  },
+  {
     id: '10',
     title: 'Snohomish County, May 2026: The Market Got More Honest This Month',
     slug: 'snohomish-market-may-2026',
