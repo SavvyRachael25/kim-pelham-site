@@ -301,8 +301,8 @@ export default function MediaPage() {
             </div>
 
             <div style={{ display: 'grid', gridTemplateColumns: '300px 1fr', gap: 56, alignItems: 'center' }} className="book-spread">
-              <div style={{ position: 'relative', aspectRatio: '967 / 1500', borderRadius: 4, overflow: 'hidden', boxShadow: '0 30px 60px rgba(26,26,26,0.18), 0 8px 18px rgba(26,26,26,0.12)', transform: 'rotate(-1.4deg)' }}>
-                <Image src="/images/press/six-word-lessons-cover.jpg" alt="Six-Word Lessons on Selling Your Home in Seattle by Kim Pelham, book cover" fill sizes="300px" style={{ objectFit: 'contain' }} />
+              <div style={{ position: 'relative', aspectRatio: '967 / 1500', borderRadius: 4, overflow: 'hidden', boxShadow: '0 30px 60px rgba(26,26,26,0.18), 0 8px 18px rgba(26,26,26,0.12)', transform: 'rotate(-1.4deg)', background: '#000' }}>
+                <Image src="/images/press/six-word-lessons-cover.jpg" alt="Six-Word Lessons on Selling Your Home in Seattle by Kim Pelham, book cover" fill priority sizes="(max-width: 900px) 240px, 300px" style={{ objectFit: 'cover' }} />
               </div>
               <div>
                 <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(28px, 3.4vw, 40px)', fontWeight: 500, color: 'var(--color-forest)', margin: '0 0 12px', lineHeight: 1.15 }}>
