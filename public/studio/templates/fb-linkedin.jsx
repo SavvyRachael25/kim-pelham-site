@@ -100,7 +100,7 @@ function LiPostHero({ tweaks }) {
         <div style={{ padding: "60px 50px", display: "flex", flexDirection: "column", justifyContent: "center" }}>
           <Eyebrow color={clay} size={11}>Snohomish County Real Estate</Eyebrow>
           <h1 style={{ fontFamily: FONT.heading, fontSize: 56, fontWeight: 600, color: forest, margin: "16px 0 0 0", lineHeight: 1.05 }}>
-            I take two clients<br/>at a <em style={{ color: clay, fontStyle: "italic" }}>time</em>.
+            I take two buyers<br/>at a <em style={{ color: clay, fontStyle: "italic" }}>time</em>.
           </h1>
           <p style={{ fontFamily: FONT.body, fontSize: 16, color: C.textLight, lineHeight: 1.65, margin: "24px 0 0 0" }}>
             That math is not marketing. It is how I deliver a 102.3% sale-to-list
@@ -220,7 +220,7 @@ function LiCarousel({ tweaks }) {
             The difference is not skill.<br/>It is <em style={{ color: clay }}>capacity</em>.
           </p>
           <p style={{ fontFamily: FONT.body, fontSize: 22, color: "rgba(255,255,255,.85)", margin: "32px 0 0 0", lineHeight: 1.55, maxWidth: 880 }}>
-            Two active clients means: I stage every listing myself, I answer the
+            Two active buyers means: I stage every listing myself, I answer the
             Saturday text in five minutes, and I have time to push back when an
             offer is leaving money on the table. That is what makes the basis
             points add up.

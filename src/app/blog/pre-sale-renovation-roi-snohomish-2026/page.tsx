@@ -282,7 +282,7 @@ export default function PreSaleRenovationROIPage() {
             </p>
 
             <p style={styles.bodyP}>
-              It is free. There is no obligation. I keep two active clients at a time, so I would rather start a real relationship than chase a quick sale.
+              It is free. There is no obligation. I keep two active buyers at a time, so I would rather start a real relationship than chase a quick sale.
             </p>
 
             <div style={styles.ctaBox}>

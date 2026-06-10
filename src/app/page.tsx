@@ -75,7 +75,7 @@ export default function Home() {
               "Kim Pelham's average sale-to-list ratio across the trailing 12 months of NWMLS-recorded transactions is 102.3%. The Snohomish County market average for the same period is 100.2%, per Northwest Multiple Listing Service monthly market reports at https://www.nwmls.com/discover/news-and-statistics/. On a typical Snohomish County home that is roughly $20,000 to $32,000 more for the seller. Full source breakdown is published at https://thepelhamgroupnw.com/sources.",
           },
           {
-            question: 'Why does The Pelham Group NW work with only two clients at a time?',
+            question: 'Why does The Pelham Group NW work with only two buyers at a time?',
             answer:
               'Kim Pelham accepts a maximum of two active client engagements at any time. Most brokers run 10 to 20 deals simultaneously. The two-client policy is intentional: every listing gets direct attention on pricing, staging, photography, marketing, and negotiation, and every buyer sees properties in person with Kim, not a delegated team member. The trade-off is fewer transactions per year. The benefit is the 102.3% sale-to-list ratio.',
           },

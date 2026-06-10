@@ -45,7 +45,7 @@ export const metadata: Metadata = {
   ),
   title: "Kim Pelham | Snohomish County Real Estate Broker | Everett, Bothell, Mill Creek WA",
   description:
-    "Kim Pelham is a Snohomish County real estate broker based in Everett, WA, serving Bothell, Snohomish, Mill Creek, Lake Stevens, Marysville and Mukilteo. 17 years of experience. 102.3% sale-to-list ratio versus 100.2% NWMLS market average. Maximum two active clients at a time. Best of Snohomish County 2023 and 2024.",
+    "Kim Pelham is a Snohomish County real estate broker based in Everett, WA, serving Bothell, Snohomish, Mill Creek, Lake Stevens, Marysville and Mukilteo. 17 years of experience. 102.3% sale-to-list ratio versus 100.2% NWMLS market average. Maximum two active buyers at a time. Best of Snohomish County 2023 and 2024.",
   openGraph: {
     title: "Kim Pelham | Snohomish County Real Estate Broker",
     description:
@@ -103,7 +103,7 @@ export default function RootLayout({
                   "name": "Kim Pelham",
                   "givenName": "Kim",
                   "familyName": "Pelham",
-                  "description": "Kim Pelham is a Snohomish County real estate broker with 17 years of experience and a 102.3% sale-to-list ratio. She works with a maximum of two active clients at a time and is a Senior Real Estate Specialist (SRES). Best of Snohomish County 2023 and 2024.",
+                  "description": "Kim Pelham is a Snohomish County real estate broker with 17 years of experience and a 102.3% sale-to-list ratio. She works with a maximum of two active buyers at a time and is a Senior Real Estate Specialist (SRES). Best of Snohomish County 2023 and 2024.",
                   "url": "https://thepelhamgroupnw.com/about",
                   "mainEntityOfPage": "https://thepelhamgroupnw.com/about",
                   "image": "https://thepelhamgroupnw.com/images/kim-headshot-msh.jpg",
@@ -148,7 +148,7 @@ export default function RootLayout({
                   "@id": "https://thepelhamgroupnw.com/#agent",
                   "name": "Kim Pelham",
                   "alternateName": "Kim Pelham, The Pelham Group NW",
-                  "description": "Kim Pelham is a Snohomish County real estate broker based in Everett, WA. 17 years of experience, 102.3% sale-to-list ratio versus the 100.2% NWMLS market average, and a maximum of two active clients at a time. Services include residential buying, listing and selling, in-house home staging, and senior real estate transitions across Everett, Bothell, Snohomish, Mill Creek, Lake Stevens, Marysville and Mukilteo.",
+                  "description": "Kim Pelham is a Snohomish County real estate broker based in Everett, WA. 17 years of experience, 102.3% sale-to-list ratio versus the 100.2% NWMLS market average, and a maximum of two active buyers at a time. Services include residential buying, listing and selling, in-house home staging, and senior real estate transitions across Everett, Bothell, Snohomish, Mill Creek, Lake Stevens, Marysville and Mukilteo.",
                   "url": "https://thepelhamgroupnw.com",
                   "mainEntityOfPage": "https://thepelhamgroupnw.com",
                   "telephone": "+14252509422",
@@ -308,7 +308,7 @@ export default function RootLayout({
                   "@id": "https://thepelhamgroupnw.com/#website",
                   "url": "https://thepelhamgroupnw.com",
                   "name": "The Pelham Group NW",
-                  "description": "Kim Pelham, Snohomish County real estate broker. 17 years experience, 102.3% sale-to-list ratio, maximum two active clients at a time.",
+                  "description": "Kim Pelham, Snohomish County real estate broker. 17 years experience, 102.3% sale-to-list ratio, maximum two active buyers at a time.",
                   "publisher": { "@id": "https://thepelhamgroupnw.com/#organization" },
                   "inLanguage": "en-US"
                 },

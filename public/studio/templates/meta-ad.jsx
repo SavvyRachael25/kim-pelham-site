@@ -215,7 +215,7 @@ function MetaAdCarousel({ tweaks, listing }) {
                 <p style={{ fontFamily: FONT.body, fontSize: 22, color: "rgba(255,255,255,.9)", margin: 0, lineHeight: 1.45 }}>
                   17 years in Snohomish County.<br/>
                   102.3% sale-to-list ratio.<br/>
-                  Two active clients max.
+                  Two active buyers max.
                 </p>
                 <div style={{ marginTop: 48, background: clay, color: "#fff", padding: "16px 28px", display: "inline-block",
                   fontFamily: FONT.body, fontSize: 22, fontWeight: 700, letterSpacing: "1px", borderRadius: 4 }}>
@@ -449,7 +449,7 @@ function MetaAdStatCard({ tweaks }) {
             <div>
               <p style={{ fontFamily: FONT.heading, fontSize: 28, fontStyle: "italic", color: "#fff", margin: 0, lineHeight: 1 }}>Kim Pelham</p>
               <p style={{ fontFamily: FONT.body, fontSize: 13, color: "rgba(255,255,255,.7)", margin: "4px 0 0 0", letterSpacing: "1.5px", textTransform: "uppercase" }}>
-                17 yrs · 176 closings · 2 clients max
+                17 yrs · 176 closings · 2 buyers max
               </p>
             </div>
           </div>

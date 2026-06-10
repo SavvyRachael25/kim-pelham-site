@@ -89,7 +89,7 @@ function FbCover({ tweaks }) {
           <h1 style={{ fontFamily: FONT.heading, fontSize: 42, fontWeight: 600, color: forest, margin: "8px 0 0 0", lineHeight: 1.05 }}>
             I don't just sell homes here.<br/>I <em style={{ color: clay, fontStyle: "italic" }}>live</em> here.
           </h1>
-          <p style={{ fontFamily: FONT.hand, fontSize: 22, color: clay, margin: "16px 0 0 0" }}>17 years, two clients at a time</p>
+          <p style={{ fontFamily: FONT.hand, fontSize: 22, color: clay, margin: "16px 0 0 0" }}>17 years, two buyers at a time</p>
         </div>
         <div style={{ position: "relative", overflow: "hidden" }}>
           <img src="assets/kim-by-water.jpg" alt="" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover" }} />

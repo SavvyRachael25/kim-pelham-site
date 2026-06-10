@@ -56,7 +56,7 @@ export function renderListingsWelcomeEmail(opts: { firstName?: string }): {
     '',
     "Inside: pricing strategy, the eight-week timeline, staging room by room, repairs prioritized by ROI, what to expect on the journey, and the negotiation prep I do before every offer comes in.",
     '',
-    "Read at your own pace. When you're ready to talk through your timeline or just bounce ideas around, reply to this email or text me at 425-250-9422. I work with a maximum of two active clients at a time, so I actually have room to talk.",
+    "Read at your own pace. When you're ready to talk through your timeline or just bounce ideas around, reply to this email or text me at 425-250-9422. I work with a maximum of two active buyers at a time, so I actually have room to talk.",
     '',
     'Always,',
     'Kim',
@@ -128,7 +128,7 @@ export function renderListingsWelcomeEmail(opts: { firstName?: string }): {
             <li>Negotiation prep I do before every offer comes in</li>
           </ul>
           <p style="margin:0 0 14px 0;">
-            Read at your own pace. When you&rsquo;re ready to talk through your timeline or just bounce ideas around, reply to this email or text me at <a href="sms:+14252509422" style="color:${FOREST};text-decoration:underline;">425.250.9422</a>. I work with a maximum of two active clients at a time, so I actually have room to talk.
+            Read at your own pace. When you&rsquo;re ready to talk through your timeline or just bounce ideas around, reply to this email or text me at <a href="sms:+14252509422" style="color:${FOREST};text-decoration:underline;">425.250.9422</a>. I work with a maximum of two active buyers at a time, so I actually have room to talk.
           </p>
         </td></tr>
 

@@ -152,7 +152,7 @@ export function buildCascade(row: ListingRow): Cascade {
       const caption =
         `Just listed in ${city}. ${addr}${price ? `, offered at ${price}` : ''}.` +
         (specs ? `\n\n${specs}.` : '') +
-        `\n\nI take two active clients at a time, so every showing gets my full attention. Want to walk it in person? Send me a message or text 425.250.9422.` +
+        `\n\nI take two active buyers at a time, so every showing gets my full attention. Want to walk it in person? Send me a message or text 425.250.9422.` +
         sig;
       items.push(
         { key: 'ig-feed', label: 'Instagram Feed', channel: 'social', platform: 'instagram', contentType: 'post', templateId: 'ig-feed-listing-portrait', width: 1080, height: 1350, caption },
@@ -166,7 +166,7 @@ export function buildCascade(row: ListingRow): Cascade {
         blurb:
           `${addr}${price ? `, offered at ${price}` : ''}.` +
           (specs ? ` ${specs}.` : '') +
-          ` I work with a maximum of two active clients at a time, so reach out and I will walk you through it personally.`,
+          ` I work with a maximum of two active buyers at a time, so reach out and I will walk you through it personally.`,
         listingUrl: row.listingUrl,
       };
       skipped.push({ key: 'ig-story', reason: 'No clean single-frame 9:16 story template yet (only 3-frame strip).' });

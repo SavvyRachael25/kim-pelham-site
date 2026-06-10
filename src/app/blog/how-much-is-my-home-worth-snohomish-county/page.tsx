@@ -220,7 +220,7 @@ export default function HomeValueGuidePage() {
 
             <h2 style={styles.h2}>I will give you a free, honest, no-obligation valuation</h2>
             <p style={styles.bodyP}>
-              If you are within 6 to 12 months of selling, I am happy to walk your home and give you my honest read on value, what the comp set looks like, what would move the price up if you decided to do some pre-sale work, and what your list strategy might look like. No pressure, no obligation, no signing anything. I keep two active clients at a time, so I would rather start an honest conversation than chase a quick sale.
+              If you are within 6 to 12 months of selling, I am happy to walk your home and give you my honest read on value, what the comp set looks like, what would move the price up if you decided to do some pre-sale work, and what your list strategy might look like. No pressure, no obligation, no signing anything. I keep two active buyers at a time, so I would rather start an honest conversation than chase a quick sale.
             </p>
 
             <div style={styles.ctaBox}>

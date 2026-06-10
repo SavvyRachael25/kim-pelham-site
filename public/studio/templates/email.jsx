@@ -209,7 +209,7 @@ function EmailNewsletter({ tweaks, listing }) {
             Thinking about listing this summer?
           </p>
           <p style={{ fontFamily: FONT.body, fontSize: 13, color: C.textLight, lineHeight: 1.65, margin: "12px 0 16px 0" }}>
-            I take two active clients at a time. June calendar is filling. Reply to this
+            I take two active buyers at a time. June calendar is filling. Reply to this
             email or text me. No pitch, just a 20-minute conversation.
           </p>
           <CtaButton clay={clay}>Reply to Kim</CtaButton>
@@ -538,7 +538,7 @@ function EmailJustSold({ tweaks, listing }) {
         <div style={{ background: forest, color: "#fff", padding: "20px 24px", textAlign: "center" }}>
           <p style={{ fontFamily: FONT.hand, fontSize: 24, color: clay, margin: 0, lineHeight: 1 }}>thinking about listing this summer?</p>
           <p style={{ fontFamily: FONT.body, fontSize: 13, color: "rgba(255,255,255,.85)", margin: "10px 0 16px 0", lineHeight: 1.5 }}>
-            Two clients at a time. June is filling. Twenty minutes, no pitch.
+            Two buyers at a time. June is filling. Twenty minutes, no pitch.
           </p>
           <div style={{ background: clay, color: "#fff", padding: "12px 22px", display: "inline-block",
             fontFamily: FONT.body, fontSize: 13, fontWeight: 700, letterSpacing: "1px" }}>

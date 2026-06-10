@@ -59,7 +59,7 @@ const sources: Source[] = [
   },
   {
     id: 'two-client-policy',
-    claim: 'Maximum two active clients at a time',
+    claim: 'Maximum two active buyers at a time',
     source: 'Operating policy of The Pelham Group NW',
     detail:
       'Internal operating policy stated publicly across all marketing channels. Kim accepts a maximum of two active client engagements simultaneously to preserve the depth of attention on each listing, showing, and closing. This is a business-practice claim, not a third-party metric.',

@@ -149,7 +149,7 @@ export default function Hero() {
           }}
         >
           I'm a Snohomish County real estate broker with 17 years of experience and a 102.3% sale-to-list ratio.
-          I work with a maximum of two active clients at a time, so every showing, listing, and closing earns my full attention.
+          I work with a maximum of two active buyers at a time, so every showing, listing, and closing earns my full attention.
         </p>
 
         {/* CTA Button */}

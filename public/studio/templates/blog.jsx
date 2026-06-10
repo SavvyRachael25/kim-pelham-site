@@ -477,7 +477,7 @@ function PropertyPageSold({ tweaks, listing }) {
         <div style={{ background: forest, backgroundImage: FOREST_TEXTURE, color: "#fff", padding: "36px 40px", textAlign: "center" }}>
           <Handwritten color={clay} size={26}>thinking about a move?</Handwritten>
           <h3 style={{ fontFamily: FONT.heading, fontSize: 32, fontWeight: 600, color: "#fff", margin: "12px 0 0 0", lineHeight: 1.2 }}>
-            Two clients at a time. June is filling.
+            Two buyers at a time. June is filling.
           </h3>
           <p style={{ fontFamily: FONT.body, fontSize: 14, color: "rgba(255,255,255,.85)", margin: "16px auto 24px", maxWidth: 600 }}>
             Twenty-minute call. No pitch. We figure out whether I am the right person to walk alongside you.
