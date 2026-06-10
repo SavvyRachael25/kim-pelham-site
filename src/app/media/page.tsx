@@ -6,6 +6,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
+import FAQSection from '@/components/FAQSection';
 
 const SITE = 'https://thepelhamgroupnw.com';
 
@@ -104,6 +105,50 @@ const speakingTopics = [
   },
 ];
 
+// ---------------- FAQ — emits FAQPage JSON-LD via FAQSection ----------------
+const mediaFAQs = [
+  {
+    question: 'Has Kim Pelham been featured in the press?',
+    answer:
+      'Yes. Kim was profiled in The Daily Herald on March 14, 2025, in "The real estate pros you need to know: Top 3 realtors in Snohomish County," which highlighted her interior-design background and her First Place finish in the 2024 Best Of Snohomish County contest. She was also voted First Place Best Realtor in the Daily Herald\'s Best of Snohomish County 2024 readers\' choice and is a Best of Zillow Premier Agent.',
+  },
+  {
+    question: 'What awards has Kim Pelham won?',
+    answer:
+      'Kim won First Place Best Realtor in the Daily Herald Best of Snohomish County 2024 (readers\' choice), was a finalist in 2023, and is a Best of Zillow Premier Agent. She is SRES (Seniors Real Estate Specialist) certified by the National Association of Realtors and holds a 102.3% average sale-to-list ratio across 176 closed transactions versus a 100.2% NWMLS county average.',
+  },
+  {
+    question: 'Is Kim Pelham a published author?',
+    answer:
+      'Yes. Kim is the author of Six-Word Lessons on Selling Your Home in Seattle: 100 Lessons to Maximize the Results of Your Sale (Pacelli Publishing, December 2017, ISBN 9781933750712), part of the long-running Six-Word Lessons series. The book is a practical seller\'s guide distilled into one hundred six-word lessons.',
+  },
+  {
+    question: 'How do I book Kim Pelham for a speaking engagement?',
+    answer:
+      'Email hello@thepelhamgroupnw.com or call the office at (425) 213-8761. Kim speaks on four core topics: pre-sale renovation strategy, the psychology of home staging, senior real estate transitions, and reading the Snohomish County market. Each topic is broker-on-the-ground, with named-entity examples and specific NWMLS data.',
+  },
+  {
+    question: 'Where can journalists get a press kit?',
+    answer:
+      'A downloadable press kit (hi-res headshots, full bio, story angles, named sources, and verified statistics) is available on the /media page of thepelhamgroupnw.com. For interview requests or custom story-angle support, email hello@thepelhamgroupnw.com and a response typically follows within 24 hours.',
+  },
+  {
+    question: 'What is the Best of Snohomish County award?',
+    answer:
+      'Best of Snohomish County is the annual readers\' choice awards run by The Daily Herald (HeraldNet), the largest daily newspaper in Snohomish County. Categories cover business, dining, lifestyle, and professional services. Kim won First Place Best Realtor in 2024 and was a finalist in 2023.',
+  },
+  {
+    question: 'What credentials does Kim Pelham hold?',
+    answer:
+      'Kim is a licensed Washington State real estate broker (17 years of experience), brokered by Katrina Eileen Real Estate, and SRES (Seniors Real Estate Specialist) certified by the National Association of Realtors. She is also Best of Zillow recognized and has a published-author credit with Pacelli Publishing.',
+  },
+  {
+    question: 'What cities does Kim Pelham serve?',
+    answer:
+      'Kim serves the full Snohomish County market with primary focus on Everett, Mill Creek, Bothell, Snohomish, Lake Stevens, Marysville, and Mukilteo. She is licensed in Washington State and has closed transactions across Snohomish and parts of King County over a 17-year career.',
+  },
+];
+
 function formatDate(iso: string): string {
   const date = new Date(iso + 'T00:00:00');
   return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -147,6 +192,32 @@ export default function MediaPage() {
     })),
   };
 
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: SITE },
+      { '@type': 'ListItem', position: 2, name: 'Media & Press', item: `${SITE}/media` },
+    ],
+  };
+
+  // Top-level NewsArticle references (in addition to Person.subjectOf) so search
+  // engines that prefer flat Article schemas can pick them up directly.
+  const newsArticleSchemas = press.map((p) => ({
+    '@context': 'https://schema.org',
+    '@type': 'NewsArticle',
+    headline: p.headline,
+    url: p.url,
+    datePublished: p.date,
+    publisher: {
+      '@type': 'NewsMediaOrganization',
+      name: p.outlet,
+      url: 'https://www.heraldnet.com/',
+    },
+    about: { '@type': 'Person', name: 'Kim Pelham', url: SITE },
+    mentions: [{ '@type': 'Person', name: 'Kim Pelham', url: SITE }],
+  }));
+
   const bookSchema = {
     '@context': 'https://schema.org',
     '@type': 'Book',
@@ -169,6 +240,10 @@ export default function MediaPage() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(bookSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      {newsArticleSchemas.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
 
       <main>
         <InnerHero
@@ -178,6 +253,15 @@ export default function MediaPage() {
           imageAlt="Historic Snohomish neighborhood"
           subtitleStyle="body"
         />
+
+        {/* AEO opener — direct answer paragraph */}
+        <section style={{ background: 'var(--color-cream)', padding: '40px 24px 32px' }}>
+          <div style={{ maxWidth: 880, margin: '0 auto' }}>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.06rem', lineHeight: 1.7, color: 'var(--color-text)', margin: 0 }}>
+              <b>What this page is.</b> A working press kit for journalists, producers, and event hosts. Every claim links to a verifiable source. Kim Pelham is a Washington-licensed real estate broker (17 years) with The Pelham Group NW, brokered by Katrina Eileen Real Estate. She holds a 102.3% average sale-to-list ratio across 176 closings, is SRES certified, was First Place Best Realtor in the Daily Herald&apos;s Best of Snohomish County 2024, and is the author of <i>Six-Word Lessons on Selling Your Home in Seattle</i> (Pacelli Publishing, 2017).
+            </p>
+          </div>
+        </section>
 
         {/* AS FEATURED IN strip */}
         <section
@@ -470,6 +554,13 @@ export default function MediaPage() {
             </div>
           </div>
         </section>
+
+        {/* FAQ — FAQPage JSON-LD emitted by FAQSection automatically */}
+        <FAQSection
+          title="Common Press & Media Questions"
+          faqs={mediaFAQs}
+          backgroundColor="#fff"
+        />
 
         {/* PRESS KIT + DIRECT CONTACT */}
         <section style={{ padding: '88px 24px 96px', background: '#fff' }}>
