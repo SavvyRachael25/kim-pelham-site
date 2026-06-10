@@ -71,7 +71,7 @@ export default function TestimonialsPage() {
           <div style={{ display: 'flex', gap: '32px', flexWrap: 'wrap', justifyContent: 'center' }}>
             {[
               { label: 'Best of Zillow', icon: '🏆' },
-              { label: 'Best of Snohomish County 2024', icon: '★' },
+              { label: 'Best of Snohomish County 2023 & 2024', icon: '★' },
               { label: 'SRES Certified', icon: '✓' },
             ].map(({ label, icon }) => (
               <div key={label} style={{ textAlign: 'center' }}>

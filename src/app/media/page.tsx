@@ -113,7 +113,7 @@ interface Award {
 const awards: Award[] = [
   {
     title: 'Best Realtor, Best of Snohomish County',
-    sub: 'Daily Herald readers\' choice. First place 2024, finalist 2023.',
+    sub: 'Daily Herald readers\' choice. First Place back to back, 2023 and 2024.',
     year: '2023 & 2024',
     image: '/images/best-of-snoco-2024-no-background.png',
     imageAlt: 'Best of Snohomish County 2024',
@@ -175,12 +175,12 @@ const mediaFAQs = [
   {
     question: 'Has Kim Pelham been featured in the press?',
     answer:
-      'Yes. Kim was profiled in The Daily Herald on March 14, 2025, in "The real estate pros you need to know: Top 3 realtors in Snohomish County," which highlighted her interior-design background and her First Place finish in the 2024 Best Of Snohomish County contest. She was also voted First Place Best Realtor in the Daily Herald\'s Best of Snohomish County 2024 readers\' choice and is a Best of Zillow Premier Agent.',
+      'Yes. Kim was profiled in The Daily Herald on March 14, 2025, in "The real estate pros you need to know: Top 3 realtors in Snohomish County," which highlighted her interior-design background and her back-to-back First Place finishes in the Daily Herald\'s Best of Snohomish County contest in 2023 and 2024. She is also a Best of Zillow Premier Agent.',
   },
   {
     question: 'What awards has Kim Pelham won?',
     answer:
-      'Kim won First Place Best Realtor in the Daily Herald Best of Snohomish County 2024 (readers\' choice), was a finalist in 2023, and is a Best of Zillow Premier Agent. She is SRES (Seniors Real Estate Specialist) certified by the National Association of Realtors and holds a 102.3% average sale-to-list ratio across 176 closed transactions versus a 100.2% NWMLS county average.',
+      'Kim won First Place Best Realtor in the Daily Herald Best of Snohomish County in both 2023 and 2024 (back-to-back readers\' choice), and is a Best of Zillow Premier Agent. She is SRES (Seniors Real Estate Specialist) certified by the National Association of Realtors and holds a 102.3% average sale-to-list ratio across 176 closed transactions versus a 100.2% NWMLS county average.',
   },
   {
     question: 'Is Kim Pelham a published author?',
@@ -200,7 +200,7 @@ const mediaFAQs = [
   {
     question: 'What is the Best of Snohomish County award?',
     answer:
-      'Best of Snohomish County is the annual readers\' choice awards run by The Daily Herald (HeraldNet), the largest daily newspaper in Snohomish County. Categories cover business, dining, lifestyle, and professional services. Kim won First Place Best Realtor in 2024 and was a finalist in 2023.',
+      'Best of Snohomish County is the annual readers\' choice awards run by The Daily Herald (HeraldNet), the largest daily newspaper in Snohomish County. Categories cover business, dining, lifestyle, and professional services. Kim won First Place Best Realtor in both 2023 and 2024, back to back.',
   },
   {
     question: 'What credentials does Kim Pelham hold?',
@@ -229,8 +229,8 @@ export default function MediaPage() {
     jobTitle: 'Real Estate Broker',
     worksFor: { '@type': 'RealEstateAgent', name: 'Katrina Eileen Real Estate' },
     award: [
-      'Best Realtor, Best of Snohomish County 2024 (Daily Herald readers\' choice)',
-      'Best of Snohomish County 2023 finalist',
+      'Best Realtor, Best of Snohomish County 2023 (Daily Herald readers\' choice)',
+      'Best Realtor, Best of Snohomish County 2024 (Daily Herald readers\' choice, back-to-back)',
       'Best of Zillow Premier Agent',
       'SRES (Seniors Real Estate Specialist), National Association of Realtors',
     ],
@@ -328,7 +328,7 @@ export default function MediaPage() {
       <main>
         <InnerHero
           title="Press, Recognition & Published Work"
-          subtitle="Featured in the Daily Herald. First Place Best Realtor in the Best of Snohomish County 2024. Best of Zillow Premier Agent. Published author. 17 years building a reputation in this county, one client at a time."
+          subtitle="Featured in the Daily Herald. First Place Best Realtor in the Best of Snohomish County back-to-back in 2023 and 2024. Best of Zillow Premier Agent. Published author. 17 years building a reputation in this county, one client at a time."
           image="/images/neighborhood-03-snohomish-historic.jpg"
           imageAlt="Historic Snohomish neighborhood"
           subtitleStyle="body"
@@ -338,7 +338,7 @@ export default function MediaPage() {
         <section style={{ background: 'var(--color-cream)', padding: '40px 24px 32px' }}>
           <div style={{ maxWidth: 880, margin: '0 auto' }}>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.06rem', lineHeight: 1.7, color: 'var(--color-text)', margin: 0 }}>
-              <b>What this page is.</b> A working press kit for journalists, producers, and event hosts. Every claim links to a verifiable source. Kim Pelham is a Washington-licensed real estate broker (17 years) with The Pelham Group NW, brokered by Katrina Eileen Real Estate. She holds a 102.3% average sale-to-list ratio across 176 closings, is SRES certified, was First Place Best Realtor in the Daily Herald&apos;s Best of Snohomish County 2024, and is the author of <i>Six-Word Lessons on Selling Your Home in Seattle</i> (Pacelli Publishing, 2017).
+              <b>What this page is.</b> A working press kit for journalists, producers, and event hosts. Every claim links to a verifiable source. Kim Pelham is a Washington-licensed real estate broker (17 years) with The Pelham Group NW, brokered by Katrina Eileen Real Estate. She holds a 102.3% average sale-to-list ratio across 176 closings, is SRES certified, was First Place Best Realtor in the Daily Herald&apos;s Best of Snohomish County in 2023 and 2024 (back to back), and is the author of <i>Six-Word Lessons on Selling Your Home in Seattle</i> (Pacelli Publishing, 2017).
             </p>
           </div>
         </section>

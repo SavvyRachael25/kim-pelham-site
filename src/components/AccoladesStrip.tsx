@@ -40,14 +40,14 @@ export default function AccoladesStrip() {
         <li style={{ flex: '0 0 auto' }}>
           <Link
             href="/media"
-            aria-label="Best Realtor, Best of Snohomish County 2024 (Daily Herald readers' choice)"
+            aria-label="Best Realtor, Best of Snohomish County 2023 and 2024 (Daily Herald readers' choice, back to back)"
             style={{ display: 'inline-flex', alignItems: 'center', gap: 8, textDecoration: 'none', color: 'inherit', whiteSpace: 'nowrap' }}
           >
             <span style={{ position: 'relative', width: 24, height: 28, display: 'inline-block', flex: '0 0 auto' }}>
               <Image src="/images/best-of-snoco-2024-no-background.png" alt="" fill sizes="24px" style={{ objectFit: 'contain' }} />
             </span>
             <span style={{ fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 600, color: '#2F5233' }}>
-              Best Realtor 2024
+              Best Realtor 2023 & 2024
             </span>
           </Link>
         </li>

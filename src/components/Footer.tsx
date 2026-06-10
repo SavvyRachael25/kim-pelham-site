@@ -190,7 +190,7 @@ export default function Footer() {
             </p>
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
               {[
-                'Best of Snohomish County 2024',
+                'Best of Snohomish County 2023 & 2024',
                 'Best of Zillow',
                 'SRES Certified',
                 '17+ Years Experience',
