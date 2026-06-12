@@ -33,7 +33,7 @@ export default function InnerHero({ title, subtitle, image, imageAlt, subtitleSt
       : {
           fontFamily: 'var(--font-handwritten)',
           fontSize: '24px',
-          color: '#E5C29A',
+          color: '#B8845C',
           lineHeight: 1.3,
         };
   return (
