@@ -32,10 +32,10 @@ export const metadata: Metadata = {
     siteName: 'The Pelham Group NW',
     images: [
       {
-        url: 'https://thepelhamgroupnw.com/case-studies/mathis-condo/after/01.jpg',
+        url: 'https://thepelhamgroupnw.com/og/case-study-concierge-condo.jpg',
         width: 1200,
-        height: 800,
-        alt: 'Snohomish County condo, listing-ready after Pelham Group concierge prep',
+        height: 630,
+        alt: 'Concierge condo case study by Kim Pelham. The staged living room: sage accent wall, marble herringbone fireplace surround with the fire lit, large peony art, sliding glass door to the patio.',
       },
     ],
     type: 'article',
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: TITLE,
     description: DESC,
-    images: ['https://thepelhamgroupnw.com/case-studies/mathis-condo/after/01.jpg'],
+    images: ['https://thepelhamgroupnw.com/og/case-study-concierge-condo.jpg'],
   },
   alternates: {
     canonical: 'https://thepelhamgroupnw.com/case-study/concierge-condo',
