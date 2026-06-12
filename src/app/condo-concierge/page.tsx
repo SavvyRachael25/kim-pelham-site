@@ -7,20 +7,16 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import KimCaresNote from '@/components/KimCaresNote';
+import CaptionedCarousel from '@/components/CaptionedCarousel';
+import {
+  beforeSlides,
+  afterSlides,
+  BEFORE_COUNT,
+  AFTER_COUNT,
+} from '@/lib/case-studies/mathis-condo';
 
 const BEFORE_PATH = '/case-studies/mathis-condo/before';
 const AFTER_PATH = '/case-studies/mathis-condo/after';
-const BEFORE_COUNT = 35;
-const AFTER_COUNT = 25;
-
-const beforePhotos = Array.from({ length: BEFORE_COUNT }, (_, i) => ({
-  src: `${BEFORE_PATH}/${String(i + 1).padStart(2, '0')}.jpg`,
-  alt: `Before photo ${i + 1} of the Snohomish condo, April 2026`,
-}));
-const afterPhotos = Array.from({ length: AFTER_COUNT }, (_, i) => ({
-  src: `${AFTER_PATH}/${String(i + 1).padStart(2, '0')}.jpg`,
-  alt: `After photo ${i + 1} of the Snohomish condo, May 2026`,
-}));
 
 type Magnet = 'playbook' | 'equity-report';
 
@@ -326,55 +322,34 @@ export default function CondoConciergePage() {
           </section>
         )}
 
-        {/* UNLOCKED — full case study */}
+        {/* UNLOCKED — full case study with carousels */}
         {unlocked && (
           <>
-            <section style={{ padding: '72px 24px 48px', background: '#fff' }}>
+            <section style={{ padding: '72px 24px 56px', background: '#fff' }}>
               <div style={{ maxWidth: 1180, margin: '0 auto' }}>
-                <header style={{ marginBottom: 28 }}>
-                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
-                    <span style={{ display: 'inline-block', width: 24, height: 1, background: 'var(--color-clay)' }} aria-hidden="true" />
-                    <span style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--color-clay)' }}>
-                      Before · April 7, 2026
-                    </span>
-                  </div>
-                  <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(26px, 3vw, 34px)', fontWeight: 500, color: 'var(--color-forest)', margin: 0, lineHeight: 1.15 }}>
-                    Where we started ({BEFORE_COUNT} photos).
-                  </h2>
-                </header>
-                <ul className="photo-grid" style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 12 }}>
-                  {beforePhotos.map((p) => (
-                    <li key={p.src} style={{ position: 'relative', aspectRatio: '4 / 3', overflow: 'hidden', borderRadius: 6, background: 'var(--color-cream-dark)' }}>
-                      <Image src={p.src} alt={p.alt} fill loading="lazy" sizes="(max-width: 720px) 50vw, (max-width: 1180px) 33vw, 220px" style={{ objectFit: 'cover' }} />
-                    </li>
-                  ))}
-                </ul>
+                <CaptionedCarousel
+                  slides={beforeSlides}
+                  badge={`Before · April 7, 2026 · ${BEFORE_COUNT} photos`}
+                  heading="Where we started."
+                  intro="Every photo from the baseline walk, captioned room by room."
+                  ariaLabel="Before pre-sale prep, photo carousel"
+                  priorityFirst
+                />
               </div>
             </section>
 
-            <section style={{ padding: '48px 24px 88px', background: 'var(--color-cream)' }}>
+            <section style={{ padding: '40px 24px 88px', background: 'var(--color-cream)' }}>
               <div style={{ maxWidth: 1180, margin: '0 auto' }}>
-                <header style={{ marginBottom: 28 }}>
-                  <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 12 }}>
-                    <span style={{ display: 'inline-block', width: 24, height: 1, background: 'var(--color-clay)' }} aria-hidden="true" />
-                    <span style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--color-clay)' }}>
-                      After · May 8, 2026
-                    </span>
-                  </div>
-                  <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(26px, 3vw, 34px)', fontWeight: 500, color: 'var(--color-forest)', margin: 0, lineHeight: 1.15 }}>
-                    How we listed it ({AFTER_COUNT} photos).
-                  </h2>
-                </header>
-                <ul className="photo-grid" style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 12 }}>
-                  {afterPhotos.map((p) => (
-                    <li key={p.src} style={{ position: 'relative', aspectRatio: '4 / 3', overflow: 'hidden', borderRadius: 6, background: 'var(--color-cream-dark)' }}>
-                      <Image src={p.src} alt={p.alt} fill loading="lazy" sizes="(max-width: 720px) 50vw, (max-width: 1180px) 33vw, 220px" style={{ objectFit: 'cover' }} />
-                    </li>
-                  ))}
-                </ul>
+                <CaptionedCarousel
+                  slides={afterSlides}
+                  badge={`After · May 8, 2026 · ${AFTER_COUNT} photos`}
+                  heading="How we listed it."
+                  intro="Same square footage. New paint, new flooring, new hardware, full staging."
+                  ariaLabel="After pre-sale prep, photo carousel"
+                />
 
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: 14.5, color: 'var(--color-text-light)', margin: '32px 0 0', textAlign: 'center' }}>
-                  Want the full editorial version with the timeline and the concierge breakdown?{' '}
+                  Want the full editorial version with the timeline, the concierge breakdown, and the FAQ?{' '}
                   <Link href="/case-study/concierge-condo" style={{ color: 'var(--color-clay)', fontWeight: 700 }}>
                     Read the full case study →
                   </Link>

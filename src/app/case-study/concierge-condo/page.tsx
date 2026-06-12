@@ -7,41 +7,22 @@ import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 import KimCaresNote from '@/components/KimCaresNote';
+import FAQSection from '@/components/FAQSection';
+import CaptionedCarousel from '@/components/CaptionedCarousel';
+import {
+  beforeSlides,
+  afterSlides,
+  conciergeBullets,
+  caseStudyFAQs,
+  BEFORE_COUNT,
+  AFTER_COUNT,
+} from '@/lib/case-studies/mathis-condo';
 
 const SITE = 'https://thepelhamgroupnw.com';
-const BEFORE_PATH = '/case-studies/mathis-condo/before';
-const AFTER_PATH = '/case-studies/mathis-condo/after';
 
-// Photo counts confirmed against the Drive folder.
-// TODO: re-pair before/after by room once Kim or Rachael flags the room labels;
-// for now both grids run in chronological order from the original shoots.
-const BEFORE_COUNT = 35;
-const AFTER_COUNT = 25;
-const beforePhotos = Array.from({ length: BEFORE_COUNT }, (_, i) => ({
-  src: `${BEFORE_PATH}/${String(i + 1).padStart(2, '0')}.jpg`,
-  alt: `Before photo ${i + 1} of the concierge condo prep, April 2026`,
-}));
-const afterPhotos = Array.from({ length: AFTER_COUNT }, (_, i) => ({
-  src: `${AFTER_PATH}/${String(i + 1).padStart(2, '0')}.jpg`,
-  alt: `After photo ${i + 1} of the concierge condo, post-prep May 2026`,
-}));
-
-// Hero before/after pair for the dramatic split-screen at the top.
-// Using image 01 of each set as the showcase. Re-pair after Kim confirms which pair is most dramatic.
-const HERO_BEFORE = `${BEFORE_PATH}/01.jpg`;
-const HERO_AFTER = `${AFTER_PATH}/01.jpg`;
-
-const conciergeBullets: string[] = [
-  'Walked the unit with the owners before they left the state, then took the keys',
-  'Planned the punch list with our crew so every dollar went where buyers actually look',
-  'New LVP wide-plank flooring throughout, fresh designer paint top to bottom',
-  'New vanities, sinks, faucets, tub and shower hardware in both bathrooms',
-  'Refinished tub and shower surrounds, brushed nickel hardware throughout',
-  'New LED can lighting, new wall heaters, modernized switches and outlets',
-  'Smart appliances, smart thermostat, smart automatic blinds',
-  'Staged the unit ourselves with Kim\'s own pieces, photographed for listing',
-  'Owners approved every step over text and a quick video call, no in-person visits required',
-];
+// Hero before/after pair (slide 1 of each carousel)
+const HERO_BEFORE = beforeSlides[0].src;
+const HERO_AFTER = afterSlides[0].src;
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -49,7 +30,7 @@ const articleSchema = {
   headline:
     'How a Snohomish County Condo Sold for Top Dollar After the Owners Moved Out of State',
   description:
-    'A real Pelham Group concierge case study. Two homeowners moved out of state mid-prep, and we still delivered a top-dollar sale. Before and after photos, full timeline, and what we did to bridge the distance.',
+    'A real Pelham Group concierge case study. Two homeowners moved out of state mid-prep, and we still delivered a top-dollar sale. 60 before and after photos, full timeline, and what we did to bridge the distance.',
   author: { '@type': 'Person', name: 'Kim Pelham', url: SITE },
   publisher: {
     '@type': 'RealEstateAgent',
@@ -57,9 +38,15 @@ const articleSchema = {
     url: SITE,
     logo: { '@type': 'ImageObject', url: `${SITE}/images/kim-headshot-msh.jpg` },
   },
-  image: [`${SITE}${HERO_AFTER}`],
+  image: [`${SITE}${HERO_AFTER}`, `${SITE}${HERO_BEFORE}`],
   mainEntityOfPage: `${SITE}/case-study/concierge-condo`,
   about: { '@type': 'Service', name: 'Pelham Group Pre-Sale Concierge Service' },
+  contentLocation: {
+    '@type': 'Place',
+    name: 'Snohomish County, Washington',
+    address: { '@type': 'PostalAddress', addressRegion: 'WA', addressCountry: 'US', addressLocality: 'Snohomish County' },
+    geo: { '@type': 'GeoCoordinates', latitude: 47.9785, longitude: -122.2098 },
+  },
 };
 
 const breadcrumbSchema = {
@@ -72,6 +59,52 @@ const breadcrumbSchema = {
   ],
 };
 
+// HowTo schema describing the concierge service as a 9-step process so AI engines
+// (Google AI Overviews, ChatGPT, Perplexity) can lift "how does the Pelham Group
+// concierge service work" answers verbatim.
+const howToSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'HowTo',
+  name: 'The Pelham Group Pre-Sale Concierge Service, end to end',
+  description:
+    'How Kim Pelham and The Pelham Group NW handle a full pre-sale prep for a Snohomish County home, even when the owners are out of state.',
+  inLanguage: 'en-US',
+  totalTime: 'P21D',
+  supply: [{ '@type': 'HowToSupply', name: 'Keys to the home' }],
+  tool: [
+    { '@type': 'HowToTool', name: 'Vetted local crew' },
+    { '@type': 'HowToTool', name: 'Pelham Group in-house staging' },
+    { '@type': 'HowToTool', name: 'Professional listing photography' },
+  ],
+  step: conciergeBullets.map((text, i) => ({
+    '@type': 'HowToStep',
+    position: i + 1,
+    name: `Step ${i + 1}`,
+    text,
+  })),
+};
+
+const imageObjectSchemas = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    contentUrl: `${SITE}${HERO_BEFORE}`,
+    caption: 'Snohomish County condo, baseline before Pelham Group pre-sale prep',
+    creator: { '@type': 'Person', name: 'Kim Pelham' },
+    creditText: 'The Pelham Group NW',
+    datePublished: '2026-04-07',
+  },
+  {
+    '@context': 'https://schema.org',
+    '@type': 'ImageObject',
+    contentUrl: `${SITE}${HERO_AFTER}`,
+    caption: 'Same Snohomish County condo, listing-ready after Pelham Group concierge prep',
+    creator: { '@type': 'Person', name: 'Kim Pelham' },
+    creditText: 'The Pelham Group NW',
+    datePublished: '2026-05-08',
+  },
+];
+
 export default function CondoCaseStudyPage() {
   return (
     <>
@@ -80,6 +113,10 @@ export default function CondoCaseStudyPage() {
 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(howToSchema) }} />
+      {imageObjectSchemas.map((s, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(s) }} />
+      ))}
 
       <main>
         <InnerHero
@@ -89,11 +126,17 @@ export default function CondoCaseStudyPage() {
           imageAlt="Refreshed condo interior with warm staging and new flooring"
         />
 
-        {/* AEO opener */}
+        {/* AEO direct-answer opener */}
         <section style={{ background: 'var(--color-cream)', padding: '48px 24px 36px' }}>
           <div style={{ maxWidth: 880, margin: '0 auto' }}>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.06rem', lineHeight: 1.7, color: 'var(--color-text)', margin: 0 }}>
-              <b>The short version.</b> Two owners had to move out of state before their Snohomish County condo was ready to list. They could not be here to manage contractors, paint cabinets, refinish a tub, or stand in the kitchen at 8 AM to let the flooring crew in. So they let us do all of it. We took the keys, ran the punch list with our own crew, staged the unit with Kim&apos;s own pieces, photographed it for the listing, and brought them a top-dollar sale. They never had to fly back. This page shows what that actually looks like, photo by photo.
+              <b>The short version.</b> Two owners had to move out of state before their Snohomish
+              County condo was ready to list. They could not be here to manage contractors, paint
+              cabinets, refinish a tub, or stand in the kitchen at 8 AM to let the flooring crew in.
+              So they let us do all of it. We took the keys, ran the punch list with our own crew,
+              staged the unit with Kim&apos;s own pieces, photographed it for the listing, and
+              brought them a top-dollar sale. They never had to fly back. The 60 photos below show
+              what that actually looks like.
             </p>
           </div>
         </section>
@@ -154,7 +197,7 @@ export default function CondoCaseStudyPage() {
           </div>
         </section>
 
-        {/* THE CONCIERGE — bullet list of what we did */}
+        {/* CONCIERGE BULLETS */}
         <section style={{ padding: '72px 24px', background: '#fff' }}>
           <div style={{ maxWidth: 980, margin: '0 auto' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
@@ -202,74 +245,41 @@ export default function CondoCaseStudyPage() {
               ))}
             </ol>
 
-            {/* TODO: confirm headline numbers with Kim (sale price, days on market, sale-to-list ratio)
-                and convert the placeholder line below into a real stat strip. */}
+            {/* TODO Kim: sale-price headline numbers go here once confirmed. */}
             <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--color-text-faint)', lineHeight: 1.6, margin: '28px 0 0', fontStyle: 'italic' }}>
-              TODO Kim: confirm final sale price, days on market, and sale-to-list ratio for this
-              listing so we can add the headline numbers here.
+              TODO Kim: confirm final sale price, days on market, and sale-to-list ratio so we can add the headline numbers here.
             </p>
           </div>
         </section>
 
-        {/* BEFORE GALLERY */}
-        <section style={{ padding: '88px 24px 56px', background: 'var(--color-cream)' }}>
+        {/* BEFORE CAROUSEL */}
+        <section style={{ padding: '88px 24px 64px', background: 'var(--color-cream)' }}>
           <div style={{ maxWidth: 1180, margin: '0 auto' }}>
-            <header style={{ marginBottom: 28, display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 24, flexWrap: 'wrap' }}>
-              <div style={{ maxWidth: 640 }}>
-                <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
-                  <span style={{ display: 'inline-block', width: 24, height: 1, background: 'var(--color-clay)' }} aria-hidden="true" />
-                  <span style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--color-clay)' }}>
-                    Before · April 7, 2026
-                  </span>
-                </div>
-                <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(24px, 2.8vw, 32px)', fontWeight: 500, color: 'var(--color-forest)', margin: 0, lineHeight: 1.18 }}>
-                  Where we started.
-                </h2>
-              </div>
-              <span style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--color-text-faint)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-                {BEFORE_COUNT} photos
-              </span>
-            </header>
-            <ul className="photo-grid" style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 12 }}>
-              {beforePhotos.map((p) => (
-                <li key={p.src} style={{ position: 'relative', aspectRatio: '4 / 3', overflow: 'hidden', borderRadius: 6, background: 'var(--color-cream-dark)' }}>
-                  <Image src={p.src} alt={p.alt} fill loading="lazy" sizes="(max-width: 720px) 50vw, (max-width: 1180px) 33vw, 220px" style={{ objectFit: 'cover' }} />
-                </li>
-              ))}
-            </ul>
+            <CaptionedCarousel
+              slides={beforeSlides}
+              badge={`Before · April 7, 2026 · ${BEFORE_COUNT} photos`}
+              heading="Where we started."
+              intro="Every photo from the baseline walk, captioned room by room so you can see exactly what the owners handed us."
+              ariaLabel="Before pre-sale prep, photo carousel"
+              priorityFirst
+            />
           </div>
         </section>
 
-        {/* AFTER GALLERY */}
-        <section style={{ padding: '56px 24px 96px', background: 'var(--color-cream)', borderBottom: '1px solid var(--color-border)' }}>
+        {/* AFTER CAROUSEL */}
+        <section style={{ padding: '40px 24px 96px', background: 'var(--color-cream)', borderBottom: '1px solid var(--color-border)' }}>
           <div style={{ maxWidth: 1180, margin: '0 auto' }}>
-            <header style={{ marginBottom: 28, display: 'flex', alignItems: 'flex-end', justifyContent: 'space-between', gap: 24, flexWrap: 'wrap' }}>
-              <div style={{ maxWidth: 640 }}>
-                <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 10 }}>
-                  <span style={{ display: 'inline-block', width: 24, height: 1, background: 'var(--color-clay)' }} aria-hidden="true" />
-                  <span style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--color-clay)' }}>
-                    After · May 8, 2026
-                  </span>
-                </div>
-                <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(24px, 2.8vw, 32px)', fontWeight: 500, color: 'var(--color-forest)', margin: 0, lineHeight: 1.18 }}>
-                  How we listed it.
-                </h2>
-              </div>
-              <span style={{ fontFamily: 'var(--font-body)', fontSize: 13, color: 'var(--color-text-faint)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '0.08em' }}>
-                {AFTER_COUNT} photos
-              </span>
-            </header>
-            <ul className="photo-grid" style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(220px, 1fr))', gap: 12 }}>
-              {afterPhotos.map((p) => (
-                <li key={p.src} style={{ position: 'relative', aspectRatio: '4 / 3', overflow: 'hidden', borderRadius: 6, background: 'var(--color-cream-dark)' }}>
-                  <Image src={p.src} alt={p.alt} fill loading="lazy" sizes="(max-width: 720px) 50vw, (max-width: 1180px) 33vw, 220px" style={{ objectFit: 'cover' }} />
-                </li>
-              ))}
-            </ul>
+            <CaptionedCarousel
+              slides={afterSlides}
+              badge={`After · May 8, 2026 · ${AFTER_COUNT} photos`}
+              heading="How we listed it."
+              intro="Same square footage. New paint, new flooring, new hardware, new lighting, refinished surrounds, full staging, listing photography."
+              ariaLabel="After pre-sale prep, photo carousel"
+            />
           </div>
         </section>
 
-        {/* CTAs — two follow-on offers */}
+        {/* CTA CARDS */}
         <section style={{ padding: '88px 24px', background: '#fff' }}>
           <div style={{ maxWidth: 1100, margin: '0 auto' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, marginBottom: 14 }}>
@@ -291,11 +301,10 @@ export default function CondoCaseStudyPage() {
                   The Pre-Sale Renovation Playbook
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, color: 'var(--color-text-light)', lineHeight: 1.65, margin: '0 0 22px' }}>
-                  28 pages on the updates that pay back at closing, the money-pits to skip, and how
-                  the concierge plan handles every detail. Same playbook we used here.
+                  28 pages on the updates that pay back at closing, the money-pits to skip, and how the concierge plan handles every detail. Same playbook we used here.
                 </p>
                 <Link
-                  href="/listwithkim"
+                  href="/condo-concierge"
                   style={{
                     display: 'inline-flex',
                     alignItems: 'center',
@@ -322,8 +331,7 @@ export default function CondoCaseStudyPage() {
                   Your Home Equity Report
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: 15, color: 'var(--color-text-light)', lineHeight: 1.65, margin: '0 0 22px' }}>
-                  A real read on what your condo or home is worth in this market, and what the
-                  pre-sale prep could change about that number. Hand-built by Kim, no Zestimate.
+                  A real read on what your condo or home is worth in this market, and what the pre-sale prep could change about that number. Hand-built by Kim, no Zestimate.
                 </p>
                 <Link
                   href="/condo-concierge"
@@ -346,14 +354,15 @@ export default function CondoCaseStudyPage() {
                 </Link>
               </article>
             </div>
-
-            <p style={{ fontFamily: 'var(--font-body)', fontSize: 14, color: 'var(--color-text-faint)', lineHeight: 1.6, margin: '28px 0 0', fontStyle: 'italic' }}>
-              TODO Kim: confirm the Home Equity Report fulfillment path. The CTA currently routes
-              into the gated funnel form which captures the lead and tags it; we still need the
-              actual PDF or the Kim-built report process to plug in here.
-            </p>
           </div>
         </section>
+
+        {/* FAQ — FAQPage JSON-LD emitted by FAQSection automatically */}
+        <FAQSection
+          title="Common questions about the Pelham Group Concierge"
+          faqs={caseStudyFAQs}
+          backgroundColor="var(--color-cream)"
+        />
 
         <KimCaresNote />
       </main>
@@ -361,12 +370,7 @@ export default function CondoCaseStudyPage() {
 
       <style>{`
         @media (max-width: 720px) {
-          .hero-ba {
-            grid-template-columns: 1fr !important;
-          }
-          .photo-grid {
-            grid-template-columns: repeat(2, 1fr) !important;
-          }
+          .hero-ba { grid-template-columns: 1fr !important; }
         }
       `}</style>
     </>

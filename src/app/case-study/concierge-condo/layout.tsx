@@ -3,21 +3,28 @@ import type { Metadata } from 'next';
 const TITLE =
   'Concierge Condo Case Study · Out-of-State Owners, Top-Dollar Sale | Kim Pelham';
 const DESC =
-  'A real Pelham Group concierge case study: two homeowners moved out of state mid-prep, and we still got them top dollar for their condo. Before and after photos, the full timeline, and what we actually did to bridge the distance. By Kim Pelham, The Pelham Group NW, Snohomish County.';
+  'A real Pelham Group concierge case study. Two homeowners moved out of state mid-prep. Kim Pelham and her crew handled paint, flooring, hardware, refinishing, staging, and listing photography and brought them a top-dollar Snohomish County sale. 60 before and after photos, the full timeline, the concierge process, and an 8-question FAQ.';
 
 export const metadata: Metadata = {
   title: TITLE,
   description: DESC,
   keywords: [
-    'condo concierge service',
-    'pre-sale prep Snohomish County',
-    'home staging Everett',
-    'out of state home sale',
+    'condo concierge service Snohomish County',
+    'pre-sale prep Everett',
+    'home staging Snohomish County',
+    'out of state home sale Washington',
     'Pelham Group concierge',
     'condo before after',
     'pre-listing renovation case study',
+    'sell condo from out of state',
     'Kim Pelham',
+    'The Pelham Group NW',
+    'Snohomish County real estate broker',
+    'concierge real estate Snohomish',
   ],
+  authors: [{ name: 'Kim Pelham', url: 'https://thepelhamgroupnw.com' }],
+  creator: 'Kim Pelham',
+  publisher: 'The Pelham Group NW',
   openGraph: {
     title: TITLE,
     description: DESC,
@@ -25,10 +32,10 @@ export const metadata: Metadata = {
     siteName: 'The Pelham Group NW',
     images: [
       {
-        url: 'https://thepelhamgroupnw.com/images/hero-02-warm-kitchen.jpg',
+        url: 'https://thepelhamgroupnw.com/case-studies/mathis-condo/after/01.jpg',
         width: 1200,
-        height: 630,
-        alt: 'Concierge condo case study by Kim Pelham, The Pelham Group NW',
+        height: 800,
+        alt: 'Snohomish County condo, listing-ready after Pelham Group concierge prep',
       },
     ],
     type: 'article',
@@ -38,7 +45,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: TITLE,
     description: DESC,
-    images: ['https://thepelhamgroupnw.com/images/hero-02-warm-kitchen.jpg'],
+    images: ['https://thepelhamgroupnw.com/case-studies/mathis-condo/after/01.jpg'],
   },
   alternates: {
     canonical: 'https://thepelhamgroupnw.com/case-study/concierge-condo',
@@ -47,6 +54,13 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
     googleBot: { index: true, follow: true, 'max-snippet': -1, 'max-image-preview': 'large' },
+  },
+  // GEO hints (used by some specialized search engines, harmless elsewhere)
+  other: {
+    'geo.region': 'US-WA',
+    'geo.placename': 'Snohomish County',
+    'geo.position': '47.9785;-122.2098',
+    ICBM: '47.9785, -122.2098',
   },
 };
 
