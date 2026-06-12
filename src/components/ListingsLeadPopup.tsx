@@ -1,8 +1,10 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import A2PConsent from '@/components/A2PConsent';
 import type { A2PConsentState } from '@/components/A2PConsent';
+import { isFunnelRoute } from '@/lib/funnel-routes';
 
 /**
  * ListingsLeadPopup — site-wide branded popup for the property-listings lead magnet.
@@ -34,6 +36,8 @@ const SHOW_AFTER_MS = 9000;
 const SCROLL_TRIGGER = 0.45;
 
 export default function ListingsLeadPopup() {
+  const pathname = usePathname();
+  const onFunnel = isFunnelRoute(pathname);
   const [visible, setVisible] = useState(false);
   const [firstName, setFirstName] = useState('');
   const [phone, setPhone] = useState('');
@@ -46,6 +50,8 @@ export default function ListingsLeadPopup() {
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
+    // Funnel pages get nothing competing with their own form.
+    if (onFunnel) return;
 
     const dismissed = localStorage.getItem(STORAGE_KEY);
     if (dismissed) {
@@ -72,7 +78,11 @@ export default function ListingsLeadPopup() {
       clearTimeout(timer);
       window.removeEventListener('scroll', onScroll);
     };
-  }, []);
+  }, [onFunnel]);
+
+  // Hard guard: even if the effect did set visible from a prior route,
+  // the funnel-route render path returns null so nothing paints.
+  if (onFunnel) return null;
 
   const dismiss = () => {
     if (typeof window !== 'undefined') {

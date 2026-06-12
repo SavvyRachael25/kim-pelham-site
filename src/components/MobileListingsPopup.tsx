@@ -19,23 +19,28 @@
  */
 
 import { useState, useEffect } from 'react';
+import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import Image from 'next/image';
+import { isFunnelRoute } from '@/lib/funnel-routes';
 
 const STORAGE_KEY = 'pelham_listings_popup_dismissed_v1';
 const SHOW_AFTER_MS = 4000;
 
 export default function MobileListingsPopup() {
+  const pathname = usePathname();
+  const onFunnel = isFunnelRoute(pathname);
   const [show, setShow] = useState(false);
 
   useEffect(() => {
     if (typeof window === 'undefined') return;
+    if (onFunnel) return;
     if (window.innerWidth > 768) return;
     if (localStorage.getItem(STORAGE_KEY)) return;
 
     const t = setTimeout(() => setShow(true), SHOW_AFTER_MS);
     return () => clearTimeout(t);
-  }, []);
+  }, [onFunnel]);
 
   const dismiss = () => {
     setShow(false);
@@ -44,6 +49,7 @@ export default function MobileListingsPopup() {
     }
   };
 
+  if (onFunnel) return null;
   if (!show) return null;
 
   return (
