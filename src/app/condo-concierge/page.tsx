@@ -303,7 +303,7 @@ export default function CondoConciergePage() {
               </h2>
               <div className="teaser-ba" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 4, borderRadius: 10, overflow: 'hidden', border: '1px solid var(--color-border)' }}>
                 <figure style={{ position: 'relative', margin: 0, aspectRatio: '4 / 3', background: 'var(--color-cream-dark)' }}>
-                  <Image src={`${BEFORE_PATH}/01.jpg`} alt="Condo before pre-sale prep, April 2026" fill priority sizes="(max-width: 900px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
+                  <Image src={`${BEFORE_PATH}/01.jpg`} alt="Condo before pre-sale prep, May 2026" fill priority sizes="(max-width: 900px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
                   <figcaption style={{ position: 'absolute', top: 14, left: 14, background: 'var(--color-cream)', color: 'var(--color-forest)', padding: '5px 10px', borderRadius: 3, fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' }}>
                     Before
                   </figcaption>
@@ -329,7 +329,7 @@ export default function CondoConciergePage() {
               <div style={{ maxWidth: 1180, margin: '0 auto' }}>
                 <CaptionedCarousel
                   slides={beforeSlides}
-                  badge={`Before · April 7, 2026 · ${BEFORE_COUNT} photos`}
+                  badge={`Before · Vacant walkthrough, May 8 2026 · ${BEFORE_COUNT} photos`}
                   heading="Where we started."
                   intro="Every photo from the baseline walk, captioned room by room."
                   ariaLabel="Before pre-sale prep, photo carousel"
@@ -342,7 +342,7 @@ export default function CondoConciergePage() {
               <div style={{ maxWidth: 1180, margin: '0 auto' }}>
                 <CaptionedCarousel
                   slides={afterSlides}
-                  badge={`After · May 8, 2026 · ${AFTER_COUNT} photos`}
+                  badge={`After · Listing media, May 28 2026 · ${AFTER_COUNT} photos`}
                   heading="How we listed it."
                   intro="Same square footage. New paint, new flooring, new hardware, full staging."
                   ariaLabel="After pre-sale prep, photo carousel"

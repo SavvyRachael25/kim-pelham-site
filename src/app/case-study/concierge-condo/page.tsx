@@ -92,7 +92,7 @@ const imageObjectSchemas = [
     caption: 'Snohomish County condo, baseline before Pelham Group pre-sale prep',
     creator: { '@type': 'Person', name: 'Kim Pelham' },
     creditText: 'The Pelham Group NW',
-    datePublished: '2026-04-07',
+    datePublished: '2026-05-08',
   },
   {
     '@context': 'https://schema.org',
@@ -160,9 +160,9 @@ export default function CondoCaseStudyPage() {
 
             <div className="hero-ba" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 4, borderRadius: 10, overflow: 'hidden', border: '1px solid var(--color-border)', boxShadow: '0 16px 40px rgba(47, 82, 51, 0.08)' }}>
               <figure style={{ position: 'relative', margin: 0, aspectRatio: '4 / 3', background: 'var(--color-cream-dark)' }}>
-                <Image src={HERO_BEFORE} alt="Condo living area before pre-sale prep, April 2026" fill priority sizes="(max-width: 900px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
+                <Image src={HERO_BEFORE} alt="Condo living area before pre-sale prep, May 2026" fill priority sizes="(max-width: 900px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
                 <figcaption style={{ position: 'absolute', top: 16, left: 16, background: 'var(--color-cream)', color: 'var(--color-forest)', padding: '6px 12px', borderRadius: 3, fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' }}>
-                  Before · April 2026
+                  Before · May 2026
                 </figcaption>
               </figure>
               <figure style={{ position: 'relative', margin: 0, aspectRatio: '4 / 3', background: 'var(--color-cream-dark)' }}>
@@ -262,7 +262,7 @@ export default function CondoCaseStudyPage() {
           <div style={{ maxWidth: 1180, margin: '0 auto' }}>
             <CaptionedCarousel
               slides={beforeSlides}
-              badge={`Before · April 7, 2026 · ${BEFORE_COUNT} photos`}
+              badge={`Before · Vacant walkthrough, May 8 2026 · ${BEFORE_COUNT} photos`}
               heading="Where we started."
               intro="Every photo from the baseline walk, captioned room by room so you can see exactly what the owners handed us."
               ariaLabel="Before pre-sale prep, photo carousel"
@@ -276,7 +276,7 @@ export default function CondoCaseStudyPage() {
           <div style={{ maxWidth: 1180, margin: '0 auto' }}>
             <CaptionedCarousel
               slides={afterSlides}
-              badge={`After · May 8, 2026 · ${AFTER_COUNT} photos`}
+              badge={`After · Listing media, May 28 2026 · ${AFTER_COUNT} photos`}
               heading="How we listed it."
               intro="Same square footage. New paint, new flooring, new hardware, new lighting, refinished surrounds, full staging, listing photography."
               ariaLabel="After pre-sale prep, photo carousel"
