@@ -1,8 +1,8 @@
 /*
   Funnel-route guard. Any route that lives in this set should NOT see the
-  site-wide marketing popups (ListingsLeadPopup, MobileListingsPopup), the
-  IntroAnimation, or any other interruption that competes with the funnel's
-  own lead-capture form. The visitor came here for one specific thing.
+  site-wide marketing popups (ConciergeCondoPopup, MobileConciergeCondoPopup),
+  the IntroAnimation, or any other interruption that competes with the
+  funnel's own lead-capture form. The visitor came here for one specific thing.
 
   Match is true if the current pathname is exactly one of the listed routes
   OR starts with one of the listed prefixes (so /case-study/anything wins).

@@ -1,0 +1,44 @@
+<!doctype html><html><head><meta charset="utf-8">
+<link rel="stylesheet" href="../../studio/design-system/fonts.css">
+<style>
+  :root { --forest:#2F5233; --clay:#B8845C; --cream:#F8F5F0; }
+  html,body { margin:0; padding:0; }
+  body { width:1080px; height:1920px; background:#1a1a1a; font-family:'Inter', system-ui, sans-serif; }
+  .story { width:1080px; height:1920px; position:relative; overflow:hidden; }
+  .story img.photo { width:100%; height:100%; object-fit:cover; position:absolute; inset:0; }
+  .story .grad { position:absolute; inset:0; background:linear-gradient(180deg,
+    rgba(0,0,0,0.55) 0%, rgba(0,0,0,0.15) 20%, rgba(0,0,0,0) 42%,
+    rgba(0,0,0,0.50) 60%, rgba(0,0,0,0.92) 100%); }
+  .story .top { position:absolute; top:80px; left:0; right:0; padding:0 64px; display:flex; justify-content:space-between; align-items:flex-start; z-index:3; }
+  .story .eyebrow { color:#fff; font-family:'Inter'; font-size:18px; font-weight:700; letter-spacing:3.5px; text-transform:uppercase; margin:0; padding-top:24px; text-shadow:0 1px 6px rgba(0,0,0,0.7); }
+  .story .badges { display:flex; gap:18px; }
+  .story .badges img { height:150px; filter:drop-shadow(0 3px 10px rgba(0,0,0,0.55)); }
+  .story .body { position:absolute; left:0; right:0; bottom:0; padding:0 72px 220px; z-index:3; }
+  .story .kicker { font-family:'Caveat'; font-size:80px; color:#e8b78a; line-height:1; margin:0 0 24px 0; text-shadow:0 2px 8px rgba(0,0,0,0.7); }
+  .story .addr { font-family:'Inter'; font-size:22px; font-weight:600; letter-spacing:3px; text-transform:uppercase; color:#fff; margin:0 0 30px 0; text-shadow:0 1px 6px rgba(0,0,0,0.7); }
+  .story .price { font-family:'Cormorant Garamond', Georgia, serif; font-size:200px; font-weight:600; line-height:0.92; color:#fff; margin:0 0 20px 0; letter-spacing:-3px; text-shadow:0 2px 22px rgba(0,0,0,0.55); }
+  .story .specs { font-family:'Cormorant Garamond', Georgia, serif; font-style:italic; font-size:62px; font-weight:500; line-height:1.05; color:#e8b78a; margin:0 0 22px 0; text-shadow:0 1px 8px rgba(0,0,0,0.65); }
+  .story .mls { font-family:'Inter'; font-size:18px; font-weight:600; letter-spacing:2.5px; text-transform:uppercase; color:rgba(255,255,255,0.85); margin:0; text-shadow:0 1px 4px rgba(0,0,0,0.7); }
+  .story .sig { position:absolute; bottom:88px; right:80px; font-family:'Caveat'; font-size:90px; color:#fff; line-height:1; margin:0; z-index:4; text-shadow:0 2px 12px rgba(0,0,0,0.55); }
+</style>
+</head><body>
+<div class="story">
+  <img class="photo" src="../../listings/2528831-admiralty/photos/hero-living-fireplace.jpg" alt="">
+  <div class="grad"></div>
+  <div class="top">
+    <p class="eyebrow">PELHAM GROUP NW · JUST LISTED</p>
+    <div class="badges">
+      <img src="../../studio/assets/badge-snoco-2024.png" alt="">
+      <img src="../../studio/assets/badge-zillow.png" alt="">
+    </div>
+  </div>
+  <div class="body">
+    <p class="kicker">just listed in Everett</p>
+    <p class="addr">11706 Admiralty Way · Unit B</p>
+    <p class="price">$375,000</p>
+    <p class="specs">2 bd · 1.75 ba · 1,140 sq ft</p>
+    <p class="mls">Open Sat May 30 · 1 to 3 pm · NWMLS #2528831</p>
+  </div>
+  <p class="sig">Kim</p>
+</div>
+</body></html>

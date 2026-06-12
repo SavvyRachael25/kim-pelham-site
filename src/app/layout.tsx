@@ -5,8 +5,8 @@ import { Cormorant_Garamond, Inter, Caveat } from "next/font/google";
 import "./globals.css";
 import IntroAnimation from "@/components/IntroAnimation";
 import Analytics from "@/components/Analytics";
-import MobileListingsPopup from "@/components/MobileListingsPopup";
-import ListingsLeadPopup from "@/components/ListingsLeadPopup";
+import MobileConciergeCondoPopup from "@/components/MobileConciergeCondoPopup";
+import ConciergeCondoPopup from "@/components/ConciergeCondoPopup";
 import OpenHouseBanner from "@/components/OpenHouseBanner";
 import AccessibilityWidget from "@/components/AccessibilityWidget";
 
@@ -431,10 +431,10 @@ export default function RootLayout({
           data-widget-id="69e29c13141137f36a3cd275"
           strategy="afterInteractive"
         />
-        {/* Mobile-only listings promo popup — auto-shows after 4s, links to /properties */}
-        <MobileListingsPopup />
-        {/* Site-wide listings lead-magnet popup — name + phone, captures first-look list */}
-        <ListingsLeadPopup />
+        {/* Mobile concierge condo teaser - bottom sheet, links to /condo-concierge funnel */}
+        <MobileConciergeCondoPopup />
+        {/* Site-wide concierge condo teaser - modal, links to /condo-concierge funnel */}
+        <ConciergeCondoPopup />
         {/* Brand-matched accessibility widget — floating bottom-left, settings persist */}
         <AccessibilityWidget />
         {/* Analytics & attribution — gated on env vars, no-op until configured */}
