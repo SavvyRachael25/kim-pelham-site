@@ -103,12 +103,12 @@ export default function CondoConciergePage() {
                 your next chapter,
               </span>
               <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(32px, 4.4vw, 52px)', fontWeight: 500, color: 'var(--color-cream)', margin: '6px 0 18px', lineHeight: 1.1 }}>
-                Two homeowners moved out of state. Their condo still sold for top dollar.
+                Two homeowners moved out of state. Their condo is on the market anyway.
               </h1>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.08rem', color: 'rgba(248,245,240,0.88)', lineHeight: 1.7, margin: '0 0 24px', maxWidth: 540 }}>
                 They could not be in town to manage paint, flooring, hardware, surrounds, lighting,
                 or staging. They let us do all of it. We took the keys, ran the prep, staged the unit
-                ourselves, and sold it without making them fly back. The full story is below, with
+                ourselves, and got it on the market without making them fly back. The full story is below, with
                 every before and after photo. Tell us where to send it.
               </p>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 8, fontFamily: 'var(--font-body)', fontSize: 14.5, color: 'rgba(248,245,240,0.82)' }}>

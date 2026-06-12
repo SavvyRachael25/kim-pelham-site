@@ -127,7 +127,7 @@ export const caseStudyFAQs = [
   {
     question: 'Can Kim sell my Snohomish County home if I have already moved out of state?',
     answer:
-      'Yes. This case study is exactly that situation. The Mathis condo owners moved out of state in week two of the prep. Kim took the keys, ran the full punch list with her own crew, staged the unit with her own pieces, photographed it for the listing, and closed the sale without a single round trip back to Snohomish County by the owners. Decisions ran over text and a short video call.',
+      'Yes. This case study is exactly that situation. The condo owners moved out of state in week two of the prep. Kim took the keys, ran the full punch list with her own crew, staged the unit with her own pieces, photographed it for the listing, and got it on the market without a single round trip back to Snohomish County by the owners. Decisions ran over text and a short video call. The condo is currently listed.',
   },
   {
     question: 'How long does the Pre-Sale Concierge process take?',
