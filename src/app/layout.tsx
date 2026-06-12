@@ -37,7 +37,11 @@ const caveat = Caveat({
   weight: ["400", "500", "600", "700"],
   variable: "--font-handwritten",
   display: "swap",
-  preload: false,
+  // Was preload:false as an LCP optimization, but the swap-in delay made
+  // every handwritten accent across the site render in the system cursive
+  // fallback (Snell Roundhand on Mac, Comic Sans on Windows, ugly either
+  // way) for the first 200-400ms. Caveat IS the brand. Preload it.
+  preload: true,
 });
 
 export const metadata: Metadata = {
