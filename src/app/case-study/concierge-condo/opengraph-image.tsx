@@ -139,49 +139,64 @@ export default async function Image() {
           </div>
         </div>
 
-        {/* RIGHT 40%: hero photo */}
+        {/* RIGHT 40%: brand panel (text-only fallback for now) */}
         <div
           style={{
             width: '40%',
             height: '100%',
             display: 'flex',
+            flexDirection: 'column',
+            alignItems: 'center',
+            justifyContent: 'center',
+            gap: '24px',
+            padding: '48px 32px',
+            background: 'linear-gradient(135deg, #3d6b42 0%, #2F5233 60%, #1f3a23 100%)',
             position: 'relative',
-            backgroundColor: '#1c1c1c',
+            borderLeft: '1px solid rgba(184,132,92,0.45)',
           }}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src={HERO_URL}
-            alt=""
-            width={480}
-            height={630}
-            style={{
-              width: '100%',
-              height: '100%',
-              objectFit: 'cover',
-            }}
-          />
-
-          {/* Bottom-right info badge over the photo */}
           <div
             style={{
-              position: 'absolute',
-              bottom: '20px',
-              right: '20px',
-              display: 'inline-flex',
-              alignItems: 'center',
-              gap: '8px',
-              background: 'rgba(26,26,26,0.7)',
-              color: '#F8F5F0',
-              fontSize: '14px',
-              fontWeight: 600,
-              letterSpacing: '2px',
-              textTransform: 'uppercase',
-              padding: '6px 12px',
-              borderRadius: '4px',
+              fontSize: '120px',
+              fontWeight: 700,
+              color: '#D4A07A',
+              lineHeight: 1,
+              display: 'flex',
             }}
           >
-            64 photos · case study
+            64
+          </div>
+          <div
+            style={{
+              fontSize: '18px',
+              color: '#F8F5F0',
+              letterSpacing: '4px',
+              textTransform: 'uppercase',
+              fontWeight: 600,
+              display: 'flex',
+              textAlign: 'center',
+            }}
+          >
+            before + after photos
+          </div>
+          <div
+            style={{
+              width: '60px',
+              height: '1px',
+              background: '#B8845C',
+              display: 'flex',
+            }}
+          />
+          <div
+            style={{
+              fontSize: '22px',
+              fontStyle: 'italic',
+              color: '#B8845C',
+              display: 'flex',
+              textAlign: 'center',
+            }}
+          >
+            see the full story
           </div>
         </div>
       </div>
