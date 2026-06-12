@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { sendEmail } from '@/lib/resend';
 import { renderListingsWelcomeEmail } from '@/lib/emails/listings-welcome';
+import { renderCondoMagnetEmail } from '@/lib/emails/condo-magnet';
 import { sendOpsAlert } from '@/lib/ops-alerts';
 
 /**
@@ -302,28 +303,51 @@ export async function POST(req: NextRequest) {
     }
   }
 
-  // Best-effort branded welcome email that delivers the pre-listing
-  // playbook PDF download link. No-ops if RESEND_API_KEY isn't set, so
-  // the form keeps working before Resend is configured. Errors are
-  // logged but don't fail the request — the lead is already in GHL+FUB
-  // at this point.
+  // Best-effort branded welcome email. Routes by tag:
+  //   - prelisting-guide              -> listings welcome (existing popup magnet)
+  //   - wants-prelisting-playbook     -> condo concierge playbook variant
+  //   - wants-home-equity-report      -> condo concierge equity-report variant
+  // No-ops if RESEND_API_KEY isn't set, so the form keeps working before
+  // Resend is configured. Errors are logged but don't fail the request:
+  // the lead is already in GHL+FUB at this point.
   const tagSet = new Set([...(customTags ?? []), ...consentTags]);
-  if (email && tagSet.has('prelisting-guide')) {
-    const { subject, html, text } = renderListingsWelcomeEmail({ firstName });
-    sendEmail({
-      to: email,
-      subject,
-      html,
-      text,
-      tags: [
-        { name: 'campaign', value: 'prelisting-guide' },
-        { name: 'source', value: 'website-popup' },
-      ],
-    }).then((r) => {
-      if (!r.ok) {
-        console.error('[contact-api] Resend send failed:', r.reason);
-      }
-    });
+  if (email) {
+    if (tagSet.has('wants-prelisting-playbook') || tagSet.has('wants-home-equity-report')) {
+      const magnet: 'playbook' | 'equity-report' = tagSet.has('wants-home-equity-report')
+        ? 'equity-report'
+        : 'playbook';
+      const { subject, html, text } = renderCondoMagnetEmail({ firstName, magnet });
+      sendEmail({
+        to: email,
+        subject,
+        html,
+        text,
+        tags: [
+          { name: 'campaign', value: `condo-concierge-${magnet}` },
+          { name: 'source', value: customSource ?? 'condo-concierge' },
+        ],
+      }).then((r) => {
+        if (!r.ok) {
+          console.error('[contact-api] Resend (condo) send failed:', r.reason);
+        }
+      });
+    } else if (tagSet.has('prelisting-guide')) {
+      const { subject, html, text } = renderListingsWelcomeEmail({ firstName });
+      sendEmail({
+        to: email,
+        subject,
+        html,
+        text,
+        tags: [
+          { name: 'campaign', value: 'prelisting-guide' },
+          { name: 'source', value: 'website-popup' },
+        ],
+      }).then((r) => {
+        if (!r.ok) {
+          console.error('[contact-api] Resend send failed:', r.reason);
+        }
+      });
+    }
   }
 
   return NextResponse.json({ success: true }, { status: 200 });
