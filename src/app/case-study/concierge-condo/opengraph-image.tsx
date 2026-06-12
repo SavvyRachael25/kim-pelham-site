@@ -6,27 +6,9 @@ export const alt =
 export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 
-// Same after-shot the page leads with editorially. Loaded as bytes at edge
-// runtime so Satori can composite it instead of fetching a URL.
-async function loadHeroImage(): Promise<ArrayBuffer> {
-  // Public path; ImageResponse runs on the edge so we fetch the asset over HTTPS.
-  // Falling back to the listing-ready bedroom (after/01) if the living-room
-  // image is unavailable; both feel right for the share preview.
-  const url = 'https://thepelhamgroupnw.com/case-studies/mathis-condo/after/19.jpg';
-  const res = await fetch(url, { cache: 'force-cache' });
-  return res.arrayBuffer();
-}
+const HERO_URL = 'https://thepelhamgroupnw.com/case-studies/mathis-condo/after/19.jpg';
 
 export default async function Image() {
-  let heroDataUrl: string | null = null;
-  try {
-    const buf = await loadHeroImage();
-    const base64 = Buffer.from(buf).toString('base64');
-    heroDataUrl = `data:image/jpeg;base64,${base64}`;
-  } catch {
-    // If the asset can't load, fall back to a flat forest panel.
-  }
-
   return new ImageResponse(
     (
       <div
@@ -167,35 +149,18 @@ export default async function Image() {
             backgroundColor: '#1c1c1c',
           }}
         >
-          {heroDataUrl ? (
-            // eslint-disable-next-line @next/next/no-img-element
-            <img
-              src={heroDataUrl}
-              alt=""
-              width={480}
-              height={630}
-              style={{
-                width: '100%',
-                height: '100%',
-                objectFit: 'cover',
-              }}
-            />
-          ) : (
-            <div
-              style={{
-                width: '100%',
-                height: '100%',
-                background: 'linear-gradient(135deg, #3d6b42 0%, #2F5233 100%)',
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                color: 'rgba(248,245,240,0.45)',
-                fontSize: '20px',
-              }}
-            >
-              The Pelham Group NW
-            </div>
-          )}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={HERO_URL}
+            alt=""
+            width={480}
+            height={630}
+            style={{
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+            }}
+          />
 
           {/* Bottom-right info badge over the photo */}
           <div
