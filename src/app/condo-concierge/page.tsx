@@ -112,7 +112,7 @@ export default function CondoConciergePage() {
                 every before and after photo. Tell us where to send it.
               </p>
               <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gap: 8, fontFamily: 'var(--font-body)', fontSize: 14.5, color: 'rgba(248,245,240,0.82)' }}>
-                <li>· Real Snohomish County condo, 2026</li>
+                <li>· Real Everett condo, 2026</li>
                 <li>· Owners out of state by week two</li>
                 <li>· Kim and her crew handled the whole punch list</li>
                 <li>· Staged with Kim&apos;s own pieces, photographed for the listing</li>
@@ -181,7 +181,7 @@ export default function CondoConciergePage() {
                       autoComplete="street-address"
                       value={addr}
                       onChange={(e) => setAddr(e.target.value)}
-                      placeholder="123 Cedar Ln, Snohomish"
+                      placeholder="123 Cedar Ln, Everett"
                       style={inputStyle}
                     />
 
@@ -309,7 +309,7 @@ export default function CondoConciergePage() {
                   </figcaption>
                 </figure>
                 <figure style={{ position: 'relative', margin: 0, aspectRatio: '4 / 3', background: 'var(--color-cream-dark)' }}>
-                  <Image src={`${AFTER_PATH}/01.jpg`} alt="Same condo after pre-sale prep, May 2026" fill priority sizes="(max-width: 900px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
+                  <Image src={`${AFTER_PATH}/19.jpg`} alt="Same living room after pre-sale prep, May 2026" fill priority sizes="(max-width: 900px) 100vw, 50vw" style={{ objectFit: 'cover' }} />
                   <figcaption style={{ position: 'absolute', top: 14, right: 14, background: 'var(--color-forest)', color: 'var(--color-cream)', padding: '5px 10px', borderRadius: 3, fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700, letterSpacing: '0.12em', textTransform: 'uppercase' }}>
                     After
                   </figcaption>

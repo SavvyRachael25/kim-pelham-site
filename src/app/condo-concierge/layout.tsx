@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 const TITLE =
   'The Concierge Condo Case Study | Kim Pelham · The Pelham Group NW';
 const DESC =
-  'A short form unlocks the full case study: how Kim Pelham and her crew prepped a Snohomish County condo, top to bottom, while the owners were already out of state. Built for HOA owners thinking about their own move.';
+  'A short form unlocks the full case study: how Kim Pelham and her crew prepped an Everett condo, top to bottom, while the owners were already out of state. Built for HOA owners thinking about their own move.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     siteName: 'The Pelham Group NW',
     images: [
       {
-        url: 'https://thepelhamgroupnw.com/case-studies/mathis-condo/after/01.jpg',
+        url: 'https://thepelhamgroupnw.com/case-studies/mathis-condo/after/19.jpg',
         width: 1200,
         height: 900,
-        alt: 'A Snohomish County condo after Kim Pelham\'s pre-sale concierge work',
+        alt: 'An Everett condo living room after Kim Pelham\'s pre-sale concierge work',
       },
     ],
     type: 'website',
