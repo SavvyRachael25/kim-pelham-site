@@ -9,20 +9,25 @@ import InnerHero from '@/components/InnerHero';
 import KimCaresNote from '@/components/KimCaresNote';
 import FAQSection from '@/components/FAQSection';
 import CaptionedCarousel from '@/components/CaptionedCarousel';
+import BeforeAfterMorphCarousel from '@/components/BeforeAfterMorphCarousel';
 import {
-  beforeSlides,
-  afterSlides,
+  roomPairs,
+  listingMediaSlides,
   conciergeBullets,
   caseStudyFAQs,
   BEFORE_COUNT,
   AFTER_COUNT,
+  HERO_BEFORE_SRC,
+  HERO_AFTER_SRC,
 } from '@/lib/case-studies/mathis-condo';
 
 const SITE = 'https://thepelhamgroupnw.com';
 
-// Hero before/after pair (slide 1 of each carousel)
-const HERO_BEFORE = beforeSlides[0].src;
-const HERO_AFTER = afterSlides[0].src;
+// Hero before/after pair, both of the SAME room (living room).
+const HERO_BEFORE = HERO_BEFORE_SRC;
+const HERO_AFTER = HERO_AFTER_SRC;
+const BEFORE_PATH = '/case-studies/mathis-condo/before';
+const AFTER_PATH = '/case-studies/mathis-condo/after';
 
 const articleSchema = {
   '@context': 'https://schema.org',
@@ -257,29 +262,29 @@ export default function CondoCaseStudyPage() {
           </div>
         </section>
 
-        {/* BEFORE CAROUSEL */}
-        <section style={{ padding: '88px 24px 64px', background: 'var(--color-cream)' }}>
+        {/* PAIRED ROOM WALKTHROUGH (before fades into after, same room) */}
+        <section style={{ padding: '88px 24px 80px', background: 'var(--color-cream)' }}>
           <div style={{ maxWidth: 1180, margin: '0 auto' }}>
-            <CaptionedCarousel
-              slides={beforeSlides}
-              badge={`Before · Vacant walkthrough, May 8 2026 · ${BEFORE_COUNT} photos`}
-              heading="Where we started."
-              intro="Every photo from the baseline walk, captioned room by room so you can see exactly what the owners handed us."
-              ariaLabel="Before pre-sale prep, photo carousel"
-              priorityFirst
+            <BeforeAfterMorphCarousel
+              pairs={roomPairs}
+              beforePath={BEFORE_PATH}
+              afterPath={AFTER_PATH}
+              badge="The walkthrough · before and after, room by room"
+              headline="Same room. New chapter."
+              intro="Each photo holds for a beat, then fades into the after of the same room. Tap to flip it yourself, or use the arrows to step through the unit."
             />
           </div>
         </section>
 
-        {/* AFTER CAROUSEL */}
+        {/* LISTING MEDIA GALLERY (after-only: exteriors, garage, HOA, vignettes) */}
         <section style={{ padding: '40px 24px 96px', background: 'var(--color-cream)', borderBottom: '1px solid var(--color-border)' }}>
           <div style={{ maxWidth: 1180, margin: '0 auto' }}>
             <CaptionedCarousel
-              slides={afterSlides}
-              badge={`After · Listing media, May 28 2026 · ${AFTER_COUNT} photos`}
-              heading="How we listed it."
-              intro="Same square footage. New paint, new flooring, new hardware, new lighting, refinished surrounds, full staging, listing photography."
-              ariaLabel="After pre-sale prep, photo carousel"
+              slides={listingMediaSlides}
+              badge={`The listing media set · ${listingMediaSlides.length} photos`}
+              heading="The rest of the listing media."
+              intro="Exteriors, the patio, the garage, HOA grounds, and a few interior styling vignettes. The shots without a real before, but worth seeing for the full picture."
+              ariaLabel="Listing media set photo carousel"
             />
           </div>
         </section>
@@ -362,7 +367,7 @@ export default function CondoCaseStudyPage() {
           </div>
         </section>
 
-        {/* FAQ — FAQPage JSON-LD emitted by FAQSection automatically */}
+        {/* FAQ. FAQPage JSON-LD emitted by FAQSection automatically. */}
         <FAQSection
           title="Common questions about the Pelham Group Concierge"
           faqs={caseStudyFAQs}
