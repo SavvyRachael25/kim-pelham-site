@@ -8,11 +8,9 @@ import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 import KimCaresNote from '@/components/KimCaresNote';
 import FAQSection from '@/components/FAQSection';
-import CaptionedCarousel from '@/components/CaptionedCarousel';
 import BeforeAfterMorphCarousel from '@/components/BeforeAfterMorphCarousel';
 import {
   roomPairs,
-  listingMediaSlides,
   conciergeBullets,
   caseStudyFAQs,
   BEFORE_COUNT,
@@ -276,18 +274,6 @@ export default function CondoCaseStudyPage() {
           </div>
         </section>
 
-        {/* LISTING MEDIA GALLERY (after-only: exteriors, garage, HOA, vignettes) */}
-        <section style={{ padding: '40px 24px 96px', background: 'var(--color-cream)', borderBottom: '1px solid var(--color-border)' }}>
-          <div style={{ maxWidth: 1180, margin: '0 auto' }}>
-            <CaptionedCarousel
-              slides={listingMediaSlides}
-              badge={`The listing media set · ${listingMediaSlides.length} photos`}
-              heading="The rest of the listing media."
-              intro="Exteriors, the patio, the garage, HOA grounds, and a few interior styling vignettes. The shots without a real before, but worth seeing for the full picture."
-              ariaLabel="Listing media set photo carousel"
-            />
-          </div>
-        </section>
 
         {/* CTA CARDS */}
         <section style={{ padding: '88px 24px', background: '#fff' }}>
