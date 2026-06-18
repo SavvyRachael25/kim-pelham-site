@@ -22,8 +22,8 @@ import type { CarouselSlide } from '@/components/CaptionedCarousel';
 
 const BEFORE_PATH = '/case-studies/mathis-condo/before';
 const AFTER_PATH = '/case-studies/mathis-condo/after';
-export const BEFORE_COUNT = 25;
-export const AFTER_COUNT = 39;
+export const BEFORE_COUNT = 27;
+export const AFTER_COUNT = 40;
 
 /* ============================================================ */
 /* PAIRED ROOM-BY-ROOM WALKTHROUGH                              */
@@ -51,58 +51,16 @@ export const roomPairs: RoomPair[] = [
     afterIdx: 19,
   },
   {
-    room: 'Living room, fireplace',
-    work: 'Old white-tile surround out. Marble herringbone in. Fire lit, peony art above.',
+    room: 'Living room, toward the patio',
+    work: 'New flooring carries through. Cream sofa, sheer linen curtains, sliding door reframed.',
     beforeIdx: 4,
-    afterIdx: 20,
-  },
-  {
-    room: 'Living room, to patio',
-    work: 'Sheer linen curtains. Cream sofa. New flooring carries through.',
-    beforeIdx: 2,
     afterIdx: 22,
-  },
-  {
-    room: 'Entry',
-    work: 'New runner. New floor. Art on the entry wall.',
-    beforeIdx: 3,
-    afterIdx: 24,
-  },
-  {
-    room: 'Dining area',
-    work: 'Pedestal table, ladder-back chairs, landscape art on the wall.',
-    beforeIdx: 10,
-    afterIdx: 18,
   },
   {
     room: 'Kitchen',
     work: 'Oak cabinets cleaned and restyled instead of gutted. Counter dressed.',
     beforeIdx: 11,
     afterIdx: 14,
-  },
-  {
-    room: 'Kitchen, wider',
-    work: 'Same oak, fresh paint surround, styled vignette on the counter.',
-    beforeIdx: 12,
-    afterIdx: 15,
-  },
-  {
-    room: 'Kitchen, to dining',
-    work: 'Wine and stemware vignette. Greenery. Dining open beyond.',
-    beforeIdx: 13,
-    afterIdx: 17,
-  },
-  {
-    room: 'Hallway',
-    work: 'New flooring throughout. Gallery wall art added.',
-    beforeIdx: 14,
-    afterIdx: 2,
-  },
-  {
-    room: 'Laundry',
-    work: 'Water heater dressed. Framed art. Tidy.',
-    beforeIdx: 15,
-    afterIdx: 8,
   },
   {
     room: 'Primary bedroom',
@@ -112,27 +70,9 @@ export const roomPairs: RoomPair[] = [
   },
   {
     room: 'Primary vanity',
-    work: 'New white double vanity. Quartz counter. Matte black faucets.',
-    beforeIdx: 9,
+    work: 'New white double vanity. Quartz counter. Matte black faucets. New mirror.',
+    beforeIdx: 26,
     afterIdx: 5,
-  },
-  {
-    room: 'Primary bath, mirror',
-    work: 'Mirror upgraded. Faucet swapped. Towels and styling.',
-    beforeIdx: 19,
-    afterIdx: 6,
-  },
-  {
-    room: 'Primary shower',
-    work: 'Surround cleaned. New shower head. Styled curtain.',
-    beforeIdx: 20,
-    afterIdx: 7,
-  },
-  {
-    room: 'Walk-in closet',
-    work: 'Painted top to bottom. Wire shelving reset. New flooring.',
-    beforeIdx: 18,
-    afterIdx: 9,
   },
   {
     room: 'Secondary bedroom',
@@ -148,9 +88,9 @@ export const roomPairs: RoomPair[] = [
   },
   {
     room: 'Guest bath',
-    work: 'New white vanity. Quartz top. Matte black faucet. Styled.',
-    beforeIdx: 7,
-    afterIdx: 10,
+    work: 'New white vanity. Quartz top. Matte black faucet. New round mirror. Calm palette.',
+    beforeIdx: 27,
+    afterIdx: 40,
   },
 ];
 
@@ -186,6 +126,8 @@ const beforeCaptions: string[] = [
   'Primary bedroom corner.',
   'Primary bedroom looking through the doorway.',
   'Bedroom to hallway transition.',
+  'Primary bath, lived-in baseline.',
+  'Guest bath, lived-in baseline.',
 ];
 
 const afterCaptions: string[] = [
@@ -228,6 +170,7 @@ const afterCaptions: string[] = [
   'HOA garage row, clean.',
   'HOA grounds between the buildings.',
   'Closing frame at the back patio.',
+  'Guest bath. Round mirror, star art, new vanity, tan stripe curtain.',
 ];
 /* eslint-enable max-len */
 
