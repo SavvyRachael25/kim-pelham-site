@@ -64,7 +64,7 @@ export function renderListingsWelcomeEmail(opts: { firstName?: string }): {
     'Kim Pelham · The Pelham Group NW',
     'WA Broker #119262 · NWMLS Broker #103153',
     'Brokered by Katrina Eileen Real Estate',
-    '2815 Baker Ave Suite 103, Everett WA 98201',
+    '3201 Smith Ave Ste 409, Everett WA 98201',
     '',
     'You received this email because you requested the pre-listing playbook at thepelhamgroupnw.com.',
     'Reply STOP to opt out of texts. Unsubscribe from email: hello@thepelhamgroupnw.com',
@@ -150,7 +150,7 @@ export function renderListingsWelcomeEmail(opts: { firstName?: string }): {
           <p style="margin:0 0 6px 0;font-weight:600;color:${TEXT};">Kim Pelham &middot; The Pelham Group NW</p>
           <p style="margin:0 0 6px 0;">Equal Housing Opportunity. Brokered by Katrina Eileen Real Estate.</p>
           <p style="margin:0 0 6px 0;">WA Broker #119262 &middot; NWMLS Broker #103153</p>
-          <p style="margin:0 0 12px 0;">2815 Baker Ave Suite 103, Everett WA 98201</p>
+          <p style="margin:0 0 12px 0;">3201 Smith Ave Ste 409, Everett WA 98201</p>
           <p style="margin:0;color:#9a948a;font-size:11px;">
             You received this email because you requested the pre-listing playbook at <a href="https://thepelhamgroupnw.com" style="color:#9a948a;text-decoration:underline;">thepelhamgroupnw.com</a>. Reply STOP to opt out of texts.
             To unsubscribe from email, reply UNSUBSCRIBE or email <a href="mailto:hello@thepelhamgroupnw.com" style="color:#9a948a;text-decoration:underline;">hello@thepelhamgroupnw.com</a>.

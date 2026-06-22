@@ -81,7 +81,7 @@ function shellHtml(opts: {
             Kim Pelham &middot; The Pelham Group NW<br>
             WA Broker #119262 &middot; NWMLS Broker #103153<br>
             Brokered by Katrina Eileen Real Estate<br>
-            2815 Baker Ave Suite 103, Everett WA 98201
+            3201 Smith Ave Ste 409, Everett WA 98201
           </p>
           <p style="margin:14px 0 0;font-size:11px;color:${MUTED};line-height:1.55;">
             You received this email because you requested the concierge condo case study at thepelhamgroupnw.com.

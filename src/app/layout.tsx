@@ -331,7 +331,7 @@ export default function RootLayout({
                   "currenciesAccepted": "USD",
                   "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "2815 Baker Ave, Suite 201",
+                    "streetAddress": "3201 Smith Ave, Ste 409",
                     "addressLocality": "Everett",
                     "addressRegion": "WA",
                     "postalCode": "98201",
