@@ -197,7 +197,7 @@ export default function TestimonialsPage() {
             Your review helps other Snohomish County families find the support they need.
           </p>
           <Link
-            href="https://www.google.com/search?q=pelham+group&oq=pelham+group&aqs=chrome..69i57j69i60l3j69i59j0.2783j0j7&sourceid=chrome&ie=UTF-8#lrd=0x549aab241dc769eb:0xa9019d38c1325de7,3,,,,"
+            href="https://g.page/r/CeddMsE4nQGpEBM/review"
             target="_blank"
             rel="noopener noreferrer"
             style={{

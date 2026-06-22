@@ -250,12 +250,23 @@ export default function Footer() {
             >
               Terms &amp; Conditions
             </Link>
+            <span style={{ color: '#555', fontSize: '0.7rem' }}>|</span>
+            <a
+              href="https://g.page/r/CeddMsE4nQGpEBM/review"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: '#B8845C', textDecoration: 'none', fontWeight: 600 }}
+              onMouseEnter={(e) => { e.currentTarget.style.color = '#D4A07A'; }}
+              onMouseLeave={(e) => { e.currentTarget.style.color = '#B8845C'; }}
+            >
+              Leave Kim a Google review &rarr;
+            </a>
           </div>
         </div>
 
         {/* Brokerage attribution */}
         <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.813rem', color: '#aaa', textAlign: 'center', paddingTop: '1rem', marginTop: '1rem', borderTop: '1px solid #333' }}>
-          Brokered by Katrina Eileen Real Estate &middot; Everett, WA
+          Brokered by Katrina Eileen Real Estate &middot; Everett, WA &middot; 5.0&#9733; from 41 Google reviews
         </div>
       </div>
 

@@ -1,11 +1,12 @@
 'use client';
 
-import { reviews } from '@/data/reviews';
+import { reviews, reviewStats, GOOGLE_REVIEW_URL } from '@/data/reviews';
 import type { Review } from '@/data/reviews';
 
-// Split into two rows of 10
-const row1 = reviews.slice(0, 10);
-const row2 = reviews.slice(10);
+// Evenly split the live GBP-sourced reviews across two scrolling rows
+const ROW_BREAK = Math.ceil(reviews.length / 2);
+const row1 = reviews.slice(0, ROW_BREAK);
+const row2 = reviews.slice(ROW_BREAK);
 
 function ClayStars({ rating }: { rating: number }) {
   return (
@@ -156,7 +157,7 @@ export default function GoogleReviews() {
             color: '#2C2C2C',
             margin: 0,
           }}>
-            20 Five-Star Google Reviews
+            {reviewStats.total} Five-Star Google Reviews
           </h2>
           <div style={{ display: 'flex', gap: '4px' }}>
             {Array.from({ length: 5 }).map((_, i) => (
@@ -172,6 +173,28 @@ export default function GoogleReviews() {
       <div style={{ display: 'flex', flexDirection: 'column', gap: '24px' }}>
         <MarqueeRow reviews={row1} direction="left" speed={140} />
         <MarqueeRow reviews={row2} direction="right" speed={120} />
+      </div>
+
+      {/* Trust line + leave-a-review CTA */}
+      <div style={{ maxWidth: '1200px', margin: '40px auto 0', padding: '0 24px', textAlign: 'center' }}>
+        <p style={{ fontFamily: 'var(--font-body)', fontSize: '14px', color: '#777', margin: '0 0 10px 0', letterSpacing: '0.02em' }}>
+          {reviewStats.averageRating}&#9733; from {reviewStats.total} verified Google reviews. Last synced {reviewStats.lastSynced}.
+        </p>
+        <a
+          href={GOOGLE_REVIEW_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            fontFamily: 'var(--font-handwritten)',
+            fontSize: '20px',
+            color: '#B8845C',
+            textDecoration: 'underline',
+            textUnderlineOffset: '4px',
+            textDecorationColor: 'rgba(184,132,92,0.4)',
+          }}
+        >
+          Worked with Kim? Leave a Google review &rarr;
+        </a>
       </div>
 
       <style>{`

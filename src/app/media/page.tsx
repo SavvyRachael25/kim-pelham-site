@@ -228,6 +228,13 @@ export default function MediaPage() {
     image: `${SITE}/images/kim-pelham-headshot.jpg`,
     jobTitle: 'Real Estate Broker',
     worksFor: { '@type': 'RealEstateAgent', name: 'Katrina Eileen Real Estate' },
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '5.0',
+      reviewCount: '41',
+      bestRating: '5',
+      worstRating: '1',
+    },
     award: [
       'Best Realtor, Best of Snohomish County 2023 (Daily Herald readers\' choice)',
       'Best Realtor, Best of Snohomish County 2024 (Daily Herald readers\' choice, back-to-back)',
@@ -755,7 +762,7 @@ export default function MediaPage() {
                     href={s.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={`${s.name} (${s.handle}) — opens in a new tab`}
+                    aria-label={`${s.name} (${s.handle}), opens in a new tab`}
                     style={{
                       display: 'flex',
                       alignItems: 'center',

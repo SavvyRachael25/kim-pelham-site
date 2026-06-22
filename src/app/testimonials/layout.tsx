@@ -32,10 +32,10 @@ export default function TestimonialsLayout({ children }: { children: React.React
     },
     aggregateRating: {
       '@type': 'AggregateRating',
-      ratingValue: '5',
-      reviewCount: '20',
+      ratingValue: '5.0',
+      reviewCount: '41',
       bestRating: '5',
-      worstRating: '5',
+      worstRating: '1',
     },
     review: reviews.map((r) => ({
       '@type': 'Review',
