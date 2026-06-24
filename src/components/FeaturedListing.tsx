@@ -146,15 +146,15 @@ export default function FeaturedListing({ variant = 'wide' }: { variant?: Varian
               borderRadius: '3px',
             }}
           >
-            Open Sat May 30 &middot; 1 to 3 PM
+            Under Contract &middot; Closing 7/30
           </div>
         </Link>
         <div>
           <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.4rem', color: '#B8845C', margin: '0 0 8px 0', lineHeight: 1 }}>
-            currently listed
+            under contract
           </p>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.72rem', fontWeight: 700, color: '#B8845C', textTransform: 'uppercase', letterSpacing: '2px', margin: '0 0 10px 0' }}>
-            {LISTING.mls} &middot; Active
+            {LISTING.mls} &middot; Pending Inspection
           </p>
           <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 700, color: '#2C2C2C', margin: '0 0 6px 0', lineHeight: 1.15 }}>
             {LISTING.address}

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: '11706 Admiralty Way Unit B, Everett WA 98204 | Recently Remodeled Ground-Floor End-Unit Condo | The Pelham Group NW',
   description:
-    'Refreshed 1989 end-unit condo on the ground floor at the end of the building. 2 bed, 1.75 bath, 1,140 sqft. New LVP, designer paint, new appliances, smart thermostat, wood-burning fireplace, ensuite primary. Mukilteo School District. $375,000. NWMLS #2528831. Open Saturday May 30, 1 to 3 PM. Contact Kim Pelham at (425) 250-9422.',
+    'Refreshed 1989 end-unit condo on the ground floor at the end of the building. 2 bed, 1.75 bath, 1,140 sqft. New LVP, designer paint, new appliances, smart thermostat, wood-burning fireplace, ensuite primary. Mukilteo School District. $375,000. NWMLS #2528831. Under contract, closing 7/30. Contact Kim Pelham at (425) 250-9422 to join the waitlist.',
   openGraph: {
     title:
       'Recently remodeled, all one level. | 11706 Admiralty Way Unit B, Everett WA',
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title:
       '11706 Admiralty Way Unit B, Everett WA 98204 | Recently Remodeled Ground-Floor Condo | The Pelham Group NW',
     description:
-      'End-unit condo, ground floor, all one level. 2 bed, 1.75 bath, 1,140 sqft. $375,000. NWMLS #2528831. Open Sat May 30, 1 to 3 PM.',
+      'End-unit condo, ground floor, all one level. 2 bed, 1.75 bath, 1,140 sqft. $375,000. NWMLS #2528831. Under contract, closing 7/30.',
     images: [
       'https://thepelhamgroupnw.com/listings/2528831-admiralty/photos/hero-living-fireplace.jpg',
     ],
@@ -173,10 +173,10 @@ export default function AdmiraltyLayout({ children }: { children: React.ReactNod
       },
       {
         '@type': 'Question',
-        name: 'When is the open house at 11706 Admiralty Way Unit B?',
+        name: 'Is 11706 Admiralty Way Unit B still available?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The next open house at 11706 Admiralty Way Unit B, Everett WA is Saturday, May 30, 2026 from 1:00 PM to 3:00 PM. Walk through, no appointment needed. Hosted by Kim Pelham, The Pelham Group NW. Text Kim at (425) 250-9422 if you plan to come, or to schedule a private showing.',
+          text: '11706 Admiralty Way Unit B, Everett WA went under contract on June 24, 2026 and is currently pending inspection. Closing is scheduled for July 30, 2026. Active showings are paused. To join the waitlist in case the deal falls through, text Kim Pelham at (425) 250-9422.',
         },
       },
       {
@@ -222,55 +222,6 @@ export default function AdmiraltyLayout({ children }: { children: React.ReactNod
     ],
   };
 
-  // Open House Event schema (GEO — surfaces in Google "Events near me")
-  const openHouseSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Event',
-    name: 'Open House · 11706 Admiralty Way Unit B, Everett WA',
-    description:
-      'Public open house at 11706 Admiralty Way Unit B, Everett WA. A $375,000 recently remodeled end-unit condo on the ground floor. Hosted by Kim Pelham, The Pelham Group NW. Walk through, no appointment needed.',
-    startDate: '2026-05-30T13:00:00-07:00',
-    endDate: '2026-05-30T15:00:00-07:00',
-    eventStatus: 'https://schema.org/EventScheduled',
-    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-    location: {
-      '@type': 'Place',
-      name: '11706 Admiralty Way Unit B',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '11706 Admiralty Way Unit B',
-        addressLocality: 'Everett',
-        addressRegion: 'WA',
-        postalCode: '98204',
-        addressCountry: 'US',
-      },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 47.918,
-        longitude: -122.27,
-      },
-    },
-    image: [
-      'https://thepelhamgroupnw.com/listings/2528831-admiralty/photos/hero-living-fireplace.jpg',
-      'https://thepelhamgroupnw.com/listings/2528831-admiralty/photos/exterior-back.jpg',
-    ],
-    organizer: {
-      '@type': 'RealEstateAgent',
-      name: 'Kim Pelham',
-      telephone: '+14252509422',
-      email: 'kim@thepelhamgroupnw.com',
-      url: 'https://thepelhamgroupnw.com',
-    },
-    offers: {
-      '@type': 'Offer',
-      url: 'https://thepelhamgroupnw.com/properties/11706-admiralty-way-unit-b-everett',
-      price: 0,
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-      validFrom: '2026-05-28T00:00:00-07:00',
-    },
-  };
-
   return (
     <>
       <script
@@ -284,10 +235,6 @@ export default function AdmiraltyLayout({ children }: { children: React.ReactNod
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(openHouseSchema) }}
       />
       {children}
     </>

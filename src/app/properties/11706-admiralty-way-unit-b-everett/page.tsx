@@ -44,8 +44,8 @@ const faq = [
     a: '2 bedrooms and 1.75 bathrooms (one full, one three-quarter). Total square footage is 1,140 per NWMLS measurements.',
   },
   {
-    q: 'When is the open house at 11706 Admiralty Way Unit B?',
-    a: 'The next open house is Saturday, May 30, 2026 from 1:00 PM to 3:00 PM. Walk through, no appointment needed. Hosted by Kim Pelham, The Pelham Group NW. Text Kim at (425) 250-9422 if you plan to come, or to schedule a private showing.',
+    q: 'Is 11706 Admiralty Way Unit B still available?',
+    a: 'The condo went under contract on June 24, 2026 and is currently pending inspection. Closing is scheduled for July 30, 2026. Active showings are paused. To join the waitlist in case the deal falls through, text Kim Pelham at (425) 250-9422.',
   },
   {
     q: 'What is the HOA and what are the taxes at 11706 Admiralty Way Unit B?',
@@ -118,7 +118,7 @@ export default function AdmiraltyPage() {
                 marginBottom: '12px',
               }}
             >
-              New Listing &middot; Active &middot; Open Sat May 30
+              Under Contract &middot; Pending Inspection &middot; Closing 7/30
             </div>
             <h1
               style={{
@@ -256,99 +256,6 @@ export default function AdmiraltyPage() {
           </div>
         </section>
 
-        {/* Open House banner */}
-        <section
-          style={{
-            backgroundColor: '#B8845C',
-            padding: '24px',
-            textAlign: 'center',
-            borderBottom: '1px solid rgba(255,255,255,0.15)',
-          }}
-        >
-          <div
-            style={{
-              maxWidth: '900px',
-              margin: '0 auto',
-              display: 'flex',
-              flexDirection: 'column',
-              gap: '8px',
-            }}
-          >
-            <p
-              style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '0.72rem',
-                fontWeight: 700,
-                color: 'rgba(255,255,255,0.85)',
-                textTransform: 'uppercase',
-                letterSpacing: '2px',
-                margin: 0,
-              }}
-            >
-              Open House This Saturday
-            </p>
-            <p
-              style={{
-                fontFamily: 'var(--font-heading)',
-                fontSize: 'clamp(1.5rem, 3vw, 2.1rem)',
-                fontWeight: 700,
-                color: '#FFFFFF',
-                margin: 0,
-                lineHeight: 1.2,
-              }}
-            >
-              Saturday, May 30 &middot; 1:00 PM to 3:00 PM
-            </p>
-            <p
-              style={{
-                fontFamily: 'var(--font-body)',
-                fontSize: '1rem',
-                color: 'rgba(255,255,255,0.92)',
-                margin: 0,
-              }}
-            >
-              11706 Admiralty Way Unit B, Everett WA 98204 &nbsp;&middot;&nbsp; No appointment needed
-            </p>
-            <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '6px' }}>
-              <a
-                href="sms:+14252509422?&body=Hi%20Kim%2C%20I%27m%20planning%20to%20stop%20by%20the%20Admiralty%20Way%20open%20house%20Saturday."
-                style={{
-                  display: 'inline-block',
-                  padding: '10px 24px',
-                  backgroundColor: '#2F5233',
-                  color: '#FFFFFF',
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '0.92rem',
-                  fontWeight: 600,
-                  borderRadius: '4px',
-                  textDecoration: 'none',
-                }}
-              >
-                Text Kim You&apos;re Coming
-              </a>
-              <a
-                href="https://www.google.com/maps/dir/?api=1&destination=11706+Admiralty+Way+B+Everett+WA+98204"
-                target="_blank"
-                rel="noopener noreferrer"
-                style={{
-                  display: 'inline-block',
-                  padding: '10px 24px',
-                  backgroundColor: 'transparent',
-                  color: '#FFFFFF',
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '0.92rem',
-                  fontWeight: 600,
-                  borderRadius: '4px',
-                  textDecoration: 'none',
-                  border: '2px solid rgba(255,255,255,0.85)',
-                }}
-              >
-                Get Directions
-              </a>
-            </div>
-          </div>
-        </section>
-
         {/* AEO Quick Property Facts */}
         <section style={{ padding: '32px 24px', backgroundColor: '#F8F5F0', borderBottom: '1px solid #E8E3DA' }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
@@ -380,7 +287,7 @@ export default function AdmiraltyPage() {
                 { term: 'Square Feet', def: '1,140 (per NWMLS)' },
                 { term: 'Year Built', def: '1989 (remodeled 2024)' },
                 { term: 'NWMLS#', def: '2528831' },
-                { term: 'Status', def: 'Active' },
+                { term: 'Status', def: 'Under Contract / Pending Inspection (closing 7/30)' },
                 { term: 'Type', def: 'Condo, end-unit, ground floor' },
                 { term: 'HOA', def: '$533 / mo' },
                 { term: 'Taxes', def: '$3,277 / yr' },

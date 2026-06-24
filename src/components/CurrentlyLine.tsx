@@ -57,7 +57,7 @@ export default function CurrentlyLine() {
               margin: 0,
             }}
           >
-            Two new listings, both under $1M
+            11706 Admiralty Way Unit B, Everett &middot; Under Contract
           </p>
           <span
             className="currently-line-pill"
@@ -73,7 +73,7 @@ export default function CurrentlyLine() {
               paddingBottom: '1px',
             }}
           >
-            Marysville waterfront &middot; Mukilteo view &rarr;
+            Closing 7/30 &middot; See all listings &rarr;
           </span>
         </div>
 
