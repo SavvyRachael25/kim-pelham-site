@@ -228,13 +228,12 @@ export default function MediaPage() {
     image: `${SITE}/images/kim-pelham-headshot.jpg`,
     jobTitle: 'Real Estate Broker',
     worksFor: { '@type': 'RealEstateAgent', name: 'Katrina Eileen Real Estate' },
-    aggregateRating: {
-      '@type': 'AggregateRating',
-      ratingValue: '5.0',
-      reviewCount: '41',
-      bestRating: '5',
-      worstRating: '1',
-    },
+    // AggregateRating intentionally NOT on the Person schema.
+    // Google flagged "Invalid object type for field <parent_node>" in GSC
+    // because Review rich results only accept LocalBusiness/Organization/
+    // Product/Service/etc. as parents (not Person). The site-wide
+    // AggregateRating lives on the RealEstateAgent schema in the root
+    // layout.tsx, which is the supported parent for review snippets.
     award: [
       'Best Realtor, Best of Snohomish County 2023 (Daily Herald readers\' choice)',
       'Best Realtor, Best of Snohomish County 2024 (Daily Herald readers\' choice, back-to-back)',
