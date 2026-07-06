@@ -1,0 +1,246 @@
+'use client';
+
+import {
+  Clip,
+  ClipSection,
+  StudioHeader,
+  pageStyle,
+  shellStyle,
+  eyebrowStyle,
+  h1Style,
+  h2Style,
+  h3Style,
+  bodyStyle,
+  cardStyle,
+} from '../shared';
+
+/*
+  Conversation No. 1 — Stephanie Galindo x Kim Pelham.
+  This page belongs to BOTH of them and both get the link.
+  See the audience note in shared.tsx before editing copy.
+*/
+
+const CLIPS: Clip[] = [
+  {
+    slug: 'beyond-the-boxes',
+    title: 'Beyond the Boxes',
+    duration: 'About 1 minute',
+    videoSrc: '/podcast/episode-02/adhd-beyond-the-boxes.mp4',
+    downloadName: 'community-spotlight-stephanie-kim-beyond-the-boxes.mp4',
+    description:
+      'Stephanie reframes the whole idea of "normal" brains: there is no ADHD box, autism box, and neurotypical box. There is a huge range of neurology, and a world that only recently started demanding everyone sit down and be quiet.',
+    captionGroups: [
+      {
+        label: 'For Kim’s channels',
+        captions: [
+          {
+            platform: 'Instagram / TikTok',
+            note: 'Post as a Reel. Tag Stephanie so she can share it back.',
+            text: `There is no one right way for a brain to work.
+
+That is the first thing Stephanie Galindo taught me when we sat down for the first conversation in my Community Spotlight series. Stephanie is a local ADHD and mindset coach, and this minute reframed how I think about the boxes we ask people to live inside.
+
+Full conversation coming soon. If you know someone in Snohomish County doing work worth talking about, I want to hear about them.
+
+#SnohomishCounty #CommunitySpotlight #ADHD #Neurodivergent #PelhamGroupNW`,
+          },
+          {
+            platform: 'Facebook',
+            note: 'Warmer and longer works here. Tag Stephanie Galindo Coaching.',
+            text: `I started something new and I am a little excited about it.
+
+It is called Community Spotlight: real conversations with the people who make Snohomish County what it is. First up is Stephanie Galindo, an ADHD and mindset coach whose work I really admire.
+
+In this clip she explains something that stuck with me: there is no ADHD box, autism box, and "normal" box. There is just a huge range of human neurology, and a modern world that suddenly expects everyone to sit down and be quiet.
+
+The full conversation is coming soon. And if there is someone local you think I should sit down with next, tell me. I am keeping a list.
+
+Always, Kim`,
+          },
+          {
+            platform: 'LinkedIn',
+            note: 'Lead with the professional angle.',
+            text: `Moving is one of the biggest executive-function challenges most adults ever face. Nobody talks about it that way.
+
+So I sat down with Stephanie Galindo, an ADHD and mindset coach here in Snohomish County, for the first conversation in my Community Spotlight series. In this clip she makes a point I keep coming back to: neurodivergence is not a set of boxes, it is a range. The world changed faster than our brains did.
+
+After 17 years of walking people through moves, I can tell you the emotional and cognitive load is real. Featuring the local experts who help people carry it felt like the right place to start this series.
+
+Full conversation coming soon.`,
+          },
+          {
+            platform: 'Google Business Profile',
+            note: 'Short and plain. No hashtags needed.',
+            text: `New from Kim: the first conversation in her Community Spotlight series, featuring Stephanie Galindo, a local ADHD and mindset coach. They talk about the human side of a big move, including stress, anxiety, and why there is no one right way for a brain to work. The full conversation is coming soon. Have a question about buying or selling in Snohomish County? Kim answers her own phone.`,
+          },
+        ],
+      },
+      {
+        label: 'For Stephanie’s channels',
+        captions: [
+          {
+            platform: 'Instagram / TikTok',
+            note: 'Written in your voice, Stephanie. Use it as is or make it yours.',
+            text: `There is no ADHD box, autism box, and "normal" box. There is a huge range of human neurology, and a modern world that suddenly expects everyone to sit down and be quiet.
+
+I got to unpack this with Kim Pelham of The Pelham Group NW for the first conversation in her Community Spotlight series. We talked about the human side of a big move: the stress, the anxiety, and why moving is one of the biggest executive-function challenges most adults ever face.
+
+Full conversation coming soon. Thank you for the invitation, Kim.
+
+@pelhamgroupnw #ADHD #Neurodivergent #ADHDCoach #SnohomishCounty`,
+          },
+          {
+            platform: 'LinkedIn / Facebook',
+            note: 'The coaching-audience angle.',
+            text: `Neurodivergence is not a set of boxes. It is a range, and the world changed faster than our brains did.
+
+I sat down with Kim Pelham of The Pelham Group NW for her new Community Spotlight series to talk about something we both see every day from different sides: big life transitions, and the stress and executive-function load that comes with them. Moving is a perfect example. It is dozens of decisions, deadlines, and disruptions stacked on top of a person's normal life, and nobody warns you about that part.
+
+This clip is one minute from that conversation. The full version is coming soon.`,
+          },
+        ],
+      },
+    ],
+    transcript: [
+      {
+        speaker: 'Stephanie Galindo',
+        text: 'There isn’t ADHD and autism and neurotypical as these different boxes. We all have different neurology. Our neurology is completely different for different people, and there’s this huge range of how people operate and how their brain chemicals function.',
+      },
+      {
+        speaker: 'Stephanie Galindo',
+        text: 'What happens, though, is that our society has changed very, very rapidly in the last few hundred years, so what is expected of people is vastly different than what used to be expected. People used to be very well adapted to an agriculture-based lifestyle, and before that to hunter-gatherer expectations of how their brain would operate, and that worked well for people. Now we’re expecting people to sit down and be quiet, and there are only specific neurotypes where that is an easy lift.',
+      },
+      {
+        speaker: 'Stephanie Galindo',
+        text: 'That’s kind of the box we’ve put around neurotypical. And at this point, anyone who is neurodivergent is anyone who lives outside of that box.',
+      },
+    ],
+  },
+];
+
+const WHY_FOR_BOTH: { title: string; body: string }[] = [
+  {
+    title: 'People hire the person they feel they already know',
+    body: 'Nobody hires a broker, or a coach, off a 30-second clip. They hire the person they trust. Kim, that means a future seller spending twenty minutes with your actual voice before ever calling you. Stephanie, that means a potential client hearing how you actually think before ever booking a session. A recorded conversation is that trust, packaged, working for both of you while you sleep.',
+  },
+  {
+    title: 'One hour became a month of content for each of you',
+    body: 'From this one sitting: 8 to 12 short clips, blog and newsletter material, quote graphics, and captions ready to paste. Same source, two sets of channels. Neither of you has to make content this month. You already did, on June 26, in one conversation.',
+  },
+  {
+    title: 'You introduced your audiences to each other',
+    body: 'Kim’s audience meets Stephanie. Stephanie’s audience meets Kim. When either of you posts a clip and tags the other, both of you reach people you could never have reached alone, with a warm introduction instead of an ad. That is the whole engine, and it only works because the conversation was real.',
+  },
+  {
+    title: 'AI search runs on your words now',
+    body: 'When someone asks Google or ChatGPT about the stress of moving, or ADHD and big life transitions, the answers get lifted from real people answering real questions in their own words. The transcript from your hour feeds that machine with both of your voices instead of someone else’s.',
+  },
+];
+
+const STILL_COMING: string[] = [
+  'More short clips as the full session gets cut (target: 8 to 12 from this one hour)',
+  'A blog post for thepelhamgroupnw.com built from the transcript',
+  'A feature in The Pelham Post newsletter',
+  'Pull-quote graphics for Instagram and LinkedIn',
+  'The full video, audio-only version, and complete transcript, for both of you',
+];
+
+export default function StephanieAndKimPage() {
+  return (
+    <div style={pageStyle}>
+      <StudioHeader backLink />
+
+      <div style={shellStyle}>
+        {/* Hero */}
+        <section style={{ padding: '64px 0 24px', maxWidth: 720 }}>
+          <div style={eyebrowStyle}>Community Spotlight · Conversation No. 1 · Recorded June 26, 2026</div>
+          <h1 style={h1Style}>Stephanie and Kim, this page is yours</h1>
+          <p style={{ ...bodyStyle, fontSize: 17, margin: 0 }}>
+            Everything from your conversation lands here as it gets cut: clips, ready-to-paste captions,
+            downloads, and the transcript. You both get the same link because you both own this content.
+            Post whatever you like, whenever you like, and tag each other when you do.
+          </p>
+        </section>
+
+        {/* Why, addressed to both */}
+        <section style={{ padding: '40px 0' }}>
+          <div style={eyebrowStyle}>Worth saying out loud</div>
+          <h2 style={h2Style}>What that one hour is actually doing</h2>
+          <p style={{ ...bodyStyle, maxWidth: 720, marginTop: 0 }}>
+            You sat down, you talked for twenty minutes, and it felt like a good conversation. Here is what
+            it becomes from here, for both of you.
+          </p>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+              gap: 16,
+              marginTop: 20,
+            }}
+          >
+            {WHY_FOR_BOTH.map((card, i) => (
+              <div key={card.title} style={cardStyle}>
+                <div
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: 30,
+                    fontWeight: 700,
+                    color: 'var(--color-clay)',
+                    lineHeight: 1,
+                    marginBottom: 10,
+                  }}
+                >
+                  {i + 1}
+                </div>
+                <h3 style={h3Style}>{card.title}</h3>
+                <p style={{ fontSize: 14.5, lineHeight: 1.7, color: 'var(--color-text-light)', margin: 0 }}>
+                  {card.body}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Clips */}
+        <section style={{ padding: '48px 0 0' }}>
+          <div style={eyebrowStyle}>Ready to post</div>
+          <h2 style={h2Style}>The clips</h2>
+          <p style={{ ...bodyStyle, maxWidth: 720, marginTop: 0, marginBottom: 32 }}>
+            Everything here is edited and captioned. What you see is what posts. Pick your platform, copy the
+            caption, download the video, and go. More clips join this page as the full session gets cut.
+          </p>
+          {CLIPS.map((clip) => (
+            <ClipSection key={clip.slug} clip={clip} />
+          ))}
+        </section>
+
+        {/* Still coming */}
+        <section style={{ paddingTop: 36 }}>
+          <div style={{ ...cardStyle, background: 'var(--color-cream-dark)' }}>
+            <h3 style={{ ...h3Style, marginBottom: 12 }}>Still coming from this one hour</h3>
+            <ul style={{ margin: 0, paddingLeft: 20 }}>
+              {STILL_COMING.map((item) => (
+                <li key={item} style={{ fontSize: 14.5, lineHeight: 1.8, color: 'var(--color-text-light)' }}>
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+        </section>
+
+        {/* Footer note */}
+        <section style={{ marginTop: 48, borderTop: '1px solid var(--color-border)', paddingTop: 28 }}>
+          <p style={{ ...bodyStyle, fontSize: 15, margin: 0, maxWidth: 720 }}>
+            Kim, if you would rather stay hands-off, everything here also gets scheduled through your regular
+            content calendar, and nothing posts without you seeing it first. Stephanie, post as much or as
+            little as you like. It is your content too. Questions, edits, a moment you want clipped that we
+            missed? Text Rachael and it happens.
+          </p>
+          <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: 24, color: 'var(--color-forest)', marginTop: 16 }}>
+            The Savvy Digital Co.
+          </p>
+        </section>
+      </div>
+    </div>
+  );
+}
