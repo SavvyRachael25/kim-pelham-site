@@ -196,6 +196,20 @@ export default function MovingWithAdhdPage() {
             </p>
 
             <p style={styles.handwritten}>
+              why a broker has a conversation series
+            </p>
+
+            <p style={styles.bodyP}>
+              Community Spotlight is new, so here is the why. After 17 years of selling homes here, I know
+              that nobody moves because of a house. They move because life changed. And the people who help
+              them through it, the coaches, the lenders, the contractors, the small business owners, are
+              the ones who make Snohomish County work. They deserve a bigger spotlight, and I learn
+              something every single time. About once a month, I sit down with one of them for twenty
+              minutes, no script, and we just talk. If you know someone who belongs in this series, tell
+              me. I am keeping a list.
+            </p>
+
+            <p style={styles.handwritten}>
               find stephanie
             </p>
 

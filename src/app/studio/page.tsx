@@ -98,6 +98,34 @@ export default function StudioPage() {
           </p>
         </section>
 
+        {/* Why Kim is doing this, in her words */}
+        <section style={{ padding: '40px 0 8px' }}>
+          <div style={{ ...cardStyle, maxWidth: 720, padding: '32px 36px', borderLeft: '4px solid var(--color-clay)' }}>
+            <div style={{ fontFamily: 'var(--font-handwritten)', fontSize: 26, color: 'var(--color-clay)', marginBottom: 14 }}>
+              why I&apos;m doing this
+            </div>
+            <p style={{ ...bodyStyle, fontSize: 15.5, marginTop: 0 }}>
+              After 17 years of selling homes here, I know the truth: nobody moves because of a house. They
+              move because life changed. And the people who help them through it, the coaches, the lenders,
+              the contractors, the small business owners, are the ones who make this county work. They
+              deserve a bigger spotlight, and honestly, I learn something every single time.
+            </p>
+            <p style={{ ...bodyStyle, fontSize: 15.5 }}>
+              So here is how it works. About once a month I sit down with someone for twenty minutes, no
+              script, and we just talk. My team turns that one conversation into clips, an article, and
+              ready-to-post content for both of us. My guest gets everything we make, free, to use however
+              they like. I get to introduce my people to theirs. That is the whole model.
+            </p>
+            <p style={{ ...bodyStyle, fontSize: 15.5, marginBottom: 0 }}>
+              It costs my guest twenty minutes and nothing else. If you know someone I should sit down with,
+              I am keeping a list.
+            </p>
+            <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: 30, color: 'var(--color-forest)', margin: '18px 0 0' }}>
+              Always, Kim
+            </p>
+          </div>
+        </section>
+
         {/* Conversations */}
         <section style={{ padding: '40px 0' }}>
           <div style={eyebrowStyle}>The conversations</div>
