@@ -12,6 +12,8 @@ import {
   h3Style,
   bodyStyle,
   cardStyle,
+  buttonStyle,
+  ghostButtonStyle,
 } from '../shared';
 
 /*
@@ -211,7 +213,7 @@ const QUOTE_GRAPHICS: { src: string; download: string; label: string }[] = [
 const STILL_COMING: string[] = [
   'More short clips as the full session gets cut (target: 8 to 12 from this one hour)',
   'A feature in The Pelham Post newsletter',
-  'The full video, audio-only version, and complete transcript, for both of you',
+  'The full video on YouTube (the edited episode is done; it goes up on Kim’s channel and gets embedded here)',
 ];
 
 export default function StephanieAndKimPage() {
@@ -297,6 +299,45 @@ export default function StephanieAndKimPage() {
           {CLIPS.map((clip) => (
             <ClipSection key={clip.slug} clip={clip} />
           ))}
+        </section>
+
+        {/* Full conversation */}
+        <section style={{ paddingTop: 48 }}>
+          <div style={eyebrowStyle}>The whole thing</div>
+          <h2 style={h2Style}>The full conversation</h2>
+          <p style={{ ...bodyStyle, maxWidth: 720, marginTop: 0, marginBottom: 20 }}>
+            The edited episode runs about 17 minutes. Listen to it here, download the audio for your own
+            podcast feeds or archives, and grab the complete transcript. The full video lands on
+            Kim&apos;s YouTube channel next and will be embedded here.
+          </p>
+          <div style={{ ...cardStyle, maxWidth: 720 }}>
+            <audio
+              controls
+              preload="metadata"
+              src="/podcast/episode-02/full-episode-audio.m4a"
+              style={{ width: '100%', display: 'block' }}
+            />
+            <div style={{ display: 'flex', gap: 10, marginTop: 16, flexWrap: 'wrap' }}>
+              <a
+                href="/podcast/episode-02/full-episode-audio.m4a"
+                download="community-spotlight-01-stephanie-and-kim-audio.m4a"
+                style={buttonStyle}
+              >
+                Download the audio
+              </a>
+              <a
+                href="/podcast/episode-02/full-episode-transcript.txt"
+                download="community-spotlight-01-stephanie-and-kim-transcript.txt"
+                style={ghostButtonStyle}
+              >
+                Download the transcript
+              </a>
+            </div>
+            <p style={{ fontSize: 12.5, color: 'var(--color-text-muted)', margin: '14px 0 0' }}>
+              The transcript is the auto-generated one from the recording session, so expect a few rough
+              edges. Good enough to quote from; tell Rachael if you want a cleaned-up version.
+            </p>
+          </div>
         </section>
 
         {/* Quote graphics */}
