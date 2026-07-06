@@ -26,11 +26,24 @@ type Category =
   | 'Market Updates'
   | 'Senior & Estate'
   | 'Buyer Guide'
-  | 'Featured Listings';
+  | 'Featured Listings'
+  | 'Community Spotlight';
 
 const SITE = 'https://thepelhamgroupnw.com';
 
 const blogPosts: BlogPost[] = [
+  {
+    id: '16',
+    title: 'Moving With ADHD: Why It Feels So Hard, and What Actually Helps',
+    slug: 'moving-with-adhd',
+    excerpt:
+      'Moving erases every pathway an ADHD brain spent years building, and settling in can take up to a year. ADHD coach Stephanie Galindo joins Kim for the first Community Spotlight conversation: the shame connection, a nervous system tool you can try today, and why body doubling works.',
+    date: '2026-07-06',
+    category: 'Community Spotlight',
+    image: '/images/hero-03-porch-connection.jpg',
+    imageAlt: 'Two neighbors talking on a front porch in warm light',
+    readTime: 6,
+  },
   {
     id: '15',
     title: 'Should You Renovate Before Selling Your Snohomish County Home? A 2026 ROI Reality Check',
@@ -258,6 +271,7 @@ const TOPIC_ORDER: { id: string; category: Category; tagline: string }[] = [
   { id: 'senior-estate', category: 'Senior & Estate', tagline: 'SRES guidance for downsizing, estate sales, and walking families through transitions.' },
   { id: 'buyer-guide', category: 'Buyer Guide', tagline: 'Neighborhood-level guidance for buyers in Everett, Mill Creek, Bothell, Lake Stevens, Mukilteo, and Marysville.' },
   { id: 'featured-listings', category: 'Featured Listings', tagline: 'A closer look at current and recent Pelham Group listings across Snohomish County.' },
+  { id: 'community-spotlight', category: 'Community Spotlight', tagline: 'Real conversations with the coaches, trades, and small business owners who make Snohomish County work.' },
 ];
 
 const blogFAQs = [

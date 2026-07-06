@@ -139,7 +139,6 @@ const WHY_FOR_BOTH: { title: string; body: string }[] = [
 
 const STILL_COMING: string[] = [
   'More short clips as the full session gets cut (target: 8 to 12 from this one hour)',
-  'A blog post for thepelhamgroupnw.com built from the transcript',
   'A feature in The Pelham Post newsletter',
   'Pull-quote graphics for Instagram and LinkedIn',
   'The full video, audio-only version, and complete transcript, for both of you',
@@ -232,6 +231,18 @@ export default function StephanieAndKimPage() {
 
         {/* Still coming */}
         <section style={{ paddingTop: 36 }}>
+          <div style={{ ...cardStyle, borderLeft: '4px solid var(--color-clay)', marginBottom: 16 }}>
+            <h3 style={{ ...h3Style, marginBottom: 8 }}>Already done: the blog post</h3>
+            <p style={{ fontSize: 14.5, lineHeight: 1.75, color: 'var(--color-text-light)', margin: 0 }}>
+              The conversation is now a full article on Kim&apos;s site:{' '}
+              <a href="/blog/moving-with-adhd" style={{ color: 'var(--color-clay)', fontWeight: 600 }}>
+                Moving With ADHD: Why It Feels So Hard, and What Actually Helps
+              </a>
+              . It leads with Stephanie&apos;s story, links to adhdwithstephanie.com, and is written to be
+              the page search engines and AI assistants find when someone asks why moving with ADHD is so
+              hard. Share it anywhere you like.
+            </p>
+          </div>
           <div style={{ ...cardStyle, background: 'var(--color-cream-dark)' }}>
             <h3 style={{ ...h3Style, marginBottom: 12 }}>Still coming from this one hour</h3>
             <ul style={{ margin: 0, paddingLeft: 20 }}>
