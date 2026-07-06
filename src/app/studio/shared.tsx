@@ -197,27 +197,70 @@ export function CopyButton({ text }: { text: string }) {
   );
 }
 
-export function CaptionCard({ caption }: { caption: Caption }) {
+/* Horizontal strip of post cards: the video first, then each caption
+   as a swipeable card. Per Rachael's UX feedback 2026-07-06: the posts
+   should scroll like a queue, not stack into a wall of text. */
+
+const CARD_HEIGHT = 540;
+
+export function HScroll({ children }: { children: React.ReactNode }) {
   return (
-    <div style={{ ...cardStyle, padding: 20 }}>
-      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 12, marginBottom: 8 }}>
-        <div>
-          <div style={{ fontWeight: 600, fontSize: 15, color: 'var(--color-forest)' }}>{caption.platform}</div>
-          <div style={{ fontSize: 12.5, color: 'var(--color-text-muted)', marginTop: 2 }}>{caption.note}</div>
+    <div
+      style={{
+        display: 'flex',
+        gap: 16,
+        overflowX: 'auto',
+        padding: '8px 4px 18px',
+        scrollSnapType: 'x proximity',
+        WebkitOverflowScrolling: 'touch',
+      }}
+    >
+      {children}
+    </div>
+  );
+}
+
+function PostCaptionCard({ caption, owner }: { caption: Caption; owner: string }) {
+  return (
+    <div
+      style={{
+        ...cardStyle,
+        padding: 16,
+        flex: '0 0 320px',
+        height: CARD_HEIGHT,
+        display: 'flex',
+        flexDirection: 'column',
+        scrollSnapAlign: 'start',
+      }}
+    >
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', gap: 10 }}>
+        <div
+          style={{
+            fontSize: 11,
+            letterSpacing: '0.1em',
+            textTransform: 'uppercase',
+            color: 'var(--color-clay)',
+            fontWeight: 700,
+          }}
+        >
+          {owner} · {caption.platform}
         </div>
         <CopyButton text={caption.text} />
       </div>
+      <div style={{ fontSize: 12, color: 'var(--color-text-muted)', margin: '6px 0 10px' }}>{caption.note}</div>
       <p
         style={{
           whiteSpace: 'pre-wrap',
-          fontSize: 14,
-          lineHeight: 1.7,
+          fontSize: 13.5,
+          lineHeight: 1.65,
           color: 'var(--color-text-light)',
           background: 'var(--color-cream)',
           border: '1px solid var(--color-border)',
           borderRadius: 8,
           padding: 14,
           margin: 0,
+          flex: 1,
+          overflowY: 'auto',
         }}
       >
         {caption.text}
@@ -228,83 +271,77 @@ export function CaptionCard({ caption }: { caption: Caption }) {
 
 export function ClipSection({ clip }: { clip: Clip }) {
   const [showTranscript, setShowTranscript] = useState(false);
+  const cards = clip.captionGroups.flatMap((group) =>
+    group.captions.map((caption) => ({
+      caption,
+      owner: group.label.replace('For ', '').replace('’s channels', ''),
+    })),
+  );
   return (
-    <div style={{ display: 'flex', flexWrap: 'wrap', gap: 32, alignItems: 'flex-start' }}>
-      {/* Video preview */}
-      <div style={{ flex: '0 1 300px', minWidth: 260 }}>
-        <video
-          controls
-          preload="metadata"
-          src={clip.videoSrc}
-          style={{
-            width: '100%',
-            borderRadius: 12,
-            border: '1px solid var(--color-border)',
-            background: 'var(--color-dark)',
-            display: 'block',
-          }}
-        />
-        <div style={{ display: 'flex', gap: 10, marginTop: 14, flexWrap: 'wrap' }}>
-          <a href={clip.videoSrc} download={clip.downloadName} style={buttonStyle}>
+    <div style={{ marginBottom: 56 }}>
+      <h3
+        style={{
+          fontFamily: 'var(--font-heading)',
+          fontSize: 26,
+          fontWeight: 700,
+          color: 'var(--color-forest)',
+          margin: '0 0 4px',
+        }}
+      >
+        {clip.title}
+      </h3>
+      <div style={{ fontSize: 13, color: 'var(--color-text-muted)', marginBottom: 10 }}>{clip.duration}</div>
+      <p style={{ fontSize: 15, lineHeight: 1.7, color: 'var(--color-text-light)', margin: '0 0 12px', maxWidth: 720 }}>
+        {clip.description}
+      </p>
+      <button style={{ ...ghostButtonStyle, fontSize: 13, padding: '8px 16px' }} onClick={() => setShowTranscript((v) => !v)}>
+        {showTranscript ? 'Hide transcript' : 'Read transcript'}
+      </button>
+
+      {showTranscript && (
+        <div style={{ ...cardStyle, padding: 20, margin: '16px 0 4px', background: 'var(--color-cream-dark)', maxWidth: 720 }}>
+          {clip.transcript.map((line, i) => (
+            <p key={i} style={{ fontSize: 14, lineHeight: 1.7, margin: i === 0 ? 0 : '12px 0 0' }}>
+              <strong style={{ color: 'var(--color-forest)' }}>{line.speaker}:</strong>{' '}
+              <span style={{ color: 'var(--color-text-light)' }}>{line.text}</span>
+            </p>
+          ))}
+        </div>
+      )}
+
+      <div style={{ fontSize: 12.5, color: 'var(--color-text-muted)', margin: '14px 0 0' }}>
+        Slide through the posts, copy a caption, download, done.
+      </div>
+      <HScroll>
+        {/* The clip itself is the first card */}
+        <div style={{ flex: '0 0 264px', height: CARD_HEIGHT, display: 'flex', flexDirection: 'column', scrollSnapAlign: 'start' }}>
+          <video
+            controls
+            preload="metadata"
+            src={clip.videoSrc}
+            style={{
+              width: '100%',
+              flex: 1,
+              minHeight: 0,
+              objectFit: 'cover',
+              borderRadius: 12,
+              border: '1px solid var(--color-border)',
+              background: 'var(--color-dark)',
+              display: 'block',
+            }}
+          />
+          <a
+            href={clip.videoSrc}
+            download={clip.downloadName}
+            style={{ ...buttonStyle, textAlign: 'center', marginTop: 10, padding: '10px 0', fontSize: 14 }}
+          >
             Download this clip
           </a>
-          <button style={ghostButtonStyle} onClick={() => setShowTranscript((v) => !v)}>
-            {showTranscript ? 'Hide transcript' : 'Read transcript'}
-          </button>
         </div>
-      </div>
-
-      {/* Clip details + captions */}
-      <div style={{ flex: '1 1 460px', minWidth: 300 }}>
-        <h3
-          style={{
-            fontFamily: 'var(--font-heading)',
-            fontSize: 26,
-            fontWeight: 700,
-            color: 'var(--color-forest)',
-            margin: '0 0 4px',
-          }}
-        >
-          {clip.title}
-        </h3>
-        <div style={{ fontSize: 13, color: 'var(--color-text-muted)', marginBottom: 12 }}>{clip.duration}</div>
-        <p style={{ fontSize: 15, lineHeight: 1.7, color: 'var(--color-text-light)', marginTop: 0 }}>
-          {clip.description}
-        </p>
-
-        {showTranscript && (
-          <div style={{ ...cardStyle, padding: 20, marginBottom: 20, background: 'var(--color-cream-dark)' }}>
-            {clip.transcript.map((line, i) => (
-              <p key={i} style={{ fontSize: 14, lineHeight: 1.7, margin: i === 0 ? 0 : '12px 0 0' }}>
-                <strong style={{ color: 'var(--color-forest)' }}>{line.speaker}:</strong>{' '}
-                <span style={{ color: 'var(--color-text-light)' }}>{line.text}</span>
-              </p>
-            ))}
-          </div>
-        )}
-
-        {clip.captionGroups.map((group) => (
-          <div key={group.label} style={{ marginBottom: 24 }}>
-            <div
-              style={{
-                fontSize: 12,
-                letterSpacing: '0.14em',
-                textTransform: 'uppercase',
-                color: 'var(--color-clay)',
-                fontWeight: 700,
-                margin: '0 0 10px',
-              }}
-            >
-              {group.label}
-            </div>
-            <div style={{ display: 'grid', gap: 16 }}>
-              {group.captions.map((c) => (
-                <CaptionCard key={c.platform} caption={c} />
-              ))}
-            </div>
-          </div>
+        {cards.map(({ caption, owner }) => (
+          <PostCaptionCard key={`${owner}-${caption.platform}`} caption={caption} owner={owner} />
         ))}
-      </div>
+      </HScroll>
     </div>
   );
 }

@@ -3,6 +3,7 @@
 import {
   Clip,
   ClipSection,
+  HScroll,
   StudioHeader,
   pageStyle,
   shellStyle,
@@ -367,16 +368,9 @@ export default function StephanieAndKimPage() {
             1080x1350 for Instagram, Facebook, and LinkedIn. Download and post them like any photo. They
             pair well with a caption from above, or stand alone.
           </p>
-          <div
-            style={{
-              display: 'grid',
-              gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
-              gap: 20,
-              maxWidth: 900,
-            }}
-          >
+          <HScroll>
             {QUOTE_GRAPHICS.map((g) => (
-              <div key={g.src} style={{ ...cardStyle, padding: 14 }}>
+              <div key={g.src} style={{ ...cardStyle, padding: 12, flex: '0 0 300px', scrollSnapAlign: 'start' }}>
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={g.src}
@@ -396,14 +390,14 @@ export default function StephanieAndKimPage() {
                     padding: '10px 0',
                     borderRadius: 2,
                     textDecoration: 'none',
-                    marginTop: 12,
+                    marginTop: 10,
                   }}
                 >
                   Download
                 </a>
               </div>
             ))}
-          </div>
+          </HScroll>
         </section>
 
         {/* Still coming */}
