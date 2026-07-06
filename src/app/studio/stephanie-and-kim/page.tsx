@@ -137,10 +137,27 @@ const WHY_FOR_BOTH: { title: string; body: string }[] = [
   },
 ];
 
+const QUOTE_GRAPHICS: { src: string; download: string; label: string }[] = [
+  {
+    src: '/podcast/episode-02/graphics/quote-moving-takes-months.jpg',
+    download: 'community-spotlight-stephanie-quote-moving-takes-months.jpg',
+    label: 'Moving takes months',
+  },
+  {
+    src: '/podcast/episode-02/graphics/quote-societys-expectations.jpg',
+    download: 'community-spotlight-stephanie-quote-societys-expectations.jpg',
+    label: 'Society’s expectations',
+  },
+  {
+    src: '/podcast/episode-02/graphics/quote-no-boxes.jpg',
+    download: 'community-spotlight-stephanie-quote-no-boxes.jpg',
+    label: 'No boxes',
+  },
+];
+
 const STILL_COMING: string[] = [
   'More short clips as the full session gets cut (target: 8 to 12 from this one hour)',
   'A feature in The Pelham Post newsletter',
-  'Pull-quote graphics for Instagram and LinkedIn',
   'The full video, audio-only version, and complete transcript, for both of you',
 ];
 
@@ -227,6 +244,54 @@ export default function StephanieAndKimPage() {
           {CLIPS.map((clip) => (
             <ClipSection key={clip.slug} clip={clip} />
           ))}
+        </section>
+
+        {/* Quote graphics */}
+        <section style={{ paddingTop: 48 }}>
+          <div style={eyebrowStyle}>Ready to post</div>
+          <h2 style={h2Style}>The quote graphics</h2>
+          <p style={{ ...bodyStyle, maxWidth: 720, marginTop: 0, marginBottom: 24 }}>
+            Three of Stephanie&apos;s best lines from the conversation, set in the Pelham brand and sized
+            1080x1350 for Instagram, Facebook, and LinkedIn. Download and post them like any photo. They
+            pair well with a caption from above, or stand alone.
+          </p>
+          <div
+            style={{
+              display: 'grid',
+              gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))',
+              gap: 20,
+              maxWidth: 900,
+            }}
+          >
+            {QUOTE_GRAPHICS.map((g) => (
+              <div key={g.src} style={{ ...cardStyle, padding: 14 }}>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={g.src}
+                  alt={`Pull-quote graphic: ${g.label}`}
+                  style={{ width: '100%', display: 'block', borderRadius: 8, border: '1px solid var(--color-border)' }}
+                />
+                <a
+                  href={g.src}
+                  download={g.download}
+                  style={{
+                    display: 'block',
+                    textAlign: 'center',
+                    background: 'var(--color-clay)',
+                    color: '#fff',
+                    fontWeight: 600,
+                    fontSize: 13.5,
+                    padding: '10px 0',
+                    borderRadius: 2,
+                    textDecoration: 'none',
+                    marginTop: 12,
+                  }}
+                >
+                  Download
+                </a>
+              </div>
+            ))}
+          </div>
         </section>
 
         {/* Still coming */}
