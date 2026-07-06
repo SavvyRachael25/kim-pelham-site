@@ -38,7 +38,7 @@ const CLIPS: Clip[] = [
             note: 'Post as a Reel. Tag Stephanie so she can share it back.',
             text: `There is no one right way for a brain to work.
 
-That is the first thing Stephanie Galindo taught me when we sat down for the first conversation in my Community Spotlight series. Stephanie is a local ADHD and mindset coach, and this minute reframed how I think about the boxes we ask people to live inside.
+That is the first thing Stephanie Galindo taught me when we sat down for the first conversation in my Community Spotlight series. Stephanie is a local ADHD coach (find her at adhdwithstephanie.com), and this minute reframed how I think about the boxes we ask people to live inside.
 
 Full conversation coming soon. If you know someone in Snohomish County doing work worth talking about, I want to hear about them.
 
@@ -46,10 +46,10 @@ Full conversation coming soon. If you know someone in Snohomish County doing wor
           },
           {
             platform: 'Facebook',
-            note: 'Warmer and longer works here. Tag Stephanie Galindo Coaching.',
+            note: 'Warmer and longer works here. Tag ADHD with Stephanie.',
             text: `I started something new and I am a little excited about it.
 
-It is called Community Spotlight: real conversations with the people who make Snohomish County what it is. First up is Stephanie Galindo, an ADHD and mindset coach whose work I really admire.
+It is called Community Spotlight: real conversations with the people who make Snohomish County what it is. First up is Stephanie Galindo, an ADHD coach whose work I really admire. Her whole approach is called Shame-Free ADHD, which tells you a lot about her. You can find her at adhdwithstephanie.com.
 
 In this clip she explains something that stuck with me: there is no ADHD box, autism box, and "normal" box. There is just a huge range of human neurology, and a modern world that suddenly expects everyone to sit down and be quiet.
 
@@ -62,16 +62,16 @@ Always, Kim`,
             note: 'Lead with the professional angle.',
             text: `Moving is one of the biggest executive-function challenges most adults ever face. Nobody talks about it that way.
 
-So I sat down with Stephanie Galindo, an ADHD and mindset coach here in Snohomish County, for the first conversation in my Community Spotlight series. In this clip she makes a point I keep coming back to: neurodivergence is not a set of boxes, it is a range. The world changed faster than our brains did.
+So I sat down with Stephanie Galindo, an ADHD coach here in Snohomish County who works with entrepreneurs and professionals, for the first conversation in my Community Spotlight series. In this clip she makes a point I keep coming back to: neurodivergence is not a set of boxes, it is a range. The world changed faster than our brains did.
 
 After 17 years of walking people through moves, I can tell you the emotional and cognitive load is real. Featuring the local experts who help people carry it felt like the right place to start this series.
 
-Full conversation coming soon.`,
+Full conversation coming soon. Find Stephanie at adhdwithstephanie.com.`,
           },
           {
             platform: 'Google Business Profile',
             note: 'Short and plain. No hashtags needed.',
-            text: `New from Kim: the first conversation in her Community Spotlight series, featuring Stephanie Galindo, a local ADHD and mindset coach. They talk about the human side of a big move, including stress, anxiety, and why there is no one right way for a brain to work. The full conversation is coming soon. Have a question about buying or selling in Snohomish County? Kim answers her own phone.`,
+            text: `New from Kim: the first conversation in her Community Spotlight series, featuring Stephanie Galindo of ADHD with Stephanie, a local ADHD coach. They talk about the human side of a big move, including stress, anxiety, and why there is no one right way for a brain to work. The full conversation is coming soon. Have a question about buying or selling in Snohomish County? Kim answers her own phone.`,
           },
         ],
       },
@@ -85,9 +85,9 @@ Full conversation coming soon.`,
 
 I got to unpack this with Kim Pelham of The Pelham Group NW for the first conversation in her Community Spotlight series. We talked about the human side of a big move: the stress, the anxiety, and why moving is one of the biggest executive-function challenges most adults ever face.
 
-Full conversation coming soon. Thank you for the invitation, Kim.
+Full conversation coming soon. Thank you for the invitation, Kim. More shame-free ADHD tools at adhdwithstephanie.com.
 
-@pelhamgroupnw #ADHD #Neurodivergent #ADHDCoach #SnohomishCounty`,
+@pelhamgroupnw #ADHD #Neurodivergent #ADHDCoach #ShameFreeADHD #SnohomishCounty`,
           },
           {
             platform: 'LinkedIn / Facebook',
@@ -96,7 +96,7 @@ Full conversation coming soon. Thank you for the invitation, Kim.
 
 I sat down with Kim Pelham of The Pelham Group NW for her new Community Spotlight series to talk about something we both see every day from different sides: big life transitions, and the stress and executive-function load that comes with them. Moving is a perfect example. It is dozens of decisions, deadlines, and disruptions stacked on top of a person's normal life, and nobody warns you about that part.
 
-This clip is one minute from that conversation. The full version is coming soon.`,
+This clip is one minute from that conversation. The full version is coming soon. If the freeze-procrastination-panic loop sounds familiar, that is exactly what I help people with at adhdwithstephanie.com.`,
           },
         ],
       },
@@ -159,6 +159,22 @@ export default function StephanieAndKimPage() {
             Everything from your conversation lands here as it gets cut: clips, ready-to-paste captions,
             downloads, and the transcript. You both get the same link because you both own this content.
             Post whatever you like, whenever you like, and tag each other when you do.
+          </p>
+          <p style={{ fontSize: 14, color: 'var(--color-text-muted)', marginTop: 16 }}>
+            Stephanie Galindo · ADHD coach ·{' '}
+            <a
+              href="https://adhdwithstephanie.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: 'var(--color-clay)', fontWeight: 600 }}
+            >
+              adhdwithstephanie.com
+            </a>
+            {'  ·  '}
+            Kim Pelham · The Realtor Next Door ·{' '}
+            <a href="https://thepelhamgroupnw.com/" style={{ color: 'var(--color-clay)', fontWeight: 600 }}>
+              thepelhamgroupnw.com
+            </a>
           </p>
         </section>
 

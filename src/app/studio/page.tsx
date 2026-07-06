@@ -34,7 +34,7 @@ const CONVERSATIONS: ConversationEntry[] = [
   {
     number: 1,
     guest: 'Stephanie Galindo',
-    guestRole: 'ADHD and mindset coach, Stephanie Galindo Coaching',
+    guestRole: 'ADHD coach · ADHD with Stephanie · adhdwithstephanie.com',
     recorded: 'Recorded June 26, 2026',
     summary:
       'Kim and Stephanie on the human side of a big move: stress, anxiety, and why moving is an executive-function marathon. Stephanie brings the mindset tools, Kim brings 17 years of walking people through it.',
