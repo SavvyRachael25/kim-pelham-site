@@ -38,7 +38,7 @@ const blogPosts: BlogPost[] = [
     slug: 'moving-with-adhd',
     excerpt:
       'Moving erases every pathway an ADHD brain spent years building, and settling in can take up to a year. ADHD coach Stephanie Galindo joins Kim for the first Community Spotlight conversation: the shame connection, a nervous system tool you can try today, and why body doubling works.',
-    date: '2026-07-06',
+    date: '2026-07-03',
     category: 'Community Spotlight',
     image: '/images/hero-03-porch-connection.jpg',
     imageAlt: 'Two neighbors talking on a front porch in warm light',

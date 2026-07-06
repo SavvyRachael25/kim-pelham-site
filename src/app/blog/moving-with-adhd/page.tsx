@@ -74,7 +74,7 @@ export default function MovingWithAdhdPage() {
       <main>
         <InnerHero
           title="Moving With ADHD: Why It Feels So Hard, and What Actually Helps"
-          subtitle="By Kim Pelham, with ADHD coach Stephanie Galindo · July 6, 2026 · 6 min read"
+          subtitle="By Kim Pelham, with ADHD coach Stephanie Galindo · July 3, 2026 · 6 min read"
           image="/images/hero-03-porch-connection.jpg"
           imageAlt="Two neighbors talking on a front porch in warm light."
         />
