@@ -213,7 +213,6 @@ const QUOTE_GRAPHICS: { src: string; download: string; label: string }[] = [
 const STILL_COMING: string[] = [
   'More short clips as the full session gets cut (target: 8 to 12 from this one hour)',
   'A feature in The Pelham Post newsletter',
-  'The full video on YouTube (the edited episode is done; it goes up on Kim’s channel and gets embedded here)',
 ];
 
 export default function StephanieAndKimPage() {
@@ -306,10 +305,29 @@ export default function StephanieAndKimPage() {
           <div style={eyebrowStyle}>The whole thing</div>
           <h2 style={h2Style}>The full conversation</h2>
           <p style={{ ...bodyStyle, maxWidth: 720, marginTop: 0, marginBottom: 20 }}>
-            The edited episode runs about 17 minutes. Listen to it here, download the audio for your own
-            podcast feeds or archives, and grab the complete transcript. The full video lands on
-            Kim&apos;s YouTube channel next and will be embedded here.
+            The edited episode runs about 17 minutes. Watch it right here, listen to the audio version,
+            download either one for your own archives, and grab the complete transcript.
           </p>
+          <div style={{ maxWidth: 720, marginBottom: 20 }}>
+            <div
+              style={{
+                position: 'relative',
+                paddingTop: '56.25%',
+                borderRadius: 12,
+                overflow: 'hidden',
+                border: '1px solid var(--color-border)',
+                background: 'var(--color-dark)',
+              }}
+            >
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/BzL3k8fXcyc"
+                title="Community Spotlight No. 1: Stephanie Galindo and Kim Pelham"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0 }}
+              />
+            </div>
+          </div>
           <div style={{ ...cardStyle, maxWidth: 720 }}>
             <audio
               controls
