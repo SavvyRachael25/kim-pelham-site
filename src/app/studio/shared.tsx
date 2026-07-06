@@ -220,7 +220,7 @@ export function HScroll({ children }: { children: React.ReactNode }) {
   );
 }
 
-function PostCaptionCard({ caption, owner }: { caption: Caption; owner: string }) {
+export function PostCaptionCard({ caption, owner }: { caption: Caption; owner: string }) {
   return (
     <div
       style={{

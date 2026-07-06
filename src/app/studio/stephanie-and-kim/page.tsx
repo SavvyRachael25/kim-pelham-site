@@ -1,9 +1,11 @@
 'use client';
 
 import {
+  Caption,
   Clip,
   ClipSection,
   HScroll,
+  PostCaptionCard,
   StudioHeader,
   pageStyle,
   shellStyle,
@@ -211,6 +213,43 @@ const QUOTE_GRAPHICS: { src: string; download: string; label: string }[] = [
   },
 ];
 
+const ARTICLE_CAPTIONS: { caption: Caption; owner: string }[] = [
+  {
+    owner: 'Kim',
+    caption: {
+      platform: 'Facebook',
+      note: 'The database post. Warm, personal, links the article.',
+      text: `I wrote something up from my conversation with Stephanie Galindo, a local ADHD coach, and I cannot stop thinking about it.
+
+An ADHD brain spends years building pathways for daily life: which drawer, which route, which routine. A move erases all of them at once. Stephanie says moving takes months, and settling back in can take up to a year. If a move ever left you living out of boxes and running on fumes, you were not failing. You were rebuilding every pathway at once.
+
+The whole article is on my site, including a nervous system trick you can do with a pen: https://thepelhamgroupnw.com/blog/moving-with-adhd
+
+Always, Kim`,
+    },
+  },
+  {
+    owner: 'Kim',
+    caption: {
+      platform: 'LinkedIn',
+      note: 'Professional angle, short.',
+      text: `Moving is one of the biggest executive function challenges most adults ever face. I wrote up what I learned from Stephanie Galindo, an ADHD coach here in Snohomish County, about why that is and what actually helps: the shame connection, body doubling, and why settling into a new home takes months, not weeks.
+
+https://thepelhamgroupnw.com/blog/moving-with-adhd`,
+    },
+  },
+  {
+    owner: 'Stephanie',
+    caption: {
+      platform: 'Any channel',
+      note: 'Written in your voice, Stephanie. The article links back to your site.',
+      text: `Kim Pelham of The Pelham Group NW wrote up our conversation about ADHD and big life transitions, and she got it exactly right: there is no ADHD box, autism box, and "normal" box. We all have different neurology.
+
+We also got into shame and executive function, body doubling, and why moving is such a heavy lift for an ADHD brain. Read it here: https://thepelhamgroupnw.com/blog/moving-with-adhd`,
+    },
+  },
+];
+
 const STILL_COMING: string[] = [
   'More short clips as the full session gets cut (target: 8 to 12 from this one hour)',
   'A feature in The Pelham Post newsletter',
@@ -400,20 +439,64 @@ export default function StephanieAndKimPage() {
           </HScroll>
         </section>
 
+        {/* The article */}
+        <section style={{ paddingTop: 48 }}>
+          <div style={eyebrowStyle}>Also ready to share</div>
+          <h2 style={h2Style}>The article</h2>
+          <p style={{ ...bodyStyle, maxWidth: 720, marginTop: 0, marginBottom: 4 }}>
+            The conversation is a full article on Kim&apos;s site, written to be the page search engines and
+            AI assistants hand to people asking why moving with ADHD is so hard. It leads with
+            Stephanie&apos;s story and sends readers to adhdwithstephanie.com. Share it like any other post.
+          </p>
+          <HScroll>
+            <div
+              style={{
+                ...cardStyle,
+                flex: '0 0 300px',
+                height: 540,
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                scrollSnapAlign: 'start',
+                background: 'var(--color-forest)',
+              }}
+            >
+              <div>
+                <div style={{ fontFamily: 'var(--font-handwritten)', fontSize: 24, color: 'var(--color-clay-light)' }}>
+                  the blog post
+                </div>
+                <h3
+                  style={{
+                    fontFamily: 'var(--font-heading)',
+                    fontSize: 26,
+                    fontWeight: 700,
+                    color: 'var(--color-cream)',
+                    lineHeight: 1.25,
+                    margin: '10px 0 12px',
+                  }}
+                >
+                  Moving With ADHD: Why It Feels So Hard, and What Actually Helps
+                </h3>
+                <p style={{ fontSize: 14, lineHeight: 1.7, color: 'rgba(248,245,240,0.75)', margin: 0 }}>
+                  Stephanie&apos;s story, the shame and executive function connection, the pen trick, body
+                  doubling, and why settling in takes months. With a CTA to Stephanie&apos;s site.
+                </p>
+              </div>
+              <a
+                href="/blog/moving-with-adhd"
+                style={{ ...buttonStyle, textAlign: 'center', padding: '12px 0', fontSize: 14 }}
+              >
+                Read the article
+              </a>
+            </div>
+            {ARTICLE_CAPTIONS.map(({ caption, owner }) => (
+              <PostCaptionCard key={`${owner}-${caption.platform}`} caption={caption} owner={owner} />
+            ))}
+          </HScroll>
+        </section>
+
         {/* Still coming */}
         <section style={{ paddingTop: 36 }}>
-          <div style={{ ...cardStyle, borderLeft: '4px solid var(--color-clay)', marginBottom: 16 }}>
-            <h3 style={{ ...h3Style, marginBottom: 8 }}>Already done: the blog post</h3>
-            <p style={{ fontSize: 14.5, lineHeight: 1.75, color: 'var(--color-text-light)', margin: 0 }}>
-              The conversation is now a full article on Kim&apos;s site:{' '}
-              <a href="/blog/moving-with-adhd" style={{ color: 'var(--color-clay)', fontWeight: 600 }}>
-                Moving With ADHD: Why It Feels So Hard, and What Actually Helps
-              </a>
-              . It leads with Stephanie&apos;s story, links to adhdwithstephanie.com, and is written to be
-              the page search engines and AI assistants find when someone asks why moving with ADHD is so
-              hard. Share it anywhere you like.
-            </p>
-          </div>
           <div style={{ ...cardStyle, background: 'var(--color-cream-dark)' }}>
             <h3 style={{ ...h3Style, marginBottom: 12 }}>Still coming from this one hour</h3>
             <ul style={{ margin: 0, paddingLeft: 20 }}>

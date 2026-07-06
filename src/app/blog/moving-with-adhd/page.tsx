@@ -213,6 +213,27 @@ export default function MovingWithAdhdPage() {
 
             <div style={styles.ctaBox}>
               <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.3rem', color: 'var(--color-clay)', margin: '0 0 6px 0', lineHeight: 1.1 }}>
+                if the ADHD part hit home,
+              </p>
+              <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 600, color: 'var(--color-forest)', margin: '0 0 10px 0', lineHeight: 1.3 }}>
+                Go see Stephanie.
+              </h3>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: '#555', margin: 0, lineHeight: 1.65 }}>
+                She coaches entrepreneurs and professionals with ADHD, completely shame-free, and her site has
+                the free nervous system toolkit she mentioned in our conversation. Tell her Kim sent you.
+              </p>
+              <a
+                href="https://adhdwithstephanie.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={styles.ctaButton}
+              >
+                Visit adhdwithstephanie.com →
+              </a>
+            </div>
+
+            <div style={styles.ctaBox}>
+              <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.3rem', color: 'var(--color-clay)', margin: '0 0 6px 0', lineHeight: 1.1 }}>
                 if moving is your &ldquo;one more thing,&rdquo;
               </p>
               <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 600, color: 'var(--color-forest)', margin: '0 0 10px 0', lineHeight: 1.3 }}>
