@@ -4,11 +4,18 @@ import { useState } from 'react';
 import Link from 'next/link';
 
 /*
-  Kim's private Content Studio.
-  ─────────────────────────────
+  The Community Spotlight Studio (private, shared with guests).
+  ──────────────────────────────────────────────────────────────
   Every Community Spotlight recording lands here as ready-to-post
   assets: clip previews, per-platform captions with copy buttons,
   and direct downloads. Also carries the "why we record" explainer.
+
+  AUDIENCE NOTE: Kim AND her guests both get this link. Every word
+  on this page must read well to a guest (e.g. Stephanie). Keep the
+  strategy framing two-way ("partnership", "introduction"), never
+  extractive ("referral engine", "borrowed audience"). The blunt
+  internal version of the strategy lives in Rachael's emails to Kim,
+  not here.
 
   Not linked from the public nav. URL: /studio. noindex/nofollow is
   set in layout.tsx, robots.txt also disallows /studio/.
@@ -108,6 +115,17 @@ Full conversation coming soon.`,
             note: 'Short and plain. No hashtags needed.',
             text: `New from Kim: the first conversation in her Community Spotlight series, featuring Stephanie Galindo, a local ADHD and mindset coach. They talk about the human side of a big move, including stress, anxiety, and why there is no one right way for a brain to work. The full conversation is coming soon. Have a question about buying or selling in Snohomish County? Kim answers her own phone.`,
           },
+          {
+            platform: 'For Stephanie’s channels',
+            note: 'Written in your voice, Stephanie. Use it as is or make it yours.',
+            text: `There is no ADHD box, autism box, and "normal" box. There is a huge range of human neurology, and a modern world that suddenly expects everyone to sit down and be quiet.
+
+I got to unpack this with Kim Pelham of The Pelham Group NW for the first conversation in her Community Spotlight series. We talked about the human side of a big move: the stress, the anxiety, and why moving is one of the biggest executive-function challenges most adults ever face.
+
+Full conversation coming soon. Thank you for the invitation, Kim.
+
+@pelhamgroupnw #ADHD #Neurodivergent #ADHDCoach #SnohomishCounty`,
+          },
         ],
         transcript: [
           {
@@ -130,7 +148,7 @@ Full conversation coming soon.`,
       'A blog post for thepelhamgroupnw.com built from the transcript',
       'A feature in The Pelham Post newsletter',
       'Pull-quote graphics for Instagram and LinkedIn',
-      'Stephanie’s own asset package, so she can share the episode with her audience',
+      'The full video, audio-only version, and complete transcript, for both Kim and Stephanie',
     ],
   },
 ];
@@ -139,16 +157,16 @@ Full conversation coming soon.`,
 
 const WHY_CARDS: { title: string; body: string }[] = [
   {
-    title: 'People hire the Kim they feel they already know',
-    body: 'Nobody hires a broker off a 30-second clip. They hire the person they trust. Your reviews say it over and over: "she listened," "she never sold us." That quality is invisible in a listing photo and undeniable in a 20-minute conversation. A recorded conversation is your selling skill, packaged, working while you sleep.',
+    title: 'People hire the person they feel they already know',
+    body: 'Nobody hires a broker, or a coach, off a 30-second clip. They hire the person they trust. Kim’s reviews say it over and over: "she listened," "she never sold us." That quality is invisible in a listing photo and undeniable in a 20-minute conversation. A recorded conversation is that skill, packaged, working while you sleep.',
   },
   {
-    title: 'One hour of you becomes a month of content',
-    body: 'From one sitting we get 8 to 12 short clips, 2 to 3 blog posts, newsletter material, Google Business posts, and quote graphics. You already did the hard part. Everything on this page came out of an hour you already spent. No extra Kim-time required.',
+    title: 'One hour becomes a month of content',
+    body: 'From one sitting we get 8 to 12 short clips, 2 to 3 blog posts, newsletter material, Google Business posts, and quote graphics, for both people on the recording. The hard part is already done. Everything on this page came out of an hour already spent.',
   },
   {
-    title: 'Every guest becomes a referral partner',
-    body: 'Stephanie now has an hour on the record with you, and she shares the episode with her own audience. That is borrowed trust and new eyeballs, at zero ad spend. Ten conversations means ten local professionals who think of you first when someone says "I need to sell my mom’s house."',
+    title: 'Every conversation is a two-way introduction',
+    body: 'Kim’s audience meets the guest. The guest’s audience meets Kim. Both walk away with a month of content and a working relationship on the record. Over ten conversations, that adds up to a real network of local professionals who know each other, trust each other, and send people to each other.',
   },
   {
     title: 'AI search runs on your words',
@@ -414,9 +432,9 @@ export default function StudioPage() {
             Your Content Studio
           </h1>
           <p style={{ fontSize: 17, lineHeight: 1.75, color: 'var(--color-text-light)', margin: 0 }}>
-            One conversation in, a month of content out. This page is where everything from your Community
-            Spotlight recordings lands: preview the clips, copy a caption, download, and post. Or do nothing,
-            and we schedule it all for you. You will always see it here first.
+            One conversation in, a month of content out. This page is where everything from the Community
+            Spotlight recordings lands, for Kim and for her guests: preview the clips, copy a caption,
+            download, and post. Everything here is yours to use on your own channels.
           </p>
         </section>
 
@@ -425,8 +443,9 @@ export default function StudioPage() {
           <div style={eyebrowStyle}>The honest answer</div>
           <h2 style={h2Style}>Why we record conversations</h2>
           <p style={{ fontSize: 15.5, lineHeight: 1.75, color: 'var(--color-text-light)', maxWidth: 720, marginTop: 0 }}>
-            You asked a fair question: why a podcast? Here it is, plainly. This is not a marketing channel.
-            It is a content factory and a referral engine that happens to be a good conversation.
+            A fair question, so here is the plain answer. This is not a marketing channel. It is a content
+            factory and a relationship engine that happens to be a good conversation, and it works the same
+            way for everyone in the room.
           </p>
           <div
             style={{
@@ -486,6 +505,27 @@ export default function StudioPage() {
             {ep.clips.map((clip) => (
               <ClipSection key={clip.slug} clip={clip} />
             ))}
+
+            {/* Guest package note */}
+            <div style={{ ...cardStyle, marginTop: 36, borderLeft: '4px solid var(--color-clay)' }}>
+              <h3
+                style={{
+                  fontFamily: 'var(--font-heading)',
+                  fontSize: 20,
+                  fontWeight: 700,
+                  color: 'var(--color-forest)',
+                  margin: '0 0 8px',
+                }}
+              >
+                {ep.guest.split(' ')[0]}, this is your package too
+              </h3>
+              <p style={{ fontSize: 14.5, lineHeight: 1.75, color: 'var(--color-text-light)', margin: 0 }}>
+                Everything above is yours to use on your own marketing: download any clip, grab the caption
+                written for your channels (or write your own), and post whenever you like. When you share,
+                tag Kim at @pelhamgroupnw so she can share it back. Your full video, audio-only version, and
+                complete transcript will land on this page as soon as the edit is finished.
+              </p>
+            </div>
 
             {/* Still coming */}
             <div style={{ ...cardStyle, marginTop: 36, background: 'var(--color-cream-dark)' }}>
@@ -552,8 +592,9 @@ export default function StudioPage() {
             ))}
           </div>
           <p style={{ fontSize: 14.5, lineHeight: 1.7, color: 'var(--color-text-muted)', marginTop: 20, maxWidth: 720 }}>
-            Prefer to stay hands-off? That works too. Everything here gets scheduled through your regular
-            content calendar, and nothing posts without you seeing it first.
+            Kim, if you would rather stay hands-off, that works too. Everything here gets scheduled through
+            your regular content calendar, and nothing posts without you seeing it first. Guests, post as
+            much or as little as you like. It is your content too.
           </p>
         </section>
 
