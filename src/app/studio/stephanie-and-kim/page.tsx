@@ -116,6 +116,59 @@ This clip is one minute from that conversation. The full version is coming soon.
       },
     ],
   },
+  {
+    slug: 'real-estate-ds',
+    title: 'The Real Estate D’s',
+    duration: 'About 45 seconds',
+    videoSrc: '/podcast/episode-02/real-estate-ds.mp4',
+    downloadName: 'community-spotlight-kim-real-estate-ds.mp4',
+    description:
+      'Kim’s Double D commercial, on the record at last. The people selling their houses all have a D: divorcing, downsizing, departing the area, debt, diamonds, diapers. Pure Kim, and secretly the best referral ask she has ever made.',
+    captionGroups: [
+      {
+        label: 'For Kim’s channels',
+        captions: [
+          {
+            platform: 'Instagram / TikTok',
+            note: 'Post as a Reel. This one is built to be shared.',
+            text: `Have you heard my Double D commercial?
+
+No, not that kind. I am talking about the people who are actually selling their houses. They are divorcing, downsizing, departing the area, dealing with debt. Maybe they have diamonds because they just got married, or diapers because the family grew.
+
+These are the people selling homes. So when you hear somebody with a D, send them my way. I can help with all of their D's.
+
+#SnohomishCounty #RealEstate #TheRealtorNextDoor #PelhamGroupNW`,
+          },
+          {
+            platform: 'Facebook',
+            note: 'Her database will love this one. Great referral post.',
+            text: `My friends have heard this bit for years. Now it is on the record.
+
+The people who sell their houses all have a D. Divorcing. Downsizing. Departing the area. Debt. Diamonds, because they just got married. Diapers, because the family just grew.
+
+If someone in your world has a D right now, I would love to help them through it. Moving is hard enough without doing it alone, and helping people through their D is genuinely what I do all day.
+
+Always, Kim`,
+          },
+          {
+            platform: 'Google Business Profile',
+            note: 'Short and plain, referral angle.',
+            text: `Kim's famous Double D commercial made it onto the record during her Community Spotlight conversation. The short version: the people selling homes are divorcing, downsizing, departing the area, dealing with debt, celebrating diamonds, or buying diapers. If someone you know has a D, Kim can help with all of them. She answers her own phone: 425-250-9422.`,
+          },
+        ],
+      },
+    ],
+    transcript: [
+      {
+        speaker: 'Kim Pelham',
+        text: 'Have you heard my Double D commercial? What do you think of when I say double D, triple D, six or seven D’s? Oh my god, ladies, I am not talking about giant bras. I am talking about the people who are moving, the people who are actually selling their house.',
+      },
+      {
+        speaker: 'Kim Pelham',
+        text: 'They are dead, they are divorcing, they’re downsizing, they’re departing the area, they have debt, they might have diamonds because they just got married. Or maybe they have diapers because they got new kids. These are the people who are selling their houses. So when you hear somebody who’s got a D, refer them to me, because I can help them with all their D’s.',
+      },
+    ],
+  },
 ];
 
 const WHY_FOR_BOTH: { title: string; body: string }[] = [
