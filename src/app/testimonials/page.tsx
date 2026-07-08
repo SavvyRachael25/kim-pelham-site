@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 import Link from 'next/link';
-import { reviews } from '@/data/reviews';
+import { reviews, reviewStats } from '@/data/reviews';
 
 function ClayStars({ rating }: { rating: number }) {
   return (
@@ -60,7 +60,7 @@ export default function TestimonialsPage() {
                   ))}
                 </div>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '13px', color: 'rgba(248,245,240,0.65)', margin: 0, letterSpacing: '0.05em', textTransform: 'uppercase' }}>
-                  20 reviews
+                  {reviewStats.total} reviews
                 </p>
               </div>
             </div>
