@@ -125,7 +125,7 @@ export default function SnohomishMarketMay2026() {
             telling the same story. That one number is doing a lot of heavy
             lifting in my conversations with sellers right now, because it
             changes how a house needs to be prepped and priced. I&apos;ve been
-            selling homes here for 17 years, and this is the most &ldquo;back
+            selling homes for 17 years, and this is the most &ldquo;back
             to fundamentals&rdquo; market I&apos;ve worked since rates started
             climbing in 2022.
           </p>

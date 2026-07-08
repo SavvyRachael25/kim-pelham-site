@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Senior Downsizing in Snohomish County: A Real Guide | Kim Pelham',
-  description: 'Thinking about downsizing in Snohomish County? SRES-certified broker Kim Pelham shares a compassionate, practical guide for seniors navigating this big life transition.',
+  description: 'Thinking about downsizing in Snohomish County? Senior Move Specialist Kim Pelham shares a compassionate, practical guide for seniors navigating this big life transition.',
   openGraph: {
     title: 'Senior Downsizing in Snohomish County: A Real Guide',
-    description: 'Thinking about downsizing in Snohomish County? SRES-certified broker Kim Pelham shares a compassionate, practical guide for seniors navigating this big life transition.',
+    description: 'Thinking about downsizing in Snohomish County? Senior Move Specialist Kim Pelham shares a compassionate, practical guide for seniors navigating this big life transition.',
     images: ['/images/kim-with-door-cropped.jpg'],
     type: 'article',
   },
@@ -24,8 +24,8 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "What is an SRES realtor and why should seniors work with one?",
-                "acceptedAnswer": { "@type": "Answer", "text": "An SRES (Senior Real Estate Specialist) is a realtor certified by the National Association of Realtors with specialized training in the needs of buyers and sellers aged 50+. SRES training covers retirement income qualification, reverse mortgages, Medicare/Medicaid implications, estate planning considerations, and senior housing options. Seniors benefit from working with an SRES because downsizing involves financial and legal complexities that go well beyond a standard real estate transaction." }
+                "name": "Why should seniors work with a senior move specialist?",
+                "acceptedAnswer": { "@type": "Answer", "text": "A senior move specialist is a broker who focuses on the needs of buyers and sellers aged 50+: retirement income considerations, estate coordination, senior housing options, and the pacing and family conversations these moves involve. Seniors benefit from working with one because downsizing involves financial, legal, and emotional complexities that go well beyond a standard real estate transaction." }
               },
               {
                 "@type": "Question",

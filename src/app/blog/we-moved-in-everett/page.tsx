@@ -99,7 +99,7 @@ export default function WeMovedPage() {
             </p>
 
             <p style={styles.bodyP}>
-              I have been a Snohomish County broker for seventeen years and I forget, sometimes, that this is where I live. Not the listing photos. The actual mountains. The actual sky.
+              I have lived in Snohomish County for seventeen years and I forget, sometimes, that this is where I live. Not the listing photos. The actual mountains. The actual sky.
             </p>
 
             <div style={styles.pullQuote}>
@@ -151,7 +151,7 @@ export default function WeMovedPage() {
 
             <p style={styles.signOff}>Always, Kim</p>
             <p style={styles.byline}>
-              Kim Pelham, Designated Broker, The Pelham Group NW · 17 years in Snohomish County · <a href="tel:+14252509422" style={{ color: 'var(--color-clay)' }}>425.250.9422</a>
+              Kim Pelham, Designated Broker, The Pelham Group NW · 17 years in real estate · <a href="tel:+14252509422" style={{ color: 'var(--color-clay)' }}>425.250.9422</a>
             </p>
 
           </div>

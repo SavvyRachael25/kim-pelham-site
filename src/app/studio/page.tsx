@@ -105,7 +105,7 @@ export default function StudioPage() {
               why I&apos;m doing this
             </div>
             <p style={{ ...bodyStyle, fontSize: 15.5, marginTop: 0 }}>
-              After 17 years of selling homes here, I know the truth: nobody moves because of a house. They
+              After 17 years of selling homes, I know the truth: nobody moves because of a house. They
               move because life changed. And the people who help them through it, the coaches, the lenders,
               the contractors, the small business owners, are the ones who make this county work. They
               deserve a bigger spotlight, and honestly, I learn something every single time.

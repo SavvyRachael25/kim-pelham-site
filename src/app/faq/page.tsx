@@ -37,12 +37,12 @@ const faqs = [
   {
     question: 'Who is Kim Pelham and what credentials does she hold?',
     answer:
-      "Kim Pelham is the Designated Broker of The Pelham Group NW, brokered by Katrina Eileen Real Estate. 17 years of full-time real estate experience in Snohomish County. SRES (Seniors Real Estate Specialist) certified by the National Association of Realtors. Best Realtor in The Daily Herald's Best of Snohomish County readers' choice back-to-back in 2023 and 2024. Featured in The Daily Herald's top three Snohomish brokers in 2025. Published author of Six-Word Lessons on Selling Your Home in Seattle.",
+      "Kim Pelham is the Designated Broker of The Pelham Group NW, brokered by Katrina Eileen Real Estate. 17 years of full-time real estate experience, and a Snohomish County broker since 2015. Best Realtor in The Daily Herald's Best of Snohomish County readers' choice back-to-back in 2023 and 2024. Featured in The Daily Herald's top three Snohomish brokers in 2025. Published author of Six-Word Lessons on Selling Your Home in Seattle.",
   },
   {
-    question: 'What is SRES and why does it matter?',
+    question: 'What is a Senior Move Specialist and why does it matter?',
     answer:
-      "SRES stands for Seniors Real Estate Specialist. It is extra training the National Association of Realtors provides brokers who work with clients over 50: estate sales, the timing of a move, reverse-mortgage basics, accessibility, and the conversations that come with selling a parent's home or downsizing yourself. Kim is SRES-certified. More at thepelhamgroupnw.com/senior-services.",
+      "A Senior Move Specialist is a broker who focuses on the moves that come later in life: estate sales, the timing of a move, accessibility, and the conversations that come with selling a parent's home or downsizing yourself. Kim has spent years helping seniors and families through exactly these transitions. More at thepelhamgroupnw.com/senior-services.",
   },
   {
     question: 'How do I leave Kim a review, or read what past clients have said?',

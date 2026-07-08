@@ -79,7 +79,7 @@ export default function CoolingMarketPage() {
             </p>
 
             <p style={styles.bodyP}>
-              I have been a Snohomish County broker for 17 years, through the 2008 downturn, the 2013 recovery, the 2019 stretch, the 2020-to-2022 frenzy, and the gradual normalization since. What is happening now is not a panic, and it is not a flatline. It is a market returning to a more normal shape, where preparation and pricing matter more than location alone. Here is what the data shows, what I see on the ground in Everett, Mill Creek, Bothell, Lake Stevens, Marysville, and Mukilteo, and what sellers should do about it.
+              I have been in real estate for 17 years and a Snohomish County broker since 2015, working through the 2008 downturn, the 2013 recovery, the 2019 stretch, the 2020-to-2022 frenzy, and the gradual normalization since. What is happening now is not a panic, and it is not a flatline. It is a market returning to a more normal shape, where preparation and pricing matter more than location alone. Here is what the data shows, what I see on the ground in Everett, Mill Creek, Bothell, Lake Stevens, Marysville, and Mukilteo, and what sellers should do about it.
             </p>
 
             <h2 style={styles.h2}>What the NWMLS numbers actually show</h2>

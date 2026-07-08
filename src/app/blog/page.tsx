@@ -178,14 +178,14 @@ const blogPosts: BlogPost[] = [
   },
   {
     id: '7',
-    title: 'SRES Realtor: What It Means and Why Seniors Choose One',
+    title: 'What to Look For in a Senior Move Specialist',
     slug: 'sres-realtor-snohomish-county',
     excerpt:
-      'SRES stands for Seniors Real Estate Specialist. Here is what the credential actually covers, why it matters for downsizing, and what to ask before you hire.',
+      'What a senior move specialist actually does, how industry designations fit in, and the questions worth asking before you hire anyone for a later-life move.',
     date: '2026-04-17',
     category: 'Senior & Estate',
     image: '/images/about-01-approachable-headshot-env.jpg',
-    imageAlt: 'Kim Pelham, SRES Realtor',
+    imageAlt: 'Kim Pelham, Senior Move Specialist',
     readTime: 6,
   },
   {
@@ -268,7 +268,7 @@ const FEATURED_SLUG = 'pre-sale-renovation-roi-snohomish-2026';
 const TOPIC_ORDER: { id: string; category: Category; tagline: string }[] = [
   { id: 'seller-strategy', category: 'Seller Strategy', tagline: 'Positioning, pricing, staging, and pre-sale prep for the Snohomish County market.' },
   { id: 'market-updates', category: 'Market Updates', tagline: 'Monthly NWMLS reads on inventory, days on market, sale-to-list, and rates.' },
-  { id: 'senior-estate', category: 'Senior & Estate', tagline: 'SRES guidance for downsizing, estate sales, and walking families through transitions.' },
+  { id: 'senior-estate', category: 'Senior & Estate', tagline: 'Senior move guidance for downsizing, estate sales, and walking families through transitions.' },
   { id: 'buyer-guide', category: 'Buyer Guide', tagline: 'Neighborhood-level guidance for buyers in Everett, Mill Creek, Bothell, Lake Stevens, Mukilteo, and Marysville.' },
   { id: 'featured-listings', category: 'Featured Listings', tagline: 'A closer look at current and recent Pelham Group listings across Snohomish County.' },
   { id: 'community-spotlight', category: 'Community Spotlight', tagline: 'Real conversations with the coaches, trades, and small business owners who make Snohomish County work.' },
@@ -301,9 +301,9 @@ const blogFAQs = [
       'The most accurate way to value a Snohomish County home is a comparative market analysis (CMA) prepared by an experienced local broker. The CMA pulls 3 to 8 closed comparable sales within a half mile of the subject home from the past 90 days, adjusts each for differences in square footage, lot, condition, and finish, and arrives at a tight value range. Automated estimates from Zillow, Redfin, and Realtor.com can be useful as a starting range but often miss by 5 to 20 percent on individual homes due to model limitations around condition and finish.',
   },
   {
-    question: 'What does SRES (Seniors Real Estate Specialist) mean?',
+    question: 'What is a Senior Move Specialist?',
     answer:
-      'SRES stands for Seniors Real Estate Specialist, a credential awarded by the National Association of Realtors to brokers who complete specialized training on the financial, emotional, and logistical complexities of real estate transitions for clients aged 50 and over. SRES brokers are trained on downsizing, age-in-place planning, reverse mortgages, Medicaid Estate Recovery, probate, and coordinating with family members and trusted advisors. Kim Pelham is SRES certified.',
+      'A Senior Move Specialist is a broker who focuses on the financial, emotional, and logistical complexities of real estate transitions for clients aged 50 and over: downsizing, age-in-place planning, estate sales, probate timing, and coordinating with family members and trusted advisors. Kim Pelham is a Senior Move Specialist who has spent years helping Snohomish County seniors and families downsize, sell a parent\'s home, and navigate estate transitions.',
   },
   {
     question: 'How does the Pelham Group pre-sale concierge plan work?',
@@ -573,7 +573,6 @@ export default function BlogPage() {
         'Estate sales',
         'Snohomish County housing market',
       ],
-      hasCredential: 'SRES (Seniors Real Estate Specialist)',
     },
     blogPost: blogPosts.map((p) => ({
       '@type': 'BlogPosting',
@@ -604,7 +603,7 @@ export default function BlogPage() {
     image: `${SITE}/images/kim-headshot-msh.jpg`,
     jobTitle: 'Real Estate Broker',
     description:
-      '17 years of Snohomish County real estate experience. 102.3% average sale-to-list ratio vs 100.2% NWMLS market average. Best of Snohomish County 2023 and 2024. SRES certified.',
+      '17 years of real estate experience, a Snohomish County broker since 2015. 102.3% average sale-to-list ratio vs 100.2% NWMLS market average. Best of Snohomish County 2023 and 2024. Senior Move Specialist.',
     worksFor: {
       '@type': 'RealEstateAgent',
       name: 'Katrina Eileen Real Estate',
@@ -617,14 +616,6 @@ export default function BlogPage() {
       'Lake Stevens, WA',
       'Marysville, WA',
       'Mukilteo, WA',
-    ],
-    hasCredential: [
-      {
-        '@type': 'EducationalOccupationalCredential',
-        name: 'SRES (Seniors Real Estate Specialist)',
-        credentialCategory: 'certification',
-        recognizedBy: { '@type': 'Organization', name: 'National Association of Realtors' },
-      },
     ],
   };
 
@@ -660,11 +651,11 @@ export default function BlogPage() {
           <div style={{ maxWidth: 1180, margin: '0 auto' }} className="authority-strip">
             <Stat number="102.3%" label="average sale-to-list ratio" sub="vs 100.2% county average" />
             <Divider />
-            <Stat number="17" label="years selling Snohomish County" sub="brokered by Katrina Eileen Real Estate" />
+            <Stat number="17" label="years in real estate" sub="a Snohomish County broker since 2015" />
             <Divider />
             <Stat number="176" label="homes sold" sub="across Snohomish + King County" />
             <Divider />
-            <Stat number="SRES" label="seniors real estate specialist" sub="certified by NAR" />
+            <Stat number="30+" label="senior transitions guided" sub="downsizing and estate moves" />
             <Divider />
             <Stat number={`${blogPosts.length}`} label="articles" sub="updated with monthly NWMLS data" />
           </div>
@@ -821,7 +812,7 @@ export default function BlogPage() {
         <section style={{ padding: '88px 24px', background: '#fff' }}>
           <div style={{ maxWidth: 1100, margin: '0 auto', display: 'grid', gridTemplateColumns: '280px 1fr', gap: 56, alignItems: 'center' }} className="bio-grid">
             <div style={{ position: 'relative', aspectRatio: '4 / 5', borderRadius: 8, overflow: 'hidden', boxShadow: '0 16px 40px rgba(47, 82, 51, 0.16)' }}>
-              <Image src="/images/kim-pelham-headshot.jpg" alt="Kim Pelham, Snohomish County Real Estate Broker, SRES certified" fill sizes="(max-width: 880px) 280px, 280px" style={{ objectFit: 'cover' }} />
+              <Image src="/images/kim-pelham-headshot.jpg" alt="Kim Pelham, Snohomish County Real Estate Broker and Senior Move Specialist" fill sizes="(max-width: 880px) 280px, 280px" style={{ objectFit: 'cover' }} />
               <div style={{ position: 'absolute', bottom: 14, left: 14, background: 'var(--color-cream)', padding: '6px 12px', borderRadius: 3, fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700, color: 'var(--color-forest)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>
                 Best of Snohomish 2024
               </div>
@@ -832,7 +823,7 @@ export default function BlogPage() {
                 Kim Pelham, The Pelham Group NW
               </h2>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.06rem', color: 'var(--color-text-light)', lineHeight: 1.7, margin: '0 0 18px' }}>
-                Kim has spent 17 years walking Snohomish County families through the biggest moves of their lives. Her 102.3% average sale-to-list ratio outperforms the 100.2% NWMLS county average across 176 closed transactions. She is SRES certified for senior real estate transitions, brokered by Katrina Eileen Real Estate, and was named Best of Snohomish County in both 2023 and 2024.
+                Kim has spent 17 years in real estate walking families through the biggest moves of their lives, and has been a Snohomish County broker since 2015. Her 102.3% average sale-to-list ratio outperforms the 100.2% NWMLS county average across 176 closed transactions. She is a Senior Move Specialist for senior and estate transitions, brokered by Katrina Eileen Real Estate, and was named Best of Snohomish County in both 2023 and 2024.
               </p>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.06rem', color: 'var(--color-text-light)', lineHeight: 1.7, margin: '0 0 26px' }}>
                 Every article on this site is written from her own broker-on-the-ground experience, sourced against NWMLS data, the National Association of Realtors, JLC Cost vs Value, and Seattle Times reporting. She works with a maximum of two active buyers at a time so every client gets a true concierge experience, and she preps, stages, and photographs her listings herself.

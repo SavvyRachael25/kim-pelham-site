@@ -79,7 +79,7 @@ export default function HomeValueGuidePage() {
             </p>
 
             <p style={styles.bodyP}>
-              I have written CMAs on hundreds of Snohomish County homes over 17 years. The methodology is not mysterious. It is just careful. Here is exactly how it works, what the public estimates get right and wrong, and what specifically moves a Snohomish County valuation in 2026.
+              I have written CMAs on hundreds of Snohomish County homes over a 17-year real estate career. The methodology is not mysterious. It is just careful. Here is exactly how it works, what the public estimates get right and wrong, and what specifically moves a Snohomish County valuation in 2026.
             </p>
 
             <div style={styles.callout}>

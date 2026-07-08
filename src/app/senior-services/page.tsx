@@ -452,8 +452,8 @@ export default function SeniorServicesPage() {
         backgroundColor="#FFFFFF"
         faqs={[
           {
-            question: "What does SRES mean and why does it matter for downsizing?",
-            answer: "SRES stands for Seniors Real Estate Specialist. It is a designation requiring 12+ hours of specialized training in senior housing options, reverse mortgages, estate planning coordination, and the emotional dynamics of downsizing. Selling a family home you have lived in for 30+ years is a life transition. An SRES broker understands what is happening alongside the real estate transaction.",
+            question: "What is a Senior Move Specialist and why does it matter for downsizing?",
+            answer: "A Senior Move Specialist is a broker who focuses on later-in-life moves: senior housing options, estate coordination, and the emotional dynamics of downsizing. Selling a family home you have lived in for 30+ years is a life transition. Kim has spent years helping seniors and families downsize, sell a parent's home, and navigate estate transitions, and she understands what is happening alongside the real estate transaction.",
           },
           {
             question: "How long does the downsizing process actually take?",

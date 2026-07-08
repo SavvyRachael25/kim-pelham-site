@@ -77,7 +77,7 @@ function MetaAdListingPortrait({ tweaks, listing }) {
       </div>
 
       <div style={{ position: "absolute", top: 220, left: 80, right: 80, color: "#fff" }}>
-        <Handwritten color={clay} size={56} rotate={-3}>just listed —</Handwritten>
+        <Handwritten color={clay} size={56} rotate={-3}>just listed:</Handwritten>
         <h1 style={{ fontFamily: FONT.heading, fontSize: 112, fontWeight: 600, margin: "20px 0 0 0", lineHeight: 1.0, color: "#fff" }}>
           {listing.address}
         </h1>
@@ -213,7 +213,7 @@ function MetaAdCarousel({ tweaks, listing }) {
                 </h3>
                 <div style={{ height: 3, width: 80, background: clay, margin: "32px 0 24px 0" }} />
                 <p style={{ fontFamily: FONT.body, fontSize: 22, color: "rgba(255,255,255,.9)", margin: 0, lineHeight: 1.45 }}>
-                  17 years in Snohomish County.<br/>
+                  17 years in real estate.<br/>
                   102.3% sale-to-list ratio.<br/>
                   Two active buyers max.
                 </p>
@@ -238,10 +238,10 @@ function MetaAdReelStoryboard({ tweaks, listing }) {
   const clay = tweaks.C_clay;
   const forest = tweaks.C_forest;
   const shots = [
-    { t: "0:00 – 0:02", title: "Cold open", desc: "Drone pull-back from front door reveals full façade + Olympic peaks in the distance.", img: listing.exterior, overlay: "(no text)" },
-    { t: "0:03 – 0:07", title: "Interior cuts", desc: "Three 1-second cuts: kitchen island, living room, primary suite. Specs typed on each.", img: listing.interior, overlay: "4 BED · 2.25 BA · 2,605 SQFT" },
-    { t: "0:08 – 0:12", title: "The Thing", desc: "Slow dolly toward the upper deck. Sunset over the Olympics. Hold the silence.", img: listing.view, overlay: "the view you bought it for" },
-    { t: "0:13 – 0:15", title: "Kim + CTA", desc: "Kim on the porch, direct to camera. URL types in lower-third.", img: "assets/kim-at-door.jpg", overlay: "I'll be here Saturday — Kim" },
+    { t: "0:00 to 0:02", title: "Cold open", desc: "Drone pull-back from front door reveals full façade + Olympic peaks in the distance.", img: listing.exterior, overlay: "(no text)" },
+    { t: "0:03 to 0:07", title: "Interior cuts", desc: "Three 1-second cuts: kitchen island, living room, primary suite. Specs typed on each.", img: listing.interior, overlay: "4 BED · 2.25 BA · 2,605 SQFT" },
+    { t: "0:08 to 0:12", title: "The Thing", desc: "Slow dolly toward the upper deck. Sunset over the Olympics. Hold the silence.", img: listing.view, overlay: "the view you bought it for" },
+    { t: "0:13 to 0:15", title: "Kim + CTA", desc: "Kim on the porch, direct to camera. URL types in lower-third.", img: "assets/kim-at-door.jpg", overlay: "I'll be here Saturday. Kim" },
   ];
   return (
     <div style={{
@@ -255,7 +255,7 @@ function MetaAdReelStoryboard({ tweaks, listing }) {
             {listing.address} · 15-Sec Reel
           </h1>
           <p style={{ fontFamily: FONT.hand, fontSize: 26, color: clay, margin: "8px 0 0 0" }}>
-            for Marco / Nico — shoot list + voiceover beats
+            for Marco / Nico: shoot list + voiceover beats
           </p>
         </div>
         <div style={{ textAlign: "right", color: C.textMuted, fontSize: 12, lineHeight: 1.6 }}>
@@ -297,7 +297,7 @@ function MetaAdReelStoryboard({ tweaks, listing }) {
           your neighbor in real estate."
         </p>
         <p style={{ fontFamily: FONT.body, fontSize: 12, color: C.textMuted, margin: "16px 0 0 0", lineHeight: 1.5 }}>
-          14 seconds spoken. Hold 1s on the view shot, silent. Subtitle every line — white on black bar, bottom-third safe area.
+          14 seconds spoken. Hold 1s on the view shot, silent. Subtitle every line: white on black bar, bottom-third safe area.
         </p>
       </div>
 
@@ -318,7 +318,7 @@ function MetaAdPriceDrop({ tweaks, listing }) {
         style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", filter: "brightness(.45)" }} />
 
       <div style={{ position: "absolute", inset: 0, padding: 80, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center", textAlign: "center" }}>
-        <Handwritten color={clay} size={48} rotate={-3} style={{ marginBottom: 16 }}>new number —</Handwritten>
+        <Handwritten color={clay} size={48} rotate={-3} style={{ marginBottom: 16 }}>new number:</Handwritten>
 
         <p style={{
           fontFamily: FONT.heading, fontSize: 64, fontWeight: 600,
@@ -350,7 +350,7 @@ function MetaAdPriceDrop({ tweaks, listing }) {
           marginTop: 40, background: forest, color: "#fff", padding: "16px 32px", borderRadius: 4,
           fontFamily: FONT.body, fontSize: 20, fontWeight: 700, letterSpacing: "2px",
         }}>
-          OPEN HOUSE SUNDAY 1 – 3 PM
+          OPEN HOUSE SUNDAY 1 TO 3 PM
         </div>
       </div>
 
@@ -547,7 +547,7 @@ function MetaAdTestimonial({ tweaks }) {
         <div style={{ height: 1, background: "rgba(0,0,0,.15)", margin: "44px 0 24px 0", width: 200 }} />
 
         <p style={{ fontFamily: FONT.body, fontSize: 18, fontWeight: 600, color: C.text, margin: 0, letterSpacing: "1px" }}>
-          — Linda &amp; Tom R., Lake Stevens sellers
+          Linda &amp; Tom R., Lake Stevens sellers
         </p>
         <p style={{ fontFamily: FONT.body, fontSize: 13, color: C.textMuted, margin: "8px 0 0 0", letterSpacing: "2px", textTransform: "uppercase" }}>
           Sold $33K over list · 8 days on market

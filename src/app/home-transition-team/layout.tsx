@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 const TITLE =
   'The Home Transition Team | One Team for the Whole Move | Kim Pelham, The Pelham Group NW';
 const DESC =
-  'Repairs, staging, selling, and senior transition support under one roof. The Pelham Group NW Home Transition Team handles the entire move: licensed contractors, in-house staging, SRES-certified guidance for seniors and their families, and a broker who has walked alongside Snohomish County for 17 years. Payment for repairs can defer until closing.';
+  'Repairs, staging, selling, and senior transition support under one roof. The Pelham Group NW Home Transition Team handles the entire move: licensed contractors, in-house staging, senior move guidance for seniors and their families, and a broker with 17 years of real estate experience. Payment for repairs can defer until closing.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'estate sale real estate Snohomish',
     'home repairs before selling',
     'defer repairs until closing',
-    'SRES Snohomish County',
+    'senior move specialist Snohomish County',
     'downsizing help Everett',
     'concierge real estate Snohomish',
     'Kim Pelham Home Transition Team',

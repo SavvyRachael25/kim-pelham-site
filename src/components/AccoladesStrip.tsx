@@ -7,7 +7,7 @@ import Link from 'next/link';
   AccoladesStrip — skinny single-line trust bar that sits at the top
   of the homepage (right under the nav). Visitor sees Kim's verified
   accolades in one horizontal scan before they ever scroll. Each
-  item links to /media (or /senior-services for SRES) for substance.
+  item links to /media (or /senior-services for senior moves) for substance.
 */
 
 export default function AccoladesStrip() {
@@ -91,7 +91,7 @@ export default function AccoladesStrip() {
         <li style={{ flex: '0 0 auto' }}>
           <Link
             href="/senior-services"
-            aria-label="SRES Seniors Real Estate Specialist certified by NAR"
+            aria-label="Senior Move Specialist for downsizing and estate transitions"
             style={{ display: 'inline-flex', alignItems: 'center', gap: 8, textDecoration: 'none', color: 'inherit', whiteSpace: 'nowrap' }}
           >
             <span
@@ -112,10 +112,10 @@ export default function AccoladesStrip() {
                 flex: '0 0 auto',
               }}
             >
-              SRES
+              55+
             </span>
             <span style={{ fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 600, color: '#2F5233' }}>
-              SRES Certified
+              Senior Move Specialist
             </span>
           </Link>
         </li>

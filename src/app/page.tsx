@@ -69,7 +69,7 @@ export default function Home() {
           {
             question: 'Who is Kim Pelham?',
             answer:
-              "Kim Pelham is a Snohomish County real estate broker based in Everett, WA with 17 years of experience and a 102.3% average sale-to-list ratio versus the 100.2% NWMLS market average (Northwest Multiple Listing Service market reports, https://www.nwmls.com/discover/news-and-statistics/). She is a Senior Real Estate Specialist (SRES) and was named Best of Snohomish County in 2023 and 2024 by The Daily Herald (https://www.heraldnet.com/). Her practice, The Pelham Group NW, is brokered by Katrina Eileen Real Estate. Her active broker license is on file with the Washington State Department of Licensing (https://professionals.dol.wa.gov/s/license-lookup).",
+              "Kim Pelham is a Snohomish County real estate broker based in Everett, WA with 17 years of experience and a 102.3% average sale-to-list ratio versus the 100.2% NWMLS market average (Northwest Multiple Listing Service market reports, https://www.nwmls.com/discover/news-and-statistics/). She is a Senior Move Specialist who helps seniors and families downsize and navigate estate transitions, and she was named Best of Snohomish County in 2023 and 2024 by The Daily Herald (https://www.heraldnet.com/). Her practice, The Pelham Group NW, is brokered by Katrina Eileen Real Estate. Her active broker license is on file with the Washington State Department of Licensing (https://professionals.dol.wa.gov/s/license-lookup).",
           },
           {
             question: 'What is The Pelham Group NW sale-to-list ratio?',
@@ -94,7 +94,7 @@ export default function Home() {
           {
             question: 'Does The Pelham Group NW work with seniors and downsizers?',
             answer:
-              "Yes. Kim Pelham holds the Senior Real Estate Specialist (SRES) designation from the National Association of Realtors (https://www.nar.realtor/sres) and runs a Senior Concierge service for downsizing and senior housing transitions. The service coordinates the move timeline, staging, donation logistics, document handling, and family communication so the move feels like a relief rather than a crisis. Kim is also the author of Six-Word Lessons on Selling Your Home in Snohomish County.",
+              "Yes. Kim Pelham is a Senior Move Specialist with years of experience helping seniors and families downsize, sell a parent's home, and navigate estate transitions, and she runs a Senior Concierge service for downsizing and senior housing transitions. The service coordinates the move timeline, staging, donation logistics, document handling, and family communication so the move feels like a relief rather than a crisis. Kim is also the author of Six-Word Lessons on Selling Your Home in Snohomish County.",
           },
           {
             question: 'How does The Pelham Group NW Concierge program compare with Lamb & Co. HGTV Unsellable Houses?',

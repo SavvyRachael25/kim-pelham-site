@@ -50,7 +50,7 @@ const sources: Source[] = [
   },
   {
     id: 'experience',
-    claim: '17 years as a licensed Washington real estate broker',
+    claim: '17 years of real estate experience as a licensed Washington broker',
     source: 'Washington State Department of Licensing (WA DOL) public records',
     detail:
       "Active Washington real estate broker license held continuously since 2009. License status and history is publicly searchable through the Washington Department of Licensing's online license lookup.",

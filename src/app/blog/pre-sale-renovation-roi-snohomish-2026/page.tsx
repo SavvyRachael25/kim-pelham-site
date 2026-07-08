@@ -99,7 +99,7 @@ export default function PreSaleRenovationROIPage() {
             </p>
 
             <p style={styles.bodyP}>
-              I have been a Snohomish County broker for 17 years. Every year I walk dozens of sellers through this exact decision: which updates to make before listing, which to leave alone, and how to pay for the ones that move the needle. This guide pulls together the national ROI data, the local NWMLS market reality, and what I see actually happen on listings in Everett, Mill Creek, Bothell, Lake Stevens, Marysville, and Mukilteo.
+              I have been in real estate for 17 years, and a Snohomish County broker since 2015. Every year I walk dozens of sellers through this exact decision: which updates to make before listing, which to leave alone, and how to pay for the ones that move the needle. This guide pulls together the national ROI data, the local NWMLS market reality, and what I see actually happen on listings in Everett, Mill Creek, Bothell, Lake Stevens, Marysville, and Mukilteo.
             </p>
 
             <div style={styles.callout}>

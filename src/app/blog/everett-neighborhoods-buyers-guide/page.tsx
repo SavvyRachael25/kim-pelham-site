@@ -34,7 +34,7 @@ export default function EverettNeighborhoodsBuyersGuidePage() {
                 fontWeight: 700,
               }}
             >
-              I&apos;ve sold 50+ homes in Everett over 17 years. Here&apos;s what I actually know about the neighborhoods, which most people won&apos;t tell you until you ask.
+              I&apos;ve sold 50+ Everett homes over my 17-year real estate career. Here&apos;s what I actually know about the neighborhoods, which most people won&apos;t tell you until you ask.
             </p>
 
             <p
@@ -491,7 +491,7 @@ export default function EverettNeighborhoodsBuyersGuidePage() {
               borderRadius: '0 4px 4px 0',
             }}>
               <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.4rem', fontWeight: 400, fontStyle: 'italic', color: 'var(--color-forest)', margin: 0, lineHeight: 1.6 }}>
-                &ldquo;Zillow can show you the square footage and the photos. It cannot show you what 19th Ave feels like at 8am on a school day, or which street near the river has flooded twice in the last five years. That&apos;s local knowledge. That&apos;s what 17 years in this market looks like.&rdquo;
+                &ldquo;Zillow can show you the square footage and the photos. It cannot show you what 19th Ave feels like at 8am on a school day, or which street near the river has flooded twice in the last five years. That&apos;s local knowledge. That&apos;s what 17 years of living here looks like.&rdquo;
               </p>
               <cite style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: 'var(--color-clay)', marginTop: '10px', display: 'block' }}>
                 Kim Pelham, Real Estate Broker, The Pelham Group NW
@@ -761,7 +761,7 @@ export default function EverettNeighborhoodsBuyersGuidePage() {
                   lineHeight: '1.6',
                 }}
               >
-                Let&apos;s talk about where you&apos;d actually be happy. Seventeen years in this market means I know the streets, the school feeders, the flood corridors, and the Boeing noise patterns in a way no algorithm can replicate.
+                Let&apos;s talk about where you&apos;d actually be happy. Seventeen years of living in this county means I know the streets, the school feeders, the flood corridors, and the Boeing noise patterns in a way no algorithm can replicate.
               </p>
               <Link
                 href="/contact"

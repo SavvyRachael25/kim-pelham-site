@@ -200,7 +200,7 @@ export default function MovingWithAdhdPage() {
             </p>
 
             <p style={styles.bodyP}>
-              Community Spotlight is new, so here is the why. After 17 years of selling homes here, I know
+              Community Spotlight is new, so here is the why. After 17 years of selling homes, I know
               that nobody moves because of a house. They move because life changed. And the people who help
               them through it, the coaches, the lenders, the contractors, the small business owners, are
               the ones who make Snohomish County work. They deserve a bigger spotlight, and I learn
@@ -264,7 +264,7 @@ export default function MovingWithAdhdPage() {
 
             <p style={styles.signOff}>Always, Kim</p>
             <p style={styles.byline}>
-              Kim Pelham, Designated Broker, The Pelham Group NW · 17 years in Snohomish County · <a href="tel:+14252509422" style={{ color: 'var(--color-clay)' }}>425.250.9422</a>
+              Kim Pelham, Designated Broker, The Pelham Group NW · 17 years in real estate · <a href="tel:+14252509422" style={{ color: 'var(--color-clay)' }}>425.250.9422</a>
             </p>
 
           </div>

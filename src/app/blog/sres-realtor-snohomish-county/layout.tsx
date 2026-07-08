@@ -1,11 +1,11 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'SRES Realtor Snohomish County: What It Means for Senior Downsizing | Kim Pelham',
-  description: 'SRES stands for Seniors Real Estate Specialist. Kim Pelham holds this NAR credential and has guided 30+ senior transitions in Snohomish County. Learn what an SRES does differently.',
+  title: 'Senior Move Specialist Snohomish County: What to Look For When Downsizing | Kim Pelham',
+  description: 'What a senior move specialist actually does, what the SRES designation covers, and what to ask before you hire. Kim Pelham has guided 30+ senior transitions in Snohomish County.',
   openGraph: {
-    title: 'SRES Realtor: What It Means and Why Seniors Choose One for the Big Transition',
-    description: 'SRES stands for Seniors Real Estate Specialist. Kim Pelham holds this NAR credential and has guided 30+ senior transitions in Snohomish County.',
+    title: 'What to Look For in a Senior Move Specialist for the Big Transition',
+    description: 'What a senior move specialist actually does, what the SRES designation covers, and what to ask before you hire. Kim Pelham has guided 30+ senior transitions in Snohomish County.',
     images: ['/images/kim-with-door-cropped.jpg'],
     type: 'article',
   },
@@ -35,7 +35,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 "name": "Do I need an SRES realtor to downsize?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "You are not required to work with an SRES, but the credential matters more than people realize. An SRES understands the emotional and financial complexity that most brokers are not trained to handle. They coordinate the full transition, not just the sale. That includes helping you think through reverse mortgage implications, connecting you with estate sale coordinators, and knowing which neighborhoods in your area actually work for a 55+ lifestyle."
+                  "text": "No. The SRES designation signals that a broker has done coursework on senior housing topics, but it is not required, and experienced senior-focused brokers also work outside NAR-member brokerages, where the designation is not available. What matters most is whether the broker coordinates the full transition, not just the sale: reverse mortgage implications, estate sale coordination, and knowing which neighborhoods actually work for a 55+ lifestyle. Ask about real transitions they have guided."
                 }
               },
               {
@@ -51,15 +51,15 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 "name": "How long does senior downsizing take in Washington state?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Realistically, three to six months from the decision to close. The first month is typically spent making decisions about what to keep, donate, sell, or discard. The next one to two months covers listing and selling the current home. The final one to two months is finding and closing on the new home or community. Rushing any of these stages leads to overwhelm and regret. A good SRES broker helps you pace the process so it feels manageable."
+                  "text": "Realistically, three to six months from the decision to close. The first month is typically spent making decisions about what to keep, donate, sell, or discard. The next one to two months covers listing and selling the current home. The final one to two months is finding and closing on the new home or community. Rushing any of these stages leads to overwhelm and regret. A good senior move specialist helps you pace the process so it feels manageable."
                 }
               },
               {
                 "@type": "Question",
-                "name": "What is the difference between an SRES and a regular realtor?",
+                "name": "What is the difference between a senior move specialist and a regular realtor?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "A regular broker is trained to list and sell homes. An SRES is trained to manage a life transition that happens to involve real estate. The differences are practical: an SRES understands reverse mortgage implications before making any pricing or timing recommendations, coordinates estate sales and donation pickups, walks through the new home floor plan before the move to make sure it works for the client's mobility and lifestyle, and knows which neighborhoods in Snohomish County have the amenities, medical access, and community that 55+ buyers actually need."
+                  "text": "A regular broker is trained to list and sell homes. A senior move specialist, whether trained through SRES coursework or through years of doing the work, manages a life transition that happens to involve real estate. The differences are practical: understanding reverse mortgage implications before making any pricing or timing recommendations, coordinating estate sales and donation pickups, walking through the new home floor plan before the move to make sure it works for the client's mobility and lifestyle, and knowing which neighborhoods in Snohomish County have the amenities, medical access, and community that 55+ buyers actually need."
                 }
               }
             ]

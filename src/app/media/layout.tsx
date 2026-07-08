@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 const TITLE = 'Press, Recognition & Published Work | Kim Pelham · The Pelham Group NW';
 const DESC =
-  'Kim Pelham in the press: featured in The Daily Herald, First Place Best Realtor in the Best of Snohomish County in 2023 and 2024 (back-to-back Daily Herald readers\' choice), Best of Zillow Premier Agent, SRES certified, and published author of Six-Word Lessons on Selling Your Home in Seattle. 17 years building a Snohomish County reputation, one client at a time.';
+  'Kim Pelham in the press: featured in The Daily Herald, First Place Best Realtor in the Best of Snohomish County in 2023 and 2024 (back-to-back Daily Herald readers\' choice), Best of Zillow Premier Agent, and published author of Six-Word Lessons on Selling Your Home in Seattle. 17 years in real estate, building a reputation one client at a time.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     'Six-Word Lessons Pelham',
     'Snohomish County real estate broker',
     'The Pelham Group NW',
-    'SRES Snohomish',
+    'senior move specialist Snohomish',
     'real estate author',
   ],
   openGraph: {

@@ -135,7 +135,7 @@ export default function AccessibilityPage() {
 
             <h2 style={styles.h2}>Why this matters in real estate</h2>
             <p style={styles.bodyP}>
-              A lot of the people I work with are at points in life where details matter. SRES-certified work, helping a family settle a parent&apos;s home, walking a buyer through their first mortgage in fifteen years. The website is often the first conversation. If it does not work for somebody, that conversation never starts.
+              A lot of the people I work with are at points in life where details matter. Senior move work, helping a family settle a parent&apos;s home, walking a buyer through their first mortgage in fifteen years. The website is often the first conversation. If it does not work for somebody, that conversation never starts.
             </p>
             <p style={styles.bodyP}>
               I would rather you find me. So we made it easier to find me.

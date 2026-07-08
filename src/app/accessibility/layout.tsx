@@ -13,7 +13,7 @@ export const metadata: Metadata = {
     'WCAG Snohomish realtor',
     'low-vision house search',
     'Kim Cares accessibility',
-    'SRES senior real estate Snohomish County',
+    'senior move specialist Snohomish County',
   ],
   authors: [{ name: 'Kim Pelham', url: 'https://thepelhamgroupnw.com' }],
   openGraph: {

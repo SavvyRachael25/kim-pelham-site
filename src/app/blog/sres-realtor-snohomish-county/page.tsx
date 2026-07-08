@@ -13,10 +13,10 @@ export default function SresRealtorSnohomishCountyPage() {
       <Nav />
       <main>
         <InnerHero
-          title="SRES Realtor: What It Means and Why Seniors Choose One for the Big Transition"
+          title="What to Look For in a Senior Move Specialist for the Big Transition"
           subtitle="By Kim Pelham - April 2026 - 7 min read"
           image="/images/kim-with-door-cropped.jpg"
-          imageAlt="SRES realtor helping seniors downsize in Snohomish County"
+          imageAlt="Kim Pelham helping seniors downsize in Snohomish County"
         />
 
         {/* Article Content */}
@@ -34,7 +34,7 @@ export default function SresRealtorSnohomishCountyPage() {
                 fontWeight: 700,
               }}
             >
-              SRES stands for Seniors Real Estate Specialist. It&apos;s a designation awarded by the National Association of Realtors to brokers who complete specialized training in senior housing options, reverse mortgages, downsizing psychology, and the full lifecycle of a later-life move. If you&apos;re searching for an SRES realtor in Snohomish County, you already understand that this kind of transition is different. It is.
+              A senior move specialist is a real estate broker who focuses on later-life moves: downsizing after decades in a home, selling a parent&apos;s house, and coordinating the estate, family, and timing questions that come with all of it. If you&apos;re searching for that kind of help in Snohomish County, you already understand that this transition is different. It is.
             </p>
 
             <p
@@ -46,7 +46,7 @@ export default function SresRealtorSnohomishCountyPage() {
                 marginBottom: '32px',
               }}
             >
-              I&apos;m Kim Pelham, a licensed real estate broker with The Pelham Group NW and a credentialed SRES. I&apos;ve guided more than 30 senior transitions across Snohomish County, from Snohomish to Lake Stevens to Mill Creek. What I do is not just sell a home. It&apos;s help a family close one chapter and step carefully into the next one.
+              I&apos;m Kim Pelham, a licensed real estate broker with The Pelham Group NW and a Senior Move Specialist. I&apos;ve guided more than 30 senior transitions across Snohomish County, from Snohomish to Lake Stevens to Mill Creek. What I do is not just sell a home. It&apos;s help a family close one chapter and step carefully into the next one.
             </p>
 
             {/* Stat Callout Box */}
@@ -61,14 +61,14 @@ export default function SresRealtorSnohomishCountyPage() {
                 $380,000+
               </p>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', margin: '0 0 8px 0', lineHeight: 1.6 }}>
-                The average Snohomish County senior homeowner has more than $380,000 in home equity to unlock. That equity funds retirement, care, and the next chapter. An SRES broker helps you access it strategically, not just quickly.
+                The average Snohomish County senior homeowner has more than $380,000 in home equity to unlock. That equity funds retirement, care, and the next chapter. The right broker helps you access it strategically, not just quickly.
               </p>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.875rem', color: '#595959', margin: 0 }}>
                 Based on Snohomish County median home values and average senior homeowner tenure
               </p>
             </div>
 
-            {/* Section: What SRES Training Actually Covers */}
+            {/* Section: A Quick Word on Credentials, Including SRES */}
             <h2
               style={{
                 fontFamily: 'var(--font-heading)',
@@ -79,7 +79,7 @@ export default function SresRealtorSnohomishCountyPage() {
                 marginTop: '40px',
               }}
             >
-              What SRES Training Actually Covers
+              A Quick Word on Credentials, Including SRES
             </h2>
 
             <p
@@ -91,7 +91,7 @@ export default function SresRealtorSnohomishCountyPage() {
                 marginBottom: '24px',
               }}
             >
-              Most people assume the SRES is just a marketing badge. It is not. The curriculum is substantive and covers territory that most brokers never encounter in their standard licensing education.
+              You may run into the term SRES (Seniors Real Estate Specialist) while you research. It is a designation from the National Association of Realtors, and brokers whose brokerages belong to NAR can earn it through specialized coursework. I want to be straightforward with you: I do not hold the SRES designation. My brokerage, Katrina Eileen Real Estate, is not a NAR member, so that designation is not available to me. What I bring instead is the thing the coursework is trying to approximate: years of sitting at kitchen tables with seniors and their families, helping them downsize, sell a parent&apos;s home, and navigate estate transitions from the first conversation to the last box.
             </p>
 
             <p
@@ -103,7 +103,7 @@ export default function SresRealtorSnohomishCountyPage() {
                 marginBottom: '24px',
               }}
             >
-              SRES training covers the full spectrum of senior housing options, including aging in place with modifications, independent living communities, assisted living, memory care, and continuing care retirement communities. A broker without this background may not even know the right questions to ask. They&apos;ll focus on the sale. An SRES focuses on the destination.
+              Whatever the letters after a broker&apos;s name, the knowledge that matters covers the full spectrum of senior housing options: aging in place with modifications, independent living communities, assisted living, memory care, and continuing care retirement communities. A broker without this background may not even know the right questions to ask. They&apos;ll focus on the sale. A senior move specialist focuses on the destination.
             </p>
 
             <p
@@ -115,7 +115,7 @@ export default function SresRealtorSnohomishCountyPage() {
                 marginBottom: '24px',
               }}
             >
-              The training also covers reverse mortgage basics in meaningful depth. This matters because many seniors are weighing whether to sell outright or explore a reverse mortgage to stay in place. An SRES can help you understand the tradeoffs and refer you to the right specialists before you commit to anything. It covers lifecycle planning, which means thinking about the next 5 to 10 years, not just the next 90 days. And it covers the emotional dynamics of these transitions in honest detail, because the feelings involved are real and they affect decisions in ways that pure financial logic cannot explain.
+              It also means understanding reverse mortgage basics in meaningful depth, because many seniors are weighing whether to sell outright or explore a reverse mortgage to stay in place. A broker who knows this ground can help you understand the tradeoffs and refer you to the right specialists before you commit to anything. It means lifecycle planning, thinking about the next 5 to 10 years rather than just the next 90 days. And it means taking the emotional dynamics of these transitions seriously, because the feelings involved are real and they affect decisions in ways that pure financial logic cannot explain.
             </p>
 
             {/* Section: The Part Nobody Talks About */}
@@ -165,10 +165,10 @@ export default function SresRealtorSnohomishCountyPage() {
                 marginBottom: '24px',
               }}
             >
-              My job is to hold space for that. To move at your pace, not the market&apos;s pace. To make sure that when the time comes to sign, you feel clear and ready, not pushed or rushed. The SRES credential formally acknowledges this dimension of the work. Good SRES brokers take it seriously.
+              My job is to hold space for that. To move at your pace, not the market&apos;s pace. To make sure that when the time comes to sign, you feel clear and ready, not pushed or rushed. This is the dimension of the work that no license exam covers, and the brokers who do it well take it seriously.
             </p>
 
-            {/* Section: Four Things an SRES Does That a Regular Broker Doesn't */}
+            {/* Section: Four Things a Senior Move Specialist Does That a Typical Broker Doesn't */}
             <h2
               style={{
                 fontFamily: 'var(--font-heading)',
@@ -179,7 +179,7 @@ export default function SresRealtorSnohomishCountyPage() {
                 marginTop: '48px',
               }}
             >
-              Four Things an SRES Does That a Regular Broker Doesn&apos;t
+              Four Things a Senior Move Specialist Does That a Typical Broker Doesn&apos;t
             </h2>
 
             <h3
@@ -227,7 +227,7 @@ export default function SresRealtorSnohomishCountyPage() {
                 marginBottom: '24px',
               }}
             >
-              Decades of life accumulates into a houseful of furniture, collections, and belongings. Many of my clients have no idea how to handle all of it. I keep a trusted network of estate sale professionals, donation coordinators, and junk removal services specifically for this. You should not have to research and vet all of this on your own in the middle of an already stressful move. That&apos;s part of what you get when you work with an SRES.
+              Decades of life accumulates into a houseful of furniture, collections, and belongings. Many of my clients have no idea how to handle all of it. I keep a trusted network of estate sale professionals, donation coordinators, and junk removal services specifically for this. You should not have to research and vet all of this on your own in the middle of an already stressful move. That&apos;s part of what you get when you work with a senior move specialist.
             </p>
 
             <h3
@@ -275,7 +275,7 @@ export default function SresRealtorSnohomishCountyPage() {
                 marginBottom: '24px',
               }}
             >
-              If there is an existing reverse mortgage on the home, the sale process has specific requirements that affect timing and net proceeds. A broker without SRES training may not recognize these complications until late in the transaction. I know what to look for and work with reverse mortgage specialists early so nothing surprises you at the closing table.
+              If there is an existing reverse mortgage on the home, the sale process has specific requirements that affect timing and net proceeds. A broker who has not worked these sales before may not recognize the complications until late in the transaction. I know what to look for and work with reverse mortgage specialists early so nothing surprises you at the closing table.
             </p>
 
             {/* Section: Realistic Downsizing Timeline */}
@@ -450,7 +450,7 @@ export default function SresRealtorSnohomishCountyPage() {
               </cite>
             </blockquote>
 
-            {/* Section: Questions to Ask an SRES Before Hiring */}
+            {/* Section: Questions to Ask Before Hiring */}
             <h2
               style={{
                 fontFamily: 'var(--font-heading)',
@@ -461,7 +461,7 @@ export default function SresRealtorSnohomishCountyPage() {
                 marginTop: '48px',
               }}
             >
-              Questions to Ask an SRES Before Hiring
+              Questions to Ask Before You Hire
             </h2>
 
             <p
@@ -473,7 +473,7 @@ export default function SresRealtorSnohomishCountyPage() {
                 marginBottom: '24px',
               }}
             >
-              The SRES designation tells you a broker has the training. What it does not tell you is whether they are the right person for your family. Here are five questions worth asking before you decide.
+              A title or designation tells you a broker has been exposed to the material. What it does not tell you is whether they are the right person for your family. Here are five questions worth asking before you decide, whoever you interview.
             </p>
 
             <div style={{ marginBottom: '12px' }}>
@@ -492,7 +492,7 @@ export default function SresRealtorSnohomishCountyPage() {
                 },
                 {
                   q: 'Can you walk us through what the first month working with you looks like?',
-                  a: 'A good SRES broker will have a clear, calm process they can explain without consulting a brochure. You should feel organized just hearing them describe it.'
+                  a: 'A good senior move specialist will have a clear, calm process they can explain without consulting a brochure. You should feel organized just hearing them describe it.'
                 },
                 {
                   q: 'What neighborhoods in Snohomish County do you recommend for someone in my situation, and why?',
@@ -531,7 +531,7 @@ export default function SresRealtorSnohomishCountyPage() {
                   What does SRES stand for in real estate?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  SRES stands for Seniors Real Estate Specialist, a NAR designation that requires 12 or more hours of specialized training in senior housing options, reverse mortgages, downsizing psychology, and estate coordination. It is specifically designed for brokers who work with clients aged 50 and older on major housing transitions.
+                  SRES stands for Seniors Real Estate Specialist, a National Association of Realtors designation that requires 12 or more hours of specialized training in senior housing options, reverse mortgages, downsizing psychology, and estate coordination. It is designed for brokers at NAR-member brokerages who work with clients aged 50 and older on major housing transitions.
                 </p>
               </div>
 
@@ -540,7 +540,7 @@ export default function SresRealtorSnohomishCountyPage() {
                   Do I need an SRES realtor to downsize?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  You are not required to work with an SRES, but the credential matters more than most people expect. An SRES understands the emotional and financial complexity that most brokers are not trained to handle. They coordinate the full transition, not just the sale. That means helping you think through reverse mortgage implications, connecting you with estate sale coordinators, and knowing which neighborhoods will actually serve your lifestyle.
+                  No. The designation is one signal that a broker has done coursework on senior housing topics, but it is not required, and experienced senior-focused brokers also work outside NAR-member brokerages, where the designation is not available. What matters most is whether the broker can coordinate the full transition, not just the sale: thinking through reverse mortgage implications, connecting you with estate sale coordinators, and knowing which neighborhoods will actually serve your lifestyle. Ask about real transitions they have guided, not just the letters after their name.
                 </p>
               </div>
 
@@ -558,16 +558,16 @@ export default function SresRealtorSnohomishCountyPage() {
                   How long does senior downsizing take in Washington state?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  Realistically, three to six months. The first month covers decisions about what to keep, sell, or donate. The following one to two months handle listing and selling the current home. The final one to two months cover finding and closing on the next place. Rushing any of these stages creates overwhelm. A good SRES broker helps you pace the process so it stays manageable.
+                  Realistically, three to six months. The first month covers decisions about what to keep, sell, or donate. The following one to two months handle listing and selling the current home. The final one to two months cover finding and closing on the next place. Rushing any of these stages creates overwhelm. A good senior move specialist helps you pace the process so it stays manageable.
                 </p>
               </div>
 
               <div style={{ marginBottom: '28px', paddingBottom: '28px', borderBottom: '1px solid var(--color-border)' }}>
                 <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', fontWeight: 600, color: 'var(--color-forest)', margin: '0 0 10px 0' }}>
-                  What is the difference between an SRES and a regular realtor?
+                  What is the difference between a senior move specialist and a regular realtor?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  A regular broker is trained to list and sell homes. An SRES is trained to manage a life transition that happens to involve real estate. An SRES understands reverse mortgage implications, coordinates estate sales and donations, walks through the new home floor plan before the move, and knows which neighborhoods in Snohomish County have the amenities and medical access that 55+ buyers actually need.
+                  A regular broker is trained to list and sell homes. A senior move specialist, whether they learned through SRES coursework or through years of doing the work, manages a life transition that happens to involve real estate. That means understanding reverse mortgage implications, coordinating estate sales and donations, walking through the new home floor plan before the move, and knowing which neighborhoods in Snohomish County have the amenities and medical access that 55+ buyers actually need.
                 </p>
               </div>
             </section>

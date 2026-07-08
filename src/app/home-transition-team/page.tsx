@@ -25,8 +25,8 @@ const PILLARS = [
   },
   {
     eyebrow: 'seniors and families',
-    title: 'SRES-certified transition support',
-    body: 'Downsizing after decades in a home. Selling a parent\'s house from out of state. Coordinating an estate sale, a move to assisted living, or a family split across time zones. Kim is a Seniors Real Estate Specialist (SRES), certified by the National Association of Realtors for exactly these transitions, and she has walked alongside dozens of Snohomish County families through them.',
+    title: 'Senior move and transition support',
+    body: 'Downsizing after decades in a home. Selling a parent\'s house from out of state. Coordinating an estate sale, a move to assisted living, or a family split across time zones. Kim is a Senior Move Specialist with years of experience in exactly these transitions, and she has walked alongside dozens of Snohomish County families through them.',
     href: '/senior-services',
     linkLabel: 'Senior services in detail',
   },
@@ -64,9 +64,9 @@ const faqs = [
       'Yes. This is one of the most common Home Transition Team jobs. The owners approve scope and budget once at the start, the team runs the entire prep (paint, flooring, hardware, refinishing, staging, photography), and the owners approve the finished listing photos at the end. A recent condo went from keys to listing-ready in about three weeks with zero round trips by the sellers. The full case study with 64 before and after photos is at thepelhamgroupnw.com/case-study/concierge-condo.',
   },
   {
-    question: 'What does SRES mean and why does it matter?',
+    question: 'What is a Senior Move Specialist and why does it matter?',
     answer:
-      'SRES stands for Seniors Real Estate Specialist, a National Association of Realtors certification for brokers who work with clients over 50: estate transitions, downsizing, the timing of a move, reverse-mortgage basics, and the family conversations that come with all of it. Kim Pelham is SRES-certified and has 17 years of Snohomish County experience.',
+      'A Senior Move Specialist is a broker who focuses on the moves clients over 50 actually face: estate transitions, downsizing, the timing of a move, and the family conversations that come with all of it. Kim Pelham has spent years helping seniors and families downsize, sell a parent\'s home, and navigate estate transitions, with 17 years of real estate experience behind her.',
   },
   {
     question: 'How do we start?',
@@ -97,8 +97,8 @@ export default function HomeTransitionTeamPage() {
               timeline, and sometimes the hardest family conversation of the decade. The
               Pelham Group NW Home Transition Team exists so one call covers all of it:
               licensed contractors, in-house staging, professional listing marketing, and
-              SRES-certified guidance for seniors and their families, led by a broker with
-              17 years in Snohomish County. When needed, payment for pre-sale repairs can
+              senior move guidance for seniors and their families, led by a broker with
+              17 years in real estate. When needed, payment for pre-sale repairs can
               defer until closing.
             </p>
           </div>

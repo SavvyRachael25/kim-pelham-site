@@ -135,9 +135,9 @@ const awards: Award[] = [
     stat: '176',
   },
   {
-    title: 'SRES Certified',
-    sub: 'Seniors Real Estate Specialist credential awarded by the National Association of Realtors.',
-    stat: 'SRES',
+    title: 'Senior Move Specialist',
+    sub: 'Years of helping seniors and families downsize, sell a parent\'s home, and navigate estate transitions.',
+    stat: '55+',
   },
   {
     title: '5-Star Verified Reviews',
@@ -161,7 +161,7 @@ const speakingTopics = [
   {
     topic: 'Senior Real Estate Transitions',
     detail:
-      'Walking families through downsizing, aging-in-place decisions, and estate sales. SRES-informed framework that respects both grief and good outcomes.',
+      'Walking families through downsizing, aging-in-place decisions, and estate sales. A senior-move framework built from years of guiding these transitions, one that respects both grief and good outcomes.',
   },
   {
     topic: 'Reading the Snohomish County Market',
@@ -180,7 +180,7 @@ const mediaFAQs = [
   {
     question: 'What awards has Kim Pelham won?',
     answer:
-      'Kim won First Place Best Realtor in the Daily Herald Best of Snohomish County in both 2023 and 2024 (back-to-back readers\' choice), and is a Best of Zillow Premier Agent. She is SRES (Seniors Real Estate Specialist) certified by the National Association of Realtors and holds a 102.3% average sale-to-list ratio across 176 closed transactions versus a 100.2% NWMLS county average.',
+      'Kim won First Place Best Realtor in the Daily Herald Best of Snohomish County in both 2023 and 2024 (back-to-back readers\' choice), and is a Best of Zillow Premier Agent. She holds a 102.3% average sale-to-list ratio across 176 closed transactions versus a 100.2% NWMLS county average.',
   },
   {
     question: 'Is Kim Pelham a published author?',
@@ -205,7 +205,7 @@ const mediaFAQs = [
   {
     question: 'What credentials does Kim Pelham hold?',
     answer:
-      'Kim is a licensed Washington State real estate broker (17 years of experience), brokered by Katrina Eileen Real Estate, and SRES (Seniors Real Estate Specialist) certified by the National Association of Realtors. She is also Best of Zillow recognized and has a published-author credit with Pacelli Publishing.',
+      'Kim is a licensed Washington State real estate broker (17 years of experience), brokered by Katrina Eileen Real Estate, and a Senior Move Specialist with years of experience in senior and estate transitions. She is also Best of Zillow recognized and has a published-author credit with Pacelli Publishing.',
   },
   {
     question: 'What cities does Kim Pelham serve?',
@@ -238,15 +238,6 @@ export default function MediaPage() {
       'Best Realtor, Best of Snohomish County 2023 (Daily Herald readers\' choice)',
       'Best Realtor, Best of Snohomish County 2024 (Daily Herald readers\' choice, back-to-back)',
       'Best of Zillow Premier Agent',
-      'SRES (Seniors Real Estate Specialist), National Association of Realtors',
-    ],
-    hasCredential: [
-      {
-        '@type': 'EducationalOccupationalCredential',
-        name: 'SRES (Seniors Real Estate Specialist)',
-        credentialCategory: 'certification',
-        recognizedBy: { '@type': 'Organization', name: 'National Association of Realtors' },
-      },
     ],
     knowsAbout: [
       'Pre-sale renovation',
@@ -334,7 +325,7 @@ export default function MediaPage() {
       <main>
         <InnerHero
           title="Press, Recognition & Published Work"
-          subtitle="Featured in the Daily Herald. First Place Best Realtor in the Best of Snohomish County back-to-back in 2023 and 2024. Best of Zillow Premier Agent. Published author. 17 years building a reputation in this county, one client at a time."
+          subtitle="Featured in the Daily Herald. First Place Best Realtor in the Best of Snohomish County back-to-back in 2023 and 2024. Best of Zillow Premier Agent. Published author. 17 years in real estate, building a reputation one client at a time."
           image="/images/neighborhood-03-snohomish-historic.jpg"
           imageAlt="Historic Snohomish neighborhood"
           subtitleStyle="body"
@@ -344,7 +335,7 @@ export default function MediaPage() {
         <section style={{ background: 'var(--color-cream)', padding: '40px 24px 32px' }}>
           <div style={{ maxWidth: 880, margin: '0 auto' }}>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.06rem', lineHeight: 1.7, color: 'var(--color-text)', margin: 0 }}>
-              <b>What this page is.</b> A working press kit for journalists, producers, and event hosts. Every claim links to a verifiable source. Kim Pelham is a Washington-licensed real estate broker (17 years) with The Pelham Group NW, brokered by Katrina Eileen Real Estate. She holds a 102.3% average sale-to-list ratio across 176 closings, is SRES certified, was First Place Best Realtor in the Daily Herald&apos;s Best of Snohomish County in 2023 and 2024 (back to back), and is the author of <i>Six-Word Lessons on Selling Your Home in Seattle</i> (Pacelli Publishing, 2017).
+              <b>What this page is.</b> A working press kit for journalists, producers, and event hosts. Every claim links to a verifiable source. Kim Pelham is a Washington-licensed real estate broker (17 years) with The Pelham Group NW, brokered by Katrina Eileen Real Estate. She holds a 102.3% average sale-to-list ratio across 176 closings, was First Place Best Realtor in the Daily Herald&apos;s Best of Snohomish County in 2023 and 2024 (back to back), and is the author of <i>Six-Word Lessons on Selling Your Home in Seattle</i> (Pacelli Publishing, 2017).
             </p>
           </div>
         </section>

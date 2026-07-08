@@ -34,7 +34,7 @@ export default function SellAboveMarketValuePage() {
                 fontWeight: 700,
               }}
             >
-              On a $600,000 home, a 2% difference between what you net and what your neighbor nets is $12,000. That&apos;s real money. My average sale-to-list ratio in Snohomish County is 102.3% compared to the market average of 100.2%. That gap doesn&apos;t happen by accident. It&apos;s the result of a repeatable staging and pricing framework I&apos;ve refined over 17 years in this market.
+              On a $600,000 home, a 2% difference between what you net and what your neighbor nets is $12,000. That&apos;s real money. My average sale-to-list ratio in Snohomish County is 102.3% compared to the market average of 100.2%. That gap doesn&apos;t happen by accident. It&apos;s the result of a repeatable staging and pricing framework I&apos;ve refined over 17 years in real estate.
             </p>
 
             {/* Stat Callout Box */}

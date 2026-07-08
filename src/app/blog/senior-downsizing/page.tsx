@@ -102,7 +102,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              But there's something else, something less tangible: freedom. Freedom from the worry of home repairs, from the isolation of living alone in a large house, from the physical demands of maintenance. Downsizing allows you to focus on what matters most in this phase of life, relationships, experiences, and peace of mind. I hold the SRES (Senior Real Estate Specialist) designation specifically because I believe this transition deserves specialized expertise, not a generalist approach.
+              But there's something else, something less tangible: freedom. Freedom from the worry of home repairs, from the isolation of living alone in a large house, from the physical demands of maintenance. Downsizing allows you to focus on what matters most in this phase of life, relationships, experiences, and peace of mind. I work as a Senior Move Specialist specifically because I believe this transition deserves focused expertise, not a generalist approach. I have spent years helping seniors and families downsize, sell a parent&apos;s home, and navigate estate transitions.
             </p>
 
             <h2
@@ -229,7 +229,7 @@ export default function SeniorDownsizingPage() {
                 marginBottom: '24px',
               }}
             >
-              The key is thinking beyond square footage. Consider proximity to healthcare, walkability, community offerings, and whether you want to be in town or in a quieter setting. Think about future needs too, will this home work in five or ten years? The best downsize moves aren't just about right now; they're about the next chapter you're building. As your SRES-certified broker, I know these submarkets in detail and can help you match your lifestyle priorities to the right neighborhood.
+              The key is thinking beyond square footage. Consider proximity to healthcare, walkability, community offerings, and whether you want to be in town or in a quieter setting. Think about future needs too, will this home work in five or ten years? The best downsize moves aren't just about right now; they're about the next chapter you're building. As a broker who specializes in senior moves, I know these submarkets in detail and can help you match your lifestyle priorities to the right neighborhood.
             </p>
 
             <h2
@@ -315,7 +315,7 @@ export default function SeniorDownsizingPage() {
                   What senior-friendly housing options exist in Snohomish County?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  Snohomish County has a growing range of options: 55+ active adult communities in Bothell, Everett, and Marysville; single-level condos in walkable areas; and smaller single-family homes closer to medical services. Kim holds the SRES (Senior Real Estate Specialist) designation and knows these submarkets in detail.
+                  Snohomish County has a growing range of options: 55+ active adult communities in Bothell, Everett, and Marysville; single-level condos in walkable areas; and smaller single-family homes closer to medical services. Kim is a Senior Move Specialist and knows these submarkets in detail.
                 </p>
               </div>
 
@@ -342,7 +342,7 @@ export default function SeniorDownsizingPage() {
                   What does it cost to work with Kim Pelham on a senior downsizing sale?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  Kim's seller commission is paid from closing proceeds, you don't pay anything out of pocket upfront. Her SRES certification means you get specialized expertise in senior transitions at no additional cost. She also coordinates with your family members if helpful, and moves at whatever pace feels right for your situation.
+                  Kim's seller commission is paid from closing proceeds, you don't pay anything out of pocket upfront. Her years of senior transition work mean you get focused expertise at no additional cost. She also coordinates with your family members if helpful, and moves at whatever pace feels right for your situation.
                 </p>
               </div>
             </section>

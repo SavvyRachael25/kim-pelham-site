@@ -79,7 +79,7 @@ export default function WhatBuyersWantPage() {
             </p>
 
             <p style={styles.bodyP}>
-              I have been writing offers and reading buyer feedback in Snohomish County for 17 years. The 2026 buyer is a real, specific person, and understanding what they actually want is the difference between a 14-day-to-contract listing and a 90-day-on-market price-reduction spiral. Here is what I am seeing on the ground in Mill Creek, Bothell, Lake Stevens, Everett, Marysville, and Mukilteo, supplemented by the national-level data from the{' '}
+              I have been writing offers and reading buyer feedback for 17 years, and in Snohomish County since 2015. The 2026 buyer is a real, specific person, and understanding what they actually want is the difference between a 14-day-to-contract listing and a 90-day-on-market price-reduction spiral. Here is what I am seeing on the ground in Mill Creek, Bothell, Lake Stevens, Everett, Marysville, and Mukilteo, supplemented by the national-level data from the{' '}
               <a href="https://www.nar.realtor/research-and-statistics" target="_blank" rel="noopener noreferrer" style={{ color: 'var(--color-clay)' }}>
                 National Association of Realtors research center
               </a>
@@ -270,7 +270,7 @@ export default function WhatBuyersWantPage() {
             </ul>
 
             <p style={{ ...styles.bodyP, fontSize: '0.9rem', color: 'var(--color-text-muted)', marginTop: '40px', borderTop: '1px solid var(--color-border)', paddingTop: '24px' }}>
-              <em>Buyer trends described are based on the broker&apos;s 17 years of Snohomish County experience supplemented by general industry research. NAR data and other published research informs but does not directly drive specific dollar values or neighborhood premiums noted here. Past performance is not a guarantee of future results. Kim Pelham is a licensed real estate broker in Washington State, brokered by Katrina Eileen Real Estate.</em>
+              <em>Buyer trends described are based on the broker&apos;s 17 years of real estate experience, including work as a Snohomish County broker since 2015, supplemented by general industry research. NAR data and other published research informs but does not directly drive specific dollar values or neighborhood premiums noted here. Past performance is not a guarantee of future results. Kim Pelham is a licensed real estate broker in Washington State, brokered by Katrina Eileen Real Estate.</em>
             </p>
           </div>
         </article>

@@ -108,7 +108,7 @@ export default function RootLayout({
                   "name": "Kim Pelham",
                   "givenName": "Kim",
                   "familyName": "Pelham",
-                  "description": "Kim Pelham is a Snohomish County real estate broker with 17 years of experience and a 102.3% sale-to-list ratio. She works with a maximum of two active buyers at a time and is a Senior Real Estate Specialist (SRES). Best of Snohomish County 2023 and 2024.",
+                  "description": "Kim Pelham is a Snohomish County real estate broker with 17 years of real estate experience and a 102.3% sale-to-list ratio. She works with a maximum of two active buyers at a time and is a Senior Move Specialist helping seniors and families downsize and navigate estate transitions. Best of Snohomish County 2023 and 2024.",
                   "url": "https://thepelhamgroupnw.com/about",
                   "mainEntityOfPage": "https://thepelhamgroupnw.com/about",
                   "image": "https://thepelhamgroupnw.com/images/kim-headshot-msh.jpg",
@@ -116,13 +116,6 @@ export default function RootLayout({
                   "email": "hello@thepelhamgroupnw.com",
                   "jobTitle": "Real Estate Broker",
                   "knowsLanguage": "en",
-                  "hasCredential": [
-                    {
-                      "@type": "EducationalOccupationalCredential",
-                      "credentialCategory": "certification",
-                      "name": "Senior Real Estate Specialist (SRES)"
-                    }
-                  ],
                   "homeLocation": {
                     "@type": "Place",
                     "address": {
@@ -181,7 +174,6 @@ export default function RootLayout({
                     "Best of Snohomish County 2024",
                     "Best of Zillow"
                   ],
-                  "hasCredential": "SRES - Senior Real Estate Specialist",
                   "areaServed": [
                     {"@type": "City", "name": "Everett", "addressRegion": "WA"},
                     {"@type": "City", "name": "Bothell", "addressRegion": "WA"},
@@ -265,8 +257,8 @@ export default function RootLayout({
                       "@type": "Offer",
                       "itemOffered": {
                         "@type": "Service",
-                        "name": "Senior Real Estate Specialist (SRES) Services",
-                        "description": "Senior moves and downsizing concierge service. Coordinates move timeline, staging, donation logistics, document handling, and family communication. Kim Pelham holds the SRES designation from the National Association of Realtors.",
+                        "name": "Senior Move Services",
+                        "description": "Senior moves and downsizing concierge service. Coordinates move timeline, staging, donation logistics, document handling, and family communication. Kim Pelham is a Senior Move Specialist with years of experience helping seniors and families downsize, sell a parent's home, and navigate estate transitions.",
                         "url": "https://thepelhamgroupnw.com/senior-services",
                         "areaServed": "Snohomish County, WA",
                         "provider": { "@id": "https://thepelhamgroupnw.com/#business" }

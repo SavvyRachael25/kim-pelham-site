@@ -2,10 +2,10 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Best Neighborhoods in Everett WA: An Honest Buyer\'s Guide | Kim Pelham',
-  description: "Kim Pelham has sold 50+ homes in Everett over 17 years. Here's the real story on Everett neighborhoods: which ones flood, which have the best schools, and where first-time buyers actually end up happy.",
+  description: "Kim Pelham has sold 50+ Everett homes over a 17-year real estate career. Here's the real story on Everett neighborhoods: which ones flood, which have the best schools, and where first-time buyers actually end up happy.",
   openGraph: {
     title: 'Best Neighborhoods in Everett WA: An Honest Buyer\u2019s Guide',
-    description: "Kim Pelham has sold 50+ homes in Everett over 17 years. Here\u2019s the real story on Everett neighborhoods: which ones flood, which have the best schools, and where first-time buyers actually end up happy.",
+    description: "Kim Pelham has sold 50+ Everett homes over a 17-year real estate career. Here\u2019s the real story on Everett neighborhoods: which ones flood, which have the best schools, and where first-time buyers actually end up happy.",
     images: ['/images/property-01-everett-home-exterior.jpg'],
     type: 'article',
   },

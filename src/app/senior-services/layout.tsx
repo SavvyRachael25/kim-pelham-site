@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Senior Real Estate Services | SRES Certified | Snohomish County',
+  title: 'Senior Real Estate Services | Senior Move Specialist | Snohomish County',
   description:
-    'Kim Pelham is a Certified Senior Real Estate Specialist (SRES) helping seniors and families navigate downsizing, estate sales, and senior transitions across Snohomish County.',
+    'Kim Pelham is a Senior Move Specialist helping seniors and families navigate downsizing, estate sales, and senior transitions across Snohomish County.',
   openGraph: {
-    title: 'Senior Real Estate Services | SRES Certified | Snohomish County',
+    title: 'Senior Real Estate Services | Senior Move Specialist | Snohomish County',
     description:
-      'Kim Pelham is a Certified Senior Real Estate Specialist (SRES) helping seniors and families navigate downsizing, estate sales, and senior transitions across Snohomish County.',
+      'Kim Pelham is a Senior Move Specialist helping seniors and families navigate downsizing, estate sales, and senior transitions across Snohomish County.',
     images: ['/images/kim-with-door-cropped.jpg'],
     type: 'website',
   },
@@ -41,10 +41,10 @@ export default function SeniorServicesLayout({ children }: { children: React.Rea
             "mainEntity": [
               {
                 "@type": "Question",
-                "name": "What does SRES mean and why should I hire one for downsizing?",
+                "name": "What is a Senior Move Specialist and why should I hire one for downsizing?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "SRES stands for Seniors Real Estate Specialist. It is a designation from the National Association of Realtors that requires 12+ hours of specialized training in senior housing options, reverse mortgages, estate planning coordination, and the emotional dynamics of downsizing. Selling a family home you have lived in for 30+ years is not just a transaction. An SRES broker understands the life transition happening alongside the real estate transaction."
+                  "text": "A Senior Move Specialist is a broker who focuses on later-in-life moves: senior housing options, estate coordination, and the emotional dynamics of downsizing. Selling a family home you have lived in for 30+ years is not just a transaction. Kim Pelham has spent years helping seniors and families downsize, sell a parent's home, and navigate estate transitions, and she manages the life transition happening alongside the real estate transaction."
                 }
               },
               {

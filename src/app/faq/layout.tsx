@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 const TITLE =
   'Common Questions about Buying or Selling in Snohomish County | Kim Pelham';
 const DESC =
-  'Plain-English answers to the questions buyers and sellers in Snohomish County actually ask Kim Pelham. Pricing, staging, the concierge service, SRES senior moves, out-of-state sales, and how to reach Kim directly.';
+  'Plain-English answers to the questions buyers and sellers in Snohomish County actually ask Kim Pelham. Pricing, staging, the concierge service, senior moves, out-of-state sales, and how to reach Kim directly.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'how much is my home worth Snohomish',
     'sell home from out of state Washington',
     'senior real estate Snohomish',
-    'SRES Snohomish County',
+    'senior move specialist Snohomish County',
     'Daily Herald Best Realtor',
   ],
   authors: [{ name: 'Kim Pelham', url: 'https://thepelhamgroupnw.com' }],

@@ -72,7 +72,7 @@ export default function TestimonialsPage() {
             {[
               { label: 'Best of Zillow', icon: '🏆' },
               { label: 'Best of Snohomish County 2023 & 2024', icon: '★' },
-              { label: 'SRES Certified', icon: '✓' },
+              { label: 'Senior Move Specialist', icon: '✓' },
             ].map(({ label, icon }) => (
               <div key={label} style={{ textAlign: 'center' }}>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '20px', color: '#B8845C', margin: '0 0 4px 0' }}>

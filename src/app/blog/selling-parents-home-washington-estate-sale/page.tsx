@@ -67,7 +67,7 @@ export default function SellingParentsHomePage() {
       <main>
         <InnerHero
           title="Selling a Parent's Home in Washington: The Estate Sale Process for Snohomish County Families"
-          subtitle="By Kim Pelham, SRES · June 9, 2026 · 11 min read"
+          subtitle="By Kim Pelham, Senior Move Specialist · June 9, 2026 · 11 min read"
           image="/images/property-01-everett-home-exterior.jpg"
           imageAlt="A family home with mature trees"
         />
@@ -79,7 +79,7 @@ export default function SellingParentsHomePage() {
             </p>
 
             <p style={styles.bodyP}>
-              I am SRES certified (Seniors Real Estate Specialist), and a large part of my work in Snohomish County is helping families through exactly this transition. This guide walks through the practical steps in the order they typically happen, what the Washington-specific rules are, where the common pitfalls hide, and how to honor the home and the person while still getting the family a good outcome.
+              I am a Senior Move Specialist, and a large part of my work in Snohomish County is helping families through exactly this transition: downsizing, selling a parent&apos;s home, and navigating the estate process that comes with it. This guide walks through the practical steps in the order they typically happen, what the Washington-specific rules are, where the common pitfalls hide, and how to honor the home and the person while still getting the family a good outcome.
             </p>
 
             <div style={styles.callout}>
@@ -255,7 +255,7 @@ export default function SellingParentsHomePage() {
                 Walking through this with your family?
               </p>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', margin: '0 0 18px', color: 'rgba(248,245,240,0.85)' }}>
-                I am SRES certified and have helped many Snohomish County families through estate sales. A walkthrough costs you nothing, and you walk away with a plan.
+                I am a Senior Move Specialist and have helped many Snohomish County families through estate sales. A walkthrough costs you nothing, and you walk away with a plan.
               </p>
               <Link href="/contact" style={styles.ctaButton}>
                 Reach out
@@ -271,7 +271,7 @@ export default function SellingParentsHomePage() {
               </li>
               <li style={{ marginBottom: '12px' }}>
                 <Link href="/blog/sres-realtor-snohomish-county" style={{ color: 'var(--color-clay)' }}>
-                  What an SRES Realtor Does for Snohomish County Families
+                  What to Look For in a Senior Move Specialist
                 </Link>
               </li>
               <li style={{ marginBottom: '12px' }}>
@@ -287,7 +287,7 @@ export default function SellingParentsHomePage() {
             </ul>
 
             <p style={{ ...styles.bodyP, fontSize: '0.9rem', color: 'var(--color-text-muted)', marginTop: '40px', borderTop: '1px solid var(--color-border)', paddingTop: '24px' }}>
-              <em>This article is general information for Snohomish County families and is not legal, tax, or financial advice. Probate, title, tax, and Medicaid Estate Recovery rules in Washington are state-specific and change. Consult a probate attorney and a CPA for your situation. Kim Pelham is a licensed real estate broker in Washington State, SRES certified, brokered by Katrina Eileen Real Estate.</em>
+              <em>This article is general information for Snohomish County families and is not legal, tax, or financial advice. Probate, title, tax, and Medicaid Estate Recovery rules in Washington are state-specific and change. Consult a probate attorney and a CPA for your situation. Kim Pelham is a licensed real estate broker in Washington State and a Senior Move Specialist, brokered by Katrina Eileen Real Estate.</em>
             </p>
           </div>
         </article>

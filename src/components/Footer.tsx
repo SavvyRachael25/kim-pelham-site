@@ -192,7 +192,7 @@ export default function Footer() {
               {[
                 'Best of Snohomish County 2023 & 2024',
                 'Best of Zillow',
-                'SRES Certified',
+                'Senior Move Specialist',
                 '17+ Years Experience',
                 '102.3% Sale-to-List Ratio',
               ].map((badge) => (

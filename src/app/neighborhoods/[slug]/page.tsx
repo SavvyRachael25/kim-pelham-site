@@ -241,8 +241,8 @@ export default function NeighborhoodSlugPage() {
                 marginBottom: '40px',
               }}
             >
-              I&apos;ve been selling real estate in {name} and across Snohomish County for 17+
-              years. Let&apos;s talk about what you&apos;re looking for.
+              I&apos;ve been selling real estate for 17+ years, and I work in {name} and
+              across Snohomish County. Let&apos;s talk about what you&apos;re looking for.
             </p>
             <Link
               href="/contact"

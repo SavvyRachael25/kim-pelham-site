@@ -104,15 +104,15 @@ function LiPostHero({ tweaks }) {
           </h1>
           <p style={{ fontFamily: FONT.body, fontSize: 16, color: C.textLight, lineHeight: 1.65, margin: "24px 0 0 0" }}>
             That math is not marketing. It is how I deliver a 102.3% sale-to-list
-            ratio in a market that averages 100.2%. The difference is presence —
+            ratio in a market that averages 100.2%. The difference is presence:
             on the phone, at the showing, in the negotiation.
           </p>
           <div style={{ height: 1, background: "rgba(0,0,0,.15)", margin: "32px 0 16px 0", width: 80 }} />
           <p style={{ fontFamily: FONT.hand, fontSize: 28, color: clay, margin: 0, lineHeight: 1 }}>
-            — Kim Pelham
+            Kim Pelham
           </p>
           <p style={{ fontFamily: FONT.body, fontSize: 11, color: C.textMuted, margin: "6px 0 0 0", letterSpacing: "2px", textTransform: "uppercase" }}>
-            17 yrs · 176 closings · SRES Certified
+            17 yrs · 176 closings · Senior Move Specialist
           </p>
         </div>
         <div style={{ position: "relative", overflow: "hidden" }}>
@@ -247,7 +247,7 @@ function LiCarousel({ tweaks }) {
           </div>
           <div style={{ marginTop: 32, background: C.creamMint, padding: "20px 22px", borderLeft: `4px solid ${clay}` }}>
             <p style={{ fontFamily: FONT.heading, fontSize: 22, fontStyle: "italic", color: forest, margin: 0, lineHeight: 1.5 }}>
-              "She is the real one." — Linda &amp; Tom R.
+              "She is the real one." Linda &amp; Tom R.
             </p>
           </div>
         </div>
