@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 const TITLE =
-  'Concierge Condo Case Study · Currently Listed, Owners Out of State | Kim Pelham';
+  'Concierge Condo Case Study · Under Contract, Owners Out of State | Kim Pelham';
 const DESC =
-  'A real Pelham Group concierge case study, currently on the market. Two homeowners moved out of state mid-prep. Kim Pelham and her crew handled paint, flooring, hardware, refinishing, staging, and listing photography. 60 before and after photos, the full timeline, the concierge process, and an 8-question FAQ.';
+  'A real Pelham Group concierge case study, now under contract, closing July 30. Two homeowners moved out of state mid-prep. Kim Pelham and her crew handled paint, flooring, hardware, refinishing, staging, and listing photography. 60 before and after photos, the full timeline, the concierge process, and an 8-question FAQ.';
 
 export const metadata: Metadata = {
   title: TITLE,

@@ -103,7 +103,7 @@ export default function CondoConciergePage() {
                 your next chapter,
               </span>
               <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(32px, 4.4vw, 52px)', fontWeight: 500, color: 'var(--color-cream)', margin: '6px 0 18px', lineHeight: 1.1 }}>
-                Two homeowners moved out of state. Their condo is on the market anyway.
+                Two homeowners moved out of state. Their condo went on the market anyway.
               </h1>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.08rem', color: 'rgba(248,245,240,0.88)', lineHeight: 1.7, margin: '0 0 24px', maxWidth: 540 }}>
                 They could not be in town to manage paint, flooring, hardware, surrounds, lighting,

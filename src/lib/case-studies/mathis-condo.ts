@@ -238,9 +238,9 @@ export const conciergeBullets: string[] = [
 
 export const caseStudyFAQs = [
   {
-    question: 'Where is this condo and is it still on the market?',
+    question: 'Where is this condo and is it still available?',
     answer:
-      'The condo sits in an HOA community in Snohomish County, Washington, with detached one-car garage parking, assigned and visitor spots, a community dog park, a pond with a picnic area, and quick access to Boeing, I-5, I-405, Highway 2, and the future Everett light rail station. We are keeping the exact street address private out of respect for the sellers. The unit is currently listed and available right now.',
+      'The condo sits in an HOA community in Snohomish County, Washington, with detached one-car garage parking, assigned and visitor spots, a community dog park, a pond with a picnic area, and quick access to Boeing, I-5, I-405, Highway 2, and the future Everett light rail station. We are keeping the exact street address private out of respect for the sellers. The unit is now under contract, closing July 30, 2026. If you are an out-of-state seller who wants the same concierge prep, text Kim at 425-250-9422.',
   },
   {
     question: 'How did Kim manage a full prep with the owners out of state?',

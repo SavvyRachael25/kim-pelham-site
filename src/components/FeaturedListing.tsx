@@ -57,12 +57,12 @@ export default function FeaturedListing({ variant = 'wide' }: { variant?: Varian
               borderRadius: '2px',
             }}
           >
-            Open Sat
+            Under Contract
           </div>
         </Link>
         <div style={{ padding: '24px' }}>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.7rem', fontWeight: 700, color: '#B8845C', textTransform: 'uppercase', letterSpacing: '1.5px', margin: '0 0 8px 0' }}>
-            {LISTING.mls} &middot; Active
+            {LISTING.mls} &middot; Pending Inspection
           </p>
           <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: '#2C2C2C', margin: '0 0 4px 0', lineHeight: 1.2 }}>
             {LISTING.address}
@@ -198,23 +198,6 @@ export default function FeaturedListing({ variant = 'wide' }: { variant?: Varian
               }}
             >
               See the Listing
-            </Link>
-            <Link
-              href="/open-house"
-              style={{
-                display: 'inline-block',
-                padding: '12px 30px',
-                background: 'transparent',
-                color: '#2F5233',
-                fontFamily: 'var(--font-body)',
-                fontSize: '0.95rem',
-                fontWeight: 600,
-                borderRadius: '4px',
-                textDecoration: 'none',
-                border: '2px solid #2F5233',
-              }}
-            >
-              RSVP for Open House
             </Link>
           </div>
         </div>

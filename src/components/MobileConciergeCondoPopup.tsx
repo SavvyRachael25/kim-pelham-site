@@ -192,7 +192,7 @@ export default function MobileConciergeCondoPopup() {
                 boxShadow: '0 0 0 2px rgba(229,194,154,0.25)',
               }}
             />
-            Currently listed
+            Under Contract
           </div>
           {/* 64 photos badge */}
           <div

@@ -33,7 +33,7 @@ const articleSchema = {
   headline:
     'How We Got a Snohomish County Condo Listing-Ready After the Owners Moved Out of State',
   description:
-    'A real Pelham Group concierge case study, currently on the market. Two homeowners moved out of state mid-prep. We took the keys, ran the full punch list, and got the condo listing-ready without a single round trip back. 60 before and after photos and the full timeline.',
+    'A real Pelham Group concierge case study, now under contract, closing July 30. Two homeowners moved out of state mid-prep. We took the keys, ran the full punch list, and got the condo listing-ready without a single round trip back. 60 before and after photos and the full timeline.',
   author: { '@type': 'Person', name: 'Kim Pelham', url: SITE },
   publisher: {
     '@type': 'RealEstateAgent',
@@ -124,7 +124,7 @@ export default function CondoCaseStudyPage() {
       <main>
         <InnerHero
           title="How We Got a Snohomish Condo Listing-Ready After the Owners Moved Out of State"
-          subtitle="A real Pelham Group concierge case study, currently on the market"
+          subtitle="A real Pelham Group concierge case study, now under contract, closing July 30"
           image="/images/hero-02-warm-kitchen.jpg"
           imageAlt="Refreshed condo interior with warm staging and new flooring"
         />
@@ -134,7 +134,7 @@ export default function CondoCaseStudyPage() {
           <div style={{ maxWidth: 880, margin: '0 auto' }}>
             <div style={{ display: 'inline-flex', alignItems: 'center', gap: 8, padding: '6px 12px', background: 'var(--color-forest)', color: 'var(--color-cream)', borderRadius: 999, fontFamily: 'var(--font-body)', fontSize: 11, fontWeight: 700, letterSpacing: '0.14em', textTransform: 'uppercase', marginBottom: 18 }}>
               <span aria-hidden="true" style={{ width: 8, height: 8, borderRadius: '50%', background: 'var(--color-clay-light, #d4a07a)' }} />
-              Currently listed
+              Under Contract
             </div>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.06rem', lineHeight: 1.7, color: 'var(--color-text)', margin: 0 }}>
               <b>The short version.</b> Two owners had to move out of state before their Snohomish
@@ -142,8 +142,8 @@ export default function CondoCaseStudyPage() {
               cabinets, refinish a tub, or stand in the kitchen at 8 AM to let the flooring crew in.
               So they let us do all of it. We took the keys, ran the punch list with our own crew,
               staged the unit with Kim&apos;s own pieces, photographed it for the listing, and got
-              it on the market. They never had to fly back. The unit is currently listed. The 60
-              photos below show exactly what that actually looks like.
+              it on the market. They never had to fly back. The unit is now under contract, closing
+              July 30. The 60 photos below show exactly what that actually looks like.
             </p>
           </div>
         </section>
@@ -199,8 +199,8 @@ export default function CondoCaseStudyPage() {
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.08rem', color: 'var(--color-text-light)', lineHeight: 1.7, margin: 0 }}>
               The traditional answer here is: list as-is, take less, move on. We do this work
               differently. We took the keys, ran the entire prep ourselves, and got the condo on
-              the market without a single round trip back to Snohomish County. It is listed and
-              available right now.
+              the market without a single round trip back to Snohomish County. It is now under
+              contract, closing July 30.
             </p>
           </div>
         </section>
