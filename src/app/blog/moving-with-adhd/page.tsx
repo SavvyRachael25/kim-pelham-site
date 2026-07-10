@@ -82,6 +82,15 @@ export default function MovingWithAdhdPage() {
         <article style={{ padding: '72px 20px 96px', backgroundColor: '#fff' }}>
           <div style={{ maxWidth: '720px', margin: '0 auto' }}>
 
+            <div style={{ backgroundColor: 'var(--color-cream-dark, #f0ede7)', border: '1px solid var(--color-clay, #b8845c)', borderRadius: '8px', padding: '20px 22px', marginBottom: '40px' }}>
+              <div style={{ fontFamily: '"Caveat", cursive', fontSize: '22px', color: 'var(--color-clay, #b8845c)', lineHeight: 1, marginBottom: '4px' }}>listen to the conversation</div>
+              <div style={{ fontSize: '14px', color: '#555', lineHeight: 1.6, marginBottom: '14px' }}>The full conversation with Stephanie runs about 17 minutes. Press play, or read on below.</div>
+              <audio controls preload="none" style={{ width: '100%' }}>
+                <source src="/podcast/episode-02/full-episode-audio.m4a" type="audio/mp4" />
+                Your browser does not support the audio player. <a href="/podcast/episode-02/full-episode-audio.m4a">Download the audio</a>.
+              </audio>
+            </div>
+
             <p style={{ ...styles.bodyP, fontWeight: 600, color: 'var(--color-forest)' }}>
               This is the first conversation in my Community Spotlight series, and it starts with a question
               I hear in some form every single month: why does moving feel so impossible? I sat down with
