@@ -1,11 +1,8 @@
 'use client';
 
 import {
-  Caption,
   Clip,
   ClipSection,
-  HScroll,
-  PostCaptionCard,
   StudioHeader,
   pageStyle,
   shellStyle,
@@ -194,60 +191,6 @@ const WHY_FOR_BOTH: { title: string; body: string }[] = [
   },
 ];
 
-const QUOTE_GRAPHICS: { src: string; download: string; label: string }[] = [
-  {
-    src: '/podcast/episode-02/graphics/quote-moving-takes-months.jpg',
-    download: 'community-spotlight-stephanie-quote-moving-takes-months.jpg',
-    label: 'Moving takes months',
-  },
-  {
-    src: '/podcast/episode-02/graphics/quote-societys-expectations.jpg',
-    download: 'community-spotlight-stephanie-quote-societys-expectations.jpg',
-    label: 'Society’s expectations',
-  },
-  {
-    src: '/podcast/episode-02/graphics/quote-no-boxes.jpg',
-    download: 'community-spotlight-stephanie-quote-no-boxes.jpg',
-    label: 'No boxes',
-  },
-];
-
-const ARTICLE_CAPTIONS: { caption: Caption; owner: string }[] = [
-  {
-    owner: 'Kim',
-    caption: {
-      platform: 'Facebook',
-      note: 'The database post. Warm, personal, links the article.',
-      text: `I wrote something up from my conversation with Stephanie Galindo, an ADHD coach and a good friend, and I cannot stop thinking about it.
-
-An ADHD brain spends years building pathways for daily life: which drawer, which route, which routine. A move erases all of them at once. Stephanie says moving takes months, and settling back in can take up to a year. If a move ever left you living out of boxes and running on fumes, you were not failing. You were rebuilding every pathway at once.
-
-The whole article is on my site, including a nervous system trick you can do with a pen: https://thepelhamgroupnw.com/blog/moving-with-adhd
-
-Always, Kim`,
-    },
-  },
-  {
-    owner: 'Kim',
-    caption: {
-      platform: 'LinkedIn',
-      note: 'Professional angle, short.',
-      text: `Moving is one of the biggest executive function challenges most adults ever face. I wrote up what I learned from Stephanie Galindo, an ADHD coach and a good friend, about why that is and what actually helps: the shame connection, body doubling, and why settling into a new home takes months, not weeks.
-
-https://thepelhamgroupnw.com/blog/moving-with-adhd`,
-    },
-  },
-  {
-    owner: 'Stephanie',
-    caption: {
-      platform: 'Any channel',
-      note: 'Written in your voice, Stephanie. The article links back to your site.',
-      text: `Kim Pelham of The Pelham Group NW wrote up our conversation about ADHD and big life transitions, and she got it exactly right: there is no ADHD box, autism box, and "normal" box. We all have different neurology.
-
-We also got into shame and executive function, body doubling, and why moving is such a heavy lift for an ADHD brain. Read it here: https://thepelhamgroupnw.com/blog/moving-with-adhd`,
-    },
-  },
-];
 
 const STILL_COMING: string[] = [
   'More short clips as the full session gets cut (target: 8 to 12 from this one hour)',
@@ -337,147 +280,6 @@ export default function StephanieAndKimPage() {
           {CLIPS.map((clip) => (
             <ClipSection key={clip.slug} clip={clip} />
           ))}
-        </section>
-
-        {/* Full conversation */}
-        <section style={{ paddingTop: 48 }}>
-          <div style={eyebrowStyle}>The whole thing</div>
-          <h2 style={h2Style}>The full conversation</h2>
-          <p style={{ ...bodyStyle, maxWidth: 720, marginTop: 0, marginBottom: 20 }}>
-            The edited episode runs about 17 minutes. Watch it right here, and grab the complete transcript.
-          </p>
-          <div style={{ maxWidth: 720, marginBottom: 20 }}>
-            <div
-              style={{
-                position: 'relative',
-                paddingTop: '56.25%',
-                borderRadius: 12,
-                overflow: 'hidden',
-                border: '1px solid var(--color-border)',
-                background: 'var(--color-dark)',
-              }}
-            >
-              <iframe
-                src="https://www.youtube-nocookie.com/embed/BzL3k8fXcyc"
-                title="Community Spotlight No. 1: Stephanie Galindo and Kim Pelham"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-                style={{ position: 'absolute', inset: 0, width: '100%', height: '100%', border: 0 }}
-              />
-            </div>
-          </div>
-          <div style={{ ...cardStyle, maxWidth: 720 }}>
-            <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
-              <a
-                href="/podcast/episode-02/full-episode-transcript.txt"
-                download="community-spotlight-01-stephanie-and-kim-transcript.txt"
-                style={buttonStyle}
-              >
-                Download the transcript
-              </a>
-            </div>
-            <p style={{ fontSize: 12.5, color: 'var(--color-text-muted)', margin: '14px 0 0' }}>
-              The transcript is the auto-generated one from the recording session, so expect a few rough
-              edges. Good enough to quote from; tell Rachael if you want a cleaned-up version.
-            </p>
-          </div>
-        </section>
-
-        {/* Quote graphics */}
-        <section style={{ paddingTop: 48 }}>
-          <div style={eyebrowStyle}>Ready to post</div>
-          <h2 style={h2Style}>The quote graphics</h2>
-          <p style={{ ...bodyStyle, maxWidth: 720, marginTop: 0, marginBottom: 24 }}>
-            Three of Stephanie&apos;s best lines from the conversation, set in the Pelham brand and sized
-            1080x1350 for Instagram, Facebook, and LinkedIn. Download and post them like any photo. They
-            pair well with a caption from above, or stand alone.
-          </p>
-          <HScroll>
-            {QUOTE_GRAPHICS.map((g) => (
-              <div key={g.src} style={{ ...cardStyle, padding: 12, flex: '0 0 300px', scrollSnapAlign: 'start' }}>
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={g.src}
-                  alt={`Pull-quote graphic: ${g.label}`}
-                  style={{ width: '100%', display: 'block', borderRadius: 8, border: '1px solid var(--color-border)' }}
-                />
-                <a
-                  href={g.src}
-                  download={g.download}
-                  style={{
-                    display: 'block',
-                    textAlign: 'center',
-                    background: 'var(--color-clay)',
-                    color: '#fff',
-                    fontWeight: 600,
-                    fontSize: 13.5,
-                    padding: '10px 0',
-                    borderRadius: 2,
-                    textDecoration: 'none',
-                    marginTop: 10,
-                  }}
-                >
-                  Download
-                </a>
-              </div>
-            ))}
-          </HScroll>
-        </section>
-
-        {/* The article */}
-        <section style={{ paddingTop: 48 }}>
-          <div style={eyebrowStyle}>Also ready to share</div>
-          <h2 style={h2Style}>The article</h2>
-          <p style={{ ...bodyStyle, maxWidth: 720, marginTop: 0, marginBottom: 4 }}>
-            The conversation is a full article on Kim&apos;s site, written to be the page search engines and
-            AI assistants hand to people asking why moving with ADHD is so hard. It leads with
-            Stephanie&apos;s story and sends readers to adhdwithstephanie.com. Share it like any other post.
-          </p>
-          <HScroll>
-            <div
-              style={{
-                ...cardStyle,
-                flex: '0 0 300px',
-                height: 540,
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'space-between',
-                scrollSnapAlign: 'start',
-                background: 'var(--color-forest)',
-              }}
-            >
-              <div>
-                <div style={{ fontFamily: 'var(--font-handwritten)', fontSize: 24, color: 'var(--color-clay-light)' }}>
-                  the blog post
-                </div>
-                <h3
-                  style={{
-                    fontFamily: 'var(--font-heading)',
-                    fontSize: 26,
-                    fontWeight: 700,
-                    color: 'var(--color-cream)',
-                    lineHeight: 1.25,
-                    margin: '10px 0 12px',
-                  }}
-                >
-                  Moving With ADHD: Why It Feels So Hard, and What Actually Helps
-                </h3>
-                <p style={{ fontSize: 14, lineHeight: 1.7, color: 'rgba(248,245,240,0.75)', margin: 0 }}>
-                  Stephanie&apos;s story, the shame and executive function connection, the pen trick, body
-                  doubling, and why settling in takes months. With a CTA to Stephanie&apos;s site.
-                </p>
-              </div>
-              <a
-                href="/blog/moving-with-adhd"
-                style={{ ...buttonStyle, textAlign: 'center', padding: '12px 0', fontSize: 14 }}
-              >
-                Read the article
-              </a>
-            </div>
-            {ARTICLE_CAPTIONS.map(({ caption, owner }) => (
-              <PostCaptionCard key={`${owner}-${caption.platform}`} caption={caption} owner={owner} />
-            ))}
-          </HScroll>
         </section>
 
         {/* Still coming */}
