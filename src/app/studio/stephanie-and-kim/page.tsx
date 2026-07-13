@@ -16,7 +16,6 @@ import {
   bodyStyle,
   cardStyle,
   buttonStyle,
-  ghostButtonStyle,
 } from '../shared';
 
 /*
@@ -43,9 +42,9 @@ const CLIPS: Clip[] = [
             note: 'Post as a Reel. Tag Stephanie so she can share it back.',
             text: `There is no one right way for a brain to work.
 
-That is the first thing Stephanie Galindo taught me when we sat down for the first conversation in my Community Spotlight series. Stephanie is a local ADHD coach (find her at adhdwithstephanie.com), and this minute reframed how I think about the boxes we ask people to live inside.
+That is the first thing Stephanie Galindo taught me when we sat down for the first conversation in my Community Spotlight series. Stephanie is an ADHD coach and a good friend of mine (find her at adhdwithstephanie.com), and this minute reframed how I think about the boxes we ask people to live inside.
 
-Full conversation coming soon. If you know someone in Snohomish County doing work worth talking about, I want to hear about them.
+Full conversation coming soon. If you know someone doing work worth talking about, I want to hear about them.
 
 #SnohomishCounty #CommunitySpotlight #ADHD #Neurodivergent #PelhamGroupNW`,
           },
@@ -54,11 +53,11 @@ Full conversation coming soon. If you know someone in Snohomish County doing wor
             note: 'Warmer and longer works here. Tag ADHD with Stephanie.',
             text: `I started something new and I am a little excited about it.
 
-It is called Community Spotlight: real conversations with the people who make Snohomish County what it is. First up is Stephanie Galindo, an ADHD coach whose work I really admire. Her whole approach is called Shame-Free ADHD, which tells you a lot about her. You can find her at adhdwithstephanie.com.
+It is called Community Spotlight: real conversations with people I admire and learn from. First up is Stephanie Galindo, an ADHD coach whose work I really admire. Her whole approach is called Shame-Free ADHD, which tells you a lot about her. You can find her at adhdwithstephanie.com.
 
 In this clip she explains something that stuck with me: there is no ADHD box, autism box, and "normal" box. There is just a huge range of human neurology, and a modern world that suddenly expects everyone to sit down and be quiet.
 
-The full conversation is coming soon. And if there is someone local you think I should sit down with next, tell me. I am keeping a list.
+The full conversation is coming soon. And if there is someone you think I should sit down with next, tell me. I am keeping a list.
 
 Always, Kim`,
           },
@@ -67,16 +66,16 @@ Always, Kim`,
             note: 'Lead with the professional angle.',
             text: `Moving is one of the biggest executive-function challenges most adults ever face. Nobody talks about it that way.
 
-So I sat down with Stephanie Galindo, an ADHD coach here in Snohomish County who works with entrepreneurs and professionals, for the first conversation in my Community Spotlight series. In this clip she makes a point I keep coming back to: neurodivergence is not a set of boxes, it is a range. The world changed faster than our brains did.
+So I sat down with Stephanie Galindo, an ADHD coach who works with entrepreneurs and professionals, for the first conversation in my Community Spotlight series. In this clip she makes a point I keep coming back to: neurodivergence is not a set of boxes, it is a range. The world changed faster than our brains did.
 
-After 17 years of walking people through moves, I can tell you the emotional and cognitive load is real. Featuring the local experts who help people carry it felt like the right place to start this series.
+After 17 years of walking people through moves, I can tell you the emotional and cognitive load is real. Featuring the people who help others carry it felt like the right place to start this series.
 
 Full conversation coming soon. Find Stephanie at adhdwithstephanie.com.`,
           },
           {
             platform: 'Google Business Profile',
             note: 'Short and plain. No hashtags needed.',
-            text: `I just recorded the first conversation in my Community Spotlight series with Stephanie Galindo of ADHD with Stephanie, a local ADHD coach. We talked about the human side of a big move: the stress, the anxiety, and why there is no one right way for a brain to work. The full conversation is coming soon. And if you have a question about buying or selling in Snohomish County, call me. I answer my own phone.`,
+            text: `I just recorded the first conversation in my Community Spotlight series with Stephanie Galindo of ADHD with Stephanie, an ADHD coach and a good friend. We talked about the human side of a big move: the stress, the anxiety, and why there is no one right way for a brain to work. The full conversation is coming soon. And if you have a question about buying or selling in Snohomish County, call me. I answer my own phone.`,
           },
         ],
       },
@@ -219,7 +218,7 @@ const ARTICLE_CAPTIONS: { caption: Caption; owner: string }[] = [
     caption: {
       platform: 'Facebook',
       note: 'The database post. Warm, personal, links the article.',
-      text: `I wrote something up from my conversation with Stephanie Galindo, a local ADHD coach, and I cannot stop thinking about it.
+      text: `I wrote something up from my conversation with Stephanie Galindo, an ADHD coach and a good friend, and I cannot stop thinking about it.
 
 An ADHD brain spends years building pathways for daily life: which drawer, which route, which routine. A move erases all of them at once. Stephanie says moving takes months, and settling back in can take up to a year. If a move ever left you living out of boxes and running on fumes, you were not failing. You were rebuilding every pathway at once.
 
@@ -233,7 +232,7 @@ Always, Kim`,
     caption: {
       platform: 'LinkedIn',
       note: 'Professional angle, short.',
-      text: `Moving is one of the biggest executive function challenges most adults ever face. I wrote up what I learned from Stephanie Galindo, an ADHD coach here in Snohomish County, about why that is and what actually helps: the shame connection, body doubling, and why settling into a new home takes months, not weeks.
+      text: `Moving is one of the biggest executive function challenges most adults ever face. I wrote up what I learned from Stephanie Galindo, an ADHD coach and a good friend, about why that is and what actually helps: the shame connection, body doubling, and why settling into a new home takes months, not weeks.
 
 https://thepelhamgroupnw.com/blog/moving-with-adhd`,
     },
@@ -345,8 +344,7 @@ export default function StephanieAndKimPage() {
           <div style={eyebrowStyle}>The whole thing</div>
           <h2 style={h2Style}>The full conversation</h2>
           <p style={{ ...bodyStyle, maxWidth: 720, marginTop: 0, marginBottom: 20 }}>
-            The edited episode runs about 17 minutes. Watch it right here, listen to the audio version,
-            download either one for your own archives, and grab the complete transcript.
+            The edited episode runs about 17 minutes. Watch it right here, and grab the complete transcript.
           </p>
           <div style={{ maxWidth: 720, marginBottom: 20 }}>
             <div
@@ -369,24 +367,11 @@ export default function StephanieAndKimPage() {
             </div>
           </div>
           <div style={{ ...cardStyle, maxWidth: 720 }}>
-            <audio
-              controls
-              preload="metadata"
-              src="/podcast/episode-02/full-episode-audio.m4a"
-              style={{ width: '100%', display: 'block' }}
-            />
-            <div style={{ display: 'flex', gap: 10, marginTop: 16, flexWrap: 'wrap' }}>
-              <a
-                href="/podcast/episode-02/full-episode-audio.m4a"
-                download="community-spotlight-01-stephanie-and-kim-audio.m4a"
-                style={buttonStyle}
-              >
-                Download the audio
-              </a>
+            <div style={{ display: 'flex', gap: 10, flexWrap: 'wrap' }}>
               <a
                 href="/podcast/episode-02/full-episode-transcript.txt"
                 download="community-spotlight-01-stephanie-and-kim-transcript.txt"
-                style={ghostButtonStyle}
+                style={buttonStyle}
               >
                 Download the transcript
               </a>
