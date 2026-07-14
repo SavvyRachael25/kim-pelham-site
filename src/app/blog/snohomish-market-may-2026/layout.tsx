@@ -87,13 +87,13 @@ export default function MayMarketLayout({ children }: { children: React.ReactNod
       name: 'Kim Pelham',
       url: 'https://thepelhamgroupnw.com/about',
       jobTitle: 'Real Estate Broker',
-      sameAs: ['https://www.wikidata.org/wiki/Q139812411'],
+      sameAs: ['https://www.linkedin.com/in/kimpelham/'],
     },
     publisher: {
       '@type': 'Organization',
       '@id': 'https://thepelhamgroupnw.com/#organization',
       name: 'The Pelham Group NW',
-      sameAs: ['https://www.wikidata.org/wiki/Q139813050'],
+      sameAs: ['https://www.facebook.com/PelhamGroupNW'],
     },
     url: 'https://thepelhamgroupnw.com/blog/snohomish-market-may-2026',
     mainEntityOfPage: {

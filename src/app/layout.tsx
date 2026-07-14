@@ -126,13 +126,7 @@ export default function RootLayout({
                     }
                   },
                   "worksFor": { "@id": "https://thepelhamgroupnw.com/#business" },
-                  "identifier": {
-                    "@type": "PropertyValue",
-                    "propertyID": "Wikidata",
-                    "value": "Q139812411"
-                  },
                   "sameAs": [
-                    "https://www.wikidata.org/wiki/Q139812411",
                     "https://www.facebook.com/PelhamGroupNW",
                     "https://www.instagram.com/pelhamgroupnw/",
                     "https://www.linkedin.com/in/kimpelham/",
@@ -286,18 +280,12 @@ export default function RootLayout({
                     "name": "Katrina Eileen Real Estate",
                     "url": "https://katrinaeileen.com"
                   },
-                  "identifier": {
-                    "@type": "PropertyValue",
-                    "propertyID": "Wikidata",
-                    "value": "Q139813050"
-                  },
                   "sameAs": [
-                    "https://www.wikidata.org/wiki/Q139813050",
                     "https://www.facebook.com/PelhamGroupNW",
                     "https://www.instagram.com/pelhamgroupnw/",
                     "https://www.linkedin.com/in/kimpelham/",
                     "https://www.youtube.com/channel/UCfDuJ0P0qccTvYOKbR4AZWA",
-                    "https://www.google.com/search?q=The+Pelham+Group+NW+Everett+WA"
+                    "https://www.google.com/maps/search/?api=1&query=The+Pelham+Group+NW+Everett+WA"
                   ]
                 },
                 {
@@ -389,20 +377,14 @@ export default function RootLayout({
                       "url": "https://thepelhamgroupnw.com/sources"
                     }
                   ],
-                  "identifier": {
-                    "@type": "PropertyValue",
-                    "propertyID": "Wikidata",
-                    "value": "Q139813050"
-                  },
                   "sameAs": [
-                    "https://www.wikidata.org/wiki/Q139813050",
                     "https://www.facebook.com/PelhamGroupNW",
                     "https://www.instagram.com/pelhamgroupnw/",
                     "https://www.linkedin.com/in/kimpelham/",
                     "https://www.youtube.com/channel/UCfDuJ0P0qccTvYOKbR4AZWA",
                     "https://www.zillow.com/profile/kimpelham",
                     "https://community.katrinaeileen.com/team/kim-pelham",
-                    "https://www.google.com/search?q=The+Pelham+Group+NW+Everett+WA"
+                    "https://www.google.com/maps/search/?api=1&query=The+Pelham+Group+NW+Everett+WA"
                   ]
                 }
               ]
