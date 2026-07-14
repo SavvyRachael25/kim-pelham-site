@@ -148,8 +148,19 @@ export default function Hero() {
             animation: 'fadeSlideUp 0.8s ease-out 0.2s both',
           }}
         >
-          I'm a Snohomish County real estate broker with 17 years of experience and a 102.3% sale-to-list ratio.
-          I work with a maximum of two active buyers at a time, so every showing, listing, and closing earns my full attention.
+          I'm a Snohomish County real estate broker with 17 years of experience. According to NWMLS market
+          reports, my listings sell at an average of 102.3% of asking price against a 100.2% county average
+          (as of June 2026, source:{' '}
+          <a
+            href="https://www.nwmls.com/discover/news-and-statistics/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ color: '#F0EDE7', textDecoration: 'underline' }}
+          >
+            NWMLS
+          </a>
+          ). I work with a maximum of two active buyers at a time, so every showing, listing, and closing
+          earns my full attention.
         </p>
 
         {/* CTA Button */}
