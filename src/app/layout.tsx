@@ -138,6 +138,7 @@ export default function RootLayout({
                     "https://www.linkedin.com/in/kimpelham/",
                     "https://www.youtube.com/channel/UCfDuJ0P0qccTvYOKbR4AZWA",
                     "https://www.zillow.com/profile/kimpelham",
+                    "https://www.homes.com/real-estate-agents/kim-pelham/f2lve5r/",
                     "https://community.katrinaeileen.com/team/kim-pelham",
                     "https://joinvantage.co/directory/the-pelham-group-nw"
                   ]
@@ -403,6 +404,7 @@ export default function RootLayout({
                     "https://www.linkedin.com/in/kimpelham/",
                     "https://www.youtube.com/channel/UCfDuJ0P0qccTvYOKbR4AZWA",
                     "https://www.zillow.com/profile/kimpelham",
+                    "https://www.homes.com/real-estate-agents/kim-pelham/f2lve5r/",
                     "https://community.katrinaeileen.com/team/kim-pelham",
                     "https://www.google.com/maps/search/?api=1&query=The+Pelham+Group+NW+Everett+WA",
                     "https://joinvantage.co/directory/the-pelham-group-nw"

@@ -32,20 +32,20 @@ const sources: Source[] = [
   },
   {
     id: 'google-reviews',
-    claim: '40 five-star Google reviews',
+    claim: '41 five-star Google reviews',
     source: 'Google Business Profile for The Pelham Group NW',
     detail:
       "Verified Google Business Profile reviews. Current count and 5.0 average rating can be confirmed directly on Google's listing for The Pelham Group NW.",
-    href: 'https://www.google.com/search?q=The+Pelham+Group+NW',
-    asOf: 'As of May 2026',
+    href: 'https://maps.google.com/maps?cid=12178187734471564775',
+    asOf: 'As of July 2026',
   },
   {
     id: 'best-of-snoco',
     claim: 'Best of Snohomish County, 2023 and 2024',
-    source: "Readers' Choice awards published by The Herald (Everett, WA)",
+    source: "Readers' Choice awards published by The Daily Herald (Everett, WA)",
     detail:
-      "Best of Snohomish County is an annual readers' poll conducted by The Daily Herald (Everett, WA). Kim Pelham was recognized in the Real Estate Broker category in both the 2023 and 2024 awards.",
-    href: 'https://www.heraldnet.com/',
+      'Best of Snohomish County is an annual readers\' poll conducted by The Daily Herald (Everett, WA). Kim Pelham was recognized in the Real Estate Broker category in both the 2023 and 2024 awards, taking First Place for Best Realtor in 2024. The Herald profiled the winners in "The real estate pros you need to know: Top 3 realtors in Snohomish County" (HeraldNet, March 14, 2025).',
+    href: 'https://www.heraldnet.com/2025/03/14/the-real-estate-pros-you-need-to-know-top-3-realtors-in-snohomish-county/',
     asOf: '2023 and 2024 award years',
   },
   {
@@ -73,6 +73,15 @@ const sources: Source[] = [
     detail:
       'Cumulative count of closed residential transactions where Kim Pelham was the listing or buyer agent of record, as captured by NWMLS records.',
     asOf: 'Career to date, as of early 2026',
+  },
+  {
+    id: 'book',
+    claim: 'Author of Six-Word Lessons on Selling Your Home in Seattle',
+    source: 'Six-Word Lessons Series, Pacelli Publishing (2017)',
+    detail:
+      'Kim Pelham is the published author of "Six-Word Lessons on Selling Your Home in Seattle: 100 Lessons to Maximize the Results of Your Sale" (Six-Word Lessons Series, 2017, ISBN 978-1933750712), available in paperback and ebook.',
+    href: 'https://www.amazon.com/dp/1933750715',
+    asOf: 'Published December 2017',
   },
 ];
 
