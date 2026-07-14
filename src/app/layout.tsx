@@ -138,7 +138,8 @@ export default function RootLayout({
                     "https://www.linkedin.com/in/kimpelham/",
                     "https://www.youtube.com/channel/UCfDuJ0P0qccTvYOKbR4AZWA",
                     "https://www.zillow.com/profile/kimpelham",
-                    "https://community.katrinaeileen.com/team/kim-pelham"
+                    "https://community.katrinaeileen.com/team/kim-pelham",
+                    "https://joinvantage.co/directory/the-pelham-group-nw"
                   ]
                 },
                 {
@@ -297,7 +298,8 @@ export default function RootLayout({
                     "https://www.instagram.com/pelhamgroupnw/",
                     "https://www.linkedin.com/in/kimpelham/",
                     "https://www.youtube.com/channel/UCfDuJ0P0qccTvYOKbR4AZWA",
-                    "https://www.google.com/maps/search/?api=1&query=The+Pelham+Group+NW+Everett+WA"
+                    "https://www.google.com/maps/search/?api=1&query=The+Pelham+Group+NW+Everett+WA",
+                    "https://joinvantage.co/directory/the-pelham-group-nw"
                   ]
                 },
                 {
@@ -402,7 +404,8 @@ export default function RootLayout({
                     "https://www.youtube.com/channel/UCfDuJ0P0qccTvYOKbR4AZWA",
                     "https://www.zillow.com/profile/kimpelham",
                     "https://community.katrinaeileen.com/team/kim-pelham",
-                    "https://www.google.com/maps/search/?api=1&query=The+Pelham+Group+NW+Everett+WA"
+                    "https://www.google.com/maps/search/?api=1&query=The+Pelham+Group+NW+Everett+WA",
+                    "https://joinvantage.co/directory/the-pelham-group-nw"
                   ]
                 }
               ]
@@ -416,12 +419,15 @@ export default function RootLayout({
         <IntroAnimation>
           <div id="main-content">{children}</div>
         </IntroAnimation>
-        {/* GHL Chat Widget — Kim Pelham branded widget */}
+        {/* GHL Chat Widget — Kim Pelham branded widget.
+            lazyOnload: loads after the page is fully painted so it never
+            competes with the hero for mobile LCP (AEO audit 2026-07-13,
+            LCP 5.8s, "move heavy third-party scripts below the fold"). */}
         <Script
           src="https://widgets.leadconnectorhq.com/loader.js"
           data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
           data-widget-id="69e29c13141137f36a3cd275"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         {/* Mobile concierge condo teaser - bottom sheet, links to /condo-concierge funnel */}
         <MobileConciergeCondoPopup />
@@ -437,18 +443,20 @@ export default function RootLayout({
         <Script
           src="https://cloud.umami.is/script.js"
           data-website-id="3fc3eb60-38d2-41b2-a52e-511704cb8fcf"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
         />
         {/* Microsoft Clarity — session replay + heatmaps, project x209s3f534 */}
-        <Script id="ms-clarity" strategy="afterInteractive">
+        <Script id="ms-clarity" strategy="lazyOnload">
           {`(function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
           })(window, document, "clarity", "script", "x209s3f534");`}
         </Script>
-        {/* Meta Pixels — fires to both Savvy and Pelham ad accounts */}
-        <Script id="meta-pixel" strategy="afterInteractive">
+        {/* Meta Pixels — fires to both Savvy and Pelham ad accounts.
+            lazyOnload: PageView still fires on every visit, just after paint
+            instead of during the LCP window. Attribution is unaffected. */}
+        <Script id="meta-pixel" strategy="lazyOnload">
           {`!function(f,b,e,v,n,t,s)
           {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
           n.callMethod.apply(n,arguments):n.queue.push(arguments)};
