@@ -44,7 +44,7 @@ export default function AccoladesStrip() {
             style={{ display: 'inline-flex', alignItems: 'center', gap: 8, textDecoration: 'none', color: 'inherit', whiteSpace: 'nowrap' }}
           >
             <span style={{ position: 'relative', width: 24, height: 28, display: 'inline-block', flex: '0 0 auto' }}>
-              <Image src="/images/best-of-snoco-2024-no-background.png" alt="" fill sizes="24px" style={{ objectFit: 'contain' }} />
+              <Image src="/images/best-of-snoco-2024-no-background.png" alt="Best of Snohomish County 2024 award badge, Daily Herald readers' choice, won by Kim Pelham for Best Realtor" fill sizes="24px" style={{ objectFit: 'contain' }} />
             </span>
             <span style={{ fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 600, color: '#2F5233' }}>
               Best Realtor 2023 & 2024
@@ -78,7 +78,7 @@ export default function AccoladesStrip() {
             style={{ display: 'inline-flex', alignItems: 'center', gap: 8, textDecoration: 'none', color: 'inherit', whiteSpace: 'nowrap' }}
           >
             <span style={{ position: 'relative', width: 22, height: 22, borderRadius: 3, overflow: 'hidden', display: 'inline-block', flex: '0 0 auto' }}>
-              <Image src="/images/best-of-zillow-portrait.jpg" alt="" fill sizes="22px" style={{ objectFit: 'cover' }} />
+              <Image src="/images/best-of-zillow-portrait.jpg" alt="Best of Zillow Premier Agent badge, awarded to Kim Pelham" fill sizes="22px" style={{ objectFit: 'cover' }} />
             </span>
             <span style={{ fontFamily: 'var(--font-body)', fontSize: 13, fontWeight: 600, color: '#2F5233' }}>
               Best of Zillow
