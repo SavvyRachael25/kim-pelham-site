@@ -266,7 +266,7 @@ export default function Footer() {
 
         {/* Brokerage attribution */}
         <div style={{ fontFamily: 'var(--font-body)', fontSize: '0.813rem', color: '#aaa', textAlign: 'center', paddingTop: '1rem', marginTop: '1rem', borderTop: '1px solid #333' }}>
-          Brokered by Katrina Eileen Real Estate &middot; Everett, WA &middot; 5.0&#9733; from 41 Google reviews
+          Brokered by Katrina Eileen Real Estate &middot; Everett, WA &middot; 5.0&#9733; from 43 Google reviews
         </div>
       </div>
 

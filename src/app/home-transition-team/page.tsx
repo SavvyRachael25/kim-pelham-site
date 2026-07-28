@@ -180,7 +180,7 @@ export default function HomeTransitionTeamPage() {
               ))}
             </div>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.9rem', color: '#777', textAlign: 'center', margin: '24px 0 0 0' }}>
-              5.0 stars across 41 Google reviews.{' '}
+              5.0 stars across 43 Google reviews.{' '}
               <Link href="/testimonials" style={{ color: 'var(--color-forest)' }}>Read them all</Link>.
             </p>
           </div>

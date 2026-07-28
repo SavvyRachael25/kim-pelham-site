@@ -32,7 +32,7 @@ const sources: Source[] = [
   },
   {
     id: 'google-reviews',
-    claim: '41 five-star Google reviews',
+    claim: '43 five-star Google reviews',
     source: 'Google Business Profile for The Pelham Group NW',
     detail:
       "Verified Google Business Profile reviews. Current count and 5.0 average rating can be confirmed directly on Google's listing for The Pelham Group NW.",

@@ -33,7 +33,7 @@ export default function TestimonialsLayout({ children }: { children: React.React
     aggregateRating: {
       '@type': 'AggregateRating',
       ratingValue: '5.0',
-      reviewCount: '41',
+      reviewCount: '43',
       bestRating: '5',
       worstRating: '1',
     },

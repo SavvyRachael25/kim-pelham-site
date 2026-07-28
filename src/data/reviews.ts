@@ -4,11 +4,11 @@
   Business Profile via Zernio. Refreshed by the weekly review
   engine cron and committed back to this file.
 
-  Last synced: 2026-06-22
+  Last synced: 2026-07-28
   Source: Kim's GBP, account 6a0f988a520992756d97d85f
-  Total reviews on GBP: 41
+  Total reviews on GBP: 43
   Average rating: 5.0/5
-  Five-star: 41
+  Five-star: 43
 */
 
 export interface Review {
@@ -23,10 +23,10 @@ export interface Review {
 }
 
 export const reviewStats = {
-  total: 41,
+  total: 43,
   averageRating: 5.0,
-  fiveStar: 41,
-  lastSynced: '2026-06-22',
+  fiveStar: 43,
+  lastSynced: '2026-07-28',
 } as const;
 
 /** Kim's GBP "Leave a review" deep link. Single source of truth. */
@@ -37,6 +37,22 @@ export const GOOGLE_BUSINESS_PROFILE_URL =
   'https://www.google.com/maps/place/?q=place_id:CeddMsE4nQGpEBM';
 
 export const reviews: Review[] = [
+  {
+    name: "Lucas Mathis",
+    text: "We couldn't be happier with our experience working with Kim and the Pelham Group NW. At our first meeting, we told Kim we were first time home sellers and basically said, \"Show us the way.\" She did. We had already moved from Washington to Arizona, so selling our condo from another state could have been a nightmare. Instead, Kim took care of everything. She coordinated our remodel, set up professional staging and photos, kept us updated, and walked us through every step of the process. Even in a tough market, she helped us get an offer we were happy with and guided us through the negotiations and closing. We always felt like she was in our corner. What we'll remember most is how much she genuinely cared, we never felt like just another transaction. If you're looking for a realtor who's experienced, communicates well, and treats your sale like it's her own, we can't recommend Kim enough.",
+    date: "this week",
+    rating: 5,
+    year: 2026,
+    id: "AbFvOqlRMJejECelGC_dwHIglMr93fYx-48lwuUaDCAkHAOLHCJ7Zi_7faja0AuWTPa8MfjWaWi9Ew",
+  },
+  {
+    name: "Dana Murphy-Love",
+    text: "We recently worked with Kim and The Pelham Group to sell our home in Mukilteo. From start to finish, and even before the start, Kim was awesome! We utilized her concierge service with her contractor recommendation to refresh our home to get it ready for sale as well as professional staging. We had not sold a house in over 20 years so we had tons of questions and Kim was always prompt with responding and sage advice. The photos and listing of the home are very professional. We were able to sell fairly quickly in a down market and are very grateful for everything Kim did for us. We highly recommend her for anyone looking to buy or sell their home.",
+    date: "this week",
+    rating: 5,
+    year: 2026,
+    id: "AbFvOqm0r7OFTa3PdWocX8o48-MLZtOAUw3I4jtDbnAu215rqX7KbyLc5ovOkC9Ljpv-1lxCd19r",
+  },
   {
     name: "Judy",
     text: "Kim did a great job handling the repair, staging and selling our mobile. She kept us informed, explained all the complicated paperwork. She made it painless.",
