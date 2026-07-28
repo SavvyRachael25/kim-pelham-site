@@ -7,6 +7,9 @@ import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 
 const details = [
+  { label: 'Status', value: 'Sold' },
+  { label: 'Sold Price', value: '$975,000' },
+  { label: 'Closing Date', value: 'July 10, 2026' },
   { label: 'Bedrooms', value: '4 + Office' },
   { label: 'Bedroom Layout', value: 'Two upstairs, two downstairs' },
   { label: 'Bathrooms', value: '2.25' },
@@ -74,7 +77,7 @@ export default function MukilteoPage() {
                 marginBottom: '12px',
               }}
             >
-              New Listing &middot; Showings by Appointment
+              Sold &middot; Closed July 10, 2026
             </div>
             <h1
               style={{
@@ -140,7 +143,7 @@ export default function MukilteoPage() {
                   margin: '0 0 4px 0',
                 }}
               >
-                Listed Price
+                Sold Price
               </p>
               <p
                 style={{
@@ -195,7 +198,7 @@ export default function MukilteoPage() {
           </div>
         </section>
 
-        {/* Open House banner */}
+        {/* Recently Sold banner */}
         <section
           style={{
             backgroundColor: '#B8845C',
@@ -224,7 +227,7 @@ export default function MukilteoPage() {
                 margin: 0,
               }}
             >
-              Open House This Saturday
+              Recently Sold
             </p>
             <p
               style={{
@@ -236,7 +239,7 @@ export default function MukilteoPage() {
                 lineHeight: 1.2,
               }}
             >
-              Saturday, May 16 &middot; 1:00 PM to 4:00 PM
+              Sold for $975,000 on July 10, 2026
             </p>
             <p
               style={{
@@ -246,11 +249,11 @@ export default function MukilteoPage() {
                 margin: 0,
               }}
             >
-              4611 76th Street SW, Mukilteo WA 98275 &nbsp;&middot;&nbsp; No appointment needed
+              4611 76th Street SW closed at its full list price. If you own something similar in Mukilteo and want to know what it could bring, text or call Kim.
             </p>
             <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '6px' }}>
               <a
-                href="sms:+14252509422?&body=Hi%20Kim%2C%20I%27m%20planning%20to%20stop%20by%20the%20Mukilteo%20open%20house%20Saturday."
+                href="sms:+14252509422?&body=Hi%20Kim%2C%20I%20saw%204611%2076th%20Street%20SW%20sold.%20I%20own%20something%20similar%20in%20Mukilteo%20and%20would%20like%20to%20know%20what%20it%20could%20bring."
                 style={{
                   display: 'inline-block',
                   padding: '10px 24px',
@@ -263,12 +266,10 @@ export default function MukilteoPage() {
                   textDecoration: 'none',
                 }}
               >
-                Text Kim You&apos;re Coming
+                Text Kim
               </a>
               <a
-                href="https://www.google.com/maps/dir/?api=1&destination=4611+76th+Street+SW+Mukilteo+WA+98275"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="tel:+14252509422"
                 style={{
                   display: 'inline-block',
                   padding: '10px 24px',
@@ -282,7 +283,7 @@ export default function MukilteoPage() {
                   border: '2px solid rgba(255,255,255,0.85)',
                 }}
               >
-                Get Directions
+                Call (425) 250-9422
               </a>
             </div>
           </div>
@@ -302,7 +303,7 @@ export default function MukilteoPage() {
                 margin: '0 0 20px 0',
               }}
             >
-              Quick Property Facts &mdash; MLS# NWM2513590
+              Quick Property Facts: MLS# NWM2513590
             </h2>
             <dl
               style={{
@@ -313,14 +314,15 @@ export default function MukilteoPage() {
               }}
             >
               {[
-                { term: 'Price', def: '$975,000' },
+                { term: 'Sold Price', def: '$975,000' },
+                { term: 'Sold Date', def: 'July 10, 2026' },
                 { term: 'Bedrooms', def: '4 + Office' },
                 { term: 'Bathrooms', def: '2.25' },
                 { term: 'Square Feet', def: '2,605 (per MLS)' },
                 { term: 'Lot Size', def: '10,454 sqft' },
                 { term: 'Year Built', def: '1976 (fully remodeled)' },
                 { term: 'MLS#', def: 'NWM2513590' },
-                { term: 'Status', def: 'Active' },
+                { term: 'Status', def: 'Sold' },
                 { term: 'Multi-Gen', def: 'Full downstairs kitchenette' },
                 { term: 'View', def: 'Olympic Mountains' },
               ].map((item) => (
@@ -422,7 +424,7 @@ export default function MukilteoPage() {
                   fontWeight: 300,
                 }}
               >
-                It&rsquo;s a 1976 NW Contemporary that someone took down to the studs and rebuilt for the view. The Olympic Mountains sit on the horizon to the west, and the previous owner remodeled this house so you&rsquo;d see them from everywhere that mattered &mdash; the kitchen, the great room, the primary bedroom, all three decks. They even cut half a wall in the office so the view comes in from your desk while you work from home. That&rsquo;s the kind of detail you don&rsquo;t get unless someone really lived here.
+                It&rsquo;s a 1976 NW Contemporary that someone took down to the studs and rebuilt for the view. The Olympic Mountains sit on the horizon to the west, and the previous owner remodeled this house so you&rsquo;d see them from everywhere that mattered: the kitchen, the great room, the primary bedroom, all three decks. They even cut half a wall in the office so the view comes in from your desk while you work from home. That&rsquo;s the kind of detail you don&rsquo;t get unless someone really lived here.
               </p>
 
               <p
@@ -435,7 +437,7 @@ export default function MukilteoPage() {
                   fontWeight: 300,
                 }}
               >
-                The remodel itself is full top-to-bottom: quartz counters, Fisher &amp; Paykel appliances, a walk-in primary closet, fresh flooring, fresh fixtures. Two bedrooms upstairs, two more downstairs along with a family room, a wet bar (microwave only, no cooktop), and a full bath &mdash; so the lower level holds its own when you have adult kids landing back home, a long-term guest, or you simply want multi-generational space without renovating to get there.
+                The remodel itself is full top-to-bottom: quartz counters, Fisher &amp; Paykel appliances, a walk-in primary closet, fresh flooring, fresh fixtures. Two bedrooms upstairs, two more downstairs along with a family room, a wet bar (microwave only, no cooktop), and a full bath, so the lower level holds its own when you have adult kids landing back home, a long-term guest, or you simply want multi-generational space without renovating to get there.
               </p>
 
               <p
@@ -448,7 +450,7 @@ export default function MukilteoPage() {
                   fontWeight: 300,
                 }}
               >
-                Outside, three decks wrap the upper level &mdash; one off the primary bedroom, one off the kitchen with a gas grill hookup plumbed in, one with the hot tub. The corner lot is fenced, 10,454 sqft, with a rose garden that&rsquo;s been here longer than I&rsquo;ve been selling houses in Snohomish County. RV parking off the driveway. One-minute walk to the Japanese Gulch trail system. Mukilteo ferry, Boeing Paine Field, and the Mukilteo Speedway corridor are all within five minutes. Built 1976, fully remodeled. All measurements per MLS.
+                Outside, three decks wrap the upper level: one off the primary bedroom, one off the kitchen with a gas grill hookup plumbed in, one with the hot tub. The corner lot is fenced, 10,454 sqft, with a rose garden that&rsquo;s been here longer than I&rsquo;ve been selling houses in Snohomish County. RV parking off the driveway. One-minute walk to the Japanese Gulch trail system. Mukilteo ferry, Boeing Paine Field, and the Mukilteo Speedway corridor are all within five minutes. Built 1976, fully remodeled. All measurements per MLS.
               </p>
 
               {/* Kim's note */}
@@ -464,7 +466,7 @@ export default function MukilteoPage() {
                   borderLeft: '3px solid #B8845C',
                 }}
               >
-                &ldquo;The previous owner remodeled this house around the view &mdash; even cut half a wall in the office so you can see the Olympics from your desk. That&rsquo;s the kind of thoughtful detail you only get when someone really lived here.&rdquo;
+                &ldquo;The previous owner remodeled this house around the view, even cut half a wall in the office so you can see the Olympics from your desk. That&rsquo;s the kind of thoughtful detail you only get when someone really lived here.&rdquo;
                 <footer
                   style={{
                     fontFamily: 'var(--font-body)',
@@ -481,7 +483,7 @@ export default function MukilteoPage() {
 
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
                 <a
-                  href="sms:+14252509422?&body=Hi%20Kim%2C%20I%27m%20interested%20in%204611%2076th%20Street%20SW%20in%20Mukilteo."
+                  href="sms:+14252509422?&body=Hi%20Kim%2C%20I%20saw%204611%2076th%20Street%20SW%20sold.%20I%20own%20something%20similar%20in%20Mukilteo%20and%20would%20like%20to%20know%20what%20it%20could%20bring."
                   style={{
                     display: 'inline-block',
                     padding: '16px 40px',
@@ -587,7 +589,7 @@ export default function MukilteoPage() {
                     margin: '0 0 16px 0',
                   }}
                 >
-                  Listed by Kim Pelham, The Pelham Group NW. Contact for current price, disclosures, and showing availability.
+                  Sold by Kim Pelham, The Pelham Group NW. Closed July 10, 2026 for $975,000, its full list price. If you own something similar in Mukilteo, contact Kim to learn what it could bring.
                 </p>
                 <Link
                   href="/contact"
@@ -650,7 +652,7 @@ export default function MukilteoPage() {
                 maxWidth: '740px',
               }}
             >
-              4611 76th Street SW sits in the established Mukilteo neighborhood between Mukilteo Speedway and the Japanese Gulch greenbelt &mdash; a one-minute walk to the trailhead. The home faces west, which is the whole reason the previous owner&rsquo;s remodel works the way it does: the Olympic Mountains sit across Puget Sound on the western horizon, and the kitchen, great room, primary bedroom, and all three decks are positioned to catch them. The address is in the Mukilteo School District, with Boeing Paine Field five minutes away, the Mukilteo ferry to Whidbey Island ten minutes west, and downtown Edmonds twenty minutes south. Seattle is roughly 30 minutes south on I-5 outside of rush hour, and the Sounder commuter rail runs out of Mukilteo Station for an easier daily commute.
+              4611 76th Street SW sits in the established Mukilteo neighborhood between Mukilteo Speedway and the Japanese Gulch greenbelt, a one-minute walk to the trailhead. The home faces west, which is the whole reason the previous owner&rsquo;s remodel works the way it does: the Olympic Mountains sit across Puget Sound on the western horizon, and the kitchen, great room, primary bedroom, and all three decks are positioned to catch them. The address is in the Mukilteo School District, with Boeing Paine Field five minutes away, the Mukilteo ferry to Whidbey Island ten minutes west, and downtown Edmonds twenty minutes south. Seattle is roughly 30 minutes south on I-5 outside of rush hour, and the Sounder commuter rail runs out of Mukilteo Station for an easier daily commute.
             </p>
             <div
               style={{
@@ -727,7 +729,7 @@ export default function MukilteoPage() {
             {[
               {
                 q: 'How much is 4611 76th Street SW in Mukilteo?',
-                a: '4611 76th Street SW is listed at $975,000. The home offers 2,605 square feet, 4 bedrooms plus an office, 2.25 bathrooms, and a full downstairs kitchenette on a 10,454 sqft fenced corner lot in Mukilteo, WA 98275. MLS# NWM2513590.',
+                a: '4611 76th Street SW sold for $975,000 on July 10, 2026, at its full list price. The home offers 2,605 square feet, 4 bedrooms plus an office, 2.25 bathrooms, and a full downstairs kitchenette on a 10,454 sqft fenced corner lot in Mukilteo, WA 98275. MLS# NWM2513590.',
               },
               {
                 q: 'What makes 4611 76th Street SW special?',
@@ -742,12 +744,12 @@ export default function MukilteoPage() {
                 a: 'The home has 4 bedrooms plus an office (5 flexible rooms total). Two bedrooms upstairs and two downstairs. Per MLS measurements.',
               },
               {
-                q: 'Are there showings or open houses at 4611 76th Street SW?',
-                a: 'Open house Saturday, May 16, 2026 from 1:00 PM to 4:00 PM. No appointment needed. Walk through, ask questions, see the Olympic Mountain view from every room. Text or call Kim Pelham at (425) 250-9422 if you plan to come, or to schedule a private showing at a different time.',
+                q: 'Is 4611 76th Street SW still for sale?',
+                a: 'No. 4611 76th Street SW sold and closed on July 10, 2026 for $975,000, its full list price. If you own a similar home in Mukilteo and want to know what it could bring, text or call Kim Pelham at (425) 250-9422.',
               },
               {
                 q: 'Who is the listing agent for 4611 76th Street SW?',
-                a: 'The listing agent is Kim Pelham, a licensed real estate broker at The Pelham Group NW, brokered by Katrina Eileen Real Estate in Snohomish County, WA. Kim has 17+ years of experience and can be reached at (425) 250-9422.',
+                a: 'The home was listed and sold by Kim Pelham, a licensed real estate broker at The Pelham Group NW, brokered by Katrina Eileen Real Estate in Snohomish County, WA. Kim has 17+ years of experience and can be reached at (425) 250-9422.',
               },
               {
                 q: 'What school district is 4611 76th Street SW in?',
@@ -808,7 +810,7 @@ export default function MukilteoPage() {
                 marginBottom: '20px',
               }}
             >
-              Come See the View
+              Sold for Full List Price
             </h2>
             <p
               style={{
@@ -819,11 +821,11 @@ export default function MukilteoPage() {
                 marginBottom: '40px',
               }}
             >
-              Photos help, but this house is built around the view &mdash; you really have to stand in it. Text or call Kim directly to set up a time to walk through, ask questions, or get current price and disclosure details.
+              This home sold on July 10, 2026 for $975,000, its full list price. If you own something similar in Mukilteo and are wondering what it could bring, text or call Kim directly. She will walk you through it.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center' }}>
               <a
-                href="sms:+14252509422?&body=Hi%20Kim%2C%20I%27m%20interested%20in%204611%2076th%20Street%20SW%20in%20Mukilteo."
+                href="sms:+14252509422?&body=Hi%20Kim%2C%20I%20saw%204611%2076th%20Street%20SW%20sold.%20I%20own%20something%20similar%20in%20Mukilteo%20and%20would%20like%20to%20know%20what%20it%20could%20bring."
                 style={{
                   display: 'inline-block',
                   padding: '16px 48px',

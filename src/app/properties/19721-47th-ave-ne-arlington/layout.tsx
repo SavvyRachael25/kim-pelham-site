@@ -1,22 +1,22 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '19721 47th Ave NE, Arlington WA 98223 | 3 Bed / 2 Bath Single Family | The Pelham Group NW',
+  title: 'Sold · 19721 47th Ave NE, Arlington WA 98223 | The Pelham Group NW',
   description:
-    'Just back on market. 19721 47th Avenue NE, Arlington WA 98223 to 3 bedrooms, 2 bathrooms, 1,624 square feet. $625,000. MLS# 2492864. Listed by Kim Pelham, The Pelham Group NW. Call (425) 250-9422.',
+    'Sold for $625,000 on May 29, 2026, at its full list price. 19721 47th Avenue NE, Arlington WA 98223. 3 bedrooms, 2 bathrooms, 1,624 square feet. MLS# 2492864. Listed and sold by Kim Pelham, The Pelham Group NW. Call (425) 250-9422.',
   openGraph: {
-    title: 'Just Back on Market | 19721 47th Ave NE, Arlington WA',
+    title: 'Sold · 19721 47th Ave NE, Arlington WA',
     description:
-      '3 bedrooms, 2 bathrooms, 1,624 sqft single family home in Arlington, Snohomish County. $625,000. MLS# 2492864. Buyer financing fell through, this one is your second chance.',
+      '3 bedrooms, 2 bathrooms, 1,624 sqft single family home in Arlington, Snohomish County. Sold for $625,000 on May 29, 2026, at its full list price. MLS# 2492864.',
     images: [{ url: '/images/arlington/arlington-01.jpg', width: 1200, height: 800 }],
     type: 'website',
     url: 'https://thepelhamgroupnw.com/properties/19721-47th-ave-ne-arlington',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '19721 47th Ave NE, Arlington WA · Back on Market | The Pelham Group NW',
+    title: 'Sold · 19721 47th Ave NE, Arlington WA | The Pelham Group NW',
     description:
-      '3 bed / 2 bath / 1,624 sqft. $625,000. MLS# 2492864. Listed by Kim Pelham.',
+      '3 bed / 2 bath / 1,624 sqft. Sold for $625,000 on May 29, 2026, at its full list price. MLS# 2492864. Listed and sold by Kim Pelham.',
     images: ['/images/arlington/arlington-01.jpg'],
   },
   alternates: {
@@ -31,7 +31,7 @@ export default function ArlingtonLayout({ children }: { children: React.ReactNod
     '@type': 'RealEstateListing',
     name: '19721 47th Avenue NE, Arlington WA 98223',
     description:
-      'Single family home in Arlington, Snohomish County, Washington. 3 bedrooms, 2 bathrooms, 1,624 square feet. Recently active, just back on market after a buyer financing fell through. $625,000. MLS# 2492864. Listed by Kim Pelham, The Pelham Group NW.',
+      'Single family home in Arlington, Snohomish County, Washington. 3 bedrooms, 2 bathrooms, 1,624 square feet. Sold for $625,000 on May 29, 2026, at its full list price. MLS# 2492864. Listed and sold by Kim Pelham, The Pelham Group NW.',
     url: 'https://thepelhamgroupnw.com/properties/19721-47th-ave-ne-arlington',
     image: [
       'https://thepelhamgroupnw.com/images/arlington/arlington-01.jpg',
@@ -63,7 +63,7 @@ export default function ArlingtonLayout({ children }: { children: React.ReactNod
       '@type': 'Offer',
       price: 625000,
       priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
+      availability: 'https://schema.org/SoldOut',
       seller: {
         '@type': 'RealEstateAgent',
         name: 'Kim Pelham',
@@ -103,15 +103,15 @@ export default function ArlingtonLayout({ children }: { children: React.ReactNod
         name: 'How much is 19721 47th Ave NE, Arlington WA?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '19721 47th Avenue NE, Arlington WA 98223 is listed at $625,000. The home offers 3 bedrooms, 2 bathrooms, and 1,624 square feet. MLS# 2492864.',
+          text: '19721 47th Avenue NE, Arlington WA 98223 sold for $625,000 on May 29, 2026, at its full list price. The home offers 3 bedrooms, 2 bathrooms, and 1,624 square feet. MLS# 2492864.',
         },
       },
       {
         '@type': 'Question',
-        name: 'Why is 19721 47th Ave NE back on the market?',
+        name: 'Is 19721 47th Ave NE still for sale?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The previous buyer backed out, financing fell through before close. The home is now back on the market in Arlington, WA. This kind of price-and-condition reset usually means the next buyer gets in faster and cleaner. Contact Kim Pelham at (425) 250-9422 for current status, disclosures, and showings.',
+          text: 'No. 19721 47th Avenue NE sold and closed on May 29, 2026 for $625,000, its full list price. If you own a similar home in Arlington and want to know what it could bring, contact Kim Pelham at (425) 250-9422.',
         },
       },
       {
@@ -127,7 +127,7 @@ export default function ArlingtonLayout({ children }: { children: React.ReactNod
         name: 'Who is the listing agent for 19721 47th Ave NE, Arlington?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The listing agent is Kim Pelham, a licensed real estate broker at The Pelham Group NW, brokered by Katrina Eileen Real Estate in Snohomish County, WA. Kim has 17+ years of experience and can be reached at (425) 250-9422.',
+          text: 'The home was listed and sold by Kim Pelham, a licensed real estate broker at The Pelham Group NW, brokered by Katrina Eileen Real Estate in Snohomish County, WA. Kim has 17+ years of experience and can be reached at (425) 250-9422.',
         },
       },
       {

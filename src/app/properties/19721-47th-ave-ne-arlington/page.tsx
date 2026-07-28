@@ -7,6 +7,9 @@ import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 
 const details = [
+  { label: 'Status', value: 'Sold' },
+  { label: 'Sold Price', value: '$625,000' },
+  { label: 'Closing Date', value: 'May 29, 2026' },
   { label: 'Bedrooms', value: '3' },
   { label: 'Bathrooms', value: '2' },
   { label: 'Sq Footage', value: '1,624 sqft' },
@@ -15,7 +18,6 @@ const details = [
   { label: 'City', value: 'Arlington, WA' },
   { label: 'ZIP', value: '98223' },
   { label: 'MLS', value: '#2492864' },
-  { label: 'Status', value: 'Just Back on Market' },
 ];
 
 export default function ArlingtonPage() {
@@ -66,7 +68,7 @@ export default function ArlingtonPage() {
                 marginBottom: '12px',
               }}
             >
-              Just Back on Market
+              Sold &middot; Closed May 29, 2026
             </div>
             <h1
               style={{
@@ -132,7 +134,7 @@ export default function ArlingtonPage() {
                   margin: '0 0 4px 0',
                 }}
               >
-                Listed Price
+                Sold Price
               </p>
               <p
                 style={{
@@ -186,7 +188,7 @@ export default function ArlingtonPage() {
           </div>
         </section>
 
-        {/* Back on Market banner */}
+        {/* Recently Sold banner */}
         <section
           style={{
             backgroundColor: '#B8845C',
@@ -215,7 +217,7 @@ export default function ArlingtonPage() {
                 margin: 0,
               }}
             >
-              Just Back on Market
+              Recently Sold
             </p>
             <p
               style={{
@@ -227,7 +229,7 @@ export default function ArlingtonPage() {
                 lineHeight: 1.25,
               }}
             >
-              Buyer financing fell through. Your second chance.
+              Sold for $625,000 on May 29, 2026
             </p>
             <p
               style={{
@@ -237,11 +239,11 @@ export default function ArlingtonPage() {
                 margin: 0,
               }}
             >
-              Same home. Same price. Faster move-in window for the next buyer.
+              19721 47th Avenue NE closed at its full list price. If you own something similar in Arlington and want to know what it could bring, text or call Kim.
             </p>
             <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '6px' }}>
               <a
-                href="sms:+14252509422?&body=Hi%20Kim%2C%20I%27m%20interested%20in%2019721%2047th%20Ave%20NE%20Arlington."
+                href="sms:+14252509422?&body=Hi%20Kim%2C%20I%20saw%2019721%2047th%20Ave%20NE%20sold.%20I%20own%20something%20similar%20in%20Arlington%20and%20would%20like%20to%20know%20what%20it%20could%20bring."
                 style={{
                   display: 'inline-block',
                   padding: '10px 24px',
@@ -291,7 +293,7 @@ export default function ArlingtonPage() {
                 margin: '0 0 20px 0',
               }}
             >
-              Quick Property Facts &mdash; MLS# 2492864
+              Quick Property Facts: MLS# 2492864
             </h2>
             <dl
               style={{
@@ -302,7 +304,8 @@ export default function ArlingtonPage() {
               }}
             >
               {[
-                { term: 'Price', def: '$625,000' },
+                { term: 'Sold Price', def: '$625,000' },
+                { term: 'Sold Date', def: 'May 29, 2026' },
                 { term: 'Bedrooms', def: '3' },
                 { term: 'Bathrooms', def: '2' },
                 { term: 'Square Feet', def: '1,624' },
@@ -311,7 +314,7 @@ export default function ArlingtonPage() {
                 { term: 'County', def: 'Snohomish' },
                 { term: 'ZIP', def: '98223' },
                 { term: 'MLS#', def: '2492864' },
-                { term: 'Status', def: 'Back on Market' },
+                { term: 'Status', def: 'Sold' },
               ].map((item) => (
                 <div key={item.term}>
                   <dt
@@ -410,7 +413,7 @@ export default function ArlingtonPage() {
                   fontWeight: 300,
                 }}
               >
-                19721 47th Avenue NE is a 1,624 square foot single family home in Arlington, Washington, three bedrooms, two bathrooms, in the 98223 ZIP that covers most of the Arlington area in north Snohomish County. The home went under contract recently and is now back on the market because the previous buyer&apos;s financing did not come together. Nothing about the home changed. The buyer&apos;s lender did. That happens, and when it does the next buyer usually wins on timing.
+                19721 47th Avenue NE is a 1,624 square foot single family home in Arlington, Washington, three bedrooms, two bathrooms, in the 98223 ZIP that covers most of the Arlington area in north Snohomish County. It sold on May 29, 2026 for $625,000, its full list price.
               </p>
 
               <p
@@ -436,7 +439,7 @@ export default function ArlingtonPage() {
                   fontWeight: 300,
                 }}
               >
-                Showings are easy to schedule and disclosures are ready to send. Text or call Kim directly for current status, financing options, and to walk through. Cleanly priced inventory in north Snohomish moves fast, even after a delay like this one, especially after a delay like this one.
+                This home is sold. If you own something similar in Arlington or elsewhere in north Snohomish County and want to know what it could bring in today&apos;s market, text or call Kim directly. She will walk you through recent comparable sales and what to expect.
               </p>
 
               {/* Kim's note */}
@@ -452,7 +455,7 @@ export default function ArlingtonPage() {
                   borderLeft: '3px solid #B8845C',
                 }}
               >
-                &ldquo;The home is solid. The first deal didn&apos;t close because of the buyer&apos;s loan, not anything on the property. If you&apos;ve been watching for the right home in Arlington under $650K, this is your window.&rdquo;
+                &ldquo;Arlington keeps proving out. This home sold at its full list price, and north Snohomish County is still where the numbers work for a lot of buyers. If you own here and are wondering what yours could bring, let&apos;s talk.&rdquo;
                 <footer
                   style={{
                     fontFamily: 'var(--font-body)',
@@ -469,7 +472,7 @@ export default function ArlingtonPage() {
 
               <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px' }}>
                 <a
-                  href="sms:+14252509422?&body=Hi%20Kim%2C%20I%27m%20interested%20in%2019721%2047th%20Ave%20NE%20Arlington."
+                  href="sms:+14252509422?&body=Hi%20Kim%2C%20I%20saw%2019721%2047th%20Ave%20NE%20sold.%20I%20own%20something%20similar%20in%20Arlington%20and%20would%20like%20to%20know%20what%20it%20could%20bring."
                   style={{
                     display: 'inline-block',
                     padding: '16px 40px',
@@ -575,7 +578,7 @@ export default function ArlingtonPage() {
                     margin: '0 0 16px 0',
                   }}
                 >
-                  Listed by Kim Pelham, The Pelham Group NW. Contact for current price, disclosures, and showing availability.
+                  Sold by Kim Pelham, The Pelham Group NW. Closed May 29, 2026 for $625,000, its full list price. If you own something similar in Arlington, contact Kim to learn what it could bring.
                 </p>
                 <Link
                   href="/contact"
@@ -715,11 +718,11 @@ export default function ArlingtonPage() {
             {[
               {
                 q: 'How much is 19721 47th Ave NE, Arlington WA?',
-                a: '19721 47th Avenue NE, Arlington WA 98223 is listed at $625,000. The home offers 3 bedrooms, 2 bathrooms, and 1,624 square feet. MLS# 2492864.',
+                a: '19721 47th Avenue NE, Arlington WA 98223 sold for $625,000 on May 29, 2026, at its full list price. The home offers 3 bedrooms, 2 bathrooms, and 1,624 square feet. MLS# 2492864.',
               },
               {
-                q: 'Why is 19721 47th Ave NE back on the market?',
-                a: 'The previous buyer backed out, financing fell through before close. The home is now back on the market in Arlington, WA. This kind of price-and-condition reset usually means the next buyer gets in faster and cleaner. Contact Kim Pelham at (425) 250-9422 for current status, disclosures, and showings.',
+                q: 'Is 19721 47th Ave NE still for sale?',
+                a: 'No. 19721 47th Avenue NE sold and closed on May 29, 2026 for $625,000, its full list price. If you own a similar home in Arlington and want to know what it could bring, contact Kim Pelham at (425) 250-9422.',
               },
               {
                 q: 'How many bedrooms does 19721 47th Ave NE have?',
@@ -727,7 +730,7 @@ export default function ArlingtonPage() {
               },
               {
                 q: 'Who is the listing agent for 19721 47th Ave NE, Arlington?',
-                a: 'The listing agent is Kim Pelham, a licensed real estate broker at The Pelham Group NW in Snohomish County, WA. Kim has 17+ years of experience and can be reached at (425) 250-9422.',
+                a: 'The home was listed and sold by Kim Pelham, a licensed real estate broker at The Pelham Group NW in Snohomish County, WA. Kim has 17+ years of experience and can be reached at (425) 250-9422.',
               },
               {
                 q: 'What city and county is 19721 47th Ave NE in?',
@@ -788,7 +791,7 @@ export default function ArlingtonPage() {
                 marginBottom: '20px',
               }}
             >
-              Ready to See It?
+              Sold for Full List Price
             </h2>
             <p
               style={{
@@ -799,11 +802,11 @@ export default function ArlingtonPage() {
                 marginBottom: '40px',
               }}
             >
-              Text or call Kim directly to schedule a walkthrough, ask questions, or get current price and disclosure details. Showings are quick to set up.
+              This home sold on May 29, 2026 for $625,000, its full list price. If you own something similar in Arlington and are wondering what it could bring, text or call Kim directly.
             </p>
             <div style={{ display: 'flex', flexWrap: 'wrap', gap: '12px', justifyContent: 'center' }}>
               <a
-                href="sms:+14252509422?&body=Hi%20Kim%2C%20I%27m%20interested%20in%2019721%2047th%20Ave%20NE%20Arlington."
+                href="sms:+14252509422?&body=Hi%20Kim%2C%20I%20saw%2019721%2047th%20Ave%20NE%20sold.%20I%20own%20something%20similar%20in%20Arlington%20and%20would%20like%20to%20know%20what%20it%20could%20bring."
                 style={{
                   display: 'inline-block',
                   padding: '16px 48px',

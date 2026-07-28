@@ -1,22 +1,22 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '4611 76th St SW, Mukilteo WA 98275 | Olympic Mountain View Home | The Pelham Group NW',
+  title: 'Sold · 4611 76th St SW, Mukilteo WA 98275 | The Pelham Group NW',
   description:
-    '1976 NW Contemporary remodeled around the Olympic Mountain view, half-wall cut in the office to see it from your desk. 4 bed + office, 2.25 bath, 2,605 sqft on a 10,454 sqft fenced corner lot. $975,000. MLS# NWM2513590. Contact Kim Pelham (425) 250-9422.',
+    'Sold for $975,000 on July 10, 2026, at its full list price. 1976 NW Contemporary remodeled around the Olympic Mountain view, half-wall cut in the office to see it from your desk. 4 bed + office, 2.25 bath, 2,605 sqft on a 10,454 sqft fenced corner lot. MLS# NWM2513590. Listed and sold by Kim Pelham, (425) 250-9422.',
   openGraph: {
-    title: 'Remodeled around the view. | 4611 76th St SW · Mukilteo Olympic Mountain Home',
+    title: 'Sold · 4611 76th St SW, Mukilteo | Remodeled Around the View',
     description:
-      '1976 NW Contemporary remodeled around the Olympic Mountain view. Three decks, half-wall cut in the office to bring the view to the desk. 4 bed + office, 2.25 bath, 2,605 sqft. $975,000. MLS# NWM2513590.',
+      'Sold for $975,000 on July 10, 2026, at its full list price. 1976 NW Contemporary remodeled around the Olympic Mountain view. Three decks, half-wall cut in the office to bring the view to the desk. 4 bed + office, 2.25 bath, 2,605 sqft. MLS# NWM2513590.',
     images: [{ url: '/images/mukilteo-og-2026-05.jpg', width: 1200, height: 630 }],
     type: 'website',
     url: 'https://thepelhamgroupnw.com/properties/4611-76th-street-mukilteo',
   },
   twitter: {
     card: 'summary_large_image',
-    title: '4611 76th St SW, Mukilteo WA 98275 | Olympic Mountain View Home | The Pelham Group NW',
+    title: 'Sold · 4611 76th St SW, Mukilteo WA 98275 | The Pelham Group NW',
     description:
-      '1976 NW Contemporary remodeled around the Olympic Mountain view. 4 bed + office, 2.25 bath, 2,605 sqft. $975,000. MLS# NWM2513590.',
+      'Sold for $975,000 on July 10, 2026, at its full list price. 1976 NW Contemporary remodeled around the Olympic Mountain view. 4 bed + office, 2.25 bath, 2,605 sqft. MLS# NWM2513590.',
     images: ['/images/mukilteo-og-2026-05.jpg'],
   },
   alternates: {
@@ -31,7 +31,7 @@ export default function MukilteoLayout({ children }: { children: React.ReactNode
     '@type': 'RealEstateListing',
     name: '4611 76th Street SW, Mukilteo WA 98275',
     description:
-      '1976 NW Contemporary in Mukilteo, fully remodeled around the Olympic Mountain view, even the office had half a wall cut to bring the view to the desk. 4 bedrooms plus office (two upstairs, two downstairs), 2.25 bathrooms, 2,605 square feet on a 10,454 sqft fenced corner lot. Quartz kitchen, Fisher & Paykel appliances, walk-in primary closet, three decks (one with hot tub, one with gas grill hookup). Lower level has family room, wet bar (microwave), and full bath supporting multi-generational use. RV parking, mature rose garden. One-minute walk to Japanese Gulch trails. $975,000. MLS# NWM2513590.',
+      '1976 NW Contemporary in Mukilteo, fully remodeled around the Olympic Mountain view, even the office had half a wall cut to bring the view to the desk. 4 bedrooms plus office (two upstairs, two downstairs), 2.25 bathrooms, 2,605 square feet on a 10,454 sqft fenced corner lot. Quartz kitchen, Fisher & Paykel appliances, walk-in primary closet, three decks (one with hot tub, one with gas grill hookup). Lower level has family room, wet bar (microwave), and full bath supporting multi-generational use. RV parking, mature rose garden. One-minute walk to Japanese Gulch trails. Sold for $975,000 on July 10, 2026, at its full list price. MLS# NWM2513590.',
     url: 'https://thepelhamgroupnw.com/properties/4611-76th-street-mukilteo',
     image: [
       'https://thepelhamgroupnw.com/images/mukilteo-01-front-exterior.jpg',
@@ -69,7 +69,7 @@ export default function MukilteoLayout({ children }: { children: React.ReactNode
       '@type': 'Offer',
       price: 975000,
       priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
+      availability: 'https://schema.org/SoldOut',
       seller: {
         '@type': 'RealEstateAgent',
         name: 'Kim Pelham',
@@ -109,7 +109,7 @@ export default function MukilteoLayout({ children }: { children: React.ReactNode
         name: 'How much is 4611 76th Street SW in Mukilteo?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '4611 76th Street SW is listed at $975,000. The home offers 2,605 square feet, 4 bedrooms plus an office, 2.25 bathrooms, and a full downstairs kitchenette on a 10,454 sqft fenced corner lot in Mukilteo, WA 98275. MLS# NWM2513590.',
+          text: '4611 76th Street SW sold for $975,000 on July 10, 2026, at its full list price. The home offers 2,605 square feet, 4 bedrooms plus an office, 2.25 bathrooms, and a full downstairs kitchenette on a 10,454 sqft fenced corner lot in Mukilteo, WA 98275. MLS# NWM2513590.',
         },
       },
       {
@@ -138,10 +138,10 @@ export default function MukilteoLayout({ children }: { children: React.ReactNode
       },
       {
         '@type': 'Question',
-        name: 'When is the open house at 4611 76th Street SW?',
+        name: 'Is 4611 76th Street SW still for sale?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The next open house at 4611 76th Street SW, Mukilteo WA is Saturday, May 16, 2026 from 1:00 PM to 4:00 PM. No appointment needed. Walk through, see the Olympic Mountain view from every room. Hosted by Kim Pelham, The Pelham Group NW. Text Kim at (425) 250-9422 if you plan to come, or to schedule a private showing at a different time.',
+          text: 'No. 4611 76th Street SW sold and closed on July 10, 2026 for $975,000, its full list price. If you own a similar home in Mukilteo and want to know what it could bring, text or call Kim Pelham at (425) 250-9422.',
         },
       },
       {
@@ -149,7 +149,7 @@ export default function MukilteoLayout({ children }: { children: React.ReactNode
         name: 'Who is the listing agent for 4611 76th Street SW?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The listing agent is Kim Pelham, a licensed real estate broker at The Pelham Group NW, brokered by Katrina Eileen Real Estate in Snohomish County, WA. Kim has 17+ years of experience and can be reached at (425) 250-9422.',
+          text: 'The home was listed and sold by Kim Pelham, a licensed real estate broker at The Pelham Group NW, brokered by Katrina Eileen Real Estate in Snohomish County, WA. Kim has 17+ years of experience and can be reached at (425) 250-9422.',
         },
       },
       {
@@ -163,51 +163,11 @@ export default function MukilteoLayout({ children }: { children: React.ReactNode
     ],
   };
 
-  // Open House Event schema (GEO — surfaces in Google "Events near me" and Local Pack)
-  const openHouseSchema = {
-    '@context': 'https://schema.org',
-    '@type': 'Event',
-    name: 'Open House · 4611 76th Street SW, Mukilteo WA',
-    description:
-      'Public open house at 4611 76th Street SW, Mukilteo WA. A $975,000 fully-remodeled 4-bedroom home with Olympic Mountain views from every primary room. Hosted by Kim Pelham, The Pelham Group NW. Walk through, no appointment needed.',
-    startDate: '2026-05-16T13:00:00-07:00',
-    endDate: '2026-05-16T16:00:00-07:00',
-    eventStatus: 'https://schema.org/EventScheduled',
-    eventAttendanceMode: 'https://schema.org/OfflineEventAttendanceMode',
-    location: {
-      '@type': 'Place',
-      name: '4611 76th Street SW',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: '4611 76th Street SW',
-        addressLocality: 'Mukilteo',
-        addressRegion: 'WA',
-        postalCode: '98275',
-        addressCountry: 'US',
-      },
-    },
-    organizer: {
-      '@type': 'RealEstateAgent',
-      name: 'Kim Pelham',
-      telephone: '+14252509422',
-      url: 'https://thepelhamgroupnw.com',
-    },
-    offers: {
-      '@type': 'Offer',
-      url: 'https://thepelhamgroupnw.com/properties/4611-76th-street-mukilteo',
-      price: 0,
-      priceCurrency: 'USD',
-      availability: 'https://schema.org/InStock',
-      validFrom: '2026-05-15T00:00:00-07:00',
-    },
-  };
-
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(listingSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(openHouseSchema) }} />
       {children}
     </>
   );
