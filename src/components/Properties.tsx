@@ -275,7 +275,7 @@ export default function Properties() {
                 margin: '0 0 8px 0',
               }}
             >
-              featured listings
+              just sold
             </p>
             <h2
               style={{
@@ -286,7 +286,7 @@ export default function Properties() {
                 margin: 0,
               }}
             >
-              Featured Properties
+              Recently Sold
             </h2>
           </div>
           <Link href="/properties">
