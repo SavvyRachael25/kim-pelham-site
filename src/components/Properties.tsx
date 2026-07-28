@@ -20,28 +20,10 @@ type Listing = {
 
 const listings: Listing[] = [
   {
-    href: '/properties/1406-potlatch-beach-road-tulalip',
-    image: '/images/potlatch-02-exterior.jpg',
-    imageAlt: '1406 Potlatch Beach Road exterior, waterfront home in Marysville, WA',
-    badge: 'New Listing',
-    city: 'Marysville, WA 98271',
-    address: '1406 Potlatch Beach Road',
-    price: '$799,900',
-    stats: [
-      { label: 'Bed', value: '3' },
-      { label: 'Bath', value: '2' },
-      { label: 'Sqft', value: '1,662' },
-      { label: 'Acres', value: '0.36' },
-    ],
-    tagline: 'A $3 million view for under a million.',
-    body: 'High-bank waterfront on Puget Sound. Sweeping Sound vistas, sunsets over the Olympics, 0.36 acres. Seattle waterfront starts at $3M. This one is $799K. Same water, 35 miles north.',
-    handwritten: 'The sunsets here stop you cold every time',
-  },
-  {
     href: '/properties/4611-76th-street-mukilteo',
     image: '/images/mukilteo-01-front-exterior.jpg',
     imageAlt: '4611 76th Street SW exterior, Olympic Mountain view home in Mukilteo, WA',
-    badge: 'New Listing',
+    badge: 'Just Sold',
     city: 'Mukilteo, WA 98275',
     address: '4611 76th Street SW',
     price: '$975,000',
@@ -52,8 +34,26 @@ const listings: Listing[] = [
       { label: 'Lot', value: '10,454' },
     ],
     tagline: 'Remodeled around the view.',
-    body: 'Fully remodeled 1976 NW Contemporary positioned for the Olympic Mountains. Three decks, quartz kitchen, walk-in primary, hot tub, RV parking. The previous owner even cut half a wall in the office so you can see the view while you work.',
-    handwritten: 'Showings by appointment, walk it whenever works',
+    body: 'Fully remodeled NW Contemporary positioned for the Olympic Mountains. Three decks, quartz kitchen, walk-in primary, hot tub, RV parking, and a half-wall cut in the office so you can see the view while you work. Sold for its full list price.',
+    handwritten: 'Sold at full price, July 2026',
+  },
+  {
+    href: '/properties/19721-47th-ave-ne-arlington',
+    image: '/images/arlington/arlington-01.jpg',
+    imageAlt: '19721 47th Avenue NE exterior, single family home in Arlington, WA',
+    badge: 'Just Sold',
+    city: 'Arlington, WA 98223',
+    address: '19721 47th Avenue NE',
+    price: '$625,000',
+    stats: [
+      { label: 'Bed', value: '3' },
+      { label: 'Bath', value: '2' },
+      { label: 'Sqft', value: '1,624' },
+      { label: 'Sold', value: 'Full price' },
+    ],
+    tagline: 'Room to breathe in north Snohomish.',
+    body: 'A single family home on its own land in Arlington, where the math still works. A real downtown, quick I-5 access, and the Stillaguamish River and the Cascades close by. Sold at its full list price.',
+    handwritten: 'Sold at full price, spring 2026',
   },
 ];
 
