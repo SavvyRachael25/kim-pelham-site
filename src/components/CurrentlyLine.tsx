@@ -57,7 +57,7 @@ export default function CurrentlyLine() {
               margin: 0,
             }}
           >
-            11706 Admiralty Way Unit B, Everett &middot; Under Contract
+            3520 192nd Pl SE, Bothell &middot; Just Listed
           </p>
           <span
             className="currently-line-pill"
@@ -73,7 +73,7 @@ export default function CurrentlyLine() {
               paddingBottom: '1px',
             }}
           >
-            Closing 7/30 &middot; See all listings &rarr;
+            $1,179,000 &middot; See all listings &rarr;
           </span>
         </div>
 
