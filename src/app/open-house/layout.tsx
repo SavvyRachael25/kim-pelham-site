@@ -1,20 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'RSVP · Open House Saturday May 30 | 11706 Admiralty Way Unit B, Everett WA | The Pelham Group NW',
+  title: 'Open Houses | Kim Pelham, The Pelham Group NW',
   description:
-    'RSVP for the open house at 11706 Admiralty Way Unit B in Everett, WA on Saturday, May 30 from 1 to 3 PM. Hosted by Kim Pelham, The Pelham Group NW. Walk through, no appointment needed.',
+    'Upcoming open houses with Kim Pelham of The Pelham Group NW in Snohomish County. Check back for the next one, or reach out to walk any current listing with Kim.',
   openGraph: {
-    title: 'Open House This Saturday · 11706 Admiralty Way Unit B, Everett WA',
+    title: 'Open Houses · The Pelham Group NW',
     description:
-      'Saturday May 30, 1 to 3 PM. Recently remodeled end-unit condo, ground floor, all one level. $375,000. NWMLS #2528831.',
-    images: [
-      {
-        url: 'https://thepelhamgroupnw.com/listings/2528831-admiralty/photos/hero-living-fireplace.jpg',
-        width: 1200,
-        height: 630,
-      },
-    ],
+      'Upcoming open houses with Kim Pelham in Snohomish County. Browse current listings or reach out to walk a home with Kim.',
     type: 'website',
     url: 'https://thepelhamgroupnw.com/open-house',
   },
