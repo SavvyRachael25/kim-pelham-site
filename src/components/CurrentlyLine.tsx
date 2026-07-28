@@ -22,7 +22,7 @@ export default function CurrentlyLine() {
       }}
     >
       <Link
-        href="/properties"
+        href="/properties/3520-192nd-pl-se-bothell"
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -73,7 +73,7 @@ export default function CurrentlyLine() {
               paddingBottom: '1px',
             }}
           >
-            $1,179,000 &middot; See all listings &rarr;
+            $1,179,000 &middot; See the listing &rarr;
           </span>
         </div>
 

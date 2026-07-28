@@ -10,19 +10,17 @@ import Link from 'next/link';
 */
 
 const LISTING = {
-  slug: '11706-admiralty-way-unit-b-everett',
-  address: '11706 Admiralty Way, Unit B',
-  city: 'Everett, WA 98204',
-  price: '$375,000',
-  beds: '2',
-  baths: '1.75',
-  sqft: '1,140',
-  mls: 'NWMLS #2528831',
-  hook: 'Recently remodeled end-unit, ground floor, all one level.',
-  openHouse: 'Saturday, May 30 · 1 to 3 PM',
-  hero: '/listings/2528831-admiralty/photos/hero-living-fireplace.jpg',
-  heroAlt:
-    'Living room with wood-burning fireplace at 11706 Admiralty Way Unit B, Everett WA',
+  slug: '3520-192nd-pl-se-bothell',
+  address: '3520 192nd Pl SE',
+  city: 'Bothell, WA 98012',
+  price: '$1,179,000',
+  beds: '4',
+  baths: '2.5',
+  sqft: '2,453',
+  mls: 'NWMLS #2558328',
+  hook: 'Move-in ready in Village at Brookshire, with Northshore schools at the end of the street.',
+  hero: '/listings/2558328-bothell/photos/dsc05986.jpg',
+  heroAlt: 'Front exterior of 3520 192nd Pl SE, Bothell WA',
 };
 
 type Variant = 'wide' | 'card';
@@ -57,12 +55,12 @@ export default function FeaturedListing({ variant = 'wide' }: { variant?: Varian
               borderRadius: '2px',
             }}
           >
-            Under Contract
+            Just Listed
           </div>
         </Link>
         <div style={{ padding: '24px' }}>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.7rem', fontWeight: 700, color: '#B8845C', textTransform: 'uppercase', letterSpacing: '1.5px', margin: '0 0 8px 0' }}>
-            {LISTING.mls} &middot; Pending Inspection
+            {LISTING.mls} &middot; For Sale
           </p>
           <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', fontWeight: 700, color: '#2C2C2C', margin: '0 0 4px 0', lineHeight: 1.2 }}>
             {LISTING.address}
@@ -146,15 +144,15 @@ export default function FeaturedListing({ variant = 'wide' }: { variant?: Varian
               borderRadius: '3px',
             }}
           >
-            Under Contract &middot; Closing 7/30
+            Just Listed
           </div>
         </Link>
         <div>
           <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.4rem', color: '#B8845C', margin: '0 0 8px 0', lineHeight: 1 }}>
-            under contract
+            just listed
           </p>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.72rem', fontWeight: 700, color: '#B8845C', textTransform: 'uppercase', letterSpacing: '2px', margin: '0 0 10px 0' }}>
-            {LISTING.mls} &middot; Pending Inspection
+            {LISTING.mls} &middot; For Sale
           </p>
           <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(1.75rem, 4vw, 2.5rem)', fontWeight: 700, color: '#2C2C2C', margin: '0 0 6px 0', lineHeight: 1.15 }}>
             {LISTING.address}
