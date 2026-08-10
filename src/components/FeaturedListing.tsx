@@ -4,8 +4,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 /*
-  FeaturedListing — sitewide reusable featured-listing block.
-  Points at /properties/<slug>. Currently configured for 11706 Admiralty Way Unit B.
+  FeaturedListing: sitewide reusable featured-listing block.
+  Points at /properties/<slug>. Currently configured for 3520 192nd Pl SE, Bothell.
   Drop into any page; sized to look natural inside hero-adjacent sections + homepage.
 */
 
@@ -13,7 +13,7 @@ const LISTING = {
   slug: '3520-192nd-pl-se-bothell',
   address: '3520 192nd Pl SE',
   city: 'Bothell, WA 98012',
-  price: '$1,179,000',
+  price: '$1,150,000',
   beds: '4',
   baths: '2.5',
   sqft: '2,453',

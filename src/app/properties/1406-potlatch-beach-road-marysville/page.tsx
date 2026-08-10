@@ -73,7 +73,7 @@ export default function PotlatchPage() {
                 marginBottom: '12px',
               }}
             >
-              Price Drop · Open House Sun May 17, 1-3 PM
+              Active Listing &middot; Showings by Appointment
             </div>
             <h1
               style={{
@@ -194,7 +194,7 @@ export default function PotlatchPage() {
           </div>
         </section>
 
-        {/* Open House banner — visible signal for buyers + AEO mirror of Event schema */}
+        {/* Showings-by-appointment banner. Replaces the past-date open-house section. */}
         <section
           style={{
             backgroundColor: '#B8845C',
@@ -223,7 +223,7 @@ export default function PotlatchPage() {
                 margin: 0,
               }}
             >
-              Open House This Sunday
+              Showings by Appointment
             </p>
             <p
               style={{
@@ -235,7 +235,7 @@ export default function PotlatchPage() {
                 lineHeight: 1.2,
               }}
             >
-              Sunday, May 17 &middot; 1:00 PM to 3:00 PM
+              Catch the sunset on your schedule
             </p>
             <p
               style={{
@@ -245,11 +245,11 @@ export default function PotlatchPage() {
                 margin: 0,
               }}
             >
-              1406 Potlatch Beach Road, Marysville WA 98271 &nbsp;&middot;&nbsp; No appointment needed
+              1406 Potlatch Beach Road, Marysville WA 98271 &nbsp;&middot;&nbsp; Weekday evenings + weekends
             </p>
             <div style={{ display: 'flex', gap: '12px', justifyContent: 'center', flexWrap: 'wrap', marginTop: '6px' }}>
               <a
-                href="sms:+14252509422?&body=Hi%20Kim%2C%20I%27m%20planning%20to%20stop%20by%20the%20Potlatch%20Beach%20Road%20open%20house%20Sunday."
+                href="sms:+14252509422?&body=Hi%20Kim%2C%20I%27d%20like%20to%20schedule%20a%20showing%20at%201406%20Potlatch%20Beach%20Road."
                 style={{
                   display: 'inline-block',
                   padding: '10px 24px',
@@ -262,7 +262,7 @@ export default function PotlatchPage() {
                   textDecoration: 'none',
                 }}
               >
-                Text Kim You&apos;re Coming
+                Text Kim to Schedule
               </a>
               <a
                 href="https://www.google.com/maps/dir/?api=1&destination=1406+Potlatch+Beach+Road+Marysville+WA+98271"
@@ -779,8 +779,8 @@ export default function PotlatchPage() {
             </h2>
             {[
               {
-                q: 'When is the open house at 1406 Potlatch Beach Road?',
-                a: 'The next open house is Sunday, May 17, 2026 from 1:00 PM to 3:00 PM. No appointment needed. Walk through, ask questions, get a real feel for the views. Text or call Kim at (425) 250-9422 if you plan to come.',
+                q: 'Are there showings or open houses at 1406 Potlatch Beach Road?',
+                a: 'Showings are by appointment. Text or call Kim Pelham at (425) 250-9422 to schedule a walk-through, weekday evenings and weekends both work. The sunsets here are best seen in person; pick a time that catches one.',
               },
               {
                 q: 'How much is 1406 Potlatch Beach Road?',

@@ -41,8 +41,8 @@ export default function PropertiesPage() {
               fontFamily: 'var(--font-body)',
               fontSize: '0.95rem',
               fontWeight: 600,
-              color: '#2F5233',
-              backgroundColor: '#C4A265',
+              color: '#FFFFFF',
+              backgroundColor: '#B8845C',
               padding: '0.65rem 1.5rem',
               borderRadius: '4px',
               textDecoration: 'none',
@@ -53,7 +53,7 @@ export default function PropertiesPage() {
           </a>
         </section>
 
-        {/* Featured listing — Admiralty Way */}
+        {/* Featured listing: 3520 192nd Pl SE, Bothell */}
         <FeaturedListing variant="wide" />
 
         {/* Search all listings prompt */}
@@ -75,8 +75,8 @@ export default function PropertiesPage() {
                 fontFamily: 'var(--font-body)',
                 fontSize: '0.95rem',
                 fontWeight: 600,
-                color: '#2F5233',
-                backgroundColor: '#C4A265',
+                color: '#FFFFFF',
+                backgroundColor: '#B8845C',
                 padding: '0.75rem 1.5rem',
                 borderRadius: '4px',
                 textDecoration: 'none',
@@ -186,7 +186,7 @@ export default function PropertiesPage() {
                 Curious about your home's current market value? Get a complimentary analysis and see how your property compares.
               </p>
               <a
-                href="https://community.katrinaeileen.com/home-valuation?domain=kim.katrinaeileen.com"
+                href="https://kim.katrinaeileen.com/seller"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{

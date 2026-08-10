@@ -64,7 +64,7 @@ const details = [
 const faq = [
   {
     q: 'How much is 3520 192nd Pl SE in Bothell?',
-    a: '3520 192nd Pl SE is listed at $1,179,000. It is a 4-bedroom, 2.5-bathroom, 2,453 sqft home built in 2016 in the Village at Brookshire neighborhood of Bothell, WA 98012. NWMLS #2558328.',
+    a: '3520 192nd Pl SE is listed at $1,150,000. It is a 4-bedroom, 2.5-bathroom, 2,453 sqft home built in 2016 in the Village at Brookshire neighborhood of Bothell, WA 98012. NWMLS #2558328.',
   },
   {
     q: 'What makes 3520 192nd Pl SE special?',
@@ -76,7 +76,7 @@ const faq = [
   },
   {
     q: 'Is 3520 192nd Pl SE still available?',
-    a: 'Yes. 3520 192nd Pl SE was listed on July 23, 2026 and is active and for sale at $1,179,000. To book a private showing, text or call Kim Pelham at (425) 250-9422.',
+    a: 'Yes. 3520 192nd Pl SE was listed on July 23, 2026 and is active and for sale at $1,150,000. To book a private showing, text or call Kim Pelham at (425) 250-9422.',
   },
   {
     q: 'What school district is 3520 192nd Pl SE in?',
@@ -246,7 +246,7 @@ export default function BothellPage() {
                   lineHeight: 1,
                 }}
               >
-                $1,179,000
+                $1,150,000
               </p>
             </div>
 
@@ -347,7 +347,7 @@ export default function BothellPage() {
                 lineHeight: 1.2,
               }}
             >
-              Listed at $1,179,000, move-in ready
+              Listed at $1,150,000, move-in ready
             </p>
             <p
               style={{
@@ -422,7 +422,7 @@ export default function BothellPage() {
               }}
             >
               {[
-                { term: 'Price', def: '$1,179,000' },
+                { term: 'Price', def: '$1,150,000' },
                 { term: 'Bedrooms', def: '4' },
                 { term: 'Bathrooms', def: '2.5' },
                 { term: 'Square Feet', def: '2,453 (per NWMLS)' },

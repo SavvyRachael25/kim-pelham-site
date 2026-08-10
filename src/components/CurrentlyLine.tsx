@@ -73,7 +73,7 @@ export default function CurrentlyLine() {
               paddingBottom: '1px',
             }}
           >
-            $1,179,000 &middot; See the listing &rarr;
+            $1,150,000 &middot; See the listing &rarr;
           </span>
         </div>
 
