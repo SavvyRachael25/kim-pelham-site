@@ -162,7 +162,7 @@ export default function InventoryJumpAugust2026Page() {
               <Link href="/properties/3520-192nd-pl-se-bothell" style={styles.link}>
                 Bothell listing in the Village at Brookshire
               </Link>
-              , listed at $1,179,000, is a good example of what a fully prepared home looks like in this market. When you find that home, be ready to act with confidence, not panic.
+              , listed at $1,150,000, is a good example of what a fully prepared home looks like in this market. When you find that home, be ready to act with confidence, not panic.
             </p>
 
             <h2 style={styles.h2}>What I am telling my own clients</h2>
