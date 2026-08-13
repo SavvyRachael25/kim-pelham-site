@@ -40,6 +40,24 @@ const nextConfig = {
         destination: '/blog/potlatch-beach-road-marysville-waterfront',
         permanent: true,
       },
+      /*
+        Legacy WordPress URLs (GA 7/17-8/13: the 404 page was the top "page"
+        with 251 views / 96% bounce — old-site URLs still indexed and linked
+        around the web were dying here). Map every known old path to its
+        closest live equivalent. NOTE: '/listings' must stay EXACT-match only,
+        the new site serves photo assets under /listings/<mls>/photos/.
+      */
+      { source: '/insights', destination: '/blog', permanent: true },
+      { source: '/insights/:slug*', destination: '/blog', permanent: true },
+      { source: '/about-kim', destination: '/about', permanent: true },
+      { source: '/listings', destination: '/properties', permanent: true },
+      { source: '/properties-2', destination: '/properties', permanent: true },
+      { source: '/home-valuation', destination: '/sellers', permanent: true },
+      { source: '/testimonials-2', destination: '/testimonials', permanent: true },
+      { source: '/photo-gallery', destination: '/staging', permanent: true },
+      { source: '/book', destination: '/about', permanent: true },
+      { source: '/privacy-policy', destination: '/privacy', permanent: true },
+      { source: '/contact-us', destination: '/contact', permanent: true },
     ];
   },
   /*
