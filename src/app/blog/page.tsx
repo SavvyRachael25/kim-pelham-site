@@ -33,6 +33,30 @@ const SITE = 'https://thepelhamgroupnw.com';
 
 const blogPosts: BlogPost[] = [
   {
+    id: '18',
+    title: 'Snohomish County Inventory Just Jumped 36.6%: What It Means If You Are Buying or Selling',
+    slug: 'snohomish-county-inventory-jump-august-2026',
+    excerpt:
+      'Homes for sale in July were up 36.6% over last year, and the average sale now takes 28 days instead of 25. An honest read on what the shift means for sellers (pricing and preparation matter more than ever) and for buyers (choices and negotiating room are back).',
+    date: '2026-08-17',
+    category: 'Market Updates',
+    image: '/images/hero-01-aerial-neighborhood.jpg',
+    imageAlt: 'Aerial view of Snohomish County neighborhoods',
+    readTime: 8,
+  },
+  {
+    id: '17',
+    title: 'How a Mukilteo Home Sold for Full Price in a Cooling Market',
+    slug: 'mukilteo-full-price-sale-cooling-market',
+    excerpt:
+      'County inventory was up 36.6% and homes were sitting longer, yet 4611 76th Street SW closed at its full $975,000 list price. The case study: what honest pricing, real preparation, and staging actually did, in the sellers’ own words.',
+    date: '2026-08-17',
+    category: 'Seller Strategy',
+    image: '/images/mukilteo-01-front-exterior.jpg',
+    imageAlt: '4611 76th Street SW, Mukilteo, sold at full list price',
+    readTime: 9,
+  },
+  {
     id: '16',
     title: 'Moving With ADHD: Why It Feels So Hard, and What Actually Helps',
     slug: 'moving-with-adhd',
