@@ -471,24 +471,12 @@ export default function RootLayout({
           fbq('init', '1360835299238719');
           fbq('track', 'PageView');`}
         </Script>
-        <noscript>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            height="1"
-            width="1"
-            style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=426526406973253&ev=PageView&noscript=1"
-            alt=""
-          />
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            height="1"
-            width="1"
-            style={{ display: 'none' }}
-            src="https://www.facebook.com/tr?id=1360835299238719&ev=PageView&noscript=1"
-            alt=""
-          />
-        </noscript>
+        {/* Meta pixel <noscript> fallback imgs removed on purpose: React was
+            hoisting them into <link rel="preload"> tags in <head>, forcing a
+            DNS + TLS + fetch to facebook.com during the mobile LCP window for
+            every visitor. No-JS visitors are a rounding error; the JS pixel
+            above covers real traffic. Do not re-add without checking the
+            rendered <head> for facebook.com preloads. */}
       </body>
     </html>
   );

@@ -128,7 +128,7 @@ export default function FeaturedListing({ variant = 'wide' }: { variant?: Varian
             boxShadow: '0 10px 30px rgba(0,0,0,0.12)',
           }}
         >
-          <Image src={LISTING.hero} alt={LISTING.heroAlt} fill style={{ objectFit: 'cover' }} sizes="(max-width: 900px) 100vw, 50vw" priority />
+          <Image src={LISTING.hero} alt={LISTING.heroAlt} fill style={{ objectFit: 'cover' }} sizes="(max-width: 900px) 100vw, 50vw" />
           <div
             style={{
               position: 'absolute',

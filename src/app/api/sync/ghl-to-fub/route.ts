@@ -270,10 +270,21 @@ export async function POST(req: NextRequest) {
 
   const { fub: fubPayload } = buildFubPayload(body, FUB_KIM_USER_ID);
 
-  // 1. Create the contact in FUB
+  // 1. Create the contact in FUB.
+  //    deduplicate=true: FUB matches the incoming email/phone against existing
+  //    people FIRST. If a match exists it returns that person (200) instead of
+  //    creating a second record, so this route can never add a duplicate to
+  //    Kim's book. (Diagnosed 2026-06-15: ~1,600 historical dupes, see
+  //    FUB-Duplicate-Diagnosis-2026-06-15.md. This flag stops the website-lead
+  //    path from contributing more.)
+  //    NOTE: on a dedup match FUB does NOT apply the payload, so a returning
+  //    lead will not get newly-mapped tags added. The audit note below still
+  //    attaches (it uses the returned person id), which preserves the trail.
+  //    TODO(optional): if we want tags applied to existing people too, follow a
+  //    200-match with a PUT /people/{id} that unions the new tags.
   let fubRes: Response;
   try {
-    fubRes = await fetch(`${FUB_API_BASE}/people`, {
+    fubRes = await fetch(`${FUB_API_BASE}/people?deduplicate=true`, {
       method: 'POST',
       headers: {
         Authorization: fubAuthHeader(FUB_API_KEY),

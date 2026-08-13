@@ -7,3 +7,4 @@ out/
 # Environment — never commit secrets
 .env.local
 .env*.local
+.vercel

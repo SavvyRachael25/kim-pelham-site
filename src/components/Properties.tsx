@@ -90,7 +90,6 @@ function PropertyCard({ listing }: { listing: Listing }) {
             quality={88}
             sizes="(max-width: 768px) 100vw, 50vw"
             style={{ objectFit: 'cover' }}
-            priority
           />
           {/* Featured badge */}
           <div
