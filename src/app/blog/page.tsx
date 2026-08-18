@@ -33,6 +33,90 @@ const SITE = 'https://thepelhamgroupnw.com';
 
 const blogPosts: BlogPost[] = [
   {
+    id: '25',
+    title: 'Nine Years of Staging Homes People Still Live In',
+    slug: 'staging-occupied-homes-nine-years',
+    excerpt:
+      'Most staging companies refuse homes with kids and dogs still in them. Kim built her staging practice around exactly those homes. The psychology, the process, and the $1,200 stage that returned $5,000 on her very first project in 2017.',
+    date: '2026-08-18',
+    category: 'Seller Strategy',
+    image: '/images/hero-02-warm-kitchen.jpg',
+    imageAlt: 'A warm staged kitchen in a Snohomish County home',
+    readTime: 7,
+  },
+  {
+    id: '24',
+    title: 'Buyer Love Letters Can Cost You: How I Protect Sellers From Fair Housing Risk',
+    slug: 'buyer-love-letters-fair-housing-snohomish',
+    excerpt:
+      'Fair housing law applies to home sellers, and buyer love letters are the easiest way to get it wrong without meaning to. The anonymized offer-review process that let one seller pick a $30,000-over-ask offer knowing every buyer only as a number.',
+    date: '2026-08-18',
+    category: 'Seller Strategy',
+    image: '/images/kim-with-laptop.jpg',
+    imageAlt: 'Broker Kim Pelham reviewing offers on a laptop',
+    readTime: 7,
+  },
+  {
+    id: '23',
+    title: 'Questions to Ask Before You Hire a Listing Agent in Snohomish County',
+    slug: 'questions-to-ask-listing-agent-snohomish',
+    excerpt:
+      'Eight questions with measurable answers, and Kim goes on the record with her own: sale-to-list ratio, who stages and what it costs, who does repairs, how multiple offers get handled, and who actually answers the phone at 9 PM.',
+    date: '2026-08-18',
+    category: 'Seller Strategy',
+    image: '/images/kim-with-client-on-couch.jpg',
+    imageAlt: 'Kim Pelham talking with a client at home',
+    readTime: 8,
+  },
+  {
+    id: '22',
+    title: 'Down Payment Assistance in Snohomish County: What Actually Exists in 2026',
+    slug: 'down-payment-assistance-snohomish-county',
+    excerpt:
+      'WSHFC Home Advantage, the Opportunity program, and the Covenant Homeownership Program, explained in plain English, plus the true story of a buyer who started with $2,000 and ended with keys.',
+    date: '2026-08-18',
+    category: 'Buyer Guide',
+    image: '/images/hero-03-porch-connection.jpg',
+    imageAlt: 'A front porch of a Snohomish County home',
+    readTime: 7,
+  },
+  {
+    id: '21',
+    title: 'Selling a Snohomish County Home From Out of State',
+    slug: 'selling-home-from-out-of-state-washington',
+    excerpt:
+      'Kim closed her eleventh fully remote transaction back in 2020, before video tours were normal. The step-by-step remote process: e-signing, video walkthroughs, one point of contact for cleanout, repairs, and staging, and a closing with no flight required.',
+    date: '2026-08-18',
+    category: 'Seller Strategy',
+    image: '/images/arlington/arlington-01.jpg',
+    imageAlt: 'A Snohomish County home sold by The Pelham Group NW',
+    readTime: 7,
+  },
+  {
+    id: '20',
+    title: 'That Unpermitted Remodel: What It Means When You Sell in Snohomish County',
+    slug: 'unpermitted-work-selling-snohomish-county',
+    excerpt:
+      'The finished basement nobody permitted does not have to sink your sale. How Form 17 disclosure treats it, what buyers and lenders actually do, and the three honest paths: disclose and price, permit retroactively, or fix it first.',
+    date: '2026-08-18',
+    category: 'Seller Strategy',
+    image: '/images/hero-02-warm-kitchen.jpg',
+    imageAlt: 'A remodeled kitchen in a Snohomish County home',
+    readTime: 7,
+  },
+  {
+    id: '19',
+    title: 'Buying a Home in Snohomish County: The Real Order of Operations',
+    slug: 'buying-a-home-snohomish-county-steps',
+    excerpt:
+      'Every checklist has the same six items; the order is the strategy. Real budget, pre-approval before touring, an agent with room on their plate, and offer terms tuned to a market where buyers finally have choices again.',
+    date: '2026-08-18',
+    category: 'Buyer Guide',
+    image: '/images/lifestyle-01-farmers-market.jpg',
+    imageAlt: 'A Snohomish County farmers market on a summer morning',
+    readTime: 8,
+  },
+  {
     id: '18',
     title: 'Snohomish County Inventory Just Jumped 36.6%: What It Means If You Are Buying or Selling',
     slug: 'snohomish-county-inventory-jump-august-2026',

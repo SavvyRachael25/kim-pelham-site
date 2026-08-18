@@ -59,9 +59,17 @@ const nextConfig = {
       { source: '/privacy-policy', destination: '/privacy', permanent: true },
       { source: '/contact-us', destination: '/contact', permanent: true },
       // Legacy WordPress date-based post permalinks (2018-2021 blog, recovered
-      // via Wayback 2026-08-18). Catch-all keeps any undiscovered old post URL
-      // out of the 404 leak; per-slug 301s upgrade to exact new homes as the
-      // recovered posts get rebuilt (see Kim/wayback-recovery/republish-plan.md).
+      // via Wayback 2026-08-18). Exact per-slug 301s first (recovered posts
+      // rebuilt at new homes, see Kim/wayback-recovery/republish-plan.md),
+      // then a catch-all that keeps any undiscovered old URL out of the 404 leak.
+      { source: '/2021/01/08/home-staging-4-year-anniversary', destination: '/blog/staging-occupied-homes-nine-years', permanent: true },
+      { source: '/2020/10/22/discrimination-liabilities-when-selling-your-house', destination: '/blog/buyer-love-letters-fair-housing-snohomish', permanent: true },
+      { source: '/2018/09/03/choosing-the-right-real-estate-agent-to-sell-your-home', destination: '/blog/questions-to-ask-listing-agent-snohomish', permanent: true },
+      { source: '/2020/03/10/a-team-effort-to-find-the-perfect-home', destination: '/blog/down-payment-assistance-snohomish-county', permanent: true },
+      { source: '/2020/10/10/eleventh-sale-made-over-the-internet', destination: '/blog/selling-home-from-out-of-state-washington', permanent: true },
+      { source: '/2018/11/07/remodeling-without-permits', destination: '/blog/unpermitted-work-selling-snohomish-county', permanent: true },
+      { source: '/2019/02/20/6-steps-to-buying-your-home', destination: '/blog/buying-a-home-snohomish-county-steps', permanent: true },
+      { source: '/2019/08/08/summer-home-buying-tips', destination: '/blog/buying-a-home-snohomish-county-steps', permanent: true },
       { source: '/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:slug*', destination: '/blog', permanent: true },
       // Old staging portfolio pages and category archives
       { source: '/portfolios/:slug*', destination: '/staging', permanent: true },
