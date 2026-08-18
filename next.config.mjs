@@ -58,6 +58,15 @@ const nextConfig = {
       { source: '/book', destination: '/about', permanent: true },
       { source: '/privacy-policy', destination: '/privacy', permanent: true },
       { source: '/contact-us', destination: '/contact', permanent: true },
+      // Legacy WordPress date-based post permalinks (2018-2021 blog, recovered
+      // via Wayback 2026-08-18). Catch-all keeps any undiscovered old post URL
+      // out of the 404 leak; per-slug 301s upgrade to exact new homes as the
+      // recovered posts get rebuilt (see Kim/wayback-recovery/republish-plan.md).
+      { source: '/:year(\\d{4})/:month(\\d{2})/:day(\\d{2})/:slug*', destination: '/blog', permanent: true },
+      // Old staging portfolio pages and category archives
+      { source: '/portfolios/:slug*', destination: '/staging', permanent: true },
+      { source: '/portfolios_category/:slug*', destination: '/staging', permanent: true },
+      { source: '/search-mls', destination: '/properties', permanent: true },
     ];
   },
   /*
