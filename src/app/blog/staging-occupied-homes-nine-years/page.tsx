@@ -67,7 +67,7 @@ const faqs = [
   {
     question: 'Does staging actually increase the sale price?',
     answer:
-      'On my very first staged listing, a South Everett house that had sat two months with two showings and no offers, a roughly $1,200 stage preceded a sale in five days at $5,000 above the previous asking price. Across all my listings, my average sale-to-list ratio is 102.3%, against a Snohomish County average of 100.2%. Staging is one of the working parts behind that number.',
+      'On my very first staged listing, a South Everett condo that had sat two months with two showings and no offers, a roughly $1,200 stage preceded a sale in five days at $5,000 above the previous asking price. Across all my listings, my average sale-to-list ratio is 102.3%, against a Snohomish County average of 100.2%. Staging is one of the working parts behind that number.',
   },
   {
     question: 'What is the psychology behind home staging?',
@@ -97,7 +97,7 @@ export default function StagingOccupiedHomesPage() {
         <article style={{ padding: '80px 20px', backgroundColor: '#fff' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
             <p style={{ ...styles.bodyP, fontWeight: 700 }}>
-              In January 2017, I staged my first listing: a South Everett house that had been on the market for two months with exactly two showings and zero offers. After staging, it sold in five days for $5,000 above the previous asking price. The stage cost about $1,200. Nine years later, staging occupied homes is still the heart of how I sell houses, and this post is the why and the how.
+              In January 2017, I staged my first listing: a South Everett condo that had been on the market for two months with exactly two showings and zero offers. After staging, it sold in five days for $5,000 above the previous asking price. The stage cost about $1,200. Nine years later, staging occupied homes is still the heart of how I sell houses, and this post is the why and the how.
             </p>
 
             <h2 style={styles.h2}>The dirty secret of the staging industry</h2>
