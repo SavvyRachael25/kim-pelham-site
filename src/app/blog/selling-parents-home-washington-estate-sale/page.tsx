@@ -204,7 +204,7 @@ export default function SellingParentsHomePage() {
 
             <h3 style={styles.h3}>The concierge option (no out-of-pocket)</h3>
             <p style={styles.bodyP}>
-              For qualifying homes, my concierge plan handles the entire pre-sale prep (cleaning, paint, lighting, flooring, staging, photography) and the costs are paid at closing from the sale proceeds. No money out of pocket for the family. This is the path most of the families I work with end up taking, because it removes the cash-flow obstacle and the contractor-management burden during an already hard season.
+              For qualifying homes, my concierge plan handles the entire pre-sale prep (cleaning, paint, lighting, flooring, staging, photography). Those costs are normally paid as the work is completed, and if the family needs it, they can be paid at closing out of the sale proceeds instead. This is the path most of the families I work with end up taking, because it removes the cash-flow obstacle and the contractor-management burden during an already hard season.
             </p>
 
             <h2 style={styles.h2}>Step 6: List, market, and accept offers</h2>

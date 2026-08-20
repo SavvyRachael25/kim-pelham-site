@@ -314,10 +314,10 @@ export default function StagingPsychologyPage() {
 
               <div style={{ marginBottom: '28px', paddingBottom: '28px', borderBottom: '1px solid var(--color-border)' }}>
                 <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', fontWeight: 600, color: 'var(--color-forest)', margin: '0 0 10px 0' }}>
-                  Does Kim Pelham include staging help with her listings?
+                  Does Kim Pelham stage her own listings?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  Yes. Every Kim Pelham listing includes a staging consultation as part of her service. She walks through the home with sellers before listing and identifies the highest-impact changes, often simple adjustments that cost nothing but make a significant difference in how the home photographs and shows.
+                  Yes. Kim stages her listings herself rather than referring the work out, and every listing starts with a walkthrough where she identifies the highest-impact changes, many of which cost nothing at all. Hands-on staging is charged separately. She keeps the cost low on purpose and does not charge a monthly furniture rental fee.
                 </p>
               </div>
             </section>

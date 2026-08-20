@@ -230,7 +230,7 @@ export default function WhatBuyersWantPage() {
             </p>
 
             <p style={styles.bodyP}>
-              For qualifying homes, I coordinate the entire prep through my concierge plan, with costs paid at closing so there is no out-of-pocket spend during the prep phase. The home shows the way 2026 buyers expect, and the family does not have to manage a single contractor along the way.
+              For qualifying homes, I coordinate the entire prep through my concierge plan. Prep costs are normally paid as the work is completed, and if a seller needs it, they can be paid at closing instead so there is no spend during the prep phase. The home shows the way 2026 buyers expect, and the family does not have to manage a single contractor along the way.
             </p>
 
             <div style={styles.ctaBox}>

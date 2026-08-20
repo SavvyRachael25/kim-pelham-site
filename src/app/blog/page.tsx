@@ -391,7 +391,7 @@ const blogFAQs = [
   {
     question: "What is Kim Pelham's sale-to-list ratio?",
     answer:
-      'Kim Pelham averages a 102.3 percent sale-to-list ratio across her listings, compared to roughly 100.2 percent for the Snohomish County market overall (NWMLS). On a typical $600,000 home, that 2.3-point advantage translates to about $14,000 more in seller proceeds. The ratio reflects a focused pre-sale preparation, professional staging, accurate pricing, and active negotiation, not luck or aggressive listing.',
+      'Kim Pelham averages a 102.3 percent sale-to-list ratio across her listings, compared to roughly 100.2 percent for the Snohomish County market overall (NWMLS). On a typical $600,000 home, that 2.3-point advantage translates to about $14,000 more in seller proceeds. The ratio reflects a focused pre-sale preparation, professional staging, accurate pricing, and active negotiation, not luck or aggressive listing. Listing by listing: this spring, every one of her listings but one sold at full price and two sold above asking, including the Mukilteo home at 4611 76th St SW.',
   },
   {
     question: 'How long does it take to sell a home in Snohomish County?',
@@ -401,7 +401,7 @@ const blogFAQs = [
   {
     question: 'Should I renovate my home before selling?',
     answer:
-      'Most Snohomish County sellers in 2026 should make a focused set of pre-sale updates rather than a full remodel. The 2024 Cost vs Value Report shows that targeted exterior projects (garage door replacement, steel entry door) recoup 188 to 194 percent of their cost, while major interior remodels (upscale kitchen, primary suite addition) recoup just 38 to 56 percent. The right strategy is paint, lighting, targeted flooring repair, and professional staging. The Pelham Group concierge plan handles all of this with no out-of-pocket cost to the seller for qualifying homes.',
+      'Most Snohomish County sellers in 2026 should make a focused set of pre-sale updates rather than a full remodel. The 2024 Cost vs Value Report shows that targeted exterior projects (garage door replacement, steel entry door) recoup 188 to 194 percent of their cost, while major interior remodels (upscale kitchen, primary suite addition) recoup just 38 to 56 percent. The right strategy is paint, lighting, targeted flooring repair, and professional staging. For qualifying homes, the Pelham Group concierge plan coordinates all of it, and if a seller needs it, the cost can be deferred to closing rather than paid as the work is completed.',
   },
   {
     question: 'How do I value my home in Snohomish County?',
@@ -416,7 +416,7 @@ const blogFAQs = [
   {
     question: 'How does the Pelham Group pre-sale concierge plan work?',
     answer:
-      'For qualifying Snohomish County homes, the Pelham Group fronts the cost of pre-sale updates and staging (paint, lighting, targeted flooring, deep clean, professional staging, and select repairs), manages the contractors and timeline directly, stages the home with Kim Pelham\'s own pieces, and the seller pays the agreed cost from their sale proceeds at closing. There is no out-of-pocket cost during the prep phase, no contractor management burden on the seller, and no separate financing application.',
+      'For qualifying Snohomish County homes, the Pelham Group fronts the cost of pre-sale updates and staging (paint, lighting, targeted flooring, deep clean, professional staging, and select repairs), manages the contractors and timeline directly, stages the home with Kim Pelham\'s own pieces, and where a seller needs it, the agreed cost can be paid from their sale proceeds at closing instead of during the prep phase. Staging is charged separately and kept deliberately low cost, with no monthly furniture rental fee. There is no contractor management burden on the seller and no separate financing application.',
   },
   {
     question: 'What cities does Kim Pelham serve?',

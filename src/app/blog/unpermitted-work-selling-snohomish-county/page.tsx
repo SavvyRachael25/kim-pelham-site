@@ -75,9 +75,14 @@ const faqs = [
       'Often yes. Jurisdictions have processes for retroactive permits, which typically involve inspection and sometimes opening up work so it can be examined. Whether that is worth doing before listing depends on the scope, the timeline, and the price impact. That math is exactly the conversation to have during a pre-listing walkthrough.',
   },
   {
+    question: 'Are cities getting better at spotting unpermitted work?',
+    answer:
+      'In my experience, yes, and sellers should plan for it. I suspect some jurisdictions are now using automated tools to compare listing details against county tax records, because the mismatches are getting caught faster than they used to be. Everett is where I have seen it most: several homes red-tagged for obvious unpermitted changes, usually extra bathrooms, added kitchens, and detached accessory dwelling units. That is my own observation from the field rather than a published policy, but it is one more reason to sort this out before the listing goes live instead of after.',
+  },
+  {
     question: 'Should I fix unpermitted work before listing or sell as-is?',
     answer:
-      'It depends on what the work is, what correcting it costs, and what the market will pay either way. Sometimes a modest correction through my repair team (payment deferrable until closing) protects far more value than it costs. Sometimes honest disclosure and smart pricing is the better trade. I walk sellers through both numbers before we decide.',
+      'It depends on what the work is, what correcting it costs, and what the market will pay either way. Sometimes a modest correction through my repair team protects far more value than it costs. Repairs are normally paid as the work is completed, and if a seller needs it, payment can be deferred until closing. Sometimes honest disclosure and smart pricing is the better trade. I walk sellers through both numbers before we decide.',
   },
 ];
 
@@ -115,6 +120,10 @@ export default function UnpermittedWorkPage() {
               Most unpermitted work does not kill a sale. It gets priced. A buyer may ask for a credit, a correction, or simply accept it with eyes open. The complications concentrate in the bigger stuff: converted spaces marketed as living area can draw questions from appraisers and lenders, and significant unpermitted systems make inspectors slow down. The pattern I have seen across my years of selling: the damage comes from surprise, not from the work itself. A seller who fronts the issue keeps control of the story and the price.
             </p>
 
+            <p style={styles.bodyP}>
+              One more thing worth knowing in 2026: these mismatches are surfacing faster than they used to. My own suspicion, based on what I am seeing rather than on any published policy, is that some jurisdictions are now running automated comparisons between listing details and county tax records. Everett is where I have watched it happen most. I have seen several homes there get red-tagged for obvious unpermitted changes, most often extra bathrooms, added kitchens, and detached accessory dwelling units. If your listing is going to describe a fourth bathroom that the tax record has never heard of, assume someone is going to notice, and decide how you want that conversation to go before it starts.
+            </p>
+
             <div style={styles.callout}>
               <p style={{ ...styles.bodyP, marginBottom: 0 }}>
                 Your three honest options: disclose and price it in, pursue a retroactive permit where the jurisdiction allows it, or correct the work before listing. Which one wins is arithmetic, not philosophy, and it is exactly what a pre-listing walkthrough is for.
@@ -127,7 +136,7 @@ export default function UnpermittedWorkPage() {
               <Link href="/home-transition-team" style={styles.link}>
                 Home Transition Team
               </Link>{' '}
-              earns its name. Pre-sale corrections run through SMART Building Services with licensed contractors, payment can defer until closing, and the fix gets weighed against the price impact before anyone swings a hammer. Sometimes the answer is a correction. Sometimes it is disclosure, smart pricing, and the preparation playbook from{' '}
+              earns its name. Pre-sale corrections run through SMART Building Services with licensed contractors. The work is normally paid as it is completed, and if a seller needs it, payment can be deferred until closing. Either way, the fix gets weighed against the price impact before anyone swings a hammer. Sometimes the answer is a correction. Sometimes it is disclosure, smart pricing, and the preparation playbook from{' '}
               <Link href="/blog/staging-occupied-homes-nine-years" style={styles.link}>
                 my staging practice
               </Link>

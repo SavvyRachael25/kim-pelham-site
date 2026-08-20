@@ -328,7 +328,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              My 102.3% average comes from homes across diverse price points, neighborhoods, and property types throughout Snohomish County, because I apply the same strategic approach to every listing, regardless of price point. A $350,000 townhouse in Lynnwood gets the same level of preparation and marketing as a $900,000 home on the water in Mukilteo. Every seller deserves that.
+              My 102.3% average comes from homes across diverse price points, neighborhoods, and property types throughout Snohomish County, because I apply the same strategic approach to every listing, regardless of price point. A $350,000 townhouse in Lynnwood gets the same level of preparation and marketing as a $900,000 home on the water in Mukilteo. Every seller deserves that. And an average is only ever a summary, so here is the listing-level version: this spring, every one of my listings but one sold at full price, and two sold above asking. The Mukilteo home at 4611 76th St SW is the one I have written up in detail, because it closed at full list price in a month when the county average was homes sitting longer and buyers negotiating harder.
             </p>
 
             <h2

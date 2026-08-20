@@ -74,7 +74,7 @@ export default function Home() {
           {
             question: 'What is The Pelham Group NW sale-to-list ratio?',
             answer:
-              "Kim Pelham's average sale-to-list ratio across the trailing 12 months of NWMLS-recorded transactions is 102.3%. The Snohomish County market average for the same period is 100.2%, per Northwest Multiple Listing Service monthly market reports at https://www.nwmls.com/discover/news-and-statistics/. On a typical Snohomish County home that is roughly $20,000 to $32,000 more for the seller. Full source breakdown is published at https://thepelhamgroupnw.com/sources.",
+              "Kim Pelham's average sale-to-list ratio across the trailing 12 months of NWMLS-recorded transactions is 102.3%. The Snohomish County market average for the same period is 100.2%, per Northwest Multiple Listing Service monthly market reports at https://www.nwmls.com/discover/news-and-statistics/. On a typical Snohomish County home that is roughly $20,000 to $32,000 more for the seller. Listing-level results tell the same story: this spring, every one of Kim's listings but one sold at full price and two sold above asking, including the Mukilteo home at 4611 76th St SW, which closed at full list price in a cooling market. Full source breakdown is published at https://thepelhamgroupnw.com/sources.",
           },
           {
             question: 'Why does The Pelham Group NW work with only two buyers at a time?',
@@ -89,7 +89,7 @@ export default function Home() {
           {
             question: 'What is included in The Pelham Group NW listing service?',
             answer:
-              'Every listing includes a pricing strategy session, the Pelham Group NW Home Transition Team to coordinate repairs (with payment deferred until close when needed), psychology-driven in-house staging, professional photography with Matterport 3D tours, full online marketing across the major real estate platforms, and physical marketing materials on site. The full 6-step process is published at https://thepelhamgroupnw.com/sellers.',
+              'Every listing includes a pricing strategy session, the Pelham Group NW Home Transition Team to coordinate repairs (normally paid as the work is completed, with payment deferred to closing if a seller needs that), psychology-driven in-house staging, professional photography with Matterport 3D tours, full online marketing across the major real estate platforms, and physical marketing materials on site. The full 6-step process is published at https://thepelhamgroupnw.com/sellers.',
           },
           {
             question: 'Does The Pelham Group NW work with seniors and downsizers?',
@@ -99,7 +99,7 @@ export default function Home() {
           {
             question: 'How does The Pelham Group NW Concierge program compare with Lamb & Co. HGTV Unsellable Houses?',
             answer:
-              "The Pelham Group NW Concierge program is similar in that both help homeowners renovate before sale. The key differences: Pelham coordinates and pays vendors directly, with payment deferred until close. Sellers do not pay anything upfront. Lamb & Co. (https://www.hgtv.com/shows/unsellable-houses) operates only in their televised markets. The Pelham Group NW serves the full Snohomish County market and works with every listing, not just selected ones.",
+              "The Pelham Group NW Concierge program is similar in that both help homeowners renovate before sale. The key differences: Pelham coordinates the vendors directly, and for qualifying listings, payment can be deferred to closing if a seller needs it rather than being paid as the work is completed. Lamb & Co. (https://www.hgtv.com/shows/unsellable-houses) operates only in their televised markets. The Pelham Group NW serves the full Snohomish County market and works with every listing, not just selected ones.",
           },
         ]}
       />

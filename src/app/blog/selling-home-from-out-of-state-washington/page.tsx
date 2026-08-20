@@ -62,7 +62,7 @@ const faqs = [
   {
     question: 'How do repairs and cleanouts get done if I am out of state?',
     answer:
-      'Through one point of contact. My Home Transition Team coordinates the cleanout, pre-sale repairs through SMART Building Services, and staging, and I send you video of the progress. Payment for repairs can defer until closing, which matters when the equity is in the house.',
+      'Through one point of contact. My Home Transition Team coordinates the cleanout, pre-sale repairs through SMART Building Services, and staging, and you get a written job progress update from me every week plus video as the work happens. Repairs are normally paid as the work is completed, and if a seller needs it, payment can be deferred until closing, which matters when the equity is in the house.',
   },
   {
     question: 'How do I sell a parent’s home in Washington if I live in another state?',
@@ -111,7 +111,7 @@ export default function OutOfStateSellerPage() {
 
             <h2 style={styles.h2}>The remote process, step by step</h2>
             <p style={styles.bodyP}>
-              First, the paperwork: listing agreements and disclosures sign electronically. Second, the house: my Home Transition Team handles the cleanout, the pre-sale repairs (through SMART Building Services, with payment deferrable until closing), and the staging, while I send you video of every stage so you are looking at progress, not imagining it. Third, the market: professional photography, a full property page, and the same preparation playbook that produced results like{' '}
+              First, the paperwork: listing agreements and disclosures sign electronically. Second, the house: my Home Transition Team handles the cleanout, the pre-sale repairs (through SMART Building Services, normally paid as the work is completed, and deferred to closing if a seller needs that), and the staging. You get a job progress update from me every week, with video of every stage, so you are looking at progress rather than imagining it. Third, the market: professional photography, a full property page, and the same preparation playbook that produced results like{' '}
               <Link href="/blog/mukilteo-full-price-sale-cooling-market" style={styles.link}>
                 the Mukilteo full-price sale
               </Link>
@@ -126,7 +126,7 @@ export default function OutOfStateSellerPage() {
 
             <h2 style={styles.h2}>What to ask a broker before you hire remotely</h2>
             <p style={styles.bodyP}>
-              Ask how many remote transactions they have actually completed. Ask who physically checks on the house and how often. Ask how repairs get paid when you cannot walk the aisles of the hardware store yourself. And ask who answers the phone when something needs a decision at 8 PM your time. My answers: dozens over the years and counting, me and my team, deferred until closing, and me, at 425-250-9422. The rest of the interview checklist is in{' '}
+              Ask how many remote transactions they have actually completed. Ask who physically checks on the house and how often. Ask how you will hear about progress. Ask how repairs get paid when you cannot walk the aisles of the hardware store yourself. And ask who answers the phone when something needs a decision at 8 PM your time. My answers: 16 remote deals to date, me and my team on site, a written progress update every week, repairs paid as the work is completed with deferral to closing available if you need it, and me on the phone, at 425-250-9422. The rest of the interview checklist is in{' '}
               <Link href="/blog/questions-to-ask-listing-agent-snohomish" style={styles.link}>
                 my questions-to-ask guide
               </Link>

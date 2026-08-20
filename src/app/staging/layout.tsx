@@ -68,7 +68,7 @@ export default function StagingLayout({ children }: { children: React.ReactNode 
                 "name": "What if I cannot afford professional home staging?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "A $200 consultation gets you a detailed room-by-room plan you can execute yourself. Most clients complete 80% of the work on their own with the right guidance. Kim also offers flexible arrangements for sellers who need to defer staging costs until closing. Do not skip staging because of cost. A $300 consultation that earns you $8,000 more is a good investment."
+                  "text": "A $200 consultation gets you a detailed room-by-room plan you can execute yourself. Most clients complete 80% of the work on their own with the right guidance. Kim almost always charges for staging and keeps the cost low on purpose, and unlike a staging company she does not charge a monthly furniture rental fee, which commonly runs $800 to $2,000 a month. Do not skip staging because of cost. A $300 consultation that earns you $8,000 more is a good investment."
                 }
               },
               {

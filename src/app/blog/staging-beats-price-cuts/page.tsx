@@ -548,7 +548,7 @@ export default function StagingBeatsPriceCutsPage() {
                   How much does home staging cost in Snohomish County?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  A staging consultation runs $200 to $400. Hands-on staging implementation for an occupied home typically costs $500 to $2,000 depending on size. Kim stages homes herself and includes staging in her selling strategy, so many clients do not pay separately for staging implementation.
+                  A staging consultation runs $200 to $400. Hands-on staging implementation for an occupied home typically costs $500 to $2,000 depending on the size of the house, how much furniture needs to come in, and the logistics of the job. Kim stages homes herself and almost always charges for staging, keeping the cost low on purpose. Unlike a staging company, she does not charge a monthly furniture rental fee, which commonly runs $800 to $2,000 a month.
                 </p>
               </div>
 

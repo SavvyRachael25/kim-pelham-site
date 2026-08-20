@@ -15,7 +15,7 @@ const FEATURED_VIDEO = {
   id: 'jpE0S64ky7w',
   title: "Think You Can't Afford to Sell Your Home? Watch This First",
   description:
-    'Kim walks through the most common worry she hears from Snohomish County sellers, that they cannot afford the prep work it takes to list well, and the concierge plan that handles every update with payment deferred to closing.',
+    'Kim walks through the most common worry she hears from Snohomish County sellers, that they cannot afford the prep work it takes to list well, and the concierge plan that handles every update, with payment deferred to closing when a seller needs that.',
   uploadDate: '2025-09-01',
 };
 

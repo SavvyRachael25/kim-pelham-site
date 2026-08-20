@@ -221,7 +221,7 @@ export default function PreSaleRenovationROIPage() {
             </p>
 
             <p style={styles.bodyP}>
-              For qualifying homes, I also coordinate the entire renovation: I plan it, manage my own vetted local crew, stage it with my own hands, and finance the cost so you do not have to pay anything out of pocket. The cost of the agreed updates and staging is paid from your proceeds at closing. That is the Pelham concierge plan, and it exists because most sellers do not want to be a project manager and they do not want a contractor in their phone. They want their home prepared, photographed, and sold.
+              For qualifying homes, I also coordinate the entire renovation: I plan it, manage my own vetted local crew, and stage it with my own hands. The agreed updates and staging are normally paid as the work is completed, and where a seller needs it, that cost can be paid from your proceeds at closing instead. That is the Pelham concierge plan, and it exists because most sellers do not want to be a project manager and they do not want a contractor in their phone. They want their home prepared, photographed, and sold.
             </p>
 
             <h2 style={styles.h2}>Four updates that almost always pay back in our market</h2>
@@ -269,7 +269,7 @@ export default function PreSaleRenovationROIPage() {
 
             <h2 style={styles.h2}>How to think about the financing</h2>
             <p style={styles.bodyP}>
-              The hardest part for many sellers is not deciding what to update, it is coming up with the cash to do it. That is where the Pelham concierge plan changes the math. For qualifying homes, I front the cost of the agreed updates and staging, and you pay at closing from your sale proceeds. No money out of pocket. No financing application. No risk of doing work and then having the market shift.
+              The hardest part for many sellers is not deciding what to update, it is coming up with the cash to do it. That is where the Pelham concierge plan changes the math. For qualifying homes, I coordinate the agreed updates and the staging, and if coming up with the cash now is the obstacle, we can arrange for you to pay at closing out of your sale proceeds instead. No financing application. No risk of doing work and then having the market shift.
             </p>
 
             <p style={styles.bodyP}>

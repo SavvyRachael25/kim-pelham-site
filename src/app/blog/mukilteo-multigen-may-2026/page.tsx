@@ -402,7 +402,7 @@ const ARTICLE_HTML = `<style>
 
 <section class="article-body lede">
   <div class="wrap">
-    <p>If you have been quietly tracking Mukilteo this spring, you have probably noticed something nobody is writing about. The split-entry homes from the 1970s &mdash; the ones with a downstairs that has its own kitchen and its own door &mdash; are doing something the rest of the market is not. They are pending in roughly six days when they are prepped and priced right, per the April 2026 Zillow Mukilteo snapshot.</p>
+    <p>If you have been quietly tracking Mukilteo this spring, you have probably noticed something nobody is writing about. The split-entry homes from the 1970s, the ones with a downstairs that has its own kitchen and its own door, are doing something the rest of the market is not. They are pending in roughly six days when they are prepped and priced right, per the April 2026 Zillow Mukilteo snapshot.</p>
     <p>I want to walk you through why. I closed my last home at 102.03% of list, which is the number on my Sellers page right now. The NWMLS market average is 100.2% per the April 2026 NWMLS snapshot. The gap is not luck. The gap is a layout that meets a real-life question more buyers are asking: where do the people we love actually fit?</p>
   </div>
 </section>
@@ -412,7 +412,7 @@ const ARTICLE_HTML = `<style>
     <p class="section-eyebrow">The undercovered story</p>
     <h2 class="section-title">Why nobody is talking about Mukilteo's multi-gen layouts</h2>
     <p>Most Snohomish County coverage right now is pointing at one number: <strong>+51.8% year-over-year inventory growth</strong> per the April 2026 NWMLS snapshot. And it is true. Buyers have more choice than they have had in over a year. The takeaway in most articles is "buyer's market." That is not quite right, and Mukilteo is the proof.</p>
-    <p>Here is what is actually happening. Generic listings are sitting longer. Specific layouts that solve a specific problem are not. Multi-generational homes &mdash; the ones with a separate downstairs kitchen, bath, and entrance &mdash; sit in the second category. Adult kids moving back. Parents downsizing closer. Extended-stay guests. A home office that is genuinely separate. The functional flexibility carries the same weight as a view in this price band.</p>
+    <p>Here is what is actually happening. Generic listings are sitting longer. Specific layouts that solve a specific problem are not. Multi-generational homes, the ones with a separate downstairs kitchen, bath, and entrance, sit in the second category. Adult kids moving back. Parents downsizing closer. Extended-stay guests. A home office that is genuinely separate. The functional flexibility carries the same weight as a view in this price band.</p>
     <p>The 1976 NW Contemporary split-entry was built for this exact use case before anyone called it "multi-gen." Mukilteo has more of them than any other Snohomish County submarket I can think of, and most of them have not been touched in twenty years. The remodeled ones are the asset.</p>
   </div>
 </section>
@@ -430,7 +430,7 @@ const ARTICLE_HTML = `<style>
         <dt>Beds / Baths</dt><dd>4 bedrooms + office &middot; 2.25 bath</dd>
         <dt>Square footage</dt><dd>2,605 sqft on a 10,454 sqft lot</dd>
         <dt>Year built</dt><dd>1976 NW Contemporary, fully remodeled</dd>
-        <dt>Multi-gen layout</dt><dd>Downstairs kitchenette, family room, bath, and bedroom &mdash; separate from the main living area</dd>
+        <dt>Multi-gen layout</dt><dd>Downstairs kitchenette, family room, bath, and bedroom, separate from the main living area</dd>
         <dt>Outdoor</dt><dd>Three decks, hot tub, mature rose garden, fenced corner lot, RV parking</dd>
         <dt>Kitchen</dt><dd>Quartz counters, Fisher &amp; Paykel French-door fridge, Fisher &amp; Paykel dishwasher</dd>
         <dt>View</dt><dd>Puget Sound and Olympic Mountains</dd>
@@ -440,7 +440,7 @@ const ARTICLE_HTML = `<style>
       <p class="source-line">All specs per MLS NWM2513590. Brokered by Katrina Eileen Real Estate.</p>
     </div>
 
-    <p>The thing the photos cannot quite show is the daily ergonomics. The downstairs has its own entrance off the lower deck. A returning college kid, a parent staying for the season, or a long-visiting in-law has a kitchenette, a bath, a bedroom, and privacy &mdash; and the main household upstairs still has an unbothered routine. That is what people mean when they search for "multi-gen." It is not a buzzword. It is a daily-life calculation.</p>
+    <p>The thing the photos cannot quite show is the daily ergonomics. The downstairs has its own entrance off the lower deck. A returning college kid, a parent staying for the season, or a long-visiting in-law has a kitchenette, a bath, a bedroom, and privacy, and the main household upstairs still has an unbothered routine. That is what people mean when they search for "multi-gen." It is not a buzzword. It is a daily-life calculation.</p>
 
     <p>RV parking on a corner lot in this price band is also genuinely rare in Mukilteo. So is being a one-minute walk to Japanese Gulch trails and the kids' bike park while still having the Olympic view from the upper deck. Paine Field is close enough for the commute and far enough that you do not feel it.</p>
   </div>
@@ -451,7 +451,7 @@ const ARTICLE_HTML = `<style>
     <p class="section-eyebrow">The math behind the moment</p>
     <h2 class="section-title">Mukilteo's pricing math in May 2026</h2>
     <p>The headline numbers tell a different story than the local ones. Let me show you what I mean.</p>
-    <p>Snohomish County's median sale price is <strong>$735,750</strong> per the April 2026 NWMLS snapshot &mdash; essentially flat versus March. Sale-to-list across the county is <strong>99.9%</strong>, meaning prepped homes still close at ask. Days on market sits at 35 on average, but well-prepped homes pend in 6 to 15.</p>
+    <p>Snohomish County's median sale price is <strong>$735,750</strong> per the April 2026 NWMLS snapshot, essentially flat versus March. Sale-to-list across the county is <strong>99.9%</strong>, meaning prepped homes still close at ask. Days on market sits at 35 on average, but well-prepped homes pend in 6 to 15.</p>
     <p>Now zoom in. Mukilteo's typical home value is <strong>$863,937</strong> per the April 2026 Zillow snapshot, down 7.2% year-over-year, with average days to pending around <strong>six</strong> when priced right. The 30-year fixed mortgage rate is <strong>6.30%</strong> per Freddie Mac PMMS for the week ending April 30, 2026 &mdash; about 46 basis points below where it sat a year ago.</p>
     <p>Read those together and the market story is not "buyers retreat." It is "buyers got picky." They have inventory to choose from, so they are choosing well-prepped, problem-solving homes and skipping the ones that are coasting. A multi-gen split-entry that has actually been remodeled is the kind of listing the picky buyer was waiting for.</p>
 
@@ -487,7 +487,7 @@ const ARTICLE_HTML = `<style>
     <p class="section-eyebrow">What the work actually looks like</p>
     <h2 class="section-title">What "walking alongside" means for a multi-gen move</h2>
     <p>A multi-gen sale or purchase is rarely just a real-estate transaction. It is a logistics puzzle with people in it. A parent moving closer. An adult child returning. A guest room that needs to be a real room. The conversations are about timing, about who lives where during the in-between, about whether a downsize and an upsize need to happen in the same six weeks.</p>
-    <p>I keep my calendar at a maximum of two active buyers at a time on purpose. That is the only way to actually be present for the calls that come in at 8 PM on a Tuesday because something just shifted. I answer my own phone. No assistant, no call screening, no game of telephone. If you have a Senior Concierge piece on top of the move &mdash; downsizing a parent, sorting out fixtures, coordinating with the SMART Building Solutions team for repairs that can be deferred until close &mdash; that is built into how I work. It is not a separate service tier.</p>
+    <p>I keep my calendar at a maximum of two active buyers at a time on purpose. That is the only way to actually be present for the calls that come in at 8 PM on a Tuesday because something just shifted. I answer my own phone. No assistant, no call screening, no game of telephone. If you have a Senior Concierge piece on top of the move (downsizing a parent, sorting out fixtures, coordinating with the SMART Building Solutions team for repairs, which can be deferred to closing if you need that) then it is built into how I work. It is not a separate service tier.</p>
     <p>None of this is a pitch. I am laying it out so you know what you would be signing up for if we ended up working together. No pitch, no pressure.</p>
   </div>
 </section>

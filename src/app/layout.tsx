@@ -249,7 +249,7 @@ export default function RootLayout({
                       "itemOffered": {
                         "@type": "Service",
                         "name": "In-House Home Staging",
-                        "description": "Psychology-driven home staging done in-house by Kim Pelham, included with every Pelham Group NW listing. No outsourced staging fees. Designed to create emotional attachment between buyers and the home.",
+                        "description": "Psychology-driven home staging done in-house by Kim Pelham on every Pelham Group NW listing, including occupied homes. Staging is charged separately and kept deliberately low cost, with no monthly furniture rental fee. Designed to create emotional attachment between buyers and the home.",
                         "url": "https://thepelhamgroupnw.com/staging",
                         "areaServed": "Snohomish County, WA",
                         "provider": { "@id": "https://thepelhamgroupnw.com/#business" }

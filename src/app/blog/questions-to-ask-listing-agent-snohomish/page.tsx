@@ -62,12 +62,12 @@ const faqs = [
   {
     question: 'Should staging be included when I hire a listing agent?',
     answer:
-      'Ask directly: who stages, what does it cost, and does it work for an occupied home? Many agents refer you to an outside stager and the bill is yours. I stage my listings myself, in-house, as part of my service, including homes people are still living in.',
+      'Ask directly: who stages, what does it cost, and does it work for an occupied home? Many agents refer you to an outside stager and the bill is yours. I stage my listings myself, in-house, including homes people are still living in. I almost always charge for staging and I keep the cost low. The price depends on the size of the house, how much furniture we bring in, and the logistics. Unlike a staging company, I do not charge a monthly rental fee, which commonly runs $800 to $2,000 a month.',
   },
   {
     question: 'What should I ask about pre-sale repairs?',
     answer:
-      'Ask who coordinates the work, whether the agent has real contractors behind them, and whether you must pay before closing. My Home Transition Team handles pre-sale repairs through SMART Building Services, and payment can defer until closing, which matters when the equity is in the house rather than the bank account.',
+      'Ask who coordinates the work, whether the agent has real contractors behind them, and whether you must pay before closing. My Home Transition Team handles pre-sale repairs through SMART Building Services. Repairs are normally paid as the work is completed, and if needed, payment can be deferred until closing, which matters when the equity is in the house rather than the bank account.',
   },
   {
     question: 'How many clients should a listing agent take at once?',
@@ -77,7 +77,7 @@ const faqs = [
   {
     question: 'What happens if my home does not sell?',
     answer:
-      'Ask this before you list, because the answer reveals how the agent thinks. Mine: we audit the first listing like scientists (data, price band, photos, showing friction), fix what the market told us, and relist prepared. Price cuts are a last resort, not a strategy.',
+      'Ask this before you list, because the answer reveals how the agent thinks. My own listings sell, and my history does not include expired listings. The reason is the weekly rhythm: every week we review the number of showings, read the feedback, and make adjustments based on what the feedback is actually telling us. If market prices are trending downward, a price correction may be necessary. What we work hard to avoid is chasing the market down. That is a conversation I have with my clients every week, not a conversation that starts after a listing has stalled.',
   },
 ];
 
@@ -88,11 +88,11 @@ const QUESTIONS: Array<{ q: string; a: string }> = [
   },
   {
     q: '2. Who stages my home, and what will it cost me?',
-    a: 'This one sorts the field fast. Most agents refer staging out, most staging companies decline occupied homes, and the invoice lands on you. I stage in-house as part of my service, including homes with kids and dogs still living in them. Nine years of it, and no separate staging bill.',
+    a: 'This one sorts the field fast. Most agents refer staging out, and most staging companies decline occupied homes. I stage in-house, including homes with kids and dogs still living in them, nine years of it. I almost always charge for staging and I keep the cost low, because it is not a profit center for me. What it costs depends on the size of the house, how much furniture we bring in, and the logistics of the job. The number that matters most: I do not charge a monthly rental fee, and that fee is commonly $800 to $2,000 a month with a staging company.',
   },
   {
     q: '3. Who handles repairs before we list, and when do I pay?',
-    a: 'Homes earn more when the fix-list is done before photos. Ask whether the agent has actual contractors behind them or just a phone number, and whether payment can wait until closing. Through my Home Transition Team, pre-sale repairs run through SMART Building Services and payment can defer until the sale closes.',
+    a: 'Homes earn more when the fix-list is done before photos. Ask whether the agent has actual contractors behind them or just a phone number, and what the payment terms are. Through my Home Transition Team, pre-sale repairs run through SMART Building Services. Repairs are normally paid as the work is completed, and if a seller needs it, payment can be deferred until the sale closes.',
   },
   {
     q: '4. How will you handle multiple offers, and buyer letters?',
@@ -104,11 +104,11 @@ const QUESTIONS: Array<{ q: string; a: string }> = [
   },
   {
     q: '6. How will you price my home, and what happens if the market disagrees?',
-    a: 'Pricing is a strategy conversation, not a compliment contest. Beware the agent who quotes the highest number to win the listing. Ask how they pick a price band, and what the plan is if showings stall. My answer lives in my relist audit: data, positioning, photos, and showing friction reviewed before anyone discusses a price cut.',
+    a: 'Pricing is a strategy conversation, not a compliment contest. Beware the agent who quotes the highest number to win the listing. Ask how they pick a price band, and what the plan is if showings stall. My answer is the weekly review: showing counts, buyer feedback, and the adjustments that feedback calls for. A price correction is on the table when the market is genuinely trending down, and the thing we avoid is chasing the market downward.',
   },
   {
     q: '7. What does your marketing actually include?',
-    a: 'Photos and the NWMLS are table stakes. Ask what else, specifically. My listings get staging, professional photography, a property page on this site with full schema for search and AI assistants, Google Business posts, and my weekly Pelham Post to a cleaned list of more than a thousand local readers.',
+    a: 'Photos and the NWMLS are table stakes. Ask what else, specifically. My listings get staging, professional photography, a property page on this site with full schema for search and AI assistants, Google Business posts, and my weekly Pelham Post to a cleaned list of more than a thousand local readers. Syndication matters too, and it is worth asking which portals an agent actually shows up on. My listings carry through to Homes.com, where the listing agent is the contact on the page rather than a paid advertiser, so the person a buyer reaches is me.',
   },
   {
     q: '8. Who will I actually talk to for the next sixty days?',

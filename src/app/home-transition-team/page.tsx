@@ -12,7 +12,7 @@ const PILLARS = [
   {
     eyebrow: 'repairs and prep',
     title: 'Licensed contractors, coordinated for you',
-    body: 'Roof, electrical, plumbing, paint, flooring, hardware, refinishing. The Home Transition Team works with licensed, insured contractors across the region, led in partnership with SMART Building Services, the general contracting company run by Kim\'s husband Brien. One point of contact. And when cash is tight before a sale, payment for pre-sale repairs can defer until closing.',
+    body: 'Roof, electrical, plumbing, paint, flooring, hardware, refinishing. The Home Transition Team works with licensed, insured contractors across the region, led in partnership with SMART Building Services, the general contracting company run by Kim\'s husband Brien. One point of contact. Repairs are normally paid as the work is completed, and when cash is tight before a sale, payment can be deferred until closing.',
     href: '/home-repair',
     linkLabel: 'How home repairs work',
   },
@@ -56,7 +56,7 @@ const faqs = [
   {
     question: 'Can repairs really be paid at closing instead of upfront?',
     answer:
-      'In most cases, yes. For pre-sale repairs and prep on a home the team is listing, payment can defer until the home closes, so sellers are not writing checks before the sale proceeds arrive. Scope and terms are agreed in writing before any work starts.',
+      'Often, yes, but it is an arrangement rather than the default. Repairs are normally paid as the work is completed. For pre-sale repairs and prep on a home the team is listing, payment can be deferred until the home closes if a seller needs that, so they are not writing checks before the sale proceeds arrive. Scope and terms are agreed in writing before any work starts.',
   },
   {
     question: 'We live out of state and need to sell a family home in Snohomish County. Can you handle it without us flying back?',

@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 const TITLE =
   'The Home Transition Team | One Team for the Whole Move | Kim Pelham, The Pelham Group NW';
 const DESC =
-  'Repairs, staging, selling, and senior transition support under one roof. The Pelham Group NW Home Transition Team handles the entire move: licensed contractors, in-house staging, senior move guidance for seniors and their families, and a broker with 17 years of real estate experience. Payment for repairs can defer until closing.';
+  'Repairs, staging, selling, and senior transition support under one roof. The Pelham Group NW Home Transition Team handles the entire move: licensed contractors, in-house staging, senior move guidance for seniors and their families, and a broker with 17 years of real estate experience. Repairs are normally paid as the work is completed, and payment can be deferred until closing if a seller needs that.';
 
 export const metadata: Metadata = {
   title: TITLE,

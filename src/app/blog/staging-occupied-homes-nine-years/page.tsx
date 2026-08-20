@@ -62,7 +62,7 @@ const faqs = [
   {
     question: 'How much does home staging cost with The Pelham Group NW?',
     answer:
-      'If I am your listing broker, staging is part of my service. There is no separate staging vendor bill. That is different from hiring an independent stager, where a full occupied stage in this market commonly runs into the thousands.',
+      'It depends on the size of the house, how much furniture we need to bring in, and the logistics of the job. I almost always charge for staging, and I keep the cost low. The big difference from a staging company: I do not charge a monthly rental fee, which commonly runs $800 to $2,000 a month and is where most of a staging budget disappears on a listing that takes a while to sell.',
   },
   {
     question: 'Does staging actually increase the sale price?',
@@ -134,16 +134,16 @@ export default function StagingOccupiedHomesPage() {
               . When buyers have more homes to choose from, prepared homes win and generic ones sit.
             </p>
 
-            <h2 style={styles.h2}>Why I never send you a staging bill</h2>
+            <h2 style={styles.h2}>How I price staging</h2>
             <p style={styles.bodyP}>
-              When I list your home, staging is part of my service, not a separate vendor invoice. I use your existing furniture wherever it works, add pieces where they earn their keep, and design within what you actually have. My staging practice exists to serve my listings. It is not a profit center, and that is a deliberate choice I made nine years ago.
+              I almost always charge for staging, and I keep the cost low on purpose. What it costs depends on the size of the house, how much furniture we need to bring in, and the logistics of the job. The part that surprises people: unlike a staging company, I do not charge a monthly rental fee, which is where most staging budgets quietly go to die at $800 to $2,000 a month. I use your existing furniture wherever it works, add pieces where they earn their keep, and design within what you actually have. My staging practice exists to serve my listings. It is not a profit center, and that is a deliberate choice I made nine years ago.
             </p>
             <p style={styles.bodyP}>
               Staging also works alongside the rest of my{' '}
               <Link href="/home-transition-team" style={styles.link}>
                 Home Transition Team
               </Link>
-              : if the honest answer is that your home needs paint or flooring before it needs throw pillows, we handle that first, and payment for pre-sale repairs can defer until closing.
+              : if the honest answer is that your home needs paint or flooring before it needs throw pillows, we handle that first, and if needed, payment for pre-sale repairs can be deferred until closing.
             </p>
 
             <div style={styles.ctaBox}>

@@ -362,7 +362,7 @@ export default function StagingPage() {
         faqs={[
           {
             question: "What happens during a home staging consultation with Kim?",
-            answer: "Kim walks through the home room by room, takes before photos, and creates a staging plan covering what to remove, what to reposition, and what to add. Consultation cost: $200-400. Optional hands-on implementation runs $500-2,000. Most clients earn back 10-15x their staging investment in their final sale price.",
+            answer: "Kim walks through the home room by room, takes before photos, and creates a staging plan covering what to remove, what to reposition, and what to add. Consultation cost: $200-400. Optional hands-on implementation runs $500-2,000, and the final number depends on the size of the house, how much furniture needs to come in, and the logistics of the job. There is no monthly furniture rental fee. Most clients earn back 10-15x their staging investment in their final sale price.",
           },
           {
             question: "How is staging different from hiring a decorator?",
@@ -374,7 +374,7 @@ export default function StagingPage() {
           },
           {
             question: "What if I cannot afford professional staging?",
-            answer: "A $200 consultation gets you a detailed room-by-room plan you can execute yourself. Most clients complete 80% of the work on their own with the right guidance. Kim also offers flexible arrangements for sellers who need to defer staging costs until closing. A $300 consultation that earns you $8,000 more is always worth it.",
+            answer: "A $200 consultation gets you a detailed room-by-room plan you can execute yourself. Most clients complete 80% of the work on their own with the right guidance. Kim almost always charges for staging and keeps the cost low on purpose, and unlike a staging company she does not charge a monthly furniture rental fee, which commonly runs $800 to $2,000 a month. Do not skip staging because of cost. A $300 consultation that earns you $8,000 more is a good investment.",
           },
           {
             question: "Do I need to re-stage if my home does not sell quickly?",
