@@ -3,11 +3,11 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'For Sale · 3520 192nd Pl SE, Bothell WA 98012 | The Pelham Group NW',
   description:
-    'For sale at $1,150,000. A 2016 home in the Village at Brookshire neighborhood of Bothell. 4 bed, 2.5 bath, 2,453 sqft, 13 rooms, on a 3,907 sqft lot. Soaring ceilings, open floor plan, quartz kitchen with walk-in pantry, upstairs loft, five-piece primary bath, covered patio, central A/C, pre-inspected and move-in ready. Northshore School District. NWMLS #2558328. Book a showing with Kim Pelham at (425) 250-9422.',
+    'For sale at $1,095,000. A 2016 home in the Village at Brookshire neighborhood of Bothell. 4 bed, 2.5 bath, 2,453 sqft, 13 rooms, on a 3,907 sqft lot. Soaring ceilings, open floor plan, quartz kitchen with walk-in pantry, upstairs loft, five-piece primary bath, covered patio, central A/C, pre-inspected and move-in ready. Northshore School District. NWMLS #2558328. Book a showing with Kim Pelham at (425) 250-9422.',
   openGraph: {
     title: 'For Sale · 3520 192nd Pl SE, Bothell WA | Move-In Ready in Village at Brookshire',
     description:
-      'For sale at $1,150,000. 2016 build, 4 bed, 2.5 bath, 2,453 sqft. Soaring ceilings, open floor plan, quartz kitchen with walk-in pantry, upstairs loft, five-piece primary bath, covered patio, central A/C. Pre-inspected and move-in ready. Northshore School District. NWMLS #2558328.',
+      'For sale at $1,095,000. 2016 build, 4 bed, 2.5 bath, 2,453 sqft. Soaring ceilings, open floor plan, quartz kitchen with walk-in pantry, upstairs loft, five-piece primary bath, covered patio, central A/C. Pre-inspected and move-in ready. Northshore School District. NWMLS #2558328.',
     images: [
       {
         url: 'https://thepelhamgroupnw.com/listings/2558328-bothell/photos/dsc05986.jpg',
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'For Sale · 3520 192nd Pl SE, Bothell WA 98012 | The Pelham Group NW',
     description:
-      'For sale at $1,150,000. 2016 build, 4 bed, 2.5 bath, 2,453 sqft in Village at Brookshire. Pre-inspected and move-in ready. Northshore School District. NWMLS #2558328.',
+      'For sale at $1,095,000. 2016 build, 4 bed, 2.5 bath, 2,453 sqft in Village at Brookshire. Pre-inspected and move-in ready. Northshore School District. NWMLS #2558328.',
     images: ['https://thepelhamgroupnw.com/listings/2558328-bothell/photos/dsc05986.jpg'],
   },
   alternates: {
@@ -44,7 +44,7 @@ export default function BothellLayout({ children }: { children: React.ReactNode 
     '@type': 'RealEstateListing',
     name: '3520 192nd Pl SE, Bothell WA 98012',
     description:
-      'For-sale home built in 2016 in the Village at Brookshire neighborhood of Bothell, WA. North-facing with soaring ceilings, abundant natural light, and an open floor plan. 4 bedrooms, 2.5 bathrooms, 2,453 square feet, 13 rooms, on a 3,907 sqft lot. Durable laminate flooring on the main level, new carpet (2024) in the living room, electric fireplace. Kitchen with quartz countertops, subway tile backsplash, stainless steel appliances, and an oversized walk-in pantry. Upstairs loft and family room usable as a media room, home office, or hobby space. Primary suite with a spa-inspired five-piece bath and a custom walk-in closet organizer. Upstairs laundry room with a utility sink. Fully fenced, low-maintenance backyard with a covered patio. Central A/C. Parking for up to four vehicles plus abundant guest parking. Pre-inspection complete, move-in ready. Award-winning Northshore School District, with a community park and playground at the end of the street. Listed at $1,150,000. NWMLS #2558328.',
+      'For-sale home built in 2016 in the Village at Brookshire neighborhood of Bothell, WA. North-facing with soaring ceilings, abundant natural light, and an open floor plan. 4 bedrooms, 2.5 bathrooms, 2,453 square feet, 13 rooms, on a 3,907 sqft lot. Durable laminate flooring on the main level, new carpet (2024) in the living room, electric fireplace. Kitchen with quartz countertops, subway tile backsplash, stainless steel appliances, and an oversized walk-in pantry. Upstairs loft and family room usable as a media room, home office, or hobby space. Primary suite with a spa-inspired five-piece bath and a custom walk-in closet organizer. Upstairs laundry room with a utility sink. Fully fenced, low-maintenance backyard with a covered patio. Central A/C. Parking for up to four vehicles plus abundant guest parking. Pre-inspection complete, move-in ready. Award-winning Northshore School District, with a community park and playground at the end of the street. Listed at $1,095,000. NWMLS #2558328.',
     url: 'https://thepelhamgroupnw.com/properties/3520-192nd-pl-se-bothell',
     image: [
       'https://thepelhamgroupnw.com/listings/2558328-bothell/photos/dsc05986.jpg',
@@ -95,7 +95,7 @@ export default function BothellLayout({ children }: { children: React.ReactNode 
     ],
     offers: {
       '@type': 'Offer',
-      price: 1150000,
+      price: 1095000,
       priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
       availabilityStarts: '2026-07-23',
@@ -144,7 +144,7 @@ export default function BothellLayout({ children }: { children: React.ReactNode 
         name: 'How much is 3520 192nd Pl SE in Bothell?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '3520 192nd Pl SE is listed at $1,150,000. It is a 4-bedroom, 2.5-bathroom, 2,453 sqft home built in 2016 in the Village at Brookshire neighborhood of Bothell, WA 98012. NWMLS #2558328.',
+          text: '3520 192nd Pl SE is listed at $1,095,000. It is a 4-bedroom, 2.5-bathroom, 2,453 sqft home built in 2016 in the Village at Brookshire neighborhood of Bothell, WA 98012. NWMLS #2558328.',
         },
       },
       {
@@ -168,7 +168,7 @@ export default function BothellLayout({ children }: { children: React.ReactNode 
         name: 'Is 3520 192nd Pl SE still available?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: '3520 192nd Pl SE was listed on July 23, 2026 and is active and for sale at $1,150,000. To book a private showing, text or call Kim Pelham at (425) 250-9422.',
+          text: '3520 192nd Pl SE was listed on July 23, 2026 and is active and for sale at $1,095,000. To book a private showing, text or call Kim Pelham at (425) 250-9422.',
         },
       },
       {

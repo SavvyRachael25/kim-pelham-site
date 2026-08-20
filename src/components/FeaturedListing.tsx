@@ -13,7 +13,7 @@ const LISTING = {
   slug: '3520-192nd-pl-se-bothell',
   address: '3520 192nd Pl SE',
   city: 'Bothell, WA 98012',
-  price: '$1,150,000',
+  price: '$1,095,000',
   beds: '4',
   baths: '2.5',
   sqft: '2,453',
