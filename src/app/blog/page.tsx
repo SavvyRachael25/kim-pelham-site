@@ -33,6 +33,18 @@ const SITE = 'https://thepelhamgroupnw.com';
 
 const blogPosts: BlogPost[] = [
   {
+    id: '26',
+    title: 'Living in a Staged Home: Simple Habits That Keep It Show-Ready',
+    slug: 'living-in-a-staged-home',
+    excerpt:
+      'Keeping your home show-ready while you live in it does not mean constantly cleaning. The room-by-room 30-second habits that keep a staged home ready for any showing, plus the final walk-through checklist Kim gives every seller.',
+    date: '2026-08-20',
+    category: 'Seller Strategy',
+    image: '/images/mukilteo-04-great-room.jpg',
+    imageAlt: 'A staged great room in a Snohomish County home',
+    readTime: 6,
+  },
+  {
     id: '25',
     title: 'Nine Years of Staging Homes People Still Live In',
     slug: 'staging-occupied-homes-nine-years',
