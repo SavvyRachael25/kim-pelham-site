@@ -42,6 +42,7 @@ type AnalyticsPayload = {
   timeseries: { pageviews: { x: string; y: number }[]; sessions: { x: string; y: number }[] };
   topPages: MetricRow[];
   topReferrers: MetricRow[];
+  topEvents?: MetricRow[];
   topCountries: MetricRow[];
   error?: string;
 };
@@ -371,6 +372,10 @@ export default function DashboardPage() {
           <MetricTable title="Top pages" rows={data?.topPages ?? []} />
           <MetricTable title="Top referrers" rows={data?.topReferrers ?? []} />
           <MetricTable title="Top countries" rows={data?.topCountries ?? []} />
+          <MetricTable
+            title="Conversions (calls, emails, CTA clicks)"
+            rows={data?.topEvents ?? []}
+          />
         </section>
 
         <p style={{ fontSize: 13, color: 'var(--color-text-muted)', textAlign: 'center' }}>

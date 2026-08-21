@@ -79,7 +79,7 @@ export async function GET(req: NextRequest) {
   const unit = range === '7d' ? 'hour' : 'day';
 
   try {
-    const [stats, timeseries, topPages, topReferrers, topCountries] =
+    const [stats, timeseries, topPages, topReferrers, topCountries, topEvents] =
       await Promise.all([
         umamiFetch(`/websites/${websiteId}/stats`, apiKey, common),
         umamiFetch(`/websites/${websiteId}/pageviews`, apiKey, {
@@ -102,6 +102,11 @@ export async function GET(req: NextRequest) {
           type: 'country',
           limit: 10,
         }),
+        umamiFetch(`/websites/${websiteId}/metrics`, apiKey, {
+          ...common,
+          type: 'event',
+          limit: 20,
+        }),
       ]);
 
     return NextResponse.json({
@@ -112,6 +117,7 @@ export async function GET(req: NextRequest) {
       topPages,
       topReferrers,
       topCountries,
+      topEvents,
     });
   } catch (err) {
     const message =

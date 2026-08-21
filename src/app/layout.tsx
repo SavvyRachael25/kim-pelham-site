@@ -5,6 +5,7 @@ import { Cormorant_Garamond, Inter, Caveat } from "next/font/google";
 import "./globals.css";
 import IntroAnimation from "@/components/IntroAnimation";
 import Analytics from "@/components/Analytics";
+import UmamiEvents from "@/components/UmamiEvents";
 import MobileConciergeCondoPopup from "@/components/MobileConciergeCondoPopup";
 import ConciergeCondoPopup from "@/components/ConciergeCondoPopup";
 import OpenHouseBanner from "@/components/OpenHouseBanner";
@@ -439,6 +440,8 @@ export default function RootLayout({
         <AccessibilityWidget />
         {/* Analytics & attribution — gated on env vars, no-op until configured */}
         <Analytics />
+        {/* Umami custom conversion events - delegated click tracking */}
+        <UmamiEvents />
         {/* Vercel Analytics — first-party traffic + Web Vitals, no config needed */}
         <VercelAnalytics />
         {/* Umami — privacy-friendly product analytics, cookieless */}
