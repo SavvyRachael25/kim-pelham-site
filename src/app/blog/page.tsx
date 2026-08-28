@@ -428,7 +428,7 @@ const blogFAQs = [
   {
     question: 'How does the Pelham Group pre-sale concierge plan work?',
     answer:
-      'For qualifying Snohomish County homes, the Pelham Group fronts the cost of pre-sale updates and staging (paint, lighting, targeted flooring, deep clean, professional staging, and select repairs), manages the contractors and timeline directly, stages the home with Kim Pelham\'s own pieces, and where a seller needs it, the agreed cost can be paid from their sale proceeds at closing instead of during the prep phase. Staging is charged separately and kept deliberately low cost, with no monthly furniture rental fee. There is no contractor management burden on the seller and no separate financing application.',
+      'For qualifying Snohomish County homes, the Pelham Group coordinates pre-sale updates and staging (paint, lighting, targeted flooring, deep clean, professional staging, and select repairs), manages the contractors and timeline directly, stages the home with Kim Pelham\'s own pieces, and where a seller needs it, the agreed cost can be paid from their sale proceeds at closing instead of during the prep phase. Staging is charged separately and kept deliberately low cost, with no monthly furniture rental fee. There is no contractor management burden on the seller and no separate financing application.',
   },
   {
     question: 'What cities does Kim Pelham serve?',

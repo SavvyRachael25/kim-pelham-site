@@ -342,7 +342,7 @@ export default function SeniorDownsizingPage() {
                   What does it cost to work with Kim Pelham on a senior downsizing sale?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  Kim's seller commission is paid from closing proceeds, you don't pay anything out of pocket upfront. Her years of senior transition work mean you get focused expertise at no additional cost. She also coordinates with your family members if helpful, and moves at whatever pace feels right for your situation.
+                  Kim's seller commission is paid from closing proceeds, so there is nothing out of pocket upfront for her fee. Her years of senior transition work mean you get focused expertise at no additional cost. She also coordinates with your family members if helpful, and moves at whatever pace feels right for your situation.
                 </p>
               </div>
             </section>
