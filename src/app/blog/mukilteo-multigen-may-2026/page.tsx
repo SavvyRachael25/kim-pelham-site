@@ -543,7 +543,7 @@ const ARTICLE_HTML = `<style>
     <div class="author-card">
       <p class="label-small">Written by</p>
       <h4>Kim Pelham &middot; The Realtor Next Door</h4>
-      <p>17+ years across Snohomish, King, Pierce, and Skagit Counties. Principal Broker at The Pelham Group NW, brokered by Katrina Eileen Real Estate. Published author of <em>Six-Word Lessons on Selling Your Home in Snohomish County</em>. I answer my own phone: 425-250-9422.</p>
+      <p>17+ years across Snohomish, King, Pierce, and Skagit Counties. Principal Broker at The Pelham Group NW, brokered by Katrina Eileen Real Estate. Published author of <em>Six-Word Lessons on Selling Your Home in Seattle</em>. I answer my own phone: 425-250-9422.</p>
       <p>Office: 3201 Smith Ave Ste 409, Everett, WA 98201 &middot; <a href="https://thepelhamgroupnw.com">thepelhamgroupnw.com</a></p>
     </div>
   </div>

@@ -94,7 +94,7 @@ export default function Home() {
           {
             question: 'Does The Pelham Group NW work with seniors and downsizers?',
             answer:
-              "Yes. Kim Pelham is a Senior Move Specialist with years of experience helping seniors and families downsize, sell a parent's home, and navigate estate transitions, and she runs a Senior Concierge service for downsizing and senior housing transitions. The service coordinates the move timeline, staging, donation logistics, document handling, and family communication so the move feels like a relief rather than a crisis. Kim is also the author of Six-Word Lessons on Selling Your Home in Snohomish County.",
+              "Yes. Kim Pelham is a Senior Move Specialist with years of experience helping seniors and families downsize, sell a parent's home, and navigate estate transitions, and she runs a Senior Concierge service for downsizing and senior housing transitions. The service coordinates the move timeline, staging, donation logistics, document handling, and family communication so the move feels like a relief rather than a crisis. Kim is also the author of Six-Word Lessons on Selling Your Home in Seattle.",
           },
           {
             question: 'How does The Pelham Group NW Concierge program compare with Lamb & Co. HGTV Unsellable Houses?',
