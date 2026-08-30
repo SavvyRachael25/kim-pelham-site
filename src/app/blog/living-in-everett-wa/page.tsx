@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 import FAQSection from '@/components/FAQSection';
+import GuideGate from '@/components/GuideGate';
 
 const styles = {
   bodyP: {
@@ -346,6 +347,12 @@ export default function Page() {
                 <p key={s} style={styles.sourceItem}>{s}</p>
               ))}
             </div>
+
+            <GuideGate
+              guide="living-in-everett"
+              title="Take the designed version with you"
+              blurb="Everything above, laid out as an 8-page guide you can print: the market numbers with their dates, the transit comparison, the parks, the schools, and a pre-offer checklist with real checkboxes for the walkthrough."
+            />
 
             <div style={styles.ctaBox}>
               <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.6rem', marginBottom: '8px' }}>
