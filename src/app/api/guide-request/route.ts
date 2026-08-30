@@ -11,7 +11,8 @@ import { sendOpsAlert } from '@/lib/ops-alerts';
  *   2. Upsert contact in GHL with tags: lead-magnet, guide-<slug>,
  *      plus UTM attribution tags so Iris can group by channel
  *   3. Attach a note recording which guide and where it came from
- *   4. Alert Kim + Rachael
+ *   4. Mirror into Follow Up Boss via /api/sync/ghl-to-fub (Kim works in FUB)
+ *   5. Alert Kim + Rachael
  *   5. Return the download URL so the browser can hand over the PDF immediately
  *
  * Downstream automation: a GHL workflow listens for the `guide-<slug>` tag and
@@ -21,6 +22,7 @@ import { sendOpsAlert } from '@/lib/ops-alerts';
  * The ARTICLE stays public and indexed. Only the designed PDF is gated.
  *
  * Env required: GHL_API_TOKEN, GHL_LOCATION_ID
+ * Env optional: PELHAM_WEBHOOK_SECRET (shared secret for the FUB sync hop)
  */
 
 const GHL_API_BASE = 'https://services.leadconnectorhq.com';
@@ -160,6 +162,34 @@ export async function POST(req: NextRequest) {
       });
     } catch {
       // non-fatal
+    }
+  }
+
+  // Mirror into Follow Up Boss. Kim works out of FUB, so a lead that only
+  // exists in GHL is invisible to her. Best-effort: never block the download.
+  if (ghlContactId) {
+    const webhookSecret = process.env.PELHAM_WEBHOOK_SECRET?.trim();
+    const proto = req.headers.get('x-forwarded-proto') ?? 'https';
+    const host = req.headers.get('host') ?? 'thepelhamgroupnw.com';
+    try {
+      await fetch(`${proto}://${host}/api/sync/ghl-to-fub`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          ...(webhookSecret ? { 'X-Pelham-Webhook-Secret': webhookSecret } : {}),
+        },
+        body: JSON.stringify({
+          contact_id: ghlContactId,
+          firstName,
+          lastName: lastName ?? '',
+          email,
+          phone: phone ?? '',
+          source: ghlPayload.source,
+          tags,
+        }),
+      });
+    } catch (err) {
+      console.error('[guide-request] FUB sync failed (non-fatal):', (err as Error).message);
     }
   }
 
