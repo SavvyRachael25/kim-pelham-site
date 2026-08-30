@@ -33,6 +33,18 @@ const SITE = 'https://thepelhamgroupnw.com';
 
 const blogPosts: BlogPost[] = [
   {
+    id: '27',
+    title: 'Living in Everett, WA: A Home Buyer\u2019s Guide',
+    slug: 'living-in-everett-wa',
+    excerpt:
+      'What it is actually like to buy in Everett: market numbers with dates attached and what they do and do not mean, housing types, transit and the Sounder commute, parks and waterfront, schools, and the property-level questions to investigate before you make an offer.',
+    date: '2026-08-30',
+    category: 'Buyer Guide',
+    image: '/images/neighborhood-01-everett-marina.jpg',
+    imageAlt: 'The Everett marina on Port Gardner Bay',
+    readTime: 10,
+  },
+  {
     id: '26',
     title: 'Living in a Staged Home: Simple Habits That Keep It Show-Ready',
     slug: 'living-in-a-staged-home',
