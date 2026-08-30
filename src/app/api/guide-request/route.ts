@@ -29,10 +29,12 @@ const GHL_API_BASE = 'https://services.leadconnectorhq.com';
 const GHL_API_VERSION = '2021-07-28';
 
 /** Guides that may be requested. Add new guides here as they ship. */
-const GUIDES: Record<string, { title: string; file: string }> = {
+const GUIDES: Record<string, { title: string; file: string; workflowId: string }> = {
   'living-in-everett': {
     title: 'Living in Everett, WA: A Home Buyer’s Guide',
     file: '/guides/living-in-everett/living-in-everett-guide.pdf',
+    // "Guide Delivery - Living in Everett"
+    workflowId: '1b2f2667-5068-49a3-b98c-3d975f1776b1',
   },
 };
 
@@ -162,6 +164,35 @@ export async function POST(req: NextRequest) {
       });
     } catch {
       // non-fatal
+    }
+  }
+
+  // Enroll directly in the delivery workflow.
+  //
+  // Do NOT rely on the workflow's tag-added trigger here: GHL does not fire
+  // tag-added when the tags arrive with the contact on create, which is exactly
+  // what /contacts/upsert does. Verified 2026-08-30, the delivery email only
+  // sent once the contact was enrolled explicitly.
+  if (ghlContactId) {
+    try {
+      const enrollRes = await fetch(
+        `${GHL_API_BASE}/contacts/${ghlContactId}/workflow/${guide.workflowId}`,
+        {
+          method: 'POST',
+          headers: {
+            Authorization: `Bearer ${GHL_API_TOKEN}`,
+            'Content-Type': 'application/json',
+            Version: GHL_API_VERSION,
+          },
+          body: JSON.stringify({}),
+        }
+      );
+      if (!enrollRes.ok) {
+        const body = await enrollRes.text().catch(() => '(no body)');
+        console.error(`[guide-request] workflow enroll ${enrollRes.status}:`, body.slice(0, 300));
+      }
+    } catch (err) {
+      console.error('[guide-request] workflow enroll failed (non-fatal):', (err as Error).message);
     }
   }
 
