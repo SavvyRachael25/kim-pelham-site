@@ -34,7 +34,7 @@ export default function Page() {
       <main>
         {/* Hero */}
         <section style={{ background: 'var(--color-forest)', color: 'var(--color-cream)', padding: '72px 20px 56px' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'minmax(0, 1.2fr) minmax(0, 1fr)', gap: '48px', alignItems: 'center' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px', alignItems: 'center' }}>
             <div>
               <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.6rem', color: '#D4A07A', marginBottom: '8px' }}>something new,</p>
               <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2.4rem, 5vw, 3.8rem)', fontWeight: 700, lineHeight: 1.02, marginBottom: '18px' }}>
@@ -84,7 +84,7 @@ export default function Page() {
 
         {/* Nominate */}
         <section id="nominate" style={{ padding: '32px 20px 72px', backgroundColor: '#fff' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'minmax(0, 1fr) minmax(0, 1.1fr)', gap: '40px', alignItems: 'start' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px', alignItems: 'start' }}>
             <div>
               <p style={styles.eyebrow}>how this works,</p>
               <h2 style={styles.h2}>I read every one myself.</h2>
@@ -101,9 +101,9 @@ export default function Page() {
 
         {/* Kim strip */}
         <section style={{ padding: '56px 20px', backgroundColor: 'var(--color-cream)' }}>
-          <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: '150px minmax(0, 1fr)', gap: '28px', alignItems: 'center' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: '28px', alignItems: 'center' }}>
             <Image src="/images/kim-headshot-msh.jpg" alt="Kim Pelham" width={150} height={150} style={{ width: '150px', height: '150px', objectFit: 'cover', borderRadius: '50%', border: '3px solid var(--color-clay)' }} />
-            <div>
+            <div style={{ flex: '1 1 320px' }}>
               <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.7rem', color: 'var(--color-forest)', marginBottom: '6px' }}>Kim Pelham</p>
               <p style={{ ...styles.bodyP, marginBottom: '10px' }}>
                 Real estate broker and home stager, 17 years in real estate and a Snohomish County broker since 2015, brokered by Katrina Eileen Real Estate. Voted Best of Snohomish County two years in a row, Best of Zillow, and now a host on The American Dream TV.
