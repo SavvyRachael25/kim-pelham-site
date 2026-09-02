@@ -9,6 +9,7 @@
 */
 
 const FUNNEL_PATHS_EXACT = new Set<string>([
+  '/adtv', // ADTV nomination landing page: one ask, no competing popups
   '/listwithkim',
   '/condo-concierge',
 ]);
