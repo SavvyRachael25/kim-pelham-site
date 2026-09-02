@@ -37,7 +37,7 @@ export default function Page() {
           <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '40px', alignItems: 'center' }}>
             <div>
               <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.6rem', color: '#D4A07A', marginBottom: '8px' }}>something new,</p>
-              <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2.4rem, 5vw, 3.8rem)', fontWeight: 700, lineHeight: 1.02, marginBottom: '18px' }}>
+              <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2.4rem, 5vw, 3.8rem)', fontWeight: 700, lineHeight: 1.02, marginBottom: '18px', color: 'var(--color-cream)' }}>
                 I am hosting on <em style={{ color: '#D4A07A', fontStyle: 'italic', fontWeight: 600 }}>The American Dream TV</em>
               </h1>
               <p style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontSize: '1.35rem', lineHeight: 1.4, opacity: 0.92, marginBottom: '22px' }}>
