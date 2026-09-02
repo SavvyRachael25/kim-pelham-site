@@ -316,7 +316,7 @@ const blogPosts: BlogPost[] = [
       'What a senior move specialist actually does, how industry designations fit in, and the questions worth asking before you hire anyone for a later-life move.',
     date: '2026-04-17',
     category: 'Senior & Estate',
-    image: '/images/about-01-approachable-headshot-env.jpg',
+    image: '/images/kim-by-water.jpg',
     imageAlt: 'Kim Pelham, Senior Move Specialist',
     readTime: 6,
   },
