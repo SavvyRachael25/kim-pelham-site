@@ -47,6 +47,10 @@ const nextConfig = {
         closest live equivalent. NOTE: '/listings' must stay EXACT-match only,
         the new site serves photo assets under /listings/<mls>/photos/.
       */
+      // ADTV nomination short links for print (QR on business cards / flyer); attribution rides on the query string
+      { source: '/adtv/card', destination: '/adtv?utm_source=card&utm_medium=print&utm_campaign=adtv-launch', permanent: false },
+      { source: '/adtv/flyer', destination: '/adtv?utm_source=flyer&utm_medium=print&utm_campaign=adtv-launch', permanent: false },
+      { source: '/adtv/slide', destination: '/adtv?utm_source=ecn&utm_medium=slide&utm_campaign=adtv-launch', permanent: false },
       { source: '/insights', destination: '/blog', permanent: true },
       { source: '/insights/:slug*', destination: '/blog', permanent: true },
       { source: '/about-kim', destination: '/about', permanent: true },
