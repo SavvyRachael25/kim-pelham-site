@@ -45,8 +45,12 @@ export default function Page() {
               </p>
               <a href="#nominate" style={{ display: 'inline-block', background: 'var(--color-clay)', color: 'var(--color-cream)', fontFamily: 'var(--font-body)', fontWeight: 700, padding: '14px 28px', borderRadius: '4px', textDecoration: 'none' }}>Nominate a home, a business, or a nonprofit</a>
             </div>
-            <div style={{ background: '#fff', borderRadius: '10px', padding: '22px 26px' }}>
-              <Image src="/images/adtv-emmy-logo.png" alt="The American Dream TV, Emmy nominated" width={640} height={200} style={{ width: '100%', height: 'auto', display: 'block' }} priority />
+            <div style={{ position: 'relative', maxWidth: '440px', margin: '0 auto', paddingBottom: '54px' }}>
+              <Image src="/images/kim-with-door.jpg" alt="Kim Pelham" width={1024} height={1536} priority style={{ width: '100%', height: 'auto', aspectRatio: '4 / 5', objectFit: 'cover', objectPosition: 'center 25%', borderRadius: '10px', display: 'block', border: '4px solid rgba(248,245,240,0.18)' }} />
+              <div style={{ position: 'absolute', left: '-18px', bottom: '0', width: '68%', background: '#fff', borderRadius: '8px', padding: '12px 16px', boxShadow: '0 12px 30px rgba(0,0,0,0.28)' }}>
+                <Image src="/images/adtv-emmy-logo.png" alt="The American Dream TV, Emmy nominated" width={640} height={200} style={{ width: '100%', height: 'auto', display: 'block' }} priority />
+              </div>
+              <p style={{ position: 'absolute', right: '4px', bottom: '14px', fontFamily: 'var(--font-handwritten)', fontSize: '1.25rem', color: '#D4A07A', margin: 0 }}>Kim, your host</p>
             </div>
           </div>
           <div style={{ maxWidth: '1100px', margin: '40px auto 0', textAlign: 'center' }}>
@@ -86,6 +90,8 @@ export default function Page() {
         <section id="nominate" style={{ padding: '32px 20px 72px', backgroundColor: '#fff' }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px', alignItems: 'start' }}>
             <div>
+              <Image src="/images/kim-with-client-on-couch.jpg" alt="Kim Pelham talking with a client" width={1024} height={683} style={{ width: '100%', height: 'auto', aspectRatio: '3 / 2', objectFit: 'cover', borderRadius: '8px', display: 'block', marginBottom: '10px' }} />
+              <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.25rem', color: 'var(--color-clay)', margin: '0 0 22px' }}>every nomination starts as a conversation,</p>
               <p style={styles.eyebrow}>how this works,</p>
               <h2 style={styles.h2}>I read every one myself.</h2>
               <p style={styles.bodyP}>Tell me what it is, where it is, and why. If it looks like a fit for this season, I reach out to whoever owns it to talk about filming. If it is not yours, I check with you first. If it is yours, expect a call from me within a few days.</p>
@@ -102,7 +108,7 @@ export default function Page() {
         {/* Kim strip */}
         <section style={{ padding: '56px 20px', backgroundColor: 'var(--color-cream)' }}>
           <div style={{ maxWidth: '1100px', margin: '0 auto', display: 'flex', flexWrap: 'wrap', gap: '28px', alignItems: 'center' }}>
-            <Image src="/images/kim-headshot-msh.jpg" alt="Kim Pelham" width={150} height={150} style={{ width: '150px', height: '150px', objectFit: 'cover', borderRadius: '50%', border: '3px solid var(--color-clay)' }} />
+            <Image src="/images/kim-by-water.jpg" alt="Kim Pelham on the Everett waterfront" width={1024} height={683} style={{ width: '300px', maxWidth: '100%', height: 'auto', aspectRatio: '3 / 2', objectFit: 'cover', borderRadius: '8px', border: '3px solid var(--color-clay)', flex: '0 0 auto' }} />
             <div style={{ flex: '1 1 320px' }}>
               <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.7rem', color: 'var(--color-forest)', marginBottom: '6px' }}>Kim Pelham</p>
               <p style={{ ...styles.bodyP, marginBottom: '10px' }}>
