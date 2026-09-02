@@ -96,7 +96,6 @@ export default function Page() {
               <h2 style={styles.h2}>I read every one myself.</h2>
               <p style={styles.bodyP}>Tell me what it is, where it is, and why. If it looks like a fit for this season, I reach out to whoever owns it to talk about filming. If it is not yours, I check with you first. If it is yours, expect a call from me within a few days.</p>
               <p style={styles.bodyP}>Not every nomination airs, and being featured never costs anyone anything. What does not fit this season stays on my list for the next one.</p>
-              <p style={styles.bodyP}>First up this fall: the waterfront you did not know you could afford, a few doors down from a family who bought their second house on the same street.</p>
               <p style={{ ...styles.bodyP, marginBottom: 0 }}>
                 Questions? Call or text me at <a href="tel:+14252509422" style={{ color: 'var(--color-clay)', fontWeight: 600 }}>425-250-9422</a>. I answer my own phone.
               </p>
