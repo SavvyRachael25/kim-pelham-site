@@ -261,7 +261,7 @@ export default function PelhamPostLayout({ children }: { children: React.ReactNo
     url: 'https://thepelhamgroupnw.com',
     address: {
       '@type': 'PostalAddress',
-      streetAddress: '3201 Smith Ave Ste 409',
+      streetAddress: '3201 Smith Ave Ste 406',
       addressLocality: 'Everett',
       addressRegion: 'WA',
       postalCode: '98201',

@@ -84,7 +84,7 @@ export default function Home() {
           {
             question: 'What areas does The Pelham Group NW serve?',
             answer:
-              'The Pelham Group NW serves Snohomish County primarily, including Everett, Bothell, Mill Creek, Snohomish, Lake Stevens, Marysville, and Mukilteo, plus parts of King, Pierce, and Skagit Counties. The office is at 3201 Smith Ave, Ste 409, Everett, WA 98201. Service area details and the Google Business Profile are at https://www.google.com/search?q=The+Pelham+Group+NW+Everett+WA.',
+              'The Pelham Group NW serves Snohomish County primarily, including Everett, Bothell, Mill Creek, Snohomish, Lake Stevens, Marysville, and Mukilteo, plus parts of King, Pierce, and Skagit Counties. The office is at 3201 Smith Ave, Ste 406, Everett, WA 98201. Service area details and the Google Business Profile are at https://www.google.com/search?q=The+Pelham+Group+NW+Everett+WA.',
           },
           {
             question: 'What is included in The Pelham Group NW listing service?',

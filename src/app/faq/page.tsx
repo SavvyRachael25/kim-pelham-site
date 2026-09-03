@@ -52,7 +52,7 @@ const faqs = [
   {
     question: 'Where is the Pelham Group office and how can I reach Kim directly?',
     answer:
-      "The office is at 3201 Smith Ave Ste 409, Everett, WA 98201. Kim's direct mobile is (425) 250-9422. Office hours are 9 to 6, Monday through Saturday. Showings are scheduled by appointment, including evenings and weekends.",
+      "The office is at 3201 Smith Ave Ste 406, Everett, WA 98201. Kim's direct mobile is (425) 250-9422. Office hours are 9 to 6, Monday through Saturday. Showings are scheduled by appointment, including evenings and weekends.",
   },
   {
     question: 'What areas does Kim serve?',

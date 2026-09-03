@@ -327,7 +327,7 @@ export default function RootLayout({
                   "currenciesAccepted": "USD",
                   "address": {
                     "@type": "PostalAddress",
-                    "streetAddress": "3201 Smith Ave, Ste 409",
+                    "streetAddress": "3201 Smith Ave, Ste 406",
                     "addressLocality": "Everett",
                     "addressRegion": "WA",
                     "postalCode": "98201",

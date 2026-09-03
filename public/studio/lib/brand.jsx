@@ -31,7 +31,7 @@ const FONT = {
 /* ===== Compliance — the line every template renders =====
    Renders three sizes; pick what fits.
    Brokered by Katrina Eileen Real Estate · Kim Pelham WA Broker #119262
-   MLS broker #103153 · 3201 Smith Ave Ste 409, Everett WA 98201
+   MLS broker #103153 · 3201 Smith Ave Ste 406, Everett WA 98201
    Equal Housing Opportunity. */
 
 const EHO_GLYPH = (size = 14, color = "currentColor") => (
@@ -89,7 +89,7 @@ function ComplianceLine({
       </div>
       <div>Brokered by Katrina Eileen Real Estate</div>
       <div>Kim Pelham · WA Broker #119262 · MLS Broker #103153{mlsNumber ? ` · MLS #${mlsNumber}` : ""}</div>
-      <div>3201 Smith Ave Ste 409, Everett WA 98201</div>
+      <div>3201 Smith Ave Ste 406, Everett WA 98201</div>
     </div>
   );
 }
