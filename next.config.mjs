@@ -52,8 +52,6 @@ const nextConfig = {
       { source: '/adtv/flyer', destination: '/adtv?utm_source=flyer&utm_medium=print&utm_campaign=adtv-launch', permanent: false },
       { source: '/adtv/slide', destination: '/adtv?utm_source=ecn&utm_medium=slide&utm_campaign=adtv-launch', permanent: false },
       { source: '/adtv/bag', destination: '/adtv?utm_source=ecn-bag&utm_medium=print&utm_campaign=adtv-launch', permanent: false },
-      // Concierge leave-behind: the printed piece Kim hands out at listing appointments and partner offices
-      { source: '/prep', destination: '/concierge?utm_source=leave-behind&utm_medium=print&utm_campaign=concierge', permanent: false },
       { source: '/insights', destination: '/blog', permanent: true },
       { source: '/insights/:slug*', destination: '/blog', permanent: true },
       { source: '/about-kim', destination: '/about', permanent: true },
