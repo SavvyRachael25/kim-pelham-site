@@ -761,7 +761,7 @@ export default function EverettNeighborhoodsBuyersGuidePage() {
                   lineHeight: '1.6',
                 }}
               >
-                Let&apos;s talk about where you&apos;d actually be happy. Seventeen years of living in this county means I know the streets, the school feeders, the flood corridors, and the Boeing noise patterns in a way no algorithm can replicate.
+                Let&apos;s talk about where you&apos;d actually be happy. Seventeen years in real estate here means I know the streets, the school feeders, the flood corridors, and the Boeing noise patterns in a way no algorithm can replicate.
               </p>
               <Link
                 href="/contact"

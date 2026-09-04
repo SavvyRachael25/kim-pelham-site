@@ -99,7 +99,7 @@ export default function WeMovedPage() {
             </p>
 
             <p style={styles.bodyP}>
-              I have lived in Snohomish County for seventeen years and I forget, sometimes, that this is where I live. Not the listing photos. The actual mountains. The actual sky.
+              I live in Snohomish County and I forget, sometimes, that this is where I live. Not the listing photos. The actual mountains. The actual sky.
             </p>
 
             <div style={styles.pullQuote}>
