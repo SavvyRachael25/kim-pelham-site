@@ -270,7 +270,7 @@ export default function SellingParentsHomePage() {
                 </Link>
               </li>
               <li style={{ marginBottom: '12px' }}>
-                <Link href="/blog/sres-realtor-snohomish-county" style={{ color: 'var(--color-clay)' }}>
+                <Link href="/blog/senior-move-specialist-snohomish-county" style={{ color: 'var(--color-clay)' }}>
                   What to Look For in a Senior Move Specialist
                 </Link>
               </li>

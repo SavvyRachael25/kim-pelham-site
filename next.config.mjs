@@ -40,6 +40,13 @@ const nextConfig = {
         destination: '/blog/potlatch-beach-road-marysville-waterfront',
         permanent: true,
       },
+      // Renamed 2026-09-10: the sres-realtor slug was being read as an SRES
+      // credential claim about Kim in AI citations. She does not hold SRES.
+      {
+        source: '/blog/sres-realtor-snohomish-county',
+        destination: '/blog/senior-move-specialist-snohomish-county',
+        permanent: true,
+      },
       /*
         Legacy WordPress URLs (GA 7/17-8/13: the 404 page was the top "page"
         with 251 views / 96% bounce — old-site URLs still indexed and linked

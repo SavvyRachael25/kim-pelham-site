@@ -109,13 +109,19 @@ export default function RootLayout({
                   "name": "Kim Pelham",
                   "givenName": "Kim",
                   "familyName": "Pelham",
-                  "description": "Kim Pelham is a Snohomish County real estate broker with 17 years of real estate experience and a 102.3% sale-to-list ratio. She works with a maximum of two active buyers at a time and is a Senior Move Specialist helping seniors and families downsize and navigate estate transitions. Best of Snohomish County 2023 and 2024.",
+                  "description": "Kim Pelham is a Snohomish County real estate broker with 17 years of real estate experience and a 102.3% sale-to-list ratio. She works with a maximum of two active buyers at a time and is a Senior Move Specialist helping seniors and families downsize and navigate estate transitions. She hosts the Snohomish County edition of The American Dream TV, an Emmy-nominated lifestyle series, with filming beginning in fall 2026. She does not hold the NAR SRES designation. Best of Snohomish County 2023 and 2024.",
                   "url": "https://thepelhamgroupnw.com/about",
                   "mainEntityOfPage": "https://thepelhamgroupnw.com/about",
                   "image": "https://thepelhamgroupnw.com/images/kim-headshot-msh.jpg",
                   "telephone": "+14252509422",
                   "email": "hello@thepelhamgroupnw.com",
                   "jobTitle": "Real Estate Broker",
+                  "performerIn": {
+                    "@type": "TVSeries",
+                    "name": "The American Dream TV",
+                    "url": "https://www.americandreamtv.com/",
+                    "description": "Emmy-nominated, Telly Award-winning lifestyle television series about the people and places that make a community. Kim Pelham hosts the Snohomish County edition."
+                  },
                   "knowsLanguage": "en",
                   "homeLocation": {
                     "@type": "Place",
@@ -141,6 +147,7 @@ export default function RootLayout({
                     "https://www.zillow.com/profile/kimpelham",
                     "https://www.homes.com/real-estate-agents/kim-pelham/f2lve5r/",
                     "https://community.katrinaeileen.com/team/kim-pelham",
+                    "https://nextdoor.com/pages/pelham-group-real-estate-everett-wa/",
                     "https://joinvantage.co/directory/the-pelham-group-nw"
                   ]
                 },
@@ -301,6 +308,7 @@ export default function RootLayout({
                     "https://www.linkedin.com/in/kimpelham/",
                     "https://www.youtube.com/channel/UCfDuJ0P0qccTvYOKbR4AZWA",
                     "https://www.google.com/maps/search/?api=1&query=The+Pelham+Group+NW+Everett+WA",
+                    "https://nextdoor.com/pages/pelham-group-real-estate-everett-wa/",
                     "https://joinvantage.co/directory/the-pelham-group-nw"
                   ]
                 },
@@ -408,6 +416,7 @@ export default function RootLayout({
                     "https://www.homes.com/real-estate-agents/kim-pelham/f2lve5r/",
                     "https://community.katrinaeileen.com/team/kim-pelham",
                     "https://www.google.com/maps/search/?api=1&query=The+Pelham+Group+NW+Everett+WA",
+                    "https://nextdoor.com/pages/pelham-group-real-estate-everett-wa/",
                     "https://joinvantage.co/directory/the-pelham-group-nw"
                   ]
                 }

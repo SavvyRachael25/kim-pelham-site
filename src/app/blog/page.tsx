@@ -311,7 +311,7 @@ const blogPosts: BlogPost[] = [
   {
     id: '7',
     title: 'What to Look For in a Senior Move Specialist',
-    slug: 'sres-realtor-snohomish-county',
+    slug: 'senior-move-specialist-snohomish-county',
     excerpt:
       'What a senior move specialist actually does, how industry designations fit in, and the questions worth asking before you hire anyone for a later-life move.',
     date: '2026-04-17',
