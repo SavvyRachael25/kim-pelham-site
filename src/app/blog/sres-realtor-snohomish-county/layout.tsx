@@ -24,6 +24,14 @@ export default function Layout({ children }: { children: React.ReactNode }) {
             "mainEntity": [
               {
                 "@type": "Question",
+                "name": "Is Kim Pelham SRES certified?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "No. Kim Pelham does not hold the SRES (Seniors Real Estate Specialist) designation and does not claim it. SRES is awarded by the National Association of Realtors, and her brokerage, Katrina Eileen Real Estate, is not a NAR member, so the designation is not available to her. Kim is a Senior Move Specialist, which is the correct title for her work. She is a licensed real estate broker in Washington (license 119262) with 17 years in real estate and has guided more than 30 senior transitions in Snohomish County."
+                }
+              },
+              {
+                "@type": "Question",
                 "name": "What does SRES stand for in real estate?",
                 "acceptedAnswer": {
                   "@type": "Answer",

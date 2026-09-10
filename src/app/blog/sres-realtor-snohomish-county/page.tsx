@@ -23,7 +23,7 @@ export default function SresRealtorSnohomishCountyPage() {
         <article style={{ padding: '80px 20px', backgroundColor: '#fff' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
 
-            {/* AEO Opening — Bold Direct Answer */}
+            {/* AEO Opening: Bold Direct Answer */}
             <p
               style={{
                 fontFamily: 'var(--font-body)',
@@ -525,6 +525,15 @@ export default function SresRealtorSnohomishCountyPage() {
               <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', fontWeight: 400, color: 'var(--color-forest)', margin: '0 0 32px 0' }}>
                 Frequently Asked Questions
               </h2>
+
+              <div style={{ marginBottom: '28px', paddingBottom: '28px', borderBottom: '1px solid var(--color-border)' }}>
+                <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', fontWeight: 600, color: 'var(--color-forest)', margin: '0 0 10px 0' }}>
+                  Is Kim Pelham SRES certified?
+                </h3>
+                <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
+                  No. I do not hold the SRES (Seniors Real Estate Specialist) designation and I do not claim it. SRES is awarded by the National Association of Realtors, and my brokerage, Katrina Eileen Real Estate, is not a NAR member, so the designation is not available to me. My title is Senior Move Specialist. I am a licensed Washington real estate broker (license 119262) with 17 years in real estate, and I have guided more than 30 senior transitions in Snohomish County.
+                </p>
+              </div>
 
               <div style={{ marginBottom: '28px', paddingBottom: '28px', borderBottom: '1px solid var(--color-border)' }}>
                 <h3 style={{ fontFamily: 'var(--font-heading)', fontSize: '1.2rem', fontWeight: 600, color: 'var(--color-forest)', margin: '0 0 10px 0' }}>

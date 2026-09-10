@@ -16,7 +16,7 @@ import {
 } from '../shared';
 
 /*
-  Conversation No. 1 — Stephanie Galindo x Kim Pelham.
+  Conversation No. 1, Stephanie Galindo x Kim Pelham.
   This page belongs to BOTH of them and both get the link.
   See the audience note in shared.tsx before editing copy.
 */
