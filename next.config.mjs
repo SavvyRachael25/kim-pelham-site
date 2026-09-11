@@ -67,7 +67,9 @@ const nextConfig = {
       { source: '/home-valuation', destination: '/sellers', permanent: true },
       { source: '/testimonials-2', destination: '/testimonials', permanent: true },
       { source: '/photo-gallery', destination: '/staging', permanent: true },
-      { source: '/book', destination: '/about', permanent: true },
+      // Kim's booking calendar (GHL round robin F59X0PerjfPWHcV4zBD8, 30 min phone call).
+      // Temporary redirect so the destination can change without browsers caching it.
+      { source: '/book', destination: 'https://api.leadconnectorhq.com/widget/booking/F59X0PerjfPWHcV4zBD8', permanent: false },
       { source: '/privacy-policy', destination: '/privacy', permanent: true },
       { source: '/contact-us', destination: '/contact', permanent: true },
       // Legacy WordPress date-based post permalinks (2018-2021 blog, recovered
