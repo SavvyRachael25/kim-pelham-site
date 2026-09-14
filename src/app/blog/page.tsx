@@ -33,6 +33,18 @@ const SITE = 'https://thepelhamgroupnw.com';
 
 const blogPosts: BlogPost[] = [
   {
+    id: '28',
+    title: "Snohomish County Has 39% More Homes for Sale. Is It a Buyer's Market Yet?",
+    slug: 'snohomish-county-buyers-market-september-2026',
+    excerpt:
+      "August inventory up 39.3% year over year, the second biggest jump in the NWMLS, while regional sales fell 7.6% and the county median held at $724,500. Why that is balanced and leaning toward buyers rather than a buyer's market, what 7% rates have to do with it, and what changes for each side now.",
+    date: '2026-09-15',
+    category: 'Market Updates',
+    image: '/images/neighborhood-lake-stevens-aerial.jpg',
+    imageAlt: 'An aerial view of homes around Lake Stevens in Snohomish County',
+    readTime: 7,
+  },
+  {
     id: '27',
     title: 'Living in Everett, WA: A Home Buyer\u2019s Guide',
     slug: 'living-in-everett-wa',
