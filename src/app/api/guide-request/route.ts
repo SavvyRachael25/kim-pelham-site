@@ -7,7 +7,7 @@ import { sendOpsAlert } from '@/lib/ops-alerts';
  * Gated lead-magnet capture for Kim's designed guides.
  *
  * Flow:
- *   1. Validate payload (firstName + email required)
+ *   1. Validate payload (firstName + email + phone required)
  *   2. Upsert contact in GHL with tags: lead-magnet, guide-<slug>,
  *      plus UTM attribution tags so Iris can group by channel
  *   3. Attach a note recording which guide and where it came from
@@ -53,7 +53,7 @@ interface GuidePayload {
   firstName: string;
   lastName?: string;
   email: string;
-  phone?: string;
+  phone: string;
   timeline?: string;
   utmSource?: string;
   utmMedium?: string;
@@ -88,14 +88,22 @@ export async function POST(req: NextRequest) {
 
   const firstName = (body.firstName || '').trim();
   const email = (body.email || '').trim();
+  const phone = (body.phone || '').trim();
   if (!firstName || !email || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
     return NextResponse.json(
       { error: 'Please add your first name and a valid email.' },
       { status: 400 }
     );
   }
+  // Phone is required as of 2026-09-17: at least 10 digits once the formatting is stripped.
+  if (phone.replace(/\D/g, '').length < 10) {
+    return NextResponse.json(
+      { error: 'Please add a phone number so Kim can reach you.' },
+      { status: 400 }
+    );
+  }
 
-  const { lastName, phone, timeline, utmSource, utmMedium, utmCampaign, utmContent } = body;
+  const { lastName, timeline, utmSource, utmMedium, utmCampaign, utmContent } = body;
 
   const tags = ['lead-magnet', `guide-${guideKey}`];
   if (timeline) tags.push(`timeline-${slug(timeline)}`);
@@ -108,7 +116,7 @@ export async function POST(req: NextRequest) {
     firstName,
     lastName: lastName ?? '',
     email,
-    phone: phone ?? '',
+    phone,
     locationId: GHL_LOCATION_ID,
     source: utmSource ? `guide-${guideKey}-${slug(utmSource)}` : `guide-${guideKey}`,
     tags,
@@ -220,7 +228,7 @@ export async function POST(req: NextRequest) {
           firstName,
           lastName: lastName ?? '',
           email,
-          phone: phone ?? '',
+          phone,
           source: ghlPayload.source,
           tags,
         }),

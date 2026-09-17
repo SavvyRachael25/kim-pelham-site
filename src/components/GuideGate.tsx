@@ -5,7 +5,9 @@ import { useState } from 'react';
 /**
  * GuideGate
  *
- * Capture form that trades a designed PDF guide for a name + email.
+ * Capture form that trades a designed PDF guide for a name, email and phone.
+ * Phone became required 2026-09-17 (Rachael): a guide download without a
+ * number is not a lead Kim can call.
  * The article itself stays public; only the PDF is gated.
  *
  * On success: contact lands in GHL tagged `guide-<slug>` (which fires the
@@ -111,7 +113,7 @@ export default function GuideGate({
       <form onSubmit={submit} style={{ maxWidth: '30rem' }}>
         <input style={field} type="text" placeholder="First name" value={firstName} onChange={(e) => setFirstName(e.target.value)} required autoComplete="given-name" />
         <input style={field} type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required autoComplete="email" />
-        <input style={field} type="tel" placeholder="Phone (optional)" value={phone} onChange={(e) => setPhone(e.target.value)} autoComplete="tel" />
+        <input style={field} type="tel" placeholder="Phone" value={phone} onChange={(e) => setPhone(e.target.value)} required autoComplete="tel" inputMode="tel" pattern="[\d\s().+-]{10,}" title="A phone number with at least 10 digits" />
         <select style={{ ...field, color: timeline ? 'var(--color-cream)' : 'rgba(248,245,240,0.6)' }} value={timeline} onChange={(e) => setTimeline(e.target.value)}>
           <option value="" style={{ color: '#2C2C2C' }}>When are you thinking of buying? (optional)</option>
           <option value="just looking" style={{ color: '#2C2C2C' }}>Just looking for now</option>
