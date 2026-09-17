@@ -11,6 +11,7 @@
 const FUNNEL_PATHS_EXACT = new Set<string>([
   '/adtv', // ADTV nomination landing page: one ask, no competing popups
   '/book', // booking calendar: one ask, no competing popups
+  '/book-adtv', // ADTV booking calendar: one ask, no competing popups
   '/prep', // pre-listing concierge offer: one ask, no competing popups
   '/listwithkim',
   '/condo-concierge',

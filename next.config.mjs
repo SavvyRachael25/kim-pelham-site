@@ -67,6 +67,9 @@ const nextConfig = {
       { source: '/home-valuation', destination: '/sellers', permanent: true },
       { source: '/testimonials-2', destination: '/testimonials', permanent: true },
       { source: '/photo-gallery', destination: '/staging', permanent: true },
+      // Kim asked for /bookADTV (2026-09-16). Next.js routes are case-sensitive, so both spellings land on the page.
+      { source: '/bookADTV', destination: '/book-adtv', permanent: false },
+      { source: '/bookadtv', destination: '/book-adtv', permanent: false },
       { source: '/privacy-policy', destination: '/privacy', permanent: true },
       { source: '/contact-us', destination: '/contact', permanent: true },
       // Legacy WordPress date-based post permalinks (2018-2021 blog, recovered
