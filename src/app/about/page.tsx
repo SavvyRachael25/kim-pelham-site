@@ -114,7 +114,7 @@ export default function AboutPage() {
                 lineHeight: 1.2,
               }}
             >
-              17+ Years of Intentional Service
+              14 Years of Intentional Service
             </h2>
             <p
               style={{
