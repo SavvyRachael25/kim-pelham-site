@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import GuideGate from '@/components/GuideGate';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 
@@ -284,6 +285,17 @@ export default function PreSaleRenovationROIPage() {
             <p style={styles.bodyP}>
               It is free. There is no obligation. I keep two active buyers at a time, so I would rather start a real relationship than chase a quick sale.
             </p>
+
+            <GuideGate
+
+              guide="home-sellers"
+
+              title="The pre-listing guide, free"
+
+              blurb="The 90-day timeline working backward from listing day, what staging costs, and every line item in a sale with real ranges. Eight pages, designed to print."
+
+            />
+
 
             <div style={styles.ctaBox}>
               <p style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', fontWeight: 600, margin: '0 0 8px', color: 'var(--color-cream)' }}>

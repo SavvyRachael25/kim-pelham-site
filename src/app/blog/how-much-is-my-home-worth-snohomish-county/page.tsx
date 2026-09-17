@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import GuideGate from '@/components/GuideGate';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 
@@ -222,6 +223,17 @@ export default function HomeValueGuidePage() {
             <p style={styles.bodyP}>
               If you are within 6 to 12 months of selling, I am happy to walk your home and give you my honest read on value, what the comp set looks like, what would move the price up if you decided to do some pre-sale work, and what your list strategy might look like. No pressure, no obligation, no signing anything. I keep two active buyers at a time, so I would rather start an honest conversation than chase a quick sale.
             </p>
+
+            <GuideGate
+
+              guide="home-sellers"
+
+              title="The pre-listing guide, free"
+
+              blurb="What a number on a website cannot tell you: the 90-day timeline, how pricing strategy actually works in this market, and every cost in a sale with real ranges. Eight pages."
+
+            />
+
 
             <div style={styles.ctaBox}>
               <p style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', fontWeight: 600, margin: '0 0 8px', color: 'var(--color-cream)' }}>

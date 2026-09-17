@@ -36,6 +36,12 @@ const GUIDES: Record<string, { title: string; file: string; workflowId: string }
     // "Guide Delivery - Living in Everett"
     workflowId: '1b2f2667-5068-49a3-b98c-3d975f1776b1',
   },
+  'home-sellers': {
+    title: 'Strategy, Not Luck: The Pre-Listing Guide',
+    file: '/guides/home-sellers-guide/home-sellers-guide.pdf',
+    // "Guide Delivery - Pre-Listing Guide"
+    workflowId: '63d87d61-882d-4105-8454-43e7a59490ac',
+  },
 };
 
 function slug(s: string): string {

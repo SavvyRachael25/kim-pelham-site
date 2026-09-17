@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import GuideGate from '@/components/GuideGate';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 
@@ -660,6 +661,12 @@ export default function StagingBeatsPriceCutsPage() {
                 </Link>
               </div>
             </section>
+            <GuideGate
+              guide="home-sellers"
+              title="The pre-listing guide, free"
+              blurb="What good staging looks like, the 90 days before we list, the pricing chapter, and what selling actually costs. Eight pages, designed to print."
+            />
+
 
             {/* CTA Section */}
             <section style={{ marginTop: '80px', padding: '40px', backgroundColor: 'var(--color-cream)', borderRadius: '4px', textAlign: 'center' }}>

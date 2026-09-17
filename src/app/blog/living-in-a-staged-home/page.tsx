@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import GuideGate from '@/components/GuideGate';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 import FAQSection from '@/components/FAQSection';
@@ -215,6 +216,17 @@ export default function LivingInAStagedHomePage() {
               </Link>
               .
             </p>
+
+            <GuideGate
+
+              guide="home-sellers"
+
+              title="The pre-listing guide, free"
+
+              blurb="Everything before the showings start: the 90-day timeline, what staging costs, the pricing chapter, and every line item in a sale. Eight pages."
+
+            />
+
 
             <div style={styles.ctaBox}>
               <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.6rem', marginBottom: '8px' }}>

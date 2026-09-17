@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import GuideGate from '@/components/GuideGate';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 
@@ -508,6 +509,12 @@ export default function FirstSeventyTwoHoursPage() {
                 </Link>
               </div>
             </section>
+            <GuideGate
+              guide="home-sellers"
+              title="Take the pre-listing guide with you"
+              blurb="The 90-day timeline that gets a house ready, the pricing chapter, what staging actually costs, and every line item in a sale with real numbers. Eight pages, designed to print."
+            />
+
 
             {/* CTA Section */}
             <section style={{ marginTop: '80px', padding: '40px', backgroundColor: 'var(--color-cream)', borderRadius: '4px', textAlign: 'center' }}>

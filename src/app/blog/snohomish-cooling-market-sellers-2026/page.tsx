@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import GuideGate from '@/components/GuideGate';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 
@@ -225,6 +226,17 @@ export default function CoolingMarketPage() {
             <p style={styles.bodyP}>
               When a seller calls me in 2026, I tell them three things. First, this is still a fine market to sell in. The headlines you read about a cooling market do not mean your home will not sell. They mean preparation and pricing matter more than they used to. Second, the strategy that worked in 2021 will lose you money in 2026. We are going to do this the 2026 way. Third, my concierge plan exists exactly for this market: I prep your home, manage the updates, and stage it with my own hands. Prep is normally paid as the work is completed, and if the cash is not there yet, we can defer it to closing. Either way there is no contractor-management stress, and the home shows the way it needs to show in 2026.
             </p>
+
+            <GuideGate
+
+              guide="home-sellers"
+
+              title="The pre-listing guide, free"
+
+              blurb="What to do about a slower market: the 90-day timeline, the pricing chapter, staging, and what a sale actually costs. Eight pages, designed to print."
+
+            />
+
 
             <div style={styles.ctaBox}>
               <p style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', fontWeight: 600, margin: '0 0 8px', color: 'var(--color-cream)' }}>
