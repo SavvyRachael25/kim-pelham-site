@@ -281,7 +281,7 @@ export default function SellersPage() {
                 margin: 0,
               }}
             >
-              Most transactions have a bump, sometimes small, sometimes large. My job is to get you over the bump with the least stress possible. A big bump can tank a sale, but over 17+ years I've learned that step by step, never giving up, almost always gets us through.
+              Most transactions have a bump, sometimes small, sometimes large. My job is to get you over the bump with the least stress possible. A big bump can tank a sale, but over 14 years I've learned that step by step, never giving up, almost always gets us through.
             </p>
           </div>
         </div>

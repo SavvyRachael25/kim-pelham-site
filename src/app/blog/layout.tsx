@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 const TITLE =
   'Snohomish County Real Estate Blog · Seller Strategy, Market Reports & Senior Guides | Kim Pelham';
 const DESC =
-  'Snohomish County real estate insights from broker Kim Pelham. Pre-sale renovation strategy, monthly NWMLS market reports, senior and estate transitions, and neighborhood buyer guides for Everett, Mill Creek, Bothell, Lake Stevens, Marysville, and Mukilteo. 17 years experience, 102.3% average sale-to-list ratio.';
+  'Snohomish County real estate insights from broker Kim Pelham. Pre-sale renovation strategy, monthly NWMLS market reports, senior and estate transitions, and neighborhood buyer guides for Everett, Mill Creek, Bothell, Lake Stevens, Marysville, and Mukilteo. 14 years experience, 102.3% average sale-to-list ratio.';
 
 export const metadata: Metadata = {
   title: TITLE,

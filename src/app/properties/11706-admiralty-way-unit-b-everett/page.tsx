@@ -65,7 +65,7 @@ const faq = [
   },
   {
     q: 'Who is the listing agent for 11706 Admiralty Way Unit B?',
-    a: 'The listing agent is Kim Pelham, a licensed real estate broker at The Pelham Group NW, brokered by Katrina Eileen Real Estate. Kim has 17+ years of experience in Snohomish County and can be reached at (425) 250-9422 or kim@thepelhamgroupnw.com.',
+    a: 'The listing agent is Kim Pelham, a licensed real estate broker at The Pelham Group NW, brokered by Katrina Eileen Real Estate. Kim has 14 years of experience in Snohomish County and can be reached at (425) 250-9422 or kim@thepelhamgroupnw.com.',
   },
 ];
 

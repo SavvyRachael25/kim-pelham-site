@@ -23,10 +23,10 @@ export async function generateMetadata({
 
   return {
     title: `${name} Homes for Sale | Kim Pelham | The Pelham Group NW`,
-    description: `Looking for homes in ${name}, WA? Kim Pelham with The Pelham Group NW specializes in ${name} real estate. 17+ years experience, 102% sale-to-list ratio. Call (425) 250-9422.`,
+    description: `Looking for homes in ${name}, WA? Kim Pelham with The Pelham Group NW specializes in ${name} real estate. 14 years experience, 102% sale-to-list ratio. Call (425) 250-9422.`,
     openGraph: {
       title: `${name} Homes for Sale | Kim Pelham | The Pelham Group NW`,
-      description: `Looking for homes in ${name}, WA? Kim Pelham with The Pelham Group NW specializes in ${name} real estate. 17+ years experience, 102% sale-to-list ratio. Call (425) 250-9422.`,
+      description: `Looking for homes in ${name}, WA? Kim Pelham with The Pelham Group NW specializes in ${name} real estate. 14 years experience, 102% sale-to-list ratio. Call (425) 250-9422.`,
       images: [{ url: image }],
       type: 'website',
       url: `https://thepelhamgroupnw.com/neighborhoods/${slug}`,

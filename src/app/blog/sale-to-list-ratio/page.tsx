@@ -65,7 +65,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              If you've looked at my marketing materials or heard me speak about my business, you've probably seen the number: 102.3%. That's my average sale-to-list ratio, the percentage of your home's asking price that it actually sells for. It's not a coincidence or luck. It's a direct reflection of strategy, preparation, and genuine expertise built over 17+ years of selling homes across Snohomish County. In this article, I want to break down what this metric means, why it matters, and how you can achieve similar results.
+              If you've looked at my marketing materials or heard me speak about my business, you've probably seen the number: 102.3%. That's my average sale-to-list ratio, the percentage of your home's asking price that it actually sells for. It's not a coincidence or luck. It's a direct reflection of strategy, preparation, and genuine expertise built over 14 years of selling homes across Snohomish County. In this article, I want to break down what this metric means, why it matters, and how you can achieve similar results.
             </p>
 
             <h2
@@ -201,7 +201,7 @@ export default function SaleToListRatioPage() {
                 marginBottom: '24px',
               }}
             >
-              Strategic pricing means listing your home where it will generate maximum interest from qualified buyers without leaving money on the table. I analyze comparable sales, current market days, buyer demand patterns, and your home's unique strengths to find that sweet spot. Price too low, and you're giving away equity. Price strategically, and you attract multiple offers that drive the final sale price up. This is where 17+ years of local expertise matters most.
+              Strategic pricing means listing your home where it will generate maximum interest from qualified buyers without leaving money on the table. I analyze comparable sales, current market days, buyer demand patterns, and your home's unique strengths to find that sweet spot. Price too low, and you're giving away equity. Price strategically, and you attract multiple offers that drive the final sale price up. This is where 14 years of local expertise matters most.
             </p>
 
             {/* Pull Quote */}

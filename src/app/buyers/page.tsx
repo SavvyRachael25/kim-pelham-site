@@ -671,7 +671,7 @@ export default function BuyersPage() {
           },
           {
             question: "I am moving from out of state. Which neighborhoods should I avoid?",
-            answer: "The neighborhood that's not so great is around Casino Road in South Everett. There's also a section of North Everett that has a higher crime rate than other areas of the city. For out-of-state buyers, my best advice is to use Google Street View to virtually tour any listing's surrounding blocks before you fly out, you can learn a lot about a neighborhood from a screen before you ever set foot in it. Great entry points for out-of-state buyers tend to be Silver Lake, Boulevard Bluffs, and Lake Stevens. After 17 years here, I'll tell you the truth about any address you're considering.",
+            answer: "The neighborhood that's not so great is around Casino Road in South Everett. There's also a section of North Everett that has a higher crime rate than other areas of the city. For out-of-state buyers, my best advice is to use Google Street View to virtually tour any listing's surrounding blocks before you fly out, you can learn a lot about a neighborhood from a screen before you ever set foot in it. Great entry points for out-of-state buyers tend to be Silver Lake, Boulevard Bluffs, and Lake Stevens. After 14 years in real estate, I'll tell you the truth about any address you're considering.",
           },
           {
             question: "What happens after I make an offer on a home?",

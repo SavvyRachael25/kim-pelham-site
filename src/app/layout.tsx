@@ -51,7 +51,7 @@ export const metadata: Metadata = {
   ),
   title: "Kim Pelham | Snohomish County Real Estate Broker | Everett, Bothell, Mill Creek WA",
   description:
-    "Kim Pelham is a Snohomish County real estate broker based in Everett, WA, serving Bothell, Snohomish, Mill Creek, Lake Stevens, Marysville and Mukilteo. 17 years of experience. 102.3% sale-to-list ratio versus 100.2% NWMLS market average. Maximum two active buyers at a time. Best of Snohomish County 2023 and 2024.",
+    "Kim Pelham is a Snohomish County real estate broker based in Everett, WA, serving Bothell, Snohomish, Mill Creek, Lake Stevens, Marysville and Mukilteo. 14 years of experience. 102.3% sale-to-list ratio versus 100.2% NWMLS market average. Maximum two active buyers at a time. Best of Snohomish County 2023 and 2024.",
   openGraph: {
     title: "Kim Pelham | Snohomish County Real Estate Broker",
     description:
@@ -63,7 +63,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Kim Pelham | Snohomish County Real Estate Broker",
-    description: "Your trusted Pacific Northwest real estate broker. 17+ years experience. 102.3% sale-to-list ratio.",
+    description: "Your trusted Pacific Northwest real estate broker. 14 years experience. 102.3% sale-to-list ratio.",
     images: ["/opengraph-image"],
   },
   verification: {
@@ -109,7 +109,7 @@ export default function RootLayout({
                   "name": "Kim Pelham",
                   "givenName": "Kim",
                   "familyName": "Pelham",
-                  "description": "Kim Pelham is a Snohomish County real estate broker with 17 years of real estate experience and a 102.3% sale-to-list ratio. She works with a maximum of two active buyers at a time and is a Senior Move Specialist helping seniors and families downsize and navigate estate transitions. She hosts the Snohomish County edition of The American Dream TV, an Emmy-nominated lifestyle series, with filming beginning in fall 2026. She does not hold the NAR SRES designation. Best of Snohomish County 2023 and 2024.",
+                  "description": "Kim Pelham says, \"I do residential real estate differently.\" Her husband is a general contractor, and together they combine their businesses to prepare homes for sale with repairs, remodeling, moving and staging. Payment can be deferred until closing if needed. Her transformations help sellers maximize their return, with a 102.3% sale-to-list ratio. She works with a maximum of two buyers at a time so she can really focus on their search. Based in Everett and serving Snohomish County, she is brokered by Katrina Eileen Real Estate, voted Best of Snohomish County two years in a row, earned Best of Zillow, and her book, Six-Word Lessons on Selling Your Home in Seattle, is on Amazon. She hosts a two-time Emmy-nominated show on American Dream TV. She is a Senior Move Specialist and does not hold the NAR SRES designation.",
                   "url": "https://thepelhamgroupnw.com/about",
                   "mainEntityOfPage": "https://thepelhamgroupnw.com/about",
                   "image": "https://thepelhamgroupnw.com/images/kim-headshot-msh.jpg",
@@ -156,7 +156,7 @@ export default function RootLayout({
                   "@id": "https://thepelhamgroupnw.com/#agent",
                   "name": "Kim Pelham",
                   "alternateName": "Kim Pelham, The Pelham Group NW",
-                  "description": "Kim Pelham is a Snohomish County real estate broker based in Everett, WA. 17 years of experience, 102.3% sale-to-list ratio versus the 100.2% NWMLS market average, and a maximum of two active buyers at a time. Services include residential buying, listing and selling, in-house home staging, and senior real estate transitions across Everett, Bothell, Snohomish, Mill Creek, Lake Stevens, Marysville and Mukilteo.",
+                  "description": "Kim Pelham is a Snohomish County real estate broker based in Everett, WA. 14 years of experience, 102.3% sale-to-list ratio versus the 100.2% NWMLS market average, and a maximum of two active buyers at a time. Services include residential buying, listing and selling, in-house home staging, and senior real estate transitions across Everett, Bothell, Snohomish, Mill Creek, Lake Stevens, Marysville and Mukilteo.",
                   "url": "https://thepelhamgroupnw.com",
                   "mainEntityOfPage": "https://thepelhamgroupnw.com",
                   "telephone": "+14252509422",
@@ -317,7 +317,7 @@ export default function RootLayout({
                   "@id": "https://thepelhamgroupnw.com/#website",
                   "url": "https://thepelhamgroupnw.com",
                   "name": "The Pelham Group NW",
-                  "description": "Kim Pelham, Snohomish County real estate broker. 17 years experience, 102.3% sale-to-list ratio, maximum two active buyers at a time.",
+                  "description": "Kim Pelham, Snohomish County real estate broker. 14 years experience, 102.3% sale-to-list ratio, maximum two active buyers at a time.",
                   "publisher": { "@id": "https://thepelhamgroupnw.com/#organization" },
                   "inLanguage": "en-US"
                 },
@@ -326,7 +326,7 @@ export default function RootLayout({
                   "@id": "https://thepelhamgroupnw.com/#business",
                   "name": "The Pelham Group NW",
                   "alternateName": "Kim Pelham - The Pelham Group NW",
-                  "description": "The Pelham Group NW is a Snohomish County real estate practice led by broker Kim Pelham. Services include residential listing and selling, buyer representation, in-house home staging, and senior real estate transitions. 17 years of experience, 102.3% average sale-to-list ratio.",
+                  "description": "The Pelham Group NW is a Snohomish County real estate practice led by broker Kim Pelham. Services include residential listing and selling, buyer representation, in-house home staging, and senior real estate transitions. 14 years of experience, 102.3% average sale-to-list ratio.",
                   "url": "https://thepelhamgroupnw.com",
                   "telephone": "+14252509422",
                   "email": "hello@thepelhamgroupnw.com",

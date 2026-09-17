@@ -23,10 +23,10 @@ import AccoladesStrip from '@/components/AccoladesStrip';
 
 export const metadata = {
   title: 'Kim Pelham · The Realtor Next Door | Snohomish County',
-  description: 'Your neighbor in real estate. 17+ years helping families buy and sell in Snohomish County. I answer my own phone, stage with my own hands, and fight for every dollar.',
+  description: 'Your neighbor in real estate. 14 years helping families buy and sell in Snohomish County. I answer my own phone, stage with my own hands, and fight for every dollar.',
   openGraph: {
     title: 'Kim Pelham · The Realtor Next Door',
-    description: '17+ years in Snohomish County. I answer my own phone, stage with my own hands, and fight for every dollar. The Pelham Group NW.',
+    description: '14 years in real estate, a Snohomish County broker since 2015. I answer my own phone, stage with my own hands, and fight for every dollar. The Pelham Group NW.',
     images: [{ url: '/images/kim-by-water.jpg', width: 1024, height: 683 }],
     type: 'website',
     url: 'https://thepelhamgroupnw.com',
@@ -34,7 +34,7 @@ export const metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Kim Pelham · The Realtor Next Door',
-    description: '17+ years in Snohomish County. I answer my own phone, stage with my own hands, and fight for every dollar.',
+    description: '14 years in real estate, a Snohomish County broker since 2015. I answer my own phone, stage with my own hands, and fight for every dollar.',
     images: ['/images/kim-by-water.jpg'],
   },
   alternates: {
@@ -69,7 +69,7 @@ export default function Home() {
           {
             question: 'Who is Kim Pelham?',
             answer:
-              "Kim Pelham is a Snohomish County real estate broker based in Everett, WA with 17 years of experience and a 102.3% average sale-to-list ratio versus the 100.2% NWMLS market average (Northwest Multiple Listing Service market reports, https://www.nwmls.com/discover/news-and-statistics/). She is a Senior Move Specialist who helps seniors and families downsize and navigate estate transitions, and she was named Best of Snohomish County in 2023 and 2024 by The Daily Herald (https://www.heraldnet.com/). Her practice, The Pelham Group NW, is brokered by Katrina Eileen Real Estate. Her active broker license is on file with the Washington State Department of Licensing (https://professionals.dol.wa.gov/s/license-lookup).",
+              "Kim Pelham is a Snohomish County real estate broker based in Everett, WA with 14 years of experience and a 102.3% average sale-to-list ratio versus the 100.2% NWMLS market average (Northwest Multiple Listing Service market reports, https://www.nwmls.com/discover/news-and-statistics/). She is a Senior Move Specialist who helps seniors and families downsize and navigate estate transitions, and she was named Best of Snohomish County in 2023 and 2024 by The Daily Herald (https://www.heraldnet.com/). Her practice, The Pelham Group NW, is brokered by Katrina Eileen Real Estate. Her active broker license is on file with the Washington State Department of Licensing (https://professionals.dol.wa.gov/s/license-lookup).",
           },
           {
             question: 'What is The Pelham Group NW sale-to-list ratio?',

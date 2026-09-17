@@ -90,7 +90,7 @@ export default function Image() {
         {/* Stats row */}
         <div style={{ display: 'flex', gap: '48px', alignItems: 'center' }}>
           {[
-            { number: '17+', label: 'Years Experience' },
+            { number: '14', label: 'Years Experience' },
             { number: '102%', label: 'Sale-to-List Ratio' },
             { number: '40', label: 'Google Reviews ★★★★★' },
           ].map((stat) => (

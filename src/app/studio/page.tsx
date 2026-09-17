@@ -37,7 +37,7 @@ const CONVERSATIONS: ConversationEntry[] = [
     guestRole: 'ADHD coach · ADHD with Stephanie · adhdwithstephanie.com',
     recorded: 'Recorded June 26, 2026',
     summary:
-      'Kim and Stephanie on the human side of a big move: stress, anxiety, and why moving is an executive-function marathon. Stephanie brings the mindset tools, Kim brings 17 years of walking people through it.',
+      'Kim and Stephanie on the human side of a big move: stress, anxiety, and why moving is an executive-function marathon. Stephanie brings the mindset tools, Kim brings 14 years of walking people through it.',
     href: '/studio/stephanie-and-kim',
   },
 ];
@@ -105,7 +105,7 @@ export default function StudioPage() {
               why I&apos;m doing this
             </div>
             <p style={{ ...bodyStyle, fontSize: 15.5, marginTop: 0 }}>
-              After 17 years of selling homes, I know the truth: nobody moves because of a house. They
+              After 14 years of selling homes, I know the truth: nobody moves because of a house. They
               move because life changed. And the people who help them through it, the coaches, the lenders,
               the contractors, the small business owners, are the ones who make this county work. They
               deserve a bigger spotlight, and honestly, I learn something every single time.

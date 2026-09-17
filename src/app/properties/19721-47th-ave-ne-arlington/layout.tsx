@@ -127,7 +127,7 @@ export default function ArlingtonLayout({ children }: { children: React.ReactNod
         name: 'Who is the listing agent for 19721 47th Ave NE, Arlington?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The home was listed and sold by Kim Pelham, a licensed real estate broker at The Pelham Group NW, brokered by Katrina Eileen Real Estate in Snohomish County, WA. Kim has 17+ years of experience and can be reached at (425) 250-9422.',
+          text: 'The home was listed and sold by Kim Pelham, a licensed real estate broker at The Pelham Group NW, brokered by Katrina Eileen Real Estate in Snohomish County, WA. Kim has 14 years of experience and can be reached at (425) 250-9422.',
         },
       },
       {

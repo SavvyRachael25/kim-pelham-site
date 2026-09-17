@@ -65,7 +65,7 @@ Always, Kim`,
 
 So I sat down with Stephanie Galindo, an ADHD coach who works with entrepreneurs and professionals, for the first conversation in my Community Spotlight series. In this clip she makes a point I keep coming back to: neurodivergence is not a set of boxes, it is a range. The world changed faster than our brains did.
 
-After 17 years of walking people through moves, I can tell you the emotional and cognitive load is real. Featuring the people who help others carry it felt like the right place to start this series.
+After 14 years of walking people through moves, I can tell you the emotional and cognitive load is real. Featuring the people who help others carry it felt like the right place to start this series.
 
 Full conversation coming soon. Find Stephanie at adhdwithstephanie.com.`,
           },

@@ -5,7 +5,7 @@ const items = [
   "Two buyers max",
   "Boots not heels",
   "Your neighbor, not your salesperson",
-  "17+ years in real estate",
+  "14 years in real estate",
   "I answer my own phone",
   "Let's find your home",
 ];

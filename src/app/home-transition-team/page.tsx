@@ -66,7 +66,7 @@ const faqs = [
   {
     question: 'What is a Senior Move Specialist and why does it matter?',
     answer:
-      'A Senior Move Specialist is a broker who focuses on the moves clients over 50 actually face: estate transitions, downsizing, the timing of a move, and the family conversations that come with all of it. Kim Pelham has spent years helping seniors and families downsize, sell a parent\'s home, and navigate estate transitions, with 17 years of real estate experience behind her.',
+      'A Senior Move Specialist is a broker who focuses on the moves clients over 50 actually face: estate transitions, downsizing, the timing of a move, and the family conversations that come with all of it. Kim Pelham has spent years helping seniors and families downsize, sell a parent\'s home, and navigate estate transitions, with 14 years of real estate experience behind her.',
   },
   {
     question: 'How do we start?',
@@ -98,7 +98,7 @@ export default function HomeTransitionTeamPage() {
               Pelham Group NW Home Transition Team exists so one call covers all of it:
               licensed contractors, in-house staging, professional listing marketing, and
               senior move guidance for seniors and their families, led by a broker with
-              17 years in real estate. When needed, payment for pre-sale repairs can
+              14 years in real estate. When needed, payment for pre-sale repairs can
               defer until closing.
             </p>
           </div>

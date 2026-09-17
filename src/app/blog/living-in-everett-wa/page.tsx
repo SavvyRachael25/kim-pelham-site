@@ -333,7 +333,7 @@ export default function Page() {
 
             <h2 style={styles.h2}>Thinking About Buying a Home in Everett?</h2>
             <p style={styles.bodyP}>
-              I have been in real estate for 17 years and a Snohomish County broker since 2015, and Everett is a market where looking at the details really matters. Two homes with an Everett address can offer very different daily lives.
+              I have been in real estate for 14 years and a Snohomish County broker since 2015, and Everett is a market where looking at the details really matters. Two homes with an Everett address can offer very different daily lives.
             </p>
             <p style={styles.bodyP}>
               If you are considering Everett, I am happy to help you narrow the search, tour different parts of the city and understand what you are buying before you make an offer. No pressure. The goal is simply to find the home and location that make sense for you.

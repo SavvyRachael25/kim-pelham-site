@@ -131,7 +131,7 @@ const awards: Award[] = [
   },
   {
     title: 'Closed Transactions',
-    sub: 'Across Snohomish and King County over a 17-year career.',
+    sub: 'Across Snohomish and King County over a 14-year career.',
     stat: '176',
   },
   {
@@ -205,12 +205,12 @@ const mediaFAQs = [
   {
     question: 'What credentials does Kim Pelham hold?',
     answer:
-      'Kim is a licensed Washington State real estate broker (17 years of experience), brokered by Katrina Eileen Real Estate, and a Senior Move Specialist with years of experience in senior and estate transitions. She is also Best of Zillow recognized and has a published-author credit with Pacelli Publishing.',
+      'Kim is a licensed Washington State real estate broker (14 years of experience), brokered by Katrina Eileen Real Estate, and a Senior Move Specialist with years of experience in senior and estate transitions. She is also Best of Zillow recognized and has a published-author credit with Pacelli Publishing.',
   },
   {
     question: 'What cities does Kim Pelham serve?',
     answer:
-      'Kim serves the full Snohomish County market with primary focus on Everett, Mill Creek, Bothell, Snohomish, Lake Stevens, Marysville, and Mukilteo. She is licensed in Washington State and has closed transactions across Snohomish and parts of King County over a 17-year career.',
+      'Kim serves the full Snohomish County market with primary focus on Everett, Mill Creek, Bothell, Snohomish, Lake Stevens, Marysville, and Mukilteo. She is licensed in Washington State and has closed transactions across Snohomish and parts of King County over a 14-year career.',
   },
 ];
 
@@ -325,7 +325,7 @@ export default function MediaPage() {
       <main>
         <InnerHero
           title="Press, Recognition & Published Work"
-          subtitle="Featured in the Daily Herald. First Place Best Realtor in the Best of Snohomish County back-to-back in 2023 and 2024. Best of Zillow Premier Agent. Published author. 17 years in real estate, building a reputation one client at a time."
+          subtitle="Featured in the Daily Herald. First Place Best Realtor in the Best of Snohomish County back-to-back in 2023 and 2024. Best of Zillow Premier Agent. Published author. 14 years in real estate, building a reputation one client at a time."
           image="/images/neighborhood-03-snohomish-historic.jpg"
           imageAlt="Historic Snohomish neighborhood"
           subtitleStyle="body"
@@ -335,7 +335,20 @@ export default function MediaPage() {
         <section style={{ background: 'var(--color-cream)', padding: '40px 24px 32px' }}>
           <div style={{ maxWidth: 880, margin: '0 auto' }}>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.06rem', lineHeight: 1.7, color: 'var(--color-text)', margin: 0 }}>
-              <b>What this page is.</b> A working press kit for journalists, producers, and event hosts. Every claim links to a verifiable source. Kim Pelham is a Washington-licensed real estate broker (17 years) with The Pelham Group NW, brokered by Katrina Eileen Real Estate. She holds a 102.3% average sale-to-list ratio across 176 closings, was First Place Best Realtor in the Daily Herald&apos;s Best of Snohomish County in 2023 and 2024 (back to back), and is the author of <i>Six-Word Lessons on Selling Your Home in Seattle</i> (Pacelli Publishing, 2017).
+              <b>What this page is.</b> A working press kit for journalists, producers, and event hosts. Every claim links to a verifiable source. Kim Pelham is a Washington-licensed real estate broker (14 years) with The Pelham Group NW, brokered by Katrina Eileen Real Estate. She holds a 102.3% average sale-to-list ratio across 176 closings, was First Place Best Realtor in the Daily Herald&apos;s Best of Snohomish County in 2023 and 2024 (back to back), and is the author of <i>Six-Word Lessons on Selling Your Home in Seattle</i> (Pacelli Publishing, 2017).
+            </p>
+          </div>
+        </section>
+
+        {/* OFFICIAL BIO: approved by Kim 2026-09-02 ("Perfect!"). The one bio for every surface.
+            Copy it verbatim. Source of truth: Kim/kim-bio-master.md. */}
+        <section aria-label="Official bio" style={{ background: '#fff', padding: '40px 24px', borderTop: '1px solid var(--color-border)' }}>
+          <div style={{ maxWidth: 880, margin: '0 auto' }}>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: 12, fontWeight: 700, letterSpacing: '0.16em', textTransform: 'uppercase', color: 'var(--color-text-faint)', margin: '0 0 12px' }}>
+              Official bio, copy as written
+            </p>
+            <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.06rem', lineHeight: 1.75, color: 'var(--color-text)', margin: 0 }}>
+              Kim Pelham says, &ldquo;I do residential real estate differently.&rdquo; Her husband is a general contractor, and together they combine their businesses to prepare homes for sale with repairs, remodeling, moving and staging. Payment can be deferred until closing if needed. Her transformations help sellers maximize their return, with a 102.3% sale-to-list ratio. She works with a maximum of two buyers at a time so she can really focus on their search. Based in Everett and serving Snohomish County, she is brokered by Katrina Eileen Real Estate, voted Best of Snohomish County two years in a row, earned Best of Zillow, and her book, <em>Six-Word Lessons on Selling Your Home in Seattle</em>, is on Amazon. She hosts a two-time Emmy-nominated show on American Dream TV.
             </p>
           </div>
         </section>

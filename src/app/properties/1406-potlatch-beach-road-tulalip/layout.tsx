@@ -146,7 +146,7 @@ export default function PotlatchLayout({ children }: { children: React.ReactNode
         name: 'Who is the listing agent for 1406 Potlatch Beach Road?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The listing agent is Kim Pelham, a licensed real estate broker at The Pelham Group NW, brokered by Katrina Eileen Real Estate in Snohomish County, WA. Kim has 17+ years of experience and can be reached at (425) 250-9422.',
+          text: 'The listing agent is Kim Pelham, a licensed real estate broker at The Pelham Group NW, brokered by Katrina Eileen Real Estate in Snohomish County, WA. Kim has 14 years of experience and can be reached at (425) 250-9422.',
         },
       },
       {

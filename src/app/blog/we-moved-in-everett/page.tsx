@@ -151,7 +151,7 @@ export default function WeMovedPage() {
 
             <p style={styles.signOff}>Always, Kim</p>
             <p style={styles.byline}>
-              Kim Pelham, Designated Broker, The Pelham Group NW · 17 years in real estate · <a href="tel:+14252509422" style={{ color: 'var(--color-clay)' }}>425.250.9422</a>
+              Kim Pelham, Designated Broker, The Pelham Group NW · 14 years in real estate · <a href="tel:+14252509422" style={{ color: 'var(--color-clay)' }}>425.250.9422</a>
             </p>
 
           </div>

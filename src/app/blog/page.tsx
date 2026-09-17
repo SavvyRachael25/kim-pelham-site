@@ -241,7 +241,7 @@ const blogPosts: BlogPost[] = [
     title: 'What Buyers in Mill Creek, Bothell & Lake Stevens Actually Want in 2026',
     slug: 'what-buyers-want-snohomish-county-2026',
     excerpt:
-      '17 years of buyer feedback distilled. The 9 features Snohomish County buyers actually look for, the 5 dealbreakers that kill listings before they start, and how to read your sub-market: Mill Creek, Bothell, Lake Stevens, Everett, and Mukilteo all behave differently in 2026.',
+      '14 years of buyer feedback distilled. The 9 features Snohomish County buyers actually look for, the 5 dealbreakers that kill listings before they start, and how to read your sub-market: Mill Creek, Bothell, Lake Stevens, Everett, and Mukilteo all behave differently in 2026.',
     date: '2026-06-09',
     category: 'Seller Strategy',
     image: '/images/property-03-lake-stevens-waterfront.jpg',
@@ -313,7 +313,7 @@ const blogPosts: BlogPost[] = [
     title: "The Everett Neighborhoods That Flood in November (And 3 That Don't)",
     slug: 'everett-neighborhoods-buyers-guide',
     excerpt:
-      '17 years and 50+ Everett homes sold. Here is what I actually know about the neighborhoods, which most people will not tell you until you ask.',
+      '14 years and 50+ Everett homes sold. Here is what I actually know about the neighborhoods, which most people will not tell you until you ask.',
     date: '2026-04-17',
     category: 'Buyer Guide',
     image: '/images/property-01-everett-home-exterior.jpg',
@@ -457,7 +457,7 @@ const blogFAQs = [
   {
     question: 'What cities does Kim Pelham serve?',
     answer:
-      'Kim Pelham serves the full Snohomish County market with a primary focus on Everett, Mill Creek, Bothell, Snohomish, Lake Stevens, Marysville, and Mukilteo. She is brokered by Katrina Eileen Real Estate and is licensed in Washington State. Her 17-year track record includes 176-plus closed transactions across Snohomish and parts of King County.',
+      'Kim Pelham serves the full Snohomish County market with a primary focus on Everett, Mill Creek, Bothell, Snohomish, Lake Stevens, Marysville, and Mukilteo. She is brokered by Katrina Eileen Real Estate and is licensed in Washington State. Her 14-year track record includes 176-plus closed transactions across Snohomish and parts of King County.',
   },
   {
     question: 'How many buyers does Kim Pelham work with at a time?',
@@ -747,7 +747,7 @@ export default function BlogPage() {
     image: `${SITE}/images/kim-headshot-msh.jpg`,
     jobTitle: 'Real Estate Broker',
     description:
-      '17 years of real estate experience, a Snohomish County broker since 2015. 102.3% average sale-to-list ratio vs 100.2% NWMLS market average. Best of Snohomish County 2023 and 2024. Senior Move Specialist.',
+      '14 years of real estate experience, a Snohomish County broker since 2015. 102.3% average sale-to-list ratio vs 100.2% NWMLS market average. Best of Snohomish County 2023 and 2024. Senior Move Specialist.',
     worksFor: {
       '@type': 'RealEstateAgent',
       name: 'Katrina Eileen Real Estate',
@@ -785,7 +785,7 @@ export default function BlogPage() {
         <section style={{ background: 'var(--color-cream)', padding: '48px 24px 36px', borderBottom: '1px solid var(--color-border)' }}>
           <div style={{ maxWidth: 880, margin: '0 auto' }}>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.06rem', lineHeight: 1.7, color: 'var(--color-text)', margin: 0 }}>
-              <b>What this blog is.</b> A working library for sellers, buyers, and Snohomish County families thinking about their next move. Every article is written from 17 years of broker-on-the-ground experience, sourced against NWMLS, the National Association of Realtors, JLC Cost vs Value, and Seattle Times reporting, and updated when the market does. Browse by topic below or jump to the featured piece.
+              <b>What this blog is.</b> A working library for sellers, buyers, and Snohomish County families thinking about their next move. Every article is written from 14 years of broker-on-the-ground experience, sourced against NWMLS, the National Association of Realtors, JLC Cost vs Value, and Seattle Times reporting, and updated when the market does. Browse by topic below or jump to the featured piece.
             </p>
           </div>
         </section>
@@ -967,7 +967,7 @@ export default function BlogPage() {
                 Kim Pelham, The Pelham Group NW
               </h2>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.06rem', color: 'var(--color-text-light)', lineHeight: 1.7, margin: '0 0 18px' }}>
-                Kim has spent 17 years in real estate walking families through the biggest moves of their lives, and has been a Snohomish County broker since 2015. Her 102.3% average sale-to-list ratio outperforms the 100.2% NWMLS county average across 176 closed transactions. She is a Senior Move Specialist for senior and estate transitions, brokered by Katrina Eileen Real Estate, and was named Best of Snohomish County in both 2023 and 2024.
+                Kim has spent 14 years in real estate walking families through the biggest moves of their lives, and has been a Snohomish County broker since 2015. Her 102.3% average sale-to-list ratio outperforms the 100.2% NWMLS county average across 176 closed transactions. She is a Senior Move Specialist for senior and estate transitions, brokered by Katrina Eileen Real Estate, and was named Best of Snohomish County in both 2023 and 2024.
               </p>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.06rem', color: 'var(--color-text-light)', lineHeight: 1.7, margin: '0 0 26px' }}>
                 Every article on this site is written from her own broker-on-the-ground experience, sourced against NWMLS data, the National Association of Realtors, JLC Cost vs Value, and Seattle Times reporting. She works with a maximum of two active buyers at a time so every client gets a true concierge experience, and she preps, stages, and photographs her listings herself.

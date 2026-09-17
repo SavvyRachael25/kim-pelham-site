@@ -111,7 +111,7 @@ export default function Page() {
             <div style={{ flex: '1 1 320px' }}>
               <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.7rem', color: 'var(--color-forest)', marginBottom: '6px' }}>Kim Pelham</p>
               <p style={{ ...styles.bodyP, marginBottom: '10px' }}>
-                Real estate broker and home stager, 17 years in real estate and a Snohomish County broker since 2015, brokered by Katrina Eileen Real Estate. Voted Best of Snohomish County two years in a row, Best of Zillow, and now a host on The American Dream TV.
+                Real estate broker and home stager, 14 years in real estate and a Snohomish County broker since 2015, brokered by Katrina Eileen Real Estate. Voted Best of Snohomish County two years in a row, Best of Zillow, and now a host on The American Dream TV.
               </p>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.95rem', color: 'var(--color-text-light)', margin: 0 }}>
                 <Link href="/about" style={{ color: 'var(--color-clay)', fontWeight: 600 }}>More about Kim</Link>

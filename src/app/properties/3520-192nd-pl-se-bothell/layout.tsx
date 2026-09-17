@@ -200,7 +200,7 @@ export default function BothellLayout({ children }: { children: React.ReactNode 
         name: 'Who is the listing agent for 3520 192nd Pl SE?',
         acceptedAnswer: {
           '@type': 'Answer',
-          text: 'The listing agent is Kim Pelham, a licensed real estate broker at The Pelham Group NW, brokered by Katrina Eileen Real Estate. Kim has 17+ years of experience and can be reached at (425) 250-9422 or kim@thepelhamgroupnw.com. WA Broker #119262.',
+          text: 'The listing agent is Kim Pelham, a licensed real estate broker at The Pelham Group NW, brokered by Katrina Eileen Real Estate. Kim has 14 years of experience and can be reached at (425) 250-9422 or kim@thepelhamgroupnw.com. WA Broker #119262.',
         },
       },
     ],

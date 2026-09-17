@@ -83,7 +83,7 @@ export default function InventoryJumpAugust2026Page() {
             </p>
 
             <p style={styles.bodyP}>
-              I have been a broker in Snohomish County since 2015, with 17 years in real estate overall, and I want to walk you through what this inventory jump actually means in practice. Not the headline version. The version I see in living rooms, at open houses, and at the negotiating table every week.
+              I have been a broker in Snohomish County since 2015, with 14 years in real estate overall, and I want to walk you through what this inventory jump actually means in practice. Not the headline version. The version I see in living rooms, at open houses, and at the negotiating table every week.
             </p>
 
             <h2 style={styles.h2}>The July numbers, in plain English</h2>

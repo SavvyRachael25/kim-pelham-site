@@ -749,7 +749,7 @@ export default function MukilteoPage() {
               },
               {
                 q: 'Who is the listing agent for 4611 76th Street SW?',
-                a: 'The home was listed and sold by Kim Pelham, a licensed real estate broker at The Pelham Group NW, brokered by Katrina Eileen Real Estate in Snohomish County, WA. Kim has 17+ years of experience and can be reached at (425) 250-9422.',
+                a: 'The home was listed and sold by Kim Pelham, a licensed real estate broker at The Pelham Group NW, brokered by Katrina Eileen Real Estate in Snohomish County, WA. Kim has 14 years of experience and can be reached at (425) 250-9422.',
               },
               {
                 q: 'What school district is 4611 76th Street SW in?',

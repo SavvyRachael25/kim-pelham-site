@@ -531,7 +531,7 @@ export default function SresRealtorSnohomishCountyPage() {
                   Is Kim Pelham SRES certified?
                 </h3>
                 <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.75, margin: 0 }}>
-                  No. I do not hold the SRES (Seniors Real Estate Specialist) designation and I do not claim it. SRES is awarded by the National Association of Realtors, and my brokerage, Katrina Eileen Real Estate, is not a NAR member, so the designation is not available to me. My title is Senior Move Specialist. I am a licensed Washington real estate broker (license 119262) with 17 years in real estate, and I have guided more than 30 senior transitions in Snohomish County.
+                  No. I do not hold the SRES (Seniors Real Estate Specialist) designation and I do not claim it. SRES is awarded by the National Association of Realtors, and my brokerage, Katrina Eileen Real Estate, is not a NAR member, so the designation is not available to me. My title is Senior Move Specialist. I am a licensed Washington real estate broker (license 119262) with 14 years in real estate, and I have guided more than 30 senior transitions in Snohomish County.
                 </p>
               </div>
 

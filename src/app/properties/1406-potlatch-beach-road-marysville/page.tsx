@@ -796,7 +796,7 @@ export default function PotlatchPage() {
               },
               {
                 q: 'Who is the listing agent for 1406 Potlatch Beach Road?',
-                a: 'The listing agent is Kim Pelham, a licensed real estate broker at The Pelham Group NW in Snohomish County, WA. Kim has 17+ years of experience and can be reached at (425) 250-9422.',
+                a: 'The listing agent is Kim Pelham, a licensed real estate broker at The Pelham Group NW in Snohomish County, WA. Kim has 14 years of experience and can be reached at (425) 250-9422.',
               },
               {
                 q: 'What school district is 1406 Potlatch Beach Road in?',

@@ -148,7 +148,7 @@ export default function Hero() {
             animation: 'fadeSlideUp 0.8s ease-out 0.2s both',
           }}
         >
-          I'm a Snohomish County real estate broker with 17 years of experience. According to NWMLS market
+          I'm a Snohomish County real estate broker with 14 years of experience. According to NWMLS market
           reports, my listings sell at an average of 102.3% of asking price against a 100.2% county average
           (as of June 2026, source:{' '}
           <a

@@ -3,11 +3,11 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Buy a Home in Snohomish County | Kim Pelham Real Estate',
   description:
-    "Expert buyer representation in Everett, Bothell, Mill Creek & Snohomish. Kim Pelham's 4-step process gets you into the right home at the right price. 17+ years experience.",
+    "Expert buyer representation in Everett, Bothell, Mill Creek & Snohomish. Kim Pelham's 4-step process gets you into the right home at the right price. 14 years experience.",
   openGraph: {
     title: 'Buy a Home in Snohomish County | Kim Pelham Real Estate',
     description:
-      "Expert buyer representation in Everett, Bothell, Mill Creek & Snohomish. Kim Pelham's 4-step process gets you into the right home at the right price. 17+ years experience.",
+      "Expert buyer representation in Everett, Bothell, Mill Creek & Snohomish. Kim Pelham's 4-step process gets you into the right home at the right price. 14 years experience.",
     images: ['/images/kim-with-client-on-couch.jpg'],
     type: 'website',
   },
@@ -60,7 +60,7 @@ export default function BuyersLayout({ children }: { children: React.ReactNode }
                 "name": "I am moving from out of state. Which Snohomish County neighborhoods should I avoid?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "The neighborhood that's not so great is around Casino Road in South Everett. There is also a section of North Everett that has a higher crime rate than other parts of the city. For out-of-state buyers, the best move is to use Google Street View to virtually tour any listing's surrounding blocks before you fly out, you can learn a lot about a neighborhood from a screen before you ever set foot in it. Great entry-point neighborhoods for out-of-state buyers tend to be Silver Lake (Everett), Boulevard Bluffs (Everett), and Lake Stevens. Kim has 17 years in real estate here and will tell you the truth about any address you are considering."
+                  "text": "The neighborhood that's not so great is around Casino Road in South Everett. There is also a section of North Everett that has a higher crime rate than other parts of the city. For out-of-state buyers, the best move is to use Google Street View to virtually tour any listing's surrounding blocks before you fly out, you can learn a lot about a neighborhood from a screen before you ever set foot in it. Great entry-point neighborhoods for out-of-state buyers tend to be Silver Lake (Everett), Boulevard Bluffs (Everett), and Lake Stevens. Kim has 14 years in real estate and will tell you the truth about any address you are considering."
                 }
               },
               {

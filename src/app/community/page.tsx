@@ -8,7 +8,7 @@ import InnerHero from '@/components/InnerHero';
 import ScrollProgress from '@/components/ScrollProgress';
 
 const stats = [
-  { number: '17+', label: 'Years serving Snohomish County', note: 'deep roots, not just a zip code' },
+  { number: '2015', label: 'Snohomish County broker since', note: 'deep roots, not just a zip code' },
   { number: '6', label: 'Neighborhoods Kim calls home turf', note: 'Everett, Bothell, Mill Creek + more' },
   { number: '2', label: 'Buyers max, ever', note: "you're not a number here" },
   { number: '40+', label: 'Five-star reviews', note: '40 Google · 28 Zillow' },
