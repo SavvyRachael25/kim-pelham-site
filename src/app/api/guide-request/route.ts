@@ -34,7 +34,7 @@ const GUIDES: Record<string, { title: string; file: string; workflowId: string }
     title: 'Living in Everett, WA: A Home Buyer’s Guide',
     file: '/guides/living-in-everett/living-in-everett-guide.pdf',
     // "Guide Delivery - Living in Everett"
-    workflowId: '1b2f2667-5068-49a3-b98c-3d975f1776b1',
+    workflowId: '4fedc6a1-e650-47ff-ba8f-971292181507',
   },
   'home-sellers': {
     title: 'Strategy, Not Luck: The Pre-Listing Guide',
