@@ -90,6 +90,17 @@ const press: PressItem[] = [
   {
     outlet: 'The Daily Herald',
     outletShort: 'Daily Herald',
+    date: '2026-09-19',
+    headline: 'Everett-based broker to host TV show about SnoCo',
+    description:
+      'Herald writer Jenna Millikan reports that Kim will host the Snohomish County edition of The American Dream TV, the Emmy nominated, Telly Award winning lifestyle and real estate series. Filming starts in October with 100+ Women Who Care About Snohomish County as the first segment, and Kim is asking the county for nominations at thepelhamgroupnw.com/adtv.',
+    quote:
+      "I'm all over the county, so I get to see so many areas and different neighborhoods. It just puts me in familiarity with a lot of different locations in Snohomish County.",
+    url: 'https://www.heraldnet.com/2026/09/19/everett-based-broker-to-host-tv-show-about-snoco/',
+  },
+  {
+    outlet: 'The Daily Herald',
+    outletShort: 'Daily Herald',
     date: '2025-03-14',
     headline: 'The real estate pros you need to know: Top 3 realtors in Snohomish County',
     description:
@@ -175,7 +186,7 @@ const mediaFAQs = [
   {
     question: 'Has Kim Pelham been featured in the press?',
     answer:
-      'Yes. Kim was profiled in The Daily Herald on March 14, 2025, in "The real estate pros you need to know: Top 3 realtors in Snohomish County," which highlighted her interior-design background and her back-to-back First Place finishes in the Daily Herald\'s Best of Snohomish County contest in 2023 and 2024. She is also a Best of Zillow Premier Agent.',
+      'Yes. On September 19, 2026, The Daily Herald reported that Kim will host the Snohomish County edition of The American Dream TV ("Everett-based broker to host TV show about SnoCo," by Jenna Millikan). She was also profiled on March 14, 2025, in "The real estate pros you need to know: Top 3 realtors in Snohomish County," which highlighted her interior-design background and her back-to-back First Place finishes in the Daily Herald\'s Best of Snohomish County contest in 2023 and 2024. She is also a Best of Zillow Premier Agent.',
   },
   {
     question: 'What awards has Kim Pelham won?',

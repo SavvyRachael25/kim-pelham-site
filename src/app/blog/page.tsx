@@ -33,6 +33,18 @@ const SITE = 'https://thepelhamgroupnw.com';
 
 const blogPosts: BlogPost[] = [
   {
+    id: '29',
+    title: 'The Daily Herald: "Everett-based broker to host TV show about SnoCo"',
+    slug: 'daily-herald-american-dream-tv-host',
+    excerpt:
+      'The Daily Herald on Kim hosting the Snohomish County edition of The American Dream TV, the Emmy nominated, Telly Award winning lifestyle series. Filming starts in October with 100+ Women Who Care. Nominations for places, businesses and nonprofits are open.',
+    date: '2026-09-19',
+    category: 'Community Spotlight',
+    image: '/images/adtv-announcement.jpg',
+    imageAlt: 'Kim Pelham is hosting The American Dream TV in Snohomish County',
+    readTime: 2,
+  },
+  {
     id: '28',
     title: "Snohomish County Has 39% More Homes for Sale. Is It a Buyer's Market Yet?",
     slug: 'snohomish-county-buyers-market-september-2026',
