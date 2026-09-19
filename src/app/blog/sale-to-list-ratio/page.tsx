@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import GuideGate from '@/components/GuideGate';
+import TextMeAsk from '@/components/TextMeAsk';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 
@@ -24,7 +25,7 @@ export default function SaleToListRatioPage() {
         <article style={{ padding: '80px 20px', backgroundColor: '#fff' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
 
-            {/* AEO Opening — Bold Direct Answer */}
+            {/* AEO Opening: Bold Direct Answer */}
             <p
               style={{
                 fontFamily: 'var(--font-body)',
@@ -142,6 +143,8 @@ export default function SaleToListRatioPage() {
             >
               The local average sale-to-list ratio hovers around 99 to 100%, depending on the sub-market and time of year. This means most homes either sell at asking price or slightly below. When a home sells at 104%, consistently, across different neighborhoods from Everett to Marysville to Mill Creek, it signals something deliberate. That home is positioned right. The marketing is working. Buyers see it and want it. That's what my clients experience again and again.
             </p>
+
+            <TextMeAsk question="What would your house list at, and what would it sell for?" page="sale-to-list-ratio" />
 
             <h2
               style={{
@@ -539,33 +542,15 @@ export default function SaleToListRatioPage() {
               >
                 Let's talk about your home's potential and how strategic pricing and marketing can help you achieve the best possible result.
               </p>
-              <Link
-                href="/contact"
-                style={{
-                  display: 'inline-block',
-                  padding: '16px 40px',
-                  backgroundColor: 'var(--color-clay)',
-                  color: '#fff',
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '1rem',
-                  fontWeight: 600,
-                  borderRadius: '4px',
-                  textDecoration: 'none',
-                  transition: 'all 0.3s',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#a0743d';
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.boxShadow = '0 8px 16px rgba(47, 82, 51, 0.15)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'var(--color-clay)';
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
+              <a
+                href="sms:+14252509422"
+                style={{ display: 'inline-block', padding: '16px 40px', backgroundColor: 'var(--color-clay)', color: '#fff', fontFamily: 'var(--font-body)', fontSize: '1rem', fontWeight: 600, borderRadius: '4px', textDecoration: 'none' }}
               >
-                Start a Conversation
-              </Link>
+                Text me: 425-250-9422
+              </a>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.95rem', color: 'var(--color-text-light)', margin: '16px 0 0' }}>
+                Or <Link href="/book" style={{ color: 'var(--color-clay)', fontWeight: 600 }}>book a 30-minute call</Link> and I&apos;ll call you.
+              </p>
             </section>
 
             {/* Back to Blog Link */}

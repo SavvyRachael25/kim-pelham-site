@@ -144,7 +144,7 @@ export default function Nav() {
     closeTimer.current = setTimeout(() => setOpenDropdown(null), 150);
   };
 
-  // Mount flag — needed so createPortal only runs client-side (document.body doesn't exist on server)
+  // Mount flag : needed so createPortal only runs client-side (document.body doesn't exist on server)
   useEffect(() => { setMounted(true); }, []);
 
   useEffect(() => {
@@ -272,6 +272,7 @@ export default function Nav() {
 
   const buttonStyle: React.CSSProperties = {
     fontFamily: 'var(--font-handwritten)',
+    whiteSpace: 'nowrap',
     background: '#2F5233',
     color: '#F8F5F0',
     border: 'none',
@@ -433,7 +434,7 @@ export default function Nav() {
           })}
         </div>
 
-        {/* Right side: socials + Talk to Kim button — hidden on mobile via CSS */}
+        {/* Right side: socials + Talk to Kim button : hidden on mobile via CSS */}
         <div id="desktop-nav-right" style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
           <NavSocialIcons />
         <button
@@ -449,12 +450,11 @@ export default function Nav() {
             target.style.transform = 'translateY(0)';
           }}
           onClick={() => {
-            const phoneNumber = '(425) 250-9422';
-            window.location.href = `tel:${phoneNumber.replace(/\D/g, '')}`;
+            window.location.href = '/book';
           }}
-          aria-label="Call Kim Pelham"
+          aria-label="Book a 30-minute call with Kim Pelham"
         >
-          Talk to Kim
+          Book a call
         </button>
         </div>
 
@@ -474,7 +474,7 @@ export default function Nav() {
         </button>
       </div>
 
-      {/* Mobile Menu — portaled to document.body so position:fixed escapes the
+      {/* Mobile Menu : portaled to document.body so position:fixed escapes the
           backdrop-filter containing block on <nav>. Without this portal, CSS
           backdrop-filter makes fixed children position relative to the nav (~80px)
           instead of the full viewport, so the menu never covers the screen. */}
@@ -559,16 +559,16 @@ export default function Nav() {
               </Link>
             );
           })}
+          <Link
+            href="/book"
+            style={{ ...mobileButtonStyle, display: 'block', textAlign: 'center', textDecoration: 'none', boxSizing: 'border-box' }}
+            onClick={() => setMobileMenuOpen(false)}
+            aria-label="Book a 30-minute call with Kim Pelham"
+          >
+            Book a call
+          </Link>
           <button
-            style={mobileButtonStyle}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.background = '#A07550';
-              e.currentTarget.style.transform = 'translateY(-1px)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.background = '#B8845C';
-              e.currentTarget.style.transform = 'translateY(0)';
-            }}
+            style={{ ...mobileButtonStyle, background: 'transparent', border: '1px solid #D4A07A', color: '#F8F5F0', marginTop: '-1rem' }}
             onClick={() => {
               window.location.href = `tel:14252509422`;
               setMobileMenuOpen(false);
@@ -578,7 +578,7 @@ export default function Nav() {
             Talk to Kim
           </button>
 
-          {/* Mobile menu socials — visible on dark bg */}
+          {/* Mobile menu socials : visible on dark bg */}
           <div
             style={{
               display: 'flex',
@@ -627,7 +627,7 @@ export default function Nav() {
         document.body
       )}
 
-      {/* CSS media queries — controls desktop vs mobile element visibility.
+      {/* CSS media queries : controls desktop vs mobile element visibility.
           Using !important to override inline styles without JS matchMedia flicker. */}
       <style>{`
         #desktop-nav        { display: flex; }

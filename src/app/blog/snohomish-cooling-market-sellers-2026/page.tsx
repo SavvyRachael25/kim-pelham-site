@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import GuideGate from '@/components/GuideGate';
+import TextMeAsk from '@/components/TextMeAsk';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 
@@ -147,6 +148,8 @@ export default function CoolingMarketPage() {
             <p style={styles.bodyP}>
               The rate-lock effect. If you have a 2.8% mortgage and moving would mean trading it for a 6.5% mortgage, you are unlikely to move unless you have a strong personal reason. This has kept supply lower than it otherwise would be, which is part of why prices are not falling further.
             </p>
+
+            <TextMeAsk question="What does a cooling market mean for your house?" page="snohomish-cooling-market-sellers-2026" />
 
             <h2 style={styles.h2}>What this means for sellers in 2026</h2>
             <p style={styles.bodyP}>

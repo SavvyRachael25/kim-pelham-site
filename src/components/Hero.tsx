@@ -1,7 +1,6 @@
 'use client';
 
 import Image from 'next/image';
-import Link from 'next/link';
 
 export default function Hero() {
 
@@ -21,7 +20,7 @@ export default function Hero() {
         alt="Aerial view of Snohomish County neighborhood"
         fill
         priority
-        // Quality 60 is fine here — the image sits behind a 60% black
+        // Quality 60 is fine here : the image sits behind a 60% black
         // gradient overlay so subtle JPEG/WebP artifacts are invisible.
         // Dropped further to win on mobile LCP.
         quality={60}
@@ -148,9 +147,11 @@ export default function Hero() {
             animation: 'fadeSlideUp 0.8s ease-out 0.2s both',
           }}
         >
-          I'm a Snohomish County real estate broker with 14 years of experience. According to NWMLS market
-          reports, my listings sell at an average of 102.3% of asking price against a 100.2% county average
-          (as of June 2026, source:{' '}
+          If you own a home in Snohomish County and you&apos;re going to sell it in the next year, this is
+          for you. Especially the house that&apos;s still full, or the one your mom lived in, or the one
+          you&apos;re selling from out of state. Buyers, ask me first whether I have room: I take two at a
+          time. My listings sell at an average of 102.3% of asking against a 100.2% county average (as of
+          June 2026, source:{' '}
           <a
             href="https://www.nwmls.com/discover/news-and-statistics/"
             target="_blank"
@@ -159,44 +160,42 @@ export default function Hero() {
           >
             NWMLS
           </a>
-          ). I work with a maximum of two active buyers at a time, so every showing, listing, and closing
-          earns my full attention.
+          ).
         </p>
 
-        {/* CTA Button */}
-        <Link href="/contact">
-          <button
-            style={{
-              fontFamily: 'var(--font-body)',
-              fontSize: '16px',
-              fontWeight: 600,
-              padding: '16px 32px',
-              backgroundColor: '#B8845C',
-              color: '#FFFFFF',
-              border: 'none',
-              borderRadius: '4px',
-              cursor: 'pointer',
-              transition: 'background-color 0.3s ease, box-shadow 0.3s ease',
-              animation: 'fadeSlideUp 0.8s ease-out 0.3s both',
-              boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.backgroundColor = '#A07550';
-              e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.25)';
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.backgroundColor = '#B8845C';
-              e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
-            }}
-          >
-            Let's Talk  -  Free Consultation
-          </button>
-        </Link>
+        {/* CTA: the text-me ask sits right under the hero */}
+        <a
+          href="#text-me"
+          style={{
+            display: 'inline-block',
+            fontFamily: 'var(--font-body)',
+            fontSize: '16px',
+            fontWeight: 600,
+            padding: '16px 32px',
+            backgroundColor: '#B8845C',
+            color: '#FFFFFF',
+            borderRadius: '4px',
+            textDecoration: 'none',
+            transition: 'background-color 0.3s ease, box-shadow 0.3s ease',
+            animation: 'fadeSlideUp 0.8s ease-out 0.3s both',
+            boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
+          }}
+          onMouseEnter={(e) => {
+            e.currentTarget.style.backgroundColor = '#A07550';
+            e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.25)';
+          }}
+          onMouseLeave={(e) => {
+            e.currentTarget.style.backgroundColor = '#B8845C';
+            e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
+          }}
+        >
+          Text me five photos of your house
+        </a>
       </div>
 
       {/* Hero h1 already uses clamp() for responsive sizing.
           Removed unscoped <style>{ h1 { ... } p { ... } }</style> block
-          — it was global and was shrinking every h1/p site-wide. */}
+          : it was global and was shrinking every h1/p site-wide. */}
     </section>
   );
 }

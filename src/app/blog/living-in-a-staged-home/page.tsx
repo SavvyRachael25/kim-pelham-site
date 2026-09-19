@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import GuideGate from '@/components/GuideGate';
+import TextMeAsk from '@/components/TextMeAsk';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 import FAQSection from '@/components/FAQSection';
@@ -147,6 +148,8 @@ export default function LivingInAStagedHomePage() {
             <p style={styles.bodyP}>
               <b>Do a quick kitchen reset after meals (3 to 5 minutes).</b> Load the dishwasher, wipe the counters and table, and put food away. The kitchen is now essentially ready for a showing.
             </p>
+
+            <TextMeAsk question="What would I stage in your house, and what would I leave alone?" page="living-in-a-staged-home" />
 
             <h2 style={styles.h2}>Living Areas</h2>
             <p style={styles.bodyP}>

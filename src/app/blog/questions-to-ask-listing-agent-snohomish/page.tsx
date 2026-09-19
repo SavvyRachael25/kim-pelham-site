@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import GuideGate from '@/components/GuideGate';
+import TextMeAsk from '@/components/TextMeAsk';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 import FAQSection from '@/components/FAQSection';
@@ -143,7 +144,16 @@ export default function QuestionsListingAgentPage() {
               .
             </p>
 
-            {QUESTIONS.map((item) => (
+            {QUESTIONS.slice(0, 4).map((item) => (
+              <div key={item.q}>
+                <h2 style={styles.h2}>{item.q}</h2>
+                <p style={styles.bodyP}>{item.a}</p>
+              </div>
+            ))}
+
+            <TextMeAsk question="Want my answers about your house, not in general?" page="questions-to-ask-listing-agent-snohomish" />
+
+            {QUESTIONS.slice(4).map((item) => (
               <div key={item.q}>
                 <h2 style={styles.h2}>{item.q}</h2>
                 <p style={styles.bodyP}>{item.a}</p>

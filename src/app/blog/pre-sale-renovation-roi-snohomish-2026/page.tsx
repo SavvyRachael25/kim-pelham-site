@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import GuideGate from '@/components/GuideGate';
+import TextMeAsk from '@/components/TextMeAsk';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 
@@ -224,6 +225,8 @@ export default function PreSaleRenovationROIPage() {
             <p style={styles.bodyP}>
               For qualifying homes, I also coordinate the entire renovation: I plan it, manage my own vetted local crew, and stage it with my own hands. The agreed updates and staging are normally paid as the work is completed, and where a seller needs it, that cost can be paid from your proceeds at closing instead. That is the Pelham concierge plan, and it exists because most sellers do not want to be a project manager and they do not want a contractor in their phone. They want their home prepared, photographed, and sold.
             </p>
+
+            <TextMeAsk question="Which updates would pay back on your house?" page="pre-sale-renovation-roi-snohomish-2026" />
 
             <h2 style={styles.h2}>Four updates that almost always pay back in our market</h2>
 

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import GuideGate from '@/components/GuideGate';
+import TextMeAsk from '@/components/TextMeAsk';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 
@@ -24,7 +25,7 @@ export default function SellAboveMarketValuePage() {
         <article style={{ padding: '80px 20px', backgroundColor: '#fff' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
 
-            {/* AEO Opening — Bold Direct Answer */}
+            {/* AEO Opening: Bold Direct Answer */}
             <p
               style={{
                 fontFamily: 'var(--font-body)',
@@ -207,6 +208,8 @@ export default function SellAboveMarketValuePage() {
             >
               Staging creates that response by removing distractions and highlighting what a home does best. A small living room feels larger when the furniture is right-sized and arranged to open the floor plan. A dated kitchen feels fresh when the counters are clear and the right accessories are in place. You&apos;re not hiding anything. You&apos;re presenting the home the way it deserves to be seen.
             </p>
+
+            <TextMeAsk question="What would it take to sell your house above asking?" page="sell-above-market-value" />
 
             {/* Section 3 */}
             <h2
@@ -753,33 +756,15 @@ export default function SellAboveMarketValuePage() {
               >
                 I&apos;ll walk through your home, tell you exactly what will move the needle, and build a pricing strategy around your specific situation. No fluff, no pressure. Just an honest conversation about what your home is worth and how to get there.
               </p>
-              <Link
-                href="/contact"
-                style={{
-                  display: 'inline-block',
-                  padding: '16px 40px',
-                  backgroundColor: 'var(--color-clay)',
-                  color: '#fff',
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '1rem',
-                  fontWeight: 600,
-                  borderRadius: '4px',
-                  textDecoration: 'none',
-                  transition: 'all 0.3s',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#a0743d';
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.boxShadow = '0 8px 16px rgba(47, 82, 51, 0.15)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'var(--color-clay)';
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
+              <a
+                href="sms:+14252509422"
+                style={{ display: 'inline-block', padding: '16px 40px', backgroundColor: 'var(--color-clay)', color: '#fff', fontFamily: 'var(--font-body)', fontSize: '1rem', fontWeight: 600, borderRadius: '4px', textDecoration: 'none' }}
               >
-                Start a Conversation
-              </Link>
+                Text me: 425-250-9422
+              </a>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.95rem', color: 'var(--color-text-light)', margin: '16px 0 0' }}>
+                Or <Link href="/book" style={{ color: 'var(--color-clay)', fontWeight: 600 }}>book a 30-minute call</Link> and I&apos;ll call you.
+              </p>
             </section>
 
             {/* Back to Blog Link */}

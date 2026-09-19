@@ -15,6 +15,19 @@ const FUNNEL_PATHS_EXACT = new Set<string>([
   '/prep', // pre-listing concierge offer: one ask, no competing popups
   '/listwithkim',
   '/condo-concierge',
+  '/tv', // the QR landing from the ADTV shoot: one field, no competing popups
+  '/', // the homepage carries the text-me ask under the hero (2026-09-19); the condo popup landed on top of it
+  // The nine seller posts carry the text-me ask mid-article (2026-09-19).
+  // The condo popup competed with it; the article is the funnel now.
+  '/blog/first-72-hours',
+  '/blog/how-much-is-my-home-worth-snohomish-county',
+  '/blog/pre-sale-renovation-roi-snohomish-2026',
+  '/blog/staging-beats-price-cuts',
+  '/blog/sale-to-list-ratio',
+  '/blog/questions-to-ask-listing-agent-snohomish',
+  '/blog/snohomish-cooling-market-sellers-2026',
+  '/blog/sell-above-market-value',
+  '/blog/living-in-a-staged-home',
 ]);
 
 const FUNNEL_PATH_PREFIXES = ['/case-study/'];

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import GuideGate from '@/components/GuideGate';
+import TextMeAsk from '@/components/TextMeAsk';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 
@@ -24,7 +25,7 @@ export default function StagingBeatsPriceCutsPage() {
         <article style={{ padding: '80px 20px', backgroundColor: '#fff' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
 
-            {/* AEO Opening — Bold Direct Answer */}
+            {/* AEO Opening: Bold Direct Answer */}
             <p
               style={{
                 fontFamily: 'var(--font-body)',
@@ -207,6 +208,8 @@ export default function StagingBeatsPriceCutsPage() {
             >
               Buyers who connect emotionally will compete for a home. They will waive contingencies, stretch their budgets, and write personal letters. Buyers who are only evaluating will make low offers or walk away. Price does not change that dynamic. Presentation does.
             </p>
+
+            <TextMeAsk question="Would staging or a price cut move your house?" page="staging-beats-price-cuts" />
 
             {/* Section: The Real ROI of Staging */}
             <h2
@@ -692,33 +695,15 @@ export default function StagingBeatsPriceCutsPage() {
               >
                 Let&apos;s talk about what your home needs before it hits the market. No pressure, just an honest conversation about what the data says.
               </p>
-              <Link
-                href="/contact"
-                style={{
-                  display: 'inline-block',
-                  padding: '16px 40px',
-                  backgroundColor: 'var(--color-clay)',
-                  color: '#fff',
-                  fontFamily: 'var(--font-body)',
-                  fontSize: '1rem',
-                  fontWeight: 600,
-                  borderRadius: '4px',
-                  textDecoration: 'none',
-                  transition: 'all 0.3s',
-                }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.backgroundColor = '#a0743d';
-                  e.currentTarget.style.transform = 'translateY(-2px)';
-                  e.currentTarget.style.boxShadow = '0 8px 16px rgba(47, 82, 51, 0.15)';
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.backgroundColor = 'var(--color-clay)';
-                  e.currentTarget.style.transform = 'translateY(0)';
-                  e.currentTarget.style.boxShadow = 'none';
-                }}
+              <a
+                href="sms:+14252509422"
+                style={{ display: 'inline-block', padding: '16px 40px', backgroundColor: 'var(--color-clay)', color: '#fff', fontFamily: 'var(--font-body)', fontSize: '1rem', fontWeight: 600, borderRadius: '4px', textDecoration: 'none' }}
               >
-                Let&apos;s Talk
-              </Link>
+                Text me: 425-250-9422
+              </a>
+              <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.95rem', color: 'var(--color-text-light)', margin: '16px 0 0' }}>
+                Or <Link href="/book" style={{ color: 'var(--color-clay)', fontWeight: 600 }}>book a 30-minute call</Link> and I&apos;ll call you.
+              </p>
             </section>
 
             {/* Back to Blog Link */}

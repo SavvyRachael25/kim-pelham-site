@@ -20,6 +20,7 @@ import ContactCTA from '@/components/ContactCTA';
 import FAQSection from '@/components/FAQSection';
 import FeaturedBlogBanner from '@/components/FeaturedBlogBanner';
 import AccoladesStrip from '@/components/AccoladesStrip';
+import TextMeAsk from '@/components/TextMeAsk';
 
 export const metadata = {
   title: 'Kim Pelham · The Realtor Next Door | Snohomish County',
@@ -49,6 +50,11 @@ export default function Home() {
       <AccoladesStrip />
       <CurrentlyLine />
       <Hero />
+      <section style={{ background: '#fff', padding: '48px 24px 8px' }}>
+        <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+          <TextMeAsk question="What would I fix, skip, and list your house at?" page="home" />
+        </div>
+      </section>
       <FeaturedBlogBanner />
       <Marquee />
       <StatsStrip />

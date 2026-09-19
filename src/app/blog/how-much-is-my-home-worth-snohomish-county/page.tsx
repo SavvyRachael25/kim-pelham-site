@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import GuideGate from '@/components/GuideGate';
+import TextMeAsk from '@/components/TextMeAsk';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 
@@ -152,6 +153,8 @@ export default function HomeValueGuidePage() {
               The CMA gives a value range. The list price is a strategy decision inside that range. Pricing at the lower end and creating competition can sometimes net a higher final sale price than pricing at the high end. Pricing at the high end can work if the home is genuinely the best in its comp set. We talk through both.
             </p>
 
+            <TextMeAsk question="What would I list your house at?" page="how-much-is-my-home-worth-snohomish-county" />
+
             <h2 style={styles.h2}>What specifically moves a Snohomish County valuation in 2026</h2>
 
             <h3 style={styles.h3}>School district and walk score</h3>
@@ -242,9 +245,9 @@ export default function HomeValueGuidePage() {
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', margin: '0 0 18px', color: 'rgba(248,245,240,0.85)' }}>
                 I will walk your home, pull the comp set, and give you my honest read. No obligation, ever.
               </p>
-              <Link href="/contact" style={styles.ctaButton}>
-                Reach out
-              </Link>
+              <a href="sms:+14252509422" style={styles.ctaButton}>
+                Text me: 425-250-9422
+              </a>
             </div>
 
             <h2 style={styles.h2}>Related reading</h2>

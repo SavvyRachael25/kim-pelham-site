@@ -11,6 +11,9 @@ import { useState } from 'react';
  */
 export default function NominationForm({ defaultType = 'home' }: { defaultType?: 'home' | 'business' | 'nonprofit' }) {
   const [type, setType] = useState<'home' | 'business' | 'nonprofit'>(defaultType);
+  // "Whose place?" comes first (2026-09-19). Both real nominations so far were
+  // somebody putting a friend or a neighbor forward, so that is the default path.
+  const [whose, setWhose] = useState<'someone' | 'mine'>('someone');
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -33,7 +36,8 @@ export default function NominationForm({ defaultType = 'home' }: { defaultType?:
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          type, firstName, lastName, email, phone, name, city, why, relationship, website,
+          type, firstName, lastName, email, phone, name, city, why, website,
+          relationship: whose === 'mine' ? (type === 'home' ? 'mine' : 'i-run-it') : relationship,
           utmSource: params?.get('utm_source') ?? undefined,
           utmMedium: params?.get('utm_medium') ?? undefined,
           utmCampaign: params?.get('utm_campaign') ?? undefined,
@@ -76,7 +80,9 @@ export default function NominationForm({ defaultType = 'home' }: { defaultType?:
       <div style={{ background: 'var(--color-forest)', color: 'var(--color-cream)', padding: '36px 32px', borderRadius: '8px' }}>
         <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.7rem', marginBottom: '10px' }}>Got it, {firstName}. Thank you.</p>
         <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', opacity: 0.9, lineHeight: 1.7 }}>
-          I read every nomination myself. If it looks like a fit for this season, I will reach out to whoever owns it (and check with you first if it is not yours). If you nominated your own place, expect a call from me within a few days. A note with the next steps is on its way to {email}.
+          {whose === 'mine'
+            ? <>I read every nomination myself. Expect a call from me within a few days. A note with the next steps is on its way to {email}.</>
+            : <>I read every nomination myself. If it looks like a fit for this season, I check with you first, then I call them. Either way I text you what happened. A note is on its way to {email}.</>}
         </p>
         <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.95rem', marginTop: '16px', opacity: 0.85 }}>
           Anything to add? Text me: <a href="tel:+14252509422" style={{ color: 'var(--color-cream)' }}>425-250-9422</a>
@@ -93,7 +99,27 @@ export default function NominationForm({ defaultType = 'home' }: { defaultType?:
       </p>
 
       <form onSubmit={submit} style={{ maxWidth: '34rem' }}>
-        <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.8rem', letterSpacing: '2px', textTransform: 'uppercase', opacity: 0.75, marginBottom: '8px' }}>What are you nominating?</p>
+        <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.8rem', letterSpacing: '2px', textTransform: 'uppercase', opacity: 0.75, marginBottom: '8px' }}>Whose place?</p>
+        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px', marginBottom: '16px' }}>
+          {([['someone', 'Someone I know', 'a friend\u2019s place, a neighbor\u2019s house, a spot I love'], ['mine', 'My place', 'a home, a business, a nonprofit I run']] as const).map(([v, label, sub]) => (
+            <button
+              type="button"
+              key={v}
+              onClick={() => setWhose(v)}
+              aria-pressed={whose === v}
+              style={{
+                textAlign: 'left', padding: '12px 14px', borderRadius: '6px', cursor: 'pointer',
+                border: '2px solid ' + (whose === v ? 'var(--color-clay)' : 'rgba(248,245,240,0.3)'),
+                background: whose === v ? 'rgba(184,132,92,0.22)' : 'transparent', color: 'var(--color-cream)',
+              }}
+            >
+              <span style={{ display: 'block', fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: '1rem' }}>{label}</span>
+              <span style={{ display: 'block', fontFamily: 'var(--font-body)', fontSize: '0.8rem', opacity: 0.8, marginTop: '2px' }}>{sub}</span>
+            </button>
+          ))}
+        </div>
+
+        <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.8rem', letterSpacing: '2px', textTransform: 'uppercase', opacity: 0.75, marginBottom: '8px' }}>{whose === 'mine' ? 'What is it?' : 'What are you nominating?'}</p>
         <div style={{ marginBottom: '14px' }}>
           {pill('home', 'A home')}{pill('business', 'A business')}{pill('nonprofit', 'A nonprofit')}
         </div>
@@ -101,23 +127,23 @@ export default function NominationForm({ defaultType = 'home' }: { defaultType?:
         <input style={field} type="text" placeholder={type === 'home' ? 'The house (a street or a nickname is fine)' : type === 'business' ? 'The business' : 'The organization'} value={name} onChange={(e) => setName(e.target.value)} required />
         <input style={field} type="text" placeholder="City or neighborhood" value={city} onChange={(e) => setCity(e.target.value)} required autoComplete="address-level2" />
         <textarea style={{ ...field, minHeight: '110px', resize: 'vertical' }} placeholder={type === 'home' ? 'What is the story? A view, a history, a renovation, something people slow down to look at.' : 'Why should people know about it?'} value={why} onChange={(e) => setWhy(e.target.value)} required />
-        <select style={{ ...field, color: relationship ? 'var(--color-cream)' : 'rgba(248,245,240,0.6)' }} value={relationship} onChange={(e) => setRelationship(e.target.value)} required>
-          <option value="" style={opt}>How do you know it?</option>
-          {type === 'home' ? (
-            <>
-              <option value="mine" style={opt}>It is my home</option>
-              <option value="neighbor" style={opt}>It is a neighbor&apos;s</option>
-              <option value="friend" style={opt}>It belongs to a friend or family</option>
-              <option value="other" style={opt}>I just admire it</option>
-            </>
-          ) : (
-            <>
-              <option value="i-run-it" style={opt}>I run it</option>
-              <option value="friend" style={opt}>I know the owner</option>
-              <option value="other" style={opt}>I am a fan</option>
-            </>
-          )}
-        </select>
+        {whose === 'someone' && (
+          <select style={{ ...field, color: relationship ? 'var(--color-cream)' : 'rgba(248,245,240,0.6)' }} value={relationship} onChange={(e) => setRelationship(e.target.value)} required>
+            <option value="" style={opt}>How do you know it?</option>
+            {type === 'home' ? (
+              <>
+                <option value="neighbor" style={opt}>It is a neighbor&apos;s</option>
+                <option value="friend" style={opt}>It belongs to a friend or family</option>
+                <option value="other" style={opt}>I just admire it</option>
+              </>
+            ) : (
+              <>
+                <option value="friend" style={opt}>I know the owner</option>
+                <option value="other" style={opt}>I am a fan</option>
+              </>
+            )}
+          </select>
+        )}
 
         <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.8rem', letterSpacing: '2px', textTransform: 'uppercase', opacity: 0.75, margin: '14px 0 8px' }}>About you</p>
         <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '10px' }}>
@@ -125,7 +151,7 @@ export default function NominationForm({ defaultType = 'home' }: { defaultType?:
           <input style={field} type="text" placeholder="Last name" value={lastName} onChange={(e) => setLastName(e.target.value)} autoComplete="family-name" />
         </div>
         <input style={field} type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required autoComplete="email" />
-        <input style={field} type="tel" placeholder="Phone (optional, but it is how I will reach you fastest)" value={phone} onChange={(e) => setPhone(e.target.value)} autoComplete="tel" />
+        <input style={field} type="tel" placeholder={whose === 'mine' ? 'Your cell (I call, I do not email)' : 'Your cell (so I can text you what happened)'} value={phone} onChange={(e) => setPhone(e.target.value)} required autoComplete="tel" inputMode="tel" pattern="[\d\s().+-]{10,}" title="A phone number with at least 10 digits" />
         <input style={{ position: 'absolute', left: '-9999px', width: '1px', height: '1px', opacity: 0 }} tabIndex={-1} autoComplete="off" type="text" name="website" value={website} onChange={(e) => setWebsite(e.target.value)} aria-hidden="true" />
 
         <button type="submit" disabled={state === 'sending'} style={{ background: 'var(--color-clay)', color: 'var(--color-cream)', fontFamily: 'var(--font-body)', fontWeight: 700, fontSize: '1rem', padding: '14px 28px', borderRadius: '4px', border: 'none', cursor: state === 'sending' ? 'default' : 'pointer', marginTop: '6px', opacity: state === 'sending' ? 0.7 : 1 }}>
@@ -135,7 +161,7 @@ export default function NominationForm({ defaultType = 'home' }: { defaultType?:
         {state === 'error' && <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.95rem', marginTop: '12px', color: '#F4C7B8' }}>{message}</p>}
 
         <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.85rem', marginTop: '14px', opacity: 0.7, lineHeight: 1.5 }}>
-          Being featured never costs anyone anything, and not every nomination airs. I will only contact the owner of a place you nominate after checking with you. You may also get the occasional note from me about the show and the Snohomish County market; unsubscribe any time.
+          Being featured never costs anyone anything, and not every nomination airs. I only contact the owner of a place you nominate after checking with you, and I text you either way. You may also get the occasional note from me about the show and the Snohomish County market; unsubscribe any time.
         </p>
       </form>
     </div>

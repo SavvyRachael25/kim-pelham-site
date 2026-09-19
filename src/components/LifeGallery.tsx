@@ -8,7 +8,9 @@ import Link from 'next/link';
   is her. Captions are her words where we have them.
 */
 
-const photos = [
+type LifePhoto = { src: string; alt: string; caption: string; span: 1 | 2; tall?: boolean; position?: string };
+
+const photos: LifePhoto[] = [
   {
     src: '/images/life/kim-brien-lucy-mount-finley.jpg',
     alt: 'Kim, Brien and Lucy at the top of Mount Finley with the Skagit River valley behind them',
@@ -20,6 +22,7 @@ const photos = [
     alt: 'A one-lane forest road seen over the hood of the car',
     caption: 'the long way back.',
     span: 1,
+    tall: true,
   },
   {
     src: '/images/life/seal-on-the-dock.jpg',
@@ -38,6 +41,8 @@ const photos = [
     alt: 'A great blue heron on the rocks at Anacortes',
     caption: 'Anacortes.',
     span: 1,
+    tall: true,
+    position: 'center 30%',
   },
   {
     src: '/images/life/lucy-and-buddy.jpg',
@@ -49,7 +54,7 @@ const photos = [
     src: '/images/life/muse-everett.jpg',
     alt: 'Muse coffee bar in Everett with a coffee cup on the flower planter',
     caption: 'Muse, in Everett. my pick.',
-    span: 1,
+    span: 2,
   },
 ];
 
@@ -102,17 +107,19 @@ export default function LifeGallery() {
             display: 'grid',
             gridTemplateColumns: 'repeat(3, minmax(0, 1fr))',
             gridAutoRows: '220px',
+            gridAutoFlow: 'dense',
             gap: '14px',
           }}
         >
           {photos.map((p) => (
             <figure
               key={p.src}
-              className={p.span === 2 ? 'life-span-2' : undefined}
+              className={[p.span === 2 ? 'life-span-2' : '', p.tall ? 'life-tall' : ''].join(' ').trim() || undefined}
               style={{
                 position: 'relative',
                 margin: 0,
                 gridColumn: p.span === 2 ? 'span 2' : 'span 1',
+                gridRow: p.tall ? 'span 2' : 'span 1',
                 borderRadius: '6px',
                 overflow: 'hidden',
                 background: '#24412a',
@@ -123,7 +130,7 @@ export default function LifeGallery() {
                 alt={p.alt}
                 fill
                 sizes="(max-width: 700px) 100vw, (max-width: 1100px) 50vw, 33vw"
-                style={{ objectFit: 'cover' }}
+                style={{ objectFit: 'cover', objectPosition: p.position ?? 'center' }}
               />
               <figcaption
                 style={{
@@ -163,6 +170,7 @@ export default function LifeGallery() {
         @media (max-width: 700px) {
           .life-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; grid-auto-rows: 170px !important; }
           .life-span-2 { grid-column: span 2 !important; }
+          .life-tall { grid-row: span 1 !important; }
         }
       `}</style>
     </section>

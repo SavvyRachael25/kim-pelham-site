@@ -17,6 +17,32 @@ const styles = {
   cardP: { fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', lineHeight: 1.7, margin: 0 } as const,
 };
 
+const SHOW_NOMINEES = false;
+
+const GUESTS = [
+  {
+    name: '100+ Women Who Care About Snohomish County',
+    status: 'Filming Monday, October 12',
+    blurb: 'About 175 women in one room, $100 each. Three nonprofits make their case, the room votes, and one of them walks out with the whole pot. More than $500,000 given since 2019.',
+    note: 'Normanna Lodge, Everett.',
+    confirmed: true,
+  },
+  {
+    name: 'The Lion House, Everett',
+    status: 'Nominated by a neighbor',
+    blurb: 'A house that was moved to save it, and brought back by the people who own it now.',
+    note: 'On the list.',
+    confirmed: false,
+  },
+  {
+    name: 'Uncluttered Professional Organizing, Lynnwood',
+    status: 'Nominated',
+    blurb: 'Since 1999: senior downsizing, estate clearing, and the photos nobody else would organize.',
+    note: 'On the list.',
+    confirmed: false,
+  },
+];
+
 const faqs = [
   { question: 'Does the home need to be for sale?', answer: 'No. Most of the homes on the show are not for sale. The show is about the people and places that make a community, not about listings.' },
   { question: 'Does it cost anything to be featured?', answer: 'No. Being featured on a segment never costs the homeowner, the business, or the nonprofit anything.' },
@@ -43,7 +69,7 @@ export default function Page() {
               <p style={{ fontFamily: 'var(--font-heading)', fontStyle: 'italic', fontSize: '1.35rem', lineHeight: 1.4, opacity: 0.92, marginBottom: '22px' }}>
                 A two-time Emmy-nominated, Telly Award-winning lifestyle show about the people and places that make a community. I am filming Snohomish County this fall, and I am looking for stories.
               </p>
-              <a href="#nominate" style={{ display: 'inline-block', background: 'var(--color-clay)', color: 'var(--color-cream)', fontFamily: 'var(--font-body)', fontWeight: 700, padding: '14px 28px', borderRadius: '4px', textDecoration: 'none' }}>Nominate a home, a business, or a nonprofit</a>
+              <a href="#nominate" style={{ display: 'inline-block', background: 'var(--color-clay)', color: 'var(--color-cream)', fontFamily: 'var(--font-body)', fontWeight: 700, padding: '14px 28px', borderRadius: '4px', textDecoration: 'none' }}>Whose place should be on it?</a>
             </div>
             <div style={{ position: 'relative', maxWidth: '440px', margin: '0 auto', paddingBottom: '54px' }}>
               <Image src="/images/kim-with-door.jpg" alt="Kim Pelham" width={1024} height={1536} priority style={{ width: '100%', height: 'auto', aspectRatio: '4 / 5', objectFit: 'cover', objectPosition: 'center 25%', borderRadius: '10px', display: 'block', border: '4px solid rgba(248,245,240,0.18)' }} />
@@ -83,6 +109,30 @@ export default function Page() {
                 <p style={styles.cardP}>The people quietly holding the county together. If you know one, I want to meet them.</p>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Who is on it: confirmed shoots only. Nominees stay off this page until
+            Kim has talked to the owner (her rule: she checks first). Flip
+            SHOW_NOMINEES when she has. */}
+        <section style={{ padding: '32px 20px 56px', backgroundColor: 'var(--color-cream)' }}>
+          <div style={{ maxWidth: '1100px', margin: '0 auto' }}>
+            <p style={styles.eyebrow}>who is on it,</p>
+            <h2 style={styles.h2}>The first segment films October 12.</h2>
+            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '18px', margin: '20px 0 0' }}>
+              {GUESTS.filter((g) => g.confirmed || SHOW_NOMINEES).map((g) => (
+                <div key={g.name} style={{ ...styles.card, borderTop: '4px solid var(--color-clay)' }}>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.72rem', letterSpacing: '2px', textTransform: 'uppercase', color: 'var(--color-clay)', margin: '0 0 6px' }}>{g.status}</p>
+                  <p style={styles.cardH}>{g.name}</p>
+                  <p style={styles.cardP}>{g.blurb}</p>
+                  <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.2rem', color: 'var(--color-clay)', margin: '12px 0 0' }}>{g.note}</p>
+                </div>
+              ))}
+            </div>
+            <p style={{ ...styles.bodyP, marginTop: '24px', marginBottom: 0 }}>
+              Two more places are on my list from nominations, both put forward by someone who loves them. I call the owner before anything goes on this page.{' '}
+              <span style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.35rem', color: 'var(--color-clay)' }}>I host. They&apos;re the story.</span>
+            </p>
           </div>
         </section>
 
