@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 /*
-  LifeGallery — real photos only. Kim, Brien, Lucy, the boat, the road.
+  LifeGallery: real photos only. Kim, Brien, Lucy, the boat, the road.
   Every image here came from Kim's own phone or her press shoot. Do not
   add stock or generated images to this grid; the whole point is that it
   is her. Captions are her words where we have them.
