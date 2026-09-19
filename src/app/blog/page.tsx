@@ -40,8 +40,8 @@ const blogPosts: BlogPost[] = [
       'The Daily Herald wrote a story about me this morning. I was chosen to host the Snohomish County edition of The American Dream TV. We will be filming in October, starting with 100+ Women Who Care, and I would love to have your nominations.',
     date: '2026-09-19',
     category: 'Community Spotlight',
-    image: '/images/neighborhood-01-everett-marina.jpg',
-    imageAlt: 'The Everett waterfront at the marina at sunset',
+    image: '/images/kim-by-water.jpg',
+    imageAlt: 'Kim Pelham on the waterfront in Everett',
     readTime: 2,
   },
   {
