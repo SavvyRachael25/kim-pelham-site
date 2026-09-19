@@ -12,7 +12,7 @@ import About from '@/components/About';
 import NoteFromKim from '@/components/NoteFromKim';
 import Services from '@/components/Services';
 import Properties from '@/components/Properties';
-import LifestyleBand from '@/components/LifestyleBand';
+import LifeGallery from '@/components/LifeGallery';
 import NeighborhoodsPinboard from '@/components/NeighborhoodsPinboard';
 import LocalPicks from '@/components/LocalPicks';
 import BlogPreview from '@/components/BlogPreview';
@@ -58,7 +58,7 @@ export default function Home() {
       <NoteFromKim />
       <Services />
       <Properties />
-      <LifestyleBand />
+      <LifeGallery />
       <NeighborhoodsPinboard />
       <LocalPicks />
       <BlogPreview />
