@@ -80,7 +80,7 @@ export default function DailyHeraldADTVLayout({ children }: { children: React.Re
     articleSection: 'Community Spotlight',
     keywords: 'Kim Pelham, American Dream TV, Daily Herald, Snohomish County, Everett, television host, press',
     inLanguage: 'en-US',
-    wordCount: 420,
+    wordCount: 330,
     citation: [
       {
         '@type': 'NewsArticle',

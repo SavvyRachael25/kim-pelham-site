@@ -84,57 +84,51 @@ export default function DailyHeraldADTVPage() {
 
         <article style={{ padding: '80px 20px', backgroundColor: '#fff' }}>
           <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+            <p style={styles.bodyP}>Hi! The Daily Herald wrote a story about me this morning. It was really cool to see it.</p>
+
             <p style={styles.bodyP}>
-              The Daily Herald ran a story about me this morning. I have lived here since 2015 and I have never been in the paper
-              for anything but the Best of Snohomish County list, so this one is a little surreal.
+              Here is what happened. I was chosen to host the Snohomish County edition of The American Dream TV. It&rsquo;s a
+              national lifestyle show, two-time Emmy nominated, and it airs on Roku, Amazon, Apple TV and Tubi. Each segment is
+              about five minutes and it is about a place or a business or a person here in the county. I get to pick what we
+              film.
             </p>
 
             <p style={styles.bodyP}>
-              The short version: I was chosen to host the Snohomish County edition of The American Dream TV. It is a national
-              lifestyle and real estate series, Emmy nominated, Telly Award winning, on Roku, Amazon, Apple TV, Tubi and the rest.
-              Each segment is about five minutes and it is about a place, a business or a person here, not about me. Jenna
-              Millikan at the Herald wrote it up, and you can read it here:
-            </p>
-
-            <p style={styles.bodyP}>
+              Jenna Millikan at the Herald wrote it up. Here is the article:{' '}
               <a href={HERALD_URL} target="_blank" rel="noopener" style={{ ...styles.link, fontWeight: 700 }}>
-                Everett-based broker to host TV show about SnoCo, The Daily Herald, September 19, 2026
+                Everett-based broker to host TV show about SnoCo
               </a>
             </p>
 
             <blockquote style={styles.quote}>
               &ldquo;I&rsquo;m all over the county, so I get to see so many areas and different neighborhoods. It just puts me in
               familiarity with a lot of different locations in Snohomish County.&rdquo;
-              <cite style={styles.cite}>Kim Pelham, to The Daily Herald</cite>
+              <cite style={styles.cite}>Me, to The Daily Herald</cite>
             </blockquote>
 
-            <h2 style={styles.h2}>What we film first</h2>
-
             <p style={styles.bodyP}>
-              Filming starts in October. The first segment is{' '}
+              We will be filming in October. The first segment is{' '}
               <a href="https://100womensnohomish.com" target="_blank" rel="noopener" style={styles.link}>
                 100+ Women Who Care About Snohomish County
               </a>
-              . About 175 women, $100 each, three nonprofits make their case, the room votes, and one of them walks out with the
-              whole pot. They have given over $500,000 to local nonprofits since 2019. If you have never been, that is the segment
-              to watch.
-            </p>
-
-            <h2 style={styles.h2}>I need your nominations</h2>
-
-            <p style={styles.bodyP}>
-              We are looking for interesting and cool places, businesses and non-profits. Things that are unique to Snohomish
-              County that are surprising and fun. Your favorite places, interesting businesses, surprising things that no one
-              knows about, great homes that have a story, even if they are not for sale.
+              . If you haven&rsquo;t heard of them, about 175 women meet three times a year, everybody brings $100, three
+              nonprofits give a pitch, and the room votes on who gets all of it. They have given over $500,000 since 2019. I am
+              really excited about this one!
             </p>
 
             <p style={styles.bodyP}>
-              Nominations take a minute at{' '}
+              I would love to have your nominations for the things you love about Snohomish County: your favorite places,
+              interesting businesses, surprising things that no one knows about, great homes that have a story. Please make your
+              nominations on{' '}
               <Link href="/adtv" style={{ ...styles.link, fontWeight: 700 }}>
-                thepelhamgroupnw.com/adtv
+                my website
               </Link>
-              . Or just tell me the next time you see me.
+              .
             </p>
+
+            <p style={styles.bodyP}>That&rsquo;s all I got for now.</p>
+
+            <p style={{ ...styles.bodyP, fontFamily: 'var(--font-handwritten)', fontSize: '1.8rem', color: 'var(--color-forest)' }}>Kim</p>
 
             <div style={styles.ctaBox}>
               <h3
@@ -147,7 +141,7 @@ export default function DailyHeraldADTVPage() {
                 Who should be on the show?
               </h3>
               <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', opacity: 0.85 }}>
-                A place, a business, a nonprofit, a home with a story. Tell me and I will go look.
+                A place, a business, a nonprofit, a home with a story. Tell me and I&rsquo;ll go check it out.
               </p>
               <Link href="/adtv" style={styles.ctaButton}>
                 Nominate someone
@@ -155,7 +149,7 @@ export default function DailyHeraldADTVPage() {
             </div>
 
             <p style={{ ...styles.bodyP, marginTop: '48px', fontSize: '0.95rem', opacity: 0.8 }}>
-              Press and interview requests: the press kit, headshots and bio are on the{' '}
+              Reporters: my press kit, headshots and bio are on the{' '}
               <Link href="/media" style={styles.link}>
                 media page
               </Link>

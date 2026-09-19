@@ -37,7 +37,7 @@ const blogPosts: BlogPost[] = [
     title: 'The Daily Herald: "Everett-based broker to host TV show about SnoCo"',
     slug: 'daily-herald-american-dream-tv-host',
     excerpt:
-      'The Daily Herald on Kim hosting the Snohomish County edition of The American Dream TV, the Emmy nominated, Telly Award winning lifestyle series. Filming starts in October with 100+ Women Who Care. Nominations for places, businesses and nonprofits are open.',
+      'The Daily Herald wrote a story about me this morning. I was chosen to host the Snohomish County edition of The American Dream TV. We will be filming in October, starting with 100+ Women Who Care, and I would love to have your nominations.',
     date: '2026-09-19',
     category: 'Community Spotlight',
     image: '/images/adtv-announcement.jpg',
