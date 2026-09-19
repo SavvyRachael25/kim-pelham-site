@@ -78,8 +78,8 @@ export default function DailyHeraldADTVPage() {
         <InnerHero
           title='The Daily Herald: "Everett-based broker to host TV show about SnoCo"'
           subtitle="By Kim Pelham · September 19, 2026 · 2 min read"
-          image="/images/adtv-announcement.jpg"
-          imageAlt="Kim Pelham is hosting The American Dream TV in Snohomish County"
+          image="/images/neighborhood-01-everett-marina.jpg"
+          imageAlt="The Everett waterfront at the marina, boats and the boardwalk at sunset"
         />
 
         <article style={{ padding: '80px 20px', backgroundColor: '#fff' }}>

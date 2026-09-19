@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     title: HEADLINE,
     description:
       'The Daily Herald on Kim Pelham hosting the Snohomish County edition of The American Dream TV. Filming starts in October. Nominations are open.',
-    images: [{ url: IMG, width: 1200, height: 630, alt: 'Kim Pelham is hosting The American Dream TV in Snohomish County' }],
+    images: [{ url: IMG, width: 1200, height: 630, alt: 'The Everett waterfront at the marina at sunset' }],
     type: 'article',
     url: URL,
     siteName: 'The Pelham Group NW',
