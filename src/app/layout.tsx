@@ -429,7 +429,7 @@ export default function RootLayout({
         <IntroAnimation>
           <div id="main-content">{children}</div>
         </IntroAnimation>
-        {/* GHL Chat Widget — Kim Pelham branded widget.
+        {/* GHL Chat Widget: Kim Pelham branded widget.
             lazyOnload: loads after the page is fully painted so it never
             competes with the hero for mobile LCP (AEO audit 2026-07-13,
             LCP 5.8s, "move heavy third-party scripts below the fold"). */}
