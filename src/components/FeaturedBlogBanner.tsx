@@ -5,21 +5,28 @@ import Link from 'next/link';
 
 /*
   FeaturedBlogBanner — homepage editorial banner pointing at the
-  most important blog article (currently the Pre-Sale Renovation
-  ROI playbook piece). Mirrors the visual weight of FeaturedListing
+  most important blog article (currently the Sep 19, 2026 Daily
+  Herald story on Kim hosting The American Dream TV). Mirrors the visual weight of FeaturedListing
   wide so swapping it in does not break the homepage rhythm.
 */
 
 const FEATURED = {
-  slug: 'pre-sale-renovation-roi-snohomish-2026',
-  category: 'Seller Strategy',
-  date: 'June 9, 2026',
-  readTime: '9 min read',
-  title: 'Should You Renovate Before Selling? A 2026 ROI Reality Check',
+  slug: 'daily-herald-american-dream-tv-host',
+  category: 'The Daily Herald',
+  date: 'September 19, 2026',
+  readTime: '2 min read',
+  title: 'Everett-based broker to host TV show about SnoCo',
   hook:
-    'The 2024 Cost vs Value Report shows which pre-sale improvements actually recoup their cost (garage doors at 194%) and which lose money (upscale kitchens at 38%). Here is the broker-on-the-ground breakdown.',
-  hero: '/images/hero-02-warm-kitchen.jpg',
-  heroAlt: 'Warm staged kitchen photographed for listing',
+    'The Daily Herald wrote it up on September 19. I was chosen to host the Snohomish County edition of The American Dream TV. We will be filming in October, and I would love to have your nominations for the things you love about Snohomish County.',
+  hero: '/images/neighborhood-01-everett-marina.jpg',
+  heroAlt: 'The Everett waterfront at the marina at sunset',
+  badge: 'In the news',
+  kicker: 'in the news',
+  logo: '/images/adtv-emmy-logo.png',
+  logoAlt: 'The American Dream TV, Emmy nominated',
+  primaryLabel: 'Read the story',
+  secondaryHref: '/adtv',
+  secondaryLabel: 'Nominate a place',
 };
 
 export default function FeaturedBlogBanner() {
@@ -77,11 +84,20 @@ export default function FeaturedBlogBanner() {
               borderRadius: '3px',
             }}
           >
-            From the Blog
+            {FEATURED.badge}
           </div>
         </Link>
 
         <div>
+          <div style={{ position: 'relative', width: '224px', height: '70px', margin: '0 0 18px 0' }}>
+            <Image
+              src={FEATURED.logo}
+              alt={FEATURED.logoAlt}
+              fill
+              sizes="224px"
+              style={{ objectFit: 'contain', objectPosition: 'left center' }}
+            />
+          </div>
           <p
             style={{
               fontFamily: 'var(--font-handwritten)',
@@ -91,7 +107,7 @@ export default function FeaturedBlogBanner() {
               lineHeight: 1,
             }}
           >
-            this week from Kim
+            {FEATURED.kicker}
           </p>
           <p
             style={{
@@ -150,10 +166,10 @@ export default function FeaturedBlogBanner() {
                 textDecoration: 'none',
               }}
             >
-              Read the article
+              {FEATURED.primaryLabel}
             </Link>
             <Link
-              href="/blog"
+              href={FEATURED.secondaryHref}
               style={{
                 display: 'inline-block',
                 padding: '12px 30px',
@@ -167,7 +183,7 @@ export default function FeaturedBlogBanner() {
                 border: '2px solid #2F5233',
               }}
             >
-              Browse all articles &rarr;
+              {FEATURED.secondaryLabel} &rarr;
             </Link>
           </div>
         </div>
