@@ -431,9 +431,16 @@ export default function RootLayout({
         <IntroAnimation>
           <div id="main-content">{children}</div>
         </IntroAnimation>
-        {/* The GHL chat widget (id 69e29c13141137f36a3cd275) came out 2026-09-19:
-            its auto-open bubble sat on top of the hero copy on mobile and competed
-            with the text-me ask. Chats landed in GHL, where Kim does not work. */}
+        {/* GHL Chat Widget — Kim Pelham branded widget.
+            lazyOnload: loads after the page is fully painted so it never
+            competes with the hero for mobile LCP (AEO audit 2026-07-13,
+            LCP 5.8s, "move heavy third-party scripts below the fold"). */}
+        <Script
+          src="https://widgets.leadconnectorhq.com/loader.js"
+          data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js"
+          data-widget-id="69e29c13141137f36a3cd275"
+          strategy="lazyOnload"
+        />
         {/* Mobile concierge condo teaser - bottom sheet, links to /condo-concierge funnel */}
         <MobileConciergeCondoPopup />
         {/* Site-wide concierge condo teaser - modal, links to /condo-concierge funnel */}
