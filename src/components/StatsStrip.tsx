@@ -15,7 +15,7 @@ interface Stat {
 
 const stats: Stat[] = [
   {
-    number: 17,
+    number: 14,
     label: 'Years in Real Estate',
     quip: '(and counting)',
     citationId: 'experience',

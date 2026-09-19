@@ -18,8 +18,8 @@ const FEATURED = {
   title: 'Everett-based broker to host TV show about SnoCo',
   hook:
     'The Daily Herald wrote it up on September 19. I was chosen to host the Snohomish County edition of The American Dream TV. We will be filming in October, and I would love to have your nominations for the things you love about Snohomish County.',
-  hero: '/images/neighborhood-01-everett-marina.jpg',
-  heroAlt: 'The Everett waterfront at the marina at sunset',
+  hero: '/images/seal-on-dock-everett-marina.jpg',
+  heroAlt: 'A harbor seal lying on the dock at the Everett marina, from Kim\'s boat',
   badge: 'In the news',
   kicker: 'in the news',
   logo: '/images/adtv-emmy-logo.png',
