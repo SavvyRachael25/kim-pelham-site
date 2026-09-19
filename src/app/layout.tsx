@@ -6,8 +6,6 @@ import "./globals.css";
 import IntroAnimation from "@/components/IntroAnimation";
 import Analytics from "@/components/Analytics";
 import UmamiEvents from "@/components/UmamiEvents";
-import MobileConciergeCondoPopup from "@/components/MobileConciergeCondoPopup";
-import ConciergeCondoPopup from "@/components/ConciergeCondoPopup";
 import OpenHouseBanner from "@/components/OpenHouseBanner";
 import AccessibilityWidget from "@/components/AccessibilityWidget";
 
@@ -441,10 +439,9 @@ export default function RootLayout({
           data-widget-id="69e29c13141137f36a3cd275"
           strategy="lazyOnload"
         />
-        {/* Mobile concierge condo teaser - bottom sheet, links to /condo-concierge funnel */}
-        <MobileConciergeCondoPopup />
-        {/* Site-wide concierge condo teaser - modal, links to /condo-concierge funnel */}
-        <ConciergeCondoPopup />
+        {/* The condo concierge popups (mobile bottom sheet + desktop modal) came out
+            2026-09-19: the May campaign's teaser was still firing on every page and
+            competed with the text-me ask. Components are still in src/components. */}
         {/* Brand-matched accessibility widget — floating bottom-left, settings persist */}
         <AccessibilityWidget />
         {/* Analytics & attribution — gated on env vars, no-op until configured */}
