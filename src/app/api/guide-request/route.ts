@@ -110,6 +110,10 @@ export async function POST(req: NextRequest) {
   }
 
   const { lastName, timeline, utmSource, utmMedium, utmCampaign, utmContent } = body;
+  // utmSource "internal-test" skips the FUB mirror and the SMS alert so a QA run never
+  // texts Kim or creates a FUB person. The GHL contact and the delivery workflow still
+  // run, which is the part worth testing. Matches /api/feature-request and /api/text-me.
+  const isTest = utmSource === 'internal-test';
 
   const tags = ['lead-magnet', `guide-${guideKey}`];
   if (timeline) tags.push(`timeline-${slug(timeline)}`);
@@ -218,7 +222,7 @@ export async function POST(req: NextRequest) {
 
   // Mirror into Follow Up Boss. Kim works out of FUB, so a lead that only
   // exists in GHL is invisible to her. Best-effort: never block the download.
-  if (ghlContactId) {
+  if (ghlContactId && !isTest) {
     const webhookSecret = process.env.PELHAM_WEBHOOK_SECRET?.trim();
     const proto = req.headers.get('x-forwarded-proto') ?? 'https';
     const host = req.headers.get('host') ?? 'thepelhamgroupnw.com';
@@ -245,7 +249,7 @@ export async function POST(req: NextRequest) {
   }
 
   // Alert Kim + Rachael. Best-effort: never block the download on this.
-  try {
+  if (!isTest) try {
     await sendOpsAlert({
       apiToken: GHL_API_TOKEN,
       locationId: GHL_LOCATION_ID,
