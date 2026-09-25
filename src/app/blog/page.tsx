@@ -33,6 +33,18 @@ const SITE = 'https://thepelhamgroupnw.com';
 
 const blogPosts: BlogPost[] = [
   {
+    id: '30',
+    title: 'Can You Sell Your House Yourself in Washington?',
+    slug: 'sell-your-house-yourself-washington',
+    excerpt:
+      'Yes, and I will help you do it. But Zillow will not list a for sale by owner in Washington any more, and that is most of your buyers. Here is what I can do instead, what it costs, and what usually happens.',
+    date: '2026-09-29',
+    category: 'Seller Strategy',
+    image: '/images/kim-with-client-on-couch.jpg',
+    imageAlt: 'Kim Pelham talking with a client at home',
+    readTime: 4,
+  },
+  {
     id: '29',
     title: 'The Daily Herald: "Everett-based broker to host TV show about SnoCo"',
     slug: 'daily-herald-american-dream-tv-host',
