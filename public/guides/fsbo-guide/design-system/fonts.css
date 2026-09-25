@@ -1,0 +1,79 @@
+/* ============================================================
+   Local @font-face declarations for The Pelham Group NW.
+
+   Cormorant Garamond, Inter, and Caveat — all variable-axis
+   TTFs from the official Google Fonts repository, OFL-1.1
+   licensed (see fonts/OFL-*.txt). Self-host these so prototypes
+   and print artifacts don't depend on a network round-trip.
+
+   Reference paths from the project root. If you import this
+   file from a sub-folder, the relative path "fonts/..." still
+   resolves because @font-face URLs are evaluated relative to
+   this stylesheet, not the importing document.
+   ============================================================ */
+
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: normal;
+  font-weight: 300 700;             /* variable axis */
+  font-display: swap;
+  src: url('fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype-variations'),
+       url('fonts/CormorantGaramond-VariableFont_wght.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Cormorant Garamond';
+  font-style: italic;
+  font-weight: 300 700;
+  font-display: swap;
+  src: url('fonts/CormorantGaramond-Italic-VariableFont_wght.ttf') format('truetype-variations'),
+       url('fonts/CormorantGaramond-Italic-VariableFont_wght.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('fonts/Inter-VariableFont_opsz_wght.ttf') format('truetype-variations'),
+       url('fonts/Inter-VariableFont_opsz_wght.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Inter';
+  font-style: italic;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('fonts/Inter-Italic-VariableFont_opsz_wght.ttf') format('truetype-variations'),
+       url('fonts/Inter-Italic-VariableFont_opsz_wght.ttf') format('truetype');
+}
+
+/* Caveat — using the user-provided static weight files (Regular,
+   Medium, SemiBold, Bold). Each file is a single weight, so we
+   declare four faces rather than the variable axis. */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/Caveat-Regular.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url('fonts/Caveat-Medium.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/Caveat-SemiBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('fonts/Caveat-Bold.ttf') format('truetype');
+}

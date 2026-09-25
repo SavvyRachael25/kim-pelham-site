@@ -28,6 +28,7 @@ const FUNNEL_PATHS_EXACT = new Set<string>([
   '/blog/snohomish-cooling-market-sellers-2026',
   '/blog/sell-above-market-value',
   '/blog/living-in-a-staged-home',
+  '/blog/sell-your-house-yourself-washington',
 ]);
 
 const FUNNEL_PATH_PREFIXES = ['/case-study/'];

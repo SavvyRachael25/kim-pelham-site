@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
 import TextMeAsk from '@/components/TextMeAsk';
+import GuideGate from '@/components/GuideGate';
 
 /*
   Written from Kim's own words on the September 24, 2026 call (transcript in
@@ -128,9 +129,10 @@ export default function SellYourHouseYourselfPage() {
               Eileen, the same as any other transaction.
             </p>
 
-            <TextMeAsk
-              question="Thinking about selling it yourself?"
-              page="sell-your-house-yourself-washington"
+            <GuideGate
+              guide="fsbo"
+              title="Take the whole thing with you"
+              blurb="Eight pages: the Zillow problem, the paperwork you are actually signing, all three ways to do this and what each costs, the buyer-agent-commission math, and how to tell when it is time to hand it over. Designed to print."
             />
 
             <h2 style={styles.h2}>What usually happens</h2>
@@ -210,6 +212,11 @@ export default function SellYourHouseYourselfPage() {
               And if you start down that road and it stops working, call me then. That is not a failure. It is just
               information, and we can switch it over in a few days.
             </p>
+
+            <TextMeAsk
+              question="Thinking about selling it yourself?"
+              page="sell-your-house-yourself-washington"
+            />
 
             <p style={styles.bodyP}>That&rsquo;s all I got for now.</p>
 

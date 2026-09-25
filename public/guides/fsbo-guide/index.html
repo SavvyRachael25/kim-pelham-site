@@ -1,0 +1,596 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Selling It Yourself in Washington: The Honest Version, by Kim Pelham</title>
+<link rel="stylesheet" href="design-system/colors_and_type.css">
+<style>
+  /* ───── Print page setup ───── */
+  @page { size: letter; margin: 0; }
+
+  html, body { margin: 0; padding: 0; background: #d9d4c8; }
+  body {
+    font-family: var(--font-body);
+    color: var(--color-text);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  * { box-sizing: border-box; }
+
+  /* Screen viewing: center pages with margin between them */
+  @media screen {
+    body { padding: 40px 0; }
+    .page {
+      margin: 0 auto 24px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+    }
+  }
+
+  /* Each page is 8.5×11 letter */
+  .page {
+    width: 8.5in;
+    height: 11in;
+    background: var(--color-cream);
+    position: relative;
+    overflow: hidden;
+    page-break-after: always;
+    break-after: page;
+  }
+  .page:last-child { page-break-after: auto; break-after: auto; }
+
+  /* Paper noise overlay: subtle, like the brand site */
+  .page::before {
+    content: "";
+    position: absolute; inset: 0;
+    pointer-events: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='200' height='200'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.2  0 0 0 0 0.18  0 0 0 0 0.14  0 0 0 0.06 0'/></filter><rect width='200' height='200' filter='url(%23n)'/></svg>");
+    opacity: 0.5;
+    z-index: 1;
+  }
+  .page > * { position: relative; z-index: 2; }
+
+  /* ───── Shared elements ───── */
+  .eyebrow {
+    font: 700 11px/1 var(--font-body);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--color-clay);
+  }
+  .hand {
+    font-family: var(--font-handwritten);
+    color: var(--color-clay);
+    line-height: 1;
+  }
+  h1, h2, h3 { font-family: var(--font-heading); color: var(--color-forest); margin: 0; line-height: 1.1; }
+  p { margin: 0; line-height: 1.65; color: var(--color-text); }
+
+  .page-num {
+    position: absolute; bottom: 32px; right: 40px;
+    font: 600 10px/1 var(--font-body);
+    letter-spacing: 2px;
+    color: var(--color-text-muted);
+  }
+  .page-foot-brand {
+    position: absolute; bottom: 32px; left: 40px;
+    font: 400 10px/1 var(--font-body);
+    letter-spacing: 1.5px;
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+  }
+
+  /* ───── Page 1 · Cover ───── */
+  .cover { display: flex; flex-direction: column; }
+  .cover-photo {
+    height: 6.6in; width: 100%; overflow: hidden; position: relative;
+  }
+  .cover-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .cover-photo::after {
+    content: ""; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0) 35%, rgba(0,0,0,0) 70%, rgba(47,82,51,0.55) 100%);
+  }
+  .cover-photo .label {
+    position: absolute; top: 36px; left: 40px;
+    color: #fff; font: 700 11px/1 var(--font-body);
+    letter-spacing: 2.5px; text-transform: uppercase;
+  }
+  .cover-photo .stamp { position: absolute; top: 32px; right: 40px; width: 88px; height: 88px; }
+  .cover-bottom { flex: 1; padding: 48px 56px 56px; display: flex; flex-direction: column; justify-content: space-between; }
+  .cover-bottom .hand { font-size: 32px; margin-bottom: 14px; }
+  .cover-bottom h1 {
+    font-size: 64px; font-weight: 600; line-height: 1; color: var(--color-forest);
+  }
+  .cover-bottom h1 em { font-style: italic; color: var(--color-clay); }
+  .cover-meta {
+    display: flex; justify-content: space-between; align-items: flex-end;
+    padding-top: 24px; border-top: 1px solid var(--color-border);
+  }
+  .cover-meta .by { font: 600 11px/1.4 var(--font-body); letter-spacing: 1.5px; text-transform: uppercase; color: var(--color-text-light); }
+  .cover-meta .by strong { display: block; font-family: var(--font-heading); font-size: 18px; font-style: italic; font-weight: 500; letter-spacing: 0; color: var(--color-forest); text-transform: none; margin-top: 4px; }
+
+  /* ───── Page 2 · Letter from Kim ───── */
+  .letter { padding: 64px 64px 80px; display: grid; grid-template-columns: 1fr 2.2fr; gap: 40px; align-items: start; }
+  .letter-photo {
+    border: 8px solid #fff;
+    box-shadow: var(--shadow-polaroid);
+    transform: rotate(-2deg);
+    margin-top: 12px;
+  }
+  .letter-photo img { width: 100%; height: 320px; object-fit: cover; display: block; }
+  .letter-photo .caption {
+    font-family: var(--font-handwritten);
+    color: var(--color-text);
+    text-align: center;
+    padding: 10px 0 4px;
+    font-size: 18px;
+  }
+  .letter-body .hand { font-size: 26px; margin-bottom: 10px; }
+  .letter-body h2 { font-size: 36px; font-weight: 600; font-style: italic; margin-bottom: 24px; }
+  .letter-body p { font-size: 12.5pt; line-height: 1.7; margin-bottom: 14px; color: var(--color-text); }
+  .letter-body .sig {
+    font-family: var(--font-handwritten); font-size: 36px; color: var(--color-forest);
+    margin-top: 22px; line-height: 1;
+  }
+  .letter-body .sig-name {
+    font-family: var(--font-body); font-size: 11pt; color: var(--color-text-light);
+    margin-top: 4px; letter-spacing: .04em;
+  }
+
+  /* ───── Section pages (3 to 7) ───── */
+  .section-page { padding: 56px 56px 64px; display: flex; flex-direction: column; }
+  .section-head { margin-bottom: 20px; }
+  .section-head .eyebrow { margin-bottom: 10px; }
+  .section-head h2 {
+    font-size: 42px; font-weight: 600; line-height: 1.1; color: var(--color-forest);
+  }
+  .section-head h2 em { font-style: italic; color: var(--color-clay); }
+  .section-lede {
+    font-family: var(--font-heading);
+    font-size: 16pt;
+    font-style: italic;
+    font-weight: 500;
+    color: var(--color-forest);
+    line-height: 1.4;
+    margin: 12px 0 18px;
+  }
+  .body-prose p { font-size: 11.5pt; line-height: 1.65; margin-bottom: 10px; }
+  .body-prose p strong { color: var(--color-forest); font-weight: 600; }
+
+  /* Pricing stat card */
+  .stat-card {
+    background: var(--color-forest);
+    color: #fff;
+    padding: 32px 32px;
+    margin: 24px 0 28px;
+    position: relative;
+    overflow: hidden;
+  }
+  .stat-card::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><pattern id='w' x='0' y='0' width='40' height='40' patternUnits='userSpaceOnUse'><path d='M0 20 Q 10 10 20 20 T 40 20' stroke='%23ffffff' stroke-width='0.6' fill='none' opacity='0.5'/></pattern></defs><rect width='200' height='200' fill='url(%23w)'/></svg>");
+    opacity: 0.10;
+  }
+  .stat-card > * { position: relative; }
+  .stat-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  .stat-grid .n { font-family: var(--font-heading); font-size: 56px; font-weight: 700; color: var(--color-clay); line-height: 1; }
+  .stat-grid .l { font: 700 10px/1.3 var(--font-body); letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,.85); margin-top: 8px; }
+  .stat-card .quote {
+    font-family: var(--font-heading); font-size: 14pt; font-style: italic;
+    color: rgba(255,255,255,.92); line-height: 1.5; margin-top: 22px; max-width: 92%;
+  }
+  .stat-card .stat-source {
+    font-family: var(--font-body); font-size: 8pt; line-height: 1.4;
+    color: rgba(255,255,255,.6); margin-top: 18px; letter-spacing: .02em;
+  }
+
+  /* Timeline */
+  .timeline { display: flex; flex-direction: column; gap: 14px; margin-top: 4px; }
+  .timeline-row { display: grid; grid-template-columns: 96px 1fr; gap: 22px; align-items: start; padding-bottom: 14px; border-bottom: 1px solid var(--color-border); }
+  .timeline-row:last-child { border-bottom: 0; }
+  .timeline-row .when {
+    font-family: var(--font-heading); font-size: 26px; font-weight: 700;
+    color: var(--color-forest); line-height: 1;
+  }
+  .timeline-row .when small { display: block; font: 700 9px/1 var(--font-body); letter-spacing: 1.5px; color: var(--color-clay); text-transform: uppercase; margin-top: 4px; }
+  .timeline-row .what h4 { font: 600 13pt/1.3 var(--font-body); color: var(--color-text); margin: 0 0 4px 0; }
+  .timeline-row .what p { font-size: 10.5pt; color: var(--color-text-light); line-height: 1.55; margin: 0; }
+
+  /* Two-column checklist */
+  .checklist-2col { display: grid; grid-template-columns: 1fr 1fr; gap: 22px 36px; margin-top: 8px; }
+  .checklist-2col h4 { font: 700 11px/1 var(--font-body); letter-spacing: 1.8px; text-transform: uppercase; color: var(--color-clay); margin: 0 0 10px 0; }
+  .checklist-2col ul { margin: 0; padding: 0; list-style: none; }
+  .checklist-2col li {
+    font-size: 10pt; line-height: 1.45; padding: 5px 0 5px 22px;
+    position: relative; border-bottom: 1px solid var(--color-border);
+    color: var(--color-text);
+  }
+  .checklist-2col li::before {
+    content: ""; position: absolute; left: 0; top: 10px;
+    width: 12px; height: 12px; border: 1.5px solid var(--color-clay); border-radius: 2px;
+    background: #fff;
+  }
+
+  .staging-spread .body-prose p { font-size: 11pt; line-height: 1.55; margin-bottom: 8px; }
+
+  /* Cost breakdown table */
+  .cost-table { width: 100%; border-collapse: collapse; margin-top: 4px; }
+  .cost-table th, .cost-table td { text-align: left; padding: 6px 12px; font-size: 10pt; }
+  .cost-table thead th {
+    font: 700 10px/1 var(--font-body); letter-spacing: 1.5px; text-transform: uppercase;
+    color: var(--color-clay); border-bottom: 1.5px solid var(--color-forest); padding-bottom: 7px;
+  }
+  .cost-table tbody tr { border-bottom: 1px solid var(--color-border); }
+  .cost-table tbody td.label { color: var(--color-text); }
+  .cost-table tbody td.label strong { color: var(--color-forest); font-weight: 600; display: block; font-family: var(--font-heading); font-size: 12pt; line-height: 1.2; }
+  .cost-table tbody td.label .sub { font-size: 8.5pt; color: var(--color-text-muted); margin-top: 1px; display: block; line-height: 1.35; }
+  .cost-table tbody td.range { text-align: right; font-family: var(--font-heading); font-weight: 600; color: var(--color-forest); font-size: 12pt; white-space: nowrap; line-height: 1.2; }
+  .cost-table tbody td.range.range-two { font-size: 10.5pt; white-space: normal; line-height: 1.35; }
+  .cost-note { background: var(--color-cream-mint); border-left: 4px solid var(--color-clay); padding: 12px 18px; margin-top: 12px; }
+  .cost-note .hand { font-size: 18px; color: var(--color-forest); margin-bottom: 4px; }
+  .cost-note p { font-size: 10pt; color: var(--color-text); line-height: 1.55; margin: 0; }
+
+  /* Staging spread */
+  .staging-spread { display: grid; grid-template-columns: 1.1fr 1fr; gap: 36px; align-items: start; }
+  .staging-photo {
+    border: 8px solid #fff; box-shadow: var(--shadow-polaroid);
+    transform: rotate(-1.5deg);
+  }
+  .staging-photo img { width: 100%; height: 190px; object-fit: cover; display: block; }
+  .staging-photo .caption {
+    text-align: center; padding: 10px 0 4px;
+    font-family: var(--font-handwritten); color: var(--color-text); font-size: 17px;
+  }
+  .staging-list { margin-top: 16px; }
+  .staging-list h4 {
+    font: 700 11px/1 var(--font-body); letter-spacing: 1.8px; text-transform: uppercase;
+    color: var(--color-clay); margin: 0 0 14px 0;
+  }
+  .staging-list ol { margin: 0; padding: 0; list-style: none; counter-reset: r; }
+  .staging-list li {
+    counter-increment: r; padding: 12px 0 12px 38px; position: relative;
+    border-bottom: 1px solid var(--color-border);
+    font-size: 11pt; line-height: 1.55; color: var(--color-text);
+  }
+  .staging-list li::before {
+    content: counter(r, decimal-leading-zero);
+    position: absolute; left: 0; top: 12px;
+    font-family: var(--font-heading); font-size: 16pt; font-weight: 700;
+    color: var(--color-forest); font-style: italic;
+  }
+  .staging-list li b { color: var(--color-forest); font-weight: 600; }
+
+  /* ───── Page 8 · Let's talk ───── */
+  .closing { padding: 0; display: flex; flex-direction: column; }
+  .closing-top { background: var(--color-forest); color: #fff; padding: 60px 56px 48px; position: relative; overflow: hidden; }
+  .closing-top::before {
+    content: ""; position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'><defs><pattern id='w' x='0' y='0' width='40' height='40' patternUnits='userSpaceOnUse'><path d='M0 20 Q 10 10 20 20 T 40 20' stroke='%23ffffff' stroke-width='0.6' fill='none' opacity='0.5'/></pattern></defs><rect width='200' height='200' fill='url(%23w)'/></svg>");
+    opacity: 0.10;
+  }
+  .closing-top > * { position: relative; }
+  .closing-top .hand { color: var(--color-clay); font-size: 36px; margin-bottom: 14px; }
+  .closing-top h2 {
+    font-family: var(--font-heading); font-size: 56px; font-weight: 600; color: #fff;
+    line-height: 1.05; margin-bottom: 18px;
+  }
+  .closing-top h2 em { font-style: italic; color: var(--color-clay); }
+  .closing-top p { color: rgba(255,255,255,.88); font-size: 12pt; line-height: 1.65; max-width: 5.5in; }
+  .closing-mid { padding: 40px 56px 32px; flex: 1; }
+  .closing-mid h3 {
+    font: 700 11px/1 var(--font-body); letter-spacing: 2px; text-transform: uppercase;
+    color: var(--color-clay); margin: 0 0 12px 0;
+  }
+  .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 18px 36px; margin-bottom: 28px; }
+  .contact-grid .row .l { font: 600 10px/1 var(--font-body); letter-spacing: 1.5px; text-transform: uppercase; color: var(--color-text-muted); margin-bottom: 4px; }
+  .contact-grid .row .v { font-family: var(--font-heading); font-size: 17pt; font-weight: 600; color: var(--color-forest); }
+  .closing-signature {
+    border-top: 1px solid var(--color-border); padding-top: 22px; margin-top: 18px;
+    display: flex; justify-content: space-between; align-items: flex-end;
+  }
+  .closing-signature .sig-block .hand { font-size: 38px; color: var(--color-forest); margin-bottom: 4px; }
+  .closing-signature .sig-block p { font-size: 11pt; color: var(--color-text-light); margin: 0; }
+  .closing-signature .badges { display: flex; gap: 12px; align-items: center; }
+  .closing-signature .badges img { height: 72px; width: auto; }
+
+  /* Compliance footer band on page 8 */
+  .closing-footer {
+    background: var(--color-cream-dark);
+    border-top: 1px solid var(--color-border);
+    padding: 16px 40px 18px;
+    display: flex; align-items: center; gap: 18px;
+  }
+  .closing-footer .marks { display: flex; gap: 14px; align-items: center; flex-shrink: 0; }
+  .closing-footer .marks .eho,
+  .closing-footer .marks .realtor { height: 40px; width: auto; display: block; }
+  .closing-footer .marks .nwmls { height: 30px; width: auto; display: block; }
+  .closing-footer .disclosure { flex: 1; }
+  .closing-footer .disclosure p {
+    font-family: var(--font-body); font-size: 7.5pt; line-height: 1.45;
+    color: var(--color-text-muted); margin: 0;
+  }
+  .closing-footer .disclosure p + p { margin-top: 4px; }
+  .closing-footer .disclosure p strong { color: var(--color-text); font-weight: 600; }
+
+  /* Print: drop screen shadows */
+  @media print {
+    body { background: #fff; padding: 0; }
+    .page { box-shadow: none; margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: COVER -->
+<section class="page cover">
+  <div class="cover-photo">
+    <img src="assets/aerial-neighborhood.jpg" alt="">
+    <span class="label">For sale by owner &middot; Washington State &middot; 2026</span>
+    <img class="stamp" src="assets/logo-stamp.svg" alt="">
+  </div>
+  <div class="cover-bottom">
+    <div>
+      <p class="hand">selling it yourself,</p>
+      <h1>Yes, you can.<br><em>Here is what it actually takes.</em></h1>
+    </div>
+    <div class="cover-meta">
+      <p class="by">By
+        <strong>Kim Pelham &middot; The Pelham Group NW</strong>
+      </p>
+      <p class="by" style="text-align:right;">14 years in real estate<br>
+        <strong>Everett, Washington</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- PAGE 2: NOTE FROM KIM -->
+<section class="page">
+  <div class="letter">
+    <div class="letter-photo">
+      <img src="assets/kim-headshot.jpg" alt="">
+      <div class="caption">your neighbor in real estate</div>
+    </div>
+    <div class="letter-body">
+      <p class="hand">hey neighbor,</p>
+      <h2>Most agents will tell you <em>not</em> to do this.</h2>
+      <p>I am not going to do that.</p>
+      <p>Sometimes selling it yourself is the right call. You already have the buyer. It is going to a family member. You have done this before and the paperwork does not scare you. In those cases you should not be paying a full commission, and I would rather help you than watch you do it alone and get hurt by something you did not know about.</p>
+      <p>But I am also not going to pretend it is easy, because I have cleaned up enough of these to know better. There are two things that catch almost everybody in Washington. One of them is new, and it is the reason I wrote this guide.</p>
+      <p>So this is the honest version. What you are actually signing. What changed with Zillow. What it really costs you when you do not offer to pay the buyer's agent. And the two ways I can help without taking a full commission, because both of those exist and hardly anyone knows it.</p>
+      <p>Read what is useful. Skip what is not. My number is on the last page, and I answer my own phone.</p>
+      <p class="sig">Kim</p>
+      <p class="sig-name">Kim Pelham &middot; The Pelham Group NW &middot; Everett, WA</p>
+    </div>
+  </div>
+  <span class="page-foot-brand">The Pelham Group NW &middot; Brokered by Katrina Eileen Real Estate &middot; Kim Pelham, Real Estate Broker</span>
+  <span class="page-num">02</span>
+</section>
+
+<!-- PAGE 3: THE ZILLOW PROBLEM -->
+<section class="page section-page">
+  <div class="section-head">
+    <p class="eyebrow">the thing nobody tells you</p>
+    <h2>Zillow will not<br><em>list your house.</em></h2>
+  </div>
+  <p class="section-lede">Not in Washington. Not any more. And that is most of your buyers.</p>
+  <div class="body-prose">
+    <p>If you sold a house by owner a few years ago, you probably posted it on Zillow yourself. That door is closed here now.</p>
+    <p><strong>Zillow is a member of our MLS.</strong> In Washington State that means Zillow does not take for-sale-by-owner listings. Other states still allow owners to post directly. Ours does not. If your house is not in the Northwest MLS, it does not appear on the site nearly every buyer in this county opens first.</p>
+    <p>I have watched people learn this on day two, after the sign is already in the yard and they have told everyone at work. It is not a small inconvenience. It is the difference between your house being seen and your house being invisible.</p>
+    <p><strong>What that leaves you.</strong> A yard sign. Word of mouth. Facebook groups and Craigslist. Whatever foot traffic your street gets. That can be enough if you already have a buyer. It is rarely enough if you are trying to find one.</p>
+  </div>
+
+  <div class="stat-card">
+    <div class="stat-grid">
+      <div>
+        <p class="n">5%</p>
+        <p class="l">of all US home sales last year were for sale by owner, an all-time low</p>
+      </div>
+      <div>
+        <p class="n">64%</p>
+        <p class="l">of those sellers say they did not get the price they wanted</p>
+      </div>
+    </div>
+    <p class="quote">Median FSBO sale price: $360,000. Median agent-assisted: $425,000. Part of that gap is mix, because for-sale-by-owner homes skew toward lower-cost, rural and manufactured homes. Part of it is not.</p>
+    <p class="stat-source">National Association of REALTORS, 2025 Profile of Home Buyers and Sellers.</p>
+  </div>
+  <span class="page-foot-brand">The Pelham Group NW &middot; Brokered by Katrina Eileen Real Estate &middot; Kim Pelham, Real Estate Broker</span>
+  <span class="page-num">03</span>
+</section>
+
+<!-- PAGE 4: THE THREE WAYS -->
+<section class="page section-page">
+  <div class="section-head">
+    <p class="eyebrow">your actual options</p>
+    <h2>Three ways to do this,<br><em>and two of them are mine.</em></h2>
+  </div>
+  <p class="section-lede">You do not have to choose between paying a full commission and doing all of it alone.</p>
+
+  <table class="cost-table">
+    <thead>
+      <tr><th>What you get</th><th style="text-align:right;">What it costs</th></tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="label">
+          <strong>Entirely on your own</strong>
+          <span class="sub">Your sign, your showings, your contracts, your deadlines. No MLS, so no Zillow, Redfin or Homes.com. You write the disclosures and you carry the liability if something is missed.</span>
+        </td>
+        <td class="range">$0<br><span style="font-size:9pt;font-weight:400;">plus your time</span></td>
+      </tr>
+      <tr>
+        <td class="label">
+          <strong>Paperwork only, with me</strong>
+          <span class="sub">For when you already have your buyer. I handle the purchase and sale agreement, the disclosures, the timelines, the addenda, title and escrow, and I get you to closing. You found the buyer, so you keep that part.</span>
+        </td>
+        <td class="range">1%</td>
+      </tr>
+      <tr>
+        <td class="label">
+          <strong>Limited service listing</strong>
+          <span class="sub">An a la carte menu. At minimum it puts your house in the MLS, which is what puts you back on Zillow and everywhere else. Add what you want: photography, a lockbox, a sign, showing support, staging. Paid up front, not at closing.</span>
+        </td>
+        <td class="range range-two">You pick<br><span style="font-size:9pt;font-weight:400;">priced by the piece</span></td>
+      </tr>
+      <tr>
+        <td class="label">
+          <strong>A full listing</strong>
+          <span class="sub">Everything, including the parts that are hard to price: what it should list at, how it should look on day one, and someone whose job is to argue for your number when the offer comes in low.</span>
+        </td>
+        <td class="range">Commission</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="cost-note">
+    <p class="hand">one honest note.</p>
+    <p>The limited service and paperwork options are paid up front rather than out of proceeds, because they are services rather than a bet on a sale. Everything runs through my brokerage, Katrina Eileen Real Estate, the same as any other transaction in Washington.</p>
+  </div>
+  <span class="page-foot-brand">The Pelham Group NW &middot; Brokered by Katrina Eileen Real Estate &middot; Kim Pelham, Real Estate Broker</span>
+  <span class="page-num">04</span>
+</section>
+
+<!-- PAGE 5: THE PAPERWORK -->
+<section class="page section-page">
+  <div class="section-head">
+    <p class="eyebrow">what you are actually signing</p>
+    <h2>The paperwork is<br><em>the whole job.</em></h2>
+  </div>
+  <p class="section-lede">This is the part people underestimate, and it is the part that follows you after closing.</p>
+
+  <div class="checklist-2col">
+    <div>
+      <h4>Before it goes up</h4>
+      <ul>
+        <li><b>Form 17, the seller disclosure.</b> Required on most Washington residential sales. What you knew and did not say is what comes back at you.</li>
+        <li>Title report, pulled early, so an old lien or easement is not a surprise in week six</li>
+        <li>Lead-based paint disclosure if the house was built before 1978</li>
+        <li>Anything your water, septic or well requires</li>
+        <li>What your HOA has to hand a buyer, and how long they take to produce it</li>
+      </ul>
+    </div>
+    <div>
+      <h4>Once you have an offer</h4>
+      <ul>
+        <li>The purchase and sale agreement, and every addendum attached to it</li>
+        <li>Earnest money, who holds it and what makes it refundable</li>
+        <li>Inspection response and repair negotiation, on a clock</li>
+        <li>Appraisal, and what happens if it comes in under contract price</li>
+        <li>Financing and title contingency dates, each with a deadline you cannot miss</li>
+        <li>Escrow instructions, the closing statement, and the keys</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="cost-note" style="margin-top:18px;">
+    <p class="hand">the real risk.</p>
+    <p>Almost nobody gets into trouble over the price. They get into trouble over a date they missed or a thing they did not disclose. Those are the two ways a sale falls apart or comes back months later, and both of them are paperwork.</p>
+  </div>
+  <span class="page-foot-brand">The Pelham Group NW &middot; Brokered by Katrina Eileen Real Estate &middot; Kim Pelham, Real Estate Broker</span>
+  <span class="page-num">05</span>
+</section>
+
+<!-- PAGE 6: BUYER AGENT COMMISSION -->
+<section class="page section-page">
+  <div class="section-head">
+    <p class="eyebrow">the decision that costs the most</p>
+    <h2>Whether you offer to pay<br><em>the buyer's agent.</em></h2>
+  </div>
+  <p class="section-lede">It is optional. It is also the fastest way to make your house invisible in this market.</p>
+  <div class="body-prose">
+    <p><strong>A buyer cannot finance their agent's commission.</strong> It is not part of the loan. So if you do not offer to pay it, that is roughly two and a half to three percent the buyer has to produce in cash, on top of the down payment, on top of closing costs.</p>
+    <p>On a $700,000 house that is somewhere around $17,500 to $21,000 in cash that has to appear from somewhere.</p>
+    <p><strong>Now put that in this market.</strong> Mortgage rates crossed 7% in September 2026, the first time since January 2025. On the Snohomish County median with 20% down, the payment is already about $105 a month higher than it was two weeks earlier. Buyers are stretched and they know it.</p>
+    <p>Ask a buyer to find another twenty thousand dollars and they will not argue with you about it. They will just go see the house down the street that does offer it. And right now there are plenty of those houses.</p>
+    <p><strong>What this does not mean.</strong> It is not a rule and nobody can tell you that you have to. It is a choice about how many buyers can physically afford to write on your house. Make it on purpose, with the number in front of you, rather than by leaving the field blank.</p>
+  </div>
+
+  <div class="cost-note">
+    <p class="hand">what I watched happen.</p>
+    <p>A seller I worked with this month relaunched with the buyer's agent commission offered, where the first attempt had not included it. Same house, same street, same family. It is the change I would make first.</p>
+  </div>
+  <span class="page-foot-brand">The Pelham Group NW &middot; Brokered by Katrina Eileen Real Estate &middot; Kim Pelham, Real Estate Broker</span>
+  <span class="page-num">06</span>
+</section>
+
+<!-- PAGE 7: WHEN TO SWITCH -->
+<section class="page section-page">
+  <div class="section-head">
+    <p class="eyebrow">knowing when</p>
+    <h2>When to stop<br><em>and hand it over.</em></h2>
+  </div>
+  <p class="section-lede">Switching is not a failure. It is information, and it takes a few days.</p>
+
+  <div class="staging-list">
+    <ol>
+      <li><b>Two weeks with no showings.</b> Not no offers. No showings. That means nobody is finding it or nobody likes what they see online, and both of those are fixable by someone else.</li>
+      <li><b>Showings that go quiet.</b> People come through and you never hear back. Usually price, sometimes presentation, occasionally something about the house nobody will say to your face.</li>
+      <li><b>You have a deadline.</b> A closing on the next place, a job, a lease, a family situation. Time pressure and a learning curve are a terrible combination.</li>
+      <li><b>The offer arrives and you freeze.</b> Inspection response, an appraisal gap, a financing contingency. This is the moment where an afternoon of bad judgment costs more than a full commission.</li>
+      <li><b>It is affecting your household.</b> I have watched this one land hardest. If it is making someone in the house miserable, that is a real cost even if it never shows up on the closing statement.</li>
+    </ol>
+  </div>
+
+  <div class="cost-note" style="margin-top:14px;">
+    <p class="hand">and about the house itself.</p>
+    <p>Your home is set up for living in. It is not set up for selling. Those are completely different things and it is not about your taste, it is about how a stranger moves through a room. One seller walked in after we staged hers and said: <em>"I love the decor. It's crazy how it changes the whole dynamics of the house."</em> That reaction is the whole argument, and it is hard to believe until you see it in your own rooms.</p>
+  </div>
+  <span class="page-foot-brand">The Pelham Group NW &middot; Brokered by Katrina Eileen Real Estate &middot; Kim Pelham, Real Estate Broker</span>
+  <span class="page-num">07</span>
+</section>
+
+<!-- PAGE 8: LET'S TALK -->
+<section class="page closing">
+  <div class="closing-top">
+    <p class="hand">no pitch, promise.</p>
+    <h2>Call me before you start,<br><em>not after.</em></h2>
+    <p>Even if you are going to do all of it yourself, a twenty minute conversation costs you nothing and usually saves you something. I will tell you honestly whether I think you can pull it off, what I would price it at, and which of the three routes actually fits your situation. If that turns out to be doing it alone, I will tell you that too.</p>
+  </div>
+
+  <div class="closing-mid">
+    <h3>The first call</h3>
+    <div class="contact-grid">
+      <div class="row">
+        <p class="l">Phone &amp; text</p>
+        <p class="v">425-250-9422</p>
+      </div>
+      <div class="row">
+        <p class="l">Email</p>
+        <p class="v">kim@thepelhamgroupnw.com</p>
+      </div>
+      <div class="row">
+        <p class="l">Office</p>
+        <p class="v">Brokered by Katrina Eileen<br><span style="font-size:11pt;color:var(--color-text-light);font-weight:400;font-family:var(--font-body);">Everett, WA</span></p>
+      </div>
+      <div class="row">
+        <p class="l">Serving</p>
+        <p class="v" style="font-size:14pt;">Everett &middot; Bothell &middot; Mill Creek<br>Snohomish &middot; Lake Stevens &middot; Marysville &middot; Mukilteo</p>
+      </div>
+    </div>
+
+    <div class="closing-signature">
+      <div class="sig-block">
+        <p class="hand">Kim</p>
+        <p>your neighbor in real estate</p>
+      </div>
+      <div class="badges">
+        <img src="assets/badge-snoco-2024.png" alt="Best of Snohomish County 2024">
+        <img src="assets/badge-zillow.png" alt="Best of Zillow">
+      </div>
+    </div>
+  </div>
+
+  <div class="closing-footer">
+    <div class="marks" aria-hidden="true">
+      <img class="eho" src="assets/eho-logo.png" alt="Equal Housing Opportunity">
+      <img class="nwmls" src="assets/nwmls-logo.png" alt="Northwest Multiple Listing Service">
+    </div>
+    <div class="disclosure">
+      <p><strong>Kim Pelham, Real Estate Broker</strong> &middot; WA License #119262 &middot; NWMLS Broker #103153 &middot; Brokered by Katrina Eileen Real Estate &middot; Everett, WA</p>
+      <p>Equal Housing Opportunity. All services are offered in accordance with the federal Fair Housing Act, the Washington Law Against Discrimination, and all applicable federal, state, and local laws. This guide is general information about selling a home in Washington State and is not legal, tax or financial advice. Commission and fee arrangements are negotiable and are not set by law or by any trade association. Statistics cited are from the National Association of REALTORS 2025 Profile of Home Buyers and Sellers and Freddie Mac's Primary Mortgage Market Survey. Sellers should consult their own legal and tax advisors regarding any specific transaction.</p>
+    </div>
+  </div>
+</section>
+
+</body>
+</html>

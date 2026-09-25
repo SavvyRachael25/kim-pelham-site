@@ -42,6 +42,12 @@ const GUIDES: Record<string, { title: string; file: string; workflowId: string }
     // "Guide Delivery - Pre-Listing Guide"
     workflowId: '63d87d61-882d-4105-8454-43e7a59490ac',
   },
+  fsbo: {
+    title: 'Yes, You Can: Selling It Yourself in Washington',
+    file: '/guides/fsbo-guide/fsbo-guide.pdf',
+    // "Guide Delivery - For Sale By Owner"
+    workflowId: 'c6c7bdfc-2ea3-41ef-972e-900d9061f548',
+  },
 };
 
 function slug(s: string): string {
