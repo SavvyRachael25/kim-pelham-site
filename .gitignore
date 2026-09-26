@@ -8,3 +8,9 @@ out/
 .env.local
 .env*.local
 .vercel
+
+# backup safety 2026-09-26
+.env*
+!.env.example
+*.pem
+auth.json
