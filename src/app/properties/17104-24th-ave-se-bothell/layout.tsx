@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 const URL = 'https://thepelhamgroupnw.com/properties/17104-24th-ave-se-bothell';
-const IMG = 'https://thepelhamgroupnw.com/images/kim-by-water.jpg';
+const IMG = 'https://thepelhamgroupnw.com/images/og-17104-24th-ave-se.jpg';
 const TITLE = '17104 24th Ave SE, Bothell WA 98012 | $715,000 | Kim Pelham';
 const DESC =
   'For sale at $715,000: 17104 24th Ave SE, Bothell, WA 98012. A single-level 3 bedroom, 1 bath home of 1,240 sqft on a 7,405 sqft lot, built 1977, with laminate flooring, updated windows and a remodeled bath. NWMLS #2585165. Open house Saturday September 26, 11 AM to 1 PM. Listed by Kim Pelham, The Pelham Group NW.';
@@ -14,7 +14,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: '17104 24th Ave SE, Bothell WA | $715,000',
     description: 'Single level, 3 bed, 1 bath, 1,240 sqft on a 7,405 sqft lot. Open house Saturday September 26, 11 AM to 1 PM.',
-    images: [{ url: IMG, width: 1024, height: 683, alt: 'Kim Pelham, The Pelham Group NW' }],
+    images: [{ url: IMG, width: 1200, height: 630, alt: 'Just Listed: 17104 24th Ave SE, Bothell WA, $715,000. Open Saturday 11 to 1.' }],
     type: 'website',
     url: URL,
     siteName: 'The Pelham Group NW',
