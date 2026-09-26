@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
@@ -51,6 +53,31 @@ export default function PropertiesPage() {
           >
             Search All Listings →
           </a>
+        </section>
+
+        {/* New listing: 17104 24th Ave SE, Bothell. Added 2026-09-25, NWMLS #2585165. */}
+        <section style={{ padding: '2.5rem 2rem 0', backgroundColor: '#FFFFFF' }}>
+          <div style={{ maxWidth: '1200px', margin: '0 auto' }}>
+            <Link href="/properties/17104-24th-ave-se-bothell" style={{ textDecoration: 'none', display: 'block' }}>
+              <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '24px', alignItems: 'center', border: '1px solid #E8E3DA', borderRadius: '8px', overflow: 'hidden', background: '#fff' }}>
+                <Image
+                  src="/listings/2585165-bothell/photos/00.jpg"
+                  alt="Front of 17104 24th Ave SE, Bothell WA"
+                  width={1697}
+                  height={1131}
+                  style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block', maxHeight: '340px' }}
+                />
+                <div style={{ padding: '28px 32px' }}>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.72rem', letterSpacing: '2px', textTransform: 'uppercase', color: '#B8845C', fontWeight: 700, margin: '0 0 8px' }}>Just listed &middot; Open Saturday 11 to 1</p>
+                  <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', fontWeight: 700, color: '#2C2C2C', margin: '0 0 6px', lineHeight: 1.15 }}>17104 24th Ave SE</h2>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: '#555', margin: '0 0 12px' }}>Bothell, WA 98012</p>
+                  <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.7rem', fontWeight: 700, color: '#2F5233', margin: '0 0 6px' }}>$715,000</p>
+                  <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.98rem', color: '#2C2C2C', margin: '0 0 16px' }}>3 bed &middot; 1 bath &middot; 1,240 sqft &middot; single level</p>
+                  <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.95rem', fontWeight: 600, color: '#B8845C' }}>See the home &rarr;</span>
+                </div>
+              </div>
+            </Link>
+          </div>
         </section>
 
         {/* Featured listing: 3520 192nd Pl SE, Bothell */}
