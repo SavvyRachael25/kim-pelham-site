@@ -459,21 +459,21 @@ export default function RootLayout({
         {/* The condo concierge popups (mobile bottom sheet + desktop modal) came out
             2026-09-19: the May campaign's teaser was still firing on every page and
             competed with the text-me ask. Components are still in src/components. */}
-        {/* Brand-matched accessibility widget — floating bottom-left, settings persist */}
+        {/* Brand-matched accessibility widget : floating bottom-left, settings persist */}
         <AccessibilityWidget />
-        {/* Analytics & attribution — gated on env vars, no-op until configured */}
+        {/* Analytics & attribution : gated on env vars, no-op until configured */}
         <Analytics />
         {/* Umami custom conversion events - delegated click tracking */}
         <UmamiEvents />
-        {/* Vercel Analytics — first-party traffic + Web Vitals, no config needed */}
+        {/* Vercel Analytics : first-party traffic + Web Vitals, no config needed */}
         <VercelAnalytics />
-        {/* Umami — privacy-friendly product analytics, cookieless */}
+        {/* Umami : privacy-friendly product analytics, cookieless */}
         <Script
           src="https://cloud.umami.is/script.js"
           data-website-id="3fc3eb60-38d2-41b2-a52e-511704cb8fcf"
           strategy="lazyOnload"
         />
-        {/* Microsoft Clarity — session replay + heatmaps, project x209s3f534 */}
+        {/* Microsoft Clarity : session replay + heatmaps, project x209s3f534 */}
         <Script id="ms-clarity" strategy="lazyOnload">
           {`(function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
@@ -481,7 +481,7 @@ export default function RootLayout({
             y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
           })(window, document, "clarity", "script", "x209s3f534");`}
         </Script>
-        {/* Meta Pixels — fires to both Savvy and Pelham ad accounts.
+        {/* Meta Pixels : fires to both Savvy and Pelham ad accounts.
             lazyOnload: PageView still fires on every visit, just after paint
             instead of during the LCP window. Attribution is unaffected. */}
         <Script id="meta-pixel" strategy="lazyOnload">

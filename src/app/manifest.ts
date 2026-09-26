@@ -7,7 +7,7 @@ import type { MetadataRoute } from 'next';
 */
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'Kim Pelham · The Pelham Group NW',
+    name: 'Kim Pelham, The Pelham Group NW',
     short_name: 'Kim Pelham',
     description:
       'Snohomish County real estate with Kim Pelham. Listings, neighborhood guides, and a broker who answers her own phone.',
