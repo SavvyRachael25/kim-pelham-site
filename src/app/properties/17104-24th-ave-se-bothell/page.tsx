@@ -8,7 +8,7 @@ import ScrollProgress from '@/components/ScrollProgress';
 import TextMeAsk from '@/components/TextMeAsk';
 
 /*
-  17104 24th Ave SE, Bothell. NWMLS #2585165, listed 2026-09-24 at $715,000.
+  17104 24th Ave SE, Bothell. NWMLS #2585165, listed 2026-09-24 at $715,000; reduced to $690,000 on 2026-10-01.
 
   Facts verified against the NWMLS feed on 2026-09-25. PHOTOS PENDING: drop the
   shoot into public/listings/2585165-bothell/photos and fill `gallery` below.
@@ -41,10 +41,12 @@ const gallery: { src: string; alt: string }[] = [
   { src: `${PHOTO}/30.jpg`, alt: 'The lot from the back fence line at 17104 24th Ave SE, Bothell WA' },
 ];
 
-const OPEN_HOUSE = { day: 'Saturday', date: 'September 26', time: '11 AM to 1 PM' };
+// The Sep 26 open house has passed. Band now carries the Oct 1 price reduction.
+// Put OPEN_HOUSE back and restore the band when the next one is scheduled.
+const PRICE_NEWS = { headline: 'Just reduced to $690,000', sub: 'Call or text me and come see it.' };
 
 const details = [
-  { label: 'Price', value: '$715,000' },
+  { label: 'Price', value: '$690,000' },
   { label: 'Bedrooms', value: '3' },
   { label: 'Bathrooms', value: '1' },
   { label: 'Square Feet', value: '1,240 sqft (per NWMLS)' },
@@ -64,16 +66,16 @@ export default function Listing17104Page() {
       <ScrollProgress />
       <Nav />
       <main>
-        {/* Open house band */}
+        {/* Price band. Was the open house band until Sep 26. */}
         <section style={{ background: 'var(--color-forest)', color: 'var(--color-cream)', padding: '18px 20px', textAlign: 'center' }}>
           <p style={{ margin: 0, fontFamily: 'var(--font-body)', fontSize: '0.95rem', letterSpacing: '0.04em' }}>
-            <strong>Open house {OPEN_HOUSE.day}, {OPEN_HOUSE.date}</strong>, {OPEN_HOUSE.time}. Come by, I will be there.
+            <strong>{PRICE_NEWS.headline}</strong>. {PRICE_NEWS.sub}
           </p>
         </section>
 
         <section style={{ background: '#fff', padding: '56px 20px 24px' }}>
           <div style={{ maxWidth: '900px', margin: '0 auto' }}>
-            <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.5rem', color: 'var(--color-clay)', margin: '0 0 6px' }}>just listed,</p>
+            <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.5rem', color: 'var(--color-clay)', margin: '0 0 6px' }}>price improved,</p>
             <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2rem, 5vw, 3rem)', fontWeight: 700, color: 'var(--color-text)', margin: '0 0 8px', lineHeight: 1.1 }}>
               17104 24th Ave SE
             </h1>
@@ -81,7 +83,7 @@ export default function Listing17104Page() {
               Bothell, WA 98012
             </p>
             <p style={{ fontFamily: 'var(--font-heading)', fontSize: '2.2rem', fontWeight: 700, color: 'var(--color-forest)', margin: '0 0 8px' }}>
-              $715,000
+              $690,000
             </p>
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.05rem', color: 'var(--color-text)', margin: '0 0 32px' }}>
               3 bed &middot; 1 bath &middot; 1,240 sqft &middot; built 1977 &middot; 7,405 sqft lot

@@ -71,7 +71,7 @@ export default function PropertiesPage() {
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.72rem', letterSpacing: '2px', textTransform: 'uppercase', color: '#B8845C', fontWeight: 700, margin: '0 0 8px' }}>Just listed &middot; Open Saturday 11 to 1</p>
                   <h2 style={{ fontFamily: 'var(--font-heading)', fontSize: '2rem', fontWeight: 700, color: '#2C2C2C', margin: '0 0 6px', lineHeight: 1.15 }}>17104 24th Ave SE</h2>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: '#555', margin: '0 0 12px' }}>Bothell, WA 98012</p>
-                  <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.7rem', fontWeight: 700, color: '#2F5233', margin: '0 0 6px' }}>$715,000</p>
+                  <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.7rem', fontWeight: 700, color: '#2F5233', margin: '0 0 6px' }}>$690,000</p>
                   <p style={{ fontFamily: 'var(--font-body)', fontSize: '0.98rem', color: '#2C2C2C', margin: '0 0 16px' }}>3 bed &middot; 1 bath &middot; 1,240 sqft &middot; single level</p>
                   <span style={{ fontFamily: 'var(--font-body)', fontSize: '0.95rem', fontWeight: 600, color: '#B8845C' }}>See the home &rarr;</span>
                 </div>
