@@ -29,6 +29,7 @@ const FUNNEL_PATHS_EXACT = new Set<string>([
   '/blog/sell-above-market-value',
   '/blog/living-in-a-staged-home',
   '/blog/sell-your-house-yourself-washington',
+  '/blog/assumable-mortgage-washington',
 ]);
 
 const FUNNEL_PATH_PREFIXES = ['/case-study/'];

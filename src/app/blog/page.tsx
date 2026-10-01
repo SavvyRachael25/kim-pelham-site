@@ -33,6 +33,18 @@ const SITE = 'https://thepelhamgroupnw.com';
 
 const blogPosts: BlogPost[] = [
   {
+    id: '31',
+    title: 'Can I Take Over the Seller\u2019s Mortgage?',
+    slug: 'assumable-mortgage-washington',
+    excerpt:
+      'Rates are 7.28%. An assumable loan lets you take over the rate the seller already has, sometimes 3% or lower. FHA, VA and USDA loans can be assumed. Conventional ones cannot. Here is the math, the equity gap that stops most of them, and the VA detail that has to come up early.',
+    date: '2026-10-01',
+    category: 'Buyer Guide',
+    image: '/images/kim-with-client-on-couch.jpg',
+    imageAlt: 'Kim Pelham talking with a client at home',
+    readTime: 6,
+  },
+  {
     id: '30',
     title: 'Can You Sell Your House Yourself in Washington?',
     slug: 'sell-your-house-yourself-washington',
