@@ -126,6 +126,12 @@ export default function AssumableMortgagePage() {
               is the honest version.
             </p>
 
+            <p style={styles.bodyP}>
+              I am writing this because I just closed one. First-time buyers, and they are paying <strong>5.125%</strong>{' '}
+              while everyone signing this week is at 7.28%. They did not qualify for a special program and they did not
+              know anybody. They took over the loan the seller already had.
+            </p>
+
             <h2 style={styles.h2}>Which loans can be taken over</h2>
 
             <p style={styles.bodyP}>
@@ -176,7 +182,7 @@ export default function AssumableMortgagePage() {
             </p>
 
             <p style={styles.bodyP}>
-              Here is what that actually looks like. These numbers are an illustration, not a specific house:
+              Here is what the gap does to the arithmetic. These numbers are an illustration to show the mechanism, not the loan my buyers assumed:
             </p>
 
             <table style={styles.table}>
