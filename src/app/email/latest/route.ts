@@ -21,24 +21,40 @@ import { NextResponse } from 'next/server';
  * Issues live at /email/pelham-post-YYYY-MM-DD.html and are built before the
  * Monday review, so by the time Kim clicks, the file is there. If it 404s, the
  * issue is late, which is worth knowing.
+ *
+ * Exceptions: when one week's issue moves off Tuesday, add it to OVERRIDES
+ * below with the Pacific dates that should point at it. Every other date
+ * falls back to the upcoming-Tuesday rule.
  */
 
 export const dynamic = 'force-dynamic';
 
-function upcomingTuesdayPacific(now = new Date()): string {
+/** Pacific dates (inclusive, YYYY-MM-DD) that point at a non-Tuesday issue. */
+const OVERRIDES: Array<{ from: string; to: string; issue: string }> = [
+  // Week of October 12, 2026: Kim films for American Dream TV on Monday,
+  // so the Post goes out Thursday, October 15 instead of Tuesday.
+  { from: '2026-10-12', to: '2026-10-15', issue: '2026-10-15' },
+];
+
+function pacificToday(now = new Date()): { y: number; m: number; d: number; iso: string } {
   // Read "today" in Pacific, not in the server's zone. en-CA gives YYYY-MM-DD.
   const pacific = new Intl.DateTimeFormat('en-CA', {
     timeZone: 'America/Los_Angeles',
     year: 'numeric',
     month: '2-digit',
     day: '2-digit',
-    weekday: 'short',
   }).formatToParts(now);
 
   const part = (t: string) => pacific.find((p) => p.type === t)?.value ?? '';
   const y = Number(part('year'));
   const m = Number(part('month'));
   const d = Number(part('day'));
+  const iso = `${part('year')}-${part('month')}-${part('day')}`;
+  return { y, m, d, iso };
+}
+
+function upcomingTuesdayPacific(now = new Date()): string {
+  const { y, m, d } = pacificToday(now);
 
   // Anchor at noon UTC so no daylight-saving shift can roll the date.
   const today = new Date(Date.UTC(y, m - 1, d, 12, 0, 0));
@@ -49,8 +65,14 @@ function upcomingTuesdayPacific(now = new Date()): string {
   return today.toISOString().slice(0, 10);
 }
 
+function issueDateFor(now = new Date()): string {
+  const { iso } = pacificToday(now);
+  const override = OVERRIDES.find((o) => iso >= o.from && iso <= o.to);
+  return override ? override.issue : upcomingTuesdayPacific(now);
+}
+
 export async function GET(): Promise<NextResponse> {
-  const date = upcomingTuesdayPacific();
+  const date = issueDateFor();
   return NextResponse.redirect(
     `https://thepelhamgroupnw.com/email/pelham-post-${date}.html`,
     302, // never cache a "latest" pointer as permanent
