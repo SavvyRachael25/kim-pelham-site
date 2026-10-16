@@ -213,7 +213,7 @@ function MetaAdCarousel({ tweaks, listing }) {
                 </h3>
                 <div style={{ height: 3, width: 80, background: clay, margin: "32px 0 24px 0" }} />
                 <p style={{ fontFamily: FONT.body, fontSize: 22, color: "rgba(255,255,255,.9)", margin: 0, lineHeight: 1.45 }}>
-                  17 years in real estate.<br/>
+                  14 years in real estate.<br/>
                   102.3% sale-to-list ratio.<br/>
                   Two active buyers max.
                 </p>
@@ -449,7 +449,7 @@ function MetaAdStatCard({ tweaks }) {
             <div>
               <p style={{ fontFamily: FONT.heading, fontSize: 28, fontStyle: "italic", color: "#fff", margin: 0, lineHeight: 1 }}>Kim Pelham</p>
               <p style={{ fontFamily: FONT.body, fontSize: 13, color: "rgba(255,255,255,.7)", margin: "4px 0 0 0", letterSpacing: "1.5px", textTransform: "uppercase" }}>
-                17 yrs · 176 closings · 2 buyers max
+                14 yrs · 176 closings · 2 buyers max
               </p>
             </div>
           </div>

@@ -52,7 +52,7 @@ export default function SellersLayout({ children }: { children: React.ReactNode 
                 "name": "How long does it take to sell a home in Snohomish County?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "The Snohomish County average is 21-28 days to a pending offer. Kim's clients average 14 days. The gap comes down to staging and strategic pricing. Homes that are well-staged and correctly priced consistently go under contract in the first two weeks, often with multiple offers."
+                  "text": "The Snohomish County average is 21-28 days to a pending offer. The gap comes down to staging and strategic pricing. Homes that are well-staged and correctly priced consistently go under contract in the first two weeks, often with multiple offers."
                 }
               },
               {
@@ -60,7 +60,7 @@ export default function SellersLayout({ children }: { children: React.ReactNode 
                 "name": "Should I stage my home if I am still living in it?",
                 "acceptedAnswer": {
                   "@type": "Answer",
-                  "text": "Yes. Occupied staging is Kim's specialty. She works around your life, not against it. Cost for occupied staging in Snohomish County typically runs $500-2,000 and delivers 10-15x return on investment. You do not need to move out or store your furniture. Kim stages around what you have."
+                  "text": "Yes. Occupied staging is Kim's specialty. She works around your life, not against it. You do not need to move out or store your furniture. Kim stages around what you have."
                 }
               },
               {

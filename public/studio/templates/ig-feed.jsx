@@ -144,7 +144,7 @@ function IgFeedStat({ tweaks, listing }) {
             fontFamily: FONT.body, fontSize: 14, fontWeight: 600,
             letterSpacing: "2px", textTransform: "uppercase",
             color: C.textMuted, margin: "6px 0 0 0",
-          }}>your neighbor in real estate · 17 yrs · 176 closings</p>
+          }}>your neighbor in real estate · 14 yrs · 176 closings</p>
         </div>
         <StampLogo size={120} color={forest} accent={clay} />
       </div>

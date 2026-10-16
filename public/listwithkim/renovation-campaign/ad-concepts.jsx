@@ -91,7 +91,7 @@ function A_Story() {
         <span style={{ width: 1, height: 46, background: 'rgba(248,245,240,0.25)' }} />
         <StatChip num="176" label="homes sold" numFs={48} labelFs={17} />
         <span style={{ width: 1, height: 46, background: 'rgba(248,245,240,0.25)' }} />
-        <StatChip num="17 yrs" label="in real estate" numFs={48} labelFs={17} />
+        <StatChip num="14 yrs" label="in real estate" numFs={48} labelFs={17} />
       </div>
       <CtaBar h={210} pillFs={26} title="The Pre-Sale Renovation Playbook" sub="free · kim@thepelhamgroupnw.com" />
     </AdFrame>
