@@ -135,7 +135,7 @@ export default function Page() {
             <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(130px, 1fr))', gap: '14px' }}>
               {[
                 { v: '102.3%', l: 'Average sale-to-list ratio' },
-                { v: '17', l: 'Years in real estate' },
+                { v: '14', l: 'Years in real estate' },
                 { v: '$0', l: 'Monthly furniture rental fee' },
                 { v: '2', l: 'Active buyers at a time, max' },
               ].map((k) => (

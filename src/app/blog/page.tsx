@@ -831,7 +831,7 @@ export default function BlogPage() {
           <div style={{ maxWidth: 1180, margin: '0 auto' }} className="authority-strip">
             <Stat number="102.3%" label="average sale-to-list ratio" sub="vs 100.2% county average" />
             <Divider />
-            <Stat number="17" label="years in real estate" sub="a Snohomish County broker since 2015" />
+            <Stat number="14" label="years in real estate" sub="a Snohomish County broker since 2015" />
             <Divider />
             <Stat number="176" label="homes sold" sub="across Snohomish + King County" />
             <Divider />

@@ -66,7 +66,7 @@ function FbPostMarket({ tweaks }) {
             <img src="assets/kim-headshot.jpg" alt="" style={{ width: 56, height: 56, borderRadius: "50%", objectFit: "cover", border: `2px solid ${clay}` }} />
             <div>
               <p style={{ fontFamily: FONT.heading, fontSize: 18, fontStyle: "italic", color: "#fff", margin: 0, lineHeight: 1 }}>Kim Pelham</p>
-              <p style={{ fontFamily: FONT.body, fontSize: 11, color: "rgba(255,255,255,.7)", letterSpacing: "1.5px", textTransform: "uppercase", margin: "4px 0 0 0" }}>17 yrs · 102.3% sale-to-list</p>
+              <p style={{ fontFamily: FONT.body, fontSize: 11, color: "rgba(255,255,255,.7)", letterSpacing: "1.5px", textTransform: "uppercase", margin: "4px 0 0 0" }}>14 yrs · 102.3% sale-to-list</p>
             </div>
           </div>
         </div>
@@ -112,7 +112,7 @@ function LiPostHero({ tweaks }) {
             Kim Pelham
           </p>
           <p style={{ fontFamily: FONT.body, fontSize: 11, color: C.textMuted, margin: "6px 0 0 0", letterSpacing: "2px", textTransform: "uppercase" }}>
-            17 yrs · 176 closings · Senior Move Specialist
+            14 yrs · 176 closings · Senior Move Specialist
           </p>
         </div>
         <div style={{ position: "relative", overflow: "hidden" }}>
