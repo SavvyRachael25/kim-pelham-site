@@ -34,6 +34,9 @@ const OVERRIDES: Array<{ from: string; to: string; issue: string }> = [
   // Week of October 12, 2026: Kim films for American Dream TV on Monday,
   // so the Post goes out Thursday, October 15 instead of Tuesday.
   { from: '2026-10-12', to: '2026-10-15', issue: '2026-10-15' },
+  // Week of October 19, 2026: the shoot issue waits on Kim's answers,
+  // so it goes out Thursday, October 22 instead of Tuesday.
+  { from: '2026-10-16', to: '2026-10-22', issue: '2026-10-22' },
 ];
 
 function pacificToday(now = new Date()): { y: number; m: number; d: number; iso: string } {
