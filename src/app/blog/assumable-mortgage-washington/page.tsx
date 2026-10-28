@@ -157,7 +157,7 @@ export default function AssumableMortgagePage() {
               use their VA benefit on the next house they buy, possibly for years.
             </p>
 
-            <TextMeAsk page="assumable-mortgage" question="Does that house have an assumable loan?" />
+            <TextMeAsk page="assumable-mortgage" audience="buyer" question="Does that house have an assumable loan?" />
 
             <p style={styles.note}>
               This is general information from a real estate broker, not lending advice, and nothing here is an offer
