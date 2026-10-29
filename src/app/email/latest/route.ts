@@ -37,6 +37,8 @@ const OVERRIDES: Array<{ from: string; to: string; issue: string }> = [
   // Week of October 19, 2026: the shoot issue waits on Kim's answers,
   // so it goes out Thursday, October 22 instead of Tuesday.
   { from: '2026-10-16', to: '2026-10-22', issue: '2026-10-22' },
+  // Week of October 26, 2026: the issue goes out Thursday, October 29.
+  { from: '2026-10-23', to: '2026-10-29', issue: '2026-10-29' },
 ];
 
 function pacificToday(now = new Date()): { y: number; m: number; d: number; iso: string } {
