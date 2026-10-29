@@ -4,7 +4,7 @@ export const metadata: Metadata = {
   title: "Mukilteo's most undercovered move: the multi-gen split-entry",
   description: 'Inside 4611 76th St SW: a $975K Mukilteo split-entry with a downstairs in-law setup, Olympic views, and the math behind a 102.03% sale-to-list ratio.',
   alternates: {
-    canonical: 'https://thepelhamgroupnw.com/blog/blog-mukilteo-multigen-may2026',
+    canonical: 'https://thepelhamgroupnw.com/blog/mukilteo-multigen-may-2026',
   },
   openGraph: {
     title: "Mukilteo's most undercovered move: the multi-gen split-entry",
