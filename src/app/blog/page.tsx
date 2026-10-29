@@ -33,6 +33,18 @@ const SITE = 'https://thepelhamgroupnw.com';
 
 const blogPosts: BlogPost[] = [
   {
+    id: '32',
+    title: 'Filming The American Dream TV at The Muse in Everett',
+    slug: 'american-dream-tv-the-muse-everett',
+    excerpt:
+      'This may be what I was born to do . . . We started at The Muse Whiskey & Coffee in the 1923 Weyerhaeuser Building on the Everett waterfront, and from there we went to 100+ Women Who Care About Snohomish County.',
+    date: '2026-10-22',
+    category: 'Community Spotlight',
+    image: '/images/blog/adtv-muse-2026-10/kim-adtv-muse-5110.jpg',
+    imageAlt: 'Kim Pelham on camera for The American Dream TV on the Everett waterfront',
+    readTime: 3,
+  },
+  {
     id: '31',
     title: 'Can I Take Over the Seller\u2019s Mortgage?',
     slug: 'assumable-mortgage-washington',
