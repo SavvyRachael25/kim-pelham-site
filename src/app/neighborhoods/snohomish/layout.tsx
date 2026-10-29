@@ -4,6 +4,9 @@ export const metadata: Metadata = {
   title: 'Living in Snohomish, WA | Real Estate Guide | Kim Pelham',
   description: 'Snohomish, WA real estate guide  -  the Antique Capital of the Northwest, riverside living, above-average schools, and the kind of small-town character that\'s genuinely hard to find.',
   keywords: ['Snohomish WA real estate', 'homes for sale Snohomish WA', 'Snohomish neighborhoods', 'Snohomish School District', 'historic homes Snohomish', 'Snohomish County real estate'],
+  alternates: {
+    canonical: 'https://thepelhamgroupnw.com/neighborhoods/snohomish',
+  },
   openGraph: {
     title: 'Living in Snohomish, WA | Kim Pelham Real Estate',
     description: 'Insider guide to Snohomish  -  the most charming city in the county.',
