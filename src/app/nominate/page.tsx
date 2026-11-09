@@ -27,7 +27,7 @@ export default function NominatePage() {
       <main style={{ background: 'var(--color-forest)', color: 'var(--color-cream)', minHeight: '70vh', padding: '64px 20px 80px' }}>
         <div style={{ maxWidth: '560px', margin: '0 auto' }}>
           <div style={{ background: '#fff', borderRadius: '8px', padding: '12px 16px', width: '180px', marginBottom: '26px' }}>
-            <Image src="/images/best-of-snoco-2024-no-background.png" alt="The Daily Herald Best of Snohomish County 2024 Winner badge, won by Kim Pelham" width={418} height={357} style={{ width: '100%', height: 'auto', display: 'block' }} priority />
+            <Image src="/images/best-of-snoco-2023-2024-combined.png" alt="The Daily Herald Best of Snohomish County 2023 and 2024 Winner badge, won by Kim Pelham" width={418} height={357} style={{ width: '100%', height: 'auto', display: 'block' }} priority />
           </div>
           <p style={{ fontFamily: 'var(--font-handwritten)', fontSize: '1.6rem', color: '#D4A07A', margin: '0 0 6px' }}>a small favor,</p>
           <h1 style={{ fontFamily: 'var(--font-heading)', fontSize: 'clamp(2.2rem, 6vw, 3.2rem)', fontWeight: 700, lineHeight: 1.05, margin: '0 0 18px', color: 'var(--color-cream)' }}>
