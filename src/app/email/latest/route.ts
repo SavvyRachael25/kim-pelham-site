@@ -41,6 +41,8 @@ const OVERRIDES: Array<{ from: string; to: string; issue: string }> = [
   { from: '2026-10-23', to: '2026-10-29', issue: '2026-10-29' },
   // Week of November 2, 2026: the Nov 3 issue goes out Thursday, November 5.
   { from: '2026-11-03', to: '2026-11-05', issue: '2026-11-03' },
+  // Week of November 9, 2026: the issue goes out Thursday, November 12.
+  { from: '2026-11-06', to: '2026-11-12', issue: '2026-11-12' },
 ];
 
 function pacificToday(now = new Date()): { y: number; m: number; d: number; iso: string } {
