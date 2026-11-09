@@ -66,7 +66,7 @@ export default function CurrentlyLine() {
               margin: 0,
             }}
           >
-            Would you nominate me for Best of Snohomish County?
+            Best of Snohomish County 2023 &amp; 2024
           </p>
           <span
             className="currently-line-pill"
@@ -82,7 +82,7 @@ export default function CurrentlyLine() {
               paddingBottom: '1px',
             }}
           >
-            Open through Nov 23 &middot; Nominate me &rarr;
+            Nominations open through Nov 23 &rarr;
           </span>
         </div>
 
