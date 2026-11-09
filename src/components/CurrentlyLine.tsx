@@ -1,16 +1,25 @@
 'use client';
 
 // Site-wide live banner.
+// 2026-11-09: the Bothell listing came down. Until Best of Snohomish County
+// nominations close (Nov 23, 11:59 PM Pacific) this asks for a nomination,
+// then renders nothing. Put the next listing or news here.
 
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
+const NOMINATIONS_CLOSE = Date.parse('2026-11-24T07:59:00Z');
+
 export default function CurrentlyLine() {
   const [mounted, setMounted] = useState(false);
+  const [open, setOpen] = useState(true);
 
   useEffect(() => {
     setMounted(true);
+    setOpen(Date.now() < NOMINATIONS_CLOSE);
   }, []);
+
+  if (!open) return null;
 
   return (
     <section
@@ -22,7 +31,7 @@ export default function CurrentlyLine() {
       }}
     >
       <Link
-        href="/properties/3520-192nd-pl-se-bothell"
+        href="/nominate"
         style={{
           display: 'flex',
           alignItems: 'center',
@@ -57,7 +66,7 @@ export default function CurrentlyLine() {
               margin: 0,
             }}
           >
-            3520 192nd Pl SE, Bothell &middot; Just Listed
+            Would you nominate me for Best of Snohomish County?
           </p>
           <span
             className="currently-line-pill"
@@ -73,7 +82,7 @@ export default function CurrentlyLine() {
               paddingBottom: '1px',
             }}
           >
-            $1,095,000 &middot; See the listing &rarr;
+            Open through Nov 23 &middot; Nominate me &rarr;
           </span>
         </div>
 

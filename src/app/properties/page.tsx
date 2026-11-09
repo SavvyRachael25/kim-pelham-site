@@ -6,7 +6,6 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import InnerHero from '@/components/InnerHero';
-import FeaturedListing from '@/components/FeaturedListing';
 
 // Fabricated property cards removed (audit 4/16/26). Use real MLS data when available.
 
@@ -53,9 +52,6 @@ export default function PropertiesPage() {
             Search All Listings →
           </a>
         </section>
-
-        {/* Featured listing: 3520 192nd Pl SE, Bothell */}
-        <FeaturedListing variant="wide" />
 
         {/* Search all listings prompt */}
         <section

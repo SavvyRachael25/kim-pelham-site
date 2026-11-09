@@ -30,6 +30,13 @@ const nextConfig = {
   },
   async redirects() {
     return [
+      // Taken down 2026-11-09: Kim no longer has this listing (NWMLS #2558328 not active).
+      // Temporary; the page files are kept. Delete this entry to bring it back.
+      {
+        source: '/properties/3520-192nd-pl-se-bothell',
+        destination: '/properties',
+        permanent: false,
+      },
       // Taken down 2026-11-05 at Kim's request. Temporary so it can be relisted;
       // the page files are kept. Delete this entry to bring the listing back.
       {

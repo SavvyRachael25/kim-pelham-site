@@ -158,11 +158,7 @@ export default function InventoryJumpAugust2026Page() {
               More homes to choose from, a few more days to decide, and real room to negotiate. That is a meaningful change from the market that burned out so many buyers over the past few years. You can tour a home twice. You can write an offer with an inspection contingency and not feel reckless. You can compare.
             </p>
             <p style={styles.bodyP}>
-              One honest caution: the well-priced, well-presented homes still move quickly. If a home has been prepared properly and priced to its comps, you are not the only one who noticed. My current{' '}
-              <Link href="/properties/3520-192nd-pl-se-bothell" style={styles.link}>
-                Bothell listing in the Village at Brookshire
-              </Link>
-              , listed at $1,095,000, is a good example of what a fully prepared home looks like in this market. When you find that home, be ready to act with confidence, not panic.
+              One honest caution: the well-priced, well-presented homes still move quickly. If a home has been prepared properly and priced to its comps, you are not the only one who noticed. When you find that home, be ready to act with confidence, not panic.
             </p>
 
             <h2 style={styles.h2}>What I am telling my own clients</h2>
