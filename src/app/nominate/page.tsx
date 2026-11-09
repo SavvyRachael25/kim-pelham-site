@@ -34,7 +34,7 @@ export default function NominatePage() {
             You voted me in for 2023 and 2024. I&apos;d love to make it three. Nominations are open through November 23, and it takes about a minute.
           </p>
 
-          <ol style={{ fontFamily: 'var(--font-body)', fontSize: '1.05rem', lineHeight: 1.6, margin: '0 0 26px', paddingLeft: '1.3em' }}>
+          <ol style={{ listStyle: 'decimal', fontFamily: 'var(--font-body)', fontSize: '1.05rem', lineHeight: 1.6, margin: '0 0 26px', paddingLeft: '1.3em' }}>
             {steps.map((s) => (
               <li key={s} style={{ marginBottom: '10px' }}>{s}</li>
             ))}
