@@ -34,7 +34,7 @@ export default function NominatePage() {
             Would you nominate me for Best of Snohomish County?
           </h1>
           <p style={{ fontFamily: 'var(--font-body)', fontSize: '1.1rem', lineHeight: 1.7, opacity: 0.92, margin: '0 0 22px' }}>
-            You voted me in for 2023 and 2024. I&apos;d love to make it three. Nominations are open through November 23, and it takes about a minute.
+            Herald readers voted me Best of Snohomish County in 2023 and 2024. I&apos;d love to make it three. Nominations are open through November 23, and it takes about a minute.
           </p>
 
           <ol style={{ listStyle: 'decimal', fontFamily: 'var(--font-body)', fontSize: '1.05rem', lineHeight: 1.6, margin: '0 0 26px', paddingLeft: '1.3em' }}>
