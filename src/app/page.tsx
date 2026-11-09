@@ -2,6 +2,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import ScrollProgress from '@/components/ScrollProgress';
 import CurrentlyLine from '@/components/CurrentlyLine';
+import NominateStrip from '@/components/NominateStrip';
 import Hero from '@/components/Hero';
 import Marquee from '@/components/Marquee';
 import StatsStrip from '@/components/StatsStrip';
@@ -48,6 +49,7 @@ export default function Home() {
     <main>
       <Nav />
       <AccoladesStrip />
+      <NominateStrip />
       <CurrentlyLine />
       <Hero />
       <section style={{ background: '#fff', padding: '48px 24px 8px' }}>
