@@ -20,7 +20,7 @@ export const metadata: Metadata = {
     siteName: 'The Pelham Group NW',
     locale: 'en_US',
   },
-  twitter: { card: 'summary_large_image', title: '17104 24th Ave SE, Bothell WA | $690,000', description: 'Open house Saturday September 26, 11 AM to 1 PM.', images: [IMG] },
+  twitter: { card: 'summary_large_image', title: '17104 24th Ave SE, Bothell WA | $690,000', description: 'Single level, 3 bed, 1 bath, 1,240 sqft on a 7,405 sqft lot.', images: [IMG] },
   alternates: { canonical: URL },
   robots: { index: true, follow: true },
 };

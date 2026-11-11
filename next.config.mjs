@@ -37,13 +37,6 @@ const nextConfig = {
         destination: '/properties',
         permanent: false,
       },
-      // Taken down 2026-11-05 at Kim's request. Temporary so it can be relisted;
-      // the page files are kept. Delete this entry to bring the listing back.
-      {
-        source: '/properties/17104-24th-ave-se-bothell',
-        destination: '/properties',
-        permanent: false,
-      },
       {
         source: '/properties/1406-potlatch-beach-road-tulalip',
         destination: '/properties/1406-potlatch-beach-road-marysville',

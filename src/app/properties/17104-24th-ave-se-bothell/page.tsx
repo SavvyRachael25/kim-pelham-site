@@ -129,7 +129,7 @@ export default function Listing17104Page() {
               ))}
             </div>
 
-            <TextMeAsk question="Want to see it before Saturday?" page="17104-24th-ave-se-bothell" />
+            <TextMeAsk question="Want to see it in person?" page="17104-24th-ave-se-bothell" />
 
             <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text-light)', marginTop: '32px' }}>
               Listed by Kim Pelham, The Pelham Group NW, brokered by Katrina Eileen Real Estate. Call or text{' '}
