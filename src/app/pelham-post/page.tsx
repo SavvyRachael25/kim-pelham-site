@@ -11,7 +11,7 @@ import type { A2PConsentState } from '@/components/A2PConsent';
  * /pelham-post
  * Where the comment-to-DM automation sends people ("Comment POST").
  * Same submit path as NewsletterPopup, plus a tag that says where they came from.
- * pp-master-clean puts them on the weekly Pelham Post send list (Rachael, 2026-11-11).
+ * pp-master-clean puts them on the full list; pp-openers puts them on the weekly Pelham Post send audience (Rachael, 2026-11-12).
  */
 export default function PelhamPostSignup() {
   const [firstName, setFirstName] = useState('');
@@ -44,7 +44,7 @@ export default function PelhamPostSignup() {
             ? 'I agree to receive marketing communications from Kim Pelham / The Pelham Group NW.'
             : '',
           transactionalCheckboxText: '',
-          tags: ['newsletter-signup', 'website-lead', 'pp-signup-social', 'pp-master-clean'],
+          tags: ['newsletter-signup', 'website-lead', 'pp-signup-social', 'pp-master-clean', 'pp-openers'],
           source: 'pelham_post_page',
           ...utm,
         }),
