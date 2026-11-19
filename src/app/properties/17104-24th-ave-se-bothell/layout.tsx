@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 
 const URL = 'https://thepelhamgroupnw.com/properties/17104-24th-ave-se-bothell';
 const IMG = 'https://thepelhamgroupnw.com/images/og-17104-24th-ave-se.jpg';
-const TITLE = '17104 24th Ave SE, Bothell WA 98012 | $680,000 | Kim Pelham';
+const TITLE = '17104 24th Ave SE, Bothell WA 98012 | $660,000 | Kim Pelham';
 const DESC =
-  'For sale at $680,000: 17104 24th Ave SE, Bothell, WA 98012. A single-level 3 bedroom, 1 bath home of 1,240 sqft on a 7,405 sqft lot, built 1977, with laminate flooring, updated windows and a remodeled bath. NWMLS #2585165. Listed by Kim Pelham, The Pelham Group NW.';
+  'For sale at $660,000: 17104 24th Ave SE, Bothell, WA 98012. A single-level 3 bedroom, 1 bath home of 1,240 sqft on a 7,405 sqft lot, built 1977, with laminate flooring, updated windows and a remodeled bath. NWMLS #2585165. Listed by Kim Pelham, The Pelham Group NW.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -12,15 +12,15 @@ export const metadata: Metadata = {
   keywords: ['17104 24th Ave SE', 'Bothell homes for sale', 'Bothell WA 98012', 'single level home Bothell', 'NWMLS 2585165', 'Kim Pelham', 'The Pelham Group NW'],
   authors: [{ name: 'Kim Pelham', url: 'https://thepelhamgroupnw.com/about' }],
   openGraph: {
-    title: '17104 24th Ave SE, Bothell WA | $680,000',
+    title: '17104 24th Ave SE, Bothell WA | $660,000',
     description: 'Single level, 3 bed, 1 bath, 1,240 sqft on a 7,405 sqft lot.',
-    images: [{ url: IMG, width: 1200, height: 630, alt: '17104 24th Ave SE, Bothell WA, $680,000.' }],
+    images: [{ url: IMG, width: 1200, height: 630, alt: '17104 24th Ave SE, Bothell WA, $660,000.' }],
     type: 'website',
     url: URL,
     siteName: 'The Pelham Group NW',
     locale: 'en_US',
   },
-  twitter: { card: 'summary_large_image', title: '17104 24th Ave SE, Bothell WA | $680,000', description: 'Single level, 3 bed, 1 bath, 1,240 sqft on a 7,405 sqft lot.', images: [IMG] },
+  twitter: { card: 'summary_large_image', title: '17104 24th Ave SE, Bothell WA | $660,000', description: 'Single level, 3 bed, 1 bath, 1,240 sqft on a 7,405 sqft lot.', images: [IMG] },
   alternates: { canonical: URL },
   robots: { index: true, follow: true },
 };
@@ -46,7 +46,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     lotSize: { '@type': 'QuantitativeValue', value: 7405, unitCode: 'FTK' },
     offers: {
       '@type': 'Offer',
-      price: 680000,
+      price: 660000,
       priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
       url: URL,
