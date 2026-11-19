@@ -20,6 +20,10 @@ import { sendOpsAlert } from '@/lib/ops-alerts';
  *   5. Mirror to Follow Up Boss (Kim works there)
  *   6. Alert Kim + Rachael
  *
+ * audience "buyer" (buyer posts): tagged text-me-buyer instead of text-me and
+ * NOT enrolled in either first-reply workflow, because both texts ask for
+ * photos of the house to price it. The alert tells Kim to text back by hand.
+ *
  * Testing: utmSource "internal-test" skips the FUB mirror and the alert.
  *
  * Env required: GHL_API_TOKEN, GHL_LOCATION_ID. Optional: PELHAM_WEBHOOK_SECRET.
@@ -48,6 +52,7 @@ function slug(s: string): string {
 interface TextMePayload {
   phone: string;
   page: string;        // slug of the page the ask sat on, e.g. first-72-hours, home
+  audience?: 'seller' | 'buyer';
   website?: string;    // honeypot, must stay empty
   utmSource?: string;
   utmMedium?: string;
@@ -85,9 +90,10 @@ export async function POST(req: NextRequest) {
   const { utmSource, utmMedium, utmCampaign, utmContent } = body;
   const isTest = utmSource === 'internal-test';
   const surgery = inSurgeryWindow();
+  const buyer = body.audience === 'buyer';
 
-  const tags = ['text-me', `text-me-${page}`, 'sms-opted-in'];
-  if (surgery) tags.push('text-me-surgery-window');
+  const tags = [buyer ? 'text-me-buyer' : 'text-me', `text-me-${page}`, 'sms-opted-in'];
+  if (surgery && !buyer) tags.push('text-me-surgery-window');
   if (utmSource) tags.push(`utm-source-${slug(utmSource)}`);
   if (utmMedium) tags.push(`utm-medium-${slug(utmMedium)}`);
   if (utmCampaign) tags.push(`utm-campaign-${slug(utmCampaign)}`);
@@ -130,7 +136,8 @@ export async function POST(req: NextRequest) {
     const noteLines = [
       `Text-me ask from /${page === 'home' ? '' : 'blog/' + page}`,
       `Submitted: ${new Date().toISOString()}`,
-      surgery ? 'Enrolled in the out-until-Nov-30 reply; answer after November 30.' : null,
+      buyer ? 'Buyer ask. No automatic text went out; text back by hand.' : null,
+      surgery && !buyer ? 'Enrolled in the out-until-Nov-30 reply; answer after November 30.' : null,
       utmSource || utmMedium || utmCampaign || utmContent
         ? `Source: ${[utmSource, utmMedium, utmCampaign, utmContent].filter(Boolean).join(' / ')}`
         : null,
@@ -144,11 +151,13 @@ export async function POST(req: NextRequest) {
     // Explicit enrollment. A tag that arrives with the contact on upsert does
     // NOT fire the tag-added trigger (verified 2026-08-30 on the guide gate).
     const workflowId = surgery ? FIRST_REPLY_SURGERY_WORKFLOW_ID : FIRST_REPLY_WORKFLOW_ID;
-    try {
-      const r = await fetch(`${GHL_API_BASE}/contacts/${ghlContactId}/workflow/${workflowId}`, { method: 'POST', headers, body: JSON.stringify({}) });
-      if (!r.ok) console.error(`[text-me] workflow enroll ${r.status}:`, (await r.text().catch(() => '')).slice(0, 300));
-    } catch (err) {
-      console.error('[text-me] workflow enroll failed (non-fatal):', (err as Error).message);
+    if (!buyer) {
+      try {
+        const r = await fetch(`${GHL_API_BASE}/contacts/${ghlContactId}/workflow/${workflowId}`, { method: 'POST', headers, body: JSON.stringify({}) });
+        if (!r.ok) console.error(`[text-me] workflow enroll ${r.status}:`, (await r.text().catch(() => '')).slice(0, 300));
+      } catch (err) {
+        console.error('[text-me] workflow enroll failed (non-fatal):', (err as Error).message);
+      }
     }
   }
 
@@ -170,7 +179,9 @@ export async function POST(req: NextRequest) {
       await sendOpsAlert({
         apiToken: GHL_API_TOKEN,
         locationId: GHL_LOCATION_ID,
-        summary: `Text-me lead: ${phone} from /${page === 'home' ? '' : 'blog/' + page}. ${surgery ? 'They got the out-until-Nov-30 text.' : 'They got your first text; watch for their photos.'}`,
+        summary: buyer
+          ? `Buyer text-me lead: ${phone} from /blog/${page}. No automatic text went out. Text them back by hand.`
+          : `Text-me lead: ${phone} from /${page === 'home' ? '' : 'blog/' + page}. ${surgery ? 'They got the out-until-Nov-30 text.' : 'They got your first text; watch for their photos.'}`,
       });
     } catch {
       // non-fatal

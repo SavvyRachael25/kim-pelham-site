@@ -13,16 +13,22 @@ import { useState } from 'react';
  *
  * Sits mid-article on the nine seller posts and under the homepage hero.
  * The article stays public; this is a door, not a gate.
+ *
+ * audience="buyer" (2026-10-28): third-person copy, and the route skips the
+ * seller first-reply text (five photos, list price). Kim texts buyers by hand.
  */
 export default function TextMeAsk({
   question,
   page,
   compact = false,
+  audience = 'seller',
 }: {
   question: string;
   page: string;
   compact?: boolean;
+  audience?: 'seller' | 'buyer';
 }) {
+  const buyer = audience === 'buyer';
   const [phone, setPhone] = useState('');
   const [website, setWebsite] = useState('');
   const [state, setState] = useState<'idle' | 'sending' | 'done' | 'error'>('idle');
@@ -40,6 +46,7 @@ export default function TextMeAsk({
         body: JSON.stringify({
           phone,
           page,
+          audience,
           website,
           utmSource: params?.get('utm_source') ?? undefined,
           utmMedium: params?.get('utm_medium') ?? undefined,
@@ -78,10 +85,10 @@ export default function TextMeAsk({
     return (
       <aside id="text-me" style={wrap} aria-live="polite">
         <p style={{ fontFamily: 'var(--font-heading)', fontSize: '1.5rem', color: 'var(--color-forest)', margin: '0 0 8px' }}>
-          Got it. Watch for a text from me.
+          {buyer ? 'Got it. Watch for a text from Kim.' : 'Got it. Watch for a text from me.'}
         </p>
         <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', margin: 0, lineHeight: 1.6 }}>
-          My cell is <a href="tel:+14252509422" style={{ color: 'var(--color-clay)', fontWeight: 600 }}>425-250-9422</a> if you&apos;d rather just call.
+          {buyer ? 'Kim\u2019s cell is' : 'My cell is'} <a href="tel:+14252509422" style={{ color: 'var(--color-clay)', fontWeight: 600 }}>425-250-9422</a> if you&apos;d rather just call.
         </p>
       </aside>
     );
@@ -94,7 +101,11 @@ export default function TextMeAsk({
         {question}
       </p>
       <p style={{ fontFamily: 'var(--font-body)', fontSize: '1rem', color: 'var(--color-text)', margin: '0 0 16px', lineHeight: 1.6, maxWidth: '38rem' }}>
-        Leave your cell. I&apos;ll text you, you text me five photos of the house, and I&apos;ll send back what I&apos;d fix, what I&apos;d skip, and what I&apos;d list it at. One text back from me. Then it&apos;s up to you.
+        {buyer ? (
+          <>Leave a cell number and Kim will text you back.</>
+        ) : (
+          <>Leave your cell. I&apos;ll text you, you text me five photos of the house, and I&apos;ll send back what I&apos;d fix, what I&apos;d skip, and what I&apos;d list it at. One text back from me. Then it&apos;s up to you.</>
+        )}
       </p>
 
       <form onSubmit={submit} style={{ display: 'flex', flexWrap: 'wrap', gap: '10px', maxWidth: '30rem' }}>
